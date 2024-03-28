@@ -286,7 +286,7 @@
                             },
                             "background_colour_surface": {
                                 "name": "Background Surface Colour",
-                                "description": "Changes Snapchats Background Surface colour\nInput hex code"
+                                "description": "Changes Snapchats background surface colour\nInput hex code"
                             },
                             "action_menu_background_colour": {
                                 "name": "Action Menu Background Colour",
