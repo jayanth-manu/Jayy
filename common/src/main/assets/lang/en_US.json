@@ -273,28 +273,28 @@
                         "description": "Enables AMOLED dark mode\nMake sure Snapchats Dark mode is enabled"
                     },
                     "customize_ui": {
-                        "name": "Colours",
-                        "description": "Customize Snapchats Colours",
+                        "name": "Colors",
+                        "description": "Customize Snapchats Colors",
                         "properties": {
                             "text_colour": {
-                                "name": "Text Colour",
-                                "description": "Changes Snapchats text colour\nInput hex code"
+                                "name": "Text Color",
+                                "description": "Changes Snapchats text color\nInput hex code"
                             },
                             "background_colour": {
-                                "name": "Background Colour",
-                                "description": "Changes Snapchats background colour\nInput hex Code"
+                                "name": "Background Color",
+                                "description": "Changes Snapchats background color\nInput hex Code"
                             },
                             "background_colour_surface": {
-                                "name": "Background Surface Colour",
-                                "description": "Changes Snapchats background surface colour\nInput hex code"
+                                "name": "Background Surface Color",
+                                "description": "Changes Snapchats background surface color\nInput hex code"
                             },
                             "action_menu_background_colour": {
-                                "name": "Action Menu Background Colour",
-                                "description": "Changes Snapchats action menu background colour\nInput hex code"
+                                "name": "Action Menu Background Color",
+                                "description": "Changes Snapchats action menu background color\nInput hex code"
                             },
                             "action_menu_round_background_colour": {
-                                "name": "Action Menu Round Background Colour",
-                                "description": "Changes Snapchats action menu round background colour\nInput hex code"
+                                "name": "Action Menu Round Background Color",
+                                "description": "Changes Snapchats action menu round background color\nInput hex code"
                             }
                         }
                     },
