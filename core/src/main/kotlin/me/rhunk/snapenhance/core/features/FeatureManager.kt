@@ -4,6 +4,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import me.rhunk.snapenhance.core.ModContext
+import me.rhunk.snapenhance.core.features.impl.COFOverride
 import me.rhunk.snapenhance.core.features.impl.ConfigurationOverride
 import me.rhunk.snapenhance.core.features.impl.MixerStories
 import me.rhunk.snapenhance.core.features.impl.OperaViewerParamsOverride
@@ -16,11 +17,7 @@ import me.rhunk.snapenhance.core.features.impl.messaging.*
 import me.rhunk.snapenhance.core.features.impl.spying.HalfSwipeNotifier
 import me.rhunk.snapenhance.core.features.impl.spying.MessageLogger
 import me.rhunk.snapenhance.core.features.impl.spying.StealthMode
-import me.rhunk.snapenhance.core.features.impl.tweaks.BypassScreenshotDetection
-import me.rhunk.snapenhance.core.features.impl.tweaks.CameraTweaks
-import me.rhunk.snapenhance.core.features.impl.tweaks.DisablePermissionRequests
-import me.rhunk.snapenhance.core.features.impl.tweaks.PreventMessageListAutoScroll
-import me.rhunk.snapenhance.core.features.impl.tweaks.UnsaveableMessages
+import me.rhunk.snapenhance.core.features.impl.tweaks.*
 import me.rhunk.snapenhance.core.features.impl.ui.*
 import me.rhunk.snapenhance.core.logger.CoreLogger
 import me.rhunk.snapenhance.core.ui.menu.MenuViewInjector
@@ -80,6 +77,7 @@ class FeatureManager(
             AutoSave(),
             UITweaks(),
             ConfigurationOverride(),
+            COFOverride(),
             UnsaveableMessages(),
             SendOverride(),
             UnlimitedSnapViewTime(),
@@ -87,7 +85,6 @@ class FeatureManager(
             MediaQualityLevelOverride(),
             MeoPasscodeBypass(),
             AppPasscode(),
-            LocationSpoofer(),
             CameraTweaks(),
             InfiniteStoryBoost(),
             AmoledDarkMode(),
@@ -112,7 +109,7 @@ class FeatureManager(
             DisableConfirmationDialogs(),
             MixerStories(),
             DisableComposerModules(),
-            FideliusIndicator(),
+            MessageIndicators(),
             EditTextOverride(),
             PreventForcedLogout(),
             SuspendLocationUpdates(),
@@ -126,6 +123,10 @@ class FeatureManager(
             CallRecorder(),
             DisableMemoriesSnapFeed(),
             AccountSwitcher(),
+            RemoveGroupsLockedStatus(),
+            BypassMessageActionRestrictions(),
+            BetterLocation(),
+            MediaFilePicker(),
         )
 
         initializeFeatures()

@@ -76,6 +76,10 @@
     },
 
     "rules": {
+        "toasts": {
+            "enabled": "{ruleName} enabled",
+            "disabled": "{ruleName} disabled"
+        },
         "modes": {
             "blacklist": "Blacklist mode",
             "whitelist": "Whitelist mode"
@@ -126,14 +130,34 @@
     },
 
     "actions": {
-        "clean_snapchat_cache": "Clean Snapchat Cache",
-        "clear_message_logger": "Clear Message Logger",
-        "refresh_mappings": "Refresh Mappings",
-        "open_map": "Choose location on map",
-        "check_for_updates": "Check for updates",
-        "export_chat_messages": "Export Chat Messages",
-        "export_memories": "Export Memories",
-        "bulk_messaging_action": "Bulk Messaging Action"
+        "clean_snapchat_cache": {
+            "name": "Clean Snapchat Cache",
+            "description": "Cleans the Snapchat Cache"
+        },
+        "manage_friend_list": {
+            "name": "Manage Friend List",
+            "description": "Import/export your friends list when backing up"
+        },
+        "export_chat_messages": {
+            "name": "Export Chat Messages",
+            "description": "Exports conversation messages into a JSON/HTML/TXT file"
+        },
+        "export_memories": {
+            "name": "Export Memories",
+            "description": "Exports memories into a ZIP file"
+        },
+        "bulk_messaging_action": {
+            "name": "Bulk Messaging Action",
+            "description": "Performs operations such as deleting friends or mass deletion of conversations"
+        },
+        "regen_mappings": {
+            "name": "Regenerate Mappings",
+            "description": "Manually regenerate mappings"
+        },
+        "change_language": {
+            "name": "Change Language",
+            "description": "Change the language of SnapEnhance"
+        }
     },
 
     "features": {
@@ -336,9 +360,9 @@
                         "name": "Friend Feed Menu Bar",
                         "description": "Enables the new Friend Feed Menu Bar"
                     },
-                    "fidelius_indicator": {
-                        "name": "Fidelius Indicator",
-                        "description": "Adds a green circle next to messages that have been sent only to you"
+                    "message_indicators": {
+                        "name": "Message Indicators",
+                        "description": "Adds specific indicators icons to messages\nNote: indicators might not be 100% accurate"
                     },
                     "stealth_mode_indicator": {
                         "name": "Stealth Mode Indicator",
@@ -461,6 +485,14 @@
                     "bypass_message_retention_policy": {
                         "name": "Bypass Message Retention Policy",
                         "description": "Prevents messages from being deleted after viewing them"
+                    },
+                    "bypass_message_action_restrictions": {
+                        "name": "Bypass Message Action Restrictions",
+                        "description": "Allows you to react to a snap without having opened it or to save an unsaveable message"
+                    },
+                    "remove_groups_locked_status": {
+                        "name": "Remove Groups Locked Status",
+                        "description": "Allows you to view group information after being kicked"
                     }
                 }
             },
@@ -468,19 +500,35 @@
                 "name": "Global",
                 "description": "Tweak Global Snapchat Settings",
                 "properties": {
-                    "spoofLocation": {
-                        "name": "Location",
-                        "description": "Spoof your location",
+                    "better_location": {
+                        "name": "Better Location",
+                        "description": "Enhances the Snapchat Location",
                         "properties": {
+                            "spoof_location": {
+                                "name": "Spoof Location",
+                                "description": "Spoofs your location to a specified one"
+                            },
                             "coordinates": {
                                 "name": "Coordinates",
-                                "description": "Set the coordinates"
+                                "description": "Set the coordinates of the spoofed location"
+                            },
+                            "always_update_location": {
+                                "name": "Always Update Location",
+                                "description": "Force Snapchat to update location even if no GPS data is received"
+                            },
+                            "suspend_location_updates": {
+                                "name": "Suspend Location Updates",
+                                "description": "Adds a button in map settings to suspend location updates"
+                            },
+                            "spoof_battery_level": {
+                                "name": "Spoof Battery Level",
+                                "description": "Spoofs the battery level of your device on map\nValue must be between 0 and 100"
+                            },
+                            "spoof_headphones": {
+                                "name": "Spoof Headphones",
+                                "description": "Spoofs the status of listening to music on map"
                             }
                         }
-                    },
-                    "suspend_location_updates": {
-                        "name": "Suspend Location Updates",
-                        "description": "Adds a button in map settings to suspend location updates"
                     },
                     "snapchat_plus": {
                         "name": "Snapchat Plus",
@@ -686,6 +734,10 @@
                         "name": "New Chat Action Menu",
                         "description": "Use the new chat action menu drawer"
                     },
+                    "media_file_picker": {
+                        "name": "Media File Picker",
+                        "description": "Allows you to pick any video/audio file from the gallery"
+                    },
                     "story_logger": {
                         "name": "Story Logger",
                         "description": "Provides a history of friends stories"
@@ -881,7 +933,6 @@
                 "spotlight": "Spotlight"
             },
             "add_friend_source_spoof": {
-                "added_by_quick_add": "By Quick Add",
                 "added_by_username": "By Username",
                 "added_by_mention": "By Mention",
                 "added_by_group_chat": "By Group Chat",
@@ -945,6 +996,13 @@
                 "read_contacts": "Read Contacts",
                 "nearby_devices": "Nearby Devices",
                 "phone_calls": "Phone Calls"
+            },
+            "message_indicators": {
+                "encryption_indicator": "Adds a \uD83D\uDD12 icon next to messages that have been sent only to you",
+                "platform_indicator": "Adds the platform icon from which a media was sent (e.g. Android, iOS, Web)",
+                "location_indicator": "Adds a \uD83D\uDCCD icon to snaps when they have been sent with location enabled",
+                "ovf_editor_indicator": "Indicates if a snap has been sent using OVF Editor",
+                "director_mode_indicator": "Adds a \u270F\uFE0F icon to snaps when they have been sent using Director Mode, which can be used to send gallery images as snaps"
             }
         }
     },
@@ -978,7 +1036,8 @@
         "FAMILY_CENTER_LEAVE": "Family Center Leave",
         "STATUS_PLUS_GIFT": "Status Plus Gift",
         "TINY_SNAP": "Tiny Snap",
-        "STATUS_COUNTDOWN": "Countdown"
+        "STATUS_COUNTDOWN": "Countdown",
+        "MAP_REACTION": "Map Reaction"
     },
 
     "media_download_source": {

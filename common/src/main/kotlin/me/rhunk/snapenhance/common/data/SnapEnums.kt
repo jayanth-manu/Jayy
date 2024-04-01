@@ -79,7 +79,8 @@ enum class ContentType(val id: Int) {
     EEL_UPGRADE_PROMPT(24),
     PROMPT_LENS_RESPONSE(25),
     TINY_SNAP(26),
-    STATUS_COUNTDOWN(27);
+    STATUS_COUNTDOWN(27),
+    MAP_REACTION(28);
 
     companion object {
         fun fromId(i: Int): ContentType {
@@ -98,6 +99,7 @@ enum class ContentType(val id: Int) {
                     contains(4) -> STICKER
                     contains(5) -> SHARE
                     contains(7) -> EXTERNAL_MEDIA // story replies
+                    contains(20) -> MAP_REACTION
                     else -> null
                 }
             }
@@ -173,4 +175,48 @@ enum class QuotedMessageContentStatus {
     JOINEDAFTERORIGINALMESSAGESENT,
     UNAVAILABLE,
     STORYMEDIADELETEDBYPOSTER
+}
+
+enum class FriendAddSource(
+    val id: Int
+) {
+    UNKNOWN(0),
+    PHONE(1),
+    USERNAME(2),
+    QR_CODE(3),
+    ADDED_ME_BACK(4),
+    NEARBY(5),
+    SUGGESTED(6),
+    OFFICIAL_STORY_SEARCH(7),
+    DEEP_LINK(8),
+    INVITE(9),
+    STORY_CHROME(10),
+    SHARED_USERNAME(11),
+    SHARED_STORY(12),
+    GROUP_CHAT(13),
+    SHAZAM(14),
+    MOB(15),
+    FEATURED_OFFICIAL_STORY(16),
+    OUR_STORY(17),
+    INFLUENCER_RECOMMENDATION(18),
+    DISPLAY_NAME(198),
+    TEST(20),
+    MENTION(21),
+    SUBSCRIPTION(22),
+    MENTION_STICKER(23),
+    SNAPCODE_STICKER(24),
+    SPOTLIGHT(25),
+    PUBLIC_PROFILE(26),
+    LENS(27),
+    CHAT(28),
+    SNAP_ANYONE(29),
+    COMMUNITY(30),
+    NEARBY_FRIENDS(31),
+    SEARCH(32);
+
+    companion object {
+        fun fromId(id: Int): FriendAddSource {
+            return entries.firstOrNull { it.id == id } ?: UNKNOWN
+        }
+    }
 }

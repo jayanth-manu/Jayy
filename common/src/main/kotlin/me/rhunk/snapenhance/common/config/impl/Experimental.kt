@@ -28,6 +28,7 @@ class Experimental : ConfigContainer() {
     val spoof = container("spoof", Spoof()) { icon = "Fingerprint" ; addNotices(FeatureNotice.BAN_RISK); requireRestart() }
     val convertMessageLocally = boolean("convert_message_locally") { requireRestart() }
     val newChatActionMenu = boolean("new_chat_action_menu") { requireRestart() }
+    val mediaFilePicker = boolean("media_file_picker") { requireRestart(); addNotices(FeatureNotice.UNSTABLE) }
     val storyLogger = boolean("story_logger") { requireRestart(); addNotices(FeatureNotice.UNSTABLE); }
     val callRecorder = boolean("call_recorder") { requireRestart(); addNotices(FeatureNotice.UNSTABLE); }
     val accountSwitcher = container("account_switcher", AccountSwitcherConfig()) { requireRestart(); addNotices(FeatureNotice.UNSTABLE) }
@@ -43,7 +44,6 @@ class Experimental : ConfigContainer() {
         requireRestart()
     }
     val addFriendSourceSpoof = unique("add_friend_source_spoof",
-        "added_by_quick_add",
         "added_by_username",
         "added_by_mention",
         "added_by_group_chat",
