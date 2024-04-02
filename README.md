@@ -151,7 +151,6 @@ We no longer offer official LSPatch binaries for obvious reasons. However, you'r
   - Disable Composer Modules
   - Prevent Forced Logout
 </details>
-</details>
 
 ## FAQ
 <details>
