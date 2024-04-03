@@ -641,10 +641,6 @@
                             "disable_bitmoji": {
                                 "name": "Bitmoji'yi Devre Dışı Bırak",
                                 "description": "Arkadaş Profili Bitmoji'sini devre dışı bırakır"
-                            },
-                            "remap_apk": {
-                                "name": "Yeniden Eşleme APK",
-                                "description": "SnapEnhance apk yolunu /proc/self/maps içinde gizler"
                             }
                         }
                     },
