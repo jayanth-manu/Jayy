@@ -675,10 +675,6 @@
                             "disable_bitmoji": {
                                 "name": "Disable Bitmoji",
                                 "description": "Disables Friends Profile Bitmoji"
-                            },
-                            "remap_apk": {
-                                "name": "Remap APK",
-                                "description": "Hides SnapEnhance apk path in /proc/self/maps"
                             }
                         }
                     },
@@ -923,7 +919,8 @@
             },
             "hide_story_suggestions": {
                 "hide_friend_suggestions": "Hide friend suggestions",
-                "hide_suggested_friend_stories": "Hide suggested friend stories"
+                "hide_suggested_friend_stories": "Hide suggested friend stories",
+                "hide_my_stories": "Hide My Stories"
             },
             "home_tab": {
                 "map": "Map",
@@ -1036,7 +1033,8 @@
         "FAMILY_CENTER_LEAVE": "Family Center Leave",
         "STATUS_PLUS_GIFT": "Status Plus Gift",
         "TINY_SNAP": "Tiny Snap",
-        "STATUS_COUNTDOWN": "Countdown"
+        "STATUS_COUNTDOWN": "Countdown",
+        "MAP_REACTION": "Map Reaction"
     },
 
     "media_download_source": {
@@ -1057,7 +1055,8 @@
         "preview_button": "Preview",
         "download_button": "Download",
         "delete_logged_message_button": "Delete Logged Message",
-        "convert_message": "Convert Message"
+        "convert_message": "Convert Message",
+        "edit_message": "Edit Message"
     },
 
     "opera_context_menu": {
