@@ -937,7 +937,8 @@
             },
             "hide_story_suggestions": {
                 "hide_friend_suggestions": "Arkadaş önerilerini gizle",
-                "hide_suggested_friend_stories": "Önerilen arkadaş hikayelerini gizle"
+                "hide_suggested_friend_stories": "Önerilen arkadaş hikayelerini gizle",
+                "hide_my_stories": "Hikayelerimi Gizle"
             },
             "disable_story_sections": {
                 "friends": "Arkadaşlar",
@@ -980,7 +981,8 @@
         "preview_button": "Önizleme",
         "download_button": "İndir",
         "delete_logged_message_button": "Kaydedilen Mesajı Sil",
-        "convert_message": "Mesajı Dönüştür"
+        "convert_message": "Mesajı Dönüştür",
+        "edit_message": "Mesajı Düzenle"
     },
     "opera_context_menu": {
         "download": "Medyayı İndir",
@@ -1102,7 +1104,8 @@
         "FAMILY_CENTER_ACCEPT": "Aile Merkezi Kabul",
         "FAMILY_CENTER_LEAVE": "Aile Merkezi Ayrıl",
         "STATUS_CALL_MISSED_AUDIO": "Cevapsız Sesli Arama",
-        "NOTE": "Sesli Not"
+        "NOTE": "Sesli Not",
+        "MAP_REACTION": "Harita Tepkisi"
     },
     "suspend_location_updates": {
         "switch_text": "Konum Güncellemelerini Askıya Al"
