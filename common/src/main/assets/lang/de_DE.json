@@ -30,7 +30,9 @@
             "scripts": "Skripte",
             "tasks": "Aufgaben",
             "logger_history": "Logs Verlauf",
-            "logged_stories": "Geloggte Storys"
+            "logged_stories": "Geloggte Storys",
+            "messaging_preview": "Vorschau",
+            "manage_scope": "Verwalte Scope"
         },
         "sections": {
             "home": {
@@ -118,6 +120,10 @@
                 },
                 "description": "Verhindert, dass Nachrichten im Chat von anderen Personen gespeichert werden können"
             }
+        },
+        "toasts": {
+            "enabled": "{ruleName} aktiviert",
+            "disabled": "{ruleName} deaktiviert"
         }
     },
     "features": {
@@ -322,6 +328,12 @@
                     "hide_story_suggestions": {
                         "name": "Story Vorschläge ausblenden",
                         "description": "Entfernt Empfehlungen von der Story‐Seite"
+                    },
+                    "stealth_mode_indicator": {
+                        "name": "Diebstahl Modus Indikator"
+                    },
+                    "message_indicators": {
+                        "name": "Nachrichtenindikatoren"
                     }
                 }
             },
@@ -486,6 +498,31 @@
                     "disable_story_sections": {
                         "name": "Story Sektion deaktivieren",
                         "description": "Entfernt Sektionen von der Story-Seite\nErfordert möglicherweise eine Aktualisierung, um richtig zu funktionieren"
+                    },
+                    "better_location": {
+                        "name": "Besserer Ort",
+                        "description": "Erweitert den Snapchat-Ort",
+                        "properties": {
+                            "spoof_location": {
+                                "name": "Täusche den Ort"
+                            },
+                            "coordinates": {
+                                "name": "Koordinaten"
+                            },
+                            "always_update_location": {
+                                "name": "Aktualisiere den Ort immer"
+                            },
+                            "spoof_battery_level": {
+                                "name": "­Täusche den Akkustand vor"
+                            },
+                            "spoof_headphones": {
+                                "name": "Simuliere Kopfhörer"
+                            }
+                        }
+                    },
+                    "default_volume_controls": {
+                        "name": "Eigene Lautstärke",
+                        "description": "Zwinge Snapchat die Systemlautstärke zu nutzen"
                     }
                 }
             },
@@ -658,6 +695,15 @@
                     "story_logger": {
                         "description": "Liefert eine Historie der Stories von Freunden",
                         "name": "Story Logger"
+                    },
+                    "session_events": {
+                        "name": "Aktuelle Nachrichten",
+                        "description": "Nehme die News auf",
+                        "properties": {
+                            "allow_running_in_background": {
+                                "name": "Hintergrundnutzung erlauben"
+                            }
+                        }
                     }
                 }
             },
@@ -1041,5 +1087,33 @@
         "date_picker_switch_to_input_mode": "Eingabe",
         "date_range_picker_day_in_range": "Gewählt",
         "date_range_picker_title": "Wähle einen Zeitraum"
+    },
+    "actions": {
+        "clean_snapchat_cache": {
+            "name": "Leere den Snapchat Cache",
+            "description": "Leert den Snapchat Cache"
+        },
+        "manage_friend_list": {
+            "name": "Freundesliste verwalten",
+            "description": "Im/- exportiere deine Freundesliste beim Backup"
+        },
+        "export_chat_messages": {
+            "name": "Exportiere die Chatnachrichten"
+        },
+        "export_memories": {
+            "name": "Exportiere die Memories",
+            "description": "Exportiere die Memories in eine ZIP-Datei"
+        },
+        "bulk_messaging_action": {
+            "name": "Massen Nachrichten Aktion"
+        },
+        "regen_mappings": {
+            "name": "Erneuere die Mappings",
+            "description": "Erneuere die Mappings manuell"
+        },
+        "change_language": {
+            "name": "Sprache ändern",
+            "description": "Ändere die Sprache von SnapEnhance"
+        }
     }
 }
