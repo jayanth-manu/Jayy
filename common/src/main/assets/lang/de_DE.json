@@ -454,7 +454,7 @@
                     },
                     "bypass_message_action_restrictions": {
                         "description": "Ermöglicht es Ihnen, auf einen Snap zu reagieren, ohne ihn geöffnet zu haben, oder eine nicht speicherbare Nachricht zu speichern.",
-                        "name": "Einschränkungen bei Nachrichtenaktionen umgehen"
+                        "name": "Umgehung von Nachrichtenaktionsbeschränkungen"
                     },
                     "remove_groups_locked_status": {
                         "name": "Entfernen des Gruppen-Sperrstatus",
