@@ -50,7 +50,8 @@
                 "streaks_title": "स्ट्रीक",
                 "streaks_length_text": "लंबाई: {length}",
                 "streaks_expiration_text": "{eta} में समाप्त होगा",
-                "reminder_button": "अनुस्मारक सेट करें"
+                "reminder_button": "अनुस्मारक सेट करें",
+                "streaks_expiration_short": "{hours}h"
             },
             "tasks": {
                 "no_tasks": "कोई कार्य नहीं"
