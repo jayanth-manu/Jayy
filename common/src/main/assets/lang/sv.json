@@ -3,7 +3,7 @@
         "dialogs": {
             "select_save_folder_button": "Välj Mapp",
             "select_language": "Välj språk",
-            "save_folder": "SnapEnhance kräver lagringsbehörighet för att ladda ner och spara media från Snapchat.\n Välj var media ska laddas ner till."
+            "save_folder": "SnapEnhance kräver lagringsbehörigheter för att ladda ner och spara media från Snapchat.\nVälj var media ska laddas ner till."
         },
         "mappings": {
             "dialog": "För att dynamiskt stödja ett brett utbud av Snapchat Versioner, mappningar är nödvändiga för att SnapEnhance ska fungera korrekt, detta bör inte ta mer än 5 sekunder.",
@@ -136,7 +136,8 @@
             "description": "Importera/exportera din vänlista vid säkerhetskopiering"
         },
         "bulk_messaging_action": {
-            "description": "Genomför operationer som ta bort kompisar eller ta bort ett flertal conversationer"
+            "description": "Genomför operationer som ta bort kompisar eller ta bort ett flertal conversationer",
+            "name": "Massutskick av meddelanden"
         },
         "regen_mappings": {
             "name": "Generera Mappar",
