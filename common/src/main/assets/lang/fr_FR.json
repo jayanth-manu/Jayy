@@ -484,7 +484,7 @@
                     },
                     "bypass_video_length_restriction": {
                         "name": "Contourner la restriction de longueur vidéo",
-                        "description": "Unique : envoie une seule vidéo\nDécoupé : découper les vidéos après l'édition"
+                        "description": "Unique : envoie une seule vidéo\n Split : diviser les vidéos après le montage"
                     },
                     "disable_google_play_dialogs": {
                         "name": "Désactiver les avertissements des services Google Play",
@@ -530,17 +530,32 @@
                             },
                             "always_update_location": {
                                 "name": "Toujours actualiser la localisation",
-                                "description": "Force Snapchat à actualiser la localisation même si aucune donnée GPS est reçue"
+                                "description": "Forcer Snapchat à mettre à jour la position même si aucune donnée GPS n'est reçue"
                             },
                             "spoof_location": {
                                 "description": "Usurpe votre emplacement à un emplacement spécifié",
                                 "name": "Cacher sa Localisation"
                             },
                             "suspend_location_updates": {
-                                "name": "Suspendre l'actualisation de la position"
+                                "name": "Suspendre les mises à jour de localisation"
+                            },
+                            "spoof_battery_level": {
+                                "description": "Usure le niveau de la batterie de votre appareil sur la carte\n La valeur doit être comprise entre 0 et 100"
+                            },
+                            "spoof_headphones": {
+                                "description": "Usure le statut d'écoute de musique sur la carte",
+                                "name": "Faux écouteurs"
                             }
                         },
                         "description": "Améliore la localisation de Snapchat"
+                    },
+                    "default_volume_controls": {
+                        "description": "Force Snapchat à utiliser les commandes de volume du système",
+                        "name": "Contrôles de volume par défaut"
+                    },
+                    "video_playback_rate_slider": {
+                        "name": "Curseur de taux de lecture vidéo",
+                        "description": "Ajoute un curseur dans le menu contextuel de l'opéra pour modifier la vitesse de lecture vidéo\n\n Remarque : Les modifications ne s'appliquent qu'aux vidéos suivantes."
                     }
                 }
             },
@@ -718,9 +733,41 @@
                         "description": "Enregistre les événements de la session",
                         "properties": {
                             "capture_duplex_events": {
-                                "name": "Capturer les événements duplex"
+                                "name": "Capturer les événements duplex",
+                                "description": "Capturez les événements de présence et de messagerie lorsqu'une session est active"
+                            },
+                            "allow_running_in_background": {
+                                "name": "Autoriser l'exécution en arrière-plan",
+                                "description": "Permet à la session de s'exécuter en arrière-plan"
+                            }
+                        },
+                        "name": "Événements de session"
+                    },
+                    "new_chat_action_menu": {
+                        "name": "Nouveau menu d'actions de discussion",
+                        "description": "Utilisez le nouveau tiroir du menu d'action de chat"
+                    },
+                    "media_file_picker": {
+                        "name": "Sélecteur de fichiers multimédias",
+                        "description": "Vous permet de choisir n'importe quel fichier vidéo/audio dans la galerie"
+                    },
+                    "call_recorder": {
+                        "name": "Enregistreur d'appel",
+                        "description": "Enregistre automatiquement les appels audio"
+                    },
+                    "account_switcher": {
+                        "name": "Changeur de compte",
+                        "description": "Vous permet de basculer entre les comptes sans vous déconnecter\n Appuyez longuement sur l'icône de recherche à côté de votre profil Bitmoji pour ouvrir le menu\n Remarque : cette fonctionnalité est expérimentale et sera probablement modifiée à l'avenir.",
+                        "properties": {
+                            "auto_backup_current_account": {
+                                "name": "Compte courant de sauvegarde automatique",
+                                "description": "Sauvegarde automatiquement le compte actuel lors de la déconnexion ou du changement de compte"
                             }
                         }
+                    },
+                    "edit_message": {
+                        "name": "Modifier les messages",
+                        "description": "Vous permet de modifier les messages dans les conversations"
                     }
                 }
             },
@@ -892,11 +939,30 @@
             },
             "hide_story_suggestions": {
                 "hide_suggested_friend_stories": "Cacher les stories d'amis suggérées",
-                "hide_friend_suggestions": "Cacher les suggestions d'ami"
+                "hide_friend_suggestions": "Cacher les suggestions d'ami",
+                "hide_my_stories": "Cacher mes histoires"
             },
             "disable_cameras": {
                 "front": "Caméra Frontale",
                 "back": "Caméra arrière"
+            },
+            "disable_permission_requests": {
+                "notifications": "Notifications",
+                "microphone": "microphone",
+                "location": "Emplacement",
+                "phone_calls": "Appels téléphoniques",
+                "read_media_images": "Lire des images médiatiques",
+                "read_media_video": "Lire la vidéo multimédia",
+                "camera": "Caméra",
+                "read_contacts": "Lire les contacts",
+                "nearby_devices": "Appareils à proximité"
+            },
+            "message_indicators": {
+                "encryption_indicator": "Ajoute une icône 🔒 à côté des messages qui vous ont été envoyés uniquement",
+                "location_indicator": "Ajoute une icône 📍 aux clichés lorsqu'ils ont été envoyés avec la localisation activée",
+                "ovf_editor_indicator": "Indique si un snap a été envoyé à l'aide de l'éditeur OVF",
+                "director_mode_indicator": "Ajoute une icône ✏️ aux clichés lorsqu'ils ont été envoyés en mode Directeur, qui peut être utilisée pour envoyer des images de la galerie sous forme de clichés",
+                "platform_indicator": "Ajoute l'icône de la plateforme à partir de laquelle un média a été envoyé (par exemple Android, iOS, Web)"
             }
         }
     },
@@ -912,7 +978,8 @@
         "preview_button": "Aperçu",
         "download_button": "Télécharger",
         "delete_logged_message_button": "Supprimer le message enregistré",
-        "convert_message": "Convertir le message"
+        "convert_message": "Convertir le message",
+        "edit_message": "Modifier le message"
     },
     "opera_context_menu": {
         "download": "Télécharger",
@@ -1034,7 +1101,8 @@
         "FAMILY_CENTER_ACCEPT": "Acceptation Family Center",
         "FAMILY_CENTER_LEAVE": "A quitté Family Center",
         "STATUS_CALL_MISSED_AUDIO": "Appel audio manqué",
-        "NOTE": "Vocal"
+        "NOTE": "Vocal",
+        "MAP_REACTION": "Réaction de la carte"
     },
     "media_download_source": {
         "public_story": "Story Publique",
@@ -1045,7 +1113,9 @@
         "none": "Aucun",
         "profile_picture": "Photo de profil",
         "story": "Story",
-        "chat_media": "Média de Chat"
+        "chat_media": "Média de Chat",
+        "voice_call": "Appel vocal",
+        "message_logger": "Enregistreur de messages"
     },
     "suspend_location_updates": {
         "switch_text": "Suspendre les mises à jour de localisation"
@@ -1123,11 +1193,23 @@
             "description": "Exporter les souvenirs dans un fichier ZIP"
         },
         "bulk_messaging_action": {
-            "description": "Réaliser des opérations tel que la suppression d'amis ou la suppression groupé de conversations"
+            "description": "Réaliser des opérations tel que la suppression d'amis ou la suppression groupé de conversations",
+            "name": "Action de messagerie en masse"
         },
         "change_language": {
             "name": "Changer la langue",
             "description": "Changer la langue de SnapEnhance"
+        },
+        "regen_mappings": {
+            "name": "Régénérer les mappages",
+            "description": "Régénérer manuellement les mappages"
         }
+    },
+    "mark_as_seen": {
+        "no_unseen_snaps_toast": "Aucun Snap invisible trouvé !",
+        "seen_toast": "Marqué comme vu !",
+        "already_seen_toast": "Déjà marqué comme vu !",
+        "unseen_toast": "Marqué comme vu !",
+        "already_unseen_toast": "Déjà marqué comme invisible !"
     }
 }
