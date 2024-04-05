@@ -1,10 +1,5 @@
 {
     "setup": {
-        "dialogs": {
-            "select_save_folder_button": "",
-            "select_language": "",
-            "save_folder": ""
-        },
         "permissions": {
             "notification_access": "Notification Access",
             "dialog": "To continue you need to fit the following requirements:",
@@ -16,8 +11,7 @@
             "generate_button": "Generate",
             "generate_failure_no_snapchat": "SnapEnhance was unable to detect Snapchat, please try reinstalling Snapchat.",
             "generate_failure": "An error occurred while trying to generate mappings, please try again.",
-            "generate_success": "Mappings generated successfully.",
-            "dialog": ""
+            "generate_success": "Mappings generated successfully."
         }
     },
     "manager": {
