@@ -134,6 +134,57 @@
         "manage_friend_list": {
             "name": "Hantera vänlista",
             "description": "Importera/exportera din vänlista vid säkerhetskopiering"
+        },
+        "bulk_messaging_action": {
+            "description": "Genomför operationer som ta bort kompisar eller ta bort ett flertal conversationer"
+        },
+        "regen_mappings": {
+            "name": "Generera Mappar",
+            "description": "Manuellt Generera mappar"
+        },
+        "export_memories": {
+            "description": "Exportera minnen till en ZIP fil",
+            "name": "Exportera minnen"
+        },
+        "export_chat_messages": {
+            "name": "Exportera Chat Meddelanden",
+            "description": "Exporterar conversations meddelanden till en JSON/HTML/TXT fil"
+        },
+        "change_language": {
+            "name": "Bytt språk",
+            "description": "Bytt språk av SnapEnhance"
+        }
+    },
+    "features": {
+        "notices": {
+            "internal_behavior": "⚠ Detta må förstöra Snapchats interna beteenden",
+            "ban_risk": "⚠ Denna funktionen må leda till",
+            "unstable": "⚠ Ostabilt",
+            "require_native_hooks": "⚠ Denna funktionen behöver experimentella Native Hooks att fungera korrekt"
+        },
+        "properties": {
+            "downloader": {
+                "properties": {
+                    "auto_download_sources": {
+                        "description": "Välj vilka källor som ska automatiskt installeras från",
+                        "name": "Automatiskt installera källor"
+                    },
+                    "prevent_self_auto_download": {
+                        "description": "Stoppar dina egna snaps från att bli nedladdade",
+                        "name": "Stoppa själv automatiskt installerare"
+                    },
+                    "save_folder": {
+                        "name": "folder",
+                        "description": "Välj en folder som all media ska vara nedladdat till"
+                    },
+                    "allow_duplicate": {
+                        "description": "Tillåt samma media att bli installerat flera gånger",
+                        "name": "Tillåt duplication"
+                    }
+                },
+                "description": "Ladda ner Snapchats Media",
+                "name": "Nedladdare"
+            }
         }
     }
 }
