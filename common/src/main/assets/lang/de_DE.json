@@ -557,7 +557,8 @@
                         "description": "Legt die Standardgeschwindigkeit für die Wiedergabe von Videos fest\n\tDer Wert muss zwischen 0,1 und 4,0 liegen"
                     },
                     "video_playback_rate_slider": {
-                        "name": "Schieberegler für die Videowiedergaberate"
+                        "name": "Schieberegler für die Videowiedergaberate",
+                        "description": "Fügt einen Schieberegler im Opera-Kontextmenü hinzu, um die Videowiedergaberate zu ändern"
                     }
                 }
             },
@@ -736,9 +737,20 @@
                         "description": "Nehme die News auf",
                         "properties": {
                             "allow_running_in_background": {
-                                "name": "Hintergrundnutzung erlauben"
+                                "name": "Hintergrundnutzung erlauben",
+                                "description": "Erlaubt der Sitzung im Hintergrund zu laufen"
                             }
                         }
+                    },
+                    "new_chat_action_menu": {
+                        "name": "Neues Chat-Aktionsmenü",
+                        "description": "Verwende die neue Chat-Aktionsmenüleiste"
+                    },
+                    "call_recorder": {
+                        "name": "Anruf aufzeichner"
+                    },
+                    "media_file_picker": {
+                        "name": "Mediendatei-Auswahl"
                     }
                 }
             },
@@ -1152,5 +1164,8 @@
             "name": "Sprache ändern",
             "description": "Ändere die Sprache von SnapEnhance"
         }
+    },
+    "mark_as_seen": {
+        "already_unseen_toast": "Schon als ungelesen markiert!"
     }
 }
