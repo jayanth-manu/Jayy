@@ -2,7 +2,8 @@
     "setup": {
         "dialogs": {
             "select_save_folder_button": "Välj Mapp",
-            "select_language": "Välj språk"
+            "select_language": "Välj språk",
+            "save_folder": "SnapEnhance kräver lagringsbehörighet för att ladda ner och spara media från Snapchat.\n Välj var media ska laddas ner till."
         },
         "mappings": {
             "dialog": "För att dynamiskt stödja ett brett utbud av Snapchat Versioner, mappningar är nödvändiga för att SnapEnhance ska fungera korrekt, detta bör inte ta mer än 5 sekunder.",
@@ -26,7 +27,12 @@
             "home_settings": "Inställningar",
             "home_logs": "Loggar",
             "social": "Socialt",
-            "scripts": "Skript"
+            "scripts": "Skript",
+            "logged_stories": "Loggade berättelser",
+            "tasks": "Uppgifter",
+            "logger_history": "Logger Historia",
+            "manage_scope": "Hantera omfattning",
+            "messaging_preview": "Förhandsvisning"
         },
         "sections": {
             "home": {
@@ -45,8 +51,89 @@
                 "not_found": "Hittades inte",
                 "streaks_title": "Streaks",
                 "streaks_length_text": "Längd: {length}",
-                "reminder_button": "Sätt påminellse"
+                "reminder_button": "Sätt påminellse",
+                "streaks_expiration_short": "{timmar}t",
+                "streaks_expiration_text": "Går ut om {eta}"
+            },
+            "tasks": {
+                "no_tasks": "Inga uppgifter"
             }
+        },
+        "dialogs": {
+            "add_friend": {
+                "category_friends": "Vänner",
+                "title": "Lägg till vän eller grupp",
+                "search_hint": "Sök",
+                "fetch_error": "Det gick inte att hämta data",
+                "category_groups": "Grupper"
+            },
+            "scripting_warning": {
+                "title": "Varning",
+                "content": "SnapEnhance inkluderar ett skriptverktyg som tillåter exekvering av användardefinierad kod på din enhet. Var extremt försiktig och installera endast moduler från kända, pålitliga källor. Obehöriga eller overifierade moduler kan utgöra säkerhetsrisker för ditt system."
+            }
+        }
+    },
+    "rules": {
+        "properties": {
+            "auto_download": {
+                "name": "Automatisk nedladdning",
+                "description": "Ladda ned Snaps automatiskt när du tittar på dem",
+                "options": {
+                    "blacklist": "Uteslut från automatisk nedladdning",
+                    "whitelist": "Automatisk nedladdning"
+                }
+            },
+            "unsaveable_messages": {
+                "name": "Meddelanden som inte går att spara",
+                "description": "Förhindrar att meddelanden sparas i chatten av andra",
+                "options": {
+                    "blacklist": "Uteslut från meddelanden som inte går att spara",
+                    "whitelist": "Meddelanden som inte går att spara"
+                }
+            },
+            "auto_save": {
+                "description": "Sparar chattmeddelanden när du visar dem",
+                "name": "Automatisk sparning",
+                "options": {
+                    "blacklist": "Uteslut från Autospara",
+                    "whitelist": "Automatisk sparning"
+                }
+            },
+            "stealth": {
+                "name": "Smygläge",
+                "description": "Hindrar någon från att veta att du har öppnat deras Snaps/chattar och konversationer",
+                "options": {
+                    "blacklist": "Uteslut från Stealth Mode",
+                    "whitelist": "Smygläge"
+                }
+            },
+            "hide_friend_feed": {
+                "name": "Göm från Friend Feed"
+            },
+            "e2e_encryption": {
+                "name": "Använd E2E-kryptering"
+            },
+            "pin_conversation": {
+                "name": "Fäst konversation"
+            }
+        },
+        "toasts": {
+            "enabled": "{ruleName} aktiverad",
+            "disabled": "{ruleName} inaktiverad"
+        },
+        "modes": {
+            "blacklist": "Svartlista läge",
+            "whitelist": "Vitlista läge"
+        }
+    },
+    "actions": {
+        "clean_snapchat_cache": {
+            "name": "Rengör Snapchat-cachen",
+            "description": "Rengör Snapchat-cachen"
+        },
+        "manage_friend_list": {
+            "name": "Hantera vänlista",
+            "description": "Importera/exportera din vänlista vid säkerhetskopiering"
         }
     }
 }
