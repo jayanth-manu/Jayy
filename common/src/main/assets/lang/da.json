@@ -27,7 +27,12 @@
             "home_settings": "Indstillinger",
             "home_logs": "Logfiler",
             "social": "Social",
-            "scripts": "Scripts"
+            "scripts": "Scripts",
+            "tasks": "Opgaver",
+            "logger_history": "Log historik",
+            "logged_stories": "Loggede historier",
+            "manage_scope": "Administrer omfang",
+            "messaging_preview": "Forhåndsvisning"
         },
         "sections": {
             "home": {
@@ -49,6 +54,9 @@
                 "streaks_expiration_short": "{hours} timer",
                 "streaks_expiration_text": "Udløber om {eta}",
                 "reminder_button": "Sæt påmindelse"
+            },
+            "tasks": {
+                "no_tasks": "Ingen opgaver"
             }
         },
         "dialogs": {
@@ -58,6 +66,9 @@
                 "fetch_error": "Dataene blev ikke hentet",
                 "category_groups": "Grupper",
                 "category_friends": "Venner"
+            },
+            "scripting_warning": {
+                "title": "Advarsel"
             }
         }
     },
@@ -100,6 +111,10 @@
             "pin_conversation": {
                 "name": "Fastgør samtale"
             }
+        },
+        "toasts": {
+            "enabled": "{ruleName} aktiveret",
+            "disabled": "{ruleName} deaktiveret"
         }
     },
     "features": {
