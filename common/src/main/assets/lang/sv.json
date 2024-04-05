@@ -1,7 +1,8 @@
 {
     "setup": {
         "dialogs": {
-            "select_save_folder_button": "Välj Mapp"
+            "select_save_folder_button": "Välj Mapp",
+            "select_language": "Välj språk"
         },
         "mappings": {
             "dialog": "För att dynamiskt stödja ett brett utbud av Snapchat Versioner, mappningar är nödvändiga för att SnapEnhance ska fungera korrekt, detta bör inte ta mer än 5 sekunder.",
@@ -43,7 +44,8 @@
                 "participants_text": "{count} deltagare",
                 "not_found": "Hittades inte",
                 "streaks_title": "Streaks",
-                "streaks_length_text": "Längd: {length}"
+                "streaks_length_text": "Längd: {length}",
+                "reminder_button": "Sätt påminellse"
             }
         }
     }
