@@ -28,7 +28,11 @@
             "home_logs": "Naplók",
             "social": "Közösség",
             "scripts": "Szkriptek",
-            "tasks": "Feladatok"
+            "tasks": "Feladatok",
+            "logger_history": "Naplózó előzménye",
+            "logged_stories": "Naplózott sztorik",
+            "manage_scope": "Terület kezelése",
+            "messaging_preview": "Előnézet"
         },
         "sections": {
             "home": {
@@ -116,6 +120,10 @@
                 },
                 "description": "Megakadályozza, hogy az üzeneteket elmenthessék mások a chatben"
             }
+        },
+        "toasts": {
+            "enabled": "{ruleName} engedélyezve",
+            "disabled": "{ruleName} letiltva"
         }
     },
     "features": {
@@ -324,6 +332,10 @@
                     "hide_story_suggestions": {
                         "name": "Történet javaslatok elrejtése",
                         "description": "Eltávolítja a javaslatokat a Történetek oldalról"
+                    },
+                    "message_indicators": {
+                        "name": "Üzenetjelzők",
+                        "description": "Speciális jelzőikonok hozzáadása az üzenetekhez\nMegjegyzés: a mutatók nem biztos, hogy 100%-ban pontosak"
                     }
                 },
                 "description": "Módosítsd a Snapchat kinézetét"
@@ -402,7 +414,8 @@
                         "description": "Média lejátszási hurok a Snaps / Stories megtekintésekor"
                     },
                     "strip_media_metadata": {
-                        "name": "Média metaadatok eltávolítása"
+                        "name": "Média metaadatok eltávolítása",
+                        "description": "A média metaadatainak eltávolítása üzenetként való elküldés előtt"
                     },
                     "call_start_confirmation": {
                         "name": "Hívásindítás megerősítése",
@@ -433,6 +446,18 @@
                     "message_preview_length": {
                         "name": "Üzenet előnézet hossza",
                         "description": "Az előnézetben megjelenítendő üzenetek mennyiségének megadása"
+                    },
+                    "bypass_message_retention_policy": {
+                        "description": "Megakadályozza az üzenetek törlését azok megtekintése után",
+                        "name": "Üzenetmegőrzési irányelvek megkerülése"
+                    },
+                    "bypass_message_action_restrictions": {
+                        "name": "Üzenetműveleti korlátozások megkerülése",
+                        "description": "Lehetővé teszi, hogy reagálj egy snapre anélkül, hogy megnyitottad volna, vagy hogy elmentsd a menthetetlen üzenetet"
+                    },
+                    "remove_groups_locked_status": {
+                        "name": "Csoportok zárolt státuszának eltávolítása",
+                        "description": "Lehetővé teszi a csoportinformációk megtekintését, miután kirúgták"
                     }
                 },
                 "description": "Változtasd meg a barátaiddal való kapcsolattartásodat"
@@ -457,7 +482,8 @@
                         "description": "Megakadályozza a reklámok megjelenítését"
                     },
                     "bypass_video_length_restriction": {
-                        "name": "Videóhossz-korlátozás megkerülése"
+                        "name": "Videóhossz-korlátozás megkerülése",
+                        "description": "Egyetlen: egyetlen videó küldése\nOsztás: a videók szétválasztása szerkesztés után"
                     },
                     "disable_google_play_dialogs": {
                         "name": "A Google Play Szolgáltatások Párbeszédablakainak Letiltása",
@@ -466,11 +492,79 @@
                     "disable_snap_splitting": {
                         "name": "Snap szétválasztás kikapcsolása",
                         "description": "Megakadályozza a Snap-ek több részre történő szétválasztását\nA képek amiket küldesz videók lesznek"
+                    },
+                    "disable_confirmation_dialogs": {
+                        "name": "Megerősítő ablakok letiltása",
+                        "description": "Automatikusan megerősíti a kiválasztott műveleteket"
+                    },
+                    "spotlight_comments_username": {
+                        "description": "Megjeleníti a szerző felhasználónevét a Spotlight hozzászólásokban",
+                        "name": "Spotlight hozzászólások felhasználónév"
+                    },
+                    "better_location": {
+                        "description": "Javítja a Snapchaten a helyzeted",
+                        "name": "Jobb helyzet",
+                        "properties": {
+                            "spoof_location": {
+                                "name": "Helyzet hamisítása",
+                                "description": "Átírja a tartózkodási helyedet egy megadott helyhez"
+                            },
+                            "coordinates": {
+                                "name": "Koordináták",
+                                "description": "Az átírt hely koordinátáinak beállítása"
+                            },
+                            "always_update_location": {
+                                "name": "Mindig frissítse a helyet",
+                                "description": "Kényszerítsd a Snapchatet a helyfrissítésre akkor is, ha nem érkezik GPS-adat"
+                            },
+                            "suspend_location_updates": {
+                                "name": "Helyszínfrissítések felfüggesztése",
+                                "description": "Hozzáad egy gombot a térképbeállításokban a helyfrissítések felfüggesztéséhez"
+                            },
+                            "spoof_battery_level": {
+                                "name": "Akkumulátor szint átírása",
+                                "description": "Átírja a készülék akkumulátorának szintjét a térképen\nAz értéknek 0 és 100 között kell lennie"
+                            },
+                            "spoof_headphones": {
+                                "name": "Hamisított fejhallgató",
+                                "description": "Hazudik a zenehallgatás státuszáról a térképen"
+                            }
+                        }
+                    },
+                    "disable_story_sections": {
+                        "description": "Eltávolítja a szakaszokat a Sztorik oldalról\nA megfelelő működéshez frissítésre lehet szükség",
+                        "name": "Sztori részek letiltása"
+                    },
+                    "disable_permission_requests": {
+                        "name": "Engedélykérelmek letiltása",
+                        "description": "Megakadályozza, hogy a Snapchat bizonyos engedélyeket kérjen"
+                    },
+                    "disable_memories_snap_feed": {
+                        "name": "Emlékek Snap Feed letiltása",
+                        "description": "Megakadályozza, hogy a Snapchat megjelenítse a legutóbbi emlékeket, amikor a kamerában felfelé húzza a lapot"
+                    },
+                    "force_upload_source_quality": {
+                        "name": "Forrásminőség feltöltésének kényszerítése",
+                        "description": "Kényszeríti a Snapchatet, hogy eredeti minőségben töltse fel a médiát\nVedd figyelembe, hogy ez nem távolítja el a metaadatokat a médiából"
+                    },
+                    "default_volume_controls": {
+                        "name": "Alapértelmezett hangerőszabályozók",
+                        "description": "Kényszeríti a Snapchatet a rendszer hangerőszabályzóinak használatára"
+                    },
+                    "default_video_playback_rate": {
+                        "name": "Alapértelmezett videó lejátszási sebesség",
+                        "description": "A videók lejátszásának alapértelmezett sebességének beállítása\nAz értéknek 0,1 és 4,0 között kell lennie"
+                    },
+                    "video_playback_rate_slider": {
+                        "name": "Videó lejátszási sebesség csúszka",
+                        "description": "Hozzáad egy csúszkát az opera kontextus menüjébe a videó lejátszási sebesség megváltoztatásához\nMegjegyzés: A módosítások csak a következő videókra vonatkoznak"
                     }
-                }
+                },
+                "description": "Globális Snapchat beállítások módosítása"
             },
             "rules": {
-                "name": "Szabályok"
+                "name": "Szabályok",
+                "description": "Automatikus funkciók kezelése egyes személyek számára"
             },
             "camera": {
                 "name": "Kamera"
@@ -703,5 +797,35 @@
     },
     "media_download_source": {
         "chat_media": "Beszélgetés média"
+    },
+    "actions": {
+        "clean_snapchat_cache": {
+            "name": "Snapchat gyorsítótárának törlése",
+            "description": "Kitörli a Snapchat gyorsítótárját"
+        },
+        "manage_friend_list": {
+            "name": "Barátlista kezelése",
+            "description": "Barátaid listájának importálása/exportálása biztonsági mentéskor"
+        },
+        "export_chat_messages": {
+            "description": "Beszélgetési üzenetek exportálása JSON/HTML/TXT fájlba",
+            "name": "Chat üzenetek exportálása"
+        },
+        "bulk_messaging_action": {
+            "description": "Olyan műveleteket végez, mint a barátok törlése vagy a beszélgetések tömeges törlése",
+            "name": "Tömeges üzenetküldési művelet"
+        },
+        "regen_mappings": {
+            "name": "Leképezések újragenerálása",
+            "description": "Manuálisan regenerálja a leképezéseket"
+        },
+        "change_language": {
+            "name": "Nyelv módosítása",
+            "description": "A SnapEnhance nyelvének módosítása"
+        },
+        "export_memories": {
+            "name": "Emlékek exportálása",
+            "description": "Emlékek exportálása ZIP fájlba"
+        }
     }
 }
