@@ -49,5 +49,118 @@
         "processing_toast": "Se procesează {path}...",
         "failed_generic_toast": "Descărcarea a eșuat",
         "failed_to_create_preview_toast": "Nu a reușit să se creeze previzualizarea"
+    },
+    "setup": {
+        "mappings": {
+            "generate_button": "Generează",
+            "generate_failure_no_snapchat": "SnapEnhance nu a putut detecta Snapchat, te rog reinstalează Snapchat.",
+            "dialog": "Pentru a suporta dinamic o mai multe versiuni de Snapchat, mapările sunt necesare pentru SnapEnhance pentru a funcționa corect, nu ar trebui să dureze mai mult de 5 secunde.",
+            "generate_failure": "A apărut o eroare în timpul generării mapărilor, te rog încearcă din nou.",
+            "generate_success": "Mapări generate cu succes."
+        },
+        "permissions": {
+            "dialog": "Pentru a continua trebuie să îndeplinești următoarele condiții:",
+            "notification_access": "Acces Notificări",
+            "battery_optimization": "Optimizare Baterie",
+            "display_over_other_apps": "Afișează Peste Alte Aplicații",
+            "request_button": "Cerere"
+        },
+        "dialogs": {
+            "select_language": "Selectează Limba",
+            "save_folder": "SnapEnhance necesită acces la Stocare pentru a descărca si salva media din Snapchat.\nTe rog selectează locatia unde ar trebui să fie descarcate.",
+            "select_save_folder_button": "Alege Dosarul"
+        }
+    },
+    "manager": {
+        "routes": {
+            "home": "Acasă",
+            "logger_history": "Istoric Log-uri",
+            "scripts": "Scenarii",
+            "home_settings": "Setări",
+            "tasks": "Sarcini",
+            "features": "Caracteristici",
+            "home_logs": "Log-uri",
+            "social": "Social",
+            "manage_scope": "Gestioneaza Scop",
+            "messaging_preview": "Previzualizeaza"
+        },
+        "sections": {
+            "home": {
+                "logs": {
+                    "clear_logs_button": "Curăță Log-uri",
+                    "export_logs_button": "Exportă Log-uri"
+                }
+            },
+            "social": {
+                "not_found": "Negăsit",
+                "streaks_title": "Streaks",
+                "e2ee_title": "Criptare End-to-End",
+                "rules_title": "Reguli",
+                "participants_text": "{count} participanți",
+                "streaks_length_text": "Lungime: {length}",
+                "streaks_expiration_short": "{hours}h",
+                "streaks_expiration_text": "Expiră în {eta}",
+                "reminder_button": "Setează Memento"
+            },
+            "tasks": {
+                "no_tasks": "Fără sarcini"
+            },
+            "features": {
+                "disabled": "Dezactivat"
+            }
+        },
+        "dialogs": {
+            "scripting_warning": {
+                "title": "Atenție",
+                "content": "SnapEnhance include un instrument de scripting, care permite executarea codului definit de utilizator pe dispozitivul dvs. Fiți extrem de precauți și instalați numai module din surse cunoscute și de încredere. Modulele neautorizate sau neverificate pot prezenta riscuri de securitate pentru sistemul dumneavoastră."
+            },
+            "add_friend": {
+                "title": "Adaugă Prieten sau Grup",
+                "search_hint": "Caută",
+                "fetch_error": "Preluarea datelor a eșuat",
+                "category_groups": "Grupuri",
+                "category_friends": "Prieteni"
+            }
+        }
+    },
+    "rules": {
+        "properties": {
+            "auto_download": {
+                "description": "Descarcă automat Snap-uri în timpul vizualizării acestora",
+                "options": {
+                    "whitelist": "Descărcare Automată",
+                    "blacklist": "Exclude din Descărcare Automată"
+                },
+                "name": "Descărcare automată"
+            },
+            "stealth": {
+                "name": "Mod Ascuns",
+                "description": "Împiedică pe oricine să știe că le-ați deschis Snap-urile/Chat-urile și conversațiile",
+                "options": {
+                    "blacklist": "Exclude din Modul Ascuns",
+                    "whitelist": "Mod Ascuns"
+                }
+            },
+            "auto_save": {
+                "description": "Salvează mesajele când sunt vizualizate",
+                "options": {
+                    "blacklist": "Exclude din Salvare Automată",
+                    "whitelist": "Salvare Automată"
+                },
+                "name": "Salvare Automată"
+            },
+            "unsaveable_messages": {
+                "description": "Împiedică mesajele să fie salvate în chat de către alte persoane",
+                "name": "Mesaje Nesalvabile"
+            }
+        },
+        "modes": {
+            "blacklist": "Mod Lista Neagră",
+            "whitelist": "Mod Lista Aba"
+        },
+        "toasts": {
+            "enabled": "{ruleName} activat",
+            "disabled": "{ruleName} dezactivat"
+        }
     }
 }
