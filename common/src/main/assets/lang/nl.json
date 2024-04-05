@@ -111,6 +111,9 @@
             "pin_conversation": {
                 "name": "Gesprek vastzetten"
             }
+        },
+        "toasts": {
+            "enabled": "{ruleName} Ingeschakeld"
         }
     },
     "features": {
