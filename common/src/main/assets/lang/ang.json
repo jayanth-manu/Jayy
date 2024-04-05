@@ -1,1 +1,100 @@
-{}
+{
+    "setup": {
+        "dialogs": {
+            "select_save_folder_button": "",
+            "select_language": "",
+            "save_folder": ""
+        },
+        "permissions": {
+            "notification_access": "Notification Access",
+            "dialog": "To continue you need to fit the following requirements:",
+            "battery_optimization": "Battery Optimization",
+            "display_over_other_apps": "Display Over Other Apps",
+            "request_button": "Request"
+        },
+        "mappings": {
+            "generate_button": "Generate",
+            "generate_failure_no_snapchat": "SnapEnhance was unable to detect Snapchat, please try reinstalling Snapchat.",
+            "generate_failure": "An error occurred while trying to generate mappings, please try again.",
+            "generate_success": "Mappings generated successfully.",
+            "dialog": ""
+        }
+    },
+    "manager": {
+        "sections": {
+            "home": {
+                "logs": {
+                    "export_logs_button": "Export Logs",
+                    "clear_logs_button": "Clear Logs"
+                }
+            },
+            "tasks": {
+                "no_tasks": "No tasks"
+            },
+            "features": {
+                "disabled": "Disabled"
+            },
+            "social": {
+                "e2ee_title": "End-to-End Encryption",
+                "rules_title": "Rules",
+                "participants_text": "{count} participants",
+                "not_found": "Not found",
+                "streaks_title": "Streaks",
+                "streaks_length_text": "Length: {length}",
+                "streaks_expiration_short": "{hours}h",
+                "streaks_expiration_text": "Expires in {eta}",
+                "reminder_button": "Set Reminder"
+            }
+        },
+        "dialogs": {
+            "add_friend": {
+                "search_hint": "Search",
+                "fetch_error": "Failed to fetch data",
+                "category_groups": "Groups",
+                "category_friends": "Friends",
+                "title": "Add Friend or Group"
+            },
+            "scripting_warning": {
+                "title": "Warning",
+                "content": "SnapEnhance includes a scripting tool, allowing the execution of user-defined code on your device. Use extreme caution and only install modules from known, reliable sources. Unauthorized or unverified modules may pose security risks to your system."
+            }
+        },
+        "routes": {
+            "tasks": "Tasks",
+            "features": "Features",
+            "home": "Home",
+            "home_settings": "Settings",
+            "home_logs": "Logs",
+            "logger_history": "Logger History",
+            "logged_stories": "Logged Stories",
+            "social": "Social",
+            "manage_scope": "Manage Scope",
+            "messaging_preview": "Preview",
+            "scripts": "Scripts"
+        }
+    },
+    "rules": {
+        "toasts": {
+            "enabled": "{ruleName} Enabled",
+            "disabled": "{ruleName} Disabled"
+        },
+        "modes": {
+            "blacklist": "Blacklist Mode",
+            "whitelist": "Whitelist Mode"
+        },
+        "properties": {
+            "stealth": {
+                "name": "Stealth Mode",
+                "description": "Prevents anyone from knowing you've opened their Snaps/Chats and conversations"
+            },
+            "auto_download": {
+                "name": "Auto Download",
+                "description": "Automatically Download Snaps When Viewing Them",
+                "options": {
+                    "blacklist": "Exclude From Auto Download",
+                    "whitelist": "Auto Download"
+                }
+            }
+        }
+    }
+}
