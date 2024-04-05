@@ -158,8 +158,8 @@
     },
     "features": {
         "notices": {
-            "internal_behavior": "⚠ Detta må förstöra Snapchats interna beteenden",
-            "ban_risk": "⚠ Denna funktionen må leda till",
+            "internal_behavior": "⚠ Detta kan förstöra Snapchats interna beteenden",
+            "ban_risk": "⚠ Denna funktion kan leda till avstängning",
             "unstable": "⚠ Ostabilt",
             "require_native_hooks": "⚠ Denna funktionen behöver experimentella Native Hooks att fungera korrekt"
         },
@@ -172,7 +172,7 @@
                     },
                     "prevent_self_auto_download": {
                         "description": "Stoppar dina egna snaps från att bli nedladdade",
-                        "name": "Stoppa själv automatiskt installerare"
+                        "name": "Hindra automatisk nedladdning"
                     },
                     "save_folder": {
                         "name": "folder",
@@ -181,10 +181,170 @@
                     "allow_duplicate": {
                         "description": "Tillåt samma media att bli installerat flera gånger",
                         "name": "Tillåt duplication"
+                    },
+                    "download_context_menu": {
+                        "description": "Gör att du kan ladda ner/förhandsgranska meddelanden från en konversation eller en story med hjälp av snabbmenyn.\nHåll ner knappen för att tvinga nedladdning",
+                        "name": "Ladda ner Snabbmeny"
+                    },
+                    "merge_overlays": {
+                        "name": "Sammanfoga överlägg",
+                        "description": "Kombinerar text och media från en Snap till en enda fil"
+                    },
+                    "path_format": {
+                        "name": "Format för sökväg",
+                        "description": "Ange format för filsökväg"
+                    },
+                    "ffmpeg_options": {
+                        "properties": {
+                            "threads": {
+                                "description": "Antalet trådar som ska användas",
+                                "name": "Trådar"
+                            },
+                            "video_bitrate": {
+                                "description": "Ställ in videobithastighet (kbps)",
+                                "name": "Bithastighet för Video"
+                            },
+                            "audio_bitrate": {
+                                "name": "Bithastighet för Ljud",
+                                "description": "Ställ in ljudets bithastighet (kbps)"
+                            },
+                            "custom_video_codec": {
+                                "name": "Anpassad videokodek",
+                                "description": "Ange en anpassad videokodek (t.ex. libx264)"
+                            },
+                            "custom_audio_codec": {
+                                "description": "Ange en anpassad ljudkodek (t.ex. AAC)",
+                                "name": "Anpassad ljudkodek"
+                            },
+                            "preset": {
+                                "name": "Förinställning",
+                                "description": "Ställ in hastigheten för konverteringen"
+                            },
+                            "constant_rate_factor": {
+                                "name": "Faktor för konstant hastighet",
+                                "description": "Ange den konstanta hastighetsfaktorn för videokodaren\nFrån 0 till 51 för libx264"
+                            }
+                        },
+                        "name": "Alternativ för FFmpeg",
+                        "description": "Ange ytterligare alternativ för FFmpeg"
+                    },
+                    "custom_path_format": {
+                        "description": "Ange ett anpassat sökvägsformat för nedladdade media\n\nTillgängliga variabler:\n - %användarnamn%\n - %källa\n - %hash%\n - %datum_tid%",
+                        "name": "Format för anpassad sökväg"
+                    },
+                    "force_voice_note_format": {
+                        "name": "Tvingar Röstanteckningsformat",
+                        "description": "Tvingar röstanteckningar att sparas i ett specificerat format"
+                    },
+                    "logging": {
+                        "description": "Visar toasts när media laddas ner",
+                        "name": "Loggning"
+                    },
+                    "force_image_format": {
+                        "description": "Tvingar bilder att sparas i ett specificerat format",
+                        "name": "Tvingar Bildformat"
+                    },
+                    "download_profile_pictures": {
+                        "name": "Ladda ner profilbilder",
+                        "description": "Gör det möjligt att ladda ner profilbilder från profilsidan"
+                    },
+                    "opera_download_button": {
+                        "name": "Opera nedladdnings-knapp",
+                        "description": "Lägger till en nedladdningsknapp i det övre högra hörnet när du visar en Snap.\nHåll in knappen för att tvinga nedladdning"
                     }
                 },
                 "description": "Ladda ner Snapchats Media",
                 "name": "Nedladdare"
+            },
+            "user_interface": {
+                "properties": {
+                    "prevent_message_list_auto_scroll": {
+                        "name": "Förhindra automatisk skrollning av meddelandelista",
+                        "description": "Förhindrar att meddelandelistan skrollar längst ner när du skickar/tar emot ett meddelande"
+                    },
+                    "snap_preview": {
+                        "description": "Visar en liten förhandsgranskning bredvid osedda Snaps i chatten",
+                        "name": "Förhandsvisning av snap"
+                    },
+                    "bootstrap_override": {
+                        "properties": {
+                            "app_appearance": {
+                                "name": "Appens utseende",
+                                "description": "Ställer in ett beständigt App-utseende"
+                            },
+                            "home_tab": {
+                                "name": "Fliken Hem",
+                                "description": "Överskriver startfliken när Snapchat öppnas"
+                            }
+                        },
+                        "name": "Bootstrap-överskrivning",
+                        "description": "Överskriver användargränssnittets bootstrap-inställningar"
+                    },
+                    "enable_app_appearance": {
+                        "name": "Aktivera inställningar för apputseende",
+                        "description": "Aktiverar de dolda Apputseendesinställningarna\nKanske inte nödvändigt på nyare Snapchat-versioner"
+                    },
+                    "hide_friend_feed_entry": {
+                        "description": "Döljer en viss vän från vänflödet\nAnvänd fliken Social för att hantera den här funktionen",
+                        "name": "Dölj imnatning in vänflödet"
+                    },
+                    "hide_streak_restore": {
+                        "description": "Döljer knappen Återställ i vänflödet",
+                        "name": "Göm Streak-Återställning"
+                    },
+                    "hide_quick_add_friend_feed": {
+                        "name": "Dölj Lägg till snabbt i vänflödet",
+                        "description": "Döljer Lägg till snabbt-sektionen i vänflödet"
+                    },
+                    "hide_ui_components": {
+                        "name": "Dölj komponenter i användargränssnittet",
+                        "description": "Välj vilka UI-komponenter som ska döljas"
+                    },
+                    "opera_media_quick_info": {
+                        "description": "Visar användbar information om media, t.ex. skapelsedatum, i kontextmenyn i operafönstret",
+                        "name": "Opera Media Snabbinformation"
+                    },
+                    "disable_spotlight": {
+                        "description": "Inaktiverar Spotlight-sidan",
+                        "name": "Inaktivera Spotlight"
+                    },
+                    "amoled_dark_mode": {
+                        "description": "Aktiverar AMOLED mörkt läge\nSe till att Snapchats mörka läge är aktiverat",
+                        "name": "AMOLED Mörkt läge"
+                    },
+                    "friend_feed_message_preview": {
+                        "name": "Förhandsgranskning av meddelande från Vänflödet",
+                        "description": "Visar en förhandsgranskning av de senaste meddelandena i vänflödet",
+                        "properties": {
+                            "amount": {
+                                "name": "Antal",
+                                "description": "Antalet meddelanden som ska förhandsgranskas"
+                            }
+                        }
+                    },
+                    "map_friend_nametags": {
+                        "description": "Förbättrar namntaggar av vänner på Snapmap",
+                        "name": "Förbättrade Namntaggar på vänkartan"
+                    },
+                    "streak_expiration_info": {
+                        "name": "Visa info om utgång för Streak",
+                        "description": "Visar en timer för Streakens utgång bredvid Streaks-räknaren"
+                    },
+                    "old_bitmoji_selfie": {
+                        "name": "Gamla Bitmoji-selfien",
+                        "description": "Återinför Bitmoji-selfies från äldre Snapchat-versioner"
+                    },
+                    "hide_settings_gear": {
+                        "name": "Dölj inställningar-ikonen",
+                        "description": "Döljer SnapEnhance-inställningsikonen i vänflödet"
+                    },
+                    "hide_story_suggestions": {
+                        "name": "Dölj Story-förslag",
+                        "description": "Tar bort förslag från Stories-fliken"
+                    }
+                },
+                "name": "Användargränssnitt",
+                "description": "Ändra utseende och känsla för Snapchat"
             }
         }
     }
