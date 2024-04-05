@@ -28,7 +28,9 @@
             "home_logs": "لاگز",
             "social": "سوشل",
             "scripts": "اسکرپٹس",
-            "tasks": "کام"
+            "tasks": "کام",
+            "logger_history": "لاگ ریکارڈ",
+            "messaging_preview": "جہلک"
         },
         "sections": {
             "home": {
@@ -109,7 +111,8 @@
                 "name": "بات چیت کو پن کریں"
             },
             "unsaveable_messages": {
-                "name": "ناقابل محفوظ پیغامات"
+                "name": "ناقابل محفوظ پیغامات",
+                "description": "لوگوں کی چیٹ میں پیغامات کو محفوظ ہونے سے روکتا ہے۔"
             }
         }
     },
