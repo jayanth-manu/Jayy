@@ -333,6 +333,10 @@
                     "stealth_mode_indicator": {
                         "name": "Indicateur de Mode Furtif",
                         "description": "Ajoute un emoji 👻 à côté des conversations en mode furtif"
+                    },
+                    "message_indicators": {
+                        "name": "Indicateur de messages",
+                        "description": "Ajoute des icônes d'indications spécifiques au messages\nNote: les indications peuvent ne pas être 100% exactes"
                     }
                 }
             },
@@ -509,6 +513,17 @@
                     "disable_permission_requests": {
                         "name": "Désactiver la demande d'autorisation",
                         "description": "Empêche Snapchat de demander des autorisations spécifiques"
+                    },
+                    "better_location": {
+                        "name": "Meilleur Localisation",
+                        "properties": {
+                            "coordinates": {
+                                "name": "Coordonnées"
+                            },
+                            "always_update_location": {
+                                "name": "Toujours actualiser la localisation"
+                            }
+                        }
                     }
                 }
             },
@@ -1079,7 +1094,15 @@
             "description": "Exporte les messages de conversation dans un fichier JSON/HTML/TXT"
         },
         "export_memories": {
-            "name": "Exporter des souvenirs"
+            "name": "Exporter des souvenirs",
+            "description": "Exporter les souvenirs dans un fichier ZIP"
+        },
+        "bulk_messaging_action": {
+            "description": "Réaliser des opérations tel que la suppression d'amis ou la suppression groupé de conversations"
+        },
+        "change_language": {
+            "name": "Changer la langue",
+            "description": "Changer la langue de SnapEnhance"
         }
     }
 }
