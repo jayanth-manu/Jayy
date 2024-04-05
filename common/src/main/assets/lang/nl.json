@@ -27,7 +27,12 @@
             "home_settings": "Instellingen",
             "home_logs": "Logs",
             "social": "Sociaal",
-            "scripts": "Scripts"
+            "scripts": "Scripts",
+            "manage_scope": "Scope beheren",
+            "messaging_preview": "Preview",
+            "tasks": "Assignments",
+            "logger_history": "Logger geschiedenis",
+            "logged_stories": "Gelogde Stories"
         },
         "sections": {
             "home": {
@@ -49,6 +54,9 @@
                 "streaks_expiration_short": "{hours}u",
                 "streaks_expiration_text": "Verloopt in {eta}",
                 "reminder_button": "Stel herinnering in"
+            },
+            "tasks": {
+                "no_tasks": "Geen taken"
             }
         },
         "dialogs": {
@@ -58,6 +66,9 @@
                 "fetch_error": "Kan gegevens niet ophalen",
                 "category_groups": "Groepen",
                 "category_friends": "Vrienden"
+            },
+            "scripting_warning": {
+                "title": "Waarschuwing"
             }
         }
     },
