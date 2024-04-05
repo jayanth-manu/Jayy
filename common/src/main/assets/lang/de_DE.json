@@ -221,7 +221,8 @@
                         "name": "Schwebender Download Button"
                     },
                     "download_context_menu": {
-                        "name": "Download Kontext Menü"
+                        "name": "Download Kontext Menü",
+                        "description": "Ermöglicht es , Nachrichten oder eine Story herunterzuladen/vorher anzuschauen mithilfe des Kontext Menüs\nLanges Drücken des Knopfes erzwingt den Download."
                     }
                 }
             },
@@ -452,7 +453,8 @@
                         "description": "Wiederholt Snaps & Stories beim ansehen in einer Schleife"
                     },
                     "bypass_message_action_restrictions": {
-                        "description": "Ermöglicht es Ihnen, auf einen Snap zu reagieren, ohne ihn geöffnet zu haben, oder eine nicht speicherbare Nachricht zu speichern."
+                        "description": "Ermöglicht es Ihnen, auf einen Snap zu reagieren, ohne ihn geöffnet zu haben, oder eine nicht speicherbare Nachricht zu speichern.",
+                        "name": "Einschränkungen bei Nachrichtenaktionen umgehen."
                     },
                     "remove_groups_locked_status": {
                         "name": "Entfernen des Gruppen-Sperrstatus",
@@ -517,16 +519,21 @@
                                 "description": "Täuscht Ihren Standort auf einen bestimmten Ort vor."
                             },
                             "coordinates": {
-                                "name": "Koordinaten"
+                                "name": "Koordinaten",
+                                "description": "Setze die Koordinaten von dem gefälschten Ort."
                             },
                             "always_update_location": {
-                                "name": "Aktualisiere den Ort immer"
+                                "name": "Aktualisiere den Ort immer",
+                                "description": "Zwingt Snapchat dazu, die den Standort zu aktualisieren, auch wenn es kein GPS Signal erhält."
                             },
                             "spoof_battery_level": {
                                 "name": "­Täusche den Akkustand vor"
                             },
                             "spoof_headphones": {
                                 "name": "Simuliere Kopfhörer"
+                            },
+                            "suspend_location_updates": {
+                                "name": "Stoppe die Aktualisierung des Standortes."
                             }
                         }
                     },
@@ -1108,7 +1115,8 @@
             "description": "Im/- exportiere deine Freundesliste beim Backup"
         },
         "export_chat_messages": {
-            "name": "Exportiere die Chatnachrichten"
+            "name": "Exportiere die Chatnachrichten",
+            "description": "Exportiert die Konversation in eine JSON/HTML/TXT Datei."
         },
         "export_memories": {
             "name": "Exportiere die Memories",
