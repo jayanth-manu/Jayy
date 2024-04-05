@@ -529,11 +529,15 @@
                                 "name": "Coordonnées"
                             },
                             "always_update_location": {
-                                "name": "Toujours actualiser la localisation"
+                                "name": "Toujours actualiser la localisation",
+                                "description": "Force Snapchat à actualiser la localisation même si aucune donnée GPS est reçue"
                             },
                             "spoof_location": {
                                 "description": "Usurpe votre emplacement à un emplacement spécifié",
                                 "name": "Cacher sa Localisation"
+                            },
+                            "suspend_location_updates": {
+                                "name": "Suspendre l'actualisation de la position"
                             }
                         },
                         "description": "Améliore la localisation de Snapchat"
