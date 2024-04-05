@@ -520,7 +520,7 @@
                             },
                             "coordinates": {
                                 "name": "Koordinaten",
-                                "description": "Setze die Koordinaten von dem gefälschten Ort"
+                                "description": "Wähle die Koordinaten des getäuschten Standorts"
                             },
                             "always_update_location": {
                                 "name": "Aktualisiere den Ort immer",
@@ -528,7 +528,7 @@
                             },
                             "spoof_battery_level": {
                                 "name": "­Täusche den Akkustand vor",
-                                "description": "Verfälscht den Akkustand Ihres Geräts auf der Karte\nDer Wert muss zwischen 0 und 100 liegen"
+                                "description": "Täuscht den Akkustand deines Geräts auf der SnapMap vor.\nDer Wert muss zwischen 0 und 100 liegen"
                             },
                             "spoof_headphones": {
                                 "name": "Simuliere Kopfhörer",
@@ -536,12 +536,12 @@
                             },
                             "suspend_location_updates": {
                                 "name": "Stoppe die Aktualisierung des Standortes",
-                                "description": "Fügt in den Karteneinstellungen eine Schaltfläche hinzu, um Standortaktualisierungen zu pausieren"
+                                "description": "Fügt in den Karteneinstellungen eine Schaltfläche hinzu, um Standortaktualisierungen auszusetzen"
                             }
                         }
                     },
                     "default_volume_controls": {
-                        "name": "Standart Lautstärkeregler",
+                        "name": "Standard Lautstärkekontrolle",
                         "description": "Zwinge Snapchat die Systemlautstärke zu nutzen"
                     },
                     "disable_memories_snap_feed": {
@@ -1185,11 +1185,11 @@
         },
         "manage_friend_list": {
             "name": "Freundesliste verwalten",
-            "description": "Importiere/exportiere deine Freundesliste beim Backup"
+            "description": "Im-/ex- portiere deine Freundesliste beim Backup"
         },
         "export_chat_messages": {
             "name": "Exportiere die Chatnachrichten",
-            "description": "Exportiert die Konversation in eine JSON/HTML/TXT Datei"
+            "description": "Exportiert Chat-Nachrichten in eine JSON/HTML/TXT Datei"
         },
         "export_memories": {
             "name": "Exportiere die Memories",
