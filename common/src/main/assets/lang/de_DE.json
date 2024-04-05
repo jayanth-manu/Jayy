@@ -527,19 +527,37 @@
                                 "description": "Zwingt Snapchat dazu, die den Standort zu aktualisieren, auch wenn es kein GPS Signal erhält."
                             },
                             "spoof_battery_level": {
-                                "name": "­Täusche den Akkustand vor"
+                                "name": "­Täusche den Akkustand vor",
+                                "description": "Verfälscht den Akkustand Ihres Geräts auf der Karte\nDer Wert muss zwischen 0 und 100 liegen"
                             },
                             "spoof_headphones": {
-                                "name": "Simuliere Kopfhörer"
+                                "name": "Simuliere Kopfhörer",
+                                "description": "Verfälscht den Status des Musikhörens auf der Karte"
                             },
                             "suspend_location_updates": {
-                                "name": "Stoppe die Aktualisierung des Standortes."
+                                "name": "Stoppe die Aktualisierung des Standortes.",
+                                "description": "Fügt in den Karteneinstellungen eine Schaltfläche hinzu, um Standortaktualisierungen auszusetzen"
                             }
                         }
                     },
                     "default_volume_controls": {
                         "name": "Eigene Lautstärke",
                         "description": "Zwinge Snapchat die Systemlautstärke zu nutzen"
+                    },
+                    "disable_memories_snap_feed": {
+                        "name": "Memories Snap Feed deaktivieren",
+                        "description": "Verhindert, dass Snapchat aktuelle Erinnerungen anzeigt, wenn Sie in der Kamera nach oben wischen"
+                    },
+                    "disable_permission_requests": {
+                        "name": "Berechtigungsanfragen deaktivieren",
+                        "description": "Verhindert, dass Snapchat nach bestimmten Berechtigungen fragt"
+                    },
+                    "default_video_playback_rate": {
+                        "name": "Standardmäßige Videowiedergaberate",
+                        "description": "Legt die Standardgeschwindigkeit für die Wiedergabe von Videos fest\n\tDer Wert muss zwischen 0,1 und 4,0 liegen"
+                    },
+                    "video_playback_rate_slider": {
+                        "name": "Schieberegler für die Videowiedergaberate"
                     }
                 }
             },
