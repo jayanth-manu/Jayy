@@ -523,15 +523,20 @@
                         "description": "Empêche Snapchat de demander des autorisations spécifiques"
                     },
                     "better_location": {
-                        "name": "Meilleur Localisation",
+                        "name": "Meilleur emplacement",
                         "properties": {
                             "coordinates": {
                                 "name": "Coordonnées"
                             },
                             "always_update_location": {
                                 "name": "Toujours actualiser la localisation"
+                            },
+                            "spoof_location": {
+                                "description": "Usurpe votre emplacement à un emplacement spécifié",
+                                "name": "Cacher sa Localisation"
                             }
-                        }
+                        },
+                        "description": "Améliore la localisation de Snapchat"
                     }
                 }
             },
@@ -704,6 +709,14 @@
                     "story_logger": {
                         "description": "Fournit un historique des Stories d'amis",
                         "name": "Journal des Stories"
+                    },
+                    "session_events": {
+                        "description": "Enregistre les événements de la session",
+                        "properties": {
+                            "capture_duplex_events": {
+                                "name": "Capturer les événements duplex"
+                            }
+                        }
                     }
                 }
             },
