@@ -120,6 +120,10 @@
                 },
                 "description": "Empêche les messages d'être enregistrés dans le chat par d'autres personnes"
             }
+        },
+        "toasts": {
+            "enabled": "{ruleName} activé",
+            "disabled": "{ruleName} désactivé"
         }
     },
     "features": {
@@ -1059,6 +1063,23 @@
         "confirmation_dialog": {
             "message": "Cette action affectera tous les amis sélectionnés. Cette action ne peut pas être annulée.",
             "title": "Êtes-vous sûr ?"
+        }
+    },
+    "actions": {
+        "clean_snapchat_cache": {
+            "name": "Nettoyer le cache Snapchat",
+            "description": "Nettoie le cache de Snapchat"
+        },
+        "manage_friend_list": {
+            "name": "Gérer la liste d'amis",
+            "description": "Importez/exportez votre liste d'amis lors de la sauvegarde"
+        },
+        "export_chat_messages": {
+            "name": "Exporter les messages de discussion",
+            "description": "Exporte les messages de conversation dans un fichier JSON/HTML/TXT"
+        },
+        "export_memories": {
+            "name": "Exporter des souvenirs"
         }
     }
 }
