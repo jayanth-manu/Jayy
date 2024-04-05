@@ -657,8 +657,8 @@
                                 "description": "Forhindrer Snapchat i at opdage VPN'er"
                             },
                             "remove_mock_location_flag": {
-                                "description": "Forhindrer Snapchat i at registrere mock placering",
-                                "name": "Fjern Mock Location Flag"
+                                "description": "Forhindrer Snapchat i at registrere falsk placering",
+                                "name": "Fjern Falsk Location Flag"
                             },
                             "randomize_persistent_device_token": {
                                 "name": "Randomiser vedvarende enhedstoken",
@@ -761,8 +761,8 @@
                         "description": "Giver dig mulighed for at vælge en hvilken som helst video-/lydfil fra galleriet"
                     },
                     "disable_composer_modules": {
-                        "name": "Deaktiver komponist moduler",
-                        "description": "Forhindrer udvalgte komponist moduler i at blive indlæst\nNavne skal adskilles med komma"
+                        "name": "Deaktiver komponente moduler",
+                        "description": "Forhindrer udvalgte komponente moduler i at blive indlæst\nNavne skal adskilles med komma"
                     },
                     "prevent_forced_logout": {
                         "description": "Forhindrer Snapchat i at logge dig ud, når du logger på en anden enhed",
@@ -895,7 +895,7 @@
                 "split": "Opdel medier"
             },
             "strip_media_metadata": {
-                "remove_audio_note_duration": "Fjern lyd bemærknings varighed",
+                "remove_audio_note_duration": "Fjern lyd note varighed",
                 "hide_caption_text": "Skjul billedtekst",
                 "remove_audio_note_transcript_capability": "Fjern lydnote-transskriptions kapacitet",
                 "hide_snap_filters": "Skjul snap filtre",
@@ -947,7 +947,7 @@
                 "all": "Alle (Snapchat + SnapEnhance)"
             },
             "edit_text_override": {
-                "multi_line_chat_input": "Mange linjer chat input",
+                "multi_line_chat_input": "Extra mange linjer chat input",
                 "bypass_text_input_limit": "Omgå grænse for tekst input"
             },
             "disable_story_sections": {
@@ -1168,7 +1168,7 @@
         "public_story": "Offentlig historie",
         "story": "Historie",
         "story_logger": "Historielogger",
-        "pending": "Verserende",
+        "pending": "Afventende",
         "spotlight": "Spotlight",
         "chat_media": "Chat medier",
         "profile_picture": "Profilbillede",
