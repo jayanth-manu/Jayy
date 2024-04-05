@@ -336,7 +336,7 @@
                     },
                     "message_indicators": {
                         "name": "Indicateur de messages",
-                        "description": "Ajoute des icônes d'indications spécifiques au messages\nNote: les indications peuvent ne pas être 100% exactes"
+                        "description": "Ajoute des indicateurs d'icônes spécifiques aux messages\nNote: les indications peuvent ne pas être 100% exactes"
                     }
                 }
             },
@@ -526,7 +526,8 @@
                         "name": "Meilleur emplacement",
                         "properties": {
                             "coordinates": {
-                                "name": "Coordonnées"
+                                "name": "Coordonnées",
+                                "description": "Choisir les coordonnées de l'usurpation de localisation"
                             },
                             "always_update_location": {
                                 "name": "Toujours actualiser la localisation",
@@ -537,10 +538,12 @@
                                 "name": "Cacher sa Localisation"
                             },
                             "suspend_location_updates": {
-                                "name": "Suspendre les mises à jour de localisation"
+                                "name": "Suspendre les mises à jour de localisation",
+                                "description": "Ajouter un bouton dans les paramètres de la carte pour suspendre les mises à jour de la localisation"
                             },
                             "spoof_battery_level": {
-                                "description": "Usure le niveau de la batterie de votre appareil sur la carte\n La valeur doit être comprise entre 0 et 100"
+                                "description": "Usure le niveau de la batterie de votre appareil sur la carte\n La valeur doit être comprise entre 0 et 100",
+                                "name": "Usurper le niveau de batterie"
                             },
                             "spoof_headphones": {
                                 "description": "Usure le statut d'écoute de musique sur la carte",
