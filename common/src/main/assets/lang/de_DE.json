@@ -330,10 +330,12 @@
                         "description": "Entfernt Empfehlungen von der Story‐Seite"
                     },
                     "stealth_mode_indicator": {
-                        "name": "Diebstahl Modus Indikator"
+                        "name": "Diebstahl Modus Indikator",
+                        "description": "Fügt den Konversationen im Stealth-Modus ein 👻-Emoji hinzu."
                     },
                     "message_indicators": {
-                        "name": "Nachrichtenindikatoren"
+                        "name": "Nachrichtenindikatoren",
+                        "description": "Fügt spezifische Indikator-Symbole zu Nachrichten hinzu.\n Hinweis: Die Indikatoren sind nicht zu 100 % genau."
                     }
                 }
             },
@@ -448,6 +450,13 @@
                     "loop_media_playback": {
                         "name": "Medien Wiedergabe Wiederholen",
                         "description": "Wiederholt Snaps & Stories beim ansehen in einer Schleife"
+                    },
+                    "bypass_message_action_restrictions": {
+                        "description": "Ermöglicht es Ihnen, auf einen Snap zu reagieren, ohne ihn geöffnet zu haben, oder eine nicht speicherbare Nachricht zu speichern."
+                    },
+                    "remove_groups_locked_status": {
+                        "name": "Entfernen des Gruppen-Sperrstatus",
+                        "description": "Ermöglicht es Ihnen, nach dem Rauswurf Gruppeninformationen anzuzeigen."
                     }
                 }
             },
@@ -504,7 +513,8 @@
                         "description": "Erweitert den Snapchat-Ort",
                         "properties": {
                             "spoof_location": {
-                                "name": "Täusche den Ort"
+                                "name": "Täusche den Ort",
+                                "description": "Täuscht Ihren Standort auf einen bestimmten Ort vor."
                             },
                             "coordinates": {
                                 "name": "Koordinaten"
@@ -1105,7 +1115,8 @@
             "description": "Exportiere die Memories in eine ZIP-Datei"
         },
         "bulk_messaging_action": {
-            "name": "Massen Nachrichten Aktion"
+            "name": "Massen Nachrichten Aktion",
+            "description": "Führt Operationen wie das Löschen von Freunden oder amassenlöschung von Konversationen durch"
         },
         "regen_mappings": {
             "name": "Erneuere die Mappings",
