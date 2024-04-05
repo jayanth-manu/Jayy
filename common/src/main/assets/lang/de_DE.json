@@ -336,7 +336,7 @@
                     },
                     "message_indicators": {
                         "name": "Nachrichtenindikatoren",
-                        "description": "Fügt spezifische Indikator-Symbole zu Nachrichten hinzu.\n Hinweis: Die Indikatoren sind nicht zu 100 % genau."
+                        "description": "Fügt spezifische Indikator-Symbole zu Nachrichten hinzu.\nHinweis: Die Indikatoren sind nicht zu 100 % genau."
                     }
                 }
             },
@@ -454,11 +454,11 @@
                     },
                     "bypass_message_action_restrictions": {
                         "description": "Ermöglicht es Ihnen, auf einen Snap zu reagieren, ohne ihn geöffnet zu haben, oder eine nicht speicherbare Nachricht zu speichern.",
-                        "name": "Einschränkungen bei Nachrichtenaktionen umgehen."
+                        "name": "Einschränkungen bei Nachrichtenaktionen umgehen"
                     },
                     "remove_groups_locked_status": {
                         "name": "Entfernen des Gruppen-Sperrstatus",
-                        "description": "Ermöglicht es Ihnen, nach dem Rauswurf Gruppeninformationen anzuzeigen."
+                        "description": "Ermöglicht es Ihnen, nach dem Rauswurf Gruppeninformationen anzuzeigen"
                     }
                 }
             },
@@ -516,15 +516,15 @@
                         "properties": {
                             "spoof_location": {
                                 "name": "Täusche den Ort",
-                                "description": "Täuscht Ihren Standort auf einen bestimmten Ort vor."
+                                "description": "Täuscht Ihren Standort auf einen bestimmten Ort vor"
                             },
                             "coordinates": {
                                 "name": "Koordinaten",
-                                "description": "Setze die Koordinaten von dem gefälschten Ort."
+                                "description": "Setze die Koordinaten von dem gefälschten Ort"
                             },
                             "always_update_location": {
                                 "name": "Aktualisiere den Ort immer",
-                                "description": "Zwingt Snapchat dazu, die den Standort zu aktualisieren, auch wenn es kein GPS Signal erhält."
+                                "description": "Zwingt Snapchat dazu, die den Standort zu aktualisieren, auch wenn es kein GPS Signal erhält"
                             },
                             "spoof_battery_level": {
                                 "name": "­Täusche den Akkustand vor",
@@ -535,13 +535,13 @@
                                 "description": "Verfälscht den Status des Musikhörens auf der Karte"
                             },
                             "suspend_location_updates": {
-                                "name": "Stoppe die Aktualisierung des Standortes.",
-                                "description": "Fügt in den Karteneinstellungen eine Schaltfläche hinzu, um Standortaktualisierungen auszusetzen"
+                                "name": "Stoppe die Aktualisierung des Standortes",
+                                "description": "Fügt in den Karteneinstellungen eine Schaltfläche hinzu, um Standortaktualisierungen zu pausieren"
                             }
                         }
                     },
                     "default_volume_controls": {
-                        "name": "Eigene Lautstärke",
+                        "name": "Standart Lautstärkeregler",
                         "description": "Zwinge Snapchat die Systemlautstärke zu nutzen"
                     },
                     "disable_memories_snap_feed": {
@@ -558,7 +558,7 @@
                     },
                     "video_playback_rate_slider": {
                         "name": "Schieberegler für die Videowiedergaberate",
-                        "description": "Fügt einen Schieberegler im Opera-Kontextmenü hinzu, um die Videowiedergaberate zu ändern"
+                        "description": "Fügt einen Schieberegler im Opera-Kontextmenü hinzu, um die Videowiedergabegeschwindigkeit zu ändern. \nHinweis: Die Änderungen gelten nur für nachfolgende Videos."
                     }
                 }
             },
@@ -622,7 +622,7 @@
                     },
                     "remaining_hours": {
                         "name": "Verbleibende Zeit",
-                        "description": "Die verbleibende Zeit, bevor die Benachrichtigung angezeigt wird"
+                        "description": "Die verbleibende Zeit, bevor die Benachrichtigung angezeigt wird (in Stunden)"
                     },
                     "group_notifications": {
                         "name": "Gruppierte Benachrichtigungen",
@@ -739,6 +739,10 @@
                             "allow_running_in_background": {
                                 "name": "Hintergrundnutzung erlauben",
                                 "description": "Erlaubt der Sitzung im Hintergrund zu laufen"
+                            },
+                            "capture_duplex_events": {
+                                "name": "Erfassen von Duplex-Ereignissen",
+                                "description": "Erfassen von Präsenz- und Nachrichten-Ereignissen während einer aktiven Sitzung"
                             }
                         }
                     },
@@ -747,10 +751,26 @@
                         "description": "Verwende die neue Chat-Aktionsmenüleiste"
                     },
                     "call_recorder": {
-                        "name": "Anruf aufzeichner"
+                        "name": "Anrufaufzeichner",
+                        "description": "Zeichnet automatisch Audioanrufe auf"
                     },
                     "media_file_picker": {
-                        "name": "Mediendatei-Auswahl"
+                        "name": "Mediendatei-Auswahl",
+                        "description": "Ermöglicht es beliebige Video und Audio Dateien von der Gallerie auszuwählen"
+                    },
+                    "account_switcher": {
+                        "name": "­Accountwechsler",
+                        "description": "Ermöglicht es Ihnen, zwischen Konten zu wechseln, ohne sich auszuloggen.\nHalten Sie lange auf das Suchsymbol neben Ihrem Bitmoji-Profil, um das Menü zu öffnen.\nHinweis: Diese Funktion ist experimentell und wird wahrscheinlich in Zukunft geändert.",
+                        "properties": {
+                            "auto_backup_current_account": {
+                                "name": "Automatisches Backup des aktuellen Accounts",
+                                "description": "Automatisch wird das aktuelle Konto gesichert, wenn Sie sich ausloggen oder zwischen Konten wechseln"
+                            }
+                        }
+                    },
+                    "edit_message": {
+                        "description": "Ermöglicht es Nachrichten in Konversationen zu bearbeiten",
+                        "name": "Nachrichten bearbeiten"
                     }
                 }
             },
@@ -917,7 +937,8 @@
             },
             "hide_story_suggestions": {
                 "hide_friend_suggestions": "Freundschaftsvorschläge ausblenden",
-                "hide_suggested_friend_stories": "Empfohlene Stories von Freunden ausblenden"
+                "hide_suggested_friend_stories": "Empfohlene Stories von Freunden ausblenden",
+                "hide_my_stories": "Meine Stories verbergen"
             },
             "disable_story_sections": {
                 "friends": "Freunde",
@@ -927,6 +948,24 @@
             "disable_cameras": {
                 "front": "Selfie Kamera",
                 "back": "Hauptkamera"
+            },
+            "disable_permission_requests": {
+                "notifications": "Benachrichtigungen",
+                "read_media_images": "Medienbilder lesen",
+                "camera": "Kamera",
+                "microphone": "Mikrofon",
+                "read_media_video": "Medienvideos lesen",
+                "read_contacts": "Kontakte lesen",
+                "location": "Standort",
+                "nearby_devices": "In der Nähe befindliche Geräte",
+                "phone_calls": "Telefonanrufe"
+            },
+            "message_indicators": {
+                "encryption_indicator": "Fügt neben Nachrichten, die nur an Sie gesendet wurden, ein 🔒-Symbol hinzu",
+                "location_indicator": "Fügt Snaps ein 📍-Symbol hinzu, wenn sie mit aktivierter Standortfunktion gesendet wurden",
+                "platform_indicator": "Fügt das Plattformsymbol hinzu, von der aus ein Medium gesendet wurde (z. B. Android, iOS, Web)",
+                "director_mode_indicator": "Fügt Snaps ein ✏️-Symbol hinzu, wenn sie mit dem Director-Modus gesendet wurden, der verwendet werden kann, um Galeriebilder als Snaps zu senden",
+                "ovf_editor_indicator": "Kennzeichnet, ob ein Snap mit dem OVF-Editor gesendet wurde"
             }
         }
     },
@@ -942,7 +981,8 @@
         "preview_button": "Vorschau",
         "download_button": "Download",
         "delete_logged_message_button": "Gespeicherte Nachrichten löschen",
-        "convert_message": "Nachricht konvertieren"
+        "convert_message": "Nachricht konvertieren",
+        "edit_message": "Nachricht bearbeiten"
     },
     "opera_context_menu": {
         "download": "Medien herunterladen",
@@ -1064,7 +1104,8 @@
         "FAMILY_CENTER_ACCEPT": "Family Center akzeptieren",
         "FAMILY_CENTER_LEAVE": "Family Center verlassen",
         "STATUS_CALL_MISSED_AUDIO": "Verpasster Sprachanruf",
-        "NOTE": "Sprachnachricht"
+        "NOTE": "Sprachnachricht",
+        "MAP_REACTION": "Kartenreaktion"
     },
     "suspend_location_updates": {
         "switch_text": "Standortaktualisierungen aussetzen"
@@ -1118,7 +1159,9 @@
         "pending": "Ausstehend",
         "story": "Story",
         "story_logger": "Story Logger",
-        "merged": "Zusammengeführt"
+        "merged": "Zusammengeführt",
+        "message_logger": "Nachrichtenprotokollierung",
+        "voice_call": "Sprachanruf"
     },
     "material3_strings": {
         "date_input_invalid_not_allowed": "Invalides Datum",
@@ -1142,11 +1185,11 @@
         },
         "manage_friend_list": {
             "name": "Freundesliste verwalten",
-            "description": "Im/- exportiere deine Freundesliste beim Backup"
+            "description": "Importiere/exportiere deine Freundesliste beim Backup"
         },
         "export_chat_messages": {
             "name": "Exportiere die Chatnachrichten",
-            "description": "Exportiert die Konversation in eine JSON/HTML/TXT Datei."
+            "description": "Exportiert die Konversation in eine JSON/HTML/TXT Datei"
         },
         "export_memories": {
             "name": "Exportiere die Memories",
@@ -1166,6 +1209,10 @@
         }
     },
     "mark_as_seen": {
-        "already_unseen_toast": "Schon als ungelesen markiert!"
+        "already_unseen_toast": "Schon als ungelesen markiert!",
+        "no_unseen_snaps_toast": "Es wurden keine ungesehenen Snaps gefunden!",
+        "seen_toast": "Als gelesen markiert!",
+        "unseen_toast": "Als ungelesen markiert!",
+        "already_seen_toast": "Bereits als gelesen markiert!"
     }
 }
