@@ -451,6 +451,14 @@
                     "bypass_message_retention_policy": {
                         "name": "Contourner la politique de conservation des messages",
                         "description": "Empêche la disparition des messages après les avoir consultés"
+                    },
+                    "bypass_message_action_restrictions": {
+                        "name": "Contourner les restrictions d'action des messages",
+                        "description": "Permet de réagir à un snap sans l'avoir ouvert ou d'enregistrer un message non sauvegardé"
+                    },
+                    "remove_groups_locked_status": {
+                        "name": "Supprimer le statut verrouillé des groupes",
+                        "description": "Vous permet d'afficher les informations du groupe après avoir été expulsé"
                     }
                 }
             },
