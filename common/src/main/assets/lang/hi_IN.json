@@ -56,6 +56,11 @@
             "tasks": {
                 "no_tasks": "कोई कार्य नहीं"
             }
+        },
+        "dialogs": {
+            "add_friend": {
+                "title": "मित्र या समूह जोड़ें"
+            }
         }
     },
     "friend_menu_option": {
