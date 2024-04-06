@@ -271,6 +271,26 @@
                             "preset": {
                                 "name": "Preset",
                                 "description": "Set the speed of the conversion"
+                            },
+                            "constant_rate_factor": {
+                                "name": "Constant Rate Factor",
+                                "description": "Set the constant rate factor for the video encoder\nFrom 0 to 51 for libx264"
+                            },
+                            "video_bitrate": {
+                                "name": "Video Bitrate",
+                                "description": "Set the video bitrate (kbps)"
+                            },
+                            "audio_bitrate": {
+                                "description": "Set the audio bitrate (kbps)",
+                                "name": "Audio Bitrate"
+                            },
+                            "custom_video_codec": {
+                                "name": "Custom Video Codec",
+                                "description": "Set a custom Video Codec (e.g. libx264)"
+                            },
+                            "custom_audio_codec": {
+                                "name": "Custom Audio Codec",
+                                "description": "Set a custom Audio Codec (e.g. AAC)"
                             }
                         }
                     },
@@ -301,10 +321,160 @@
                     "force_image_format": {
                         "name": "Force Image Format",
                         "description": "Forces images to be saved in a specified Format"
+                    },
+                    "logging": {
+                        "name": "Logging",
+                        "description": "Shows toasts when media is downloading"
+                    },
+                    "custom_path_format": {
+                        "name": "Custom Path Format",
+                        "description": "Specify a custom path format for downloaded media\n\nAvailable variables:\n - %username%\n - %source%\n - %hash%\n - %date_time%"
                     }
                 },
                 "name": "Downloader",
                 "description": "Download Snapchat Media"
+            },
+            "user_interface": {
+                "properties": {
+                    "friend_feed_message_preview": {
+                        "properties": {
+                            "amount": {
+                                "description": "The amount of messages to get previewed",
+                                "name": "Amount"
+                            }
+                        },
+                        "description": "Shows a preview of the last messages in the Friend Feed",
+                        "name": "Friend Feed Message Preview"
+                    },
+                    "snap_preview": {
+                        "name": "Snap Preview",
+                        "description": "Displays a small preview next to unseen Snaps in chat"
+                    },
+                    "bootstrap_override": {
+                        "description": "Overrides user interface bootstrap settings",
+                        "properties": {
+                            "app_appearance": {
+                                "name": "App Appearance",
+                                "description": "Sets a persistent App Appearance"
+                            },
+                            "home_tab": {
+                                "name": "Home Tab",
+                                "description": "Overrides the startup tab when opening Snapchat"
+                            }
+                        },
+                        "name": "Bootstrap Override"
+                    },
+                    "streak_expiration_info": {
+                        "name": "Show Streak Expiration Info"
+                    },
+                    "map_friend_nametags": {
+                        "name": "Enhanced Friend Map Nametags",
+                        "description": "Improves the Nametags of friends on the Snapmap"
+                    },
+                    "prevent_message_list_auto_scroll": {
+                        "name": "Prevent Message List Auto Scroll",
+                        "description": "Prevents the message list from scrolling to the bottom when sending/receiving a message"
+                    },
+                    "opera_media_quick_info": {
+                        "name": "Opera Media Quick Info",
+                        "description": "Shows useful information of media such as creation date in opera viewer context menu"
+                    },
+                    "vertical_story_viewer": {
+                        "description": "Enables the vertical story viewer for all stories",
+                        "name": "Vertical Story Viewer"
+                    },
+                    "friend_feed_menu_buttons": {
+                        "name": "Friend Feed Menu Buttons",
+                        "description": "Select which buttons to show in the Friend Feed Menu"
+                    },
+                    "message_indicators": {
+                        "name": "Message Indicators",
+                        "description": "Adds specific indicators icons to messages\nNote: indicators might not be 100% accurate"
+                    },
+                    "stealth_mode_indicator": {
+                        "name": "Stealth Mode Indicator",
+                        "description": "Adds a 👻 emoji next to conversations in Stealth Mode"
+                    },
+                    "enable_app_appearance": {
+                        "name": "Enable App Appearance Settings",
+                        "description": "Enables the hidden App Appearance Setting\nMay not be required on newer Snapchat versions"
+                    },
+                    "amoled_dark_mode": {
+                        "name": "AMOLED Dark Mode",
+                        "description": "Enables AMOLED dark mode\nMake sure Snapchat's Dark mode is enabled"
+                    },
+                    "hide_friend_feed_entry": {
+                        "name": "Hide Friend Feed Entry",
+                        "description": "Hides a specific friend from the Friend Feed\nUse the social tab to manage this feature"
+                    },
+                    "hide_streak_restore": {
+                        "description": "Hides the Restore button in the friend feed",
+                        "name": "Hide Streak Restore"
+                    },
+                    "hide_quick_add_friend_feed": {
+                        "name": "Hide Quick Add in Friend Feed",
+                        "description": "Hides the Quick Add section in the friend feed"
+                    },
+                    "hide_story_suggestions": {
+                        "name": "Hide Story Suggestions",
+                        "description": "Removes suggestions from the Stories page"
+                    },
+                    "hide_ui_components": {
+                        "description": "Select which UI components to hide",
+                        "name": "Hide UI Components"
+                    },
+                    "old_bitmoji_selfie": {
+                        "name": "Old Bitmoji Selfie",
+                        "description": "Brings back the Bitmoji selfies from older Snapchat versions"
+                    },
+                    "disable_spotlight": {
+                        "name": "Disable Spotlight",
+                        "description": "Disables the Spotlight page"
+                    },
+                    "hide_settings_gear": {
+                        "name": "Hide Settings Gear",
+                        "description": "Hides the SnapEnhance Settings Gear in The friend feed"
+                    },
+                    "enable_friend_feed_menu_bar": {
+                        "name": "Friend Feed Menu Bar",
+                        "description": "Enables the new Friend Feed Menu Bar"
+                    },
+                    "edit_text_override": {
+                        "name": "Edit Text Override",
+                        "description": "Overrides text field behavior"
+                    }
+                },
+                "name": "User Interface",
+                "description": "Change the look and feel of Snapchat"
+            },
+            "messaging": {
+                "name": "Messaging",
+                "properties": {
+                    "bypass_screenshot_detection": {
+                        "description": "Prevents Snapchat from detecting when you take a screenshot",
+                        "name": "Bypass Screenshot Detection"
+                    },
+                    "anonymous_story_viewing": {
+                        "name": "Anonymous Story Viewing",
+                        "description": "Prevents anyone from knowing you've seen their story"
+                    },
+                    "hide_peek_a_peek": {
+                        "description": "Prevents notification from being sent when you half swipe into a chat",
+                        "name": "Hide Peek-a-Peek"
+                    },
+                    "prevent_story_rewatch_indicator": {
+                        "description": "Prevents anyone from knowing you've rewatched their story",
+                        "name": "Prevent Story Rewatch Indicator"
+                    },
+                    "hide_bitmoji_presence": {
+                        "name": "Hide Bitmoji Presence",
+                        "description": "Prevents your Bitmoji from popping up while in Chat"
+                    },
+                    "hide_typing_notifications": {
+                        "name": "Hide Typing Notifications"
+                    }
+                },
+                "description": "Change how you interact with friends"
             }
         }
     }
