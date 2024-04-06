@@ -31,8 +31,8 @@
             "tasks": "कार्य",
             "manage_scope": "दायरा प्रबंधित करें",
             "messaging_preview": "पूर्व दर्शन",
-            "logger_history": "लकड़हारा इतिहास",
-            "logged_stories": "लॉग की गई कहानियाँ"
+            "logger_history": "प्रचालेखन इतिहास",
+            "logged_stories": "प्रचालेखित कि गई कहानियाँ"
         },
         "sections": {
             "features": {
@@ -122,5 +122,9 @@
         "processing_toast": "प्रोसेसिंग {path}...",
         "failed_generic_toast": "डाउनलोड करने में असफल",
         "failed_to_create_preview_toast": "प्रीव्यू करने में असफल"
+    },
+    "scopes": {
+        "friend": "दोस्त",
+        "group": "समुह"
     }
 }
