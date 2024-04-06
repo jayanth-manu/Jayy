@@ -36,13 +36,44 @@
         },
         "sections": {
             "features": {
-                "disabled": "निष्क्रिय"
+                "disabled": "निष्क्रिय",
+                "export_option": "निर्यात",
+                "import_option": "आयात"
             },
             "social": {
                 "streaks_expiration_short": "{hours}h"
             },
             "tasks": {
-                "no_tasks": "कोई कार्य नहीं"
+                "no_tasks": "कोई कार्य नहीं",
+                "merge_files_toast": "{संख्या} फाईल जुड़ रही है",
+                "delete_files_option": "files भी हटाएं",
+                "remove_selected_tasks_confirm": "{संख्या} कार्य हटाएं?",
+                "remove_all_tasks_confirm": "सभी कार्य हटाएं?",
+                "remove_all_tasks_title": "क्या आप सभी कार्यों को हटाने के लिए सहमत हैं?",
+                "remove_selected_tasks_title": "क्या आप चिह्नित किए हुए कार्यों को हटाने के लिए सहमत है?"
+            },
+            "home": {
+                "update_content": "वर्जन {वर्जन} उपलब्ध है!",
+                "update_title": "SnapEnhance अपडेट",
+                "update_button": "डाऊनलोड"
+            },
+            "home_logs": {
+                "no_logs_hint": "logs उपलब्ध नहीं",
+                "clear_logs_button": "logs साफ करें",
+                "export_logs_button": "logs निर्यात करें",
+                "saving_logs_toast": "logs सेव हो रहे हैं, इसमें थोड़ा समय लग सकता है ..।",
+                "saved_logs_success_toast": "logs सफलतापूर्वक सेव हो चुके हैं",
+                "saved_logs_failure_toast": "logs सेव होने में असफल"
+            },
+            "home_settings": {
+                "actions_title": "प्रत्क्रिया",
+                "message_logger_summary": "{मैसेज संख्या} मैसेज\n{स्टोरी संख्या} स्टोरीज",
+                "view_logger_history_button": "logger हिस्ट्री देखे",
+                "export_button": "निर्यात करें",
+                "clear_button": "साफ करें",
+                "message_logger_title": "मेसेज के log बनाएं",
+                "debug_title": "दोष मुक्त",
+                "success_toast": "हो चुका!"
             }
         },
         "dialogs": {
