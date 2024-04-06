@@ -265,7 +265,12 @@
                         "description": "Specify additional FFmpeg options",
                         "properties": {
                             "threads": {
-                                "name": "Threads"
+                                "name": "Threads",
+                                "description": "The amount of threads to use"
+                            },
+                            "preset": {
+                                "name": "Preset",
+                                "description": "Set the speed of the conversion"
                             }
                         }
                     },
