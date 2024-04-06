@@ -1152,7 +1152,13 @@
         "failed_generic_toast": "İndirme başarısız oldu",
         "failed_to_create_preview_toast": "Önizleme oluşturulamadı",
         "failed_processing_toast": "İşlem başarısız {error}",
-        "failed_gallery_toast": "Galeriye kaydedilemedi {error}"
+        "failed_gallery_toast": "Galeriye kaydedilemedi {error}",
+        "dash_dialog": {
+            "title": "Dash medyasını indir",
+            "download_all": "Tümünü İndir",
+            "segment_text": "Segment {from} - {to}"
+        },
+        "dash_no_chapter": "Bölüm bulunamadı"
     },
     "streaks_reminder": {
         "notification_title": "Seriler",
