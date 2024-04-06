@@ -23,7 +23,181 @@
     "manager": {
         "routes": {
             "tasks": "Tasks",
-            "features": "Features"
+            "features": "Features",
+            "home_logs": "Logs",
+            "home": "Home",
+            "home_settings": "Settings",
+            "logged_stories": "Logged Stories",
+            "social": "Social",
+            "manage_scope": "Manage Scope",
+            "scripts": "Scripts",
+            "logger_history": "Logger History",
+            "messaging_preview": "Preview"
+        },
+        "sections": {
+            "features": {
+                "disabled": "Disabled",
+                "export_option": "Export",
+                "import_option": "Import",
+                "config_import_success_toast": "Config imported Successfully",
+                "config_import_failure_toast": "Failed to import Config {error}",
+                "reset_option": "Reset",
+                "config_export_success_toast": "Config exported Successfully",
+                "saved_config_snackbar": "Config saved"
+            },
+            "tasks": {
+                "no_tasks": "No Tasks",
+                "merge_files_toast": "Merging {count} Files",
+                "remove_selected_tasks_title": "Are you sure you want to remove selected tasks?",
+                "remove_all_tasks_title": "Are you sure you want to remove all tasks?",
+                "delete_files_option": "Also Delete Files",
+                "remove_selected_tasks_confirm": "Remove {count} Tasks?",
+                "remove_all_tasks_confirm": "Remove All Tasks?"
+            },
+            "social": {
+                "streaks_expiration_short": "{hours}h"
+            },
+            "home": {
+                "update_title": "SnapEnhance Update",
+                "update_button": "Download",
+                "update_content": "Version {version} is Available!"
+            },
+            "home_logs": {
+                "no_logs_hint": "No Logs Available",
+                "clear_logs_button": "Clear Logs",
+                "export_logs_button": "Export Logs",
+                "saving_logs_toast": "Saving logs, This may take a while ...",
+                "saved_logs_success_toast": "Logs saved successfully",
+                "saved_logs_failure_toast": "Failed to save logs"
+            },
+            "home_settings": {
+                "debug_title": "Debug",
+                "success_toast": "Done!",
+                "message_logger_summary": "{messageCount} Messages\n{storyCount} Stories",
+                "export_button": "Export",
+                "clear_button": "Clear",
+                "view_logger_history_button": "View Logger History",
+                "actions_title": "Actions",
+                "message_logger_title": "Message Logger"
+            },
+            "manage_scope": {
+                "logged_stories_button": "Show Logged Stories",
+                "e2ee_title": "End-to-End Encryption",
+                "participants_text": "{count} Participants",
+                "not_found": "Not Found",
+                "streaks_title": "Streaks",
+                "streaks_length_text": "Length: {length}",
+                "streaks_expiration_text": "Expires in {eta}",
+                "delete_scope_confirm_dialog_title": "Are you sure You want to Delete a {scope}?",
+                "rules_title": "Rules",
+                "streaks_expiration_text_expired": "Expired",
+                "reminder_button": "Set Reminder"
+            },
+            "logged_stories": {
+                "story_failed_to_load": "Failed to load",
+                "save_from_cache_button": "Save From Cache",
+                "no_stories": "No stories found"
+            },
+            "messaging_preview": {
+                "bridge_connection_failed": "Failed to connect to Snapchat through bridge service",
+                "message_fetch_failed": "Failed to fetch Messages",
+                "save_all_option": "Save All",
+                "unsave_all_option": "Unsave All",
+                "mark_selection_as_seen_option": "Mark Selected Snap As Seen",
+                "mark_all_as_seen_option": "Mark all Snaps As Seen",
+                "delete_selection_option": "Delete Selection",
+                "delete_all_option": "Delete All",
+                "bridge_init_failed": "Failed to initialize messaging bridge",
+                "no_message_hint": "No Message",
+                "save_selection_option": "Save Selection",
+                "unsave_selection_option": "Unsave Selection"
+            },
+            "logger_history": {
+                "list_friend_format": "Friend {name}",
+                "list_group_format": "Group {name}",
+                "no_more_messages": "No more Messages",
+                "reverse_order_checkbox": "Reverse Order",
+                "chat_attachment": "Attachment {index}",
+                "empty_message": "Empty Chat Message",
+                "message_parse_failed": "Failed to Parse Message",
+                "unknown_sender": "Unknown Sender",
+                "download_attachment_failed_toast": "Failed to Download Attachment"
+            }
+        },
+        "dialogs": {
+            "add_friend": {
+                "title": "Add Friend or Group",
+                "search_hint": "Search",
+                "fetch_error": "Failed to fetch data",
+                "category_groups": "Groups",
+                "category_friends": "Friends"
+            },
+            "scripting_warning": {
+                "title": "Warning",
+                "content": "SnapEnhance includes a scripting tool, allowing the execution of user-defined code on your device. Use extreme caution and only install modules from known, reliable sources. Unauthorised or unverified modules may pose security risks to your system."
+            },
+            "reset_config": {
+                "title": "Reset config",
+                "content": "Are you sure you want to reset the config?",
+                "success_toast": "Config reset successfully"
+            },
+            "messaging_action": {
+                "title": "Choose content types to process",
+                "select_all_button": "Select All"
+            }
+        }
+    },
+    "scopes": {
+        "friend": "Friend",
+        "group": "Group"
+    },
+    "rules": {
+        "toasts": {
+            "enabled": "{ruleName} Enabled",
+            "disabled": "{ruleName} Disabled"
+        },
+        "modes": {
+            "blacklist": "Blacklist mode",
+            "whitelist": "Whitelist mode"
+        },
+        "properties": {
+            "auto_download": {
+                "name": "Auto Download",
+                "description": "Automatically download Snaps when viewing them",
+                "options": {
+                    "blacklist": "Exclude from Auto Download",
+                    "whitelist": "Auto Download"
+                }
+            },
+            "stealth": {
+                "description": "Prevents anyone from knowing you've opened their Snaps/Chats and conversations",
+                "options": {
+                    "blacklist": "Exclude from Stealth Mode",
+                    "whitelist": "Stealth Mode"
+                },
+                "name": "Stealth Mode"
+            },
+            "auto_save": {
+                "name": "Auto Save",
+                "description": "Saves Chat Messages when viewing them",
+                "options": {
+                    "blacklist": "Exclude from Auto save",
+                    "whitelist": "Auto Save"
+                }
+            },
+            "unsaveable_messages": {
+                "name": "Unsaveable Messages",
+                "description": "Prevents messages from being saved in chat by other people",
+                "options": {
+                    "blacklist": "Exclude from Unsaveable Messages"
+                }
+            },
+            "hide_friend_feed": {
+                "name": "Hide from Friend Feed"
+            },
+            "e2e_encryption": {
+                "name": "Use E2E Encryption"
+            }
         }
     }
 }
