@@ -46,6 +46,19 @@
             },
             "home": {
                 "update_title": "SnapEnhance Güncellemesi"
+            },
+            "home_logs": {
+                "clear_logs_button": "Günlükleri Temizle",
+                "no_logs_hint": "Mevcut günlük yok",
+                "export_logs_button": "Günlükleri Dışa Aktar",
+                "saving_logs_toast": "Günlükler kaydediliyor, bu biraz zaman alabilir ...",
+                "saved_logs_success_toast": "Günlükler başarıyla kaydedildi",
+                "saved_logs_failure_toast": "Günlükler kaydedilemedi"
+            },
+            "home_settings": {
+                "actions_title": "Eylemler",
+                "message_logger_title": "Mesaj Kaydedici",
+                "debug_title": "Hata Ayıklama"
             }
         },
         "dialogs": {
