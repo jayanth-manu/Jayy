@@ -222,7 +222,7 @@
                     },
                     "download_context_menu": {
                         "name": "Download Kontext Menü",
-                        "description": "Ermöglicht es , Nachrichten oder eine Story herunterzuladen/vorher anzuschauen mithilfe des Kontext Menüs\nLanges Drücken des Knopfes erzwingt den Download."
+                        "description": "Ermöglicht es, Nachrichten oder eine Story herunterzuladen/vorher anzuschauen mithilfe des Kontext Menüs.\nLanges Drücken des Knopfes erzwingt den Download"
                     }
                 }
             },
