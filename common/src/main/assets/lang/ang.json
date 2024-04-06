@@ -16,12 +16,6 @@
     },
     "manager": {
         "sections": {
-            "home": {
-                "logs": {
-                    "export_logs_button": "Export Logs",
-                    "clear_logs_button": "Clear Logs"
-                }
-            },
             "tasks": {
                 "no_tasks": "No tasks"
             },
@@ -29,15 +23,7 @@
                 "disabled": "Disabled"
             },
             "social": {
-                "e2ee_title": "End-to-End Encryption",
-                "rules_title": "Rules",
-                "participants_text": "{count} participants",
-                "not_found": "Not found",
-                "streaks_title": "Streaks",
-                "streaks_length_text": "Length: {length}",
-                "streaks_expiration_short": "{hours}h",
-                "streaks_expiration_text": "Expires in {eta}",
-                "reminder_button": "Set Reminder"
+                "streaks_expiration_short": "{hours}h"
             }
         },
         "dialogs": {

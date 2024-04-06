@@ -35,24 +35,10 @@
             "logged_stories": "लॉग की गई कहानियाँ"
         },
         "sections": {
-            "home": {
-                "logs": {
-                    "clear_logs_button": "लॉग मिटाएं",
-                    "export_logs_button": "लॉग एक्सपोर्ट करें"
-                }
-            },
             "features": {
                 "disabled": "निष्क्रिय"
             },
             "social": {
-                "e2ee_title": "एंड-टू-एंड एन्क्रिप्शन",
-                "rules_title": "नियम",
-                "participants_text": "{count} प्रतिभागी",
-                "not_found": "नहीं मिला",
-                "streaks_title": "स्ट्रीक",
-                "streaks_length_text": "लंबाई: {length}",
-                "streaks_expiration_text": "{eta} में समाप्त होगा",
-                "reminder_button": "अनुस्मारक सेट करें",
                 "streaks_expiration_short": "{hours}h"
             },
             "tasks": {

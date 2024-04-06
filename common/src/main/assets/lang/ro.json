@@ -85,22 +85,8 @@
             "messaging_preview": "Previzualizeaza"
         },
         "sections": {
-            "home": {
-                "logs": {
-                    "clear_logs_button": "Curăță Log-uri",
-                    "export_logs_button": "Exportă Log-uri"
-                }
-            },
             "social": {
-                "not_found": "Negăsit",
-                "streaks_title": "Streaks",
-                "e2ee_title": "Criptare End-to-End",
-                "rules_title": "Reguli",
-                "participants_text": "{count} participanți",
-                "streaks_length_text": "Lungime: {length}",
-                "streaks_expiration_short": "{hours}h",
-                "streaks_expiration_text": "Expiră în {eta}",
-                "reminder_button": "Setează Memento"
+                "streaks_expiration_short": "{hours}h"
             },
             "tasks": {
                 "no_tasks": "Fără sarcini"

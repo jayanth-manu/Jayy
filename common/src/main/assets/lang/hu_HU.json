@@ -35,25 +35,11 @@
             "messaging_preview": "Előnézet"
         },
         "sections": {
-            "home": {
-                "logs": {
-                    "clear_logs_button": "Naplók ürítése",
-                    "export_logs_button": "Naplók exportálása"
-                }
-            },
             "features": {
                 "disabled": "Letiltva"
             },
             "social": {
-                "e2ee_title": "Végpontok közötti titkosítás",
-                "rules_title": "Szabályok",
-                "participants_text": "{count} résztvevő",
-                "not_found": "Nem található",
-                "streaks_title": "Sorozatok",
-                "streaks_length_text": "Hossz: {length}",
-                "streaks_expiration_short": "{hours} óra",
-                "streaks_expiration_text": "{eta} múlva jár le",
-                "reminder_button": "Emlékeztető beállítása"
+                "streaks_expiration_short": "{hours} óra"
             },
             "tasks": {
                 "no_tasks": "Nincsenek feladatok"

@@ -35,25 +35,11 @@
             "messaging_preview": "Aperçu"
         },
         "sections": {
-            "home": {
-                "logs": {
-                    "clear_logs_button": "Effacer les logs",
-                    "export_logs_button": "Exporter les logs"
-                }
-            },
             "features": {
                 "disabled": "Désactivé"
             },
             "social": {
-                "e2ee_title": "Chiffrement de bout-en-bout",
-                "rules_title": "Règles",
-                "participants_text": "{count} participants",
-                "not_found": "Introuvable",
-                "streaks_title": "Rappels des flammes",
-                "streaks_length_text": "Longueur : {length}",
-                "streaks_expiration_short": "{hours}h",
-                "streaks_expiration_text": "Expire dans {eta}",
-                "reminder_button": "Définir le rappel"
+                "streaks_expiration_short": "{hours}h"
             },
             "tasks": {
                 "no_tasks": "Aucune tâche"

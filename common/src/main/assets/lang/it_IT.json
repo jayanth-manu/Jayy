@@ -66,19 +66,7 @@
     "manager": {
         "sections": {
             "social": {
-                "rules_title": "Regole",
-                "participants_text": "{count} partecipanti",
-                "not_found": "Non trovato",
-                "e2ee_title": "Criptato End-to-End",
-                "streaks_expiration_short": "{hours}h",
-                "streaks_title": "Strisce",
-                "streaks_length_text": "Lunghezza: {lenght}"
-            },
-            "home": {
-                "logs": {
-                    "export_logs_button": "Esporta Log",
-                    "clear_logs_button": "Cancella Log"
-                }
+                "streaks_expiration_short": "{hours}h"
             },
             "tasks": {
                 "no_tasks": "Nessuna attività"

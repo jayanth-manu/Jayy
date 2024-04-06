@@ -35,25 +35,11 @@
             "messaging_preview": "Förhandsvisning"
         },
         "sections": {
-            "home": {
-                "logs": {
-                    "clear_logs_button": "Rensa loggar",
-                    "export_logs_button": "Exportera loggar"
-                }
-            },
             "features": {
                 "disabled": "Inaktiverad"
             },
             "social": {
-                "e2ee_title": "End-to-end-kryptering",
-                "rules_title": "Regler",
-                "participants_text": "{count} deltagare",
-                "not_found": "Hittades inte",
-                "streaks_title": "Streaks",
-                "streaks_length_text": "Längd: {length}",
-                "reminder_button": "Sätt påminellse",
-                "streaks_expiration_short": "{timmar}t",
-                "streaks_expiration_text": "Går ut om {eta}"
+                "streaks_expiration_short": "{timmar}t"
             },
             "tasks": {
                 "no_tasks": "Inga uppgifter"

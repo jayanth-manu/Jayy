@@ -35,25 +35,11 @@
             "messaging_preview": "Forhåndsvisning"
         },
         "sections": {
-            "home": {
-                "logs": {
-                    "clear_logs_button": "Tøm log",
-                    "export_logs_button": "Eksporter logs"
-                }
-            },
             "features": {
                 "disabled": "Slået fra"
             },
             "social": {
-                "e2ee_title": "Ende-til-Ende kryptering",
-                "rules_title": "Regler",
-                "participants_text": "%{antal} deltagere",
-                "not_found": "Ikke fundet",
-                "streaks_title": "Streaks",
-                "streaks_length_text": "Længde: {length}",
-                "streaks_expiration_short": "{hours} timer",
-                "streaks_expiration_text": "Udløber om {eta}",
-                "reminder_button": "Sæt påmindelse"
+                "streaks_expiration_short": "{hours} timer"
             },
             "tasks": {
                 "no_tasks": "Ingen opgaver"

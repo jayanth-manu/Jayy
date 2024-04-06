@@ -35,25 +35,11 @@
             "manage_scope": "Verwalte Scope"
         },
         "sections": {
-            "home": {
-                "logs": {
-                    "clear_logs_button": "Logs löschen",
-                    "export_logs_button": "Logs exportieren"
-                }
-            },
             "features": {
                 "disabled": "Deaktiviert"
             },
             "social": {
-                "e2ee_title": "Ende-zu-Ende-Verschlüsselung",
-                "rules_title": "Regeln",
-                "participants_text": "{count} Teilnehmer",
-                "not_found": "Nicht gefunden",
-                "streaks_title": "Flammen",
-                "streaks_length_text": "Dauer: {length}",
-                "streaks_expiration_short": "{hours}h",
-                "streaks_expiration_text": "Läuft in {eta} ab",
-                "reminder_button": "Erinnerung festlegen"
+                "streaks_expiration_short": "{hours}h"
             },
             "tasks": {
                 "no_tasks": "Keine Aufgaben"

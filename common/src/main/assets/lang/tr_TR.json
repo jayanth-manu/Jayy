@@ -35,25 +35,11 @@
             "messaging_preview": "Önizleme"
         },
         "sections": {
-            "home": {
-                "logs": {
-                    "clear_logs_button": "Kayıtları Temizle",
-                    "export_logs_button": "Kayırları Dışa Aktar"
-                }
-            },
             "features": {
                 "disabled": "Devre Dışı"
             },
             "social": {
-                "e2ee_title": "Uçtan Uca Şifreleme",
-                "rules_title": "Kurallar",
-                "participants_text": "{count} Katılımcı",
-                "not_found": "Bulunamadı",
-                "streaks_title": "Seriler",
-                "streaks_length_text": "Uzunluk: {length}",
-                "streaks_expiration_short": "{hours} saat",
-                "streaks_expiration_text": "{eta} içerisinde sona eriyor",
-                "reminder_button": "Hatırlatıcıyı Ayarla"
+                "streaks_expiration_short": "{hours} saat"
             },
             "tasks": {
                 "no_tasks": "Görev yok"

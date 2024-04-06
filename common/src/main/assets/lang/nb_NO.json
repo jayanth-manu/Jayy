@@ -15,21 +15,7 @@
         },
         "sections": {
             "social": {
-                "rules_title": "Regler",
-                "streaks_length_text": "Lengde: {length}",
-                "not_found": "Ikke funnet",
-                "participants_text": "{count} deltagere",
-                "reminder_button": "Sett påminnelse",
-                "streaks_title": "Streaks",
-                "streaks_expiration_short": "{timer}t",
-                "e2ee_title": "Ende-til-ende kryptering",
-                "streaks_expiration_text": "Utløper om {eta}"
-            },
-            "home": {
-                "logs": {
-                    "clear_logs_button": "Tøm loggføring",
-                    "export_logs_button": "Eksporter loggføring"
-                }
+                "streaks_expiration_short": "{timer}t"
             },
             "features": {
                 "disabled": "Avskrudd"
