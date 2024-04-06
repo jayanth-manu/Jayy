@@ -43,6 +43,9 @@
             },
             "tasks": {
                 "no_tasks": "Görev yok"
+            },
+            "home": {
+                "update_title": "SnapEnhance Güncellemesi"
             }
         },
         "dialogs": {
@@ -1200,5 +1203,9 @@
             "name": "Dili Değiştir",
             "description": "SnapEnhance'in dilini değiştir"
         }
+    },
+    "scopes": {
+        "friend": "Arkadaş",
+        "group": "Grup"
     }
 }
