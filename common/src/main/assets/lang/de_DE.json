@@ -43,6 +43,10 @@
             },
             "tasks": {
                 "no_tasks": "Keine Aufgaben"
+            },
+            "home": {
+                "update_title": "SnapEnhance Update",
+                "update_content": "Version {version} ist verfügbar!"
             }
         },
         "dialogs": {
@@ -1200,5 +1204,9 @@
         "seen_toast": "Als gelesen markiert!",
         "unseen_toast": "Als ungelesen markiert!",
         "already_seen_toast": "Bereits als gelesen markiert!"
+    },
+    "scopes": {
+        "friend": "Freund",
+        "group": "Gruppe"
     }
 }
