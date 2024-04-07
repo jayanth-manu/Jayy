@@ -43,6 +43,36 @@
             },
             "tasks": {
                 "no_tasks": "Inga uppgifter"
+            },
+            "logged_stories": {
+                "story_failed_to_load": "Misslyckades att ladda",
+                "no_stories": "Inga berättelser hittades",
+                "save_from_cache_button": "Spara från cachen"
+            },
+            "messaging_preview": {
+                "bridge_connection_failed": "Det gick inte att ansluta till Snapchat via bryggtjänsten",
+                "bridge_init_failed": "Det gick inte att initiera meddelandebryggan",
+                "message_fetch_failed": "Det gick inte att hämta meddelanden",
+                "no_message_hint": "Inget meddelande",
+                "save_selection_option": "Spara urval",
+                "save_all_option": "Rädda alla",
+                "unsave_selection_option": "Ta bort val",
+                "unsave_all_option": "Ta bort alla",
+                "mark_selection_as_seen_option": "Markera vald Snap som sett",
+                "mark_all_as_seen_option": "Markera alla Snaps som sett",
+                "delete_selection_option": "Ta bort urval",
+                "delete_all_option": "Radera allt"
+            },
+            "logger_history": {
+                "list_friend_format": "Vän {namn}",
+                "no_more_messages": "Inga fler meddelanden",
+                "list_group_format": "Grupp namn}",
+                "reverse_order_checkbox": "Omvänd ordning",
+                "chat_attachment": "Bilaga {index}",
+                "empty_message": "Tomt chattmeddelande",
+                "message_parse_failed": "Det gick inte att tolka meddelandet",
+                "unknown_sender": "Okänd avsändare",
+                "download_attachment_failed_toast": "Det gick inte att ladda ned bilagan"
             }
         },
         "dialogs": {
@@ -56,6 +86,11 @@
             "scripting_warning": {
                 "title": "Varning",
                 "content": "SnapEnhance inkluderar ett skriptverktyg som tillåter exekvering av användardefinierad kod på din enhet. Var extremt försiktig och installera endast moduler från kända, pålitliga källor. Obehöriga eller overifierade moduler kan utgöra säkerhetsrisker för ditt system."
+            },
+            "reset_config": {
+                "title": "Återställ konfiguration",
+                "content": "Är du säker på att du vill återställa konfigurationen?",
+                "success_toast": "Konfigurationsåterställningen lyckades"
             }
         }
     },
