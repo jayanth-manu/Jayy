@@ -43,6 +43,9 @@
             },
             "tasks": {
                 "no_tasks": "Nincsenek feladatok"
+            },
+            "home": {
+                "update_title": "SnapEnhance Frissítés"
             }
         },
         "dialogs": {
@@ -1200,5 +1203,9 @@
     },
     "suspend_location_updates": {
         "switch_text": "Helyszínfrissítések felfüggesztése"
+    },
+    "scopes": {
+        "friend": "Barát",
+        "group": "Csoport"
     }
 }
