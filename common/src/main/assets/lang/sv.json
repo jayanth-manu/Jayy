@@ -36,13 +36,22 @@
         },
         "sections": {
             "features": {
-                "disabled": "Inaktiverad"
+                "disabled": "Inaktiverad",
+                "export_option": "Exportera",
+                "import_option": "Importera",
+                "reset_option": "Återställ"
             },
             "social": {
                 "streaks_expiration_short": "{timmar}t"
             },
             "tasks": {
-                "no_tasks": "Inga uppgifter"
+                "no_tasks": "Inga uppgifter",
+                "merge_files_toast": "Slår samman {count} filer",
+                "remove_selected_tasks_confirm": "Ta bort {count} uppgifter?",
+                "remove_all_tasks_confirm": "Ta bort alla upgifter?",
+                "remove_selected_tasks_title": "Är du säker på att du vill ta bort markerade uppgifter?",
+                "remove_all_tasks_title": "Är du säker på att du vill ta bort alla uppgifter?",
+                "delete_files_option": "Radera även filer"
             },
             "logged_stories": {
                 "story_failed_to_load": "Misslyckades att ladda",
@@ -66,13 +75,33 @@
             "logger_history": {
                 "list_friend_format": "Vän {namn}",
                 "no_more_messages": "Inga fler meddelanden",
-                "list_group_format": "Grupp namn}",
+                "list_group_format": "Grupp {name}",
                 "reverse_order_checkbox": "Omvänd ordning",
                 "chat_attachment": "Bilaga {index}",
                 "empty_message": "Tomt chattmeddelande",
                 "message_parse_failed": "Det gick inte att tolka meddelandet",
                 "unknown_sender": "Okänd avsändare",
                 "download_attachment_failed_toast": "Det gick inte att ladda ned bilagan"
+            },
+            "home": {
+                "update_title": "SnapEnhance Updatering",
+                "update_content": "Version {version} är tillgänglig!"
+            },
+            "home_logs": {
+                "clear_logs_button": "Rensa loggar",
+                "export_logs_button": "Exportera loggar",
+                "saved_logs_success_toast": "Loggarna sparades",
+                "saved_logs_failure_toast": "Det gick inte att spara loggar",
+                "no_logs_hint": "Inga loggar tillgängliga",
+                "saving_logs_toast": "Sparar loggar, detta kan ta ett tag ..."
+            },
+            "home_settings": {
+                "debug_title": "Felsökning",
+                "export_button": "Exportera",
+                "clear_button": "Rensa",
+                "view_logger_history_button": "Visa Logger Historik",
+                "actions_title": "Handlingar",
+                "success_toast": "Klart!"
             }
         },
         "dialogs": {
@@ -192,12 +221,12 @@
                         "name": "Automatiskt installera källor"
                     },
                     "prevent_self_auto_download": {
-                        "description": "Stoppar dina egna snaps från att bli nedladdade",
+                        "description": "Hindrar dina egna snaps från att bli nedladdade automatiskt",
                         "name": "Hindra automatisk nedladdning"
                     },
                     "save_folder": {
-                        "name": "folder",
-                        "description": "Välj en folder som all media ska vara nedladdat till"
+                        "name": "Spara Mapp",
+                        "description": "Välj en mapp som all media ska vara nedladdat till"
                     },
                     "allow_duplicate": {
                         "description": "Tillåt samma media att bli installerat flera gånger",
@@ -212,8 +241,8 @@
                         "description": "Kombinerar text och media från en Snap till en enda fil"
                     },
                     "path_format": {
-                        "name": "Format för sökväg",
-                        "description": "Ange format för filsökväg"
+                        "name": "Sökvägsformat",
+                        "description": "Ange filsökvägsformat"
                     },
                     "ffmpeg_options": {
                         "properties": {
@@ -223,10 +252,10 @@
                             },
                             "video_bitrate": {
                                 "description": "Ställ in videobithastighet (kbps)",
-                                "name": "Bithastighet för Video"
+                                "name": "Video bithastighet"
                             },
                             "audio_bitrate": {
-                                "name": "Bithastighet för Ljud",
+                                "name": "Ljud bithastighet",
                                 "description": "Ställ in ljudets bithastighet (kbps)"
                             },
                             "custom_video_codec": {
@@ -242,19 +271,19 @@
                                 "description": "Ställ in hastigheten för konverteringen"
                             },
                             "constant_rate_factor": {
-                                "name": "Faktor för konstant hastighet",
+                                "name": "Konstant hastighet faktor",
                                 "description": "Ange den konstanta hastighetsfaktorn för videokodaren\nFrån 0 till 51 för libx264"
                             }
                         },
-                        "name": "Alternativ för FFmpeg",
-                        "description": "Ange ytterligare alternativ för FFmpeg"
+                        "name": "FFmpeg Alternativ",
+                        "description": "Ange ytterligare FFmpeg Alternativ"
                     },
                     "custom_path_format": {
                         "description": "Ange ett anpassat sökvägsformat för nedladdade media\n\nTillgängliga variabler:\n - %användarnamn%\n - %källa\n - %hash%\n - %datum_tid%",
                         "name": "Format för anpassad sökväg"
                     },
                     "force_voice_note_format": {
-                        "name": "Tvingar Röstanteckningsformat",
+                        "name": "Tvingar röstanteckningsformat",
                         "description": "Tvingar röstanteckningar att sparas i ett specificerat format"
                     },
                     "logging": {
@@ -368,5 +397,9 @@
                 "description": "Ändra utseende och känsla för Snapchat"
             }
         }
+    },
+    "scopes": {
+        "friend": "Vän",
+        "group": "Grupp"
     }
 }
