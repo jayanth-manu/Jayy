@@ -1,21 +1,21 @@
 {
     "setup": {
         "dialogs": {
-            "select_language": "Nyelv Kiválasztása",
+            "select_language": "Nyelv kiválasztása",
             "save_folder": "A SnapEnhance-nek tárhelyhozzáférésre van szüksége média mentéséhez és letöltéséhez. \nKérem válassza ki a média mentési helyét.",
-            "select_save_folder_button": "Mappa Kiválasztása"
+            "select_save_folder_button": "Mappa kiválasztása"
         },
         "mappings": {
             "dialog": "A Snapchat-verziók széles skálájának dinamikus támogatása érdekében a SnapEnhance megfelelő működéséhez leképezésekre van szükség, ez nem tarthat 5 másodpercnél tovább.",
             "generate_button": "Generálás",
             "generate_failure_no_snapchat": "A SnapEnhance nem találja a Snapchatet, próbálja meg újra telepíteni a Snapchatet.",
             "generate_failure": "Hiba történt a beállítások mentése során, kérjük próbálja meg újra.",
-            "generate_success": "A leképezések sikeresen generálódtak."
+            "generate_success": "A leképezések sikeresen legenerálódtak."
         },
         "permissions": {
             "dialog": "A folytatáshoz a következőkre van szükség:",
             "notification_access": "Értesítési hozzáférés",
-            "battery_optimization": "Akkumulátor Optimalizálás",
+            "battery_optimization": "Akkumulátor optimalizálás",
             "display_over_other_apps": "Megjelenítés a többi alkalmazás fölött",
             "request_button": "Kérelem"
         }
@@ -25,7 +25,7 @@
             "features": "Funkciók",
             "home": "Kezdőlap",
             "home_settings": "Beállítások",
-            "home_logs": "Naplók",
+            "home_logs": "Naplófájlok",
             "social": "Közösség",
             "scripts": "Szkriptek",
             "tasks": "Feladatok",
@@ -36,16 +36,92 @@
         },
         "sections": {
             "features": {
-                "disabled": "Letiltva"
+                "disabled": "Kikapcsolva",
+                "import_option": "Importálás",
+                "reset_option": "Visszaállítás",
+                "config_export_success_toast": "Beállításfájl sikeresen exportálva",
+                "config_import_success_toast": "Beállításfájl sikeresen importálva",
+                "config_import_failure_toast": "Beállításfájl importálása sikertelen {error}",
+                "saved_config_snackbar": "Beállításfájl elmentve",
+                "export_option": "Exportálás"
             },
             "social": {
-                "streaks_expiration_short": "{hours} óra"
+                "streaks_expiration_short": "{hours} óra(ák)"
             },
             "tasks": {
-                "no_tasks": "Nincsenek feladatok"
+                "no_tasks": "Nincsenek feladatok",
+                "merge_files_toast": "{count} fájl egybevonása",
+                "remove_selected_tasks_title": "Biztosan törölni szeretnéd a kiválasztott feladatokat?",
+                "remove_all_tasks_title": "Biztosan törölni szeretnéd az összes feladatot?",
+                "delete_files_option": "Törölje a fájlokat is",
+                "remove_selected_tasks_confirm": "{count} feladat eltávolítása?",
+                "remove_all_tasks_confirm": "Minden feladat eltávolítása?"
             },
             "home": {
-                "update_title": "SnapEnhance Frissítés"
+                "update_title": "SnapEnhance frissítés",
+                "update_content": "A(z) {version} már elérhető!",
+                "update_button": "Letöltés"
+            },
+            "home_settings": {
+                "view_logger_history_button": "Naplóelőzmények megtekintése",
+                "actions_title": "Műveletek",
+                "message_logger_title": "Üzenet naplózó",
+                "debug_title": "Hibakeresés",
+                "success_toast": "Kész!",
+                "message_logger_summary": "{messageCount} üzenet(ek)\n{storyCount} történet(ek)",
+                "export_button": "Exportálás",
+                "clear_button": "Töröl"
+            },
+            "home_logs": {
+                "no_logs_hint": "Nincsenek elérhető naplófájlok",
+                "clear_logs_button": "Naplófájlok törlése",
+                "export_logs_button": "Naplófájlok exportálása",
+                "saving_logs_toast": "Naplófájlok mentése, eltarthat egy ideig...",
+                "saved_logs_success_toast": "Naplófájlok sikeresen elmentve",
+                "saved_logs_failure_toast": "Naplófájlok mentése sikertelen"
+            },
+            "manage_scope": {
+                "logged_stories_button": "Mutassa a naplózott történeteket",
+                "e2ee_title": "Végpontok közötti titkosítás",
+                "rules_title": "Szabályok",
+                "participants_text": "{count} résztvevő(k)",
+                "not_found": "Nincs találat",
+                "streaks_title": "Sorozatok",
+                "streaks_length_text": "Hossz: {length}",
+                "streaks_expiration_text": "Lejár {eta} időn belül",
+                "streaks_expiration_text_expired": "Lejárt",
+                "reminder_button": "Emlékeztető beállítása",
+                "delete_scope_confirm_dialog_title": "Biztosan törölni szeretnéd a {scope}-ot?"
+            },
+            "logged_stories": {
+                "story_failed_to_load": "Sikertelen betöltés",
+                "no_stories": "Nincsenek történetek",
+                "save_from_cache_button": "Mnetés gyorsítótárból"
+            },
+            "messaging_preview": {
+                "bridge_connection_failed": "Nem sikerült a Snapchat-hez kapcsolódni a híd szolgáltatáson keresztül",
+                "bridge_init_failed": "Nem sikerült a híd szolgáltatás létrehozása",
+                "message_fetch_failed": "Nem sikerült az üzenetek lekérése",
+                "no_message_hint": "Nincs(enek) üzenet(ek)",
+                "save_selection_option": "Kiválasztás mentése",
+                "save_all_option": "Mind mentése",
+                "unsave_selection_option": "Mégse mentse a kiválasztottakat",
+                "unsave_all_option": "Egyiket se mentse",
+                "mark_selection_as_seen_option": "Kijelölt snap megjelölése \"láttam\"-ként",
+                "mark_all_as_seen_option": "Minden snap megjelölése \"láttam\"-ként",
+                "delete_selection_option": "Kiválasztottak törlése",
+                "delete_all_option": "Mind törlése"
+            },
+            "logger_history": {
+                "list_friend_format": "Barát: {name}",
+                "list_group_format": "Csoport: {name}",
+                "no_more_messages": "Nincs több üzenet",
+                "reverse_order_checkbox": "Sorrend megfordítása",
+                "chat_attachment": "Csatolmány {index}",
+                "empty_message": "Chat üzeneteinek törlése",
+                "message_parse_failed": "Nem sikerült az üzenetet értelmezni",
+                "unknown_sender": "Ismeretlen küldő",
+                "download_attachment_failed_toast": "Nem sikerült a csatolmányt letölteni"
             }
         },
         "dialogs": {
@@ -59,6 +135,15 @@
             "scripting_warning": {
                 "content": "A SnapEnhance egy script-író eszközt, amely lehetővé teszi a felhasználó által meghatározott kódok végrehajtását az eszközön. Használja fokozott óvatossággal és csak megbízható forrásból származó modulokat telepítsen. A nem engedélyezett vagy nem ellenőrzött modulok biztonsági kockázatokat jelenthetnek a rendszerének.",
                 "title": "Figyelmeztetés"
+            },
+            "reset_config": {
+                "content": "Biztosan vissza akarod állítani a beállításfájlt?",
+                "title": "Beállításfájl visszaállítása",
+                "success_toast": "Beállításfájl sikeresen visszaállítva"
+            },
+            "messaging_action": {
+                "title": "Válassza ki a feldolgozni kívánt tartalomtípusokat",
+                "select_all_button": "Összes keresése"
             }
         }
     },
