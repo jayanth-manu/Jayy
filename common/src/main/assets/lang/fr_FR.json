@@ -73,7 +73,7 @@
                 "streaks_expiration_text": "Expire dans eta",
                 "streaks_expiration_text_expired": "Expiré",
                 "reminder_button": "Définir un rappel",
-                "delete_scope_confirm_dialog_title": "Êtes-vous sûr de vouloir supprimer une {étendue}?"
+                "delete_scope_confirm_dialog_title": "Êtes-vous sûr de vouloir supprimer une {scope}?"
             },
             "home_logs": {
                 "no_logs_hint": "Aucun journal disponible",
@@ -632,7 +632,7 @@
                     },
                     "video_playback_rate_slider": {
                         "name": "Curseur de taux de lecture vidéo",
-                        "description": "Ajoute un curseur dans le menu contextuel de l'opéra pour modifier la vitesse de lecture vidéo\n\n Remarque : Les modifications ne s'appliquent qu'aux vidéos suivantes."
+                        "description": "Ajoute un curseur dans le menu contextuel de l'opéra pour modifier la vitesse de lecture vidéo\nRemarque: Les modifications ne s'appliquent qu'aux vidéos suivantes"
                     }
                 }
             },
@@ -834,7 +834,7 @@
                     },
                     "account_switcher": {
                         "name": "Changeur de compte",
-                        "description": "Vous permet de basculer entre les comptes sans vous déconnecter\n Appuyez longuement sur l'icône de recherche à côté de votre profil Bitmoji pour ouvrir le menu\n Remarque : cette fonctionnalité est expérimentale et sera probablement modifiée à l'avenir.",
+                        "description": "Vous permet de basculer entre les comptes sans vous déconnecter\nAppuyez longuement sur l'icône de recherche à côté de votre profil Bitmoji pour ouvrir le menu\nRemarque: cette fonctionnalité est expérimentale et sera probablement modifiée à l'avenir",
                         "properties": {
                             "auto_backup_current_account": {
                                 "name": "Compte courant de sauvegarde automatique",
@@ -1297,29 +1297,29 @@
     },
     "end_to_end_encryption": {
         "toolbox": {
-            "no_shared_key": "Vous n'avez pas encore de secret partagé avec cet ami.  Cliquez ci-dessous pour en lancer un nouveau.",
+            "no_shared_key": "Vous n'avez pas encore de secret partagé avec cet ami. Cliquez ci-dessous pour en lancer un nouveau.",
             "shared_key_fingerprint": "Votre empreinte digitale est :\n\n {empreinte digitale}\n\n Assurez-vous de vérifier si cela correspond à l'empreinte digitale de votre ami !",
             "initiate_exchange_button": "Lancer l'échange de clés"
         },
         "confirmation_dialogs": {
-            "confirmation_1": "AVERTISSEMENT : Cela écrasera votre clé existante.  Vous perdrez l'accès à tous les messages cryptés de cet ami.  Es-tu sur de vouloir continuer?",
+            "confirmation_1": "AVERTISSEMENT: Cela écrasera votre clé existante. Vous perdrez l'accès à tous les messages cryptés de cet ami. Es-tu sur de vouloir continuer?",
             "title": "Chiffrement de bout en bout",
-            "confirmation_2": "Êtes-vous VRAIMENT sûr de vouloir continuer ?  C'est votre dernière chance de vous retirer."
+            "confirmation_2": "Êtes-vous VRAIMENT sûr de vouloir continuer? C'est votre dernière chance de vous retirer."
         },
         "unencrypted_conversation_send_failure_toast": "Vous ne pouvez pas envoyer de contenu crypté à des conversations cryptées et non cryptées !",
         "accept_public_key_success_toast": "Clé publique acceptée avec succès !",
-        "native_hooks_send_failure_toast": "Échec de l'envoi !  Veuillez activer Native Hooks dans les paramètres.",
-        "accept_secret_key_success_toast": "Fait!  Vous pouvez désormais envoyer et recevoir des messages cryptés avec cet ami.",
+        "native_hooks_send_failure_toast": "Échec de l'envoi! Veuillez activer Native Hooks dans les paramètres.",
+        "accept_secret_key_success_toast": "Fait! Vous pouvez désormais envoyer et recevoir des messages cryptés avec cet ami.",
         "accept_public_key_failure_toast": "Échec de l'acceptation de la clé publique",
         "accept_secret_button": "Accepter la clé publique",
         "no_participants_to_encrypt_toast": "Vous n'avez aucun ami dans cette conversation avec qui crypter les messages !",
         "accept_secret_key_failure_toast": "Échec de l'acceptation de la clé secrète",
-        "encryption_failed_toast": "Échec du chiffrement du message !  Consultez logcat pour plus de détails.",
+        "encryption_failed_toast": "Échec du chiffrement du message! Consultez logcat pour plus de détails.",
         "accept_public_key_button": "Accepter la clé publique",
         "outgoing_pk_message": "Demande d'échange de clés",
         "outgoing_secret_message": "Réponse d'échange de clés",
-        "incoming_pk_message": "Vous venez de recevoir une demande de clé publique.  Cliquez ci-dessous pour l'accepter.",
-        "incoming_secret_message": "Votre ami vient d'accepter votre clé publique.  Cliquez ci-dessous pour accepter le secret."
+        "incoming_pk_message": "Vous venez de recevoir une demande de clé publique. Cliquez ci-dessous pour l'accepter.",
+        "incoming_secret_message": "Votre ami vient d'accepter votre clé publique. Cliquez ci-dessous pour accepter le secret."
     },
     "scopes": {
         "friend": "Amie ami",
