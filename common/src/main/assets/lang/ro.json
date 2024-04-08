@@ -92,7 +92,14 @@
                 "no_tasks": "Fără sarcini"
             },
             "features": {
-                "disabled": "Dezactivat"
+                "disabled": "Dezactivat",
+                "config_import_success_toast": "Configurația a fost importată cu succes"
+            },
+            "logger_history": {
+                "list_group_format": "Grupul {name}"
+            },
+            "home_settings": {
+                "export_button": "Export"
             }
         },
         "dialogs": {
@@ -106,6 +113,13 @@
                 "fetch_error": "Preluarea datelor a eșuat",
                 "category_groups": "Grupuri",
                 "category_friends": "Prieteni"
+            },
+            "reset_config": {
+                "title": "Resetare configurări"
+            },
+            "messaging_action": {
+                "title": "Alegeți tipurile de conținut de procesat",
+                "select_all_button": "Selectează tot"
             }
         }
     },
@@ -142,11 +156,67 @@
         },
         "modes": {
             "blacklist": "Mod Lista Neagră",
-            "whitelist": "Mod Lista Aba"
+            "whitelist": "Modul Lista albă"
         },
         "toasts": {
             "enabled": "{ruleName} activat",
             "disabled": "{ruleName} dezactivat"
+        }
+    },
+    "features": {
+        "properties": {
+            "user_interface": {
+                "properties": {
+                    "enable_friend_feed_menu_bar": {
+                        "name": "Feed pentru prieteni bară de meniu",
+                        "description": "Activează noua bară de meniu Friend pentru prieteni"
+                    },
+                    "message_indicators": {
+                        "name": "Indicatori de mesaje",
+                        "description": "Adaugă pictograme indicatoare specifice la mesaje\nNotă: este posibil ca indicatorii să nu fie 100% precisi"
+                    },
+                    "stealth_mode_indicator": {
+                        "name": "Indicator mod ascuns",
+                        "description": "Adaugă un emoji 👻 lângă conversații în modul ascuns"
+                    },
+                    "vertical_story_viewer": {
+                        "description": "Activează vizualizatorul vertical de povești pentru toate poveștile"
+                    },
+                    "edit_text_override": {
+                        "description": "Anulează comportamentul câmpului de text",
+                        "name": "Modificați modificarea textului"
+                    }
+                }
+            },
+            "messaging": {
+                "properties": {
+                    "prevent_story_rewatch_indicator": {
+                        "name": "Preveniți indicatorul de revizionare a poveștii",
+                        "description": "Împiedică pe oricine să știe că le-ați revizionat povestea"
+                    },
+                    "hide_typing_notifications": {
+                        "name": "Ascunde Notificarea Scrie"
+                    },
+                    "hide_peek_a_peek": {
+                        "name": "Ascunde Peek-a-Peek",
+                        "description": "Împiedică trimiterea notificărilor atunci când glisați pe jumătate într-o conversație"
+                    },
+                    "bypass_screenshot_detection": {
+                        "name": "Anulare Detectarea Capturii de Ecran",
+                        "description": "Împiedică Snapchat să detecteze când faceți o captură de ecran"
+                    },
+                    "anonymous_story_viewing": {
+                        "name": "Vizionare anonimă a poveștii",
+                        "description": "Împiedică pe oricine să știe că le-ai văzut povestea"
+                    },
+                    "hide_bitmoji_presence": {
+                        "name": "Ascundeți prezența Bitmoji",
+                        "description": "Împiedică apariția Bitmoji-ului dvs. în timp ce sunteți într-o conversație"
+                    }
+                },
+                "description": "Schimbă cum te interacționezi cu prietenii",
+                "name": "Mesaje"
+            }
         }
     }
 }
