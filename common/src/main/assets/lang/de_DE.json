@@ -36,17 +36,92 @@
         },
         "sections": {
             "features": {
-                "disabled": "Deaktiviert"
+                "disabled": "Deaktiviert",
+                "export_option": "Exportieren",
+                "import_option": "Importieren",
+                "reset_option": "Zurücksetzen",
+                "config_export_success_toast": "Einstellungen erfolgreich exportiert",
+                "config_import_success_toast": "Einstellungen erfolgreich importiert",
+                "config_import_failure_toast": "Einstellungen konnten nicht importiert werden. {error}",
+                "saved_config_snackbar": "Einstellungen gespeichert"
             },
             "social": {
                 "streaks_expiration_short": "{hours}h"
             },
             "tasks": {
-                "no_tasks": "Keine Aufgaben"
+                "no_tasks": "Keine Aufgaben",
+                "merge_files_toast": "Zusammenführen von {count} Dateien",
+                "remove_selected_tasks_title": "Sind Sie sicher, dass Sie die ausgewählten Aufgaben entfernen möchten?",
+                "remove_all_tasks_title": "Sind Sie sicher, dass Sie alle Aufgaben entfernen möchten?",
+                "delete_files_option": "Auch Dateien löschen",
+                "remove_selected_tasks_confirm": "{count} Aufgaben entfernen?",
+                "remove_all_tasks_confirm": "Alle Aufgaben entfernen?"
             },
             "home": {
                 "update_title": "SnapEnhance Update",
-                "update_content": "Version {version} ist verfügbar!"
+                "update_content": "Version {version} ist verfügbar!",
+                "update_button": "Herunterladen"
+            },
+            "home_logs": {
+                "saving_logs_toast": "Speichern von Protokollen, das kann eine Weile dauern ...",
+                "saved_logs_failure_toast": "Speichern von Protokollen fehlgeschlagen",
+                "saved_logs_success_toast": "Protokolle erfolgreich gespeichert",
+                "no_logs_hint": "Keine Protokolle verfügbar",
+                "clear_logs_button": "Protokolle löschen",
+                "export_logs_button": "Protokolle exportieren"
+            },
+            "home_settings": {
+                "actions_title": "Aktionen",
+                "message_logger_title": "Nachrichtenaufzeichner",
+                "debug_title": "Debuggen",
+                "message_logger_summary": "{messageCount} Nachrichten\n{storyCount} Stories",
+                "success_toast": "Erledigt!",
+                "export_button": "Exportieren",
+                "clear_button": "Löschen",
+                "view_logger_history_button": "Historie des Nachrichtenaufzeichners ansehen"
+            },
+            "logged_stories": {
+                "story_failed_to_load": "Laden fehlgeschlagen",
+                "no_stories": "Keine Stories gefunden",
+                "save_from_cache_button": "Aus Zwischenspeicher speichern"
+            },
+            "messaging_preview": {
+                "bridge_connection_failed": "Verbindung zu Snapchat über den Brückendienst fehlgeschlagen",
+                "bridge_init_failed": "Initialisierung der Nachrichtenbrücke fehlgeschlagen",
+                "message_fetch_failed": "Fehler beim Abrufen der Nachrichten",
+                "no_message_hint": "Keine Nachricht",
+                "save_selection_option": "Auswahl speichern",
+                "save_all_option": "Alles speichern",
+                "unsave_selection_option": "Auswahl nicht mehr speichern",
+                "unsave_all_option": "Alles nicht mehr speichern",
+                "mark_selection_as_seen_option": "Ausgewählten Snap als gesehen markieren",
+                "mark_all_as_seen_option": "Alle Snaps als gesehen markieren",
+                "delete_selection_option": "Auswahl löschen",
+                "delete_all_option": "Alles löschen"
+            },
+            "logger_history": {
+                "list_friend_format": "Freund {name}",
+                "list_group_format": "Gruppe {name}",
+                "no_more_messages": "Keine weiteren Nachrichten",
+                "reverse_order_checkbox": "Umgekehrte Reihenfolge",
+                "chat_attachment": "Anhang {index}",
+                "empty_message": "Leere Chatnachricht",
+                "message_parse_failed": "Nachricht konnte nicht verarbeitet werden",
+                "unknown_sender": "Unbekannter Absender",
+                "download_attachment_failed_toast": "Fehler beim Herunterladen des Anhangs"
+            },
+            "manage_scope": {
+                "delete_scope_confirm_dialog_title": "Sind Sie sicher, dass Sie ein {scope} löschen wollen?",
+                "logged_stories_button": "Aufgezeichnete Stories anschauen",
+                "e2ee_title": "Ende-zu-Ende Verschlüsselung",
+                "rules_title": "Regeln",
+                "participants_text": "{count} Teilnehmer",
+                "not_found": "Nicht gefunden",
+                "streaks_title": "Streaks",
+                "streaks_length_text": "Länge: {length}",
+                "streaks_expiration_text": "Läuft ab in {eta}",
+                "streaks_expiration_text_expired": "Abgelaufen",
+                "reminder_button": "Erinnerung erstellen"
             }
         },
         "dialogs": {
@@ -60,6 +135,15 @@
             "scripting_warning": {
                 "content": "SnapEnhance enthält ein Skripting-Tool, das die Ausführung von benutzerdefinierten Code auf Ihrem Gerät ermöglicht. Seien Sie äußerst vorsichtig und installieren Sie nur Module aus bekannten, zuverlässigen Quellen. Unautorisierte oder ungeprüfte Module können Sicherheitsrisiken für Ihr System darstellen.",
                 "title": "Warnung"
+            },
+            "reset_config": {
+                "success_toast": "Einstellungen erfolgreich zurückgesetzt",
+                "title": "Einstellungen zurücksetzen",
+                "content": "Bist Du sicher, dass Du die Einstellungen zurücksetzen möchtest?"
+            },
+            "messaging_action": {
+                "title": "Wählen Sie die zu verarbeitenden Inhaltstypen um fortzufahren",
+                "select_all_button": "Alle auswählen"
             }
         }
     },
@@ -322,11 +406,11 @@
                     },
                     "stealth_mode_indicator": {
                         "name": "Diebstahl Modus Indikator",
-                        "description": "Fügt den Konversationen im Stealth-Modus ein 👻-Emoji hinzu."
+                        "description": "Fügt den Konversationen im Stealth-Modus ein 👻-Emoji hinzu"
                     },
                     "message_indicators": {
                         "name": "Nachrichtenindikatoren",
-                        "description": "Fügt spezifische Indikator-Symbole zu Nachrichten hinzu.\nHinweis: Die Indikatoren sind nicht zu 100 % genau."
+                        "description": "Fügt Nachrichten spezifische Anzeigesymbole hinzu.\nHinweis: Die Symbole sind möglicherweise nicht 100 % genau."
                     }
                 }
             },
@@ -443,7 +527,7 @@
                         "description": "Wiederholt Snaps & Stories beim ansehen in einer Schleife"
                     },
                     "bypass_message_action_restrictions": {
-                        "description": "Ermöglicht es Ihnen, auf einen Snap zu reagieren, ohne ihn geöffnet zu haben, oder eine nicht speicherbare Nachricht zu speichern.",
+                        "description": "Ermöglicht es Ihnen, auf einen Snap zu reagieren, ohne ihn geöffnet zu haben, oder eine nicht speicherbare Nachricht zu speichern",
                         "name": "Umgehung von Nachrichtenaktionsbeschränkungen"
                     },
                     "remove_groups_locked_status": {
@@ -518,7 +602,7 @@
                             },
                             "spoof_battery_level": {
                                 "name": "­Täusche den Akkustand vor",
-                                "description": "Täuscht den Akkustand deines Geräts auf der SnapMap vor.\nDer Wert muss zwischen 0 und 100 liegen"
+                                "description": "Verfälscht den Akkustand Ihres Geräts auf der Karte\nDer Wert muss zwischen 0 und 100 liegen"
                             },
                             "spoof_headphones": {
                                 "name": "Simuliere Kopfhörer",
@@ -548,7 +632,7 @@
                     },
                     "video_playback_rate_slider": {
                         "name": "Schieberegler für die Videowiedergaberate",
-                        "description": "Fügt einen Schieberegler im Opera-Kontextmenü hinzu, um die Videowiedergabegeschwindigkeit zu ändern. \nHinweis: Die Änderungen gelten nur für nachfolgende Videos."
+                        "description": "Fügt einen Schieberegler im Opera-Kontextmenü hinzu, um die Videowiedergabegeschwindigkeit zu ändern\nHinweis: Änderungen gelten nur für nachfolgende Videos"
                     }
                 }
             },
@@ -750,7 +834,7 @@
                     },
                     "account_switcher": {
                         "name": "­Accountwechsler",
-                        "description": "Ermöglicht es Ihnen, zwischen Konten zu wechseln, ohne sich auszuloggen.\nHalten Sie lange auf das Suchsymbol neben Ihrem Bitmoji-Profil, um das Menü zu öffnen.\nHinweis: Diese Funktion ist experimentell und wird wahrscheinlich in Zukunft geändert.",
+                        "description": "Ermöglicht es Ihnen, zwischen Konten zu wechseln, ohne sich auszuloggen\nHalten Sie lange auf das Suchsymbol neben Ihrem Bitmoji-Profil, um das Menü zu öffnen\nHinweis: Diese Funktion ist experimentell und wird wahrscheinlich in Zukunft geändert",
                         "properties": {
                             "auto_backup_current_account": {
                                 "name": "Automatisches Backup des aktuellen Accounts",
@@ -1068,7 +1152,13 @@
         "failed_generic_toast": "Download fehlgeschlagen",
         "failed_to_create_preview_toast": "Fehler beim Erstellen der Vorschau",
         "failed_processing_toast": "Fehler beim Verarbeiten {error}",
-        "failed_gallery_toast": "Speichern in der Galerie fehlgeschlagen {error}"
+        "failed_gallery_toast": "Speichern in der Galerie fehlgeschlagen {error}",
+        "dash_no_chapter": "Kein Abschnitt gefunden",
+        "dash_dialog": {
+            "title": "Dash-Medium herunterladen",
+            "download_all": "Alle herunterladen",
+            "segment_text": "Segment {from} - {to}"
+        }
     },
     "streaks_reminder": {
         "notification_title": "Flammen",
@@ -1201,12 +1291,38 @@
     "mark_as_seen": {
         "already_unseen_toast": "Schon als ungelesen markiert!",
         "no_unseen_snaps_toast": "Es wurden keine ungesehenen Snaps gefunden!",
-        "seen_toast": "Als gelesen markiert!",
-        "unseen_toast": "Als ungelesen markiert!",
-        "already_seen_toast": "Bereits als gelesen markiert!"
+        "seen_toast": "Markiert als gesehen!",
+        "unseen_toast": "Markiert als ungesehen!",
+        "already_seen_toast": "Bereits markiert als gesehen!"
     },
     "scopes": {
         "friend": "Freund",
         "group": "Gruppe"
+    },
+    "end_to_end_encryption": {
+        "toolbox": {
+            "no_shared_key": "Sie haben noch kein gemeinsames Geheimnis mit diesem Freund. Klicken Sie unten, um ein neues zu erstellen.",
+            "shared_key_fingerprint": "Dein Fingerabdruck ist:\n\n{fingerprint}\n\nSieh nach, ob er mit dem Fingerabdruck deines Freundes übereinstimmt!",
+            "initiate_exchange_button": "Schlüsselaustausch einleiten"
+        },
+        "confirmation_dialogs": {
+            "title": "Ende-zu-Ende Verschlüsselung",
+            "confirmation_1": "WARNUNG: Dadurch wird Ihr vorhandener Schlüssel überschrieben. Sie werden den Zugang zu allen verschlüsselten Nachrichten dieses Freundes verlieren. Sind Sie sicher, dass Sie fortfahren möchten?",
+            "confirmation_2": "Sind Sie WIRKLICH sicher, dass Sie weitermachen wollen? Dies ist Ihre letzte Chance, einen Rückzieher zu machen."
+        },
+        "native_hooks_send_failure_toast": "Senden fehlgeschlagen! Bitte aktivieren Sie die nativen Hooks in den Einstellungen.",
+        "no_participants_to_encrypt_toast": "Sie haben in diesem Gespräch keine Freunde, mit denen Sie Nachrichten verschlüsseln können!",
+        "encryption_failed_toast": "Nachricht konnte nicht verschlüsselt werden! Prüfen Sie logcat für weitere Details.",
+        "accept_public_key_success_toast": "Öffentlicher Schlüssel erfolgreich akzeptiert!",
+        "accept_secret_key_success_toast": "Geschafft! Sie können nun verschlüsselte Nachrichten an diesen Freund senden und empfangen.",
+        "accept_secret_key_failure_toast": "Akzeptieren des geheimen Schlüssels fehlgeschlagen",
+        "outgoing_secret_message": "Schlüsselaustausch-Antwort",
+        "accept_secret_button": "Geheimnis akzeptieren",
+        "accept_public_key_button": "Öffentlichen Schlüssel akzeptieren",
+        "incoming_pk_message": "Sie haben gerade eine Anfrage für einen öffentlichen Schlüssel erhalten. Klicken Sie unten, um sie anzunehmen.",
+        "outgoing_pk_message": "Schlüsselaustausch-Anfrage",
+        "accept_public_key_failure_toast": "Akzeptieren des öffentlichen Schlüssels fehlgeschlagen",
+        "unencrypted_conversation_send_failure_toast": "Sie können keine verschlüsselten Inhalte zu verschlüsselten und unverschlüsselten Gesprächen gleichzeitig senden!",
+        "incoming_secret_message": "Ihr Freund hat gerade Ihren öffentlichen Schlüssel akzeptiert. Klicken Sie unten, um das Passwort zu akzeptieren."
     }
 }
