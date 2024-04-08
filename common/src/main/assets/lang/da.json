@@ -36,13 +36,92 @@
         },
         "sections": {
             "features": {
-                "disabled": "Slået fra"
+                "disabled": "Slået fra",
+                "config_import_success_toast": "Konfigurationen blev importeret",
+                "export_option": "Eksport",
+                "import_option": "Importere",
+                "reset_option": "Nulstil",
+                "config_export_success_toast": "Konfigurationen blev eksporteret",
+                "config_import_failure_toast": "Kunne ikke importere konfiguration {error}",
+                "saved_config_snackbar": "Konfiguration gemt"
             },
             "social": {
                 "streaks_expiration_short": "{hours} timer"
             },
             "tasks": {
-                "no_tasks": "Ingen opgaver"
+                "no_tasks": "Ingen opgaver",
+                "remove_all_tasks_confirm": "Vil du fjerne alle opgaver?",
+                "merge_files_toast": "Fletter {count} filer",
+                "remove_selected_tasks_title": "Er du sikker på, at du vil fjerne valgte opgaver?",
+                "remove_all_tasks_title": "Er du sikker på, at du vil fjerne alle opgaver?",
+                "delete_files_option": "Slet også filer",
+                "remove_selected_tasks_confirm": "Vil du fjerne {count} opgaver?"
+            },
+            "logger_history": {
+                "chat_attachment": "Vedhæftet {index}",
+                "empty_message": "Tom chat besked",
+                "message_parse_failed": "Kunne ikke parse meddelelsen",
+                "unknown_sender": "Ukendt afsender",
+                "download_attachment_failed_toast": "Kunne ikke downloade den vedhæftede fil",
+                "list_friend_format": "Ven {name}",
+                "list_group_format": "Gruppe {name}",
+                "no_more_messages": "Ikke flere beskeder",
+                "reverse_order_checkbox": "Omvendt rækkefølge"
+            },
+            "manage_scope": {
+                "streaks_title": "Streaks",
+                "reminder_button": "Indstil påmindelse",
+                "logged_stories_button": "Vis loggede historier",
+                "e2ee_title": "Ende til ende kryptering",
+                "rules_title": "Regler",
+                "participants_text": "{count} deltagere",
+                "not_found": "Ikke fundet",
+                "streaks_length_text": "Længde: {length}",
+                "streaks_expiration_text": "Udløber om {eta}",
+                "streaks_expiration_text_expired": "Udløbet",
+                "delete_scope_confirm_dialog_title": "Er du sikker på, at du vil slette et {scope}?"
+            },
+            "logged_stories": {
+                "no_stories": "Ingen historier fundet",
+                "story_failed_to_load": "Kunne ikke indlæses",
+                "save_from_cache_button": "Gem fra cachen"
+            },
+            "messaging_preview": {
+                "delete_selection_option": "Slet markering",
+                "bridge_connection_failed": "Kunne ikke oprette forbindelse til Snapchat via bridge-tjenesten",
+                "bridge_init_failed": "Kunne ikke initialisere meddelelses broen",
+                "message_fetch_failed": "Kunne ikke hente beskeder",
+                "no_message_hint": "Ingen besked",
+                "save_selection_option": "Gem valg",
+                "save_all_option": "Gem alle",
+                "unsave_selection_option": "Fjern markering",
+                "unsave_all_option": "Fjern gem alle",
+                "mark_selection_as_seen_option": "Markér valgt Snap som set",
+                "mark_all_as_seen_option": "Markér alle snaps som set",
+                "delete_all_option": "Slet alt"
+            },
+            "home": {
+                "update_title": "SnapEnhance Opdatering",
+                "update_content": "Version {version} er tilgængelig!",
+                "update_button": "Hent"
+            },
+            "home_logs": {
+                "no_logs_hint": "Ingen logfiler tilgængelige",
+                "clear_logs_button": "Ryd logfiler",
+                "export_logs_button": "Eksporter logs",
+                "saving_logs_toast": "Gemmer logfiler, dette kan tage et stykke tid ...",
+                "saved_logs_success_toast": "Logfiler blev gemt",
+                "saved_logs_failure_toast": "Kunne ikke gemme logfiler"
+            },
+            "home_settings": {
+                "actions_title": "Handlinger",
+                "message_logger_title": "Meddelelses logger",
+                "debug_title": "Fejlfinde",
+                "success_toast": "Færdig!",
+                "message_logger_summary": "{messageCount} beskeder\n{storyCount} historier",
+                "export_button": "Eksport",
+                "clear_button": "Ryd",
+                "view_logger_history_button": "Se logger historik"
             }
         },
         "dialogs": {
@@ -56,6 +135,15 @@
             "scripting_warning": {
                 "title": "Advarsel",
                 "content": "SnapEnhance inkluderer et scriptværktøj, der tillader udførelse af brugerdefineret kode på din enhed. Vær ekstrem forsigtig og installer kun moduler fra kendte, pålidelige kilder. Uautoriserede eller uverificerede moduler kan udgøre sikkerhedsrisici for dit system."
+            },
+            "reset_config": {
+                "title": "Nulstil konfiguration",
+                "content": "Er du sikker på, at du vil nulstille konfigurationen?",
+                "success_toast": "Konfigurations nulstilling lykkedes"
+            },
+            "messaging_action": {
+                "title": "Vælg indholdstyper, der skal behandles",
+                "select_all_button": "Vælg alle"
             }
         }
     },
@@ -1064,7 +1152,13 @@
         "failed_generic_toast": "Kunne ikke downloade",
         "failed_to_create_preview_toast": "Kunne ikke oprette forhåndsvisning",
         "failed_processing_toast": "Mislykkedes at behandle {error}",
-        "failed_gallery_toast": "Kunne ikke gemme i galleri {error}"
+        "failed_gallery_toast": "Kunne ikke gemme i galleri {error}",
+        "dash_dialog": {
+            "download_all": "Hent alle",
+            "title": "Hent dash medier",
+            "segment_text": "Segment {from} - {to}"
+        },
+        "dash_no_chapter": "Intet kapitel fundet"
     },
     "streaks_reminder": {
         "notification_title": "Streaks",
@@ -1200,5 +1294,35 @@
     "call_start_confirmation": {
         "dialog_title": "Start opkald",
         "dialog_message": "Er du sikker på, at du gider at snakke?"
+    },
+    "end_to_end_encryption": {
+        "toolbox": {
+            "no_shared_key": "Du har ikke en delt hemmelighed med denne ven endnu. Klik nedenfor for at starte en ny.",
+            "shared_key_fingerprint": "Dit fingeraftryk er:\n\n{fingerprint}\n\nSørg for at tjekke, om det matcher din vens fingeraftryk!",
+            "initiate_exchange_button": "Start nøgleudveksling"
+        },
+        "confirmation_dialogs": {
+            "confirmation_1": "ADVARSEL: Dette vil overskrive din eksisterende nøgle. Du mister adgangen til alle krypterede beskeder fra denne ven. Er du sikker på, at du vil fortsætte?",
+            "title": "Ende til ende kryptering",
+            "confirmation_2": "Dit fjols er du VIRKELIG sikker på, at du vil fortsætte? Dette er din sidste chance for at fortryde."
+        },
+        "accept_secret_key_success_toast": "Færdig! Du kan nu sende og modtage krypterede beskeder med denne ven.",
+        "accept_secret_key_failure_toast": "Kunne ikke acceptere hemmelig nøgle",
+        "accept_secret_button": "Accepter hemmelighed",
+        "accept_public_key_button": "Accepter offentlig nøgle",
+        "outgoing_pk_message": "Anmodning om nøgleudveksling",
+        "outgoing_secret_message": "Nøgle udvekslings svar",
+        "unencrypted_conversation_send_failure_toast": "Du kan ikke sende krypteret indhold til både krypterede og ukrypterede samtaler!",
+        "native_hooks_send_failure_toast": "Afsendelse mislykkedes! Aktiver venligst Native Hooks i indstillingerne.",
+        "no_participants_to_encrypt_toast": "Du har ikke nogen venner i denne samtale at kryptere beskeder med!",
+        "encryption_failed_toast": "Kunne ikke kryptere meddelelsen! Tjek logfil for flere detaljer.",
+        "accept_public_key_success_toast": "Offentlig nøgle blev accepteret!",
+        "accept_public_key_failure_toast": "Kunne ikke acceptere offentlig nøgle",
+        "incoming_pk_message": "Du har lige modtaget en offentlig nøgleanmodning. Klik nedenfor for at acceptere det.",
+        "incoming_secret_message": "Din ven har lige accepteret din offentlige nøgle. Klik nedenfor for at acceptere hemmeligheden."
+    },
+    "scopes": {
+        "friend": "Ven",
+        "group": "Gruppe"
     }
 }
