@@ -36,13 +36,92 @@
         },
         "sections": {
             "features": {
-                "disabled": "Désactivé"
+                "disabled": "Désactivé",
+                "export_option": "Exporter",
+                "import_option": "Importer",
+                "reset_option": "Réinitialiser",
+                "config_export_success_toast": "Configuration exportée avec succès",
+                "config_import_success_toast": "Configuration importée avec succès",
+                "config_import_failure_toast": "Échec de l'importation de la configuration {erreur}",
+                "saved_config_snackbar": "Configuration enregistrée"
             },
             "social": {
                 "streaks_expiration_short": "{hours}h"
             },
             "tasks": {
-                "no_tasks": "Aucune tâche"
+                "no_tasks": "Aucune tâche",
+                "merge_files_toast": "Fusion de {count}fichiers",
+                "remove_selected_tasks_title": "Êtes-vous sûr de vouloir supprimer les tâches sélectionnées ?",
+                "remove_all_tasks_title": "Êtes-vous sûr de vouloir supprimer toutes les tâches ?",
+                "delete_files_option": "Supprimez également les fichiers",
+                "remove_selected_tasks_confirm": "Supprimer {count} tâches ?",
+                "remove_all_tasks_confirm": "Supprimer toutes les tâches ?"
+            },
+            "home": {
+                "update_content": "La version {version} est disponible !",
+                "update_button": "Télécharger",
+                "update_title": "Mise à jour SnapEnhance"
+            },
+            "manage_scope": {
+                "logged_stories_button": "Afficher les histoires enregistrées",
+                "e2ee_title": "Chiffrement de bout en bout",
+                "rules_title": "Règles",
+                "participants_text": "­compter les participants",
+                "not_found": "Pas trouvé",
+                "streaks_title": "Traces",
+                "streaks_length_text": "Longueur : {longueur}",
+                "streaks_expiration_text": "Expire dans eta",
+                "streaks_expiration_text_expired": "Expiré",
+                "reminder_button": "Définir un rappel",
+                "delete_scope_confirm_dialog_title": "Êtes-vous sûr de vouloir supprimer une {étendue}?"
+            },
+            "home_logs": {
+                "no_logs_hint": "Aucun journal disponible",
+                "clear_logs_button": "Effacer les journaux",
+                "export_logs_button": "Exporter les journaux",
+                "saving_logs_toast": "Sauvegarde des journaux, cela peut prendre un certain temps ...",
+                "saved_logs_success_toast": "Journaux enregistrés avec succès",
+                "saved_logs_failure_toast": "Échec de l'enregistrement des journaux"
+            },
+            "home_settings": {
+                "actions_title": "Actions",
+                "message_logger_title": "Enregistreur de messages",
+                "debug_title": "Déboguer",
+                "success_toast": "Fait !",
+                "message_logger_summary": "{messageCompter} les messages\n{histoireCompter} les histoires",
+                "export_button": "Exporter",
+                "clear_button": "Claire",
+                "view_logger_history_button": "Afficher l'historique de l'enregistreur"
+            },
+            "logged_stories": {
+                "story_failed_to_load": "Échec du chargement",
+                "no_stories": "Aucune histoire trouvée",
+                "save_from_cache_button": "Enregistrer depuis le cache"
+            },
+            "messaging_preview": {
+                "bridge_connection_failed": "Échec de la connexion à Snapchat via le service de pont",
+                "bridge_init_failed": "Échec de l'initialisation du pont de messagerie",
+                "message_fetch_failed": "Échec de la récupération des messages",
+                "no_message_hint": "Pas de message",
+                "save_selection_option": "Enregistrer la sélection",
+                "save_all_option": "Sauver tous",
+                "unsave_selection_option": "Annuler l'enregistrement de la sélection",
+                "unsave_all_option": "Tout annuler",
+                "mark_selection_as_seen_option": "Marquer le Snap sélectionné comme vu",
+                "mark_all_as_seen_option": "Marquer tous les Snaps comme vus",
+                "delete_selection_option": "Supprimer la sélection",
+                "delete_all_option": "Supprimer tout"
+            },
+            "logger_history": {
+                "list_friend_format": "Ami {nom}",
+                "list_group_format": "Nom de groupe}",
+                "no_more_messages": "Plus de messages",
+                "reverse_order_checkbox": "Ordre inverse",
+                "chat_attachment": "Indice des {pièces jointes}",
+                "empty_message": "Message de discussion vide",
+                "message_parse_failed": "Échec de l'analyse du message",
+                "unknown_sender": "Expéditeur inconnu",
+                "download_attachment_failed_toast": "Échec du téléchargement de la pièce jointe"
             }
         },
         "dialogs": {
@@ -56,6 +135,15 @@
             "scripting_warning": {
                 "content": "SnapEnhance inclut un outil de développement de scripts, permettant l'exécution d'un code défini par l'utilisateur sur votre appareil. Soyez extrêmement prudent et n'installez que des modules provenant de sources connues et fiables. Les modules non autorisés ou non vérifiés peuvent présenter des risques pour la sécurité de votre système.",
                 "title": "Attention"
+            },
+            "messaging_action": {
+                "title": "Choisissez les types de contenu à traiter",
+                "select_all_button": "Tout sélectionner"
+            },
+            "reset_config": {
+                "title": "Réinitialiser la configuration",
+                "content": "Êtes-vous sûr de vouloir réinitialiser la configuration ?",
+                "success_toast": "La configuration a été réinitialisée avec succès"
             }
         }
     },
@@ -1064,7 +1152,13 @@
         "failed_generic_toast": "Échec du téléchargement",
         "failed_to_create_preview_toast": "Échec de création de l'aperçu",
         "failed_processing_toast": "Échec du traitement {error}",
-        "failed_gallery_toast": "Échec de l'enregistrement dans la galerie {error}"
+        "failed_gallery_toast": "Échec de l'enregistrement dans la galerie {error}",
+        "dash_dialog": {
+            "download_all": "Tout télécharger",
+            "title": "Télécharger le média Dash",
+            "segment_text": "Segment {de} à  -{à}"
+        },
+        "dash_no_chapter": "Aucun chapitre trouvé"
     },
     "streaks_reminder": {
         "notification_title": "Rappels des flammes",
@@ -1200,5 +1294,35 @@
         "already_seen_toast": "Déjà marqué comme vu !",
         "unseen_toast": "Marqué comme vu !",
         "already_unseen_toast": "Déjà marqué comme invisible !"
+    },
+    "end_to_end_encryption": {
+        "toolbox": {
+            "no_shared_key": "Vous n'avez pas encore de secret partagé avec cet ami.  Cliquez ci-dessous pour en lancer un nouveau.",
+            "shared_key_fingerprint": "Votre empreinte digitale est :\n\n {empreinte digitale}\n\n Assurez-vous de vérifier si cela correspond à l'empreinte digitale de votre ami !",
+            "initiate_exchange_button": "Lancer l'échange de clés"
+        },
+        "confirmation_dialogs": {
+            "confirmation_1": "AVERTISSEMENT : Cela écrasera votre clé existante.  Vous perdrez l'accès à tous les messages cryptés de cet ami.  Es-tu sur de vouloir continuer?",
+            "title": "Chiffrement de bout en bout",
+            "confirmation_2": "Êtes-vous VRAIMENT sûr de vouloir continuer ?  C'est votre dernière chance de vous retirer."
+        },
+        "unencrypted_conversation_send_failure_toast": "Vous ne pouvez pas envoyer de contenu crypté à des conversations cryptées et non cryptées !",
+        "accept_public_key_success_toast": "Clé publique acceptée avec succès !",
+        "native_hooks_send_failure_toast": "Échec de l'envoi !  Veuillez activer Native Hooks dans les paramètres.",
+        "accept_secret_key_success_toast": "Fait!  Vous pouvez désormais envoyer et recevoir des messages cryptés avec cet ami.",
+        "accept_public_key_failure_toast": "Échec de l'acceptation de la clé publique",
+        "accept_secret_button": "Accepter la clé publique",
+        "no_participants_to_encrypt_toast": "Vous n'avez aucun ami dans cette conversation avec qui crypter les messages !",
+        "accept_secret_key_failure_toast": "Échec de l'acceptation de la clé secrète",
+        "encryption_failed_toast": "Échec du chiffrement du message !  Consultez logcat pour plus de détails.",
+        "accept_public_key_button": "Accepter la clé publique",
+        "outgoing_pk_message": "Demande d'échange de clés",
+        "outgoing_secret_message": "Réponse d'échange de clés",
+        "incoming_pk_message": "Vous venez de recevoir une demande de clé publique.  Cliquez ci-dessous pour l'accepter.",
+        "incoming_secret_message": "Votre ami vient d'accepter votre clé publique.  Cliquez ci-dessous pour accepter le secret."
+    },
+    "scopes": {
+        "friend": "Amie ami",
+        "group": "Groupe"
     }
 }
