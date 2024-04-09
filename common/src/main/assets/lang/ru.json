@@ -66,7 +66,12 @@
             },
             "manage_scope": {
                 "logged_stories_button": "Показать сохранённые истории",
-                "e2ee_title": "Сквозное шифрование"
+                "e2ee_title": "Сквозное шифрование",
+                "rules_title": "Правила",
+                "participants_text": "{count} участников",
+                "not_found": "Не найдено",
+                "streaks_length_text": "Длина: {length}",
+                "streaks_expiration_text": "Истекает через {eta}"
             },
             "social": {
                 "streaks_expiration_short": "{hours} часа"
