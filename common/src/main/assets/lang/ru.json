@@ -50,6 +50,15 @@
                 "update_title": "Обновить SnapEnchance",
                 "update_content": "Версия {version} доступна!",
                 "update_button": "Скачать"
+            },
+            "features": {
+                "disabled": "Отключенно",
+                "export_option": "Экспорт",
+                "import_option": "Импорт",
+                "config_export_success_toast": "Конфигурация успешно экспортирована",
+                "config_import_success_toast": "Конфигурация успешно импортирована",
+                "config_import_failure_toast": "Не удалось импортировать конфигурацию {error}",
+                "saved_config_snackbar": "Конфигурация сохранена"
             }
         },
         "routes": {
