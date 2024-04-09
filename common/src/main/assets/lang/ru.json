@@ -69,7 +69,8 @@
             "home_settings": "Настройки",
             "scripts": "Скрипты",
             "logger_history": "История логов",
-            "messaging_preview": "Предварительный просмотр"
+            "messaging_preview": "Предварительный просмотр",
+            "logged_stories": "Сохранённые истории"
         }
     },
     "scopes": {
