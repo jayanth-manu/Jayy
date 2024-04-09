@@ -28,7 +28,8 @@
                 "remove_all_tasks_title": "Вы уверены, что хотите удалить все задачи?",
                 "delete_files_option": "Также удалить файлы",
                 "remove_selected_tasks_confirm": "Удалить {count} задач?",
-                "remove_all_tasks_confirm": "Убрать все задачи?"
+                "remove_all_tasks_confirm": "Убрать все задачи?",
+                "merge_files_toast": "Объединение {count} файла"
             },
             "home_logs": {
                 "clear_logs_button": "Очистить логи",
@@ -60,7 +61,8 @@
                 "config_export_success_toast": "Конфигурация успешно экспортирована",
                 "config_import_success_toast": "Конфигурация успешно импортирована",
                 "config_import_failure_toast": "Не удалось импортировать конфигурацию {error}",
-                "saved_config_snackbar": "Конфигурация сохранена"
+                "saved_config_snackbar": "Конфигурация сохранена",
+                "reset_option": "Сброс"
             }
         },
         "routes": {
