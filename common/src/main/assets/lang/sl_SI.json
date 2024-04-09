@@ -28,7 +28,8 @@
             "home_logs": "Dnevniki",
             "social": "Družbena omrežja",
             "scripts": "Skripte",
-            "home_settings": "Nastavitve"
+            "home_settings": "Nastavitve",
+            "logger_history": "Zgodovina Loggerja"
         },
         "sections": {
             "tasks": {
@@ -41,5 +42,9 @@
                 "streaks_expiration_short": "{hours} ur"
             }
         }
+    },
+    "scopes": {
+        "friend": "Prijatelj",
+        "group": "Skupina"
     }
 }
