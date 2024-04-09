@@ -395,6 +395,112 @@
                 },
                 "name": "Användargränssnitt",
                 "description": "Ändra utseende och känsla för Snapchat"
+            },
+            "messaging": {
+                "properties": {
+                    "hide_typing_notifications": {
+                        "description": "Hindrar någon från att veta att du skriver ett meddelande",
+                        "name": "Dölj skrivaviseringar"
+                    },
+                    "hide_bitmoji_presence": {
+                        "description": "Förhindrar att din Bitmoji dyker upp medan du är i chatten"
+                    },
+                    "half_swipe_notifier": {
+                        "properties": {
+                            "min_duration": {
+                                "description": "Minsta varaktighet för halva svep (i sekunder)",
+                                "name": "Minsta varaktighet"
+                            },
+                            "max_duration": {
+                                "description": "Den maximala varaktigheten för halva svepningen (i sekunder)",
+                                "name": "Maximal varaktighet"
+                            }
+                        },
+                        "name": "Halvsvep Notifier",
+                        "description": "Meddelar dig när någon halvt sveper in i en konversation"
+                    },
+                    "call_start_confirmation": {
+                        "description": "Visar en bekräftelsedialog när du startar ett samtal",
+                        "name": "Ring startbekräftelse"
+                    },
+                    "prevent_message_sending": {
+                        "name": "Förhindra att meddelanden skickas",
+                        "description": "Förhindrar att vissa typer av meddelanden skickas"
+                    },
+                    "message_preview_length": {
+                        "name": "Längd för förhandsgranskning av meddelande",
+                        "description": "Ange hur många meddelanden som ska förhandsgranskas"
+                    },
+                    "better_notifications": {
+                        "description": "Lägger till mer information i mottagna aviseringar",
+                        "name": "Bättre aviseringar"
+                    },
+                    "loop_media_playback": {
+                        "name": "Slinga medieuppspelning",
+                        "description": "Slingor medieuppspelning när du tittar på Snaps / Stories"
+                    },
+                    "disable_replay_in_ff": {
+                        "description": "Inaktiverar möjligheten att spela om med ett långt tryck från Friend Feed",
+                        "name": "Inaktivera Replay i FF"
+                    },
+                    "unlimited_snap_view_time": {
+                        "name": "Obegränsad Snap View Time",
+                        "description": "Tar bort tidsgränsen för visning av Snaps"
+                    },
+                    "instant_delete": {
+                        "name": "Omedelbar radering",
+                        "description": "Tar bort bekräftelsedialogrutan när meddelanden tas bort"
+                    }
+                }
+            },
+            "global": {
+                "properties": {
+                    "disable_confirmation_dialogs": {
+                        "name": "Inaktivera bekräftelsedialoger",
+                        "description": "Bekräftar automatiskt valda åtgärder"
+                    },
+                    "better_location": {
+                        "properties": {
+                            "always_update_location": {
+                                "name": "Uppdatera alltid plats",
+                                "description": "Tvinga Snapchat att uppdatera plats även om ingen GPS-data tas emot"
+                            },
+                            "suspend_location_updates": {
+                                "name": "Stäng av platsuppdateringar",
+                                "description": "Lägger till en knapp i kartinställningarna för att avbryta platsuppdateringar"
+                            },
+                            "spoof_battery_level": {
+                                "name": "Spoof batterinivå",
+                                "description": "Förfalskar batterinivån på din enhet på kartan\nVärdet måste vara mellan 0 och 100"
+                            },
+                            "spoof_location": {
+                                "name": "Spoof Plats",
+                                "description": "Förfalskar din plats till en angiven"
+                            },
+                            "coordinates": {
+                                "description": "Ställ in koordinaterna för den falska platsen",
+                                "name": "Koordinater"
+                            },
+                            "spoof_headphones": {
+                                "name": "Parodi hörlurar",
+                                "description": "Förfalskar statusen för att lyssna på musik på kartan"
+                            }
+                        },
+                        "description": "Förbättrar Snapchat-platsen",
+                        "name": "Bättre läge"
+                    },
+                    "snapchat_plus": {
+                        "name": "Snapchat Plus",
+                        "description": "Aktiverar Snapchat Plus-funktioner\nVissa serversidiga funktioner kanske inte fungerar"
+                    },
+                    "auto_updater": {
+                        "name": "Automatisk uppdatering",
+                        "description": "Söker automatiskt efter nya uppdateringar"
+                    },
+                    "disable_metrics": {
+                        "name": "Inaktivera mätvärden"
+                    }
+                }
             }
         }
     },
