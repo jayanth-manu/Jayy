@@ -45,7 +45,8 @@
                 "message_logger_title": "Логгер сообщений",
                 "success_toast": "Сделанно!",
                 "message_logger_summary": "{messageCount} сообщений\n{storyCount} историй",
-                "actions_title": "Действия"
+                "actions_title": "Действия",
+                "debug_title": "Режим отладки"
             },
             "home": {
                 "update_title": "Обновить SnapEnchance",
