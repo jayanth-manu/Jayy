@@ -78,7 +78,10 @@
                 "delete_scope_confirm_dialog_title": "Вы уверены, что хотите удалить {scope}?"
             },
             "social": {
-                "streaks_expiration_short": "{hours} часа"
+                "streaks_expiration_short": "{hours} часа",
+                "friends_tab": "Друзья",
+                "groups_tab": "Группы",
+                "empty_hint": "(пусто)"
             },
             "logged_stories": {
                 "story_failed_to_load": "Ошибка загрузки",
@@ -96,7 +99,7 @@
                 "mark_all_as_seen_option": "Отметить все Snap как просмотренные",
                 "delete_selection_option": "Удалить выбранное",
                 "delete_all_option": "Удалить все",
-                "unsave_selection_option": "Отменить сохранение выделения",
+                "unsave_selection_option": "",
                 "unsave_all_option": "Не сохранять все"
             },
             "logger_history": {
@@ -107,7 +110,8 @@
                 "reverse_order_checkbox": "Обратный порядок",
                 "message_parse_failed": "Не удалось проанализировать сообщение",
                 "unknown_sender": "Неизвестный отправитель",
-                "download_attachment_failed_toast": "Не удалось загрузить вложение"
+                "download_attachment_failed_toast": "Не удалось загрузить вложение",
+                "empty_message": ""
             }
         },
         "routes": {
@@ -126,7 +130,7 @@
         "dialogs": {
             "scripting_warning": {
                 "title": "Предупреждение",
-                "content": "SnapEnhance включает в себя инструмент сценариев, позволяющий выполнять пользовательский код на вашем устройстве.  Будьте предельно осторожны и устанавливайте модули только из известных и надежных источников.  Неавторизованные или непроверенные модули могут представлять угрозу безопасности вашей системы."
+                "content": "SnapEnhance включает в себя инструмент сценариев, позволяющий выполнять пользовательский код на вашем устройстве.  Будьте предельно осторожны и устанавливайте модули только из известных и надежных источников. Неавторизованные или непроверенные модули могут представлять угрозу безопасности вашей системы."
             },
             "reset_config": {
                 "title": "Сбросить конфигурацию",
@@ -151,6 +155,392 @@
         "group": "Группа"
     },
     "material3_strings": {
-        "date_range_input_invalid_range_input": "Неверный диапазон дат"
+        "date_range_input_invalid_range_input": "Неверный диапазон дат",
+        "date_range_picker_start_headline": "От",
+        "date_input_invalid_year_range": "Неверный год",
+        "date_input_invalid_not_allowed": "Недействительная дата",
+        "date_range_picker_end_headline": "К",
+        "date_range_picker_title": "Выберите диапазон дат",
+        "date_picker_switch_to_calendar_mode": "Календарь",
+        "date_picker_switch_to_input_mode": "Вход",
+        "date_picker_today_description": "Сегодня",
+        "date_input_invalid_for_pattern": "Недействительная дата",
+        "date_range_picker_scroll_to_previous_month": "Предыдущий месяц",
+        "date_range_picker_day_in_range": "Выбрано",
+        "date_range_picker_scroll_to_next_month": "В следующем месяце"
+    },
+    "half_swipe_notifier": {
+        "notification_content_dm": "Пользователь {friend} только что наполовину перешел в ваш чат на {duration} сек.",
+        "notification_channel_name": "Половина смахивания",
+        "notification_content_group": "Пользователь {friend} только что наполовину перешел в {группу} на {duration} сек."
+    },
+    "conversation_preview": {
+        "total_messages": "Всего отправленных/полученных сообщений: {count}",
+        "title": "Предварительный просмотр",
+        "streak_expiration": "истекает через {day} дней {час} часов {минуту} минут",
+        "unknown_user": "Неизвестный пользователь"
+    },
+    "rules": {
+        "properties": {
+            "stealth": {
+                "name": "Режим невидимки",
+                "description": "Не позволяет никому узнать, что вы открыли их Snap/чаты и разговоры.",
+                "options": {
+                    "blacklist": "Исключить из скрытого режима",
+                    "whitelist": "Режим невидимки"
+                }
+            },
+            "pin_conversation": {
+                "name": "Закрепить разговор"
+            },
+            "e2e_encryption": {
+                "name": "Использовать шифрование E2E"
+            },
+            "auto_save": {
+                "name": "Автосохранение",
+                "description": "Сохраняет сообщения чата при их просмотре.",
+                "options": {
+                    "blacklist": "Исключить из автосохранения",
+                    "whitelist": "Автосохранение"
+                }
+            },
+            "unsaveable_messages": {
+                "name": "Несохраняемые сообщения",
+                "description": "Предотвращает сохранение сообщений в чате другими людьми",
+                "options": {
+                    "blacklist": "Исключить из несохраняемых сообщений",
+                    "whitelist": "Несохраняемые сообщения"
+                }
+            },
+            "hide_friend_feed": {
+                "name": "Скрыть из ленты друзей"
+            },
+            "auto_download": {
+                "options": {
+                    "blacklist": "Исключить из автоматической загрузки",
+                    "whitelist": "Автоматическая загрузка"
+                },
+                "description": "Автоматически загружать Snap при их просмотре",
+                "name": "Автоматическая загрузка"
+            }
+        },
+        "toasts": {
+            "enabled": "{ruleName} включено",
+            "disabled": "{ruleName} отключено"
+        },
+        "modes": {
+            "blacklist": "Режим черного списка",
+            "whitelist": "Режим белого списка"
+        }
+    },
+    "button": {
+        "ok": "ХОРОШО",
+        "open": "Открыть",
+        "positive": "Да",
+        "negative": "Нет",
+        "cancel": "Отмена",
+        "download": "Скачать"
+    },
+    "end_to_end_encryption": {
+        "accept_public_key_button": "Принять открытый ключ",
+        "toolbox": {
+            "no_shared_key": "У вас еще нет общего секрета с этим другом.  Нажмите ниже, чтобы начать новый.",
+            "shared_key_fingerprint": "«Ваш отпечаток пальца: {fingerprint}. Обязательно проверьте, совпадает ли он с отпечатком пальца вашего друга!»",
+            "initiate_exchange_button": "Инициировать обмен ключами"
+        },
+        "confirmation_dialogs": {
+            "title": "Сквозное шифрование",
+            "confirmation_1": "ВНИМАНИЕ: это приведет к перезаписи существующего ключа.  Вы потеряете доступ ко всем зашифрованным сообщениям этого друга.  Вы уверены что хотите продолжить?",
+            "confirmation_2": "Вы ДЕЙСТВИТЕЛЬНО уверены, что хотите продолжить?  Это ваш последний шанс отступить."
+        },
+        "unencrypted_conversation_send_failure_toast": "Вы не можете отправлять зашифрованный контент одновременно в зашифрованные и незашифрованные беседы!",
+        "no_participants_to_encrypt_toast": "У вас нет друзей в этом разговоре, с которыми можно шифровать сообщения!",
+        "accept_secret_key_success_toast": "Сделанный!  Теперь вы можете отправлять и получать зашифрованные сообщения с этим другом.",
+        "accept_public_key_failure_toast": "Не удалось принять открытый ключ",
+        "accept_secret_button": "Принять секрет",
+        "encryption_failed_toast": "Не удалось зашифровать сообщение!  Проверьте logcat для получения более подробной информации.",
+        "accept_public_key_success_toast": "Открытый ключ успешно принят!",
+        "outgoing_secret_message": "Ответ на обмен ключами",
+        "incoming_pk_message": "Вы только что получили запрос открытого ключа.  Нажмите ниже, чтобы принять его.",
+        "incoming_secret_message": "Ваш друг только что принял ваш открытый ключ.  Нажмите ниже, чтобы принять секрет.",
+        "native_hooks_send_failure_toast": "Не удалось отправить!  Пожалуйста, включите Native Hooks в настройках.",
+        "accept_secret_key_failure_toast": "Не удалось принять секретный ключ",
+        "outgoing_pk_message": "Запрос на обмен ключами"
+    },
+    "features": {
+        "properties": {
+            "downloader": {
+                "properties": {
+                    "ffmpeg_options": {
+                        "properties": {
+                            "preset": {
+                                "description": "Установите скорость конвертации",
+                                "name": "Предустановка"
+                            },
+                            "custom_audio_codec": {
+                                "description": "Установите собственный аудиокодек (например, AAC)",
+                                "name": "Пользовательский аудиокодек"
+                            },
+                            "threads": {
+                                "description": "Количество потоков, которые нужно использовать",
+                                "name": "Потоки"
+                            },
+                            "video_bitrate": {
+                                "description": "Установите битрейт видео (кбит/с)",
+                                "name": "Битрейт видео"
+                            },
+                            "audio_bitrate": {
+                                "description": "Установите битрейт аудио (кбит/с)",
+                                "name": "Аудио битрейт"
+                            },
+                            "custom_video_codec": {
+                                "name": "Пользовательский видеокодек",
+                                "description": "Установите собственный видеокодек (например, libx264)"
+                            },
+                            "constant_rate_factor": {
+                                "description": "Set the constant rate factor for the video encoder\nFrom 0 to 51 for libx264",
+                                "name": "Фактор постоянной скорости"
+                            }
+                        },
+                        "description": "Укажите дополнительные параметры FFmpeg",
+                        "name": "Параметры FFmpeg"
+                    },
+                    "force_image_format": {
+                        "name": "Принудительный формат изображения",
+                        "description": "Принудительно сохраняет изображения в указанном формате."
+                    },
+                    "download_profile_pictures": {
+                        "name": "Загрузить изображения профиля",
+                        "description": "Позволяет загружать изображения профиля со страницы профиля."
+                    },
+                    "opera_download_button": {
+                        "name": "Кнопка загрузки оперы",
+                        "description": "Добавляет кнопку загрузки в правом верхнем углу при просмотре снимка.\nДлительное нажатие кнопки активирует загрузку"
+                    },
+                    "logging": {
+                        "name": "Ведение журнала",
+                        "description": "Показывает всплывающие сообщения при загрузке мультимедиа"
+                    },
+                    "auto_download_sources": {
+                        "name": "Источники автоматической загрузки",
+                        "description": "Выберите источники для автоматической загрузки"
+                    },
+                    "download_context_menu": {
+                        "description": "«Позволяет загружать/просматривать сообщения из разговора или истории с помощью контекстного меню.\nДлительное нажатие на кнопки приведет к принудительной загрузке»",
+                        "name": "Загрузить контекстное меню"
+                    },
+                    "save_folder": {
+                        "name": "Сохранить папку",
+                        "description": "Выберите каталог, в который должны быть загружены все медиафайлы."
+                    },
+                    "prevent_self_auto_download": {
+                        "name": "Запретить самостоятельную автоматическую загрузку",
+                        "description": "Предотвращает автоматическую загрузку ваших собственных снимков"
+                    },
+                    "path_format": {
+                        "name": "Формат пути",
+                        "description": "Укажите формат пути к файлу"
+                    },
+                    "allow_duplicate": {
+                        "name": "Разрешить дублирование",
+                        "description": "Позволяет загружать один и тот же носитель несколько раз."
+                    },
+                    "merge_overlays": {
+                        "name": "Объединить наложения",
+                        "description": "Объединяет текст и медиафайл Snap в один файл."
+                    },
+                    "force_voice_note_format": {
+                        "name": "Принудительный формат голосовой заметки",
+                        "description": "Принудительное сохранение голосовых заметок в указанном формате."
+                    },
+                    "custom_path_format": {
+                        "name": "Пользовательский формат пути",
+                        "description": "«Укажите собственный формат пути для загруженных носителей. Доступные переменные: - %username% - %source% - %hash% - %date_time%»"
+                    }
+                },
+                "description": "Скачать Snapchat Media",
+                "name": "Загрузчик"
+            },
+            "user_interface": {
+                "properties": {
+                    "enable_app_appearance": {
+                        "name": "Включить настройки внешнего вида приложения",
+                        "description": "«Включает скрытую настройку внешнего вида приложения. Может не потребоваться в новых версиях Snapchat»"
+                    },
+                    "friend_feed_message_preview": {
+                        "description": "Показывает предварительный просмотр последних сообщений в ленте друзей.",
+                        "name": "Предварительный просмотр сообщения в ленте друзей",
+                        "properties": {
+                            "amount": {
+                                "name": "Количество",
+                                "description": "Количество сообщений для предварительного просмотра"
+                            }
+                        }
+                    },
+                    "amoled_dark_mode": {
+                        "name": "AMOLED-темный режим",
+                        "description": "«Включает темный режим AMOLED. Убедитесь, что темный режим Snapchats включен»"
+                    }
+                },
+                "description": "Измените внешний вид Snapchat",
+                "name": "Пользовательский интерфейс"
+            }
+        },
+        "notices": {
+            "unstable": "⚠ Нестабильный",
+            "ban_risk": "⚠ Эта функция может стать причиной бана",
+            "internal_behavior": "⚠ Это может нарушить внутреннее поведение Snapchat.",
+            "require_native_hooks": "⚠ Для корректной работы этой функции требуются экспериментальные Native Hooks."
+        }
+    },
+    "chat_export": {
+        "exporter_dialog": {
+            "message_type_filter_title": "Фильтровать сообщения по типу",
+            "text_field_selection_all": "Все",
+            "export_file_format_title": "Формат файла экспорта",
+            "select_conversations_title": "Выберите разговоры",
+            "text_field_selection": "{количество} выбрано",
+            "amount_of_messages_title": "Количество сообщений (оставьте поле пустым для всех)",
+            "download_medias_title": "Скачать медиафайлы"
+        },
+        "processing_chats": "Обработка цепочек: {amount}...",
+        "export_fail": "Не удалось экспортировать разговор {conversation}.",
+        "writing_output": "Запись вывода...",
+        "finished": "Сделанный!  Теперь вы можете закрыть это диалоговое окно.",
+        "no_messages_found": "Сообщений не найдено!",
+        "exporting_message": "Экспорт {разговора}...",
+        "dialog_negative_button": "Отмена",
+        "dialog_positive_button": "Экспорт",
+        "exporting_chats": "Экспорт чатов...",
+        "exported_to": "Экспортировано в {path}"
+    },
+    "call_start_confirmation": {
+        "dialog_title": "Начать звонок",
+        "dialog_message": "Вы уверены, что хотите начать звонок?"
+    },
+    "actions": {
+        "export_memories": {
+            "name": "Экспорт воспоминаний",
+            "description": "Экспортирует воспоминания в ZIP-файл."
+        },
+        "change_language": {
+            "description": "Изменяет язык SnapEnhance",
+            "name": "Изменение языка"
+        },
+        "clean_snapchat_cache": {
+            "name": "Очистить кеш Snapchat",
+            "description": "Очищает кэш Snapchat"
+        },
+        "manage_friend_list": {
+            "name": "Управление списком друзей",
+            "description": "Импортируйте/экспортируйте список друзей при резервном копировании."
+        },
+        "export_chat_messages": {
+            "name": "Экспорт сообщений чата",
+            "description": "Экспортирует сообщения разговора в файл JSON/HTML/TXT."
+        },
+        "regen_mappings": {
+            "name": "Восстановить сопоставления",
+            "description": "Восстановить сопоставления вручную"
+        },
+        "bulk_messaging_action": {
+            "name": "Массовая рассылка сообщений",
+            "description": "Выполняет такие операции, как удаление друзей или массовое удаление бесед."
+        }
+    },
+    "download_processor": {
+        "dash_no_chapter": "Глава не найдена",
+        "attachment_type": {
+            "snap": "Snap",
+            "original_story": "Оригинальная история",
+            "sticker": "наклейка",
+            "external_media": "Внешние СМИ",
+            "note": "Примечание"
+        },
+        "no_attachments_toast": "Вложений не найдено!",
+        "already_queued_toast": "СМИ уже в очереди!",
+        "already_downloaded_toast": "Медиа уже загружено!",
+        "saved_toast": "Сохранено в {path}.",
+        "download_toast": "Загрузка {path}...",
+        "processing_toast": "Обработка {путь}...",
+        "failed_generic_toast": "Не удалось скачать",
+        "failed_to_create_preview_toast": "Не удалось создать предварительный просмотр.",
+        "failed_gallery_toast": "Не удалось сохранить в галерею {ошибка}",
+        "unsupported_content_type_toast": "Неподдерживаемый тип контента!",
+        "failed_no_longer_available_toast": "Медиа больше не доступны",
+        "failed_processing_toast": "Не удалось обработать {ошибка}",
+        "select_attachments_title": "Выберите вложения для загрузки",
+        "download_started_toast": "Загрузка началась",
+        "dash_dialog": {
+            "title": "Скачать тире медиа",
+            "download_all": "Скачать все",
+            "segment_text": "Сегмент {от} – {до}"
+        }
+    },
+    "profile_info": {
+        "display_name": "Отображаемое имя",
+        "added_date": "Дата добавления",
+        "birthday": "День рождения: {месяц} {день}",
+        "hidden_birthday": "День рождения: Скрытый",
+        "snapchat_plus_state": {
+            "subscribed": "Подписан",
+            "not_subscribed": "Не подписан"
+        },
+        "friendship": "Дружба",
+        "add_source": "Добавить источник",
+        "snapchat_plus": "Снапчат Плюс",
+        "first_created_username": "Первое созданное имя пользователя",
+        "mutable_username": "Изменяемое имя пользователя",
+        "title": "Информация о профиле"
+    },
+    "friendship_link_type": {
+        "following": "Следующий",
+        "suggested": "Предложенный",
+        "incoming": "Входящий",
+        "incoming_follower": "Входящий подписчик",
+        "mutual": "Взаимный",
+        "outgoing": "Исходящий",
+        "blocked": "Заблокировано",
+        "deleted": "Удалено"
+    },
+    "bulk_messaging_action": {
+        "choose_action_title": "Выберите действие",
+        "progress_status": "Обработка {index} из {total}",
+        "confirmation_dialog": {
+            "message": "Это повлияет на всех выбранных друзей.  Это действие не может быть отменено.",
+            "title": "Вы уверены?"
+        },
+        "actions": {
+            "clear_conversations": "Очистить разговоры",
+            "remove_friends": "Удалить друзей"
+        },
+        "selection_dialog_continue_button": "Продолжать"
+    },
+    "better_notifications": {
+        "button": {
+            "download": "Скачать",
+            "reply": "Отвечать",
+            "mark_as_read": "Пометить, как прочитанное"
+        },
+        "stealth_mode_notice": "Не могу отметить как прочитанное в скрытом режиме"
+    },
+    "profile_picture_downloader": {
+        "button": "Загрузить изображение профиля",
+        "background_option": "Фон",
+        "title": "Загрузчик изображений профиля",
+        "avatar_option": "Аватар"
+    },
+    "mark_as_seen": {
+        "seen_toast": "Отмечено как замеченное!",
+        "unseen_toast": "Помечено как невидимое!",
+        "already_seen_toast": "Уже отмечено как просмотренное!",
+        "already_unseen_toast": "Уже отмечено как невидимое!"
+    },
+    "streaks_reminder": {
+        "notification_text": "Вы потеряете свою серию с {friend} через {hoursLeft} ч.",
+        "notification_title": "Полосы"
+    },
+    "suspend_location_updates": {
+        "switch_text": "Приостановить обновление местоположений"
     }
 }
