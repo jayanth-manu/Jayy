@@ -16,14 +16,14 @@ Requirements:
 Although using this in an unrooted enviroment using something like `LSPatch` should be working fine, it is not recommended to do so, use at your own risk!
 
 1. Install the module APK from either this [Github repo](https://github.com/rhunk/SnapEnhance/releases) or the [LSPosed repo](https://modules.lsposed.org/module/me.rhunk.snapenhance)
-2. Turn on the module in LSPosed and make sure Snapchat is in scope
+2. Turn on the module in `LSPosed` and make sure Snapchat is in scope
 3. Force Stop Snapchat
 4. Open the menu by clicking the [Settings Gear Icon](https://i.imgur.com/2grm8li.png)
 
 ## Download 
 To Download the latest stable release, please visit the [Releases](https://github.com/rhunk/SnapEnhance/releases) page.<br/>
 You can also download the latest debug build from the [Actions](https://github.com/rhunk/SnapEnhance/actions) section.<br/>
-We no longer offer official LSPatch binaries for obvious reasons. However, you're welcome to patch them yourself, as they should theoretically work without any issues.
+We no longer offer official `LSPatch` binaries for obvious reasons. However, you're welcome to patch them yourself, as they should theoretically work without any issues.
 
 ## Main Features
 <details closed>
@@ -192,7 +192,7 @@ We no longer offer official LSPatch binaries for obvious reasons. However, you'r
 <details>
   <summary>My phone isn't rooted; how do I use this?</summary>
   
-  - You can use `LSPatch` in combination with `SnapEnhance` to run this on an unrooted device, however this is unrecommended and not considered safe.
+  - You can use `` in combination with `SnapEnhance` to run this on an unrooted device, however this is unrecommended and not considered safe.
 </details>
 
 <details>
