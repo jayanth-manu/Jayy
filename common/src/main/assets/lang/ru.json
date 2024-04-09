@@ -63,6 +63,13 @@
                 "config_import_failure_toast": "Не удалось импортировать конфигурацию {error}",
                 "saved_config_snackbar": "Конфигурация сохранена",
                 "reset_option": "Сброс"
+            },
+            "manage_scope": {
+                "logged_stories_button": "Показать сохранённые истории",
+                "e2ee_title": "Сквозное шифрование"
+            },
+            "social": {
+                "streaks_expiration_short": "{hours} часа"
             }
         },
         "routes": {
