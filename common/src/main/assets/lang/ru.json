@@ -95,7 +95,9 @@
                 "mark_selection_as_seen_option": "Авторами выбранный Snap как просмотренный",
                 "mark_all_as_seen_option": "Отметить все Snap как просмотренные",
                 "delete_selection_option": "Удалить выбранное",
-                "delete_all_option": "Удалить все"
+                "delete_all_option": "Удалить все",
+                "unsave_selection_option": "Отменить сохранение выделения",
+                "unsave_all_option": "Не сохранять все"
             },
             "logger_history": {
                 "list_friend_format": "Друг {name}",
@@ -118,7 +120,8 @@
             "logger_history": "История логов",
             "messaging_preview": "Предварительный просмотр",
             "logged_stories": "Сохранённые истории",
-            "manage_scope": "Управление область"
+            "manage_scope": "Управление область",
+            "social": "Соц. сети"
         },
         "dialogs": {
             "scripting_warning": {
