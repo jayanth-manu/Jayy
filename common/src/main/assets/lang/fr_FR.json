@@ -1307,7 +1307,7 @@
             "confirmation_2": "Êtes-vous VRAIMENT sûr de vouloir continuer? C'est votre dernière chance de vous retirer."
         },
         "unencrypted_conversation_send_failure_toast": "Vous ne pouvez pas envoyer de contenu crypté à des conversations cryptées et non cryptées !",
-        "accept_public_key_success_toast": "Clé publique acceptée avec succès !",
+        "accept_public_key_success_toast": "Clé publique acceptée avec succès!",
         "native_hooks_send_failure_toast": "Échec de l'envoi! Veuillez activer Native Hooks dans les paramètres.",
         "accept_secret_key_success_toast": "Fait! Vous pouvez désormais envoyer et recevoir des messages cryptés avec cet ami.",
         "accept_public_key_failure_toast": "Échec de l'acceptation de la clé publique",
