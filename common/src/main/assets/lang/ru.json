@@ -7,7 +7,7 @@
         },
         "mappings": {
             "dialog": "Для динамической поддержки широкого диапазона версий Snapchat, для корректной работы SnapEnhance необходимо сопоставление параметров, это не должно занять более 5 секунд.",
-            "generate_button": "Генерировать",
+            "generate_button": "Сгенерировать",
             "generate_failure_no_snapchat": "SnapEnhance не удалось обнаружить Snapchat, попробуйте переустановить Snapchat.",
             "generate_failure": "Произошла ошибка при генерации сопоставлений, пожалуйста, попробуйте еще раз.",
             "generate_success": "Сопоставления сгенерированы успешно."
@@ -71,10 +71,41 @@
                 "participants_text": "{count} участников",
                 "not_found": "Не найдено",
                 "streaks_length_text": "Длина: {length}",
-                "streaks_expiration_text": "Истекает через {eta}"
+                "streaks_expiration_text": "Истекает через {eta}",
+                "streaks_title": "Серия",
+                "streaks_expiration_text_expired": "Истекло",
+                "reminder_button": "Установить напоминание",
+                "delete_scope_confirm_dialog_title": "Вы уверены, что хотите удалить {scope}?"
             },
             "social": {
                 "streaks_expiration_short": "{hours} часа"
+            },
+            "logged_stories": {
+                "story_failed_to_load": "Ошибка загрузки",
+                "no_stories": "Истории не найдены",
+                "save_from_cache_button": "Сохранить из кэша"
+            },
+            "messaging_preview": {
+                "bridge_connection_failed": "Не удалось подключиться к Snapchat через службу моста.",
+                "bridge_init_failed": "Не удалось инициализировать мост обмена сообщениями.",
+                "message_fetch_failed": "Не удалось получить сообщения.",
+                "no_message_hint": "Нет сообщений",
+                "save_selection_option": "Сохранить выбранное",
+                "save_all_option": "Сохранить все",
+                "mark_selection_as_seen_option": "Авторами выбранный Snap как просмотренный",
+                "mark_all_as_seen_option": "Отметить все Snap как просмотренные",
+                "delete_selection_option": "Удалить выбранное",
+                "delete_all_option": "Удалить все"
+            },
+            "logger_history": {
+                "list_friend_format": "Друг {name}",
+                "list_group_format": "Группа {name}",
+                "no_more_messages": "Больше нет сообщений",
+                "chat_attachment": "Вложение {index}",
+                "reverse_order_checkbox": "Обратный порядок",
+                "message_parse_failed": "Не удалось проанализировать сообщение",
+                "unknown_sender": "Неизвестный отправитель",
+                "download_attachment_failed_toast": "Не удалось загрузить вложение"
             }
         },
         "routes": {
@@ -86,7 +117,30 @@
             "scripts": "Скрипты",
             "logger_history": "История логов",
             "messaging_preview": "Предварительный просмотр",
-            "logged_stories": "Сохранённые истории"
+            "logged_stories": "Сохранённые истории",
+            "manage_scope": "Управление область"
+        },
+        "dialogs": {
+            "scripting_warning": {
+                "title": "Предупреждение",
+                "content": "SnapEnhance включает в себя инструмент сценариев, позволяющий выполнять пользовательский код на вашем устройстве.  Будьте предельно осторожны и устанавливайте модули только из известных и надежных источников.  Неавторизованные или непроверенные модули могут представлять угрозу безопасности вашей системы."
+            },
+            "reset_config": {
+                "title": "Сбросить конфигурацию",
+                "content": "Вы уверены, что хотите сбросить конфигурацию?",
+                "success_toast": "Конфигурация успешно сброшена"
+            },
+            "messaging_action": {
+                "title": "Выберите типы контента для обработки",
+                "select_all_button": "Выбрать все"
+            },
+            "add_friend": {
+                "title": "Добавить друга или группу",
+                "search_hint": "Поиск",
+                "fetch_error": "Не удалось получить данные",
+                "category_groups": "Группы",
+                "category_friends": "Друзья"
+            }
         }
     },
     "scopes": {
