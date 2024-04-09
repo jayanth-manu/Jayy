@@ -39,7 +39,8 @@
                 "disabled": "Inaktiverad",
                 "export_option": "Exportera",
                 "import_option": "Importera",
-                "reset_option": "Återställ"
+                "reset_option": "Återställ",
+                "saved_config_snackbar": "Konfiguration sparad"
             },
             "social": {
                 "streaks_expiration_short": "{timmar}t"
@@ -85,7 +86,8 @@
             },
             "home": {
                 "update_title": "SnapEnhance Updatering",
-                "update_content": "Version {version} är tillgänglig!"
+                "update_content": "Version {version} är tillgänglig!",
+                "update_button": "Ladda ner"
             },
             "home_logs": {
                 "clear_logs_button": "Rensa loggar",
@@ -102,6 +104,11 @@
                 "view_logger_history_button": "Visa Logger Historik",
                 "actions_title": "Handlingar",
                 "success_toast": "Klart!"
+            },
+            "manage_scope": {
+                "rules_title": "Regler",
+                "reminder_button": "Sätta på påminelse",
+                "streaks_expiration_text_expired": "Upphörd"
             }
         },
         "dialogs": {
