@@ -127,6 +127,7 @@ class FeatureManager(
             CustomizeUI(),
             BetterLocation(),
             MediaFilePicker(),
+            HideActiveMusic(),
         )
     
         initializeFeatures()
