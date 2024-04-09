@@ -99,7 +99,6 @@
                 "mark_all_as_seen_option": "Отметить все Snap как просмотренные",
                 "delete_selection_option": "Удалить выбранное",
                 "delete_all_option": "Удалить все",
-                "unsave_selection_option": "",
                 "unsave_all_option": "Не сохранять все"
             },
             "logger_history": {
@@ -110,8 +109,7 @@
                 "reverse_order_checkbox": "Обратный порядок",
                 "message_parse_failed": "Не удалось проанализировать сообщение",
                 "unknown_sender": "Неизвестный отправитель",
-                "download_attachment_failed_toast": "Не удалось загрузить вложение",
-                "empty_message": ""
+                "download_attachment_failed_toast": "Не удалось загрузить вложение"
             }
         },
         "routes": {
