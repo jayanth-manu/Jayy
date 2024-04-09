@@ -50,7 +50,9 @@
             },
             "tasks": {
                 "no_tasks": "Geen taken",
-                "remove_all_tasks_confirm": "Verwijder alle taken?"
+                "remove_all_tasks_confirm": "Verwijder alle taken?",
+                "remove_selected_tasks_title": "Weet je zeker dat je de geselecteerde taak wilt verwijderen?",
+                "remove_all_tasks_title": "Weet je zeker dat je alle taken wilt verwijderen?"
             },
             "home": {
                 "update_title": "SnapEnhance Update",
@@ -68,13 +70,15 @@
                 "actions_title": "Acties",
                 "message_logger_title": "Berichten logger",
                 "success_toast": "Klaar!",
-                "export_button": "Exporteren"
+                "export_button": "Exporteren",
+                "debug_title": "Debug",
+                "view_logger_history_button": "Bekijk Logs Geschiedenis"
             },
             "manage_scope": {
                 "logged_stories_button": "Toon gelogde verhalen",
                 "e2ee_title": "Eind-tot-eind encryptie",
                 "rules_title": "Regels",
-                "participants_text": "{aantal) deelnemers",
+                "participants_text": "{aantal} deelnemers",
                 "not_found": "Niet gevonden",
                 "streaks_title": "Reeksen",
                 "streaks_length_text": "Lengte: {lengte}",
