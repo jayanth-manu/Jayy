@@ -977,5 +977,9 @@
         "stealth_mode": "സ്റ്റെൽത്ത് മോഡ്",
         "auto_download_blacklist": "ഓട്ടോ ഡൗൺലോഡ് ബ്ലാക്ക്‌ലിസ്റ്റ്",
         "anti_auto_save": "ആന്റി ഓട്ടോ സേവ്"
+    },
+    "scopes": {
+        "friend": "സുഹൃത്ത്",
+        "group": "കുട്ടായ്മ"
     }
 }
