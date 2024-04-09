@@ -11,6 +11,63 @@
             "generate_failure_no_snapchat": "SnapEnhance не удалось обнаружить Snapchat, попробуйте переустановить Snapchat.",
             "generate_failure": "Произошла ошибка при генерации сопоставлений, пожалуйста, попробуйте еще раз.",
             "generate_success": "Сопоставления сгенерированы успешно."
+        },
+        "permissions": {
+            "notification_access": "Доступ к уведомлениям",
+            "display_over_other_apps": "Отображение поверх других приложений",
+            "dialog": "Для продолжения вам необходимо соответствовать следующим требованиям:",
+            "battery_optimization": "Оптимизация батареи",
+            "request_button": "Запрос"
         }
+    },
+    "manager": {
+        "sections": {
+            "tasks": {
+                "no_tasks": "Нет задач",
+                "remove_selected_tasks_title": "Вы уверены, что хотите удалить выбранные задачи?",
+                "remove_all_tasks_title": "Вы уверены, что хотите удалить все задачи?",
+                "delete_files_option": "Также удалить файлы",
+                "remove_selected_tasks_confirm": "Удалить {count} задач?",
+                "remove_all_tasks_confirm": "Убрать все задачи?"
+            },
+            "home_logs": {
+                "clear_logs_button": "Очистить логи",
+                "saved_logs_failure_toast": "Не удалось сохранить логи",
+                "no_logs_hint": "Нет доступных логов",
+                "export_logs_button": "Экспорт логов",
+                "saving_logs_toast": "Сохранение логов, это может занять некоторое время...",
+                "saved_logs_success_toast": "Логи успешно сохранены"
+            },
+            "home_settings": {
+                "export_button": "Экспорт",
+                "clear_button": "Очистить",
+                "view_logger_history_button": "Посмотреть логгер историй",
+                "message_logger_title": "Логгер сообщений",
+                "success_toast": "Сделанно!",
+                "message_logger_summary": "{messageCount} сообщений\n{storyCount} историй"
+            },
+            "home": {
+                "update_title": "Обновить SnapEnchance",
+                "update_content": "Версия {version} доступна!",
+                "update_button": "Скачать"
+            }
+        },
+        "routes": {
+            "home_logs": "Логи",
+            "tasks": "Задания",
+            "features": "Функции",
+            "home": "Дом",
+            "home_settings": "Настройки",
+            "scripts": "Скрипты",
+            "logger_history": "История логов",
+            "messaging_preview": "Предварительный просмотр"
+        }
+    },
+    "scopes": {
+        "friend": "Друг",
+        "group": "Группа"
+    },
+    "material3_strings": {
+        "date_range_input_invalid_range_input": "Неверный диапазон дат"
     }
 }
