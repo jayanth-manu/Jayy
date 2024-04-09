@@ -192,7 +192,7 @@ We no longer offer official `LSPatch` binaries for obvious reasons. However, you
 <details>
   <summary>My phone isn't rooted; how do I use this?</summary>
   
-  - You can use `` in combination with `SnapEnhance` to run this on an unrooted device, however this is unrecommended and not considered safe.
+  - You can use `LSPatch` in combination with `SnapEnhance` to run this on an unrooted device, however this is unrecommended and not considered safe.
 </details>
 
 <details>
