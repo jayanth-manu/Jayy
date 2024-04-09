@@ -46,7 +46,10 @@
                 "saved_config_snackbar": "Einstellungen gespeichert"
             },
             "social": {
-                "streaks_expiration_short": "{hours}h"
+                "streaks_expiration_short": "{hours}h",
+                "empty_hint": "(leer)",
+                "friends_tab": "Freunde",
+                "groups_tab": "Gruppen"
             },
             "tasks": {
                 "no_tasks": "Keine Aufgaben",
@@ -633,6 +636,10 @@
                     "video_playback_rate_slider": {
                         "name": "Schieberegler für die Videowiedergaberate",
                         "description": "Fügt einen Schieberegler im Opera-Kontextmenü hinzu, um die Videowiedergabegeschwindigkeit zu ändern\nHinweis: Änderungen gelten nur für nachfolgende Videos"
+                    },
+                    "hide_active_music": {
+                        "name": "Aktive Musik ausblenden",
+                        "description": "Verhindert, dass Snapchat erkennt, dass Sie Musik hören.\nSo können Sie mithilfe der Lautstärketasten Snaps aufnehmen, während Sie Musik hören"
                     }
                 }
             },
