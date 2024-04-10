@@ -27,14 +27,35 @@
             "home_settings": "Asetukset",
             "home_logs": "Lokit",
             "social": "Sosiaalinen",
-            "scripts": "Komentosarjat"
+            "scripts": "Komentosarjat",
+            "tasks": "Tehtävät",
+            "logger_history": "Lokejen historia",
+            "logged_stories": "kirjattuja tarinoita",
+            "manage_scope": "Muokkaa  laajuutta",
+            "messaging_preview": "Esikatsoa"
         },
         "sections": {
             "features": {
                 "disabled": "Pois päältä"
             },
             "social": {
-                "streaks_expiration_short": "{hours}h"
+                "streaks_expiration_short": "{Tunnit}h"
+            },
+            "home_logs": {
+                "saved_logs_success_toast": "Lokit tallennettu onnistuneesti",
+                "saved_logs_failure_toast": "Epäonnistui tallentamaan lokit",
+                "no_logs_hint": "Ei lokeja saatavilla",
+                "clear_logs_button": "Tyhjennä lokit",
+                "export_logs_button": "Exporttaa lokit",
+                "saving_logs_toast": "Tallennetaan lokeja, tämä voi kestää hetken ..."
+            },
+            "home_settings": {
+                "actions_title": "Tapahtumat"
+            },
+            "home": {
+                "update_title": "SnapEnchance päivitys",
+                "update_content": "Versio on saatavilla",
+                "update_button": "Lataa"
             }
         },
         "dialogs": {
@@ -627,6 +648,10 @@
     },
     "streaks_reminder": {
         "notification_title": "Striikit",
-        "notification_text": "Menetät Striikit {friend}: n kanssa {hoursLeft} tunnin kuluttua"
+        "notification_text": "Menetät Striikit {Kaveri}: n kanssa {hoursLeft} tunnin kuluttua"
+    },
+    "scopes": {
+        "friend": "Kaveri",
+        "group": "Ryhmä"
     }
 }
