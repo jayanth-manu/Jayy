@@ -536,6 +536,10 @@
                     "remove_groups_locked_status": {
                         "name": "Fjern gruppers låst status",
                         "description": "Giver dig mulighed for at se gruppeoplysninger efter at være blevet sparket ud"
+                    },
+                    "auto_mark_as_read": {
+                        "name": "Automatisk markér som læst",
+                        "description": "Markerer automatisk beskeder som læst, når du sender en besked til en samtale, selv når Stealth Mode er aktiveret"
                     }
                 }
             },
