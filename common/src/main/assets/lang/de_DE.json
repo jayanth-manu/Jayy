@@ -536,6 +536,10 @@
                     "remove_groups_locked_status": {
                         "name": "Entfernen des Gruppen-Sperrstatus",
                         "description": "Ermöglicht es Ihnen, nach dem Rauswurf Gruppeninformationen anzuzeigen"
+                    },
+                    "auto_mark_as_read": {
+                        "name": "Automatisch als gelesen markieren",
+                        "description": "Markiert Nachrichten automatisch als gelesen wenn eine Nachricht gesendet wurde, auch wenn der Stealth Mode aktiviert ist"
                     }
                 }
             },
