@@ -115,6 +115,7 @@ We no longer offer official `LSPatch` binaries for obvious reasons. However, you
   - `Disable Google Play Services Dialogs`
   - `Force Upload Source Quality`
   - `Default Volume Controls`
+  - `Hide Active Music`
   - `Disable Snap Splitting`
 </details>
 
