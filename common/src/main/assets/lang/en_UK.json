@@ -55,7 +55,9 @@
                 "remove_all_tasks_confirm": "Remove All Tasks?"
             },
             "social": {
-                "streaks_expiration_short": "{hours}h"
+                "streaks_expiration_short": "{hours}h",
+                "friends_tab": "Friends",
+                "groups_tab": "Groups"
             },
             "home": {
                 "update_title": "SnapEnhance Update",
