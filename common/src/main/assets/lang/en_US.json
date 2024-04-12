@@ -354,6 +354,32 @@
                         "name": "AMOLED Dark Mode",
                         "description": "Enables AMOLED dark mode\nMake sure Snapchats Dark mode is enabled"
                     },
+                    "customize_ui": {
+                        "name": "Colors",
+                        "description": "Customize Snapchats Colors",
+                        "properties": {
+                            "text_colour": {
+                                "name": "Text Color",
+                                "description": "Changes Snapchats text color\nInput hex code"
+                            },
+                            "background_colour": {
+                                "name": "Background Color",
+                                "description": "Changes Snapchats background color\nInput hex Code"
+                            },
+                            "background_colour_surface": {
+                                "name": "Background Surface Color",
+                                "description": "Changes Snapchats background surface color\nInput hex code"
+                            },
+                            "action_menu_background_colour": {
+                                "name": "Action Menu Background Color",
+                                "description": "Changes Snapchats chat action menu background color\nInput hex code"
+                            },
+                            "action_menu_round_background_colour": {
+                                "name": "Action Menu Round Background Color",
+                                "description": "Changes Snapchats chat action menu round background color\nInput hex code"
+                            }
+                        }
+                    },
                     "friend_feed_message_preview": {
                         "name": "Friend Feed Message Preview",
                         "description": "Shows a preview of the last messages in the Friend Feed",
@@ -363,7 +389,7 @@
                                 "description": "The amount of messages to get previewed"
                             }
                         }
-                    },
+                    }, 
                     "snap_preview": {
                         "name": "Snap Preview",
                         "description": "Displays a small preview next to unseen Snaps in chat"
