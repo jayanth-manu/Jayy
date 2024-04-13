@@ -759,14 +759,6 @@
                             }
                         }
                     },
-                    "app_passcode": {
-                        "name": "App Pin-kode",
-                        "description": "Sætter en adgangskode til at låse app'en"
-                    },
-                    "app_lock_on_resume": {
-                        "name": "App Lås Ved Genoptagelse",
-                        "description": "Låser appen, når den genåbnes"
-                    },
                     "infinite_story_boost": {
                         "name": "Uendelig Historie Boost",
                         "description": "Bypass Story Boost Limit delay"

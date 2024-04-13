@@ -828,14 +828,6 @@
                         "name": "Edit Messages",
                         "description": "Allows you to edit messages in conversations"
                     },
-                    "app_passcode": {
-                        "name": "App Passcode",
-                        "description": "Sets a passcode to lock the app"
-                    },
-                    "app_lock_on_resume": {
-                        "description": "Locks the app when it's reopened",
-                        "name": "App Lock On Resume"
-                    },
                     "infinite_story_boost": {
                         "description": "Bypass the Story Boost Limit delay",
                         "name": "Infinite Story Boost"

@@ -755,14 +755,6 @@
                             }
                         }
                     },
-                    "app_passcode": {
-                        "name": "Code d'accès de l'application",
-                        "description": "Définit un mot de passe pour verrouiller l'application"
-                    },
-                    "app_lock_on_resume": {
-                        "description": "Verrouille l'application lorsqu'elle est réouverte",
-                        "name": "Verrouillage de l'application à la reprise"
-                    },
                     "infinite_story_boost": {
                         "name": "Booster de story infini",
                         "description": "Contournez le délai de Boost de Story"

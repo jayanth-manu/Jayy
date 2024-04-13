@@ -755,14 +755,6 @@
                             }
                         }
                     },
-                    "app_passcode": {
-                        "name": "Alkalmazás jelszó",
-                        "description": "Beállít egy jelszót az alkalmazás zárolásához"
-                    },
-                    "app_lock_on_resume": {
-                        "name": "Alkalmazás zárolása folytatáskor",
-                        "description": "Zárolja az alkalmazást az újbóli megnyitásakor"
-                    },
                     "infinite_story_boost": {
                         "name": "Végtelen történet Boost",
                         "description": "Történet Boost limit megkerülése"

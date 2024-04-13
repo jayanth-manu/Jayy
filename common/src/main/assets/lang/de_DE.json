@@ -759,14 +759,6 @@
                             }
                         }
                     },
-                    "app_passcode": {
-                        "name": "App-Passcode",
-                        "description": "Legt einen Passcode zum Entsperren der App fest"
-                    },
-                    "app_lock_on_resume": {
-                        "name": "App-Sperre beim Fortsetzen",
-                        "description": "Sperrt die App, wenn sie erneut geöffnet wird"
-                    },
                     "infinite_story_boost": {
                         "name": "Unendlicher Story Boost",
                         "description": "Story Boost Limit Verzögerung umgehen"

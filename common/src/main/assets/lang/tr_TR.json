@@ -755,14 +755,6 @@
                             }
                         }
                     },
-                    "app_passcode": {
-                        "name": "Uygulama Şifresi",
-                        "description": "Uygulamayı kilitlemek için bir parola ayarlar"
-                    },
-                    "app_lock_on_resume": {
-                        "name": "Uygulama Yeniden Açıldığında Kilit",
-                        "description": "Uygulama yeniden açıldığında kilitlenir"
-                    },
                     "infinite_story_boost": {
                         "name": "Sonsuz Hikaye Takviyesi",
                         "description": "Hikaye Takviye Limiti gecikmesini atlayın"
