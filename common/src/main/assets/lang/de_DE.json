@@ -848,6 +848,16 @@
                     "edit_message": {
                         "description": "Ermöglicht es Nachrichten in Konversationen zu bearbeiten",
                         "name": "Nachrichten bearbeiten"
+                    },
+                    "app_lock": {
+                        "name": "App Lock",
+                        "description": "Verhindert den Zugriff auf Snapchat ohne einen passcode",
+                        "properties": {
+                            "lock_on_resume": {
+                                "description": "Sperrt die App wenn sie wieder geöffnet wird",
+                                "name": "Sperren beim fortsetzen"
+                            }
+                        }
                     }
                 }
             },
@@ -1327,5 +1337,10 @@
         "accept_public_key_failure_toast": "Akzeptieren des öffentlichen Schlüssels fehlgeschlagen",
         "unencrypted_conversation_send_failure_toast": "Sie können keine verschlüsselten Inhalte zu verschlüsselten und unverschlüsselten Gesprächen gleichzeitig senden!",
         "incoming_secret_message": "Ihr Freund hat gerade Ihren öffentlichen Schlüssel akzeptiert. Klicken Sie unten, um das Passwort zu akzeptieren."
+    },
+    "biometric_auth": {
+        "unlock_button": "Entsperren",
+        "title": "Entsperre Snapchat",
+        "subtitle": "Bitte authentifizieren Sie sich um Snapchat zu entsperren"
     }
 }
