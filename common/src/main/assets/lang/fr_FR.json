@@ -536,6 +536,10 @@
                     "remove_groups_locked_status": {
                         "name": "Supprimer le statut verrouillé des groupes",
                         "description": "Vous permet d'afficher les informations du groupe après avoir été expulsé"
+                    },
+                    "auto_mark_as_read": {
+                        "name": "Marquer automatiquement comme lu",
+                        "description": "Marque automatiquement les messages comme lus lors de l'envoi d'un message à une conversation, même lorsque le mode incognito est activé"
                     }
                 }
             },
@@ -844,6 +848,16 @@
                     "edit_message": {
                         "name": "Modifier les messages",
                         "description": "Vous permet de modifier les messages dans les conversations"
+                    },
+                    "app_lock": {
+                        "properties": {
+                            "lock_on_resume": {
+                                "description": "Verrouille l'application lors de sa réouverture",
+                                "name": "Verrouiller la reprise"
+                            }
+                        },
+                        "name": "Verrou d'application",
+                        "description": "Empêche l'accès à Snapchat sans mot de passe"
                     }
                 }
             },
@@ -1323,5 +1337,10 @@
     "scopes": {
         "friend": "Ami(e)",
         "group": "Groupe"
+    },
+    "biometric_auth": {
+        "title": "Débloquez Snapchat",
+        "subtitle": "Veuillez vous authentifier pour déverrouiller Snapchat",
+        "unlock_button": "Déverrouiller"
     }
 }
