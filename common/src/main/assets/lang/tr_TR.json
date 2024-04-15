@@ -536,6 +536,10 @@
                     "remove_groups_locked_status": {
                         "name": "Grupların Kilitli Durumunu Kaldır",
                         "description": "Atıldıktan sonra grup bilgilerini görüntülemenizi sağlar"
+                    },
+                    "auto_mark_as_read": {
+                        "name": "Otomatik Okundu Olarak İşaretle",
+                        "description": "Gizli Mod etkin olsa bile, bir konuşmaya mesaj gönderirken mesajları otomatik olarak okundu olarak işaretler"
                     }
                 }
             },
@@ -844,6 +848,16 @@
                     "edit_message": {
                         "name": "Mesajları Düzenle",
                         "description": "Görüşmelerdeki mesajları düzenlemenizi sağlar"
+                    },
+                    "app_lock": {
+                        "properties": {
+                            "lock_on_resume": {
+                                "description": "Uygulama yeniden başlatıldığında otomatik olarak kilitler",
+                                "name": "Yeniden Başlatmada Kilitle"
+                            }
+                        },
+                        "name": "Uygulama Kilidi",
+                        "description": "Snapchat'e şifre olmadan erişimi engeller"
                     }
                 }
             },
@@ -1323,5 +1337,10 @@
         "incoming_pk_message": "Az önce bir açık anahtar isteği aldınız. Kabul etmek için aşağıya tıklayın.",
         "native_hooks_send_failure_toast": "Gönderilemedi! Lütfen ayarlardan Yerel Kancaları etkinleştirin.",
         "encryption_failed_toast": "İleti şifrelenemedi! Daha fazla ayrıntı için logcat'i kontrol edin."
+    },
+    "biometric_auth": {
+        "unlock_button": "Kilidi Aç",
+        "title": "Snapchat Kilidini Aç",
+        "subtitle": "Snapchat'in kilidini açmak için lütfen giriş yap"
     }
 }
