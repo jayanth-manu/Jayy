@@ -1300,7 +1300,8 @@
         "incoming_follower": "Abonat primit",
         "incoming": "Primire",
         "blocked": "Blocat",
-        "suggested": "Sugerat"
+        "suggested": "Sugerat",
+        "following": "Urmărești"
     },
     "bulk_messaging_action": {
         "confirmation_dialog": {
