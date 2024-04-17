@@ -539,7 +539,7 @@
                     },
                     "auto_mark_as_read": {
                         "name": "Automatisch als gelesen markieren",
-                        "description": "Markiert Nachrichten automatisch als gelesen wenn eine Nachricht gesendet wurde, auch wenn der Stealth Mode aktiviert ist"
+                        "description": "Markiert Nachrichten bzw. Snaps automatisch als gelesen wenn der Stealth Mode aktiviert ist"
                     }
                 }
             },
@@ -1053,6 +1053,10 @@
                 "platform_indicator": "Fügt das Plattformsymbol hinzu, von der aus ein Medium gesendet wurde (z. B. Android, iOS, Web)",
                 "director_mode_indicator": "Fügt Snaps ein ✏️-Symbol hinzu, wenn sie mit dem Director-Modus gesendet wurden, der verwendet werden kann, um Galeriebilder als Snaps zu senden",
                 "ovf_editor_indicator": "Kennzeichnet, ob ein Snap mit dem OVF-Editor gesendet wurde"
+            },
+            "auto_mark_as_read": {
+                "conversation_read": "Markiert Konversation als gelesen sobald eine Narchicht gesendet wird",
+                "snap_reply": "Markiert Snaps als gelesen sobald auf sie geantwortet wird"
             }
         }
     },
