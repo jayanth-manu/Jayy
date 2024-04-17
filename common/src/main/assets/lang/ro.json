@@ -2,7 +2,10 @@
     "friend_menu_option": {
         "preview": "Previzualizare",
         "stealth_mode": "Modul Mascare",
-        "anti_auto_save": "Anti Salvare Automată"
+        "anti_auto_save": "Anti Salvare Automată",
+        "auto_download_blacklist": "Descărcare automată Lista neagră",
+        "mark_snaps_as_seen": "Marchează Snap-urile ca fiind văzute",
+        "mark_stories_as_seen_locally": "Marcați poveștile așa cum sunt văzute la nivel local"
     },
     "modal_option": {
         "profile_info": "Informații Profil",
@@ -12,13 +15,26 @@
         "multiple_media_toast": "Puteți trimite un singur fișier media la un moment dat"
     },
     "conversation_preview": {
-        "streak_expiration": "expiră în {day} zile {hour} ore {minute} minute",
-        "total_messages": "Total mesaje trimise/primite: {count}",
+        "streak_expiration": "expiră în {zi} zile {oră} ore {minut} minute",
+        "total_messages": "Total mesaje trimise/primite: {număr}",
         "title": "Previzualizare",
         "unknown_user": "Utilizator Necunoscut"
     },
     "profile_info": {
-        "display_name": "Nume afișat"
+        "display_name": "Nume afișat",
+        "friendship": "Prietenie",
+        "title": "Informații profil",
+        "first_created_username": "Primul nume de utilizator creat",
+        "mutable_username": "Nume de utilizator modificabil",
+        "snapchat_plus_state": {
+            "not_subscribed": "Neabonat",
+            "subscribed": "Abonat"
+        },
+        "added_date": "Data adăugată",
+        "birthday": "Zi de naștere: {lună} {zi}",
+        "hidden_birthday": "Zi de naștere: Ascuns",
+        "add_source": "Sursa adăugării",
+        "snapchat_plus": "Snapchat Plus"
     },
     "chat_export": {
         "dialog_negative_button": "Anulare",
@@ -29,14 +45,25 @@
         "writing_output": "Se scrie rezultatul...",
         "finished": "Gata! Acum puteți să închideți acest dialog.",
         "no_messages_found": "Niciun mesaj găsit!",
-        "exporting_message": "Se exportă {conversation}..."
+        "exporting_message": "Se exportă {conversation}...",
+        "exporter_dialog": {
+            "text_field_selection": "{cantitatea} selectată",
+            "select_conversations_title": "Selectați Conversațiile",
+            "text_field_selection_all": "Toate",
+            "export_file_format_title": "Formatul fișierului de export",
+            "message_type_filter_title": "Filtrați mesajele după tip",
+            "amount_of_messages_title": "Cantitatea de mesaje (lăsați necompletat pentru toate)",
+            "download_medias_title": "Descărcare fișierele Media"
+        },
+        "dialog_positive_button": "Exportă"
     },
     "button": {
         "ok": "OK",
         "positive": "Da",
         "negative": "Nu",
         "cancel": "Anulare",
-        "open": "Deschide"
+        "open": "Deschide",
+        "download": "Descarcă"
     },
     "download_processor": {
         "download_started_toast": "Descărcarea a început",
@@ -48,7 +75,24 @@
         "download_toast": "Se descarcă {path}...",
         "processing_toast": "Se procesează {path}...",
         "failed_generic_toast": "Descărcarea a eșuat",
-        "failed_to_create_preview_toast": "Nu a reușit să se creeze previzualizarea"
+        "failed_to_create_preview_toast": "Nu a reușit să se creeze previzualizarea",
+        "attachment_type": {
+            "external_media": "Media extern",
+            "note": "Notă",
+            "original_story": "Povestea originală",
+            "sticker": "Autocolant",
+            "snap": "Snap"
+        },
+        "select_attachments_title": "Selectați atașamentele de descărcat",
+        "failed_gallery_toast": "Nu s-a salvat în galerie {eroare}",
+        "dash_dialog": {
+            "title": "Descărcare media dash",
+            "segment_text": "Segment {de la} - {la}",
+            "download_all": "Descarcă toate"
+        },
+        "no_attachments_toast": "Nu s-au găsit atașamente!",
+        "failed_processing_toast": "Procesarea eșuată {eroare}",
+        "dash_no_chapter": "Nu a fost găsit niciun capitol"
     },
     "setup": {
         "mappings": {
@@ -223,7 +267,7 @@
                 "description": "Salvează mesajele când sunt vizualizate",
                 "options": {
                     "blacklist": "Exclude din Salvare Automată",
-                    "whitelist": "Salvare Automată"
+                    "whitelist": "Salvare automată"
                 },
                 "name": "Salvare Automată"
             },
@@ -243,6 +287,9 @@
             },
             "hide_friend_feed": {
                 "name": "Ascundeți din feedul prietenilor"
+            },
+            "auto_open_snaps": {
+                "name": "Deschidere automată Snap-uri"
             }
         },
         "modes": {
@@ -597,7 +644,7 @@
                         "description": "Împiedică împărțirea instantaneelor în mai multe părți\nImaginile pe care le trimiteți se vor transforma în videoclipuri"
                     }
                 },
-                "name": "Nume global",
+                "name": "Global",
                 "description": "Modificați setările globale Snapchat"
             },
             "downloader": {
@@ -697,7 +744,240 @@
                 "description": "Gestionați funcțiile automate pentru persoane individuale"
             },
             "camera": {
-                "name": "Cameră foto"
+                "name": "Cameră foto",
+                "properties": {
+                    "back_custom_frame_rate": {
+                        "name": "Rată de cadre personalizată cameră din spate",
+                        "description": "Ignoră rata de cadre a camerei din spate"
+                    },
+                    "force_camera_source_encoding": {
+                        "name": "Forțează Codificarea Sursă a Camerei",
+                        "description": "Forțează codificarea sursei camerei"
+                    },
+                    "disable_cameras": {
+                        "name": "Dezactivează Camerele",
+                        "description": "Previne utilizarea camerelor selectate de către Snapchat"
+                    },
+                    "immersive_camera_preview": {
+                        "name": "Previzualizare Întreruptoare",
+                        "description": "Împiedică Snapchat să decupeze previzualizarea camerei\nAcest lucru poate face ca camera să pâlpâie pe unele dispozitive"
+                    },
+                    "override_back_resolution": {
+                        "name": "Suprascrieți Rezoluția Camerei Spate",
+                        "description": "Suprascrie rezoluția camerei pentru camera din spate"
+                    },
+                    "custom_resolution": {
+                        "description": "Setează o rezoluție personalizată a camerei, lățime x înălțime (de exemplu, 1920x1080).\nRezoluția personalizată trebuie să fie acceptată de dispozitivul dumneavoastră",
+                        "name": "Rezoluție personalizată"
+                    },
+                    "front_custom_frame_rate": {
+                        "name": "Rata de cadre personalizată față",
+                        "description": "Ignoră rata de cadre a camerei frontale"
+                    },
+                    "black_photos": {
+                        "description": "Înlocuiește fotografiile capturate cu un fundal negru\nVideoclipurile nu sunt afectate",
+                        "name": "Fotografii Negre"
+                    },
+                    "override_front_resolution": {
+                        "name": "Suprascrieți Rezoluția Camerei Frontale",
+                        "description": "Suprascrie rezoluția camerei pentru camera frontală"
+                    },
+                    "hevc_recording": {
+                        "name": "Înregistrare HEVC",
+                        "description": "Utilizează codecul HEVC (H.265) pentru înregistrarea video"
+                    }
+                },
+                "description": "Ajustați setările potrivite pentru un snap perfect"
+            },
+            "streaks_reminder": {
+                "properties": {
+                    "remaining_hours": {
+                        "name": "Timp rămas",
+                        "description": "Timpul rămas înainte ca notificarea să fie afișată (ore)"
+                    },
+                    "group_notifications": {
+                        "description": "Grupați notificările într-una singură",
+                        "name": "Notificări de grup"
+                    },
+                    "interval": {
+                        "description": "Intervalul dintre fiecare memento (ore)",
+                        "name": "Setează interval"
+                    }
+                },
+                "name": "Reamintire Streak-uri(pierderea liniilor fierbinți/focurilor)",
+                "description": "Vă anunță periodic despre liniile fierbinți ale dumneavoastră"
+            },
+            "experimental": {
+                "properties": {
+                    "infinite_story_boost": {
+                        "description": "Evită întârzierea limitării Boost-ului de Povestire",
+                        "name": "Boost nelimitat de Povestire"
+                    },
+                    "account_switcher": {
+                        "description": "Vă permite să comutați între conturi fără a vă deconecta\nApăsați lung pe pictograma de căutare de lângă profilul dumneavoastră Bitmoji pentru a deschide meniul\nNotă: această funcție este experimentală și probabil se va schimba în viitor",
+                        "properties": {
+                            "auto_backup_current_account": {
+                                "description": "Face automat o copie de rezervă a contului curent la deconectare sau la schimbarea contului",
+                                "name": "Backup automat pentru contul curent"
+                            }
+                        },
+                        "name": "Comutator de cont"
+                    },
+                    "convert_message_locally": {
+                        "description": "Transformă snapurile în chat media externă local. Aceasta apare în meniul contextual de descărcare prin chat",
+                        "name": "Convertiți mesajul local"
+                    },
+                    "meo_passcode_bypass": {
+                        "name": "Ocolire Cod de Acces pentru \"Doar pentru ochii mei\"",
+                        "description": "Ocolirea codului de acces pentru \"Doar pentru ochii mei\"\nAceasta va funcționa doar dacă codul de acces a fost introdus corect anterior"
+                    },
+                    "spoof": {
+                        "properties": {
+                            "fingerprint": {
+                                "name": "Amprenta dispozitivului",
+                                "description": "Îți falsifică amprenta dispozitivului"
+                            },
+                            "remove_vpn_transport_flag": {
+                                "name": "Elimină Indicatorul de Transport VPN",
+                                "description": "Împiedică Snapchat să detecteze VPN-urile"
+                            },
+                            "randomize_persistent_device_token": {
+                                "name": "Randomizează Tokenul Dispozitivului Persistent",
+                                "description": "Generează un token aleatoriu pentru dispozitiv după fiecare logare"
+                            },
+                            "remove_mock_location_flag": {
+                                "description": "Previne detectarea de către Snapchat a locației false",
+                                "name": "Elimină Indicatorul de Locație Falsă"
+                            },
+                            "play_store_installer_package_name": {
+                                "name": "Numele pachetului de instalare a magazinului Play",
+                                "description": "Înlocuiește numele pachetului de instalare la com.android.vending"
+                            },
+                            "android_id": {
+                                "name": "ID Android",
+                                "description": "Îți falsifică ID-ul Android la valoarea specificată"
+                            }
+                        },
+                        "name": "Falsifică",
+                        "description": "Falsifică diverse informații despre tine"
+                    },
+                    "native_hooks": {
+                        "properties": {
+                            "disable_bitmoji": {
+                                "description": "Dezactivează Bitmoji-ul Profilului Prietenilor",
+                                "name": "Dezactivează Bitmoji"
+                            }
+                        },
+                        "name": "Hook-uri Native(Un set de funcții încorporate care permit dezvoltatorilor să adauge funcționalități la componente)",
+                        "description": "Caracteristici nesigure care se leagă de codul nativ al Snapchat-ului"
+                    },
+                    "session_events": {
+                        "name": "Evenimente de sesiune",
+                        "description": "Înregistrează evenimentele sesiunii",
+                        "properties": {
+                            "capture_duplex_events": {
+                                "name": "Capturați evenimente duplex",
+                                "description": "Capturați prezența și evenimentele de mesagerie atunci când o sesiune este activă"
+                            },
+                            "allow_running_in_background": {
+                                "name": "Permite rularea în fundal",
+                                "description": "Permite sesiunii să ruleze în fundal"
+                            }
+                        }
+                    },
+                    "media_file_picker": {
+                        "name": "Selector de Fișiere Media",
+                        "description": "Vă permite să alegeți orice fișier video/audio din galerie"
+                    },
+                    "story_logger": {
+                        "description": "Oferă o istorie a poveștilor prietenilor",
+                        "name": "Înregistrare Poveste"
+                    },
+                    "edit_message": {
+                        "description": "Vă permite să editați mesaje în conversații",
+                        "name": "Editați mesajele"
+                    },
+                    "e2ee": {
+                        "description": "Criptează mesajele dumneavoastră cu AES folosind o cheie secretă partajată\nAsigurați-vă că păstrați cheia într-un loc sigur!",
+                        "properties": {
+                            "force_message_encryption": {
+                                "description": "Împiedică trimiterea de mesaje criptate către persoane care nu au criptarea E2E activată numai atunci când sunt selectate mai multe conversații",
+                                "name": "Forțați criptarea mesajelor"
+                            },
+                            "encrypted_message_indicator": {
+                                "name": "Indicator de mesaj criptat",
+                                "description": "Adaugă un emoji 🔒 lângă mesajele criptate"
+                            }
+                        },
+                        "name": "Criptare End-To-End"
+                    },
+                    "add_friend_source_spoof": {
+                        "description": "Falsifică sursa unei solicitări de prietenie",
+                        "name": "Falsificare Sursă Adăugare Prieten"
+                    },
+                    "hidden_snapchat_plus_features": {
+                        "name": "Funcții ascunse Snapchat Plus",
+                        "description": "Activează funcțiile Snapchat Plus nelansate/beta\nEste posibil să nu funcționeze pe versiunile mai vechi Snapchat"
+                    },
+                    "no_friend_score_delay": {
+                        "name": "Nicio întârziere a scorului prietenului",
+                        "description": "Elimină întârzierea la vizualizarea unui scor al prietenilor"
+                    },
+                    "app_lock": {
+                        "name": "Blocare aplicație",
+                        "description": "Împiedică accesul la Snapchat fără un cod de acces",
+                        "properties": {
+                            "lock_on_resume": {
+                                "name": "Blocare la Reluare",
+                                "description": "Blochează aplicația când este redeschisă"
+                            }
+                        }
+                    },
+                    "new_chat_action_menu": {
+                        "name": "Noul meniu de acțiune de chat",
+                        "description": "Utilizați noul sertar de meniu de acțiuni de chat"
+                    },
+                    "disable_composer_modules": {
+                        "description": "Împiedică încărcarea modulelor compozitoare selectate\nNumele trebuie separate prin virgulă",
+                        "name": "Dezactivare Module Compozitor"
+                    },
+                    "prevent_forced_logout": {
+                        "name": "Preveniți deconectarea forțată",
+                        "description": "Împiedică Snapchat să vă deconecteze atunci când vă conectați pe alt dispozitiv"
+                    },
+                    "call_recorder": {
+                        "name": "Înregistrare Apeluri",
+                        "description": "Înregistrează automat apelurile audio"
+                    }
+                },
+                "description": "Caracteristici experimentale",
+                "name": "Experimentale"
+            },
+            "scripting": {
+                "name": "Scriptare",
+                "properties": {
+                    "integrated_ui": {
+                        "name": "Interfață de utilizare integrată",
+                        "description": "Permite scripturilor să adauge componente UI personalizate la Snapchat"
+                    },
+                    "auto_reload": {
+                        "description": "Reîncarcă automat scripturile când se schimbă",
+                        "name": "Reîncărcare automată"
+                    },
+                    "module_folder": {
+                        "description": "Dosarul în care se află scripturile",
+                        "name": "Folderul modulului"
+                    },
+                    "disable_log_anonymization": {
+                        "name": "Dezactivați anonimizarea jurnalului",
+                        "description": "Dezactivează anonimizarea jurnalelor"
+                    },
+                    "developer_mode": {
+                        "name": "Modul dezvoltator",
+                        "description": "Afișează informații de depanare pe interfața de utilizare a Snapchat"
+                    }
+                },
+                "description": "Rulați scripturi personalizate pentru a extinde SnapEnhance"
             }
         },
         "notices": {
@@ -705,6 +985,178 @@
             "ban_risk": "⚠ Această funcție poate provoca interdicții ale conului de Snapchat",
             "internal_behavior": "⚠ Acest lucru poate rupe comportamentul intern al Snapchat",
             "unstable": "⚠ Instabil"
+        },
+        "options": {
+            "better_notifications": {
+                "chat_preview": "Afișează o previzualizare a chatului",
+                "mark_as_read_and_save_in_chat": "Salvați în Chat când marcați ca citit (depinde de Salvarea automată)",
+                "reply_button": "Adăugați butonul de răspuns",
+                "download_button": "Adăugați butonul de descărcare",
+                "mark_as_read_button": "Butonul Marcare ca Citit",
+                "media_preview": "Afișați o previzualizare a conținutului media",
+                "group": "Notificări de Grup"
+            },
+            "friend_feed_menu_buttons": {
+                "mark_stories_as_seen_locally": "👀 Marchează Poveștile ca fiind văzute local",
+                "auto_download": "⬇️ Descărcare automată",
+                "auto_save": "💬 Salvare automată a mesajelor",
+                "mark_snaps_as_seen": "👀 Marchează Snap-ul ca fiind văzut",
+                "conversation_info": "👤 Informații despre conversație",
+                "e2e_encryption": "🔒 Utilizați criptarea E2E",
+                "stealth": "👻 Modul Furt",
+                "unsaveable_messages": "⬇️ Mesaje care nu pot fi salvate",
+                "auto_open_snaps": "📷 Deschidere automată a Snapurilor"
+            },
+            "logging": {
+                "success": "Succes",
+                "started": "Pornit",
+                "progress": "Progres",
+                "failure": "Eșec"
+            },
+            "strip_media_metadata": {
+                "remove_audio_note_transcript_capability": "Eliminați capacitatea de transcriere a notelor audio",
+                "hide_caption_text": "Ascunde textul subtitrării",
+                "hide_snap_filters": "Ascunde filtrele Snap",
+                "hide_extras": "Ascundeți extra (de exemplu, mențiuni)",
+                "remove_audio_note_duration": "Eliminare Durată Notă Audio"
+            },
+            "disable_confirmation_dialogs": {
+                "clear_conversation": "Șterge Conversația din Feed-ul de Prieteni",
+                "hide_conversation": "Ascunde conversația",
+                "hide_friend": "Ascunde prietenul",
+                "ignore_friend": "Ignora prietenul",
+                "remove_friend": "Șterge prieten",
+                "block_friend": "Blocați prietenul"
+            },
+            "auto_reload": {
+                "snapchat_only": "Numai Snapchat",
+                "all": "Toate (Snapchat + SnapEnhance)"
+            },
+            "auto_purge": {
+                "1_month": "1 Lună",
+                "2_weeks": "2 Săptămâni",
+                "6_hours": "6 Ore",
+                "1_day": "1 Zi",
+                "3_days": "3 Zile",
+                "3_months": "3 Luni",
+                "1_week": "1 Săptămână",
+                "6_months": "6 Luni",
+                "never": "Niciodată",
+                "1_hour": "1 Oră",
+                "3_hours": "3 Ore",
+                "12_hours": "12 Ore"
+            },
+            "disable_permission_requests": {
+                "microphone": "Microfon",
+                "location": "Locație",
+                "notifications": "Notificări",
+                "read_media_images": "Citiți imagini media",
+                "camera": "Cameră",
+                "read_media_video": "Citiți videoclipul media",
+                "phone_calls": "Apeluri telefonice",
+                "read_contacts": "Citească Contactele",
+                "nearby_devices": "Dispozitive din apropiere"
+            },
+            "notifications": {
+                "chat_screenshot": "Captură de ecran",
+                "stories": "Povești",
+                "chat_reaction": "Reacția DM(privat)",
+                "typing": "Scrie",
+                "chat": "Conversație",
+                "chat_reply": "Răspuns la conversație",
+                "initiate_audio": "Apel audio primit",
+                "group_chat_reaction": "Reacția de grup",
+                "snap": "Snap",
+                "abandon_audio": "Apel audio pierdut",
+                "initiate_video": "Apel video primit",
+                "chat_screen_record": "Înregistrare ecran",
+                "snap_replay": "Redare Repetată a Snap-ului",
+                "camera_roll_save": "Salvare în Rola de Cameră",
+                "abandon_video": "Apel video pierdut"
+            },
+            "path_format": {
+                "create_author_folder": "Creați un folder pentru fiecare autor",
+                "create_source_folder": "Creați un folder pentru fiecare tip de sursă media",
+                "append_source": "Adăugați sursa media la numele fișierului",
+                "append_hash": "Adăugați un hash unic la numele fișierului",
+                "append_username": "Adăugați numele de utilizator la numele fișierului",
+                "append_date_time": "Adăugați data și ora la numele fișierului"
+            },
+            "auto_download_sources": {
+                "friend_snaps": "Snap-uri de la Prieteni",
+                "friend_stories": "Povești de la prieteni",
+                "public_stories": "Povești publice",
+                "spotlight": "Spotlight"
+            },
+            "hide_ui_components": {
+                "hide_live_location_share_button": "Eliminați butonul de distribuire a locației live",
+                "hide_stickers_button": "Eliminare Butonul de Stickere",
+                "hide_unread_chat_hint": "Elimină Sugerarea de Chaturi Necitite",
+                "hide_profile_call_buttons": "Eliminați butoanele de apel din profil",
+                "hide_chat_call_buttons": "Eliminați butoanele de apel prin chat",
+                "hide_voice_record_button": "Eliminați butonul de înregistrare vocală"
+            },
+            "hide_story_suggestions": {
+                "hide_friend_suggestions": "Ascundeți sugestiile de prieteni",
+                "hide_suggested_friend_stories": "Ascunde poveștile prietenilor sugerați",
+                "hide_my_stories": "Ascunde-mi poveștile"
+            },
+            "home_tab": {
+                "discover": "Descoperă",
+                "spotlight": "Spotlight",
+                "chat": "Conversație",
+                "camera": "Cameră",
+                "map": "Hartă"
+            },
+            "add_friend_source_spoof": {
+                "added_by_username": "După numele de utilizator",
+                "added_by_mention": "După mențiune",
+                "added_by_qr_code": "După codul QR",
+                "added_by_group_chat": "După conversația de grup",
+                "added_by_community": "După comunitate"
+            },
+            "disable_story_sections": {
+                "friends": "Prieteni",
+                "following": "Urmărire",
+                "discover": "Descoperă"
+            },
+            "disable_cameras": {
+                "front": "Camera frontală",
+                "back": "Camera din spate"
+            },
+            "message_indicators": {
+                "encryption_indicator": "Adaugă o pictogramă 🔒 lângă mesajele care au fost trimise numai ție",
+                "ovf_editor_indicator": "Indică dacă a fost trimis un snap folosind Editorul OVF",
+                "director_mode_indicator": "Adaugă o pictogramă ✏️ la snap-uri atunci când acestea au fost trimise folosind modul Director, care poate fi folosit pentru a trimite imaginile galeriei ca instantanee",
+                "platform_indicator": "Adaugă pictograma platformei de pe care a fost trimis un conținut media (de exemplu, Android, iOS, Web)",
+                "location_indicator": "Adaugă o pictogramă 📍 la snap-uri atunci când acestea au fost trimise cu locația activată"
+            },
+            "gallery_media_send_override": {
+                "SNAP": "Snap",
+                "SAVABLE_SNAP": "Snap salvabil",
+                "ORIGINAL": "Original",
+                "NOTE": "Notă audio"
+            },
+            "app_appearance": {
+                "always_light": "Întotdeauna Luminat",
+                "always_dark": "Întotdeauna întunecat"
+            },
+            "edit_text_override": {
+                "multi_line_chat_input": "Intrare conversație pe mai multe linii",
+                "bypass_text_input_limit": "Ocoliți limita de introducere a textului"
+            },
+            "old_bitmoji_selfie": {
+                "2d": "Bitmoji 2D",
+                "3d": "Bitmoji 3D"
+            },
+            "bypass_video_length_restriction": {
+                "single": "Media unică",
+                "split": "Împărțiți media"
+            },
+            "auto_mark_as_read": {
+                "conversation_read": "Marcați conversația ca citită atunci când trimiteți un mesaj",
+                "snap_reply": "Marchează snap-urile ca citite când răspunzi la ele"
+            }
         }
     },
     "scopes": {
@@ -740,5 +1192,166 @@
             "name": "Schimbă limba",
             "description": "Schimbați limba SnapEnhance"
         }
+    },
+    "content_type": {
+        "EXTERNAL_MEDIA": "Media externă",
+        "NOTE": "Notă audio",
+        "SNAP": "Snap",
+        "FAMILY_CENTER_ACCEPT": "Centrul de familie Accept",
+        "FAMILY_CENTER_LEAVE": "Părăsirea Centrului Familial",
+        "STATUS": "Stare",
+        "LOCATION": "Locație",
+        "STATUS_SAVE_TO_CAMERA_ROLL": "Salvat în camera foto",
+        "FAMILY_CENTER_INVITE": "Invitație la Centrul Familiei",
+        "CHAT": "Conversație",
+        "STICKER": "Autocolant",
+        "CREATIVE_TOOL_ITEM": "Element Instrument Creativ",
+        "STATUS_CONVERSATION_CAPTURE_SCREENSHOT": "Captură de ecran",
+        "STATUS_CALL_MISSED_VIDEO": "Apel video pierdut",
+        "STATUS_CALL_MISSED_AUDIO": "Apel audio pierdut",
+        "LIVE_LOCATION_SHARE": "Distribuirea locației live",
+        "STATUS_CONVERSATION_CAPTURE_RECORD": "Înregistrare ecran",
+        "STATUS_PLUS_GIFT": "Cadou Status Plus",
+        "TINY_SNAP": "Snap Mic",
+        "STATUS_COUNTDOWN": "Numărătoare inversă",
+        "MAP_REACTION": "Reacția pe hartă"
+    },
+    "media_download_source": {
+        "profile_picture": "Poză de profil",
+        "chat_media": "Conversație Media",
+        "none": "Niciuna",
+        "story_logger": "Înregistrare Poveste",
+        "message_logger": "Mesaje înregistrate",
+        "merged": "Îmbinat",
+        "voice_call": "Apel vocal",
+        "pending": "În așteptare",
+        "story": "Poveste",
+        "public_story": "Povestea publică",
+        "spotlight": "În lumina reflectoarelor"
+    },
+    "opera_context_menu": {
+        "download": "Descărcați Media",
+        "sent_at": "Trimis la {data}",
+        "media_duration": "Durata media: {durată} milisecunde",
+        "created_at": "Creat la {data}",
+        "expires_at": "Expiră la {data}",
+        "media_size": "Dimensiune media: {dimensiune}",
+        "show_debug_info": "Afișați informațiile de depanare"
+    },
+    "mark_as_seen": {
+        "no_unseen_snaps_toast": "Nu s-au găsit snap-uri nevăzute!",
+        "seen_toast": "Marcat ca văzut!",
+        "unseen_toast": "Marcat ca nevăzut!",
+        "already_seen_toast": "Deja marcat ca văzut!",
+        "already_unseen_toast": "Deja marcat ca nevăzut!"
+    },
+    "end_to_end_encryption": {
+        "accept_public_key_failure_toast": "Nu s-a acceptat cheia publică",
+        "outgoing_pk_message": "Cerere de schimb de chei",
+        "outgoing_secret_message": "Răspuns la schimbul de chei",
+        "confirmation_dialogs": {
+            "title": "Criptare Final-Spre-Final",
+            "confirmation_2": "Ești CHIAR sigur că vrei să continui? Aceasta este ultima ta șansă să dai înapoi.",
+            "confirmation_1": "AVERTISMENT: Aceasta va suprascrie cheia existentă. Veți pierde accesul la toate mesajele criptate de la acest prieten. Ești sigur ca vrei să continui?"
+        },
+        "toolbox": {
+            "shared_key_fingerprint": "Amprenta ta este:\n\n{amprentă}\n\nAsigurați-vă că verificați dacă se potrivește cu amprenta prietenului dumneavoastră!",
+            "no_shared_key": "Încă nu aveți un secret împărtășit cu acest prieten. Faceți clic mai jos pentru a iniția unul nou.",
+            "initiate_exchange_button": "Inițiați schimbul de chei"
+        },
+        "no_participants_to_encrypt_toast": "Nu aveți prieteni în această conversație cu care să criptați mesajele!",
+        "encryption_failed_toast": "Nu s-a putut cripta mesajul! Verificați mesajele din log pentru mai multe detalii.",
+        "accept_secret_key_success_toast": "Terminat! Acum puteți trimite și primi mesaje criptate cu acest prieten.",
+        "accept_secret_key_failure_toast": "Nu s-a acceptat cheia secretă",
+        "unencrypted_conversation_send_failure_toast": "Nu puteți trimite conținut criptat atât la conversații criptate, cât și la conversații necriptate!",
+        "native_hooks_send_failure_toast": "Trimitere eșuată! Vă rugăm să activați Hook-urile Native în setările aplicației.",
+        "accept_secret_button": "Acceptați Secretul",
+        "incoming_pk_message": "Tocmai ați primit o solicitare de cheie publică. Faceți clic mai jos pentru a o accepta.",
+        "incoming_secret_message": "Prietenul tău tocmai a acceptat cheia ta publică. Faceți clic mai jos pentru a accepta secretul.",
+        "accept_public_key_success_toast": "Cheie publică acceptată cu succes!",
+        "accept_public_key_button": "Acceptați cheia publică"
+    },
+    "material3_strings": {
+        "date_range_input_invalid_range_input": "Interval de date nevalid",
+        "date_range_picker_scroll_to_next_month": "Luna viitoare",
+        "date_input_invalid_for_pattern": "Dată nevalidă",
+        "date_range_picker_day_in_range": "Selectat",
+        "date_input_invalid_year_range": "An invalid",
+        "date_range_picker_end_headline": "La",
+        "date_range_picker_start_headline": "De la",
+        "date_range_picker_title": "Selectați intervalul de date",
+        "date_picker_switch_to_calendar_mode": "Calendar",
+        "date_picker_switch_to_input_mode": "Intrare",
+        "date_range_picker_scroll_to_previous_month": "Luna trecută",
+        "date_picker_today_description": "Azi",
+        "date_input_invalid_not_allowed": "Data invalidă"
+    },
+    "chat_action_menu": {
+        "preview_button": "Previzualizare",
+        "download_button": "Descarcă",
+        "delete_logged_message_button": "Ștergeți mesajul salvat",
+        "convert_message": "Convertiți mesajul",
+        "edit_message": "Editați mesajul"
+    },
+    "friendship_link_type": {
+        "mutual": "Reciproc",
+        "outgoing": "De ieșire",
+        "deleted": "Șters",
+        "incoming_follower": "Abonat primit",
+        "incoming": "Primire",
+        "blocked": "Blocat",
+        "suggested": "Sugerat"
+    },
+    "bulk_messaging_action": {
+        "confirmation_dialog": {
+            "title": "Ești sigur?",
+            "message": "Acest lucru va afecta toți prietenii selectați. Această acțiune nu poate fi anulată."
+        },
+        "actions": {
+            "remove_friends": "Eliminați prietenii",
+            "clear_conversations": "Ștergeți conversațiile"
+        },
+        "choose_action_title": "Alegeți o acțiune",
+        "progress_status": "Se procesează {index} din {total}",
+        "selection_dialog_continue_button": "Continuă"
+    },
+    "better_notifications": {
+        "button": {
+            "reply": "Răspundeți",
+            "download": "Descărcați",
+            "mark_as_read": "Marcați ca citit"
+        },
+        "stealth_mode_notice": "Nu se poate marca ca citit în modul ascuns"
+    },
+    "streaks_reminder": {
+        "notification_title": "Linie fierbinte",
+        "notification_text": "Îți vei pierde linia fierbinte cu {prietenul} în {oreRămase} ore"
+    },
+    "call_start_confirmation": {
+        "dialog_message": "Sigur vrei să inițiezi un apel?",
+        "dialog_title": "Începeți apelul"
+    },
+    "half_swipe_notifier": {
+        "notification_content_group": "{prietenul} a trecut pe jumătate în {grup} timp de {durata} secunde",
+        "notification_channel_name": "Glisare pe jumătate",
+        "notification_content_dm": "{prietenul} a trecut pe jumătate în chat-ul tău timp de {durata} secunde"
+    },
+    "biometric_auth": {
+        "unlock_button": "Deblocați",
+        "title": "Deblochează Snapchat",
+        "subtitle": "Vă rugăm să vă autentificați pentru a debloca Snapchat"
+    },
+    "suspend_location_updates": {
+        "switch_text": "Suspendați actualizările locației"
+    },
+    "profile_picture_downloader": {
+        "button": "Descărcați poza de profil",
+        "title": "Descărcător de imagini de profil",
+        "avatar_option": "Avatar",
+        "background_option": "Fundal"
+    },
+    "auto_open_snaps": {
+        "title": "Deschidere automată Snap-uri",
+        "notification_content": "{număr} Snap-uri deschise"
     }
 }
