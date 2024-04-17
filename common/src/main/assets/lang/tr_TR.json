@@ -196,6 +196,14 @@
                     "whitelist": "Kaydedilemeyen Mesajlar"
                 },
                 "description": "Mesajların diğer kişiler tarafından sohbete kaydedilmesini önler"
+            },
+            "auto_open_snaps": {
+                "description": "Snap'leri alırken otomatik olarak açar",
+                "options": {
+                    "whitelist": "Snap'leri Otomatik Aç",
+                    "blacklist": "Otomatik Açılan Snap'lerden Hariç Tut"
+                },
+                "name": "Snap'leri Otomatik Aç"
             }
         },
         "toasts": {
@@ -910,7 +918,8 @@
                 "e2e_encryption": "🔒 E2E Şifreleme Kullan",
                 "mark_stories_as_seen_locally": "👀 Hikayeleri görüldü olarak işaretleyin",
                 "mark_snaps_as_seen": "👀 Snap'leri görüldü olarak işaretleyin",
-                "unsaveable_messages": "⬇️ Kaydedilemeyen Mesajlar"
+                "unsaveable_messages": "⬇️ Kaydedilemeyen Mesajlar",
+                "auto_open_snaps": "📷 Snap'leri Otomatik Aç"
             },
             "path_format": {
                 "create_author_folder": "Her kullanıcı için klasör oluştur",
@@ -1346,5 +1355,9 @@
         "unlock_button": "Kilidi Aç",
         "title": "Snapchat Kilidini Aç",
         "subtitle": "Snapchat'in kilidini açmak için lütfen giriş yap"
+    },
+    "auto_open_snaps": {
+        "title": "Snap'leri Otomatik Aç",
+        "notification_content": "{count} Snap Açıldı"
     }
 }
