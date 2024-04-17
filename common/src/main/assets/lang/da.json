@@ -848,6 +848,16 @@
                     "edit_message": {
                         "name": "Rediger beskeder",
                         "description": "Giver dig mulighed for at redigere beskeder i samtaler"
+                    },
+                    "app_lock": {
+                        "name": "Applås",
+                        "description": "Forhindrer adgang til Snapchat uden en adgangskode",
+                        "properties": {
+                            "lock_on_resume": {
+                                "name": "Lås ved genoptagelse",
+                                "description": "Låser appen, når den genåbnes"
+                            }
+                        }
                     }
                 }
             },
@@ -1327,5 +1337,10 @@
     "scopes": {
         "friend": "Ven",
         "group": "Gruppe"
+    },
+    "biometric_auth": {
+        "unlock_button": "Lås op",
+        "title": "Lås Snapchat op",
+        "subtitle": "Godkend venligst for at låse Snapchat op"
     }
 }
