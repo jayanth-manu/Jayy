@@ -82,33 +82,100 @@
             "home_logs": "Log-uri",
             "social": "Social",
             "manage_scope": "Gestioneaza Scop",
-            "messaging_preview": "Previzualizeaza"
+            "messaging_preview": "Previzualizeaza",
+            "logged_stories": "Povești înregistrate"
         },
         "sections": {
             "social": {
-                "streaks_expiration_short": "{hours}h"
+                "streaks_expiration_short": "{ore}h",
+                "friends_tab": "Prieteni",
+                "groups_tab": "Grupuri",
+                "empty_hint": "(gol)"
             },
             "tasks": {
                 "no_tasks": "Fără sarcini",
-                "merge_files_toast": "Îmbinând {count} fișiere"
+                "merge_files_toast": "Îmbinând {count} fișiere",
+                "remove_selected_tasks_title": "Sigur doriți să eliminați sarcinile selectate?",
+                "delete_files_option": "De asemenea, ștergeți fișierele",
+                "remove_selected_tasks_confirm": "Eliminați {count} sarcini?",
+                "remove_all_tasks_confirm": "Eliminați toate sarcinile?",
+                "remove_all_tasks_title": "Sigur doriți să eliminați toate sarcinile?"
             },
             "features": {
                 "disabled": "Dezactivat",
-                "config_import_success_toast": "Configurația a fost importată cu succes"
+                "config_import_success_toast": "Configurația a fost importată cu succes",
+                "export_option": "Exportă",
+                "import_option": "Importă",
+                "reset_option": "Resetează",
+                "config_export_success_toast": "Configurația a fost exportată cu succes",
+                "saved_config_snackbar": "Configurația a fost salvată",
+                "config_import_failure_toast": "Nu s-a putut importa configurația {eroare}"
             },
             "logger_history": {
-                "list_group_format": "Grupul {name}"
+                "list_group_format": "Grup {nume}",
+                "list_friend_format": "Prieten {nume}",
+                "no_more_messages": "Nu mai sunt mesaje",
+                "reverse_order_checkbox": "Inversează ordinea",
+                "chat_attachment": "Atașament {listă}",
+                "empty_message": "Mesaj de chat gol",
+                "message_parse_failed": "Nu s-a putut analiza mesajul",
+                "unknown_sender": "Expeditor necunoscut",
+                "download_attachment_failed_toast": "Atașamentul nu a putut fi descărcat"
             },
             "home_settings": {
                 "export_button": "Exportă",
                 "actions_title": "Acțiuni",
                 "debug_title": "Depanare",
                 "success_toast": "Gata!",
-                "message_logger_summary": "{messageCount} mesaje\n{storyCount} povești"
+                "message_logger_summary": "{messageCount} mesaje\n{storyCount} povești",
+                "message_logger_title": "Înregistrare mesaje",
+                "view_logger_history_button": "Vedeți istoricul înregistratorului",
+                "clear_button": "Șterge"
             },
             "home": {
                 "update_content": "Versiunea {version} este disponibilă!",
-                "update_button": "Descarcă"
+                "update_button": "Descarcă",
+                "update_title": "Actualizare SnapEnhance"
+            },
+            "messaging_preview": {
+                "bridge_init_failed": "Nu s-a inițializat puntea de mesagerie",
+                "bridge_connection_failed": "Nu s-a putut conecta la Snapchat prin serviciul punte",
+                "message_fetch_failed": "Nu s-au putut prelua mesajele",
+                "no_message_hint": "Niciun mesaj",
+                "save_selection_option": "Salvați selecția",
+                "save_all_option": "Salvează tot",
+                "unsave_selection_option": "Anulați salvarea selecției",
+                "unsave_all_option": "Anulați salvarea tuturor",
+                "mark_selection_as_seen_option": "Marcați Snapul selectat ca văzut",
+                "mark_all_as_seen_option": "Marcați ca văzut toate Snapurile",
+                "delete_all_option": "Sterge tot",
+                "delete_selection_option": "Șterge selecția"
+            },
+            "home_logs": {
+                "no_logs_hint": "Nu există jurnalele disponibile",
+                "clear_logs_button": "Ștergeți jurnalele",
+                "export_logs_button": "Exportă jurnalele",
+                "saving_logs_toast": "Se salvează jurnalele, poate dura ceva timp...",
+                "saved_logs_failure_toast": "Salvarea jurnalelor a eșuat",
+                "saved_logs_success_toast": "Jurnalele au fost salvate cu succes"
+            },
+            "manage_scope": {
+                "e2ee_title": "Criptare end-to-end",
+                "rules_title": "Reguli",
+                "participants_text": "{număr} participanți",
+                "not_found": "Nu a fost găsit",
+                "streaks_title": "Linii",
+                "streaks_length_text": "Lungime: {lungime}",
+                "logged_stories_button": "Afișați poveștile înregistrate",
+                "streaks_expiration_text": "Expiră în {eta}",
+                "streaks_expiration_text_expired": "Expirat",
+                "reminder_button": "Setați memento",
+                "delete_scope_confirm_dialog_title": "Sigur doriți să ștergeți un {domeniu}?"
+            },
+            "logged_stories": {
+                "story_failed_to_load": "Încărcarea a eșuat",
+                "no_stories": "Nu s-au găsit povești",
+                "save_from_cache_button": "Salvați din Cache(memoria temporară)"
             }
         },
         "dialogs": {
@@ -117,7 +184,7 @@
                 "content": "SnapEnhance include un instrument de scripting, care permite executarea codului definit de utilizator pe dispozitivul dvs. Fiți extrem de precauți și instalați numai module din surse cunoscute și de încredere. Modulele neautorizate sau neverificate pot prezenta riscuri de securitate pentru sistemul dumneavoastră."
             },
             "add_friend": {
-                "title": "Adaugă Prieten sau Grup",
+                "title": "Adaugă un Prieten sau un Grup",
                 "search_hint": "Caută",
                 "fetch_error": "Preluarea datelor a eșuat",
                 "category_groups": "Grupuri",
@@ -227,5 +294,9 @@
                 "name": "Mesaje"
             }
         }
+    },
+    "scopes": {
+        "friend": "Prieten",
+        "group": "Grup"
     }
 }
