@@ -539,7 +539,7 @@
                     },
                     "auto_mark_as_read": {
                         "name": "Otomatik Okundu Olarak İşaretle",
-                        "description": "Gizli Mod etkin olsa bile, bir konuşmaya mesaj gönderirken mesajları otomatik olarak okundu olarak işaretler"
+                        "description": "Gizli Mod etkinleştirildiğinde bile mesajları/snapleri otomatik olarak okundu olarak işaretler"
                     }
                 }
             },
@@ -1053,6 +1053,10 @@
                 "ovf_editor_indicator": "OVF Editor kullanılarak bir snap gönderilip gönderilmediğini gösterir",
                 "director_mode_indicator": "Galeri görüntülerini snap olarak göndermek için kullanılabilen Yönetmen Modu kullanılarak gönderildiklerinde snap'lere bir ✏️ simgesi ekler",
                 "location_indicator": "Konum etkinleştirilerek gönderildiklerinde snap'lere bir 📍 simgesi ekler"
+            },
+            "auto_mark_as_read": {
+                "conversation_read": "Mesaj gönderirken konuşmayı okundu olarak işaretle",
+                "snap_reply": "Yanıt verirken snap'leri okundu olarak işaretle"
             }
         }
     },
