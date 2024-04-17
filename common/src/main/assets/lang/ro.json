@@ -289,7 +289,12 @@
                 "name": "Ascundeți din feedul prietenilor"
             },
             "auto_open_snaps": {
-                "name": "Deschidere automată Snap-uri"
+                "name": "Deschidere automată Snap-uri",
+                "description": "Deschide automat Snap-urile când le primiți",
+                "options": {
+                    "blacklist": "Excludeți din deschiderea automată a snap-urilor",
+                    "whitelist": "Deschidere automată Snap-uri"
+                }
             }
         },
         "modes": {
