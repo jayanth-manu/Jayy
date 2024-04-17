@@ -137,10 +137,10 @@
                 "empty_hint": "(gol)"
             },
             "tasks": {
-                "no_tasks": "Fără sarcini",
+                "no_tasks": "Fără actiuni",
                 "merge_files_toast": "Îmbinând {count} fișiere",
-                "remove_selected_tasks_title": "Sigur doriți să eliminați sarcinile selectate?",
-                "delete_files_option": "De asemenea, ștergeți fișierele",
+                "remove_selected_tasks_title": "Ești sigur că vrei sa ștergi actiunile selectate?",
+                "delete_files_option": "De asemenea șterge fișierele",
                 "remove_selected_tasks_confirm": "Eliminați {count} sarcini?",
                 "remove_all_tasks_confirm": "Eliminați toate sarcinile?",
                 "remove_all_tasks_title": "Sigur doriți să eliminați toate sarcinile?"
@@ -172,9 +172,9 @@
                 "debug_title": "Depanare",
                 "success_toast": "Gata!",
                 "message_logger_summary": "{messageCount} mesaje\n{storyCount} povești",
-                "message_logger_title": "Înregistrare mesaje",
+                "message_logger_title": "Salvator de mesaje",
                 "view_logger_history_button": "Vedeți istoricul înregistratorului",
-                "clear_button": "Șterge"
+                "clear_button": "Curăță"
             },
             "home": {
                 "update_content": "Versiunea {version} este disponibilă!",
