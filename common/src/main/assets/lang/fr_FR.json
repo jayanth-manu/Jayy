@@ -72,7 +72,7 @@
                 "participants_text": "{count} participant(s)",
                 "not_found": "Pas trouvé",
                 "streaks_title": "Flammes",
-                "streaks_length_text": "Longueur: {length}",
+                "streaks_length_text": "Longueur : {length}",
                 "streaks_expiration_text": "Expire dans {eta}",
                 "streaks_expiration_text_expired": "Expiré",
                 "reminder_button": "Définir un rappel",
@@ -196,6 +196,14 @@
                     "whitelist": "Messages non enregistrables"
                 },
                 "description": "Empêche les messages d'être enregistrés dans le chat par d'autres personnes"
+            },
+            "auto_open_snaps": {
+                "name": "Auto-ouverture des Snaps",
+                "description": "Ouvre automatiquement les Snaps dès leur réception",
+                "options": {
+                    "blacklist": "Exclure de l'ouverture automatique des Snaps",
+                    "whitelist": "Ouverture automatique des Snaps"
+                }
             }
         },
         "toasts": {
@@ -413,7 +421,7 @@
                     },
                     "message_indicators": {
                         "name": "Indicateur de messages",
-                        "description": "Ajoute des indicateurs d'icônes spécifiques aux messages\nNote: les indications peuvent ne pas être 100% exactes"
+                        "description": "Ajoute des icônes d'indicateurs spécifiques aux messages\nRemarque : les indicateurs peuvent ne pas être à 100% précis"
                     }
                 }
             },
@@ -531,15 +539,15 @@
                     },
                     "bypass_message_action_restrictions": {
                         "name": "Contourner les restrictions d'action des messages",
-                        "description": "Permet de réagir à un snap sans l'avoir ouvert ou d'enregistrer un message non sauvegardé"
+                        "description": "Vous permet de réagir à un snap sans l'avoir ouvert ou de sauvegarder un message non sauvegardable"
                     },
                     "remove_groups_locked_status": {
                         "name": "Supprimer le statut verrouillé des groupes",
-                        "description": "Vous permet d'afficher les informations du groupe après avoir été expulsé"
+                        "description": "Vous permet de consulter les informations du groupe après avoir été expulsé"
                     },
                     "auto_mark_as_read": {
                         "name": "Marquer automatiquement comme lu",
-                        "description": "Marque automatiquement les messages comme lus lors de l'envoi d'un message à une conversation, même lorsque le mode incognito est activé"
+                        "description": "Marque automatiquement les messages/Snaps comme lus même lorsque le mode Stealth est activé"
                     }
                 }
             },
@@ -604,19 +612,19 @@
                         "description": "Empêche Snapchat de demander des autorisations spécifiques"
                     },
                     "better_location": {
-                        "name": "Meilleur emplacement",
+                        "name": "Meilleure localisation",
                         "properties": {
                             "coordinates": {
                                 "name": "Coordonnées",
-                                "description": "Choisir les coordonnées de l'usurpation de localisation"
+                                "description": "Définissez les coordonnées de l'emplacement simulé"
                             },
                             "always_update_location": {
                                 "name": "Toujours actualiser la localisation",
                                 "description": "Forcer Snapchat à mettre à jour la position même si aucune donnée GPS n'est reçue"
                             },
                             "spoof_location": {
-                                "description": "Usurpe votre emplacement à un emplacement spécifié",
-                                "name": "Cacher sa Localisation"
+                                "description": "Simule votre emplacement à un endroit spécifié",
+                                "name": "Fausser la localisation"
                             },
                             "suspend_location_updates": {
                                 "name": "Suspendre les mises à jour de localisation",
@@ -631,7 +639,7 @@
                                 "name": "Usurper les écouteurs"
                             }
                         },
-                        "description": "Améliore la localisation de Snapchat"
+                        "description": "Améliore la localisation sur Snapchat"
                     },
                     "default_volume_controls": {
                         "description": "Force Snapchat à utiliser les commandes de volume du système",
@@ -642,7 +650,7 @@
                         "description": "Ajoute un curseur dans le menu contextuel de l'opéra pour modifier la vitesse de lecture vidéo\nRemarque: Les modifications ne s'appliquent qu'aux vidéos suivantes"
                     },
                     "hide_active_music": {
-                        "description": "Empêche Snapchat de savoir si de la musique est jouée.\nCela va permettre de prendre des Snaps en utilisant les boutons de volume tout en écoutant de la musique.",
+                        "description": "Empêche Snapchat de savoir que vous écoutez de la musique\nCela vous permettra de prendre des snaps en utilisant les boutons de volume de contrôle tout en écoutant de la musique",
                         "name": "Couper la musique active"
                     }
                 }
@@ -837,7 +845,7 @@
                     },
                     "account_switcher": {
                         "name": "Changeur de compte",
-                        "description": "Vous permet de basculer entre les comptes sans vous déconnecter\nAppuyez longuement sur l'icône de recherche à côté de votre profil Bitmoji pour ouvrir le menu\nRemarque: cette fonctionnalité est expérimentale et sera probablement modifiée à l'avenir",
+                        "description": "Vous permet de passer d'un compte à un autre sans vous déconnecter\nAppuyez longuement sur l'icône de recherche à côté de votre profil Bitmoji pour ouvrir le menu\nRemarque : cette fonctionnalité est expérimentale et risque de changer à l'avenir",
                         "properties": {
                             "auto_backup_current_account": {
                                 "name": "Compte courant de sauvegarde automatique",
@@ -858,6 +866,10 @@
                         },
                         "name": "Verrou d'application",
                         "description": "Empêche l'accès à Snapchat sans mot de passe"
+                    },
+                    "custom_streaks_expiration_format": {
+                        "name": "Format personnalisé d'expiration des séries",
+                        "description": "Personnalise le format d'expiration des séries\n\nVariables disponibles :\n- %c : Nombre de séries\n- %e : Emoji sablier\n- %d : Jours\n- %h : Heures\n- %m : Minutes\n- %s : Secondes\n- %w : Temps restant"
                     }
                 }
             },
@@ -910,7 +922,8 @@
                 "e2e_encryption": "🔒 Utiliser le chiffrement de bout en bout",
                 "mark_stories_as_seen_locally": "👀 Marquer localement les Stories comme vues",
                 "mark_snaps_as_seen": "👀 Marquer les snaps comme vu",
-                "unsaveable_messages": "⬇️ Messages non enregistrables"
+                "unsaveable_messages": "⬇️ Messages non enregistrables",
+                "auto_open_snaps": "📷 Ouverture automatique des Snaps"
             },
             "path_format": {
                 "create_author_folder": "Créer un dossier pour chaque utilisateur",
@@ -1053,6 +1066,10 @@
                 "ovf_editor_indicator": "Indique si un snap a été envoyé à l'aide de l'éditeur OVF",
                 "director_mode_indicator": "Ajoute une icône ✏️ aux clichés lorsqu'ils ont été envoyés en mode Directeur, qui peut être utilisée pour envoyer des images de la galerie sous forme de clichés",
                 "platform_indicator": "Ajoute l'icône de la plateforme à partir de laquelle un média a été envoyé (par exemple Android, iOS, Web)"
+            },
+            "auto_mark_as_read": {
+                "conversation_read": "Marquer la conversation comme lue lors de l'envoi d'un message",
+                "snap_reply": "Marque les Snaps comme lus lorsqu'on y répond"
             }
         }
     },
@@ -1289,7 +1306,7 @@
             "description": "Exporter les souvenirs dans un fichier ZIP"
         },
         "bulk_messaging_action": {
-            "description": "Réaliser des opérations tel que la suppression d'amis ou la suppression groupé de conversations",
+            "description": "Effectue des opérations telles que la suppression d'amis ou la suppression en masse de conversations",
             "name": "Action de messagerie en masse"
         },
         "change_language": {
@@ -1315,19 +1332,19 @@
             "initiate_exchange_button": "Lancer l'échange de clés"
         },
         "confirmation_dialogs": {
-            "confirmation_1": "AVERTISSEMENT: Cela écrasera votre clé existante. Vous perdrez l'accès à tous les messages cryptés de cet ami. Es-tu sur de vouloir continuer?",
+            "confirmation_1": "AVERTISSEMENT : Cela écrasera votre clé existante. Vous perdrez l'accès à tous les messages chiffrés de cet ami. Êtes-vous sûr de vouloir continuer ?",
             "title": "Chiffrement de bout en bout",
-            "confirmation_2": "Êtes-vous VRAIMENT sûr de vouloir continuer? C'est votre dernière chance de vous retirer."
+            "confirmation_2": "Êtes-vous VRAIMENT sûr de vouloir continuer ? C'est votre dernière chance de faire marche arrière."
         },
         "unencrypted_conversation_send_failure_toast": "Vous ne pouvez pas envoyer de contenu crypté à des conversations cryptées et non cryptées !",
-        "accept_public_key_success_toast": "Clé publique acceptée avec succès!",
-        "native_hooks_send_failure_toast": "Échec de l'envoi! Veuillez activer Native Hooks dans les paramètres.",
-        "accept_secret_key_success_toast": "Fait! Vous pouvez désormais envoyer et recevoir des messages cryptés avec cet ami.",
+        "accept_public_key_success_toast": "Clé publique acceptée avec succès !",
+        "native_hooks_send_failure_toast": "Échec de l'envoi ! Veuillez activer les Crochets Natifs dans les paramètres.",
+        "accept_secret_key_success_toast": "Terminé ! Vous pouvez désormais envoyer et recevoir des messages chiffrés avec cet ami.",
         "accept_public_key_failure_toast": "Échec de l'acceptation de la clé publique",
         "accept_secret_button": "Accepter la clé publique",
         "no_participants_to_encrypt_toast": "Vous n'avez aucun ami dans cette conversation avec qui crypter les messages !",
         "accept_secret_key_failure_toast": "Échec de l'acceptation de la clé secrète",
-        "encryption_failed_toast": "Échec du chiffrement du message! Consultez logcat pour plus de détails.",
+        "encryption_failed_toast": "Échec de chiffrement du message ! Veuillez vérifier le logcat pour plus de détails.",
         "accept_public_key_button": "Accepter la clé publique",
         "outgoing_pk_message": "Demande d'échange de clés",
         "outgoing_secret_message": "Réponse d'échange de clés",
@@ -1335,12 +1352,16 @@
         "incoming_secret_message": "Votre ami vient d'accepter votre clé publique. Cliquez ci-dessous pour accepter le secret."
     },
     "scopes": {
-        "friend": "Ami(e)",
+        "friend": "Ami",
         "group": "Groupe"
     },
     "biometric_auth": {
         "title": "Débloquez Snapchat",
         "subtitle": "Veuillez vous authentifier pour déverrouiller Snapchat",
         "unlock_button": "Déverrouiller"
+    },
+    "auto_open_snaps": {
+        "notification_content": "{count} Snaps ouverts",
+        "title": "Auto-ouverture des Snaps"
     }
 }
