@@ -1,12 +1,12 @@
 {
     "setup": {
         "dialogs": {
-            "select_language": "Dil Seç",
-            "save_folder": "SnapEnhance, Snapchat'ten medya indirmek ve kaydetmek için depolama izinleri gerektirir.\nLütfen medyanın indirileceği konumu seçin.",
-            "select_save_folder_button": "Klasör Seç"
+            "select_language": "Dil Seçin",
+            "save_folder": "SnapEnhance, Snapchat'tan Medya indirmek ve Kaydetmek için Depolama izinlerine ihtiyaç duyar.\nLütfen medyanın indirileceği konumu seçin.",
+            "select_save_folder_button": "Dosya Seç"
         },
         "mappings": {
-            "dialog": "Birden çok Snapchat sürümlerini dinamik olarak desteklemek için ve SnapEnhance'in düzgün çalışması için eşlemeler gereklidir, bu işlem genellikle 5 saniyeden fazla sürmez.",
+            "dialog": "Çok çeşitli Snapchat Sürümlerini dinamik olarak desteklemek için, SnapEnhance'in düzgün çalışması için eşlemeler gereklidir; bu işlem 5 saniyeden fazla sürmemelidir.",
             "generate_button": "Oluştur",
             "generate_failure_no_snapchat": "SnapEnhance Snapchat'i algılayamadı, lütfen Snapchat'i yeniden yüklemeyi deneyin.",
             "generate_failure": "Eşlemeleri oluşturmaya çalışırken bir hata oluştu, lütfen tekrar deneyin.",
@@ -866,6 +866,10 @@
                         },
                         "name": "Uygulama Kilidi",
                         "description": "Snapchat'e şifre olmadan erişimi engeller"
+                    },
+                    "custom_streaks_expiration_format": {
+                        "name": "Özel Serilerin Son Kullanım Formatı",
+                        "description": "Özel Serilerin Son Kullanım Formatını Kişiselleştir\n\nKullanılabilir değişkenler:\n- %c: Seri Sayısı\n- %e: Kum Saati Emoji\n- %d: Günler\n- %h: Saatler\n- %m: Dakikalar\n- %s: Saniyeler\n- %w: Kalan Zaman"
                     }
                 }
             },
