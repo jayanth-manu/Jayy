@@ -1003,7 +1003,8 @@
                 "download_button": "Adăugați butonul de descărcare",
                 "mark_as_read_button": "Butonul Marcare ca Citit",
                 "media_preview": "Afișați o previzualizare a conținutului media",
-                "group": "Notificări de Grup"
+                "group": "Notificări de Grup",
+                "friend_add_source": "Afișează sursa adăugării prietenului"
             },
             "friend_feed_menu_buttons": {
                 "mark_stories_as_seen_locally": "👀 Marchează Poveștile ca fiind văzute local",
