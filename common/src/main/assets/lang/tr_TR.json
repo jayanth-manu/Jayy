@@ -912,7 +912,8 @@
                 "mark_as_read_and_save_in_chat": "Okundu olarak işaretlendiğinde Sohbet'e kaydet (Otomatik Kaydet'e bağlıdır)",
                 "mark_as_read_button": "Okundu olarak işaretle düğmesi",
                 "media_preview": "Medyanın önizlemesini göster",
-                "chat_preview": "Sohbetin önizlemesini göster"
+                "chat_preview": "Sohbetin önizlemesini göster",
+                "friend_add_source": "Arkadaş ekleme kaynağını göster"
             },
             "friend_feed_menu_buttons": {
                 "auto_download": "⬇️ Otomatik İndirme",
