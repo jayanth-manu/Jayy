@@ -84,7 +84,7 @@ class FeatureManager(
             BypassVideoLengthRestriction(),
             MediaQualityLevelOverride(),
             MeoPasscodeBypass(),
-            AppPasscode(),
+            AppLock(),
             CameraTweaks(),
             InfiniteStoryBoost(),
             AmoledDarkMode(),
@@ -128,6 +128,8 @@ class FeatureManager(
             BetterLocation(),
             MediaFilePicker(),
             HideActiveMusic(),
+            AutoOpenSnaps(),
+            CustomStreaksExpirationFormat(),
         )
 
         initializeFeatures()
