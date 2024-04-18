@@ -284,7 +284,7 @@
                                 "description": "Définir le débit audio (kbps)"
                             },
                             "custom_video_codec": {
-                                "name": "Codec audio personnalisé",
+                                "name": "Codec vidéo personnalisé",
                                 "description": "Définir un Codec Vidéo personnalisé tel que (libx264)"
                             },
                             "custom_audio_codec": {
@@ -548,6 +548,10 @@
                     "auto_mark_as_read": {
                         "name": "Marquer automatiquement comme lu",
                         "description": "Marque automatiquement les messages/Snaps comme lus même lorsque le mode Stealth est activé"
+                    },
+                    "relationship_notifier": {
+                        "name": "Notification des relations",
+                        "description": "Vous informe lorsque quelqu'un vous retire de la liste de ses amis"
                     }
                 }
             },
@@ -1364,5 +1368,11 @@
     "auto_open_snaps": {
         "notification_content": "{count} Snaps ouverts",
         "title": "Auto-ouverture des Snaps"
+    },
+    "friend_mutation_observer": {
+        "notification_channel_name": "Observateur de mutation des amis",
+        "removed_friend_notification_title": "Ami supprimé",
+        "removed_friend_notification_content": "{username} vous a retiré de ses amis",
+        "removed_friend_notification_content_with_display_name": "{displayName} ({username}) vous a retiré de ses amis"
     }
 }
