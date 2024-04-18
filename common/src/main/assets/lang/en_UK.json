@@ -203,6 +203,14 @@
             },
             "pin_conversation": {
                 "name": "Pin Conversation"
+            },
+            "auto_open_snaps": {
+                "name": "Automatically Opens Snaps",
+                "description": "Automatically opens Snaps upon receiving them",
+                "options": {
+                    "blacklist": "Exclude from Automatic Snap Opening",
+                    "whitelist": "Automatically Opens Snaps"
+                }
             }
         }
     },
@@ -568,6 +576,10 @@
                     "bypass_message_action_restrictions": {
                         "name": "Bypass Message Action Restrictions",
                         "description": "Allows you to react to a snap without having opened it or to save an unsaveable message"
+                    },
+                    "auto_mark_as_read": {
+                        "name": "Automatically Marks as Read",
+                        "description": "Automatically marks messages/snaps as read even when Stealth Mode is enabled"
                     }
                 },
                 "description": "Change how you interact with friends"
@@ -669,6 +681,10 @@
                     "disable_google_play_dialogs": {
                         "name": "Disable Google Play Services Dialogs",
                         "description": "Prevent Google Play Services availability dialogs from being shown"
+                    },
+                    "hide_active_music": {
+                        "name": "Hide Active Music",
+                        "description": "Prevents Snapchat from knowing you're listening to music\nThis will allow you to take snaps using control volume buttons while listening to music"
                     }
                 }
             },
@@ -869,6 +885,20 @@
                     "prevent_forced_logout": {
                         "name": "Prevent Forced Logout",
                         "description": "Prevents Snapchat from logging you out when you login on another device"
+                    },
+                    "app_lock": {
+                        "name": "App Lock",
+                        "description": "Prevents access to Snapchat without a passcode",
+                        "properties": {
+                            "lock_on_resume": {
+                                "name": "Lock On Resume",
+                                "description": "Locks the app when it's reopened"
+                            }
+                        }
+                    },
+                    "custom_streaks_expiration_format": {
+                        "name": "Bespoke Streak Expiry Format",
+                        "description": "Customises the Streaks Expiry format\n\nAvailable variables:\n- %c: Streaks Count\n- %e: Hourglass Emoji\n- %d: Days\n- %h: Hours\n- %m: Minutes\n- %s: Seconds\n- %w: Remaining Time"
                     }
                 }
             },
@@ -951,7 +981,8 @@
                 "conversation_info": "👤 Conversation Info",
                 "stealth": "👻 Stealth Mode",
                 "mark_snaps_as_seen": "👀 Mark Snaps as seen",
-                "mark_stories_as_seen_locally": "👀 Mark Stories as seen locally"
+                "mark_stories_as_seen_locally": "👀 Mark Stories as seen locally",
+                "auto_open_snaps": "📷 Auto Open Snaps"
             },
             "path_format": {
                 "create_author_folder": "Create folder for each author",
@@ -1068,6 +1099,10 @@
                 "platform_indicator": "Adds the platform icon from which a media was sent (e.g. Android, iOS, Web)",
                 "ovf_editor_indicator": "Indicates if a snap has been sent using OVF Editor",
                 "director_mode_indicator": "Adds a ✏️ icon to snaps when they have been sent using Director Mode, which can be used to send gallery images as snaps"
+            },
+            "auto_mark_as_read": {
+                "conversation_read": "Mark conversation as read upon sending a message",
+                "snap_reply": "Mark snaps as read when replying to them"
             }
         }
     },
@@ -1318,5 +1353,14 @@
     },
     "suspend_location_updates": {
         "switch_text": "Suspend Location Updates"
+    },
+    "biometric_auth": {
+        "subtitle": "Please authenticate to unlock Snapchat",
+        "unlock_button": "Unlock",
+        "title": "Unlock Snapchat"
+    },
+    "auto_open_snaps": {
+        "title": "Auto Open Snaps",
+        "notification_content": "{count} Snaps opened"
     }
 }
