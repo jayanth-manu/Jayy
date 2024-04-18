@@ -97,7 +97,7 @@
     "setup": {
         "mappings": {
             "generate_button": "Generează",
-            "generate_failure_no_snapchat": "SnapEnhance nu a putut detecta Snapchat, te rog reinstalează Snapchat.",
+            "generate_failure_no_snapchat": "SnapEnhance nu a putut detecta Snapchat, încercați să reinstalați Snapchat.",
             "dialog": "Pentru a suporta dinamic o mai multe versiuni de Snapchat, mapările sunt necesare pentru SnapEnhance pentru a funcționa corect, nu ar trebui să dureze mai mult de 5 secunde.",
             "generate_failure": "A apărut o eroare în timpul generării mapărilor, te rog încearcă din nou.",
             "generate_success": "Mapări generate cu succes."
@@ -953,6 +953,10 @@
                     "call_recorder": {
                         "name": "Înregistrare Apeluri",
                         "description": "Înregistrează automat apelurile audio"
+                    },
+                    "custom_streaks_expiration_format": {
+                        "name": "Format personalizat de expirare a liniilor fierbinți",
+                        "description": "Personalizează formatul Streaks Expiration\n\nVariabile disponibile:\n- %c: Număr de linii\n- %e: Emoji cu clepsidra\n- %d: zile\n- %h: ore\n- %m: minute\n- %s: secunde\n- %w: Timp rămas"
                     }
                 },
                 "description": "Caracteristici experimentale",
@@ -1065,7 +1069,7 @@
             "notifications": {
                 "chat_screenshot": "Captură de ecran",
                 "stories": "Povești",
-                "chat_reaction": "Reacția DM(privat)",
+                "chat_reaction": "Reacție în privat",
                 "typing": "Scrie",
                 "chat": "Conversație",
                 "chat_reply": "Răspuns la conversație",
@@ -1098,7 +1102,7 @@
                 "hide_stickers_button": "Eliminare Butonul de Stickere",
                 "hide_unread_chat_hint": "Elimină Sugerarea de Chaturi Necitite",
                 "hide_profile_call_buttons": "Eliminați butoanele de apel din profil",
-                "hide_chat_call_buttons": "Eliminați butoanele de apel prin chat",
+                "hide_chat_call_buttons": "Eliminați butoanele de apel din conversație",
                 "hide_voice_record_button": "Eliminați butonul de înregistrare vocală"
             },
             "hide_story_suggestions": {
@@ -1232,13 +1236,13 @@
         "pending": "În așteptare",
         "story": "Poveste",
         "public_story": "Povestea publică",
-        "spotlight": "În lumina reflectoarelor"
+        "spotlight": "Lumea snapchat"
     },
     "opera_context_menu": {
         "download": "Descărcați Media",
         "sent_at": "Trimis la {data}",
         "media_duration": "Durata media: {durată} milisecunde",
-        "created_at": "Creat la {data}",
+        "created_at": "Creat la {date}",
         "expires_at": "Expiră la {data}",
         "media_size": "Dimensiune media: {dimensiune}",
         "show_debug_info": "Afișați informațiile de depanare"
@@ -1285,7 +1289,7 @@
         "date_range_picker_end_headline": "La",
         "date_range_picker_start_headline": "De la",
         "date_range_picker_title": "Selectați intervalul de date",
-        "date_picker_switch_to_calendar_mode": "Calendar",
+        "date_picker_switch_to_calendar_mode": "Agendă",
         "date_picker_switch_to_input_mode": "Intrare",
         "date_range_picker_scroll_to_previous_month": "Luna trecută",
         "date_picker_today_description": "Azi",
