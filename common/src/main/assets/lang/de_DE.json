@@ -196,6 +196,14 @@
                     "whitelist": "Nicht speicherbare Nachrichten"
                 },
                 "description": "Verhindert, dass Nachrichten im Chat von anderen Personen gespeichert werden können"
+            },
+            "auto_open_snaps": {
+                "name": "Automatisches Öffnen von Snaps",
+                "description": "Öffnet Snaps automatisch beim Empfang",
+                "options": {
+                    "blacklist": "Von der automatischen Snap-Öffnung ausschließen",
+                    "whitelist": "Auto-Öffnen von Snaps"
+                }
             }
         },
         "toasts": {
@@ -850,7 +858,7 @@
                         "name": "Nachrichten bearbeiten"
                     },
                     "app_lock": {
-                        "name": "App Lock",
+                        "name": "App-Sperre",
                         "description": "Verhindert den Zugriff auf Snapchat ohne einen passcode",
                         "properties": {
                             "lock_on_resume": {
@@ -858,6 +866,10 @@
                                 "name": "Sperren beim fortsetzen"
                             }
                         }
+                    },
+                    "custom_streaks_expiration_format": {
+                        "name": "Benutzerdefiniertes Ablaufdatum für Serien",
+                        "description": "Passt das Ablaufdatumformat für Serien an\n\nVerfügbare Variablen:\n- %c: Anzahl der Serien\n- %e: Sanduhr-Emoji\n- %d: Tage\n- %h: Stunden\n- %m: Minuten\n- %s: Sekunden\n- %w: Verbleibende Zeit"
                     }
                 }
             },
@@ -910,7 +922,8 @@
                 "e2e_encryption": "🔒 E2E-Verschlüsselung verwenden",
                 "mark_stories_as_seen_locally": "👀 Stories als lokal gesehen markieren",
                 "mark_snaps_as_seen": "👀 Snaps als gesehen markieren",
-                "unsaveable_messages": "⬇️ Nicht speicherbare Nachrichten"
+                "unsaveable_messages": "⬇️ Nicht speicherbare Nachrichten",
+                "auto_open_snaps": "📷 Automatisches Öffnen von Snaps"
             },
             "path_format": {
                 "create_author_folder": "Erzeuge ein Verzeichnis für jeden Benutzer",
@@ -1346,5 +1359,9 @@
         "unlock_button": "Entsperren",
         "title": "Entsperre Snapchat",
         "subtitle": "Bitte authentifizieren Sie sich um Snapchat zu entsperren"
+    },
+    "auto_open_snaps": {
+        "title": "Auto-Öffnen von Snaps",
+        "notification_content": "{count} Snaps geöffnet"
     }
 }
