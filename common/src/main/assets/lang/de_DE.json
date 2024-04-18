@@ -912,7 +912,8 @@
                 "mark_as_read_and_save_in_chat": "Im Chat speichern, wenn als gelesen markiert (hängt von der automatischen Speicherung ab)",
                 "mark_as_read_button": "Als gelesen markieren Button",
                 "media_preview": "Eine Vorschau der Medien anzeigen",
-                "chat_preview": "Eine Vorschau des Chats anzeigen"
+                "chat_preview": "Eine Vorschau des Chats anzeigen",
+                "friend_add_source": "Zeige Freund hinzufügen Quelle"
             },
             "friend_feed_menu_buttons": {
                 "auto_download": "⬇️ Auto-Download",
