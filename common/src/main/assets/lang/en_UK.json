@@ -57,7 +57,8 @@
             "social": {
                 "streaks_expiration_short": "{hours}h",
                 "friends_tab": "Friends",
-                "groups_tab": "Groups"
+                "groups_tab": "Groups",
+                "empty_hint": "(blank)"
             },
             "home": {
                 "update_title": "SnapEnhance Update",
