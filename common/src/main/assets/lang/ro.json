@@ -15,8 +15,8 @@
         "multiple_media_toast": "Puteți trimite un singur fișier media la un moment dat"
     },
     "conversation_preview": {
-        "streak_expiration": "expiră în {zi} zile {oră} ore {minut} minute",
-        "total_messages": "Total mesaje trimise/primite: {număr}",
+        "streak_expiration": "expiră în {day} zile {hour} ore {minute} minute",
+        "total_messages": "Total mesaje trimise/primite: {count}",
         "title": "Previzualizare",
         "unknown_user": "Utilizator Necunoscut"
     },
@@ -131,7 +131,7 @@
         },
         "sections": {
             "social": {
-                "streaks_expiration_short": "{ore}h",
+                "streaks_expiration_short": "{hours}h",
                 "friends_tab": "Prieteni",
                 "groups_tab": "Grupuri",
                 "empty_hint": "(gol)"
@@ -153,14 +153,14 @@
                 "reset_option": "Resetează",
                 "config_export_success_toast": "Configurația a fost exportată cu succes",
                 "saved_config_snackbar": "Configurația a fost salvată",
-                "config_import_failure_toast": "Nu s-a putut importa configurația {eroare}"
+                "config_import_failure_toast": "Nu s-a putut importa configurația {error}"
             },
             "logger_history": {
-                "list_group_format": "Grup {nume}",
-                "list_friend_format": "Prieten {nume}",
+                "list_group_format": "Grup {name}",
+                "list_friend_format": "Prieten {name}",
                 "no_more_messages": "Nu mai sunt mesaje",
                 "reverse_order_checkbox": "Inversează ordinea",
-                "chat_attachment": "Atașament {listă}",
+                "chat_attachment": "Atașament {index}",
                 "empty_message": "Mesaj de chat gol",
                 "message_parse_failed": "Nu s-a putut analiza mesajul",
                 "unknown_sender": "Expeditor necunoscut",
@@ -206,15 +206,15 @@
             "manage_scope": {
                 "e2ee_title": "Criptare end-to-end",
                 "rules_title": "Reguli",
-                "participants_text": "{număr} participanți",
+                "participants_text": "{count} participanți",
                 "not_found": "Nu a fost găsit",
                 "streaks_title": "Linii",
-                "streaks_length_text": "Lungime: {lungime}",
+                "streaks_length_text": "Lungime: {length}",
                 "logged_stories_button": "Afișați poveștile înregistrate",
                 "streaks_expiration_text": "Expiră în {eta}",
                 "streaks_expiration_text_expired": "Expirat",
                 "reminder_button": "Setați memento",
-                "delete_scope_confirm_dialog_title": "Sigur doriți să ștergeți un {domeniu}?"
+                "delete_scope_confirm_dialog_title": "Sigur doriți să ștergeți un {scope}?"
             },
             "logged_stories": {
                 "story_failed_to_load": "Încărcarea a eșuat",
@@ -543,6 +543,10 @@
                     "bypass_message_action_restrictions": {
                         "name": "Ocoliți restricțiile privind acțiunea mesajului",
                         "description": "Vă permite să reacționați la un snap fără a-l deschide sau să salvați un mesaj care nu poate fi salvat"
+                    },
+                    "relationship_notifier": {
+                        "name": "Notificator de relații",
+                        "description": "Te notifică atunci când cineva te șterge din lista de prieteni"
                     }
                 },
                 "description": "Schimbă cum te interacționezi cu prietenii",
@@ -1241,11 +1245,11 @@
     },
     "opera_context_menu": {
         "download": "Descărcați Media",
-        "sent_at": "Trimis la {data}",
-        "media_duration": "Durata media: {durată} milisecunde",
+        "sent_at": "Trimis la {date}",
+        "media_duration": "Durata media: {duration} milisecunde",
         "created_at": "Creat la {date}",
-        "expires_at": "Expiră la {data}",
-        "media_size": "Dimensiune media: {dimensiune}",
+        "expires_at": "Expiră la {date}",
+        "media_size": "Dimensiune media: {size}",
         "show_debug_info": "Afișați informațiile de depanare"
     },
     "mark_as_seen": {
@@ -1364,5 +1368,11 @@
     "auto_open_snaps": {
         "title": "Deschidere automată Snap-uri",
         "notification_content": "{număr} Snap-uri deschise"
+    },
+    "friend_mutation_observer": {
+        "notification_channel_name": "Observator de Mutare a Prietenilor",
+        "removed_friend_notification_title": "Prieten eliminat",
+        "removed_friend_notification_content": "{username} te-a eliminat din lista de prieteni",
+        "removed_friend_notification_content_with_display_name": "{displayName} ({username}) te-a eliminat din lista de prieteni"
     }
 }
