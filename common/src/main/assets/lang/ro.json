@@ -31,7 +31,7 @@
             "subscribed": "Abonat"
         },
         "added_date": "Data adăugată",
-        "birthday": "Zi de naștere: {lună} {zi}",
+        "birthday": "Zi de naștere: {month} {day}",
         "hidden_birthday": "Zi de naștere: Ascuns",
         "add_source": "Sursa adăugării",
         "snapchat_plus": "Snapchat Plus"
@@ -84,14 +84,14 @@
             "snap": "Snap"
         },
         "select_attachments_title": "Selectați atașamentele de descărcat",
-        "failed_gallery_toast": "Nu s-a salvat în galerie {eroare}",
+        "failed_gallery_toast": "Nu s-a salvat în galerie {error}",
         "dash_dialog": {
             "title": "Descărcare media dash",
-            "segment_text": "Segment {de la} - {la}",
+            "segment_text": "Segmentul {from} - {to}",
             "download_all": "Descarcă toate"
         },
         "no_attachments_toast": "Nu s-au găsit atașamente!",
-        "failed_processing_toast": "Procesarea eșuată {eroare}",
+        "failed_processing_toast": "Procesarea eșuată {error}",
         "dash_no_chapter": "Nu a fost găsit niciun capitol"
     },
     "setup": {
@@ -1340,16 +1340,16 @@
     },
     "streaks_reminder": {
         "notification_title": "Linie fierbinte",
-        "notification_text": "Îți vei pierde linia fierbinte cu {prietenul} în {oreRămase} ore"
+        "notification_text": "Îți vei pierde linia fierbinte cu {friend} în {hourLeft} ore"
     },
     "call_start_confirmation": {
         "dialog_message": "Sigur vrei să inițiezi un apel?",
         "dialog_title": "Începeți apelul"
     },
     "half_swipe_notifier": {
-        "notification_content_group": "{prietenul} a trecut pe jumătate în {grup} timp de {durata} secunde",
+        "notification_content_group": "{friend} a trecut pe jumătate în {grup} timp de {durata} secunde",
         "notification_channel_name": "Glisare pe jumătate",
-        "notification_content_dm": "{prietenul} a trecut pe jumătate în chat-ul tău timp de {durata} secunde"
+        "notification_content_dm": "{friend} a trecut pe jumătate în chat-ul tău timp de {durata} secunde"
     },
     "biometric_auth": {
         "unlock_button": "Deblocați",
