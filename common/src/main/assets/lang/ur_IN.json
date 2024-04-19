@@ -41,6 +41,18 @@
             },
             "tasks": {
                 "no_tasks": "کوئی کام نہیں"
+            },
+            "home_logs": {
+                "export_logs_button": "لوگ ایکسپورٹ کریں"
+            },
+            "home": {
+                "update_title": "سنیپ انہنس اپڈیٹ",
+                "update_button": "ڈاؤن لوڈ"
+            },
+            "home_settings": {
+                "actions_title": "کارروائی",
+                "success_toast": "ہو گیا!",
+                "export_button": "ایکسپورت"
             }
         },
         "dialogs": {
@@ -634,5 +646,8 @@
     "streaks_reminder": {
         "notification_title": "مسلسلی",
         "notification_text": "آپ {hoursLeft} گھنٹوں میں اپنے دوست {friend} کے ساتھ اپنے مسلسلی کو خوو دیں گے"
+    },
+    "scopes": {
+        "friend": "ڈوست"
     }
 }
