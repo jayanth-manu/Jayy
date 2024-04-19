@@ -581,10 +581,6 @@
                     "auto_mark_as_read": {
                         "name": "Automatically Marks as Read",
                         "description": "Automatically marks messages/snaps as read even when Stealth Mode is enabled"
-                    },
-                    "relationship_notifier": {
-                        "name": "Relationship Notifier",
-                        "description": "Notifies you when someone removes you as a friend"
                     }
                 },
                 "description": "Change how you interact with friends"

@@ -543,10 +543,6 @@
                     "bypass_message_action_restrictions": {
                         "name": "Ocoliți restricțiile privind acțiunea mesajului",
                         "description": "Vă permite să reacționați la un snap fără a-l deschide sau să salvați un mesaj care nu poate fi salvat"
-                    },
-                    "relationship_notifier": {
-                        "name": "Notificator de relații",
-                        "description": "Te notifică atunci când cineva te șterge din lista de prieteni"
                     }
                 },
                 "description": "Schimbă cum te interacționezi cu prietenii",
@@ -1370,9 +1366,6 @@
         "notification_content": "{număr} Snap-uri deschise"
     },
     "friend_mutation_observer": {
-        "notification_channel_name": "Observator de Mutare a Prietenilor",
-        "removed_friend_notification_title": "Prieten eliminat",
-        "removed_friend_notification_content": "{username} te-a eliminat din lista de prieteni",
-        "removed_friend_notification_content_with_display_name": "{displayName} ({username}) te-a eliminat din lista de prieteni"
+        "notification_channel_name": "Observator de Mutare a Prietenilor"
     }
 }

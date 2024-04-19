@@ -548,10 +548,6 @@
                     "auto_mark_as_read": {
                         "name": "Otomatik Okundu Olarak İşaretle",
                         "description": "Gizli Mod etkinleştirildiğinde bile mesajları/snapleri otomatik olarak okundu olarak işaretler"
-                    },
-                    "relationship_notifier": {
-                        "name": "İlişki Bildirimcisi",
-                        "description": "Birisi sizi arkadaşlıktan çıkardığında size bildirir"
                     }
                 }
             },
@@ -1370,9 +1366,6 @@
         "notification_content": "{count} Snap Açıldı"
     },
     "friend_mutation_observer": {
-        "removed_friend_notification_title": "Arkadaş Çıkarıldı",
-        "removed_friend_notification_content_with_display_name": "{displayName} ({username}) sizi arkadaşlıktan çıkardı",
-        "notification_channel_name": "Arkadaş Değişim Gözlemcisi",
-        "removed_friend_notification_content": "{username} sizi arkadaşlıktan çıkardı"
+        "notification_channel_name": "Arkadaş Değişim Gözlemcisi"
     }
 }
