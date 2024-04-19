@@ -548,6 +548,10 @@
                     "auto_mark_as_read": {
                         "name": "Otomatik Okundu Olarak İşaretle",
                         "description": "Gizli Mod etkinleştirildiğinde bile mesajları/snapleri otomatik olarak okundu olarak işaretler"
+                    },
+                    "friend_mutation_notifier": {
+                        "name": "Arkadaş Değişimi Bildiricisi",
+                        "description": "Bir arkadaşınızın profilinde bir değişiklik olduğunda size bildirir"
                     }
                 }
             },
@@ -1071,6 +1075,14 @@
             "auto_mark_as_read": {
                 "conversation_read": "Mesaj gönderirken konuşmayı okundu olarak işaretle",
                 "snap_reply": "Yanıt verirken snap'leri okundu olarak işaretle"
+            },
+            "friend_mutation_notifier": {
+                "bitmoji_selfie_changes": "Birisi Bitmoji selfie'sini değiştirdiğinde bildir",
+                "bitmoji_scene_changes": "Birisi Bitmoji sahnesini değiştirdiğinde bildir",
+                "bitmoji_avatar_changes": "Birisi Bitmoji avatarını değiştirdiğinde bildir",
+                "remove_friend": "Birisi sizi arkadaşlıktan çıkardığında bildir",
+                "birthday_changes": "Birisi doğum gününü değiştirdiğinde bildir",
+                "bitmoji_background_changes": "Birisi Bitmoji arka planını değiştirdiğinde bildir"
             }
         }
     },
@@ -1366,6 +1378,14 @@
         "notification_content": "{count} Snap Açıldı"
     },
     "friend_mutation_observer": {
-        "notification_channel_name": "Arkadaş Değişim Gözlemcisi"
+        "notification_channel_name": "Arkadaş Değişim Gözlemcisi",
+        "birthday_removed": "{username} doğum gününü ({birthday}) kaldırdı",
+        "birthday_added": "{username} doğum gününü ekledi ({birthday})",
+        "bitmoji_avatar_changed": "{username} Bitmoji avatarını değiştirdi",
+        "friend_removed": "{username} sizi arkadaşlıktan çıkardı",
+        "birthday_changed": "{username} doğum gününü {oldBirthday} yerine {newBirthday} olarak değiştirdi",
+        "bitmoji_selfie_changed": "{username} Bitmoji selfie'sini değiştirdi",
+        "bitmoji_background_changed": "{username} Bitmoji arka planını değiştirdi",
+        "bitmoji_scene_changed": "{username} Bitmoji sahnesini değiştirdi"
     }
 }
