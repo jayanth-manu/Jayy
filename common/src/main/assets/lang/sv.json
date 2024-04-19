@@ -453,10 +453,6 @@
                     "unlimited_snap_view_time": {
                         "name": "Obegränsad Snap View Time",
                         "description": "Tar bort tidsgränsen för visning av Snaps"
-                    },
-                    "instant_delete": {
-                        "name": "Omedelbar radering",
-                        "description": "Tar bort bekräftelsedialogrutan när meddelanden tas bort"
                     }
                 }
             },

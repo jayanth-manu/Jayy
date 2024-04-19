@@ -525,10 +525,6 @@
                         "name": "Hikaye Tekrar İzleme Göstergesini Önle",
                         "description": "Herhangi birinin hikayelerini tekrar izlediğinizi bilmesini engeller"
                     },
-                    "instant_delete": {
-                        "name": "Anında Silme",
-                        "description": "Mesajları silerken onay iletişim kutusunu kaldırır"
-                    },
                     "hide_peek_a_peek": {
                         "description": "Bir sohbete yarım kaydırma yaptığınızda bildirim gönderilmesini önler",
                         "name": "Peek-a-Peek'i Gizle"

@@ -486,10 +486,6 @@
                         "description": "Adaugă mai multe informații în notificările primite",
                         "name": "Notificări mai bune"
                     },
-                    "instant_delete": {
-                        "description": "Elimină dialogul de confirmare la ștergerea mesajelor",
-                        "name": "Ștergere instantanee"
-                    },
                     "message_logger": {
                         "name": "Înregistrare mesaje",
                         "description": "Împiedică ștergerea mesajelor",

@@ -529,10 +529,6 @@
                         "name": "Bestätigung des Starts eines Anrufs",
                         "description": "Zeigt einen Bestätigungsdialog beim Starten eines Anrufs an"
                     },
-                    "instant_delete": {
-                        "name": "Sofortiges Löschen",
-                        "description": "Entfernt den Bestätigungsdialog beim Löschen von Nachrichten"
-                    },
                     "loop_media_playback": {
                         "name": "Medien Wiedergabe Wiederholen",
                         "description": "Wiederholt Snaps & Stories beim ansehen in einer Schleife"

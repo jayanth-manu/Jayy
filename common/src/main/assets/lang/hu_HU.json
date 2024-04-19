@@ -502,10 +502,6 @@
                         "name": "Üzenetküldés megakadályozása",
                         "description": "Megakadályozza bizonyos típusú üzenetek küldését"
                     },
-                    "instant_delete": {
-                        "name": "Azonnali törlés",
-                        "description": "Eltávolítja a megerősítő párbeszédpanelt az üzenetek törlésekor"
-                    },
                     "half_swipe_notifier": {
                         "name": "Fél húzás értesítő",
                         "description": "Értesít, ha valaki félig belecsapódik egy beszélgetésbe",

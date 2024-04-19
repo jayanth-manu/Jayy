@@ -509,10 +509,6 @@
                             }
                         }
                     },
-                    "instant_delete": {
-                        "name": "Øjeblikkelig sletning",
-                        "description": "Fjerner bekræftelsesdialogen ved sletning af beskeder"
-                    },
                     "loop_media_playback": {
                         "name": "Løkke medie afspilning",
                         "description": "Løkke medie afspilning, når du ser Snaps / Stories"

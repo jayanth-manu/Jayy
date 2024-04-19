@@ -521,10 +521,6 @@
                         "name": "Empêcher l'indicateur de relecture des stories",
                         "description": "Empêche quiconque de savoir que vous avez revu leur Story"
                     },
-                    "instant_delete": {
-                        "name": "Suppression instantanée",
-                        "description": "Supprime la fenêtre de confirmation lors de la suppression de messages"
-                    },
                     "hide_peek_a_peek": {
                         "description": "Empêche l'envoi d'une notification lorsque vous entre ouvrez une conversation",
                         "name": "Cacher les ouvertures partielles des conversations"
