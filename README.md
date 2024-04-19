@@ -86,7 +86,7 @@ We no longer offer official `LSPatch` binaries for obvious reasons. However, you
   - `Auto Save Messages` 
   - `Prevent Message Sending`
   - `Instant Delete`
-  - `Relationship Notifier`
+  - `Friend Mutation Notifier`
   - `Better Notifications` 
   - `Notifications Blacklist`
   - `Message Logger`
