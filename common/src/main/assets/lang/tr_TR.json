@@ -1026,7 +1026,8 @@
                 "remove_friend": "Arkadaşı Kaldır",
                 "hide_friend": "Arkadaşı Gizle",
                 "ignore_friend": "Arkadaşı Yoksay",
-                "block_friend": "Arkadaşı Engelle"
+                "block_friend": "Arkadaşı Engelle",
+                "erase_message": "Mesajı Sil"
             },
             "edit_text_override": {
                 "bypass_text_input_limit": "Metin Giriş Sınırını Atla",
