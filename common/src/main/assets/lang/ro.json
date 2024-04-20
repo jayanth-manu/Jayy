@@ -539,6 +539,10 @@
                     "bypass_message_action_restrictions": {
                         "name": "Ocoliți restricțiile privind acțiunea mesajului",
                         "description": "Vă permite să reacționați la un snap fără a-l deschide sau să salvați un mesaj care nu poate fi salvat"
+                    },
+                    "friend_mutation_notifier": {
+                        "name": "Notificator de modificări la lista de prieteni",
+                        "description": "Te anunță când se schimbă ceva în profilul unui prieten"
                     }
                 },
                 "description": "Schimbă cum te interacționezi cu prietenii",
@@ -1032,7 +1036,8 @@
                 "hide_friend": "Ascunde prietenul",
                 "ignore_friend": "Ignora prietenul",
                 "remove_friend": "Șterge prieten",
-                "block_friend": "Blocați prietenul"
+                "block_friend": "Blocați prietenul",
+                "erase_message": "Șterge mesajul"
             },
             "auto_reload": {
                 "snapchat_only": "Numai Snapchat",
@@ -1162,6 +1167,14 @@
             "auto_mark_as_read": {
                 "conversation_read": "Marcați conversația ca citită atunci când trimiteți un mesaj",
                 "snap_reply": "Marchează snap-urile ca citite când răspunzi la ele"
+            },
+            "friend_mutation_notifier": {
+                "remove_friend": "Notifică când cineva te șterge din lista de prieteni",
+                "birthday_changes": "Notifică când cineva își schimbă data de naștere",
+                "bitmoji_avatar_changes": "Notifică când cineva își schimbă avatarul Bitmoji",
+                "bitmoji_background_changes": "Notifică când cineva își schimbă fundalul Bitmoji",
+                "bitmoji_scene_changes": "Notifică când cineva își schimbă scena Bitmoji",
+                "bitmoji_selfie_changes": "Notifică când cineva își schimbă selfie-ul Bitmoji"
             }
         }
     },
@@ -1362,6 +1375,14 @@
         "notification_content": "{număr} Snap-uri deschise"
     },
     "friend_mutation_observer": {
-        "notification_channel_name": "Observator de Mutare a Prietenilor"
+        "notification_channel_name": "Observator de Mutare a Prietenilor",
+        "friend_removed": "{username} te-a șters din lista de prieteni",
+        "birthday_removed": "{username} a șters data de naștere ({birthday})",
+        "birthday_added": "{username} a adăugat data de naștere ({birthday})",
+        "birthday_changed": "{username} și-a schimbat data de naștere de la {oldBirthday} la {newBirthday}",
+        "bitmoji_avatar_changed": "{username} și-a schimbat avatarul Bitmoji",
+        "bitmoji_scene_changed": "{username} și-a schimbat scena Bitmoji",
+        "bitmoji_selfie_changed": "{username} și-a schimbat selfie-ul Bitmoji",
+        "bitmoji_background_changed": "{username} și-a schimbat fundalul Bitmoji"
     }
 }
