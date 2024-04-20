@@ -546,7 +546,8 @@
                         "description": "Automatisk markerer beskeder/snaps som læst, selv når Stealth-tilstand er aktiveret"
                     },
                     "friend_mutation_notifier": {
-                        "description": "Giver dig besked, når noget ændrer sig i en vens profil"
+                        "description": "Giver dig besked, når noget ændrer sig i en vens profil",
+                        "name": "Ven Mutation Notifier"
                     }
                 }
             },
@@ -1381,6 +1382,7 @@
         "bitmoji_selfie_changed": "{username} har ændret deres Bitmoji selfie",
         "bitmoji_avatar_changed": "{username} har ændret deres Bitmoji avatar",
         "bitmoji_scene_changed": "{username} har ændret deres Bitmoji scene",
-        "bitmoji_background_changed": "{username} har ændret deres Bitmoji baggrund"
+        "bitmoji_background_changed": "{username} har ændret deres Bitmoji baggrund",
+        "notification_channel_name": "Venmutationobserver"
     }
 }
