@@ -544,6 +544,10 @@
                     "auto_mark_as_read": {
                         "name": "Marquer automatiquement comme lu",
                         "description": "Marque automatiquement les messages/Snaps comme lus même lorsque le mode Stealth est activé"
+                    },
+                    "friend_mutation_notifier": {
+                        "name": "Notificateur de mutation d'ami",
+                        "description": "Vous avertit lorsque quelque chose change dans le profil d'un ami"
                     }
                 }
             },
@@ -1014,7 +1018,8 @@
                 "remove_friend": "Supprimer l'ami",
                 "hide_friend": "Cacher l'ami",
                 "ignore_friend": "Ignorer l'ami",
-                "block_friend": "Bloquer l'ami"
+                "block_friend": "Bloquer l'ami",
+                "erase_message": "Effacer le message"
             },
             "hide_ui_components": {
                 "hide_voice_record_button": "Supprimer le bouton d'enregistrement vocal",
@@ -1067,6 +1072,14 @@
             "auto_mark_as_read": {
                 "conversation_read": "Marquer la conversation comme lue lors de l'envoi d'un message",
                 "snap_reply": "Marque les Snaps comme lus lorsqu'on y répond"
+            },
+            "friend_mutation_notifier": {
+                "remove_friend": "Vous averti lorsque quelqu'un vous supprime en tant qu'ami",
+                "birthday_changes": "Vous averti lorsque quelqu'un change son anniversaire",
+                "bitmoji_selfie_changes": "Vous averti lorsque quelqu'un modifie son selfie Bitmoji",
+                "bitmoji_avatar_changes": "Vous averti lorsque quelqu'un change son avatar Bitmoji",
+                "bitmoji_background_changes": "Vous averti lorsque quelqu'un modifie son arrière-plan Bitmoji",
+                "bitmoji_scene_changes": "Vous averti lorsque quelqu'un change sa scène Bitmoji"
             }
         }
     },
@@ -1362,6 +1375,14 @@
         "title": "Auto-ouverture des Snaps"
     },
     "friend_mutation_observer": {
-        "notification_channel_name": "Observateur de mutation des amis"
+        "notification_channel_name": "Observateur de mutation des amis",
+        "birthday_changed": "{username} a changé son anniversaire de {oldBirthday} à {newBirthday}",
+        "bitmoji_selfie_changed": "{username} a modifié son selfie Bitmoji",
+        "bitmoji_avatar_changed": "{username} a changé son avatar Bitmoji",
+        "bitmoji_background_changed": "{username} a changé son arrière-plan Bitmoji",
+        "friend_removed": "{username} vous a supprimé de sa liste d'amis",
+        "birthday_removed": "{username} a supprimé son anniversaire ({birthday})",
+        "birthday_added": "{username} a ajouté son anniversaire ({birthday})",
+        "bitmoji_scene_changed": "{username} a changé sa scène Bitmoji"
     }
 }
