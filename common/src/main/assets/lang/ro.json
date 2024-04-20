@@ -111,7 +111,7 @@
         },
         "dialogs": {
             "select_language": "Selectează Limba",
-            "save_folder": "SnapEnhance necesită acces la Stocare pentru a descărca si salva media din Snapchat.\nTe rog selectează locatia unde ar trebui să fie descarcate.",
+            "save_folder": "SnapEnhance necesită acces la Stocare pentru a descărca si salva media din Snapchat.\nTe rog selectează locația unde ar trebui să fie descărcate.",
             "select_save_folder_button": "Alege Dosarul"
         }
     },
@@ -119,14 +119,14 @@
         "routes": {
             "home": "Acasă",
             "logger_history": "Istoric Log-uri",
-            "scripts": "Scenarii",
+            "scripts": "Șcenarii",
             "home_settings": "Setări",
             "tasks": "Sarcini",
             "features": "Caracteristici",
             "home_logs": "Log-uri",
             "social": "Social",
-            "manage_scope": "Gestioneaza Scop",
-            "messaging_preview": "Previzualizeaza",
+            "manage_scope": "Gestionează Scopul",
+            "messaging_preview": "Previzualizează",
             "logged_stories": "Povești înregistrate"
         },
         "sections": {
