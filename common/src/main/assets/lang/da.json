@@ -544,6 +544,9 @@
                     "auto_mark_as_read": {
                         "name": "Automatisk markér som læst",
                         "description": "Automatisk markerer beskeder/snaps som læst, selv når Stealth-tilstand er aktiveret"
+                    },
+                    "friend_mutation_notifier": {
+                        "description": "Giver dig besked, når noget ændrer sig i en vens profil"
                     }
                 }
             },
@@ -1004,7 +1007,8 @@
                 "block_friend": "Bloker ven 🚫",
                 "ignore_friend": "Ignorer ven",
                 "hide_friend": "Skjul ven",
-                "hide_conversation": "Skjul samtale"
+                "hide_conversation": "Skjul samtale",
+                "erase_message": "Slet besked"
             },
             "disable_permission_requests": {
                 "camera": "Kamera",
@@ -1067,6 +1071,14 @@
             "auto_mark_as_read": {
                 "conversation_read": "Marker samtalen som læst, når du sender en besked",
                 "snap_reply": "Marker snaps som læst, når du svarer på dem"
+            },
+            "friend_mutation_notifier": {
+                "remove_friend": "Giv besked, når nogen fjerner dig som ven",
+                "birthday_changes": "Giv besked, når nogen ændrer deres fødselsdag",
+                "bitmoji_selfie_changes": "Giv besked, når nogen ændrer deres Bitmoji selfie",
+                "bitmoji_avatar_changes": "Giv besked, når nogen ændrer deres Bitmoji avatar",
+                "bitmoji_background_changes": "Giv besked, når nogen ændrer deres Bitmoji baggrund",
+                "bitmoji_scene_changes": "Giv besked, når nogen ændrer deres Bitmoji scene"
             }
         }
     },
@@ -1360,5 +1372,15 @@
     "auto_open_snaps": {
         "title": "Auto Åbn Snaps",
         "notification_content": "{count} Snaps åbnet"
+    },
+    "friend_mutation_observer": {
+        "friend_removed": "{username} har fjernet dig som ven",
+        "birthday_removed": "{username} har fjernet deres fødselsdag ({birthday})",
+        "birthday_added": "{username} har tilføjet deres fødselsdag ({birthday})",
+        "birthday_changed": "{username} har ændret deres fødselsdag fra {oldBirthday} til {newBirthday}",
+        "bitmoji_selfie_changed": "{username} har ændret deres Bitmoji selfie",
+        "bitmoji_avatar_changed": "{username} har ændret deres Bitmoji avatar",
+        "bitmoji_scene_changed": "{username} har ændret deres Bitmoji scene",
+        "bitmoji_background_changed": "{username} har ændret deres Bitmoji baggrund"
     }
 }
