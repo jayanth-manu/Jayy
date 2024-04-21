@@ -750,6 +750,10 @@
                     "auto_mark_as_read": {
                         "description": "Автоматически помечает сообщения/снапы как прочитанные даже при включенном режиме невидимости",
                         "name": "Автоматическая отметка как прочитанное"
+                    },
+                    "friend_mutation_notifier": {
+                        "description": "Уведомляет вас, когда что-то меняется в профиле друга",
+                        "name": "Уведомление о мутации друга"
                     }
                 },
                 "description": "Изменяет ваш способ взаимодействия с друзьями",
@@ -1020,7 +1024,8 @@
                 "clear_conversation": "Очистить беседу из Ленты друзей",
                 "ignore_friend": "Игнорировать друга",
                 "remove_friend": "Удалить друга",
-                "block_friend": "Заблокировать друга"
+                "block_friend": "Заблокировать друга",
+                "erase_message": "Удалить сообщение"
             },
             "disable_cameras": {
                 "front": "Передняя камера",
@@ -1131,6 +1136,14 @@
             "auto_mark_as_read": {
                 "conversation_read": "Пометить беседу как прочитанную при отправке сообщения",
                 "snap_reply": "Отмечать снэпы как прочитанные при ответе на них"
+            },
+            "friend_mutation_notifier": {
+                "bitmoji_selfie_changes": "Уведомление о изменении кем-то своего битмоджи-селфи",
+                "remove_friend": "Уведомление о том, что кто-то удалил вас из друзей",
+                "birthday_changes": "Уведомление о изменении дня рождения кого-то",
+                "bitmoji_avatar_changes": "Уведомление о изменении кем-то своего аватара Битмоджи",
+                "bitmoji_scene_changes": "Уведомление о изменении кем-то своего сценария Bitmoji",
+                "bitmoji_background_changes": "Уведомление о изменении кем-то своего фонового изображения в Bitmoji"
             }
         }
     },
@@ -1360,5 +1373,16 @@
     "auto_open_snaps": {
         "title": "Автоматическое открытие Снапов",
         "notification_content": "Открыто {count} Снапов"
+    },
+    "friend_mutation_observer": {
+        "birthday_changed": "{username} изменил свой день рождения с {oldBirthday} на {newBirthday}",
+        "bitmoji_avatar_changed": "{username} изменил свой аватар Bitmoji",
+        "bitmoji_scene_changed": "{username} изменил свою сцену Bitmoji",
+        "bitmoji_selfie_changed": "{username} изменил свою битмоджи-селфи",
+        "notification_channel_name": "Наблюдатель за изменениями в друзьях",
+        "friend_removed": "{username} удалил вас из друзей",
+        "birthday_removed": "{username} удалил свой день рождения ({birthday})",
+        "birthday_added": "{username} добавил свой день рождения ({birthday})",
+        "bitmoji_background_changed": "{username} изменил свой фон Bitmoji"
     }
 }
