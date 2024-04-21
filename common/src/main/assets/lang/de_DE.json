@@ -544,6 +544,10 @@
                     "auto_mark_as_read": {
                         "name": "Automatisch als gelesen markieren",
                         "description": "Markiert Nachrichten bzw. Snaps automatisch als gelesen wenn der Stealth Mode aktiviert ist"
+                    },
+                    "friend_mutation_notifier": {
+                        "name": "Freund-Mutationsbenachrichtigung",
+                        "description": "Benachrichtigt Sie, wenn sich etwas im Profil eines Freundes ändert"
                     }
                 }
             },
@@ -1022,7 +1026,8 @@
                 "remove_friend": "Freund entfernen",
                 "hide_friend": "Freund ausblenden",
                 "ignore_friend": "Freund ignorieren",
-                "block_friend": "Freund blockieren"
+                "block_friend": "Freund blockieren",
+                "erase_message": "Nachricht löschen"
             },
             "edit_text_override": {
                 "bypass_text_input_limit": "Umgehen des Limits für die Texteingabe",
@@ -1067,6 +1072,14 @@
             "auto_mark_as_read": {
                 "conversation_read": "Markiert Konversation als gelesen sobald eine Narchicht gesendet wird",
                 "snap_reply": "Markiert Snaps als gelesen sobald auf sie geantwortet wird"
+            },
+            "friend_mutation_notifier": {
+                "remove_friend": "Benachrichtige, wenn dich jemand als Freund entfernt",
+                "bitmoji_avatar_changes": "Benachrichtige, wenn jemand sein Bitmoji-Avatar ändert",
+                "bitmoji_background_changes": "Benachrichtige, wenn jemand den Hintergrund seines Bitmoji ändert",
+                "birthday_changes": "Benachrichtige, wenn jemand sein Geburtsdatum ändert",
+                "bitmoji_selfie_changes": "Benachrichtigen, wenn jemand sein Bitmoji-Selfie ändert",
+                "bitmoji_scene_changes": "Benachrichtige, wenn jemand seine Bitmoji-Szene ändert"
             }
         }
     },
@@ -1360,5 +1373,16 @@
     "auto_open_snaps": {
         "title": "Auto-Öffnen von Snaps",
         "notification_content": "{count} Snaps geöffnet"
+    },
+    "friend_mutation_observer": {
+        "birthday_removed": "{username} hat sein Geburtsdatum ({birthday}) entfernt",
+        "birthday_changed": "{username} hat sein Geburtsdatum von {oldBirthday} auf {newBirthday} geändert",
+        "bitmoji_background_changed": "{username} hat den Hintergrund seines Bitmoji geändert",
+        "birthday_added": "{username} hat sein Geburtsdatum ({birthday}) hinzugefügt",
+        "bitmoji_scene_changed": "{username} hat seine Bitmoji-Szene geändert",
+        "bitmoji_selfie_changed": "{username} hat sein Bitmoji-Selfie geändert",
+        "bitmoji_avatar_changed": "{username} hat sein Bitmoji-Avatar geändert",
+        "notification_channel_name": "Freund-Mutationsbeobachter",
+        "friend_removed": "{username} hat dich als Freund entfernt"
     }
 }
