@@ -734,6 +734,24 @@
                             "disable_bitmoji": {
                                 "name": "Deaktivér Bitmoji",
                                 "description": "Deaktiverer Venner Profil Bitmoji"
+                            },
+                            "composer_hooks": {
+                                "properties": {
+                                    "composer_console": {
+                                        "description": "Tillader dig at køre JavaScript-kode i Composer",
+                                        "name": "Komponistkonsol"
+                                    },
+                                    "composer_logs": {
+                                        "name": "Komponistlogfiler",
+                                        "description": "Omdirigerer konsollogfiler fra Composer til SnapEnhance"
+                                    },
+                                    "bypass_camera_roll_limit": {
+                                        "name": "Undgå grænsen for kamerarulle",
+                                        "description": "Øger det maksimale antal medier, du kan sende fra kamerarullen"
+                                    }
+                                },
+                                "name": "Komponistkroge",
+                                "description": "Indsætter kode i Composer tværsplatforms UI-framework (kun arm64)"
                             }
                         }
                     },
