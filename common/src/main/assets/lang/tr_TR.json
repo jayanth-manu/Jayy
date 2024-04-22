@@ -734,6 +734,24 @@
                             "disable_bitmoji": {
                                 "name": "Bitmoji'yi Devre Dışı Bırak",
                                 "description": "Arkadaş Profili Bitmoji'sini devre dışı bırakır"
+                            },
+                            "composer_hooks": {
+                                "properties": {
+                                    "bypass_camera_roll_limit": {
+                                        "name": "Kamera Rulosu Sınırını Atlatma",
+                                        "description": "Kamera Rulosundan Gönderebileceğiniz Ortam Miktarını Artırır"
+                                    },
+                                    "composer_console": {
+                                        "name": "Bestecinin Konsolu",
+                                        "description": "Besteci içinde JavaScript kodunu çalıştırmanıza olanak tanır"
+                                    },
+                                    "composer_logs": {
+                                        "name": "Besteci Günlükleri",
+                                        "description": "Besteci'nin konsol günlüklerini SnapEnhance'e yönlendirir"
+                                    }
+                                },
+                                "name": "Kancalarıcı Kancalar",
+                                "description": "Composer, platformu aşan bir kullanıcı arayüzü çerçevesine (yalnızca arm64 için) kod enjekte eder"
                             }
                         }
                     },
