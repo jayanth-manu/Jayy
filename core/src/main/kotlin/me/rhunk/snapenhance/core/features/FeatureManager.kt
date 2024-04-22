@@ -4,11 +4,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import me.rhunk.snapenhance.core.ModContext
-import me.rhunk.snapenhance.core.features.impl.COFOverride
-import me.rhunk.snapenhance.core.features.impl.ConfigurationOverride
-import me.rhunk.snapenhance.core.features.impl.MixerStories
-import me.rhunk.snapenhance.core.features.impl.OperaViewerParamsOverride
-import me.rhunk.snapenhance.core.features.impl.ScopeSync
+import me.rhunk.snapenhance.core.features.impl.*
 import me.rhunk.snapenhance.core.features.impl.downloader.MediaDownloader
 import me.rhunk.snapenhance.core.features.impl.downloader.ProfilePictureDownloader
 import me.rhunk.snapenhance.core.features.impl.experiments.*
@@ -64,6 +60,7 @@ class FeatureManager(
             ScopeSync(),
             PreventMessageListAutoScroll(),
             Messaging(),
+            FriendMutationObserver(),
             AutoMarkAsRead(),
             MediaDownloader(),
             StealthMode(),
@@ -102,7 +99,6 @@ class FeatureManager(
             HideQuickAddFriendFeed(),
             CallStartConfirmation(),
             SnapPreview(),
-            InstantDelete(),
             BypassScreenshotDetection(),
             HalfSwipeNotifier(),
             DisableConfirmationDialogs(),
@@ -128,6 +124,9 @@ class FeatureManager(
             BetterLocation(),
             MediaFilePicker(),
             HideActiveMusic(),
+            AutoOpenSnaps(),
+            CustomStreaksExpirationFormat(),
+            ComposerHooks(),
         )
     
         initializeFeatures()

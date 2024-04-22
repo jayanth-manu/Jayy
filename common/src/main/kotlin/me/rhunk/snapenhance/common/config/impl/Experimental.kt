@@ -9,7 +9,14 @@ class Experimental : ConfigContainer() {
         val allowRunningInBackground = boolean("allow_running_in_background", true)
     }
 
+    class ComposerHooksConfig: ConfigContainer(hasGlobalState = true) {
+        val bypassCameraRollLimit = boolean("bypass_camera_roll_limit")
+        val composerConsole = boolean("composer_console")
+        val composerLogs = boolean("composer_logs")
+    }
+
     class NativeHooks : ConfigContainer(hasGlobalState = true) {
+        val composerHooks = container("composer_hooks", ComposerHooksConfig()) { requireRestart() }
         val disableBitmoji = boolean("disable_bitmoji")
     }
 
@@ -45,6 +52,7 @@ class Experimental : ConfigContainer() {
         addNotices(FeatureNotice.BAN_RISK, FeatureNotice.UNSTABLE)
         requireRestart()
     }
+    val customStreaksExpirationFormat = string("custom_streaks_expiration_format") { requireRestart() }
     val addFriendSourceSpoof = unique("add_friend_source_spoof",
         "added_by_username",
         "added_by_mention",

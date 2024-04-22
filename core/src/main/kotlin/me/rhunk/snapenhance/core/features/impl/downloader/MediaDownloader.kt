@@ -145,10 +145,10 @@ class MediaDownloader : MessagingRuleFeature("MediaDownloader", MessagingRuleTyp
                     if (context.isMainActivityPaused) {
                         context.shortToast(message)
                     }
-                    throwable?.let {
+                    throwable?.let { t ->
                         context.inAppOverlay.showStatusToast(
                             icon = Icons.Outlined.Error,
-                            text = message + it.takeIf { it.isNotEmpty() }.orEmpty(),
+                            text = message + t.takeIf { it.isNotEmpty() }?.let { " $it" }.orEmpty(),
                         )
                         return
                     }
@@ -264,12 +264,13 @@ class MediaDownloader : MessagingRuleFeature("MediaDownloader", MessagingRuleTyp
             val messageId = id.substring(id.lastIndexOf(":") + 1).toLong()
             val conversationMessage = context.database.getConversationMessageFromId(messageId)!!
 
-            val senderId = conversationMessage.senderId!!
             val conversationId = conversationMessage.clientConversationId!!
 
-            if (!forceDownload && !canUseRule(senderId)) {
+            if (!forceDownload && !canUseRule(conversationId)) {
                 return
             }
+
+            val senderId = conversationMessage.senderId!!
 
             if (!forceDownload && context.config.downloader.preventSelfAutoDownload.get() && senderId == context.database.myUserId) return
 
