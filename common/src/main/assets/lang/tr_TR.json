@@ -743,7 +743,7 @@
                                     },
                                     "composer_console": {
                                         "name": "Bestecinin Konsolu",
-                                        "description": "Besteci içinde JavaScript kodunu çalıştırmanıza olanak tanır"
+                                        "description": "Composer'da JavaScript kodu çalıştırmanıza izin verir (yalnızca arm64)"
                                     },
                                     "composer_logs": {
                                         "name": "Besteci Günlükleri",
@@ -751,7 +751,7 @@
                                     }
                                 },
                                 "name": "Kancalarıcı Kancalar",
-                                "description": "Composer, platformu aşan bir kullanıcı arayüzü çerçevesine (yalnızca arm64 için) kod enjekte eder"
+                                "description": "Composer çapraz platform UI çerçevesine kod enjekte eder"
                             }
                         }
                     },
