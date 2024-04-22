@@ -733,6 +733,24 @@
                             "disable_bitmoji": {
                                 "name": "Désactiver le Bitmoji",
                                 "description": "Désactive le Bitmoji sur le profil d'amis"
+                            },
+                            "composer_hooks": {
+                                "name": "Crochets de compositeur",
+                                "description": "Injecte du code dans le framework d'interface utilisateur multiplateforme de Composer (uniquement arm64)",
+                                "properties": {
+                                    "bypass_camera_roll_limit": {
+                                        "name": "Dépassement de la limite de la pellicule de l'appareil photo",
+                                        "description": "Augmente le nombre maximal de médias que vous pouvez envoyer depuis la pellicule de l'appareil photo"
+                                    },
+                                    "composer_console": {
+                                        "name": "Console de Composer",
+                                        "description": "Permet d'exécuter du code JavaScript dans Composer"
+                                    },
+                                    "composer_logs": {
+                                        "name": "Journaux de Composer",
+                                        "description": "Redirige les journaux de console de Composer vers SnapEnhance"
+                                    }
+                                }
                             }
                         },
                         "description": "Fonctionnalités non fiables qui se greffent au code natif de Snapchat"
