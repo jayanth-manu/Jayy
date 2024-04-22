@@ -734,6 +734,24 @@
                             "disable_bitmoji": {
                                 "name": "Bitmojis deaktivieren",
                                 "description": "Deaktiviert das Freundesprofil Bitmoji"
+                            },
+                            "composer_hooks": {
+                                "properties": {
+                                    "bypass_camera_roll_limit": {
+                                        "name": "Umgeht das Kamerarollenlimit",
+                                        "description": "Erhöht die maximale Anzahl von Medien, die Sie aus der Kamerarolle senden können"
+                                    },
+                                    "composer_console": {
+                                        "name": "Composer-Konsole",
+                                        "description": "Ermöglicht das Ausführen von JavaScript-Code in Composer"
+                                    },
+                                    "composer_logs": {
+                                        "name": "Composer-Protokolle",
+                                        "description": "Leitet Konsolenprotokolle von Composer zu SnapEnhance um"
+                                    }
+                                },
+                                "name": "Composer Haken",
+                                "description": "Injiziert Code in das Composer plattformübergreifende UI-Framework (nur arm64)"
                             }
                         }
                     },
