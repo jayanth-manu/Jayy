@@ -876,7 +876,7 @@
                                 "name": "Ganți Composer",
                                 "properties": {
                                     "composer_console": {
-                                        "description": "Permite executarea de cod JavaScript în Composer",
+                                        "description": "Permite executarea de cod JavaScript în Composer (doar pentru arhitectura arm64)",
                                         "name": "Consolă Composer"
                                     },
                                     "composer_logs": {
@@ -888,7 +888,7 @@
                                         "name": "Ocolește Limita Ruloului Camerei"
                                     }
                                 },
-                                "description": "Injectează cod în cadrul framework-ului UI cross-platform Composer (doar pentru arm64)"
+                                "description": "Injectează cod în framework-ul UI cross-platform Composer"
                             }
                         },
                         "name": "Hook-uri Native(Un set de funcții încorporate care permit dezvoltatorilor să adauge funcționalități la componente)",
