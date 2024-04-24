@@ -748,6 +748,10 @@
                                     "composer_logs": {
                                         "name": "Besteci Günlükleri",
                                         "description": "Besteci'nin konsol günlüklerini SnapEnhance'e yönlendirir"
+                                    },
+                                    "show_first_created_username": {
+                                        "name": "İlk Oluşturulan Kullanıcı Adını Göster",
+                                        "description": "Profil sayfasında mevcut kullanıcı adının yanında ilk oluşturulan kullanıcı adını gösterir"
                                     }
                                 },
                                 "name": "Kancalarıcı Kancalar",
