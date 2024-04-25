@@ -769,7 +769,7 @@
                                 "properties": {
                                     "composer_console": {
                                         "name": "Composer Console",
-                                        "description": "Allows you to execute JavaScript code in Composer"
+                                        "description": "Allows you to execute JavaScript code in Composer (arm64 only)"
                                     },
                                     "bypass_camera_roll_limit": {
                                         "name": "Bypass Camera Roll Limit",
@@ -778,10 +778,14 @@
                                     "composer_logs": {
                                         "name": "Composer Logs",
                                         "description": "Redirects console logs of Composer to SnapEnhance"
+                                    },
+                                    "show_first_created_username": {
+                                        "description": "Shows the first created username next to the current username in the profile page",
+                                        "name": "Show First Created Username"
                                     }
                                 },
                                 "name": "Composer Hooks",
-                                "description": "Injects code into the Composer cross-platform UI framework (arm64 only)"
+                                "description": "Injects code into the Composer cross-platform UI framework"
                             }
                         }
                     },
