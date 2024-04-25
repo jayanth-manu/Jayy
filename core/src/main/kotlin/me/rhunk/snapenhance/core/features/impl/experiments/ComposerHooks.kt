@@ -30,6 +30,7 @@ import me.rhunk.snapenhance.common.ui.createComposeAlertDialog
 import me.rhunk.snapenhance.common.ui.createComposeView
 import me.rhunk.snapenhance.core.features.Feature
 import me.rhunk.snapenhance.core.features.FeatureLoadParams
+import me.rhunk.snapenhance.core.features.impl.downloader.MediaDownloader
 import me.rhunk.snapenhance.core.util.hook.HookStage
 import me.rhunk.snapenhance.core.util.hook.Hooker
 import me.rhunk.snapenhance.core.util.hook.hook
@@ -130,25 +131,38 @@ class ComposerHooks: Feature("ComposerHooks", loadParams = FeatureLoadParams.ACT
         }
     }
 
+    private fun getConfig(): Map<String, Any> {
+        return mapOf<String, Any>(
+            "operaDownloadButton" to context.config.downloader.operaDownloadButton.get(),
+            "bypassCameraRollLimit" to config.bypassCameraRollLimit.get(),
+            "showFirstCreatedUsername" to config.showFirstCreatedUsername.get(),
+            "composerConsole" to config.composerConsole.get(),
+            "composerLogs" to config.composerLogs.get()
+        )
+    }
+
     private fun handleExportCall(composerMarshaller: ComposerMarshaller): Boolean {
         val argc = composerMarshaller.getSize()
         if (argc < 1) return false
         val action = composerMarshaller.getUntyped(0) as? String ?: return false
 
         when (action) {
-            "getConfig" -> {
-                composerMarshaller.pushUntyped(
-                    HashMap<String, Any>().apply {
-                        put("bypassCameraRollLimit", config.bypassCameraRollLimit.get())
-                        put("composerConsole", config.composerConsole.get())
-                        put("composerLogs", config.composerLogs.get())
-                    }
-                )
-            }
+            "getConfig" -> composerMarshaller.pushUntyped(getConfig())
             "showToast" -> {
                 if (argc < 2) return false
-                val message = composerMarshaller.getUntyped(1) as? String ?: return false
-                context.shortToast(message)
+                context.shortToast(composerMarshaller.getUntyped(1) as? String ?: return false)
+            }
+            "downloadLastOperaMedia" -> context.feature(MediaDownloader::class).downloadLastOperaMediaAsync(composerMarshaller.getUntyped(1) == true)
+            "getFriendInfoByUsername" -> {
+                if (argc < 2) return false
+                val username = composerMarshaller.getUntyped(1) as? String ?: return false
+                runCatching {
+                    composerMarshaller.pushUntyped(context.database.getFriendInfoByUsername(username)?.let {
+                        context.gson.toJson(it)
+                    })
+                }.onFailure {
+                    composerMarshaller.pushUntyped(null)
+                }
             }
             "log" -> {
                 if (argc < 3) return false
@@ -165,15 +179,6 @@ class ComposerHooks: Feature("ComposerHooks", loadParams = FeatureLoadParams.ACT
                     "error" -> context.log.error(message, tag)
                 }
             }
-            "eval" -> {
-                if (argc < 2) return false
-                val code = composerMarshaller.getUntyped(1) as? String ?: return false
-                runCatching {
-                    composerMarshaller.pushUntyped(context.native.composerEval(code))
-                }.onFailure {
-                    composerMarshaller.pushUntyped(it.toString())
-                }
-            }
             else -> context.log.warn("Unknown action: $action", "Composer")
         }
 
@@ -186,20 +191,15 @@ class ComposerHooks: Feature("ComposerHooks", loadParams = FeatureLoadParams.ACT
             return
         }
 
-        val hookResult = context.native.composerEval("""
-            (() => { try { const EXPORTED_FUNCTION_NAME = "$exportedFunctionName"; $loaderScript
+        context.native.setComposerLoader("""
+            (() => { const callExport = require('composer_core/src/DeviceBridge')["$exportedFunctionName"]; try { $loaderScript
                 } catch (e) {
-                    return e.toString() + "\n" + e.stack;
+                    try {
+                        callExport("log", "error", e.toString() + "\n" + e.stack);
+                    } catch (t) {}
                 }
-                return "success";
-            })()
+            })();
         """.trimIndent().trim())
-
-        if (hookResult != "success") {
-            context.shortToast(("Composer loader failed : $hookResult").also {
-                context.log.error(it)
-            })
-        }
 
         if (config.composerConsole.get()) {
             injectConsole()
@@ -221,16 +221,6 @@ class ComposerHooks: Feature("ComposerHooks", loadParams = FeatureLoadParams.ACT
             }
         }
 
-        var composerThreadTask: (() -> Unit)? = null
-
-        findClass("com.snap.composer.callable.ComposerFunctionNative").hook("nativePerform", HookStage.BEFORE) {
-            composerThreadTask?.invoke()
-            composerThreadTask = null
-        }
-
-        context.coroutineScope.launch {
-            context.native.waitForComposer()
-            composerThreadTask = ::loadHooks
-        }
+        loadHooks()
     }
 }
