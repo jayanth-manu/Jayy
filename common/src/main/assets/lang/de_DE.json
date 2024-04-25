@@ -743,7 +743,7 @@
                                     },
                                     "composer_console": {
                                         "name": "Composer-Konsole",
-                                        "description": "Ermöglicht das Ausführen von JavaScript-Code in Composer"
+                                        "description": "Ermöglicht das Ausführen von JavaScript-Code in Composer (nur arm64)"
                                     },
                                     "composer_logs": {
                                         "name": "Composer-Protokolle",
@@ -751,7 +751,7 @@
                                     }
                                 },
                                 "name": "Composer Haken",
-                                "description": "Injiziert Code in das Composer plattformübergreifende UI-Framework (nur arm64)"
+                                "description": "Injiziert Code in das Composer UI-Framework (nur arm64)"
                             }
                         }
                     },
