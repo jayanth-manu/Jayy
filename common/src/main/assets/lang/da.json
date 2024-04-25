@@ -738,7 +738,7 @@
                             "composer_hooks": {
                                 "properties": {
                                     "composer_console": {
-                                        "description": "Tillader dig at køre JavaScript-kode i Composer",
+                                        "description": "Giver dig mulighed for at udføre JavaScript-kode i Composer (kun arm64)",
                                         "name": "Komponistkonsol"
                                     },
                                     "composer_logs": {
@@ -748,10 +748,14 @@
                                     "bypass_camera_roll_limit": {
                                         "name": "Undgå grænsen for kamerarulle",
                                         "description": "Øger det maksimale antal medier, du kan sende fra kamerarullen"
+                                    },
+                                    "show_first_created_username": {
+                                        "name": "Vis første oprettede brugernavn",
+                                        "description": "Viser det første oprettede brugernavn ud for det aktuelle brugernavn på profilsiden"
                                     }
                                 },
                                 "name": "Komponistkroge",
-                                "description": "Indsætter kode i Composer tværsplatforms UI-framework (kun arm64)"
+                                "description": "Injicerer kode i Composer-grænsefladen på tværs af platforme"
                             }
                         }
                     },
