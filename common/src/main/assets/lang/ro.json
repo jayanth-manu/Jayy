@@ -960,10 +960,6 @@
                         "name": "Noul meniu de acțiune de chat",
                         "description": "Utilizați noul sertar de meniu de acțiuni de chat"
                     },
-                    "disable_composer_modules": {
-                        "description": "Împiedică încărcarea modulelor compozitoare selectate\nNumele trebuie separate prin virgulă",
-                        "name": "Dezactivare Module Compozitor"
-                    },
                     "prevent_forced_logout": {
                         "name": "Preveniți deconectarea forțată",
                         "description": "Împiedică Snapchat să vă deconecteze atunci când vă conectați pe alt dispozitiv"

@@ -901,10 +901,6 @@
                         "description": "Enables unreleased/beta Snapchat Plus features\nMight not work on older Snapchat versions",
                         "name": "Hidden Snapchat Plus Features"
                     },
-                    "disable_composer_modules": {
-                        "name": "Disable Composer Modules",
-                        "description": "Prevents selected composer modules from being loaded\nNames must be separated by a comma"
-                    },
                     "prevent_forced_logout": {
                         "name": "Prevent Forced Logout",
                         "description": "Prevents Snapchat from logging you out when you login on another device"

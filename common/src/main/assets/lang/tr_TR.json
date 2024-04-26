@@ -827,10 +827,6 @@
                         "name": "Gizli Snapchat Plus Özellikleri",
                         "description": "Yayınlanmamış/beta Snapchat Plus özelliklerini etkinleştirir\nEski Snapchat sürümlerinde çalışmayabilir"
                     },
-                    "disable_composer_modules": {
-                        "name": "Composer Modüllerini Devre Dışı Bırakma",
-                        "description": "Seçili composer modüllerinin yüklenmesini engeller\nİsimler virgül ile ayrılmalıdır"
-                    },
                     "prevent_forced_logout": {
                         "name": "Zorla Oturum Kapatmayı Önleme",
                         "description": "Başka bir cihazdan giriş yaptığınızda Snapchat'in oturumunuzu kapatmasını engeller"

@@ -867,10 +867,6 @@
                         "name": "Mediefilvælger",
                         "description": "Giver dig mulighed for at vælge en hvilken som helst video-/lydfil fra galleriet"
                     },
-                    "disable_composer_modules": {
-                        "name": "Deaktiver komponente moduler",
-                        "description": "Forhindrer udvalgte komponente moduler i at blive indlæst\nNavne skal adskilles med komma"
-                    },
                     "prevent_forced_logout": {
                         "description": "Forhindrer Snapchat i at logge dig ud, når du logger på en anden enhed",
                         "name": "Undgå tvungen log ud"

@@ -807,10 +807,6 @@
                         "name": "Engedélyezi a rejtett Snapchat Plusz funkciókat",
                         "description": "Engedélyezi a még nem megjelent/béta Snapchat Plusz funkciókat\nRégebbi Snapchat verziókon lehetséges hogy nem működik"
                     },
-                    "disable_composer_modules": {
-                        "description": "Megakadályozza a kiválasztott Kompózer modulok betöltődését\nA neveket vesszővel kell elválasztani",
-                        "name": "Letiltja a Kompozitáló modulokat"
-                    },
                     "convert_message_locally": {
                         "name": "Üzenet helyi átalakítása",
                         "description": "Átalakítja a snapeket külső média helyi csevegésre. Ez a chat letöltés kontextusmenüjében jelenik meg"

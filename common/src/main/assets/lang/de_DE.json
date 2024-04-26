@@ -819,10 +819,6 @@
                         "name": "Versteckte Snapchat Plus-Funktionen",
                         "description": "Aktiviert unveröffentlichte/beta Snapchat Plus Funktionen\nKönnte auf älteren Snapchat-Versionen nicht funktionieren"
                     },
-                    "disable_composer_modules": {
-                        "name": "Composer-Module deaktivieren",
-                        "description": "Verhindert, dass ausgewählte Composer-Module geladen werden\nDie Namen müssen durch ein Komma getrennt werden"
-                    },
                     "prevent_forced_logout": {
                         "name": "Erzwungenen Logout verhindern",
                         "description": "Verhindert, dass Snapchat dich abmeldet, wenn du dich auf einem anderen Gerät anmeldest"

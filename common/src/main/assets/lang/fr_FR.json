@@ -815,10 +815,6 @@
                         "name": "Fonctionnalités Snapchat Plus cachées",
                         "description": "Active les fonctionnalités non publiées/beta de Snapchat Plus\nPeut ne pas fonctionner sur les anciennes versions de Snapchat"
                     },
-                    "disable_composer_modules": {
-                        "name": "Désactiver des modules Composer",
-                        "description": "Empêche le chargement des modules composer sélectionnés\nLes noms doivent être séparés par une virgule"
-                    },
                     "meo_passcode_bypass": {
                         "description": "Contourner le code d'accès My Eyes Only\nCela ne fonctionnera que si le code d'accès a été saisi correctement auparavant",
                         "name": "Contournement du code d'accès de My Eyes Only"
