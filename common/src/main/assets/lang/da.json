@@ -652,6 +652,10 @@
                     "hide_active_music": {
                         "name": "Skjul aktiv musik",
                         "description": "Forhindrer Snapchat i at vide, at du lytter til musik\nDette giver dig mulighed for at tage snaps ved hjælp af kontrollydstyrkeknapperne, mens du lytter til musik"
+                    },
+                    "disable_custom_tabs": {
+                        "name": "Deaktiver bruger tilpassede faner",
+                        "description": "Åbner links i understøttede programmer i stedet for i webbrowseren"
                     }
                 }
             },
