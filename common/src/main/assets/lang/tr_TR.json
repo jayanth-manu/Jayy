@@ -2,11 +2,11 @@
     "setup": {
         "dialogs": {
             "select_language": "Dil Seçin",
-            "save_folder": "SnapEnhance, Snapchat'tan Medya indirmek ve Kaydetmek için Depolama izinlerine ihtiyaç duyar.\nLütfen medyanın indirileceği konumu seçin.",
-            "select_save_folder_button": "Dosya Seç"
+            "save_folder": "SnapEnhance, Snapchat'ten Medya indirmek ve Kaydetmek için Depolama izinleri gerektirir.\nLütfen medyanın indirileceği konumu seçin.",
+            "select_save_folder_button": "Klasör Seç"
         },
         "mappings": {
-            "dialog": "Çok çeşitli Snapchat Sürümlerini dinamik olarak desteklemek için, SnapEnhance'in düzgün çalışması için eşlemeler gereklidir; bu işlem 5 saniyeden fazla sürmemelidir.",
+            "dialog": "Çok çeşitli Snapchat Sürümlerini dinamik olarak desteklemek için, SnapEnhance'in düzgün çalışması için eşlemeler gereklidir, bu işlem 5 saniyeden fazla sürmemelidir.",
             "generate_button": "Oluştur",
             "generate_failure_no_snapchat": "SnapEnhance Snapchat'i algılayamadı, lütfen Snapchat'i yeniden yüklemeyi deneyin.",
             "generate_failure": "Eşlemeleri oluşturmaya çalışırken bir hata oluştu, lütfen tekrar deneyin.",
@@ -742,23 +742,23 @@
                             "composer_hooks": {
                                 "properties": {
                                     "bypass_camera_roll_limit": {
-                                        "name": "Kamera Rulosu Sınırını Atlatma",
-                                        "description": "Kamera Rulosundan Gönderebileceğiniz Ortam Miktarını Artırır"
+                                        "name": "Film Rulosu Sınırını Atla",
+                                        "description": "Film rulosundan gönderebileceğiniz maksimum medya miktarını artırır"
                                     },
                                     "composer_console": {
-                                        "name": "Bestecinin Konsolu",
+                                        "name": "Composer Konsolu",
                                         "description": "Composer'da JavaScript kodu çalıştırmanıza izin verir (yalnızca arm64)"
                                     },
                                     "composer_logs": {
-                                        "name": "Besteci Günlükleri",
-                                        "description": "Besteci'nin konsol günlüklerini SnapEnhance'e yönlendirir"
+                                        "name": "Composer Günlükleri",
+                                        "description": "Composer'ın konsol günlüklerini SnapEnhance'a yönlendirir"
                                     },
                                     "show_first_created_username": {
                                         "name": "İlk Oluşturulan Kullanıcı Adını Göster",
                                         "description": "Profil sayfasında mevcut kullanıcı adının yanında ilk oluşturulan kullanıcı adını gösterir"
                                     }
                                 },
-                                "name": "Kancalarıcı Kancalar",
+                                "name": "Composer Kancaları",
                                 "description": "Composer çapraz platform UI çerçevesine kod enjekte eder"
                             }
                         }
@@ -894,8 +894,8 @@
                         "description": "Snapchat'e şifre olmadan erişimi engeller"
                     },
                     "custom_streaks_expiration_format": {
-                        "name": "Özel Serilerin Son Kullanım Formatı",
-                        "description": "Özel Serilerin Son Kullanım Formatını Kişiselleştir\n\nKullanılabilir değişkenler:\n- %c: Seri Sayısı\n- %e: Kum Saati Emoji\n- %d: Günler\n- %h: Saatler\n- %m: Dakikalar\n- %s: Saniyeler\n- %w: Kalan Zaman"
+                        "name": "Özel Serilerin Sona Erme Biçimi",
+                        "description": "Seri Sona Erme biçimini özelleştirir\n\nKullanılabilir değişkenler:\n - %c: Seri Sayısı\n - %e: Kum Saati Emojisi\n - %d: Gün\n - %h: Saat\n - %m: Dakika\n - %s: Saniye\n - %w: Kalan Süre"
                     }
                 }
             },
