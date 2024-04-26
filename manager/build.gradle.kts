@@ -9,6 +9,8 @@ plugins {
 android {
     namespace = rootProject.ext["applicationId"].toString() + ".manager"
     compileSdk = 34
+    buildToolsVersion = "34.0.0"
+    ndkVersion = "26.3.11579264"
 
     androidResources {
         noCompress += ".so"
@@ -21,19 +23,16 @@ android {
 
     defaultConfig {
         buildConfigField("String", "APPLICATION_ID", "\"${rootProject.ext["applicationId"]}\"")
-    }
-
-    composeOptions {
-        kotlinCompilerExtensionVersion = libs.versions.compose.compiler.get()
-    }
-
-    defaultConfig {
         applicationId = rootProject.ext["applicationId"].toString() + ".manager"
         versionCode = 1
         versionName = "1.0.0"
         minSdk = 28
         targetSdk = 34
         multiDexEnabled = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = libs.versions.compose.compiler.get()
     }
 
     buildTypes {
@@ -58,12 +57,12 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
     }
 
     kotlinOptions {
-        jvmTarget = "17"
+        jvmTarget = "21"
     }
 }
 
