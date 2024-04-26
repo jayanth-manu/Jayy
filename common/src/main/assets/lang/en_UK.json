@@ -686,6 +686,10 @@
                     "hide_active_music": {
                         "name": "Hide Active Music",
                         "description": "Prevents Snapchat from knowing you're listening to music\nThis will allow you to take snaps using control volume buttons while listening to music"
+                    },
+                    "disable_custom_tabs": {
+                        "name": "Disable Custom Tabs",
+                        "description": "Opens links in supported applications rather than in the Web Browser"
                     }
                 }
             },
