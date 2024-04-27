@@ -411,6 +411,10 @@
                         "name": "Enable App Appearance Settings",
                         "description": "Enables the hidden App Appearance Setting\nMay not be required on newer Snapchat versions"
                     },
+                    "amoled_dark_mode": {
+                        "name": "AMOLED Dark Mode",
+                        "description": "Enables AMOLED dark mode\nMake sure Snapchat's Dark mode is enabled"
+                    },
                     "hide_friend_feed_entry": {
                         "name": "Hide Friend Feed Entry",
                         "description": "Hides a specific friend from the Friend Feed\nUse the social tab to manage this feature"

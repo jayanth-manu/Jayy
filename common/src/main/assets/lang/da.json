@@ -319,6 +319,10 @@
                         "name": "Aktiver App-udseende Indstillinger",
                         "description": "Aktiverer den skjulte App Udseende Indstilling\nKan ikke kræves i nyere Snapchat versioner"
                     },
+                    "amoled_dark_mode": {
+                        "name": "AMOLED Mørk Tilstand",
+                        "description": "Aktiverer AMOLED mørk tilstand\nSørg for at Snapchats Mørk tilstand er aktiveret"
+                    },
                     "friend_feed_message_preview": {
                         "name": "Forhåndsvisning Af Venne Feed Besked",
                         "description": "Viser en forhåndsvisning af de sidste beskeder i venskabsfeedet",

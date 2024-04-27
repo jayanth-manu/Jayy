@@ -318,6 +318,10 @@
                         "name": "Az alkalmazás megjelenési beállításainak engedélyezése",
                         "description": "Engedélyezi a rejtett Megjelenés beállítást az alkalmazásban\nLehet, hogy az újabb Snapchat verziókban nincs szükség rá"
                     },
+                    "amoled_dark_mode": {
+                        "name": "AMOLED Sötét mód",
+                        "description": "Engedélyezi az AMOLED sötét üzemmódot\nGyőződj meg róla, hogy a Snapchat sötét módja engedélyezve van"
+                    },
                     "friend_feed_message_preview": {
                         "name": "Barát hírfolyam üzenet előnézet",
                         "description": "Megmutatja az előnézetét az utolsó üzeneteknek a barát hírfolyamban",

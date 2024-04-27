@@ -270,6 +270,10 @@
                         "name": "Activeer App Uiterlijk Instellingen",
                         "description": "Schakelt de verborgen App Uiterlijk Instelling in\nMogelijk niet nodig in nieuwere Snapchat versies"
                     },
+                    "amoled_dark_mode": {
+                        "name": "AMOLED Donkere Modus",
+                        "description": "Schakelt AMOLED donkere modus in\nZorg ervoor dat Snapchats Donkere modus is ingeschakeld"
+                    },
                     "friend_feed_message_preview": {
                         "name": "Voorbeeld Vrienden Feed Bericht",
                         "description": "Toont een voorbeeld van de laatste berichten in de Vrienden Feed",

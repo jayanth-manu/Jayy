@@ -385,6 +385,10 @@
                             }
                         }
                     },
+                    "amoled_dark_mode": {
+                        "name": "AMOLED-темный режим",
+                        "description": "Включает темный режим AMOLED\n Убедитесь, что темный режим Snapchats включен"
+                    },
                     "hide_settings_gear": {
                         "description": "Скрывает значок настроек SnapEnhance в ленте друзей",
                         "name": "Скрыть значок настроек"

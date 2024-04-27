@@ -319,6 +319,10 @@
                         "name": "Uygulama Görünüm Ayarlarını Etkinleştir",
                         "description": "Gizli Uygulama Görünümü Ayarını etkinleştirir\nDaha yeni Snapchat sürümlerinde gerekli olmayabilir"
                     },
+                    "amoled_dark_mode": {
+                        "name": "AMOLED Karanlık Mod",
+                        "description": "AMOLED karanlık modunu etkinleştirir\nSnapchat'in karanlık modunun etkin olduğundan emin olun"
+                    },
                     "friend_feed_message_preview": {
                         "name": "Arkadaş Akışı Mesaj Önizlemesi",
                         "description": "Arkadaş Akışındaki son mesajların önizlemesini gösterir",

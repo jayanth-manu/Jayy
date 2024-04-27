@@ -319,6 +319,10 @@
                         "name": "Aktiviert die App Darstellungseinstellungen",
                         "description": "Aktiviert die versteckte App-Erscheinungsbild Einstellung,\nbei neueren Snapchat-Versionen möglicherweise nicht erforderlich"
                     },
+                    "amoled_dark_mode": {
+                        "name": "AMOLED Dark Mode",
+                        "description": "Aktiviert den AMOLED Dark Mode\nStelle sicher, dass der Dunkelmodus von Snapchat aktiviert ist"
+                    },
                     "friend_feed_message_preview": {
                         "name": "Freund Feed Nachrichten Vorschau",
                         "description": "Zeigt eine Vorschau der letzten Nachrichten im Freundes-Feed",
