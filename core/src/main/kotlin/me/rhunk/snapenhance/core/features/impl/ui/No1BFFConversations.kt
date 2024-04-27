@@ -24,6 +24,7 @@ class No1BFFConversations : MessagingRuleFeature("No1BFFConversations", Messagin
             val usr = param.arg<Any>(0)
             val conversationUUID = SnapUUID(instance.getObjectField("_conversationId"))
 
+            // Debugging purposes.
             context.log.info("Friend constructor called")
             context.log.info(usr.getObjectField("_displayName"))
 
