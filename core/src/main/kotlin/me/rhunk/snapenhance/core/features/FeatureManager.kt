@@ -128,7 +128,6 @@ class FeatureManager(
             CustomStreaksExpirationFormat(),
             ComposerHooks(),
         )
-    
         initializeFeatures()
     }
 
