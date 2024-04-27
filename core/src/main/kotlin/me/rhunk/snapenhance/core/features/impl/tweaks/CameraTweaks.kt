@@ -18,6 +18,7 @@ import me.rhunk.snapenhance.core.util.hook.hook
 import me.rhunk.snapenhance.core.util.ktx.setObjectField
 import java.io.ByteArrayOutputStream
 import java.nio.ByteBuffer
+import kotlin.math.abs
 
 class CameraTweaks : Feature("Camera Tweaks", loadParams = FeatureLoadParams.ACTIVITY_CREATE_SYNC) {
 
@@ -93,11 +94,14 @@ class CameraTweaks : Feature("Camera Tweaks", loadParams = FeatureLoadParams.ACT
                 val customFrameRate = (if (isFrontCamera) config.frontCustomFrameRate.getNullable() else config.backCustomFrameRate.getNullable())?.toIntOrNull() ?: return@hook
                 val fpsRanges = param.getResult() as? Array<*> ?: return@hook
 
-                fpsRanges.forEach {
-                    val range = it as? Range<*> ?: return@forEach
-                    range.setObjectField("mUpper", customFrameRate)
-                    range.setObjectField("mLower", customFrameRate)
-                }
+                param.setResult(arrayOf(Range(customFrameRate, customFrameRate)))
+                if (customFrameRate <= 30) return@hook
+
+                val closestMaxFps = fpsRanges.mapNotNull {
+                    (it as? Range<*>)?.upper?.toString()?.toIntOrNull()
+                }.minByOrNull { abs(it - customFrameRate) } ?: return@hook
+
+                param.setResult(arrayOf(Range(closestMaxFps, closestMaxFps)))
             }
         }
 

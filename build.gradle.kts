@@ -5,8 +5,8 @@ plugins {
     alias(libs.plugins.kotlinAndroid) apply false
 }
 
-var versionName = "2.0.0"
-var versionCode = 200
+var versionName = "2.0.2"
+var versionCode = 202
 
 rootProject.ext.set("appVersionName", versionName)
 rootProject.ext.set("appVersionCode", versionCode)
@@ -16,6 +16,10 @@ rootProject.ext.set("buildHash", properties["debug_build_hash"] ?: java.security
 tasks.register("getVersion") {
     doLast {
         val versionFile = File("app/build/version.txt")
+        versionFile.parentFile.mkdirs()
+        if (!versionFile.exists()) {
+            versionFile.createNewFile()
+        }
         versionFile.writeText(versionName)
     }
 }

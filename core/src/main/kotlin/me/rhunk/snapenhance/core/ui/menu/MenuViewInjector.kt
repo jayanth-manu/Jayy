@@ -45,7 +45,6 @@ class MenuViewInjector : Feature("MenuViewInjector", loadParams = FeatureLoadPar
         val messaging = context.feature(Messaging::class)
 
         val actionSheetItemsContainerLayoutId = context.resources.getIdentifier("action_sheet_items_container", "id")
-        val actionSheetContainer = context.resources.getIdentifier("action_sheet_container", "id")
         val actionMenuTitle = context.resources.getIdentifier("action_menu_title", "id")
         val actionMenu = context.resources.getIdentifier("action_menu", "id")
         val componentsHolder = context.resources.getIdentifier("components_holder", "id")
@@ -111,18 +110,12 @@ class MenuViewInjector : Feature("MenuViewInjector", loadParams = FeatureLoadPar
                 return@subscribe
             }
 
-            if (viewGroup.id == actionSheetContainer && childView.id == actionMenu && messaging.lastFetchGroupConversationUUID != null) {
+            if (viewGroup !is LinearLayout && childView.id == actionMenu && messaging.lastFocusedConversationType == 1) {
                 val injectedLayout = LinearLayout(childView.context).apply {
                     orientation = LinearLayout.VERTICAL
                     gravity = Gravity.BOTTOM
                     layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
                     addView(childView)
-                    addOnAttachStateChangeListener(object: View.OnAttachStateChangeListener {
-                        override fun onViewAttachedToWindow(v: View) {}
-                        override fun onViewDetachedFromWindow(v: View) {
-                            messaging.lastFetchGroupConversationUUID = null
-                        }
-                    })
                 }
 
                 event.parent.post {

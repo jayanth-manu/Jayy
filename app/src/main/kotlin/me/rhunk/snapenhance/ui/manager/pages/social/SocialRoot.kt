@@ -69,7 +69,7 @@ class SocialRoot : Routes.Route() {
             if (listSize == 0) {
                 item {
                     Text(
-                        text = "(empty)", modifier = Modifier
+                        text = translation["empty_hint"], modifier = Modifier
                             .fillMaxWidth()
                             .padding(10.dp), textAlign = TextAlign.Center
                     )
@@ -164,8 +164,8 @@ class SocialRoot : Routes.Route() {
                                             else MaterialTheme.colorScheme.primary
                                         )
                                         Text(
-                                            text = context.translation.format(
-                                                "manager.sections.social.streaks_expiration_short",
+                                            text = translation.format(
+                                                "streaks_expiration_short",
                                                 "hours" to (((streaks.expirationTimestamp - System.currentTimeMillis()) / 3600000).toInt().takeIf { it > 0 } ?: 0)
                                                     .toString()
                                             ),
@@ -193,7 +193,9 @@ class SocialRoot : Routes.Route() {
 
     @OptIn(ExperimentalFoundationApi::class)
     override val content: @Composable (NavBackStackEntry) -> Unit = {
-        val titles = listOf("Friends", "Groups")
+        val titles = remember {
+            listOf(translation["friends_tab"], translation["groups_tab"])
+        }
         val coroutineScope = rememberCoroutineScope()
         val pagerState = rememberPagerState { titles.size }
         var showAddFriendDialog by remember { mutableStateOf(false) }

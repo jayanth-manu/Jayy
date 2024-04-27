@@ -55,6 +55,7 @@ class MessagingTweaks : ConfigContainer() {
     val hideBitmojiPresence = boolean("hide_bitmoji_presence")
     val hideTypingNotifications = boolean("hide_typing_notifications")
     val unlimitedSnapViewTime = boolean("unlimited_snap_view_time")
+    val autoMarkAsRead = multiple("auto_mark_as_read", "snap_reply", "conversation_read") { requireRestart() }
     val loopMediaPlayback = boolean("loop_media_playback") { requireRestart() }
     val disableReplayInFF = boolean("disable_replay_in_ff")
     val halfSwipeNotifier = container("half_swipe_notifier", HalfSwipeNotifierConfig()) { requireRestart()}
@@ -71,8 +72,24 @@ class MessagingTweaks : ConfigContainer() {
         customOptionTranslationPath = "features.options.notifications"
         nativeHooks()
     }
-    val instantDelete = boolean("instant_delete") { requireRestart() }
-    val betterNotifications = multiple("better_notifications", "chat_preview", "media_preview", "reply_button", "download_button", "mark_as_read_button", "mark_as_read_and_save_in_chat", "group") { requireRestart() }
+    val friendMutationNotifier = multiple("friend_mutation_notifier",
+        "remove_friend",
+        "birthday_changes",
+        "bitmoji_selfie_changes",
+        "bitmoji_avatar_changes",
+        "bitmoji_background_changes",
+        "bitmoji_scene_changes",
+    ) { requireRestart() }
+    val betterNotifications = multiple("better_notifications",
+        "chat_preview",
+        "media_preview",
+        "reply_button",
+        "download_button",
+        "mark_as_read_button",
+        "mark_as_read_and_save_in_chat",
+        "friend_add_source",
+        "group"
+    ) { requireRestart() }
     val notificationBlacklist = multiple("notification_blacklist", *NotificationType.getIncomingValues().map { it.key }.toTypedArray()) {
         customOptionTranslationPath = "features.options.notifications"
     }

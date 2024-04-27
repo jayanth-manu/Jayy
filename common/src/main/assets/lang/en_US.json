@@ -21,6 +21,11 @@
         }
     },
 
+    "scopes": {
+        "friend": "Friend",
+        "group": "Group"
+    },
+
     "manager": {
         "routes": {
             "tasks": "Tasks",
@@ -37,27 +42,95 @@
         },
         "sections": {
             "home": {
-                "logs": {
-                    "clear_logs_button": "Clear Logs",
-                    "export_logs_button": "Export Logs"
-                }
+                "update_title": "SnapEnhance Update",
+                "update_content": "Version {version} is available!",
+                "update_button": "Download"
+            },
+            "home_logs": {
+                "no_logs_hint": "No logs available",
+                "clear_logs_button": "Clear Logs",
+                "export_logs_button": "Export Logs",
+                "saving_logs_toast": "Saving logs, this may take a while ...",
+                "saved_logs_success_toast": "Logs saved successfully",
+                "saved_logs_failure_toast": "Failed to save logs"
+            },
+            "home_settings": {
+                "actions_title": "Actions",
+                "message_logger_title": "Message Logger",
+                "debug_title": "Debug",
+                "success_toast": "Done!",
+                "message_logger_summary": "{messageCount} messages\n{storyCount} stories",
+                "export_button": "Export",
+                "clear_button": "Clear",
+                "view_logger_history_button": "View Logger History"
             },
             "tasks": {
-                "no_tasks": "No tasks"
+                "no_tasks": "No tasks",
+                "merge_files_toast": "Merging {count} files",
+                "remove_selected_tasks_title": "Are you sure you want to remove selected tasks?",
+                "remove_all_tasks_title": "Are you sure you want to remove all tasks?",
+                "delete_files_option": "Also delete files",
+                "remove_selected_tasks_confirm": "Remove {count} tasks?",
+                "remove_all_tasks_confirm": "Remove all tasks?"
             },
             "features": {
-                "disabled": "Disabled"
+                "disabled": "Disabled",
+                "export_option": "Export",
+                "import_option": "Import",
+                "reset_option": "Reset",
+                "config_export_success_toast": "Config exported successfully",
+                "config_import_success_toast": "Config imported successfully",
+                "config_import_failure_toast": "Failed to import config {error}",
+                "saved_config_snackbar": "Config saved"
             },
             "social": {
+                "friends_tab": "Friends",
+                "groups_tab": "Groups",
+                "empty_hint": "(empty)",
+                "streaks_expiration_short": "{hours}h"
+            },
+            "manage_scope": {
+                "logged_stories_button": "Show Logged Stories",
                 "e2ee_title": "End-to-End Encryption",
                 "rules_title": "Rules",
                 "participants_text": "{count} participants",
                 "not_found": "Not found",
                 "streaks_title": "Streaks",
                 "streaks_length_text": "Length: {length}",
-                "streaks_expiration_short": "{hours}h",
                 "streaks_expiration_text": "Expires in {eta}",
-                "reminder_button": "Set Reminder"
+                "streaks_expiration_text_expired": "Expired",
+                "reminder_button": "Set Reminder",
+                "delete_scope_confirm_dialog_title": "Are you sure you want to delete a {scope}?"
+            },
+            "logged_stories": {
+                "story_failed_to_load": "Failed to load",
+                "no_stories": "No stories found",
+                "save_from_cache_button": "Save from Cache"
+            },
+            "messaging_preview": {
+                "bridge_connection_failed": "Failed to connect to Snapchat through bridge service",
+                "bridge_init_failed": "Failed to initialize messaging bridge",
+                "message_fetch_failed": "Failed to fetch messages",
+                "no_message_hint": "No message",
+                "save_selection_option": "Save Selection",
+                "save_all_option": "Save All",
+                "unsave_selection_option": "Unsave Selection",
+                "unsave_all_option": "Unsave All",
+                "mark_selection_as_seen_option":  "Mark selected Snap as seen",
+                "mark_all_as_seen_option": "Mark all Snaps as seen",
+                "delete_selection_option": "Delete Selection",
+                "delete_all_option": "Delete All"
+            },
+            "logger_history": {
+                "list_friend_format": "Friend {name}",
+                "list_group_format": "Group {name}",
+                "no_more_messages": "No more messages",
+                "reverse_order_checkbox": "Reverse Order",
+                "chat_attachment": "Attachment {index}",
+                "empty_message": "Empty Chat Message",
+                "message_parse_failed": "Failed to parse message",
+                "unknown_sender": "Unknown Sender",
+                "download_attachment_failed_toast": "Failed to download attachment"
             }
         },
         "dialogs": {
@@ -71,6 +144,15 @@
             "scripting_warning": {
                 "title": "Warning",
                 "content": "SnapEnhance includes a scripting tool, allowing the execution of user-defined code on your device. Use extreme caution and only install modules from known, reliable sources. Unauthorized or unverified modules may pose security risks to your system."
+            },
+            "reset_config": {
+                "title": "Reset config",
+                "content": "Are you sure you want to reset the config?",
+                "success_toast": "Config reset successfully"
+            },
+            "messaging_action": {
+                "title": "Choose content types to process",
+                "select_all_button": "Select All"
             }
         }
     },
@@ -115,6 +197,14 @@
                 "options": {
                     "blacklist": "Exclude from Unsaveable Messages",
                     "whitelist": "Unsaveable Messages"
+                }
+            },
+            "auto_open_snaps": {
+                "name": "Auto Open Snaps",
+                "description": "Automatically opens Snaps when receiving them",
+                "options": {
+                    "blacklist": "Exclude from Auto Open Snaps",
+                    "whitelist": "Auto Open Snaps"
                 }
             },
             "hide_friend_feed": {
@@ -268,9 +358,35 @@
                         "name": "Enable App Appearance Settings",
                         "description": "Enables the hidden App Appearance Setting\nMay not be required on newer Snapchat versions"
                     },
-                    "amoled_dark_mode": {
-                        "name": "AMOLED Dark Mode",
-                        "description": "Enables AMOLED dark mode\nMake sure Snapchats Dark mode is enabled"
+                    "customize_ui": {
+                        "name": "Colors",
+                        "description": "Customize Snapchats Colors",
+                        "properties": {
+                            "text_colour": {
+                                "name": "Text Color",
+                                "description": "Changes Snapchats text color\nInput hex color code"
+                            },
+                            "chat_colour": {
+                                "name": "Sent & Received Color",
+                                "description": "Changes Snapchats Sent and Received text color on the friend feed\nInput a hex color code"
+                            },
+                            "background_colour": {
+                                "name": "Background Color",
+                                "description": "Changes Snapchats background color\nInput a hex color code"
+                            },
+                            "background_colour_surface": {
+                                "name": "Background Surface Color",
+                                "description": "Changes Snapchats background surface color\nInput a hex color code"
+                            },
+                            "action_menu_background_colour": {
+                                "name": "Action Menu Background Color",
+                                "description": "Changes Snapchats chat action menu background color\nInput a hex color code"
+                            },
+                            "action_menu_round_background_colour": {
+                                "name": "Action Menu Round Background Color",
+                                "description": "Changes Snapchats chat action menu round background color\nInput a hex color code"
+                            }
+                        }
                     },
                     "friend_feed_message_preview": {
                         "name": "Friend Feed Message Preview",
@@ -406,6 +522,10 @@
                         "name": "Unlimited Snap View Time",
                         "description": "Removes the Time Limit for viewing Snaps"
                     },
+                    "auto_mark_as_read": {
+                        "name": "Auto Mark as Read",
+                        "description": "Automatically marks messages/snaps as read even when Stealth Mode is enabled"
+                    },
                     "loop_media_playback": {
                         "name": "Loop Media Playback",
                         "description": "Loops media playback when viewing Snaps / Stories"
@@ -440,9 +560,9 @@
                         "name": "Prevent Message Sending",
                         "description": "Prevents sending certain types of messages"
                     },
-                    "instant_delete": {
-                        "name": "Instant Delete",
-                        "description": "Removes the confirmation dialog when deleting messages"
+                    "friend_mutation_notifier": {
+                        "name": "Friend Mutation Notifier",
+                        "description": "Notifies you when something changes in a friend's profile"
                     },
                     "better_notifications": {
                         "name": "Better Notifications",
@@ -558,6 +678,10 @@
                         "name": "Block Ads",
                         "description": "Prevents Advertisements from being displayed"
                     },
+                    "disable_custom_tabs": {
+                        "name": "Disable Custom Tabs",
+                        "description": "Opens links in supported applications rather than in the Web Browser"
+                    },
                     "disable_permission_requests": {
                         "name": "Disable Permission Requests",
                         "description": "Prevents Snapchat from asking for specific permissions"
@@ -593,6 +717,10 @@
                     "default_volume_controls": {
                         "name": "Default Volume Controls",
                         "description": "Forces Snapchat to use system volume controls"
+                    },
+                    "hide_active_music": {
+                        "name": "Hide Active Music",
+                        "description": "Prevents Snapchat from knowing you're listening to music\nThis will allow you to take snaps using control volume buttons while listening to music"
                     },
                     "disable_snap_splitting": {
                         "name": "Disable Snap Splitting",
@@ -676,6 +804,28 @@
                         "name": "Native Hooks",
                         "description": "Unsafe Features that hook into Snapchat's native code",
                         "properties": {
+                            "composer_hooks": {
+                                "name": "Composer Hooks",
+                                "description": "Injects code into the Composer cross-platform UI framework",
+                                "properties": {
+                                    "show_first_created_username": {
+                                        "name": "Show First Created Username",
+                                        "description": "Shows the first created username next to the current username in the profile page"
+                                    },
+                                    "bypass_camera_roll_limit": {
+                                        "name": "Bypass Camera Roll Limit",
+                                        "description": "Increases the maximum amount of media you can send from the camera roll"
+                                    },
+                                    "composer_console": {
+                                        "name": "Composer Console",
+                                        "description": "Allows you to execute JavaScript code in Composer (arm64 only)"
+                                    },
+                                    "composer_logs": {
+                                        "name": "Composer Logs",
+                                        "description": "Redirects console logs of Composer to SnapEnhance"
+                                    }
+                                }
+                            },
                             "disable_bitmoji": {
                                 "name": "Disable Bitmoji",
                                 "description": "Disables Friends Profile Bitmoji"
@@ -760,13 +910,15 @@
                         "name": "Edit Messages",
                         "description": "Allows you to edit messages in conversations"
                     },
-                    "app_passcode": {
-                        "name": "App Passcode",
-                        "description": "Sets a passcode to lock the app"
-                    },
-                    "app_lock_on_resume": {
-                        "name": "App Lock On Resume",
-                        "description": "Locks the app when it's reopened"
+                    "app_lock": {
+                        "name": "App Lock",
+                        "description": "Prevents access to Snapchat without a passcode",
+                        "properties": {
+                            "lock_on_resume": {
+                                "name": "Lock On Resume",
+                                "description": "Locks the app when it's reopened"
+                            }
+                        }
                     },
                     "infinite_story_boost": {
                         "name": "Infinite Story Boost",
@@ -802,9 +954,9 @@
                         "name": "Hidden Snapchat Plus Features",
                         "description": "Enables unreleased/beta Snapchat Plus features\nMight not work on older Snapchat versions"
                     },
-                    "disable_composer_modules": {
-                        "name": "Disable Composer Modules",
-                        "description": "Prevents selected composer modules from being loaded\nNames must be separated by a comma"
+                    "custom_streaks_expiration_format": {
+                        "name": "Custom Streaks Expiration Format",
+                        "description": "Customizes the Streaks Expiration format\n\nAvailable variables:\n - %c: Streaks Count\n - %e: Hourglass Emoji\n - %d: Days\n - %h: Hours\n - %m: Minutes\n - %s: Seconds\n - %w: Remaining Time"
                     },
                     "prevent_forced_logout": {
                         "name": "Prevent Forced Logout",
@@ -851,12 +1003,14 @@
                 "download_button": "Add download button",
                 "mark_as_read_button": "Mark as Read button",
                 "mark_as_read_and_save_in_chat": "Save in Chat when marking as read (depends on Auto Save)",
+                "friend_add_source": "Show friend add source",
                 "group": "Group notifications"
             },
             "friend_feed_menu_buttons": {
                 "auto_download": "\u2B07\uFE0F Auto Download",
                 "auto_save": "\uD83D\uDCAC Auto Save Messages",
                 "unsaveable_messages": "\u2B07\uFE0F Unsaveable Messages",
+                "auto_open_snaps": "\uD83D\uDCF7 Auto Open Snaps",
                 "stealth": "\uD83D\uDC7B Stealth Mode",
                 "mark_snaps_as_seen": "\uD83D\uDC40 Mark Snaps as seen",
                 "mark_stories_as_seen_locally": "\uD83D\uDC40 Mark Stories as seen locally",
@@ -949,6 +1103,7 @@
                 "3d": "3D Bitmoji"
             },
             "disable_confirmation_dialogs": {
+                "erase_message": "Erase Message",
                 "remove_friend": "Remove Friend",
                 "block_friend": "Block Friend",
                 "ignore_friend": "Ignore Friend",
@@ -1004,6 +1159,18 @@
                 "location_indicator": "Adds a \uD83D\uDCCD icon to snaps when they have been sent with location enabled",
                 "ovf_editor_indicator": "Indicates if a snap has been sent using OVF Editor",
                 "director_mode_indicator": "Adds a \u270F\uFE0F icon to snaps when they have been sent using Director Mode, which can be used to send gallery images as snaps"
+            },
+            "auto_mark_as_read": {
+                "conversation_read": "Mark conversation as read when sending a message",
+                "snap_reply": "Mark snaps as read when replying to them"
+            },
+            "friend_mutation_notifier": {
+                "remove_friend": "Notify when someone removes you as a friend",
+                "birthday_changes": "Notify when someone changes their birthday",
+                "bitmoji_selfie_changes": "Notify when someone changes their Bitmoji selfie",
+                "bitmoji_avatar_changes": "Notify when someone changes their Bitmoji avatar",
+                "bitmoji_background_changes": "Notify when someone changes their Bitmoji background",
+                "bitmoji_scene_changes": "Notify when someone changes their Bitmoji scene"
             }
         }
     },
@@ -1218,12 +1385,68 @@
         "failed_generic_toast": "Failed to download",
         "failed_to_create_preview_toast": "Failed to create preview",
         "failed_processing_toast": "Failed processing {error}",
-        "failed_gallery_toast": "Failed saving to gallery {error}"
+        "failed_gallery_toast": "Failed saving to gallery {error}",
+        "dash_no_chapter": "No chapter found",
+        "dash_dialog": {
+            "title": "Download dash media",
+            "download_all": "Download All",
+            "segment_text": "Segment {from} - {to}"
+        }
     },
 
     "streaks_reminder": {
         "notification_title": "Streaks",
         "notification_text": "You will lose your Streak with {friend} in {hoursLeft} hours"
+    },
+
+    "biometric_auth": {
+        "unlock_button": "Unlock",
+        "title": "Unlock Snapchat",
+        "subtitle": "Please authenticate to unlock Snapchat"
+    },
+
+    "end_to_end_encryption": {
+        "toolbox": {
+            "no_shared_key": "You don't have a shared secret with this friend yet. Click below to initiate a new one.",
+            "shared_key_fingerprint": "Your fingerprint is:\n\n{fingerprint}\n\nMake sure to check if it matches your friend's fingerprint!",
+            "initiate_exchange_button": "Initiate Key Exchange"
+        },
+        "confirmation_dialogs": {
+            "title": "End-to-end encryption",
+            "confirmation_1": "WARNING: This will overwrite your existing key. You will loose access to all encrypted messages from this friend. Are you sure you want to continue?",
+            "confirmation_2": "Are you REALLY sure you want to continue? This is your last chance to back out."
+        },
+        "unencrypted_conversation_send_failure_toast": "You can't send encrypted content to both encrypted and unencrypted conversations!",
+        "native_hooks_send_failure_toast": "Failed to send! Please enable Native Hooks in the settings.",
+        "no_participants_to_encrypt_toast": "You don't have any friends in this conversation to encrypt messages with!",
+        "encryption_failed_toast": "Failed to encrypt message! Check logcat for more details.",
+        "accept_public_key_success_toast": "Public key successfully accepted!",
+        "accept_secret_key_success_toast": "Done! You can now send and receive encrypted messages with this friend.",
+        "accept_public_key_failure_toast": "Failed to accept public key",
+        "accept_secret_key_failure_toast": "Failed to accept secret key",
+        "accept_secret_button": "Accept Secret",
+        "accept_public_key_button": "Accept Public Key",
+        "outgoing_pk_message": "Key exchange request",
+        "outgoing_secret_message": "Key exchange response",
+        "incoming_pk_message": "You just received a public key request. Click below to accept it.",
+        "incoming_secret_message": "Your friend just accepted your public key. Click below to accept the secret."
+    },
+
+    "auto_open_snaps": {
+        "title": "Auto Open Snaps",
+        "notification_content": "{count} Snaps opened"
+    },
+
+    "friend_mutation_observer": {
+        "notification_channel_name": "Friend Mutation Observer",
+        "friend_removed": "{username} has removed you as a friend",
+        "birthday_removed": "{username} has removed their birthday ({birthday})",
+        "birthday_added": "{username} has added their birthday ({birthday})",
+        "birthday_changed": "{username} has changed their birthday from {oldBirthday} to {newBirthday}",
+        "bitmoji_selfie_changed": "{username} has changed their Bitmoji selfie",
+        "bitmoji_avatar_changed": "{username} has changed their Bitmoji avatar",
+        "bitmoji_background_changed": "{username} has changed their Bitmoji background",
+        "bitmoji_scene_changed": "{username} has changed their Bitmoji scene"
     },
 
     "suspend_location_updates": {

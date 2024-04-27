@@ -9,7 +9,15 @@ class Experimental : ConfigContainer() {
         val allowRunningInBackground = boolean("allow_running_in_background", true)
     }
 
+    class ComposerHooksConfig: ConfigContainer(hasGlobalState = true) {
+        val showFirstCreatedUsername = boolean("show_first_created_username")
+        val bypassCameraRollLimit = boolean("bypass_camera_roll_limit")
+        val composerConsole = boolean("composer_console")
+        val composerLogs = boolean("composer_logs")
+    }
+
     class NativeHooks : ConfigContainer(hasGlobalState = true) {
+        val composerHooks = container("composer_hooks", ComposerHooksConfig()) { requireRestart() }
         val disableBitmoji = boolean("disable_bitmoji")
     }
 
@@ -22,6 +30,10 @@ class Experimental : ConfigContainer() {
         val autoBackupCurrentAccount = boolean("auto_backup_current_account", defaultValue = true)
     }
 
+    class AppLockConfig: ConfigContainer(hasGlobalState = true) {
+        val lockOnResume = boolean("lock_on_resume", defaultValue = true)
+    }
+
     val nativeHooks = container("native_hooks", NativeHooks()) { icon = "Memory"; requireRestart() }
     val sessionEvents = container("session_events", SessionEventsConfig()) { requireRestart(); nativeHooks() }
     val spoof = container("spoof", Spoof()) { icon = "Fingerprint" ; addNotices(FeatureNotice.BAN_RISK); requireRestart() }
@@ -32,8 +44,7 @@ class Experimental : ConfigContainer() {
     val callRecorder = boolean("call_recorder") { requireRestart(); addNotices(FeatureNotice.UNSTABLE); }
     val accountSwitcher = container("account_switcher", AccountSwitcherConfig()) { requireRestart(); addNotices(FeatureNotice.UNSTABLE) }
     val editMessage = boolean("edit_message") { requireRestart(); addNotices(FeatureNotice.BAN_RISK) }
-    val appPasscode = string("app_passcode")
-    val appLockOnResume = boolean("app_lock_on_resume")
+    val appLock = container("app_lock", AppLockConfig()) { requireRestart(); addNotices(FeatureNotice.UNSTABLE) }
     val infiniteStoryBoost = boolean("infinite_story_boost")
     val meoPasscodeBypass = boolean("meo_passcode_bypass")
     val noFriendScoreDelay = boolean("no_friend_score_delay") { requireRestart()}
@@ -42,6 +53,7 @@ class Experimental : ConfigContainer() {
         addNotices(FeatureNotice.BAN_RISK, FeatureNotice.UNSTABLE)
         requireRestart()
     }
+    val customStreaksExpirationFormat = string("custom_streaks_expiration_format") { requireRestart() }
     val addFriendSourceSpoof = unique("add_friend_source_spoof",
         "added_by_username",
         "added_by_mention",
@@ -49,6 +61,5 @@ class Experimental : ConfigContainer() {
         "added_by_qr_code",
         "added_by_community",
     ) { addNotices(FeatureNotice.BAN_RISK) }
-    val disableComposerModules = string("disable_composer_modules") { requireRestart(); nativeHooks() }
     val preventForcedLogout = boolean("prevent_forced_logout") { requireRestart(); addNotices(FeatureNotice.BAN_RISK, FeatureNotice.INTERNAL_BEHAVIOR); }
 }

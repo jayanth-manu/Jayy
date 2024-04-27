@@ -8,6 +8,7 @@ import android.widget.FrameLayout
 import me.rhunk.snapenhance.common.util.ktx.findFieldsToString
 import me.rhunk.snapenhance.core.event.events.impl.AddViewEvent
 import me.rhunk.snapenhance.core.event.events.impl.BindViewEvent
+import me.rhunk.snapenhance.core.event.events.impl.LayoutInflateEvent
 import me.rhunk.snapenhance.core.features.Feature
 import me.rhunk.snapenhance.core.features.FeatureLoadParams
 import me.rhunk.snapenhance.core.util.hook.HookStage
@@ -32,6 +33,20 @@ class UITweaks : Feature("UITweaks", loadParams = FeatureLoadParams.ACTIVITY_CRE
         event.canceled = true
     }
 
+    private fun hideView(view: View) {
+        view.apply {
+            visibility = View.GONE
+            post {
+                isEnabled = false
+                visibility = View.GONE
+                setWillNotDraw(true)
+            }
+            addOnLayoutChangeListener { view, _, _, _, _, _, _, _, _ ->
+                view.post { view.visibility = View.GONE }
+            }
+        }
+    }
+
     override fun onActivityCreate() {
         val blockAds by context.config.global.blockAds
         val hiddenElements by context.config.userInterface.hideUiComponents
@@ -54,6 +69,12 @@ class UITweaks : Feature("UITweaks", loadParams = FeatureLoadParams.ACTIVITY_CRE
             if (viewId == callButton1 || viewId == callButton2) {
                 if (!hiddenElements.contains("hide_profile_call_buttons")) return@hook
                 methodParam.setArg(0, View.GONE)
+            }
+        }
+
+        context.event.subscribe(LayoutInflateEvent::class) { event ->
+            if (event.layoutId == getId("chat_input_bar_sharing_drawer_button", "layout") && hiddenElements.contains("hide_live_location_share_button")) {
+                hideView(event.view ?: return@subscribe)
             }
         }
 
@@ -143,16 +164,7 @@ class UITweaks : Feature("UITweaks", loadParams = FeatureLoadParams.ACTIVITY_CRE
                 (viewId == getId("chat_input_bar_sharing_drawer_button", "id") && hiddenElements.contains("hide_live_location_share_button")) ||
                 (viewId == callButtonsStub && hiddenElements.contains("hide_chat_call_buttons"))
             ) {
-                view.apply {
-                    view.post {
-                        isEnabled = false
-                        setWillNotDraw(true)
-                        view.visibility = View.GONE
-                    }
-                    addOnLayoutChangeListener { view, _, _, _, _, _, _, _, _ ->
-                        view.post { view.visibility = View.GONE }
-                    }
-                }
+                hideView(view)
             }
             if (viewId == unreadHintButton && hiddenElements.contains("hide_unread_chat_hint")) {
                 event.canceled = true

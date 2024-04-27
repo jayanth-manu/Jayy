@@ -4,11 +4,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import me.rhunk.snapenhance.core.ModContext
-import me.rhunk.snapenhance.core.features.impl.COFOverride
-import me.rhunk.snapenhance.core.features.impl.ConfigurationOverride
-import me.rhunk.snapenhance.core.features.impl.MixerStories
-import me.rhunk.snapenhance.core.features.impl.OperaViewerParamsOverride
-import me.rhunk.snapenhance.core.features.impl.ScopeSync
+import me.rhunk.snapenhance.core.features.impl.*
 import me.rhunk.snapenhance.core.features.impl.downloader.MediaDownloader
 import me.rhunk.snapenhance.core.features.impl.downloader.ProfilePictureDownloader
 import me.rhunk.snapenhance.core.features.impl.experiments.*
@@ -64,10 +60,11 @@ class FeatureManager(
             ScopeSync(),
             PreventMessageListAutoScroll(),
             Messaging(),
+            FriendMutationObserver(),
+            AutoMarkAsRead(),
             MediaDownloader(),
             StealthMode(),
             MenuViewInjector(),
-            PreventReadReceipts(),
             MessageLogger(),
             ConvertMessageLocally(),
             SnapchatPlus(),
@@ -84,10 +81,9 @@ class FeatureManager(
             BypassVideoLengthRestriction(),
             MediaQualityLevelOverride(),
             MeoPasscodeBypass(),
-            AppPasscode(),
+            AppLock(),
             CameraTweaks(),
             InfiniteStoryBoost(),
-            AmoledDarkMode(),
             PinConversations(),
             DeviceSpooferHook(),
             ClientBootstrapOverride(),
@@ -103,12 +99,10 @@ class FeatureManager(
             HideQuickAddFriendFeed(),
             CallStartConfirmation(),
             SnapPreview(),
-            InstantDelete(),
             BypassScreenshotDetection(),
             HalfSwipeNotifier(),
             DisableConfirmationDialogs(),
             MixerStories(),
-            DisableComposerModules(),
             MessageIndicators(),
             EditTextOverride(),
             PreventForcedLogout(),
@@ -125,10 +119,15 @@ class FeatureManager(
             AccountSwitcher(),
             RemoveGroupsLockedStatus(),
             BypassMessageActionRestrictions(),
+            CustomizeUI(),
             BetterLocation(),
             MediaFilePicker(),
+            HideActiveMusic(),
+            AutoOpenSnaps(),
+            CustomStreaksExpirationFormat(),
+            ComposerHooks(),
+            DisableCustomTabs(),
         )
-
         initializeFeatures()
     }
 

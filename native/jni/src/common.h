@@ -12,7 +12,7 @@
 typedef struct {
     bool disable_bitmoji;
     bool disable_metrics;
-    bool hook_asset_open;
+    bool composer_hooks;
 } native_config_t;
 
 namespace common {

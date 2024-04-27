@@ -56,31 +56,35 @@
             "features": "ഫീച്ചറുകൾ",
             "home": "വീട്",
             "tasks": "ചുമതലകൾ",
-            "social": "സാമൂഹിക"
+            "social": "സാമൂഹിക",
+            "messaging_preview": "മുഴുവനായും"
         },
         "sections": {
             "social": {
-                "rules_title": "നിയമങ്ങൾ",
-                "streaks_length_text": "നീളം: {length}",
-                "not_found": "കണ്ടെത്തിയില്ല",
-                "streaks_expiration_text": "ൽ കാലഹരണപ്പെടുന്നു",
-                "participants_text": "{count} പങ്കെടുക്കുന്നവർ",
-                "streaks_title": "വരകൾ",
-                "reminder_button": "ഓർമ്മപ്പെടുത്തൽ സജ്ജമാക്കുക",
-                "streaks_expiration_short": "{hours}h",
-                "e2ee_title": "എൻഡ്-ടു-എൻഡ് എൻക്രിപ്ഷൻ"
-            },
-            "home": {
-                "logs": {
-                    "clear_logs_button": "ലോഗുകൾ മായ്‌ക്കുക",
-                    "export_logs_button": "ലോഗുകൾ കയറ്റുമതി ചെയ്യുക"
-                }
+                "streaks_expiration_short": "{hours}h"
             },
             "features": {
                 "disabled": "അപ്രാപ്തമാക്കി"
             },
             "tasks": {
                 "no_tasks": "ജോലികളൊന്നുമില്ല"
+            },
+            "home": {
+                "update_content": "വേർഷൻ {version} ഇപ്പോൾ ലഭ്യമാണ്",
+                "update_title": "സ്നാപ്ഇൻഹാൻസ് പുതുക്കൽ",
+                "update_button": "ശേഖരിക്കുക"
+            },
+            "home_logs": {
+                "no_logs_hint": "ലോഗ്സ് ലഭ്യമല്ല",
+                "saving_logs_toast": "ലോഗുകൾ സേവ് ചെയുന്നു, അൽപ്പ സമയം കാത്തിരിക്കുക",
+                "clear_logs_button": "ക്ലിയർ ലോഗ്‌സ്",
+                "export_logs_button": "എക്സ്പോർട്ട് ലോക്‌സ്",
+                "saved_logs_success_toast": "വിജയകരമായി ലോഗ്‌സ് സേവ് ചെയ്തു",
+                "saved_logs_failure_toast": "Logs സേവ് ചെയ്യുന്നത് പരാജയപ്പെട്ടു"
+            },
+            "home_settings": {
+                "actions_title": "പ്രവർത്തികൾ",
+                "debug_title": "തെറ്റ്"
             }
         },
         "dialogs": {
@@ -443,14 +447,6 @@
                         "name": "സ്റ്റോറി ലോഗർ",
                         "description": "സുഹൃത്തുക്കളുടെ കഥകളുടെ ചരിത്രം നൽകുന്നു"
                     },
-                    "app_passcode": {
-                        "name": "ആപ്പ് പാസ്‌കോഡ്",
-                        "description": "ആപ്പ് ലോക്ക് ചെയ്യാൻ ഒരു പാസ്‌കോഡ് സജ്ജീകരിക്കുന്നു"
-                    },
-                    "app_lock_on_resume": {
-                        "name": "ആപ്പ് ലോക്ക് ഓൺ റെസ്യൂമെ",
-                        "description": "ആപ്പ് വീണ്ടും തുറക്കുമ്പോൾ അത് ലോക്ക് ചെയ്യുന്നു"
-                    },
                     "infinite_story_boost": {
                         "name": "അനന്തമായ കഥ ബൂസ്റ്റ്",
                         "description": "സ്റ്റോറി ബൂസ്റ്റ് പരിധി കാലതാമസം മറികടക്കുക"
@@ -586,10 +582,6 @@
                     "prevent_story_rewatch_indicator": {
                         "name": "സ്റ്റോറി റീവാച്ച് ഇൻഡിക്കേറ്റർ തടയുക",
                         "description": "നിങ്ങൾ അവരുടെ കഥ വീണ്ടും കണ്ടുവെന്ന് അറിയുന്നതിൽ നിന്ന് ആരെയും തടയുന്നു"
-                    },
-                    "instant_delete": {
-                        "name": "തൽക്ഷണ ഇല്ലാതാക്കൽ",
-                        "description": "സന്ദേശങ്ങൾ ഇല്ലാതാക്കുമ്പോൾ സ്ഥിരീകരണ ഡയലോഗ് നീക്കംചെയ്യുന്നു"
                     },
                     "hide_bitmoji_presence": {
                         "name": "ബിറ്റ്‌മോജി സാന്നിധ്യം മറയ്ക്കുക",
@@ -991,5 +983,9 @@
         "stealth_mode": "സ്റ്റെൽത്ത് മോഡ്",
         "auto_download_blacklist": "ഓട്ടോ ഡൗൺലോഡ് ബ്ലാക്ക്‌ലിസ്റ്റ്",
         "anti_auto_save": "ആന്റി ഓട്ടോ സേവ്"
+    },
+    "scopes": {
+        "friend": "സുഹൃത്ത്",
+        "group": "കുട്ടായ്മ"
     }
 }

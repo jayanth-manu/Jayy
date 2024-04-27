@@ -28,31 +28,31 @@
             "home_logs": "لاگز",
             "social": "سوشل",
             "scripts": "اسکرپٹس",
-            "tasks": "کام"
+            "tasks": "کام",
+            "logger_history": "لاگ ریکارڈ",
+            "messaging_preview": "جہلک"
         },
         "sections": {
-            "home": {
-                "logs": {
-                    "clear_logs_button": "لاگز صاف کریں",
-                    "export_logs_button": "لاگز ایکسپورٹ کریں"
-                }
-            },
             "features": {
                 "disabled": "غیر فعال"
             },
             "social": {
-                "e2ee_title": "آخر تک آخر اینڈ انکرپشن",
-                "rules_title": "قوانین",
-                "participants_text": "{count} مشترکین",
-                "not_found": "نہیں ملی",
-                "streaks_title": "استریکس",
-                "streaks_length_text": "لمبائی: {length}",
-                "streaks_expiration_short": "{hours}گنٹے",
-                "streaks_expiration_text": "میں ختم ہو جائے گا {eta}",
-                "reminder_button": "یاد دلانے کی ترتیب دیں"
+                "streaks_expiration_short": "{hours}گنٹے"
             },
             "tasks": {
                 "no_tasks": "کوئی کام نہیں"
+            },
+            "home_logs": {
+                "export_logs_button": "لوگ ایکسپورٹ کریں"
+            },
+            "home": {
+                "update_title": "سنیپ انہنس اپڈیٹ",
+                "update_button": "ڈاؤن لوڈ"
+            },
+            "home_settings": {
+                "actions_title": "کارروائی",
+                "success_toast": "ہو گیا!",
+                "export_button": "ایکسپورت"
             }
         },
         "dialogs": {
@@ -109,7 +109,8 @@
                 "name": "بات چیت کو پن کریں"
             },
             "unsaveable_messages": {
-                "name": "ناقابل محفوظ پیغامات"
+                "name": "ناقابل محفوظ پیغامات",
+                "description": "لوگوں کی چیٹ میں پیغامات کو محفوظ ہونے سے روکتا ہے۔"
             }
         }
     },
@@ -413,14 +414,6 @@
                         "name": "فریب",
                         "description": "آپ کے بارے میں مختلف معلومات کو فریب دیتا ہے"
                     },
-                    "app_passcode": {
-                        "name": "ایپ پاس کوڈ",
-                        "description": "ایپ کو منظم کرنے کے لئے ایک پاس کوڈ تعین کرتا ہے"
-                    },
-                    "app_lock_on_resume": {
-                        "name": "ریزوم پر ایپ لاک",
-                        "description": "ایپ کو دوبارہ کھولنے پر ایپ کو لاک کرتا ہے"
-                    },
                     "infinite_story_boost": {
                         "name": "بے انتہا کہانی کی بوسٹ",
                         "description": "کہانی کی بوسٹ لمبائی کی پابندی کو چھوڑ دیتا ہے"
@@ -653,5 +646,8 @@
     "streaks_reminder": {
         "notification_title": "مسلسلی",
         "notification_text": "آپ {hoursLeft} گھنٹوں میں اپنے دوست {friend} کے ساتھ اپنے مسلسلی کو خوو دیں گے"
+    },
+    "scopes": {
+        "friend": "ڈوست"
     }
 }

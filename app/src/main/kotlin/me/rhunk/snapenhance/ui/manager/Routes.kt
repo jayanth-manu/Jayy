@@ -35,7 +35,7 @@ data class RouteInfo(
     val icon: ImageVector = Icons.Default.Home,
     val primary: Boolean = false,
 ) {
-    var translatedKey: String? = null
+    var translatedKey: Lazy<String?>? = null
     val childIds = mutableListOf<String>()
 }
 
@@ -77,6 +77,8 @@ class Routes(
         lateinit var context: RemoteSideContext
         lateinit var routeInfo: RouteInfo
         lateinit var routes: Routes
+
+        val translation by lazy { context.translation.getCategory("manager.sections.${routeInfo.key.substringBefore("/")}")}
 
         private fun replaceArguments(id: String, args: Map<String, String>) = args.takeIf { it.isNotEmpty() }?.let {
             args.entries.fold(id) { acc, (key, value) ->
@@ -130,7 +132,7 @@ class Routes(
             this.routeInfo = routeInfo
             routes = this@Routes
             context = this@Routes.context
-            this.routeInfo.translatedKey = context.translation.getOrNull("manager.routes.${route.routeInfo.key.substringBefore("/")}")
+            this.routeInfo.translatedKey = lazy { context.translation.getOrNull("manager.routes.${route.routeInfo.key.substringBefore("/")}") }
         }
         routes.add(route)
         return route

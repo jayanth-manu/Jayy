@@ -8,30 +8,21 @@ import android.graphics.drawable.Drawable
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.CompoundButton
 import android.widget.LinearLayout
-import android.widget.ProgressBar
 import android.widget.Switch
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CheckCircleOutline
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.NotInterested
-import androidx.compose.material.icons.filled.WarningAmber
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 import me.rhunk.snapenhance.common.data.ContentType
 import me.rhunk.snapenhance.common.data.FriendLinkType
-import me.rhunk.snapenhance.common.data.MessageUpdate
 import me.rhunk.snapenhance.common.database.impl.ConversationMessage
 import me.rhunk.snapenhance.common.database.impl.FriendInfo
-import me.rhunk.snapenhance.common.database.impl.UserConversationLink
 import me.rhunk.snapenhance.common.scripting.ui.EnumScriptInterface
 import me.rhunk.snapenhance.common.scripting.ui.InterfaceManager
 import me.rhunk.snapenhance.common.scripting.ui.ScriptInterface
@@ -39,6 +30,7 @@ import me.rhunk.snapenhance.common.ui.createComposeView
 import me.rhunk.snapenhance.common.util.protobuf.ProtoReader
 import me.rhunk.snapenhance.common.util.snap.BitmojiSelfie
 import me.rhunk.snapenhance.core.features.impl.experiments.EndToEndEncryption
+import me.rhunk.snapenhance.core.features.impl.messaging.AutoMarkAsRead
 import me.rhunk.snapenhance.core.features.impl.messaging.Messaging
 import me.rhunk.snapenhance.core.features.impl.spying.MessageLogger
 import me.rhunk.snapenhance.core.ui.ViewAppearanceHelper
@@ -53,9 +45,6 @@ import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
 import java.util.Locale
-import kotlin.coroutines.resume
-import kotlin.coroutines.suspendCoroutine
-import kotlin.random.Random
 
 class FriendFeedInfoMenu : AbstractMenu() {
     private fun getImageDrawable(url: String): Drawable {
@@ -131,47 +120,6 @@ class FriendFeedInfoMenu : AbstractMenu() {
         }
     }
 
-    private fun markAsSeen(conversationId: String) {
-        val messaging = context.feature(Messaging::class)
-        val messageIds = messaging.getFeedCachedMessageIds(conversationId)?.takeIf { it.isNotEmpty() } ?: run {
-            context.inAppOverlay.showStatusToast(
-                Icons.Default.WarningAmber,
-                context.translation["mark_as_seen.no_unseen_snaps_toast"]
-            )
-            return
-        }
-
-        var job: Job? = null
-        val dialog = ViewAppearanceHelper.newAlertDialogBuilder(context.mainActivity)
-            .setTitle("Processing...")
-            .setView(ProgressBar(context.mainActivity).apply {
-                setPadding(10, 10, 10, 10)
-            })
-            .setOnDismissListener { job?.cancel() }
-            .show()
-
-        context.coroutineScope.launch(Dispatchers.IO) {
-            messageIds.forEach { messageId ->
-                suspendCoroutine { continuation ->
-                    messaging.conversationManager?.updateMessage(conversationId, messageId, MessageUpdate.READ) {
-                        continuation.resume(Unit)
-                        if (it != null && it != "DUPLICATEREQUEST") {
-                            context.log.error("Error marking message as read $it")
-                        }
-                    }
-                }
-                delay(Random.nextLong(20, 60))
-                context.runOnUiThread {
-                    dialog.setTitle("Processing... (${messageIds.indexOf(messageId) + 1}/${messageIds.size})")
-                }
-            }
-        }.also { job = it }.invokeOnCompletion {
-            context.runOnUiThread {
-                dialog.dismiss()
-            }
-        }
-    }
-
     private fun showPreview(userId: String?, conversationId: String) {
         //query message
         val messageLogger = context.feature(MessageLogger::class)
@@ -227,6 +175,7 @@ class FriendFeedInfoMenu : AbstractMenu() {
 
         targetPerson?.streakExpirationTimestamp?.takeIf { it > 0 }?.let {
             val timeSecondDiff = ((it - System.currentTimeMillis()) / 1000 / 60).toInt()
+            if (timeSecondDiff <= 0) return@let
             messageBuilder.append("\n")
                 .append("\uD83D\uDD25 ") //fire emoji
                 .append(
@@ -259,30 +208,6 @@ class FriendFeedInfoMenu : AbstractMenu() {
         builder.show()
     }
 
-    private fun getCurrentConversationInfo(): Pair<String, String?> {
-        val messaging = context.feature(Messaging::class)
-        val focusedConversationTargetUser: String? = messaging.lastFetchConversationUserUUID?.toString()
-
-        //mapped conversation fetch (may not work with legacy sc versions)
-        messaging.lastFetchGroupConversationUUID?.let {
-            context.database.getFeedEntryByConversationId(it.toString())?.let { friendFeedInfo ->
-                val participantSize = friendFeedInfo.participantsSize
-                return it.toString() to if (participantSize == 1) focusedConversationTargetUser else null
-            }
-            throw IllegalStateException("No conversation found")
-        }
-
-        //old conversation fetch
-        val conversationId = if (messaging.lastFetchConversationUUID == null && focusedConversationTargetUser != null) {
-            val conversation: UserConversationLink = context.database.getConversationLinkFromUserId(focusedConversationTargetUser) ?: throw IllegalStateException("No conversation found")
-            conversation.clientConversationId!!.trim().lowercase()
-        } else {
-            messaging.lastFetchConversationUUID.toString()
-        }
-
-        return conversationId to focusedConversationTargetUser
-    }
-
     private fun createToggleFeature(viewConsumer: ((View) -> Unit), value: String, checked: () -> Boolean, toggle: (Boolean) -> Unit) {
         viewConsumer(Switch(context.androidContext).apply {
             text = this@FriendFeedInfoMenu.context.translation[value]
@@ -301,7 +226,13 @@ class FriendFeedInfoMenu : AbstractMenu() {
         val friendFeedMenuOptions by context.config.userInterface.friendFeedMenuButtons
         if (friendFeedMenuOptions.isEmpty()) return
 
-        val (conversationId, targetUser) = getCurrentConversationInfo()
+        val messaging = context.feature(Messaging::class)
+        val conversationId = messaging.lastFocusedConversationId ?: run {
+            context.shortToast("No conversation focused!")
+            return
+        }
+        val targetUser = context.database.getDMOtherParticipant(conversationId)
+        messaging.resetLastFocusedConversation()
 
         val translation = context.translation.getCategory("friend_menu_option")
         if (friendFeedMenuOptions.contains("conversation_info")) {
@@ -342,8 +273,10 @@ class FriendFeedInfoMenu : AbstractMenu() {
                 isSoundEffectsEnabled = false
                 applyTheme(view.width, hasRadius = true)
                 setOnClickListener {
-                    this@FriendFeedInfoMenu.context.mainActivity?.triggerRootCloseTouchEvent()
-                    markAsSeen(conversationId)
+                    this@FriendFeedInfoMenu.context.apply {
+                        mainActivity?.triggerRootCloseTouchEvent()
+                        feature(AutoMarkAsRead::class).markSnapsAsSeen(conversationId)
+                    }
                 }
             })
         }

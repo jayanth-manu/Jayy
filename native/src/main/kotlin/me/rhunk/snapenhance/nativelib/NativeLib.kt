@@ -2,9 +2,9 @@ package me.rhunk.snapenhance.nativelib
 
 import android.util.Log
 
+@Suppress("KotlinJniMissingFunction")
 class NativeLib {
     var nativeUnaryCallCallback: (NativeRequestData) -> Unit = {}
-    var nativeShouldLoadAsset: (String) -> Boolean = { true }
 
     companion object {
         var initialized = false
@@ -17,10 +17,12 @@ class NativeLib {
             System.loadLibrary(BuildConfig.NATIVE_NAME)
             initialized = true
             callback(this)
-            init()
+            if (!init()) {
+                throw IllegalStateException("NativeLib init failed. Check logcat for more info")
+            }
         }.onFailure {
             initialized = false
-            Log.e("SnapEnhance", "NativeLib init failed")
+            Log.e("SnapEnhance", "NativeLib init failed", it)
         }
     }
 
@@ -35,11 +37,6 @@ class NativeLib {
         if (nativeRequestData.canceled || !nativeRequestData.buffer.contentEquals(buffer)) return nativeRequestData
         return null
     }
-
-    @Suppress("unused")
-    private fun shouldLoadAsset(name: String) = runCatching {
-        nativeShouldLoadAsset(name)
-    }.getOrNull() ?: true
 
     fun loadNativeConfig(config: NativeConfig) {
         if (!initialized) return
@@ -57,7 +54,9 @@ class NativeLib {
         }
     }
 
-    private external fun init()
+    private external fun init(): Boolean
     private external fun loadConfig(config: NativeConfig)
     private external fun lockDatabase(name: String, callback: Runnable)
+    external fun setComposerLoader(code: String)
+    external fun composerEval(code: String): String?
 }
