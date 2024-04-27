@@ -86,6 +86,7 @@ class FeatureManager(
             InfiniteStoryBoost(),
             AmoledDarkMode(),
             PinConversations(),
+            No1BFFConversations(),
             DeviceSpooferHook(),
             ClientBootstrapOverride(),
             GooglePlayServicesDialogs(),

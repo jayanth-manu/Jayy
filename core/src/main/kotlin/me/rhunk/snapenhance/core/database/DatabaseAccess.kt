@@ -32,7 +32,7 @@ class DatabaseAccess(
 ) {
     private val openedDatabases = mutableMapOf<DatabaseType, SQLiteDatabase>()
 
-    private fun useDatabase(database: DatabaseType, writeMode: Boolean = false): SQLiteDatabase? {
+    fun useDatabase(database: DatabaseType, writeMode: Boolean = false): SQLiteDatabase? {
         // only cache read-only databases
         if (!writeMode && openedDatabases.containsKey(database) && openedDatabases[database]?.isOpen == true) {
             return openedDatabases[database]

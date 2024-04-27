@@ -49,7 +49,8 @@ enum class MessagingRuleType(
     UNSAVEABLE_MESSAGES("unsaveable_messages", true, configNotices = arrayOf(FeatureNotice.REQUIRE_NATIVE_HOOKS), defaultValue = null),
     HIDE_FRIEND_FEED("hide_friend_feed", false, showInFriendMenu = false),
     E2E_ENCRYPTION("e2e_encryption", false),
-    PIN_CONVERSATION("pin_conversation", false, showInFriendMenu = false);
+    PIN_CONVERSATION("pin_conversation", false, showInFriendMenu = false),
+    PINNO1BFF_CONVERSATION("pinno1bff_conversation", false, showInFriendMenu = false);
 
     fun translateOptionKey(optionKey: String): String {
         return if (listMode) "rules.properties.$key.options.$optionKey" else "rules.properties.$key.name"
