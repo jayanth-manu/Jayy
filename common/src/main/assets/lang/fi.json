@@ -238,10 +238,6 @@
                         "name": "Ota käyttöön sovelluksen ulkoasuasetukset",
                         "description": "Ottaa käyttöön piilotetun sovelluksen ulkoasuasetuksen\nEi välttämättä vaadita uudemmissa Snapchat-versioissa"
                     },
-                    "amoled_dark_mode": {
-                        "name": "AMOLED Tumma Tila",
-                        "description": "Ottaa käyttöön AMOLED tumman tilan\nVarmista että Snapchatin tumma tila on päällä"
-                    },
                     "friend_feed_message_preview": {
                         "name": "Ystäväsyötteen Viestien Esikatselu",
                         "description": "Näyttää esikatselun ystäväsyötteen viimeisimmistä viesteistä",

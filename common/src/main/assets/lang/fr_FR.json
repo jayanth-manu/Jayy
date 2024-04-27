@@ -319,10 +319,6 @@
                         "name": "Activer les paramètres d'apparence de l'appli",
                         "description": "Active le paramètre d’apparence caché de l’application\nPeut ne pas être nécessaire sur les nouvelles versions de Snapchat"
                     },
-                    "amoled_dark_mode": {
-                        "name": "Mode sombre AMOLED",
-                        "description": "Activer le mode sombre pour les écrans AMOLED\nAssurez-vous d'avoir bien activé le mode sombre de Snapchat"
-                    },
                     "friend_feed_message_preview": {
                         "name": "Aperçu du message du flux d'amis",
                         "description": "Affiche un aperçu des derniers messages du flux d'ami",
