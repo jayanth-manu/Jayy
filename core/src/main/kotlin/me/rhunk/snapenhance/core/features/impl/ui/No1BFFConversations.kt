@@ -38,6 +38,7 @@ class No1BFFConversations : MessagingRuleFeature("No1BFFConversations", Messagin
             // TODO: Add the conversation to the database so it shows up in the UI.
             //  I'm not even sure where to start with this yet... 😬
         }
+
     }
 
     override fun getRuleState() = RuleState.WHITELIST
