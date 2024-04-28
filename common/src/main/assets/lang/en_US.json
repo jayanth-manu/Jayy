@@ -371,7 +371,7 @@
                                 "description": "Changes Snapchats text color\nInput hex color code"
                             },
                             "send_and_received_text_color": {
-                                "name": "Sent & Received Color",
+                                "name": "Sent & Received Text Color",
                                 "description": "Changes Snapchats Sent and Received text color on the friend feed\nInput a hex color code"
                             },
                             "background_color": {
