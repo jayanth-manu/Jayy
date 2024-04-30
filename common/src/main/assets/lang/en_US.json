@@ -366,27 +366,27 @@
                         "name": "Colors",
                         "description": "Customize Snapchats Colors",
                         "properties": {
-                            "text_colour": {
+                            "text_color": {
                                 "name": "Text Color",
                                 "description": "Changes Snapchats text color\nInput hex color code"
                             },
-                            "chat_colour": {
-                                "name": "Sent & Received Color",
+                            "send_and_received_text_color": {
+                                "name": "Sent & Received Text Color",
                                 "description": "Changes Snapchats Sent and Received text color on the friend feed\nInput a hex color code"
                             },
-                            "background_colour": {
+                            "background_color": {
                                 "name": "Background Color",
                                 "description": "Changes Snapchats background color\nInput a hex color code"
                             },
-                            "background_colour_surface": {
+                            "background_color_surface": {
                                 "name": "Background Surface Color",
                                 "description": "Changes Snapchats background surface color\nInput a hex color code"
                             },
-                            "action_menu_background_colour": {
+                            "action_menu_background_color": {
                                 "name": "Action Menu Background Color",
                                 "description": "Changes Snapchats chat action menu background color\nInput a hex color code"
                             },
-                            "action_menu_round_background_colour": {
+                            "action_menu_round_background_color": {
                                 "name": "Action Menu Round Background Color",
                                 "description": "Changes Snapchats chat action menu round background color\nInput a hex color code"
                             }
@@ -936,6 +936,10 @@
                         "name": "No Friend Score Delay",
                         "description": "Removes the delay when viewing a Friends Score"
                     },
+                    "best_friend_pinning": {
+                        "name": "Best Friend Pinning",
+                        "description": "Allows you to pin a friend as your number one best friend. Note: only you can see your pinned best friend"
+                    },
                     "e2ee": {
                         "name": "End-To-End Encryption",
                         "description": "Encrypts your messages with AES using a shared secret key\nMake sure to save your key somewhere safe!",
@@ -1059,6 +1063,7 @@
                 "abandon_video": "Missed Video Call"
             },
             "gallery_media_send_override": {
+                "always_ask": "Always Ask",
                 "ORIGINAL": "Original",
                 "NOTE": "Audio Note",
                 "SNAP": "Snap",
