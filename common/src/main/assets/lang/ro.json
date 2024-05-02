@@ -417,6 +417,36 @@
                     "hide_story_suggestions": {
                         "name": "Ascundeți sugestiile de povești",
                         "description": "Elimină sugestiile din pagina Povestiri"
+                    },
+                    "customize_ui": {
+                        "name": "Culori",
+                        "properties": {
+                            "chat_colour": {
+                                "name": "Culoare primită și trimisă",
+                                "description": "Schimbă culoarea textului Snapchat Trimis și Primit în feedul prietenilor\nIntroduceți un cod de culoare hexadecimal"
+                            },
+                            "text_colour": {
+                                "name": "Culoarea textului",
+                                "description": "Schimbă culoarea textului Snapchat\nIntroduceți codul de culoare hexadecimal"
+                            },
+                            "background_colour": {
+                                "description": "Schimbă culoarea de fundal a Snapchat-urilor\nIntroduceți un cod de culoare hexadecimal",
+                                "name": "Culoare de fundal"
+                            },
+                            "background_colour_surface": {
+                                "name": "Culoarea suprafeței de fundal",
+                                "description": "Schimbă culoarea suprafeței de fundal Snapchat\nIntroduceți un cod de culoare hexadecimal"
+                            },
+                            "action_menu_background_colour": {
+                                "name": "Culoarea de fundal a meniului de acțiune",
+                                "description": "Schimbă culoarea de fundal a meniului de acțiuni de chat Snapchat\nIntroduceți un cod de culoare hexadecimal"
+                            },
+                            "action_menu_round_background_colour": {
+                                "description": "Schimbă culoarea de fundal rotundă a meniului de acțiuni de chat Snapchat\nIntroduceți un cod de culoare hexadecimal",
+                                "name": "Culoare de fundal rotundă din meniul de acțiuni"
+                            }
+                        },
+                        "description": "Personalizați culorile Snapchat"
                     }
                 },
                 "name": "Interfața cu utilizatorul",
@@ -585,6 +615,10 @@
                             "spoof_headphones": {
                                 "description": "Falsifică starea de a asculta muzică pe hartă",
                                 "name": "Falsificarea purtării Căștilor"
+                            },
+                            "walk_radius": {
+                                "name": "Raza de deplasare",
+                                "description": "Mergeți la întâmplare în această rază (ft)"
                             }
                         }
                     },
@@ -647,6 +681,10 @@
                     "disable_snap_splitting": {
                         "name": "Dezactivare divizare Snap",
                         "description": "Împiedică împărțirea instantaneelor în mai multe părți\nImaginile pe care le trimiteți se vor transforma în videoclipuri"
+                    },
+                    "disable_custom_tabs": {
+                        "name": "Dezactivați filele personalizate",
+                        "description": "Deschide linkuri în aplicațiile acceptate și nu în browserul web"
                     }
                 },
                 "name": "Global",
@@ -886,6 +924,10 @@
                                     "bypass_camera_roll_limit": {
                                         "description": "Crește cantitatea maximă de media pe care o poți trimite din Ruloul Camerei",
                                         "name": "Ocolește Limita Ruloului Camerei"
+                                    },
+                                    "show_first_created_username": {
+                                        "name": "Afișează primul nume de utilizator creat",
+                                        "description": "Afișează primul nume de utilizator creat lângă numele de utilizator actual în pagina de profil"
                                     }
                                 },
                                 "description": "Injectează cod în framework-ul UI cross-platform Composer"
@@ -1160,7 +1202,8 @@
                 "SNAP": "Snap",
                 "SAVABLE_SNAP": "Snap salvabil",
                 "ORIGINAL": "Original",
-                "NOTE": "Notă audio"
+                "NOTE": "Notă audio",
+                "always_ask": "Intreaba mereu"
             },
             "app_appearance": {
                 "always_light": "Întotdeauna Luminat",
