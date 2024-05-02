@@ -417,36 +417,6 @@
                     "hide_story_suggestions": {
                         "name": "Ascundeți sugestiile de povești",
                         "description": "Elimină sugestiile din pagina Povestiri"
-                    },
-                    "customize_ui": {
-                        "properties": {
-                            "text_colour": {
-                                "description": "",
-                                "name": ""
-                            },
-                            "action_menu_round_background_colour": {
-                                "name": "",
-                                "description": ""
-                            },
-                            "background_colour": {
-                                "name": "",
-                                "description": ""
-                            },
-                            "background_colour_surface": {
-                                "name": "",
-                                "description": ""
-                            },
-                            "action_menu_background_colour": {
-                                "name": "",
-                                "description": ""
-                            },
-                            "chat_colour": {
-                                "description": "",
-                                "name": ""
-                            }
-                        },
-                        "name": "",
-                        "description": ""
                     }
                 },
                 "name": "Interfața cu utilizatorul",
@@ -615,10 +585,6 @@
                             "spoof_headphones": {
                                 "description": "Falsifică starea de a asculta muzică pe hartă",
                                 "name": "Falsificarea purtării Căștilor"
-                            },
-                            "walk_radius": {
-                                "name": "",
-                                "description": ""
                             }
                         }
                     },
@@ -681,10 +647,6 @@
                     "disable_snap_splitting": {
                         "name": "Dezactivare divizare Snap",
                         "description": "Împiedică împărțirea instantaneelor în mai multe părți\nImaginile pe care le trimiteți se vor transforma în videoclipuri"
-                    },
-                    "disable_custom_tabs": {
-                        "name": "",
-                        "description": ""
                     }
                 },
                 "name": "Global",
@@ -924,10 +886,6 @@
                                     "bypass_camera_roll_limit": {
                                         "description": "Crește cantitatea maximă de media pe care o poți trimite din Ruloul Camerei",
                                         "name": "Ocolește Limita Ruloului Camerei"
-                                    },
-                                    "show_first_created_username": {
-                                        "name": "",
-                                        "description": ""
                                     }
                                 },
                                 "description": "Injectează cod în framework-ul UI cross-platform Composer"

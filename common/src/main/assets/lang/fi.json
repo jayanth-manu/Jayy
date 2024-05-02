@@ -39,11 +39,7 @@
                 "disabled": "Pois päältä",
                 "export_option": "Exporttaa",
                 "import_option": "Importtaa",
-                "reset_option": "Resetoida",
-                "saved_config_snackbar": "",
-                "config_import_failure_toast": "",
-                "config_export_success_toast": "",
-                "config_import_success_toast": ""
+                "reset_option": "Resetoida"
             },
             "social": {
                 "streaks_expiration_short": "{Tunnit}h",
@@ -88,43 +84,11 @@
                 "rules_title": "Säännöt",
                 "not_found": "Ei löydetty",
                 "streaks_expiration_text_expired": "Vanhentunut",
-                "reminder_button": "Aseta muistutus",
-                "streaks_length_text": "",
-                "streaks_title": "",
-                "e2ee_title": "",
-                "participants_text": "",
-                "delete_scope_confirm_dialog_title": "",
-                "streaks_expiration_text": ""
+                "reminder_button": "Aseta muistutus"
             },
             "logged_stories": {
                 "story_failed_to_load": "Epäonnistui lataamaan",
-                "no_stories": "Ei tarinoita löydetty",
-                "save_from_cache_button": ""
-            },
-            "messaging_preview": {
-                "save_all_option": "",
-                "unsave_all_option": "",
-                "mark_all_as_seen_option": "",
-                "bridge_init_failed": "",
-                "bridge_connection_failed": "",
-                "no_message_hint": "",
-                "delete_all_option": "",
-                "mark_selection_as_seen_option": "",
-                "delete_selection_option": "",
-                "message_fetch_failed": "",
-                "unsave_selection_option": "",
-                "save_selection_option": ""
-            },
-            "logger_history": {
-                "list_friend_format": "",
-                "list_group_format": "",
-                "message_parse_failed": "",
-                "download_attachment_failed_toast": "",
-                "unknown_sender": "",
-                "reverse_order_checkbox": "",
-                "empty_message": "",
-                "no_more_messages": "",
-                "chat_attachment": ""
+                "no_stories": "Ei tarinoita löydetty"
             }
         },
         "dialogs": {
@@ -134,19 +98,6 @@
                 "fetch_error": "Tietojen noutaminen epäonnistui",
                 "category_groups": "Ryhmät",
                 "category_friends": "Kaverit"
-            },
-            "scripting_warning": {
-                "title": "",
-                "content": ""
-            },
-            "messaging_action": {
-                "select_all_button": "",
-                "title": ""
-            },
-            "reset_config": {
-                "content": "",
-                "title": "",
-                "success_toast": ""
             }
         }
     },
@@ -188,27 +139,7 @@
             },
             "pin_conversation": {
                 "name": "Kiinnitä Keskustelu"
-            },
-            "auto_open_snaps": {
-                "options": {
-                    "whitelist": "",
-                    "blacklist": ""
-                },
-                "name": "",
-                "description": ""
-            },
-            "unsaveable_messages": {
-                "name": "",
-                "options": {
-                    "whitelist": "",
-                    "blacklist": ""
-                },
-                "description": ""
             }
-        },
-        "toasts": {
-            "enabled": "",
-            "disabled": ""
         }
     },
     "features": {
@@ -296,18 +227,6 @@
                     "logging": {
                         "name": "Lokiin kirjaus",
                         "description": "Näytä pieni ilmoitus kun lataus on käynnissä"
-                    },
-                    "download_context_menu": {
-                        "name": "",
-                        "description": ""
-                    },
-                    "custom_path_format": {
-                        "description": "",
-                        "name": ""
-                    },
-                    "opera_download_button": {
-                        "name": "",
-                        "description": ""
                     }
                 }
             },
@@ -378,80 +297,6 @@
                     "enable_friend_feed_menu_bar": {
                         "name": "Ystäväsyötteen valikkopalkki",
                         "description": "Ottaa käyttöön uuden ystäväsyötteen valikkopalkin"
-                    },
-                    "opera_media_quick_info": {
-                        "name": "",
-                        "description": ""
-                    },
-                    "edit_text_override": {
-                        "description": "",
-                        "name": ""
-                    },
-                    "hide_story_suggestions": {
-                        "name": "",
-                        "description": ""
-                    },
-                    "message_indicators": {
-                        "name": "",
-                        "description": ""
-                    },
-                    "customize_ui": {
-                        "properties": {
-                            "background_colour": {
-                                "name": "",
-                                "description": ""
-                            },
-                            "background_colour_surface": {
-                                "name": "",
-                                "description": ""
-                            },
-                            "action_menu_background_colour": {
-                                "name": "",
-                                "description": ""
-                            },
-                            "action_menu_round_background_colour": {
-                                "description": "",
-                                "name": ""
-                            },
-                            "chat_colour": {
-                                "description": "",
-                                "name": ""
-                            },
-                            "text_colour": {
-                                "description": "",
-                                "name": ""
-                            }
-                        },
-                        "name": "",
-                        "description": ""
-                    },
-                    "snap_preview": {
-                        "name": "",
-                        "description": ""
-                    },
-                    "old_bitmoji_selfie": {
-                        "name": "",
-                        "description": ""
-                    },
-                    "vertical_story_viewer": {
-                        "name": "",
-                        "description": ""
-                    },
-                    "prevent_message_list_auto_scroll": {
-                        "description": "",
-                        "name": ""
-                    },
-                    "hide_settings_gear": {
-                        "name": "",
-                        "description": ""
-                    },
-                    "stealth_mode_indicator": {
-                        "name": "",
-                        "description": ""
-                    },
-                    "hide_quick_add_friend_feed": {
-                        "name": "",
-                        "description": ""
                     }
                 }
             },
@@ -497,21 +342,7 @@
                     },
                     "message_logger": {
                         "name": "Viestiloki",
-                        "description": "Estää viestien poistamisen",
-                        "properties": {
-                            "keep_my_own_messages": {
-                                "name": "",
-                                "description": ""
-                            },
-                            "message_filter": {
-                                "description": "",
-                                "name": ""
-                            },
-                            "auto_purge": {
-                                "description": "",
-                                "name": ""
-                            }
-                        }
+                        "description": "Estää viestien poistamisen"
                     },
                     "auto_save_messages_in_conversations": {
                         "name": "Automaattinen Viestien Tallennus",
@@ -520,64 +351,6 @@
                     "gallery_media_send_override": {
                         "name": "Gallerian Medialähetyksen Ohitus",
                         "description": "Väärennä median lähde lähetettäessä galleriasta"
-                    },
-                    "remove_groups_locked_status": {
-                        "name": "",
-                        "description": ""
-                    },
-                    "strip_media_metadata": {
-                        "description": "",
-                        "name": ""
-                    },
-                    "bypass_message_retention_policy": {
-                        "name": "",
-                        "description": ""
-                    },
-                    "prevent_story_rewatch_indicator": {
-                        "description": "",
-                        "name": ""
-                    },
-                    "bypass_message_action_restrictions": {
-                        "name": "",
-                        "description": ""
-                    },
-                    "friend_mutation_notifier": {
-                        "description": "",
-                        "name": ""
-                    },
-                    "bypass_screenshot_detection": {
-                        "description": "",
-                        "name": ""
-                    },
-                    "hide_peek_a_peek": {
-                        "description": "",
-                        "name": ""
-                    },
-                    "loop_media_playback": {
-                        "name": "",
-                        "description": ""
-                    },
-                    "auto_mark_as_read": {
-                        "name": "",
-                        "description": ""
-                    },
-                    "half_swipe_notifier": {
-                        "description": "",
-                        "properties": {
-                            "max_duration": {
-                                "name": "",
-                                "description": ""
-                            },
-                            "min_duration": {
-                                "name": "",
-                                "description": ""
-                            }
-                        },
-                        "name": ""
-                    },
-                    "call_start_confirmation": {
-                        "description": "",
-                        "name": ""
                     }
                 }
             },
@@ -612,84 +385,6 @@
                     "disable_snap_splitting": {
                         "name": "Poista Snäppien katkominen käytöstä",
                         "description": "Estää Snäppejä jakautumasta useisiin osiin\nLähettämäsi kuvat muuttuvat videoiksi"
-                    },
-                    "spotlight_comments_username": {
-                        "description": "",
-                        "name": ""
-                    },
-                    "better_location": {
-                        "description": "",
-                        "properties": {
-                            "coordinates": {
-                                "description": "",
-                                "name": ""
-                            },
-                            "spoof_battery_level": {
-                                "description": "",
-                                "name": ""
-                            },
-                            "spoof_headphones": {
-                                "description": "",
-                                "name": ""
-                            },
-                            "suspend_location_updates": {
-                                "description": "",
-                                "name": ""
-                            },
-                            "always_update_location": {
-                                "name": "",
-                                "description": ""
-                            },
-                            "spoof_location": {
-                                "name": "",
-                                "description": ""
-                            },
-                            "walk_radius": {
-                                "name": "",
-                                "description": ""
-                            }
-                        },
-                        "name": ""
-                    },
-                    "disable_permission_requests": {
-                        "name": "",
-                        "description": ""
-                    },
-                    "default_volume_controls": {
-                        "description": "",
-                        "name": ""
-                    },
-                    "disable_story_sections": {
-                        "description": "",
-                        "name": ""
-                    },
-                    "hide_active_music": {
-                        "name": "",
-                        "description": ""
-                    },
-                    "default_video_playback_rate": {
-                        "name": "",
-                        "description": ""
-                    },
-                    "video_playback_rate_slider": {
-                        "description": "",
-                        "name": ""
-                    },
-                    "disable_custom_tabs": {
-                        "description": "",
-                        "name": ""
-                    },
-                    "disable_memories_snap_feed": {
-                        "name": "",
-                        "description": ""
-                    },
-                    "disable_confirmation_dialogs": {
-                        "description": "",
-                        "name": ""
-                    },
-                    "force_upload_source_quality": {
-                        "name": "",
-                        "description": ""
                     }
                 }
             },
@@ -708,38 +403,6 @@
                     "force_camera_source_encoding": {
                         "name": "Pakota kameran lähdekoodaus",
                         "description": "Pakottaa kameran lähdekoodauksen"
-                    },
-                    "back_custom_frame_rate": {
-                        "description": "",
-                        "name": ""
-                    },
-                    "custom_resolution": {
-                        "description": "",
-                        "name": ""
-                    },
-                    "front_custom_frame_rate": {
-                        "name": "",
-                        "description": ""
-                    },
-                    "override_front_resolution": {
-                        "description": "",
-                        "name": ""
-                    },
-                    "override_back_resolution": {
-                        "name": "",
-                        "description": ""
-                    },
-                    "hevc_recording": {
-                        "description": "",
-                        "name": ""
-                    },
-                    "disable_cameras": {
-                        "name": "",
-                        "description": ""
-                    },
-                    "black_photos": {
-                        "name": "",
-                        "description": ""
                     }
                 }
             },
@@ -772,60 +435,12 @@
                             "disable_bitmoji": {
                                 "name": "Poista Bitmoji Käytöstä",
                                 "description": "Poista kavereiden profiili Bitmojit käytöstä"
-                            },
-                            "composer_hooks": {
-                                "description": "",
-                                "properties": {
-                                    "composer_console": {
-                                        "description": "",
-                                        "name": ""
-                                    },
-                                    "show_first_created_username": {
-                                        "description": "",
-                                        "name": ""
-                                    },
-                                    "composer_logs": {
-                                        "name": "",
-                                        "description": ""
-                                    },
-                                    "bypass_camera_roll_limit": {
-                                        "description": "",
-                                        "name": ""
-                                    }
-                                },
-                                "name": ""
                             }
                         }
                     },
                     "spoof": {
                         "name": "Väärennä",
-                        "description": "Väärennä erinäisiä tietoja sinusta",
-                        "properties": {
-                            "android_id": {
-                                "name": "",
-                                "description": ""
-                            },
-                            "play_store_installer_package_name": {
-                                "name": "",
-                                "description": ""
-                            },
-                            "fingerprint": {
-                                "name": "",
-                                "description": ""
-                            },
-                            "randomize_persistent_device_token": {
-                                "description": "",
-                                "name": ""
-                            },
-                            "remove_mock_location_flag": {
-                                "name": "",
-                                "description": ""
-                            },
-                            "remove_vpn_transport_flag": {
-                                "name": "",
-                                "description": ""
-                            }
-                        }
+                        "description": "Väärennä erinäisiä tietoja sinusta"
                     },
                     "infinite_story_boost": {
                         "name": "Loputon Tarinan Tehostus",
@@ -860,72 +475,6 @@
                     "hidden_snapchat_plus_features": {
                         "name": "Piilotetut Snapchat Plus -ominaisuudet",
                         "description": "Ottaa käyttöön julkaisemattomat/beta Snapchat Plus -ominaisuudet\nEi ehkä toimi vanhemmissa Snapchat-versioissa"
-                    },
-                    "new_chat_action_menu": {
-                        "name": "",
-                        "description": ""
-                    },
-                    "session_events": {
-                        "description": "",
-                        "name": "",
-                        "properties": {
-                            "allow_running_in_background": {
-                                "name": "",
-                                "description": ""
-                            },
-                            "capture_duplex_events": {
-                                "description": "",
-                                "name": ""
-                            }
-                        }
-                    },
-                    "call_recorder": {
-                        "name": "",
-                        "description": ""
-                    },
-                    "edit_message": {
-                        "description": "",
-                        "name": ""
-                    },
-                    "account_switcher": {
-                        "properties": {
-                            "auto_backup_current_account": {
-                                "description": "",
-                                "name": ""
-                            }
-                        },
-                        "description": "",
-                        "name": ""
-                    },
-                    "convert_message_locally": {
-                        "description": "",
-                        "name": ""
-                    },
-                    "media_file_picker": {
-                        "description": "",
-                        "name": ""
-                    },
-                    "story_logger": {
-                        "description": "",
-                        "name": ""
-                    },
-                    "app_lock": {
-                        "name": "",
-                        "properties": {
-                            "lock_on_resume": {
-                                "name": "",
-                                "description": ""
-                            }
-                        },
-                        "description": ""
-                    },
-                    "prevent_forced_logout": {
-                        "name": "",
-                        "description": ""
-                    },
-                    "custom_streaks_expiration_format": {
-                        "name": "",
-                        "description": ""
                     }
                 }
             },
@@ -940,18 +489,6 @@
                     "module_folder": {
                         "name": "Moduulin kansio",
                         "description": "Kansio, jossa komentosarjat sijaitsevat"
-                    },
-                    "auto_reload": {
-                        "name": "",
-                        "description": ""
-                    },
-                    "integrated_ui": {
-                        "description": "",
-                        "name": ""
-                    },
-                    "disable_log_anonymization": {
-                        "name": "",
-                        "description": ""
                     }
                 }
             }
@@ -964,23 +501,14 @@
             "better_notifications": {
                 "reply_button": "Lisää \"Vastaa\" -painike",
                 "download_button": "Lisää latauspainike",
-                "group": "Ryhmäilmoitukset",
-                "friend_add_source": "",
-                "media_preview": "",
-                "mark_as_read_and_save_in_chat": "",
-                "chat_preview": "",
-                "mark_as_read_button": ""
+                "group": "Ryhmäilmoitukset"
             },
             "friend_feed_menu_buttons": {
                 "auto_download": "⬇️ Automaattinen Lataus",
                 "auto_save": "💬 Automaattinen Viestien Tallennus",
                 "stealth": "👻 Haamutila",
                 "conversation_info": "👤 Keskustelun Tiedot",
-                "e2e_encryption": "🔒 Käytä E2E-salausta",
-                "mark_stories_as_seen_locally": "",
-                "auto_open_snaps": "",
-                "unsaveable_messages": "",
-                "mark_snaps_as_seen": ""
+                "e2e_encryption": "🔒 Käytä E2E-salausta"
             },
             "path_format": {
                 "create_author_folder": "Luo kansio jokaiselle kirjoittajalle",
@@ -1030,8 +558,7 @@
                 "hide_chat_call_buttons": "Poista Chatin Puhelupainikkeet",
                 "hide_live_location_share_button": "Poista Sijainnin Jakopainike",
                 "hide_stickers_button": "Poista Tarrat -painike",
-                "hide_voice_record_button": "Poista Äänityspainike",
-                "hide_unread_chat_hint": ""
+                "hide_voice_record_button": "Poista Äänityspainike"
             },
             "home_tab": {
                 "map": "Kartta",
@@ -1050,92 +577,6 @@
             "bypass_video_length_restriction": {
                 "single": "Yksittäinen media",
                 "split": "Jaettu media"
-            },
-            "auto_mark_as_read": {
-                "conversation_read": "",
-                "snap_reply": ""
-            },
-            "auto_purge": {
-                "1_month": "",
-                "6_hours": "",
-                "6_months": "",
-                "1_hour": "",
-                "3_hours": "",
-                "3_months": "",
-                "1_week": "",
-                "1_day": "",
-                "3_days": "",
-                "12_hours": "",
-                "never": "",
-                "2_weeks": ""
-            },
-            "disable_permission_requests": {
-                "microphone": "",
-                "phone_calls": "",
-                "read_media_images": "",
-                "read_contacts": "",
-                "notifications": "",
-                "nearby_devices": "",
-                "camera": "",
-                "location": "",
-                "read_media_video": ""
-            },
-            "edit_text_override": {
-                "multi_line_chat_input": "",
-                "bypass_text_input_limit": ""
-            },
-            "disable_confirmation_dialogs": {
-                "remove_friend": "",
-                "block_friend": "",
-                "ignore_friend": "",
-                "hide_friend": "",
-                "hide_conversation": "",
-                "clear_conversation": "",
-                "erase_message": ""
-            },
-            "message_indicators": {
-                "encryption_indicator": "",
-                "ovf_editor_indicator": "",
-                "director_mode_indicator": "",
-                "location_indicator": "",
-                "platform_indicator": ""
-            },
-            "disable_story_sections": {
-                "friends": "",
-                "following": "",
-                "discover": ""
-            },
-            "hide_story_suggestions": {
-                "hide_my_stories": "",
-                "hide_suggested_friend_stories": "",
-                "hide_friend_suggestions": ""
-            },
-            "disable_cameras": {
-                "front": "",
-                "back": ""
-            },
-            "auto_reload": {
-                "snapchat_only": "",
-                "all": ""
-            },
-            "friend_mutation_notifier": {
-                "birthday_changes": "",
-                "bitmoji_selfie_changes": "",
-                "remove_friend": "",
-                "bitmoji_avatar_changes": "",
-                "bitmoji_background_changes": "",
-                "bitmoji_scene_changes": ""
-            },
-            "old_bitmoji_selfie": {
-                "3d": "",
-                "2d": ""
-            },
-            "strip_media_metadata": {
-                "hide_snap_filters": "",
-                "hide_extras": "",
-                "remove_audio_note_transcript_capability": "",
-                "hide_caption_text": "",
-                "remove_audio_note_duration": ""
             }
         }
     },
@@ -1143,25 +584,15 @@
         "preview": "Esikatselu",
         "stealth_mode": "Haamutila",
         "auto_download_blacklist": "Automaattisen latauksen esto lista",
-        "anti_auto_save": "Automaattisen tallennuksen esto",
-        "mark_stories_as_seen_locally": "",
-        "mark_snaps_as_seen": ""
+        "anti_auto_save": "Automaattisen tallennuksen esto"
     },
     "chat_action_menu": {
         "preview_button": "Esikatselu",
         "download_button": "Lataa",
-        "delete_logged_message_button": "Poista kirjattu viesti",
-        "edit_message": "",
-        "convert_message": ""
+        "delete_logged_message_button": "Poista kirjattu viesti"
     },
     "opera_context_menu": {
-        "download": "Lataa Media",
-        "expires_at": "",
-        "sent_at": "",
-        "media_size": "",
-        "media_duration": "",
-        "show_debug_info": "",
-        "created_at": ""
+        "download": "Lataa Media"
     },
     "modal_option": {
         "profile_info": "Profiilin Tiedot",
@@ -1189,8 +620,7 @@
         "snapchat_plus_state": {
             "subscribed": "Tilattu",
             "not_subscribed": "Ei Tilattu"
-        },
-        "hidden_birthday": ""
+        }
     },
     "chat_export": {
         "dialog_negative_button": "Peruuta",
@@ -1202,16 +632,7 @@
         "writing_output": "Tulostetta kirjoitetaan...",
         "finished": "Valmis! Voit nyt sulkea tämän ikkunan.",
         "no_messages_found": "Viestejä ei löytynyt!",
-        "exporting_message": "Viedään {conversation}...",
-        "exporter_dialog": {
-            "text_field_selection_all": "",
-            "message_type_filter_title": "",
-            "amount_of_messages_title": "",
-            "download_medias_title": "",
-            "select_conversations_title": "",
-            "export_file_format_title": "",
-            "text_field_selection": ""
-        }
+        "exporting_message": "Viedään {conversation}..."
     },
     "button": {
         "ok": "OK",
@@ -1248,13 +669,7 @@
         "failed_generic_toast": "Lataus epäonnistui",
         "failed_to_create_preview_toast": "Esikatselun luominen epäonnistui",
         "failed_processing_toast": "Käsittely epäonnistui {error}",
-        "failed_gallery_toast": "Tallennus galleriaan epäonnistui {error}",
-        "dash_dialog": {
-            "title": "",
-            "segment_text": "",
-            "download_all": ""
-        },
-        "dash_no_chapter": ""
+        "failed_gallery_toast": "Tallennus galleriaan epäonnistui {error}"
     },
     "streaks_reminder": {
         "notification_title": "Striikit",
@@ -1263,182 +678,5 @@
     "scopes": {
         "friend": "Kaveri",
         "group": "Ryhmä"
-    },
-    "end_to_end_encryption": {
-        "confirmation_dialogs": {
-            "confirmation_1": "",
-            "confirmation_2": "",
-            "title": ""
-        },
-        "accept_public_key_success_toast": "",
-        "native_hooks_send_failure_toast": "",
-        "outgoing_secret_message": "",
-        "incoming_secret_message": "",
-        "incoming_pk_message": "",
-        "outgoing_pk_message": "",
-        "toolbox": {
-            "no_shared_key": "",
-            "initiate_exchange_button": "",
-            "shared_key_fingerprint": ""
-        },
-        "unencrypted_conversation_send_failure_toast": "",
-        "no_participants_to_encrypt_toast": "",
-        "accept_secret_key_success_toast": "",
-        "accept_public_key_failure_toast": "",
-        "accept_secret_button": "",
-        "accept_secret_key_failure_toast": "",
-        "accept_public_key_button": "",
-        "encryption_failed_toast": ""
-    },
-    "media_download_source": {
-        "none": "",
-        "chat_media": "",
-        "story": "",
-        "voice_call": "",
-        "message_logger": "",
-        "pending": "",
-        "public_story": "",
-        "spotlight": "",
-        "merged": "",
-        "story_logger": "",
-        "profile_picture": ""
-    },
-    "content_type": {
-        "EXTERNAL_MEDIA": "",
-        "LOCATION": "",
-        "NOTE": "",
-        "STATUS_CALL_MISSED_VIDEO": "",
-        "FAMILY_CENTER_ACCEPT": "",
-        "MAP_REACTION": "",
-        "FAMILY_CENTER_INVITE": "",
-        "STATUS_COUNTDOWN": "",
-        "SNAP": "",
-        "CHAT": "",
-        "STICKER": "",
-        "STATUS_SAVE_TO_CAMERA_ROLL": "",
-        "STATUS_CONVERSATION_CAPTURE_SCREENSHOT": "",
-        "TINY_SNAP": "",
-        "STATUS": "",
-        "LIVE_LOCATION_SHARE": "",
-        "STATUS_CALL_MISSED_AUDIO": "",
-        "CREATIVE_TOOL_ITEM": "",
-        "STATUS_CONVERSATION_CAPTURE_RECORD": "",
-        "FAMILY_CENTER_LEAVE": "",
-        "STATUS_PLUS_GIFT": ""
-    },
-    "material3_strings": {
-        "date_picker_today_description": "",
-        "date_range_picker_scroll_to_previous_month": "",
-        "date_range_picker_scroll_to_next_month": "",
-        "date_picker_switch_to_input_mode": "",
-        "date_input_invalid_for_pattern": "",
-        "date_input_invalid_not_allowed": "",
-        "date_range_input_invalid_range_input": "",
-        "date_range_picker_start_headline": "",
-        "date_range_picker_end_headline": "",
-        "date_range_picker_title": "",
-        "date_picker_switch_to_calendar_mode": "",
-        "date_input_invalid_year_range": "",
-        "date_range_picker_day_in_range": ""
-    },
-    "actions": {
-        "manage_friend_list": {
-            "description": "",
-            "name": ""
-        },
-        "export_chat_messages": {
-            "name": "",
-            "description": ""
-        },
-        "bulk_messaging_action": {
-            "description": "",
-            "name": ""
-        },
-        "clean_snapchat_cache": {
-            "description": "",
-            "name": ""
-        },
-        "change_language": {
-            "name": "",
-            "description": ""
-        },
-        "export_memories": {
-            "name": "",
-            "description": ""
-        },
-        "regen_mappings": {
-            "name": "",
-            "description": ""
-        }
-    },
-    "suspend_location_updates": {
-        "switch_text": ""
-    },
-    "bulk_messaging_action": {
-        "actions": {
-            "clear_conversations": "",
-            "remove_friends": ""
-        },
-        "selection_dialog_continue_button": "",
-        "confirmation_dialog": {
-            "message": "",
-            "title": ""
-        },
-        "choose_action_title": "",
-        "progress_status": ""
-    },
-    "friend_mutation_observer": {
-        "birthday_changed": "",
-        "bitmoji_scene_changed": "",
-        "birthday_added": "",
-        "bitmoji_selfie_changed": "",
-        "bitmoji_background_changed": "",
-        "bitmoji_avatar_changed": "",
-        "notification_channel_name": "",
-        "friend_removed": "",
-        "birthday_removed": ""
-    },
-    "mark_as_seen": {
-        "already_seen_toast": "",
-        "already_unseen_toast": "",
-        "no_unseen_snaps_toast": "",
-        "unseen_toast": "",
-        "seen_toast": ""
-    },
-    "friendship_link_type": {
-        "incoming_follower": "",
-        "suggested": "",
-        "following": "",
-        "deleted": "",
-        "mutual": "",
-        "blocked": "",
-        "outgoing": "",
-        "incoming": ""
-    },
-    "better_notifications": {
-        "button": {
-            "download": "",
-            "mark_as_read": "",
-            "reply": ""
-        },
-        "stealth_mode_notice": ""
-    },
-    "call_start_confirmation": {
-        "dialog_message": "",
-        "dialog_title": ""
-    },
-    "half_swipe_notifier": {
-        "notification_channel_name": "",
-        "notification_content_group": "",
-        "notification_content_dm": ""
-    },
-    "biometric_auth": {
-        "title": "",
-        "subtitle": "",
-        "unlock_button": ""
-    },
-    "auto_open_snaps": {
-        "title": "",
-        "notification_content": ""
     }
 }

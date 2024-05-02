@@ -422,36 +422,6 @@
                     "message_indicators": {
                         "name": "Indicateur de messages",
                         "description": "Ajoute des icônes d'indicateurs spécifiques aux messages\nRemarque : les indicateurs peuvent ne pas être à 100% précis"
-                    },
-                    "customize_ui": {
-                        "description": "",
-                        "properties": {
-                            "chat_colour": {
-                                "name": "",
-                                "description": ""
-                            },
-                            "background_colour": {
-                                "description": "",
-                                "name": ""
-                            },
-                            "text_colour": {
-                                "name": "",
-                                "description": ""
-                            },
-                            "background_colour_surface": {
-                                "name": "",
-                                "description": ""
-                            },
-                            "action_menu_round_background_colour": {
-                                "name": "",
-                                "description": ""
-                            },
-                            "action_menu_background_colour": {
-                                "name": "",
-                                "description": ""
-                            }
-                        },
-                        "name": ""
                     }
                 }
             },
@@ -667,10 +637,6 @@
                             "spoof_headphones": {
                                 "description": "Usurpe le statut d'écoute de musique sur la carte",
                                 "name": "Usurper les écouteurs"
-                            },
-                            "walk_radius": {
-                                "name": "",
-                                "description": ""
                             }
                         },
                         "description": "Améliore la localisation sur Snapchat"
@@ -686,10 +652,6 @@
                     "hide_active_music": {
                         "description": "Empêche Snapchat de savoir que vous écoutez de la musique\nCela vous permettra de prendre des snaps en utilisant les boutons de volume de contrôle tout en écoutant de la musique",
                         "name": "Cache la musique active"
-                    },
-                    "disable_custom_tabs": {
-                        "name": "",
-                        "description": ""
                     }
                 }
             },
@@ -787,10 +749,6 @@
                                     "composer_logs": {
                                         "name": "Journaux de Composer",
                                         "description": "Redirige les journaux de console de Composer vers SnapEnhance"
-                                    },
-                                    "show_first_created_username": {
-                                        "description": "",
-                                        "name": ""
                                     }
                                 }
                             }

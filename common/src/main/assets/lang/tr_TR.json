@@ -422,36 +422,6 @@
                     "message_indicators": {
                         "name": "Mesaj Göstergeleri",
                         "description": "Mesajlara belirli gösterge simgeleri ekler\nNot: göstergeler %100 doğru olmayabilir"
-                    },
-                    "customize_ui": {
-                        "properties": {
-                            "text_colour": {
-                                "name": "",
-                                "description": ""
-                            },
-                            "background_colour": {
-                                "name": "",
-                                "description": ""
-                            },
-                            "background_colour_surface": {
-                                "name": "",
-                                "description": ""
-                            },
-                            "chat_colour": {
-                                "description": "",
-                                "name": ""
-                            },
-                            "action_menu_background_colour": {
-                                "name": "",
-                                "description": ""
-                            },
-                            "action_menu_round_background_colour": {
-                                "description": "",
-                                "name": ""
-                            }
-                        },
-                        "name": "",
-                        "description": ""
                     }
                 }
             },
@@ -675,10 +645,6 @@
                             "spoof_headphones": {
                                 "name": "Sahte Kulaklıklar",
                                 "description": "Harita üzerinde müzik dinleme durumunu taklit eder"
-                            },
-                            "walk_radius": {
-                                "name": "",
-                                "description": ""
                             }
                         },
                         "name": "Daha İyi Konum"

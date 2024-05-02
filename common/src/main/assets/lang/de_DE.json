@@ -422,36 +422,6 @@
                     "message_indicators": {
                         "name": "Nachrichtenindikatoren",
                         "description": "Fügt Nachrichten spezifische Anzeigesymbole hinzu\nHinweis: Die Symbole sind möglicherweise nicht 100 % genau"
-                    },
-                    "customize_ui": {
-                        "properties": {
-                            "background_colour": {
-                                "name": "",
-                                "description": ""
-                            },
-                            "chat_colour": {
-                                "name": "",
-                                "description": ""
-                            },
-                            "background_colour_surface": {
-                                "name": "",
-                                "description": ""
-                            },
-                            "action_menu_round_background_colour": {
-                                "name": "",
-                                "description": ""
-                            },
-                            "text_colour": {
-                                "description": "",
-                                "name": ""
-                            },
-                            "action_menu_background_colour": {
-                                "name": "",
-                                "description": ""
-                            }
-                        },
-                        "name": "",
-                        "description": ""
                     }
                 }
             },
@@ -656,10 +626,6 @@
                             "suspend_location_updates": {
                                 "name": "Stoppe die Aktualisierung des Standortes",
                                 "description": "Fügt in den Karteneinstellungen eine Schaltfläche hinzu, um Standortaktualisierungen auszusetzen"
-                            },
-                            "walk_radius": {
-                                "name": "",
-                                "description": ""
                             }
                         }
                     },
@@ -686,10 +652,6 @@
                     "hide_active_music": {
                         "name": "Aktive Musik ausblenden",
                         "description": "Verhindert, dass Snapchat erkennt, dass Sie Musik hören.\nSo können Sie mithilfe der Lautstärketasten Snaps aufnehmen, während Sie Musik hören"
-                    },
-                    "disable_custom_tabs": {
-                        "name": "",
-                        "description": ""
                     }
                 }
             },
@@ -786,10 +748,6 @@
                                     "composer_logs": {
                                         "name": "Composer-Protokolle",
                                         "description": "Leitet Konsolenprotokolle von Composer zu SnapEnhance um"
-                                    },
-                                    "show_first_created_username": {
-                                        "description": "",
-                                        "name": ""
                                     }
                                 },
                                 "name": "Composer Haken",
