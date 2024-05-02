@@ -7,10 +7,8 @@
         },
         "mappings": {
             "dialog": "Om een scala aan Snapchat-versies te ondersteunen, zijn er mappings nodig om SnapEnhance goed te laten werken. Dit zou niet meer dan 5 seconden mogen duren.",
-            "generate_button": "Genereren",
             "generate_failure_no_snapchat": "SnapEnhance kon Snapchat niet detecteren, probeer alstublieft Snapchat opnieuw te installeren.",
-            "generate_failure": "Er is een fout opgetreden tijdens het genereren van mappings, probeer het opnieuw.",
-            "generate_success": "Mappings succesvol gegenereerd."
+            "generate_failure": "Er is een fout opgetreden tijdens het genereren van mappings, probeer het opnieuw."
         },
         "permissions": {
             "dialog": "Om door te gaan moet je voldoen aan de volgende vereisten:",

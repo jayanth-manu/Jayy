@@ -7,10 +7,8 @@
         },
         "mappings": {
             "dialog": "For dynamisk at støtte en bred vifte af Snapchat versioner, tilknytninger er nødvendige for SnapEnhance at fungere ordentligt, bør dette ikke tage mere end 5 sekunder.",
-            "generate_button": "Generer",
             "generate_failure_no_snapchat": "SnapEnhance kunne ikke detektere Snapchat, prøv at geninstallere Snapchat.",
-            "generate_failure": "Der opstod en fejl under forsøget på at generere mappings, prøv venligst igen.",
-            "generate_success": "Tilpasninger genereret med succes."
+            "generate_failure": "Der opstod en fejl under forsøget på at generere mappings, prøv venligst igen."
         },
         "permissions": {
             "dialog": "For at fortsætte skal du passe til følgende krav:",

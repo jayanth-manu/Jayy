@@ -7,10 +7,8 @@
         },
         "mappings": {
             "dialog": "Aby dynamicznie obsługiwać szeroki zakres wersji Snapchat, konieczne są mapowania, aby SnapEnhance działał poprawnie. To nie powinno zająć więcej niż 5 sekund.",
-            "generate_button": "Wygeneruj",
             "generate_failure_no_snapchat": "SnapEnhance nie było w stanie wykryć Snapchata, spróbuj ponownie zainstalować Snapchat.",
-            "generate_failure": "Wystąpił błąd podczas próby generowania mapowań, spróbuj ponownie.",
-            "generate_success": "Mapowania zostały pomyślnie wygenerowane."
+            "generate_failure": "Wystąpił błąd podczas próby generowania mapowań, spróbuj ponownie."
         },
         "permissions": {
             "dialog": "Aby kontynuować, musisz spełnić poniższe wymagania:",

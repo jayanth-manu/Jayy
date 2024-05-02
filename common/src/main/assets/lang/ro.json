@@ -96,11 +96,9 @@
     },
     "setup": {
         "mappings": {
-            "generate_button": "Generează",
             "generate_failure_no_snapchat": "SnapEnhance nu a putut detecta Snapchat, încercați să reinstalați Snapchat.",
             "dialog": "Pentru a suporta dinamic o mai multe versiuni de Snapchat, mapările sunt necesare pentru SnapEnhance pentru a funcționa corect, nu ar trebui să dureze mai mult de 5 secunde.",
-            "generate_failure": "A apărut o eroare în timpul generării mapărilor, te rog încearcă din nou.",
-            "generate_success": "Mapări generate cu succes."
+            "generate_failure": "A apărut o eroare în timpul generării mapărilor, te rog încearcă din nou."
         },
         "permissions": {
             "dialog": "Pentru a continua trebuie să îndeplinești următoarele condiții:",
@@ -420,32 +418,6 @@
                     },
                     "customize_ui": {
                         "name": "Culori",
-                        "properties": {
-                            "chat_colour": {
-                                "name": "Culoare primită și trimisă",
-                                "description": "Schimbă culoarea textului Snapchat Trimis și Primit în feedul prietenilor\nIntroduceți un cod de culoare hexadecimal"
-                            },
-                            "text_colour": {
-                                "name": "Culoarea textului",
-                                "description": "Schimbă culoarea textului Snapchat\nIntroduceți codul de culoare hexadecimal"
-                            },
-                            "background_colour": {
-                                "description": "Schimbă culoarea de fundal a Snapchat-urilor\nIntroduceți un cod de culoare hexadecimal",
-                                "name": "Culoare de fundal"
-                            },
-                            "background_colour_surface": {
-                                "name": "Culoarea suprafeței de fundal",
-                                "description": "Schimbă culoarea suprafeței de fundal Snapchat\nIntroduceți un cod de culoare hexadecimal"
-                            },
-                            "action_menu_background_colour": {
-                                "name": "Culoarea de fundal a meniului de acțiune",
-                                "description": "Schimbă culoarea de fundal a meniului de acțiuni de chat Snapchat\nIntroduceți un cod de culoare hexadecimal"
-                            },
-                            "action_menu_round_background_colour": {
-                                "description": "Schimbă culoarea de fundal rotundă a meniului de acțiuni de chat Snapchat\nIntroduceți un cod de culoare hexadecimal",
-                                "name": "Culoare de fundal rotundă din meniul de acțiuni"
-                            }
-                        },
                         "description": "Personalizați culorile Snapchat"
                     }
                 },

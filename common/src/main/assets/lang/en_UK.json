@@ -6,8 +6,6 @@
             "save_folder": "SnapEnhance requires Storage permissions to download and Save Media from Snapchat.\nPlease choose the location where media should be downloaded to."
         },
         "mappings": {
-            "generate_button": "Generate",
-            "generate_success": "Mappings generated successfully.",
             "generate_failure_no_snapchat": "SnapEnhance was unable to detect Snapchat, please try reinstalling Snapchat.",
             "generate_failure": "An error occurred while trying to generate mappings, please try again.",
             "dialog": "To dynamically support a wide range of Snapchat Versions, mappings are necessary for SnapEnhance to function properly, this should not take more than 5 seconds."
@@ -456,32 +454,6 @@
                         "description": "Overrides text field behavior"
                     },
                     "customize_ui": {
-                        "properties": {
-                            "text_colour": {
-                                "name": "Text Colour",
-                                "description": "Changes Snapchats text colour\nInput hex colour code"
-                            },
-                            "chat_colour": {
-                                "name": "Sent & Received Colour",
-                                "description": "Changes Snapchats Sent and Received text colour on the friend feed\nInput a hex colour code"
-                            },
-                            "background_colour": {
-                                "name": "Background Colour",
-                                "description": "Changes Snapchats background colour\nInput a hex colour code"
-                            },
-                            "background_colour_surface": {
-                                "description": "Changes Snapchats background surface colour\nInput a hex colour code",
-                                "name": "Background Surface Colour"
-                            },
-                            "action_menu_background_colour": {
-                                "name": "Action Menu Background Colour",
-                                "description": "Changes Snapchats chat action menu background colour\nInput a hex colour code"
-                            },
-                            "action_menu_round_background_colour": {
-                                "name": "Action Menu Round Background Colour",
-                                "description": "Changes Snapchats chat action menu round background colour\nInput a hex colour code"
-                            }
-                        },
                         "name": "Colours",
                         "description": "Customise Snapchats Colours",
                         "properties": {

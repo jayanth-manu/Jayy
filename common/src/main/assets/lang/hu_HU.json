@@ -7,10 +7,8 @@
         },
         "mappings": {
             "dialog": "A Snapchat-verziók széles skálájának dinamikus támogatása érdekében a SnapEnhance megfelelő működéséhez leképezésekre van szükség, ez nem tarthat 5 másodpercnél tovább.",
-            "generate_button": "Generálás",
             "generate_failure_no_snapchat": "A SnapEnhance nem találja a Snapchatet, próbálja meg újra telepíteni a Snapchatet.",
-            "generate_failure": "Hiba történt a beállítások mentése során, kérjük próbálja meg újra.",
-            "generate_success": "A leképezések sikeresen legenerálódtak."
+            "generate_failure": "Hiba történt a beállítások mentése során, kérjük próbálja meg újra."
         },
         "permissions": {
             "dialog": "A folytatáshoz a következőkre van szükség:",

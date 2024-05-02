@@ -7,10 +7,8 @@
         },
         "mappings": {
             "dialog": "För att dynamiskt stödja ett brett utbud av Snapchat Versioner, mappningar är nödvändiga för att SnapEnhance ska fungera korrekt, detta bör inte ta mer än 5 sekunder.",
-            "generate_button": "Generera",
             "generate_failure_no_snapchat": "SnapEnhance kunde inte upptäcka Snapchat, försök att installera om Snapchat.",
-            "generate_failure": "Ett fel inträffade vid försök att generera mappningar, försök igen.",
-            "generate_success": "Mappningar har skapats."
+            "generate_failure": "Ett fel inträffade vid försök att generera mappningar, försök igen."
         },
         "permissions": {
             "dialog": "För att fortsätta måste du uppfylla följande krav:",

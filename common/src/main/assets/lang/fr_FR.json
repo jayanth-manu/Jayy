@@ -7,10 +7,8 @@
         },
         "mappings": {
             "dialog": "Pour prendre en charge dynamiquement une large étendue de versions de Snapchat, les mappages sont nécessaires pour que SnapEnhance fonctionne correctement, cela ne devrait pas prendre plus de 5 secondes.",
-            "generate_button": "Générer",
             "generate_failure_no_snapchat": "SnapEnhance n'a pas pu détecter Snapchat, essayez de réinstaller Snapchat.",
-            "generate_failure": "Une erreur s'est produite lors de la génération des mappings, veuillez réessayer.",
-            "generate_success": "Mappings générés avec succès."
+            "generate_failure": "Une erreur s'est produite lors de la génération des mappings, veuillez réessayer."
         },
         "permissions": {
             "dialog": "Pour continuer, vous devez remplir les conditions suivantes :",
@@ -424,32 +422,6 @@
                         "description": "Ajoute des icônes d'indicateurs spécifiques aux messages\nRemarque : les indicateurs peuvent ne pas être à 100% précis"
                     },
                     "customize_ui": {
-                        "properties": {
-                            "background_colour": {
-                                "name": "Couleur de l'arrière plan",
-                                "description": "Change la couleur d'arrière-plan de Snapchat\nSaisissez un code couleur hexadécimal"
-                            },
-                            "text_colour": {
-                                "name": "Couleur du texte",
-                                "description": "Change la couleur du texte de Snapchat\nSaisir le code couleur hexadécimal"
-                            },
-                            "action_menu_background_colour": {
-                                "description": "Modifie la couleur d'arrière-plan du menu d'action du chat de Snapchat\nSaisissez un code couleur hexadécimal",
-                                "name": "Couleur d’arrière-plan du menu d’action"
-                            },
-                            "chat_colour": {
-                                "name": "Couleur envoyée et reçue",
-                                "description": "Modifie la couleur du texte envoyé et reçu de Snapchat sur le flux des amis\nSaisissez un code couleur hexadécimal"
-                            },
-                            "action_menu_round_background_colour": {
-                                "name": "Couleur d'arrière-plan ronde du menu d'action",
-                                "description": "Change la couleur d'arrière-plan ronde du menu d'action du chat Snapchats\nSaisissez un code couleur hexadécimal"
-                            },
-                            "background_colour_surface": {
-                                "name": "Couleur de la surface d'arrière-plan",
-                                "description": "Change la couleur de la surface d'arrière-plan de Snapchat\nSaisissez un code couleur hexadécimal"
-                            }
-                        },
                         "name": "Couleurs",
                         "description": "Personnaliser les couleurs de Snapchat"
                     }

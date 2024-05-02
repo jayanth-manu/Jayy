@@ -7,10 +7,8 @@
         },
         "mappings": {
             "dialog": "Useiden Snapchat -versioiden dynaaminen tuki edellyttää kartoituksia. Kartoitukset vaaditaan että SnapEnhance toimisi oikein. Tämän ei pitäisi kestää yli 5 sekuntia.",
-            "generate_button": "Luo",
             "generate_failure_no_snapchat": "SnapEnhance ei havainnut Snapchattia, yritä asentaa Snapchat uudelleen.",
-            "generate_failure": "Kartoituksien luomisessa tapahtui virhe. Yritä uudelleen.",
-            "generate_success": "Kartoitukset luotu onnistuneesti."
+            "generate_failure": "Kartoituksien luomisessa tapahtui virhe. Yritä uudelleen."
         },
         "permissions": {
             "dialog": "Jatkaaksesi sinun on täytettävä seuraavat vaatimukset:",
