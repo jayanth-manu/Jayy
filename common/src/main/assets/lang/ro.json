@@ -418,7 +418,33 @@
                     },
                     "customize_ui": {
                         "name": "Culori",
-                        "description": "Personalizați culorile Snapchat"
+                        "description": "Personalizați culorile Snapchat",
+                        "properties": {
+                            "text_color": {
+                                "name": "Culoarea textului",
+                                "description": "Schimbă culoarea textului Snapchat\nIntroduceți codul de culoare hexadecimal"
+                            },
+                            "send_and_received_text_color": {
+                                "description": "Schimbă culoarea textului Snapchat trimis și primit în fluxul prietenilor\nIntroduceți un cod de culoare hexadecimal",
+                                "name": "Culoarea textului trimis și primit"
+                            },
+                            "background_color": {
+                                "name": "Culoare de fundal",
+                                "description": "Schimbă culoarea de fundal a Snapchat-urilor\nIntroduceți un cod de culoare hexadecimal"
+                            },
+                            "background_color_surface": {
+                                "name": "Culoarea suprafeței de fundal",
+                                "description": "Schimbă culoarea suprafeței de fundal Snapchat\nIntroduceți un cod de culoare hexadecimal"
+                            },
+                            "action_menu_background_color": {
+                                "name": "Culoarea de fundal a meniului de acțiune",
+                                "description": "Schimbă culoarea de fundal a meniului de acțiuni de chat Snapchat\nIntroduceți un cod de culoare hexadecimal"
+                            },
+                            "action_menu_round_background_color": {
+                                "name": "Culoare de fundal rotundă din meniul de acțiuni",
+                                "description": "Schimbă culoarea de fundal rotundă a meniului de acțiuni de chat Snapchat\nIntroduceți un cod de culoare hexadecimal"
+                            }
+                        }
                     }
                 },
                 "name": "Interfața cu utilizatorul",
@@ -985,6 +1011,10 @@
                     "custom_streaks_expiration_format": {
                         "name": "Format personalizat de expirare a liniilor fierbinți",
                         "description": "Personalizează formatul Streaks Expiration\n\nVariabile disponibile:\n- %c: Număr de linii\n- %e: Emoji cu clepsidra\n- %d: zile\n- %h: ore\n- %m: minute\n- %s: secunde\n- %w: Timp rămas"
+                    },
+                    "best_friend_pinning": {
+                        "name": "Fixarea celui mai bun prieten",
+                        "description": "Vă permite să fixați un prieten drept cel mai bun prieten numărul unu. Notă: numai tu poți să-ți vezi cel mai bun prieten fixat"
                     }
                 },
                 "description": "Caracteristici experimentale",
