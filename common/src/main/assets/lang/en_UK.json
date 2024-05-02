@@ -454,6 +454,36 @@
                     "edit_text_override": {
                         "name": "Edit Text Override",
                         "description": "Overrides text field behavior"
+                    },
+                    "customize_ui": {
+                        "properties": {
+                            "text_colour": {
+                                "description": "",
+                                "name": ""
+                            },
+                            "background_colour": {
+                                "description": "",
+                                "name": ""
+                            },
+                            "background_colour_surface": {
+                                "name": "",
+                                "description": ""
+                            },
+                            "action_menu_round_background_colour": {
+                                "name": "",
+                                "description": ""
+                            },
+                            "chat_colour": {
+                                "description": "",
+                                "name": ""
+                            },
+                            "action_menu_background_colour": {
+                                "description": "",
+                                "name": ""
+                            }
+                        },
+                        "description": "",
+                        "name": ""
                     }
                 },
                 "name": "User Interface",
@@ -616,6 +646,10 @@
                             "spoof_headphones": {
                                 "name": "Spoof Headphones",
                                 "description": "Spoofs the status of listening to music on map"
+                            },
+                            "walk_radius": {
+                                "description": "",
+                                "name": ""
                             }
                         }
                     },

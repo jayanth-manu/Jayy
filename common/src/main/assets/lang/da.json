@@ -422,6 +422,36 @@
                     "opera_media_quick_info": {
                         "description": "Viser nyttig information om medier såsom oprettelsesdato i opera fremviser kontekstmenu",
                         "name": "Opera Media Hurtig info"
+                    },
+                    "customize_ui": {
+                        "description": "",
+                        "properties": {
+                            "text_colour": {
+                                "name": "",
+                                "description": ""
+                            },
+                            "action_menu_round_background_colour": {
+                                "description": "",
+                                "name": ""
+                            },
+                            "chat_colour": {
+                                "description": "",
+                                "name": ""
+                            },
+                            "background_colour_surface": {
+                                "name": "",
+                                "description": ""
+                            },
+                            "action_menu_background_colour": {
+                                "name": "",
+                                "description": ""
+                            },
+                            "background_colour": {
+                                "description": "",
+                                "name": ""
+                            }
+                        },
+                        "name": ""
                     }
                 }
             },
@@ -610,6 +640,10 @@
                             "spoof_headphones": {
                                 "name": "Spoof hovedtelefoner",
                                 "description": "Spoof status for at lytte til musik på kortet"
+                            },
+                            "walk_radius": {
+                                "name": "",
+                                "description": ""
                             }
                         }
                     },

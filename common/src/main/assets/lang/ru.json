@@ -478,6 +478,36 @@
                     "hide_friend_feed_entry": {
                         "name": "Скрыть запись о друге в ленте друзей",
                         "description": "Скрывает определенного друга из ленты друзей\nИспользуйте вкладку «Социальное» для управления этой функцией"
+                    },
+                    "customize_ui": {
+                        "properties": {
+                            "background_colour_surface": {
+                                "name": "",
+                                "description": ""
+                            },
+                            "chat_colour": {
+                                "name": "",
+                                "description": ""
+                            },
+                            "text_colour": {
+                                "name": "",
+                                "description": ""
+                            },
+                            "action_menu_round_background_colour": {
+                                "name": "",
+                                "description": ""
+                            },
+                            "action_menu_background_colour": {
+                                "name": "",
+                                "description": ""
+                            },
+                            "background_colour": {
+                                "description": "",
+                                "name": ""
+                            }
+                        },
+                        "name": "",
+                        "description": ""
                     }
                 },
                 "description": "Измените внешний вид Snapchat",
@@ -514,6 +544,10 @@
                                     "composer_console": {
                                         "name": "Консоль Composer",
                                         "description": "Позволяет выполнять JavaScript-код в Composer"
+                                    },
+                                    "show_first_created_username": {
+                                        "name": "",
+                                        "description": ""
                                     }
                                 }
                             }
@@ -823,6 +857,10 @@
                             "spoof_battery_level": {
                                 "name": "Поддельный уровень заряда батареи",
                                 "description": "Подделывает уровень заряда батареи вашего устройства на карте\nЗначение должно быть от 0 до 100"
+                            },
+                            "walk_radius": {
+                                "name": "",
+                                "description": ""
                             }
                         },
                         "description": "Маскировка местоположения"
@@ -890,6 +928,10 @@
                     "default_video_playback_rate": {
                         "description": "Устанавливает стандартную скорость воспроизведения видео\nЗначение должно быть от 0.1 до 4.0",
                         "name": "Стандартная скорость воспроизведения видео"
+                    },
+                    "disable_custom_tabs": {
+                        "name": "",
+                        "description": ""
                     }
                 },
                 "name": "Настройки глобального Snapchat",
