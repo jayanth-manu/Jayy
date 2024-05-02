@@ -454,6 +454,62 @@
                     "edit_text_override": {
                         "name": "Edit Text Override",
                         "description": "Overrides text field behavior"
+                    },
+                    "customize_ui": {
+                        "properties": {
+                            "text_colour": {
+                                "name": "Text Colour",
+                                "description": "Changes Snapchats text colour\nInput hex colour code"
+                            },
+                            "chat_colour": {
+                                "name": "Sent & Received Colour",
+                                "description": "Changes Snapchats Sent and Received text colour on the friend feed\nInput a hex colour code"
+                            },
+                            "background_colour": {
+                                "name": "Background Colour",
+                                "description": "Changes Snapchats background colour\nInput a hex colour code"
+                            },
+                            "background_colour_surface": {
+                                "description": "Changes Snapchats background surface colour\nInput a hex colour code",
+                                "name": "Background Surface Colour"
+                            },
+                            "action_menu_background_colour": {
+                                "name": "Action Menu Background Colour",
+                                "description": "Changes Snapchats chat action menu background colour\nInput a hex colour code"
+                            },
+                            "action_menu_round_background_colour": {
+                                "name": "Action Menu Round Background Colour",
+                                "description": "Changes Snapchats chat action menu round background colour\nInput a hex colour code"
+                            }
+                        },
+                        "name": "Colours",
+                        "description": "Customise Snapchats Colours",
+                        "properties": {
+                            "send_and_received_text_color": {
+                                "description": "Changes Snapchats Sent and Received text colour on the friend feed\nInput a hex color code",
+                                "name": "Sent & Received Text Colour"
+                            },
+                            "background_color": {
+                                "name": "Background Colour",
+                                "description": "Changes Snapchats background colour\nInput a hex colour code"
+                            },
+                            "background_color_surface": {
+                                "name": "Background Surface Colour",
+                                "description": "Changes Snapchats background surface colour\nInput a hex colour code"
+                            },
+                            "action_menu_background_color": {
+                                "name": "Action Menu Background Colour",
+                                "description": "Changes Snapchats chat action menu background colour\nInput a hex colour code"
+                            },
+                            "action_menu_round_background_color": {
+                                "name": "Action Menu Round Background Colour",
+                                "description": "Changes Snapchats chat action menu round background colour\nInput a hex colour code"
+                            },
+                            "text_color": {
+                                "name": "Text Colour",
+                                "description": "Changes Snapchats text colour\nInput hex colour code"
+                            }
+                        }
                     }
                 },
                 "name": "User Interface",
@@ -616,6 +672,10 @@
                             "spoof_headphones": {
                                 "name": "Spoof Headphones",
                                 "description": "Spoofs the status of listening to music on map"
+                            },
+                            "walk_radius": {
+                                "name": "Walk Radius",
+                                "description": "Randomly walk around within this radius (ft)"
                             }
                         }
                     },
@@ -922,6 +982,10 @@
                     "custom_streaks_expiration_format": {
                         "name": "Bespoke Streak Expiry Format",
                         "description": "Customises the Streaks Expiry format\n\nAvailable variables:\n- %c: Streaks Count\n- %e: Hourglass Emoji\n- %d: Days\n- %h: Hours\n- %m: Minutes\n- %s: Seconds\n- %w: Remaining Time"
+                    },
+                    "best_friend_pinning": {
+                        "name": "Best Friend Pinning",
+                        "description": "Allows you to pin a friend as you're number one best friend. Note: only you can see you're pinned best friend"
                     }
                 }
             },
@@ -1049,7 +1113,8 @@
                 "ORIGINAL": "Original",
                 "NOTE": "Audio Note",
                 "SNAP": "Snap",
-                "SAVABLE_SNAP": "Savable Snap"
+                "SAVABLE_SNAP": "Savable Snap",
+                "always_ask": "Always Ask"
             },
             "strip_media_metadata": {
                 "hide_caption_text": "Hide Caption Text",
