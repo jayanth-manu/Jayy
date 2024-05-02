@@ -6,7 +6,7 @@
             "select_save_folder_button": "Vælg Mappe"
         },
         "mappings": {
-            "dialog": "For dynamisk at støtte en bred vifte af Snapchat versioner, tilknytninger er nødvendige for SnapEnhance at fungere ordentligt, bør dette ikke tage mere end 5 sekunder.",
+            "dialog": "Generering af maps, dette kan tage et stykke tid, overvej at bruge tiden fornuftigt, drik noget eller lav en toast...",
             "generate_failure_no_snapchat": "SnapEnhance kunne ikke detektere Snapchat, prøv at geninstallere Snapchat.",
             "generate_failure": "Der opstod en fejl under forsøget på at generere mappings, prøv venligst igen."
         },
@@ -420,6 +420,36 @@
                     "opera_media_quick_info": {
                         "description": "Viser nyttig information om medier såsom oprettelsesdato i opera fremviser kontekstmenu",
                         "name": "Opera Media Hurtig info"
+                    },
+                    "customize_ui": {
+                        "name": "Farver",
+                        "properties": {
+                            "text_color": {
+                                "name": "Tekst farve",
+                                "description": "Ændrer Snapchats tekstfarve\nIndtast hex farvekode"
+                            },
+                            "background_color": {
+                                "name": "Baggrunds farve",
+                                "description": "Ændrer Snapchats baggrundsfarve\nIndtast en hex farvekode"
+                            },
+                            "send_and_received_text_color": {
+                                "name": "Sendt og modtaget tekstfarve",
+                                "description": "Ændrer Snapchats Sendte og Modtagne tekstfarve på vennefeedet\nIndtast en hex farvekode"
+                            },
+                            "background_color_surface": {
+                                "name": "Baggrunds overflade farve",
+                                "description": "Ændrer Snapchats baggrunds overfladefarve\nIndtast en hex farvekode"
+                            },
+                            "action_menu_background_color": {
+                                "name": "Handlingsmenu Baggrunds farve",
+                                "description": "Ændrer baggrundsfarve på Snapchats chathandlingsmenu\nIndtast en hex farvekode"
+                            },
+                            "action_menu_round_background_color": {
+                                "name": "Handlingsmenu Rund baggrunds farve",
+                                "description": "Ændrer Snapchats chathandlingsmenu rundt om baggrundsfarven\nIndtast en hex farvekode"
+                            }
+                        },
+                        "description": "Tilpas Snapchats farver"
                     }
                 }
             },
@@ -608,6 +638,10 @@
                             "spoof_headphones": {
                                 "name": "Spoof hovedtelefoner",
                                 "description": "Spoof status for at lytte til musik på kortet"
+                            },
+                            "walk_radius": {
+                                "name": "Gå radius",
+                                "description": "Gå tilfældigt rundt inden for denne radius (ft)"
                             }
                         }
                     },
@@ -890,6 +924,10 @@
                     "custom_streaks_expiration_format": {
                         "name": "Tilpasset format til udløb af Streaks",
                         "description": "Tilpasser formatet for udløbet af Streaks\n\nTilgængelige variabler:\n- %c: Antal Streaks\n- %e: Timeglas Emoji\n- %d: Dage\n- %h: Timer\n- %m: Minutter\n- %s: Sekunder\n- %w: Resterende tid"
+                    },
+                    "best_friend_pinning": {
+                        "description": "Giver dig mulighed for at fastgøre en ven som din bedste ven nummer ét.\nBemærk: kun du kan se din fastgjorte bedste ven",
+                        "name": "Pinning af bedste ven"
                     }
                 }
             },
@@ -987,7 +1025,8 @@
                 "ORIGINAL": "Original",
                 "NOTE": "Lyd Note",
                 "SNAP": "Snap",
-                "SAVABLE_SNAP": "Gembar Klip"
+                "SAVABLE_SNAP": "Gembar Klip",
+                "always_ask": "Spørg altid for at være sikker"
             },
             "hide_ui_components": {
                 "hide_profile_call_buttons": "Fjern Profilopkaldsknapper",
