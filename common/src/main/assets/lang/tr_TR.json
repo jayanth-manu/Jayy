@@ -422,6 +422,35 @@
                     "message_indicators": {
                         "name": "Mesaj Göstergeleri",
                         "description": "Mesajlara belirli gösterge simgeleri ekler\nNot: göstergeler %100 doğru olmayabilir"
+                    },
+                    "customize_ui": {
+                        "properties": {
+                            "background_colour": {
+                                "name": "Arkaplan Rengi",
+                                "description": "Snapchat'in arkaplan rengini değiştirir\nOnaltılık renk kodu girin"
+                            },
+                            "text_colour": {
+                                "description": "Snapchat'in metin rengini değiştirir\nOnaltılık renk kodu girin",
+                                "name": "Metin Rengi"
+                            },
+                            "chat_colour": {
+                                "name": "Gönderilen ve Alınan Renk",
+                                "description": "Snapchat'in Arkadaş akışındaki Gönderilen ve Alınan metin rengini değiştirir\nOnaltılık renk kodu girin"
+                            },
+                            "background_colour_surface": {
+                                "description": "Snapchat'in arkaplan yüzey rengini değiştirir\nOnaltılık renk kodu girin",
+                                "name": "Arkaplan Yüzey Rengi"
+                            },
+                            "action_menu_background_colour": {
+                                "name": "Eylem Menüsü Arkaplan Rengi",
+                                "description": "Snapchat'in sohbet eylem menüsü arkaplan rengini değiştirir\nOnaltılık renk kodu girin"
+                            },
+                            "action_menu_round_background_colour": {
+                                "name": "Eylem Menüsü Yuvarlak Arkaplan Rengi",
+                                "description": "Snapchat'in sohbet eylem menüsü yuvarlak arkaplan rengini değiştirir\nOnaltılık renk kodu girin"
+                            }
+                        },
+                        "description": "Snapchat'in Renklerini Özelleştirme"
                     }
                 }
             },
@@ -645,6 +674,10 @@
                             "spoof_headphones": {
                                 "name": "Sahte Kulaklıklar",
                                 "description": "Harita üzerinde müzik dinleme durumunu taklit eder"
+                            },
+                            "walk_radius": {
+                                "name": "Yürüyüş Yarıçapı",
+                                "description": "Bu yarıçap (ft) içinde haritada rastgele dolaşın"
                             }
                         },
                         "name": "Daha İyi Konum"
@@ -989,7 +1022,8 @@
                 "ORIGINAL": "Orijinal",
                 "NOTE": "Sesli Not",
                 "SNAP": "Snap",
-                "SAVABLE_SNAP": "Kaydedilebilir Snap"
+                "SAVABLE_SNAP": "Kaydedilebilir Snap",
+                "always_ask": "Her Zaman Sor"
             },
             "hide_ui_components": {
                 "hide_profile_call_buttons": "Profil Arama Düğmelerini Kaldır",
