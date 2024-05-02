@@ -421,6 +421,36 @@
                     "message_indicators": {
                         "name": "Üzenetjelzők",
                         "description": "Speciális jelzőikonok hozzáadása az üzenetekhez\nMegjegyzés: a mutatók nem biztos, hogy 100%-ban pontosak"
+                    },
+                    "customize_ui": {
+                        "properties": {
+                            "background_colour_surface": {
+                                "name": "",
+                                "description": ""
+                            },
+                            "chat_colour": {
+                                "name": "",
+                                "description": ""
+                            },
+                            "action_menu_round_background_colour": {
+                                "name": "",
+                                "description": ""
+                            },
+                            "action_menu_background_colour": {
+                                "name": "",
+                                "description": ""
+                            },
+                            "background_colour": {
+                                "description": "",
+                                "name": ""
+                            },
+                            "text_colour": {
+                                "description": "",
+                                "name": ""
+                            }
+                        },
+                        "description": "",
+                        "name": ""
                     }
                 },
                 "description": "Módosítsd a Snapchat kinézetét"
@@ -617,6 +647,10 @@
                             "spoof_headphones": {
                                 "name": "Hamisított fejhallgató",
                                 "description": "Hazudik a zenehallgatás státuszáról a térképen"
+                            },
+                            "walk_radius": {
+                                "name": "",
+                                "description": ""
                             }
                         }
                     },
@@ -651,6 +685,10 @@
                     "hide_active_music": {
                         "name": "Aktív zene elrejtése",
                         "description": "Megakadályozza, hogy a Snapchat megtudja, hogy éppen zenét hallgatsz\nEz lehetővé teszi, hogy zenehallgatás közben is készíthess pillanatképeket a vezérlő hangerőgombok segítségével"
+                    },
+                    "disable_custom_tabs": {
+                        "description": "",
+                        "name": ""
                     }
                 },
                 "description": "Globális Snapchat beállítások módosítása"
@@ -746,6 +784,10 @@
                                     "composer_logs": {
                                         "name": "Összetevő Naplók",
                                         "description": "A Composer konzolnaplóit átirányítja a SnapEnhance felé"
+                                    },
+                                    "show_first_created_username": {
+                                        "description": "",
+                                        "name": ""
                                     }
                                 },
                                 "name": "Összetevő Horgok",
