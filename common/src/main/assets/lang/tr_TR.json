@@ -450,7 +450,8 @@
                                 "description": "Snapchat'in sohbet eylem menüsü yuvarlak arkaplan rengini değiştirir\nOnaltılık renk kodu girin"
                             }
                         },
-                        "description": "Snapchat'in Renklerini Özelleştirme"
+                        "description": "Snapchat'in Renklerini Özelleştirme",
+                        "name": "Renkler"
                     }
                 }
             },
