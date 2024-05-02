@@ -2,7 +2,8 @@
     "setup": {
         "dialogs": {
             "save_folder": "SnapEnhanceは、Snapchatからメディアをダウンロードして保存するためにストレージ許可が必要です。\nメディアをダウンロードする場所を選択してください。",
-            "select_save_folder_button": "フォルダを選択"
+            "select_save_folder_button": "フォルダを選択",
+            "select_language": ""
         },
         "mappings": {
             "dialog": "スナップチャットのさまざまなバージョンを動的にサポートするためには、SnapEnhanceが正常に機能するためには、マッピングが必要です。これには5秒以上かかりません。",
