@@ -1,4 +1,4 @@
-package me.rhunk.snapenhance1.common
+package me.rhunk.snapenhance.common
 
 object Constants {
     val SNAPCHAT_PACKAGE_NAME get() = "com.snapchat.androie"
