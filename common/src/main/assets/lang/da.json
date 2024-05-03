@@ -576,6 +576,10 @@
                     "friend_mutation_notifier": {
                         "description": "Giver dig besked, når noget ændrer sig i en vens profil",
                         "name": "Ven Mutation Notifier"
+                    },
+                    "unlimited_conversation_pinning": {
+                        "description": "Giver dig mulighed for at fastgøre et ubegrænset antal samtaler lokalt",
+                        "name": "Ubegrænset samtale fastgørelse"
                     }
                 }
             },
