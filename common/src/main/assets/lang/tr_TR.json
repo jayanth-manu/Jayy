@@ -576,6 +576,10 @@
                     "friend_mutation_notifier": {
                         "name": "Arkadaş Değişimi Bildiricisi",
                         "description": "Bir arkadaşınızın profilinde bir değişiklik olduğunda size bildirir"
+                    },
+                    "unlimited_conversation_pinning": {
+                        "description": "Sınırsız sayıda konuşmayı yerel olarak sabitlemenizi sağlar",
+                        "name": "Sınırsız Konuşma Sabitleme"
                     }
                 }
             },
