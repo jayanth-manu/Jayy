@@ -6,7 +6,7 @@
             "save_folder": "SnapEnhance requiert des autorisations de stockage pour télécharger et enregistrer des médias depuis Snapchat.\nVeuillez choisir l'emplacement où les médias doivent être téléchargés."
         },
         "mappings": {
-            "dialog": "Pour prendre en charge dynamiquement une large étendue de versions de Snapchat, les mappages sont nécessaires pour que SnapEnhance fonctionne correctement, cela ne devrait pas prendre plus de 5 secondes.",
+            "dialog": "Génération des mappings, cela peut prendre un certain temps...",
             "generate_failure_no_snapchat": "SnapEnhance n'a pas pu détecter Snapchat, essayez de réinstaller Snapchat.",
             "generate_failure": "Une erreur s'est produite lors de la génération des mappings, veuillez réessayer."
         },
@@ -20,7 +20,7 @@
     },
     "manager": {
         "routes": {
-            "features": "Options",
+            "features": "Fonctionnalités",
             "home": "Accueil",
             "home_settings": "Paramètres",
             "home_logs": "Logs",
@@ -423,7 +423,37 @@
                     },
                     "customize_ui": {
                         "name": "Couleurs",
-                        "description": "Personnaliser les couleurs de Snapchat"
+                        "description": "Personnaliser les couleurs de Snapchat",
+                        "properties": {
+                            "text_color": {
+                                "name": "Couleur du texte",
+                                "description": "Change la couleur des textes dans Snapchat\nSpécifier un code couleur hexadécimal"
+                            },
+                            "send_and_received_text_color": {
+                                "description": "Modifie la couleur du texte envoyés et reçus dans le fils d'amis\nSpécifier un code couleur hexadécimal",
+                                "name": "Couleur des textes Envoyé et Reçu"
+                            },
+                            "background_color": {
+                                "name": "Couleur d'arrière-plan",
+                                "description": "Modifie la couleur d'arrière-plan de Snapchat\nSpécifier un code couleur hexadécimal"
+                            },
+                            "background_color_surface": {
+                                "name": "Couleur de la surface de l'arrière-plan",
+                                "description": "Modifie la couleur de surface de l'arrière-plan de Snapchat\nSpécifier un code couleur hexadécimal"
+                            },
+                            "camera_grid_lines": {
+                                "name": "Couleur des lignes de quadrillage de la caméra",
+                                "description": "Modifie la couleur des lignes de quadrillage de Snapchats dans l'aperçu de la caméra\nSpécifier un code couleur hexadécimal\nNote : Activer le quadrillage dans les paramètres de mon appareil photo"
+                            },
+                            "action_menu_background_color": {
+                                "name": "Couleur de l'arrière-plan du menu d'action",
+                                "description": "Modifie la couleur du menu d'action du chat dans Snapchat\nSpécifier un code couleur hexadécimal"
+                            },
+                            "action_menu_round_background_color": {
+                                "name": "Couleur d'arrière-plan du menu d'action arrondi",
+                                "description": "Modifie la couleur du menu d'action du chat arrondi dans Snapchat\nSpécifier un code couleur hexadécimal"
+                            }
+                        }
                     }
                 }
             },
@@ -550,6 +580,10 @@
                     "friend_mutation_notifier": {
                         "name": "Notificateur de mutation d'ami",
                         "description": "Vous avertit lorsque quelque chose change dans le profil d'un ami"
+                    },
+                    "unlimited_conversation_pinning": {
+                        "description": "Permet d'épingler localement un nombre illimité de conversations",
+                        "name": "Épinglage illimité des conversations"
                     }
                 }
             },
@@ -898,6 +932,10 @@
                     "custom_streaks_expiration_format": {
                         "name": "Format personnalisé d'expiration des flammes",
                         "description": "Personnalise le format d'expiration des flammes\n\nVariables disponibles :\n- %c : Nombre de flammes\n- %e : Emoji sablier\n- %d : Jours\n- %h : Heures\n- %m : Minutes\n- %s : Secondes\n- %w : Temps restant"
+                    },
+                    "best_friend_pinning": {
+                        "name": "Épinglage du meilleur ami",
+                        "description": "Permet d'épingler un ami comme votre meilleur ami numéro un. Remarque : vous êtes le seul à pouvoir voir votre meilleur ami épinglé"
                     }
                 }
             },
@@ -989,7 +1027,8 @@
                 "initiate_audio": "Appel audio entrant",
                 "abandon_audio": "Appel audio manqué",
                 "initiate_video": "Appel vidéo entrant",
-                "abandon_video": "Appel vidéo manqué"
+                "abandon_video": "Appel vidéo manqué",
+                "speaking": "En train de parler"
             },
             "gallery_media_send_override": {
                 "ORIGINAL": "Originale",
