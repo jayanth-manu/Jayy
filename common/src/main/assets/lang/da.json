@@ -447,6 +447,10 @@
                             "action_menu_round_background_color": {
                                 "name": "Handlingsmenu Rund baggrunds farve",
                                 "description": "Ændrer Snapchats chathandlingsmenu rundt om baggrundsfarven\nIndtast en hex farvekode"
+                            },
+                            "camera_grid_lines": {
+                                "name": "Farve på kameragitter",
+                                "description": "Ændrer farven på Snapchats-gitterlinjerne på forhåndsvisningen af kameraet\nIndtast en hex-farvekode\nBemærk: Aktiver gitteret på mine kamera-indstillinger"
                             }
                         },
                         "description": "Tilpas Snapchats farver"
