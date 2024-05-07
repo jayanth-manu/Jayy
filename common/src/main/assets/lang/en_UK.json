@@ -8,7 +8,7 @@
         "mappings": {
             "generate_failure_no_snapchat": "SnapEnhance was unable to detect Snapchat, please try reinstalling Snapchat.",
             "generate_failure": "An error occurred while trying to generate mappings, please try again.",
-            "dialog": "To dynamically support a wide range of Snapchat Versions, mappings are necessary for SnapEnhance to function properly, this should not take more than 5 seconds."
+            "dialog": "Generating Mappings, this may take a while, please be patient..."
         },
         "permissions": {
             "notification_access": "Notification Access",
@@ -399,7 +399,7 @@
                     },
                     "message_indicators": {
                         "name": "Message Indicators",
-                        "description": "Adds specific indicators icons to messages\nNote: indicators might not be 100% accurate"
+                        "description": "Adds specific indicators icons to messages\nNote: Indicators might not be 100% accurate"
                     },
                     "stealth_mode_indicator": {
                         "name": "Stealth Mode Indicator",
@@ -480,6 +480,10 @@
                             "text_color": {
                                 "name": "Text Colour",
                                 "description": "Changes Snapchats text colour\nInput hex colour code"
+                            },
+                            "camera_grid_lines": {
+                                "name": "Camera Gridlines Color",
+                                "description": "Changes Snapchats Gridlines color on the Camera Preview\nInput a hex color code\nNote: Enable the grid on the my camera settings"
                             }
                         }
                     }
@@ -609,6 +613,10 @@
                     "friend_mutation_notifier": {
                         "description": "Notifies you when something changes on a friend's profile",
                         "name": "Friend Mutation Notifier"
+                    },
+                    "unlimited_conversation_pinning": {
+                        "description": "Allows you to pin an unlimited amount of conversations locally",
+                        "name": "Unlimited Conversation Pinning"
                     }
                 },
                 "description": "Change how you interact with friends"
@@ -957,7 +965,7 @@
                     },
                     "best_friend_pinning": {
                         "name": "Best Friend Pinning",
-                        "description": "Allows you to pin a friend as you're number one best friend. Note: only you can see you're pinned best friend"
+                        "description": "Allows you to pin a friend as you're number one best friend. Note: Only you can see you're pinned best friend"
                     }
                 }
             },
@@ -1079,7 +1087,8 @@
                 "initiate_audio": "Incoming Audio Call",
                 "abandon_audio": "Missed Audio Call",
                 "initiate_video": "Incoming Video Call",
-                "abandon_video": "Missed Video Call"
+                "abandon_video": "Missed Video Call",
+                "speaking": "Talking"
             },
             "gallery_media_send_override": {
                 "ORIGINAL": "Original",
