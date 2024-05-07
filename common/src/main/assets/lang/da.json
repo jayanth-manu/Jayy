@@ -395,7 +395,7 @@
                     },
                     "message_indicators": {
                         "name": "Meddelelsesindikatorer",
-                        "description": "Tilføjer specifikke indikatorikoner til beskeder\nBemærk: indikatorer er muligvis ikke 100% nøjagtige"
+                        "description": "Tilføjer specifikke indikatorikoner til beskeder\nBemærk: indikatorer er muligvis ikke 110% nøjagtige"
                     },
                     "edit_text_override": {
                         "name": "Rediger tekst tilsidesættelse",
@@ -1027,7 +1027,8 @@
                 "initiate_audio": "Indgående Lydopkald",
                 "abandon_audio": "Ubesvaret Lydopkald",
                 "initiate_video": "Indgående videoopkald",
-                "abandon_video": "Ubesvarede videoopkald"
+                "abandon_video": "Ubesvarede videoopkald",
+                "speaking": "Taler"
             },
             "gallery_media_send_override": {
                 "ORIGINAL": "Original",
