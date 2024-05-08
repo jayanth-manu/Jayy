@@ -400,10 +400,6 @@
                         "description": "Selectați ce butoane să afișați în meniul fluxul prietenilor",
                         "name": "Butoanele pentru meniul fluxul prietenilor"
                     },
-                    "amoled_dark_mode": {
-                        "name": "Modul întunecat AMOLED",
-                        "description": "Activează modul întunecat AMOLED\nAsigurați-vă că modul întunecat al Snapchat este activat"
-                    },
                     "streak_expiration_info": {
                         "name": "Afișați informații despre expirarea liniei fierbinți",
                         "description": "Afișează un temporizator de expirare a liniei fierbinți lângă contorul de linii"
@@ -418,33 +414,7 @@
                     },
                     "customize_ui": {
                         "name": "Culori",
-                        "description": "Personalizați culorile Snapchat",
-                        "properties": {
-                            "text_color": {
-                                "name": "Culoarea textului",
-                                "description": "Schimbă culoarea textului Snapchat\nIntroduceți codul de culoare hexadecimal"
-                            },
-                            "send_and_received_text_color": {
-                                "description": "Schimbă culoarea textului Snapchat trimis și primit în fluxul prietenilor\nIntroduceți un cod de culoare hexadecimal",
-                                "name": "Culoarea textului trimis și primit"
-                            },
-                            "background_color": {
-                                "name": "Culoare de fundal",
-                                "description": "Schimbă culoarea de fundal a Snapchat-urilor\nIntroduceți un cod de culoare hexadecimal"
-                            },
-                            "background_color_surface": {
-                                "name": "Culoarea suprafeței de fundal",
-                                "description": "Schimbă culoarea suprafeței de fundal Snapchat\nIntroduceți un cod de culoare hexadecimal"
-                            },
-                            "action_menu_background_color": {
-                                "name": "Culoarea de fundal a meniului de acțiune",
-                                "description": "Schimbă culoarea de fundal a meniului de acțiuni de chat Snapchat\nIntroduceți un cod de culoare hexadecimal"
-                            },
-                            "action_menu_round_background_color": {
-                                "name": "Culoare de fundal rotundă din meniul de acțiuni",
-                                "description": "Schimbă culoarea de fundal rotundă a meniului de acțiuni de chat Snapchat\nIntroduceți un cod de culoare hexadecimal"
-                            }
-                        }
+                        "description": "Personalizați culorile Snapchat"
                     }
                 },
                 "name": "Interfața cu utilizatorul",

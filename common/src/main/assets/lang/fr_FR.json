@@ -317,10 +317,6 @@
                         "name": "Activer les paramètres d'apparence de l'appli",
                         "description": "Active le paramètre d’apparence caché de l’application\nPeut ne pas être nécessaire sur les nouvelles versions de Snapchat"
                     },
-                    "amoled_dark_mode": {
-                        "name": "Mode sombre AMOLED",
-                        "description": "Activer le mode sombre pour les écrans AMOLED\nAssurez-vous d'avoir bien activé le mode sombre de Snapchat"
-                    },
                     "friend_feed_message_preview": {
                         "name": "Aperçu du message du flux d'amis",
                         "description": "Affiche un aperçu des derniers messages du flux d'ami",
@@ -423,37 +419,7 @@
                     },
                     "customize_ui": {
                         "name": "Couleurs",
-                        "description": "Personnaliser les couleurs de Snapchat",
-                        "properties": {
-                            "text_color": {
-                                "name": "Couleur du texte",
-                                "description": "Change la couleur des textes dans Snapchat\nSpécifier un code couleur hexadécimal"
-                            },
-                            "send_and_received_text_color": {
-                                "description": "Modifie la couleur du texte envoyés et reçus dans le fils d'amis\nSpécifier un code couleur hexadécimal",
-                                "name": "Couleur des textes Envoyé et Reçu"
-                            },
-                            "background_color": {
-                                "name": "Couleur d'arrière-plan",
-                                "description": "Modifie la couleur d'arrière-plan de Snapchat\nSpécifier un code couleur hexadécimal"
-                            },
-                            "background_color_surface": {
-                                "name": "Couleur de la surface de l'arrière-plan",
-                                "description": "Modifie la couleur de surface de l'arrière-plan de Snapchat\nSpécifier un code couleur hexadécimal"
-                            },
-                            "camera_grid_lines": {
-                                "name": "Couleur des lignes de quadrillage de la caméra",
-                                "description": "Modifie la couleur des lignes de quadrillage de Snapchats dans l'aperçu de la caméra\nSpécifier un code couleur hexadécimal\nNote : Activer le quadrillage dans les paramètres de mon appareil photo"
-                            },
-                            "action_menu_background_color": {
-                                "name": "Couleur de l'arrière-plan du menu d'action",
-                                "description": "Modifie la couleur du menu d'action du chat dans Snapchat\nSpécifier un code couleur hexadécimal"
-                            },
-                            "action_menu_round_background_color": {
-                                "name": "Couleur d'arrière-plan du menu d'action arrondi",
-                                "description": "Modifie la couleur du menu d'action du chat arrondi dans Snapchat\nSpécifier un code couleur hexadécimal"
-                            }
-                        }
+                        "description": "Personnaliser les couleurs de Snapchat"
                     }
                 }
             },

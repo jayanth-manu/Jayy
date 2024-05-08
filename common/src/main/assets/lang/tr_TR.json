@@ -317,10 +317,6 @@
                         "name": "Uygulama Görünüm Ayarlarını Etkinleştir",
                         "description": "Gizli Uygulama Görünümü Ayarını etkinleştirir\nDaha yeni Snapchat sürümlerinde gerekli olmayabilir"
                     },
-                    "amoled_dark_mode": {
-                        "name": "AMOLED Karanlık Mod",
-                        "description": "AMOLED karanlık modunu etkinleştirir\nSnapchat'in karanlık modunun etkin olduğundan emin olun"
-                    },
                     "friend_feed_message_preview": {
                         "name": "Arkadaş Akışı Mesaj Önizlemesi",
                         "description": "Arkadaş Akışındaki son mesajların önizlemesini gösterir",
@@ -423,37 +419,7 @@
                     },
                     "customize_ui": {
                         "description": "Snapchat'in Renklerini Özelleştirme",
-                        "name": "Renkler",
-                        "properties": {
-                            "text_color": {
-                                "name": "Metin Rengi",
-                                "description": "Snapchat'in metin rengini değiştirir\nOnaltılık renk kodu girin"
-                            },
-                            "send_and_received_text_color": {
-                                "description": "Snapchat'in Arkadaş akışındaki Gönderilen ve Alınan metin renklerini değiştirir\nOnaltılık renk kodu girin",
-                                "name": "Gönderilen ve Alınan Metin Rengi"
-                            },
-                            "action_menu_round_background_color": {
-                                "description": "Snapchat'in sohbet eylem menüsü yuvarlak arkaplan rengini değiştirir\nOnaltılık renk kodu girin",
-                                "name": "Eylem Menüsü Yuvarlak Arkaplan Rengi"
-                            },
-                            "background_color": {
-                                "name": "Arkaplan Rengi",
-                                "description": "Snapchat'in arka plan rengini değiştirir\nOnaltılık renk kodu girin"
-                            },
-                            "background_color_surface": {
-                                "name": "Arkaplan Yüzey Rengi",
-                                "description": "Snapchat'in arkaplan yüzey rengini değiştirir\nOnaltılık renk kodu girin"
-                            },
-                            "action_menu_background_color": {
-                                "name": "Eylem Menüsü Arkaplan Rengi",
-                                "description": "Snapchat'in sohbet eylem menüsü arkaplan rengini değiştirir\nOnaltılık renk kodu girin"
-                            },
-                            "camera_grid_lines": {
-                                "name": "Kamera Izgara Çizgileri Rengi",
-                                "description": "Snapchat'in Kamera Önizlemesinde Izgara Çizgileri rengini değiştirir \nOnaltılık renk kodu girin\nNot: Kameram ayarlarında ızgarayı etkinleştirin"
-                            }
-                        }
+                        "name": "Renkler"
                     }
                 }
             },

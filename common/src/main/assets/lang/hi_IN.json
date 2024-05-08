@@ -395,9 +395,6 @@
             "user_interface": {
                 "name": "प्रयोक्ता इंटरफ़ेस",
                 "properties": {
-                    "amoled_dark_mode": {
-                        "name": "एमोलेड डार्क मोड"
-                    },
                     "bootstrap_override": {
                         "properties": {
                             "home_tab": {

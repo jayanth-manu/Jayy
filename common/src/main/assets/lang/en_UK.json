@@ -409,10 +409,6 @@
                         "name": "Enable App Appearance Settings",
                         "description": "Enables the hidden App Appearance Setting\nMay not be required on newer Snapchat versions"
                     },
-                    "amoled_dark_mode": {
-                        "name": "AMOLED Dark Mode",
-                        "description": "Enables AMOLED dark mode\nMake sure Snapchat's Dark mode is enabled"
-                    },
                     "hide_friend_feed_entry": {
                         "name": "Hide Friend Feed Entry",
                         "description": "Hides a specific friend from the Friend Feed\nUse the social tab to manage this feature"
@@ -455,37 +451,7 @@
                     },
                     "customize_ui": {
                         "name": "Colours",
-                        "description": "Customise Snapchats Colours",
-                        "properties": {
-                            "send_and_received_text_color": {
-                                "description": "Changes Snapchats Sent and Received text colour on the friend feed\nInput a hex color code",
-                                "name": "Sent & Received Text Colour"
-                            },
-                            "background_color": {
-                                "name": "Background Colour",
-                                "description": "Changes Snapchats background colour\nInput a hex colour code"
-                            },
-                            "background_color_surface": {
-                                "name": "Background Surface Colour",
-                                "description": "Changes Snapchats background surface colour\nInput a hex colour code"
-                            },
-                            "action_menu_background_color": {
-                                "name": "Action Menu Background Colour",
-                                "description": "Changes Snapchats chat action menu background colour\nInput a hex colour code"
-                            },
-                            "action_menu_round_background_color": {
-                                "name": "Action Menu Round Background Colour",
-                                "description": "Changes Snapchats chat action menu round background colour\nInput a hex colour code"
-                            },
-                            "text_color": {
-                                "name": "Text Colour",
-                                "description": "Changes Snapchats text colour\nInput hex colour code"
-                            },
-                            "camera_grid_lines": {
-                                "name": "Camera Gridlines Color",
-                                "description": "Changes Snapchats Gridlines color on the Camera Preview\nInput a hex color code\nNote: Enable the grid on the my camera settings"
-                            }
-                        }
+                        "description": "Customise Snapchats Colours"
                     }
                 },
                 "name": "User Interface",
