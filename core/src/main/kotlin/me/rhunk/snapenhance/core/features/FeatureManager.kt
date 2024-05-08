@@ -4,11 +4,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import me.rhunk.snapenhance.core.ModContext
-import me.rhunk.snapenhance.core.features.impl.COFOverride
-import me.rhunk.snapenhance.core.features.impl.ConfigurationOverride
-import me.rhunk.snapenhance.core.features.impl.MixerStories
-import me.rhunk.snapenhance.core.features.impl.OperaViewerParamsOverride
-import me.rhunk.snapenhance.core.features.impl.ScopeSync
+import me.rhunk.snapenhance.core.features.impl.*
 import me.rhunk.snapenhance.core.features.impl.downloader.MediaDownloader
 import me.rhunk.snapenhance.core.features.impl.downloader.ProfilePictureDownloader
 import me.rhunk.snapenhance.core.features.impl.experiments.*
@@ -16,7 +12,6 @@ import me.rhunk.snapenhance.core.features.impl.global.*
 import me.rhunk.snapenhance.core.features.impl.messaging.*
 import me.rhunk.snapenhance.core.features.impl.spying.HalfSwipeNotifier
 import me.rhunk.snapenhance.core.features.impl.spying.MessageLogger
-import me.rhunk.snapenhance.core.features.impl.FriendMutationObserver
 import me.rhunk.snapenhance.core.features.impl.spying.StealthMode
 import me.rhunk.snapenhance.core.features.impl.tweaks.*
 import me.rhunk.snapenhance.core.features.impl.ui.*
@@ -89,7 +84,6 @@ class FeatureManager(
             AppLock(),
             CameraTweaks(),
             InfiniteStoryBoost(),
-            AmoledDarkMode(),
             PinConversations(),
             DeviceSpooferHook(),
             ClientBootstrapOverride(),
@@ -105,12 +99,10 @@ class FeatureManager(
             HideQuickAddFriendFeed(),
             CallStartConfirmation(),
             SnapPreview(),
-            InstantDelete(),
             BypassScreenshotDetection(),
             HalfSwipeNotifier(),
             DisableConfirmationDialogs(),
             MixerStories(),
-            DisableComposerModules(),
             MessageIndicators(),
             EditTextOverride(),
             PreventForcedLogout(),
@@ -127,13 +119,16 @@ class FeatureManager(
             AccountSwitcher(),
             RemoveGroupsLockedStatus(),
             BypassMessageActionRestrictions(),
+            CustomizeUI(),
             BetterLocation(),
             MediaFilePicker(),
             HideActiveMusic(),
             AutoOpenSnaps(),
             CustomStreaksExpirationFormat(),
+            ComposerHooks(),
+            DisableCustomTabs(),
+            BestFriendPinning(),
         )
-
         initializeFeatures()
     }
 

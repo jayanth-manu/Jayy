@@ -2,20 +2,26 @@ package me.rhunk.snapenhance.ui.util
 
 import android.content.Context
 import android.view.MotionEvent
+import android.widget.Toast
 import androidx.compose.foundation.ScrollState
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.DeleteOutline
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextRange
@@ -25,6 +31,11 @@ import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.viewinterop.AndroidView
+import com.github.skydoves.colorpicker.compose.AlphaSlider
+import com.github.skydoves.colorpicker.compose.AlphaTile
+import com.github.skydoves.colorpicker.compose.BrightnessSlider
+import com.github.skydoves.colorpicker.compose.HsvColorPicker
+import com.github.skydoves.colorpicker.compose.rememberColorPickerController
 import me.rhunk.snapenhance.common.bridge.wrapper.LocaleWrapper
 import me.rhunk.snapenhance.common.config.DataProcessors
 import me.rhunk.snapenhance.common.config.PropertyPair
@@ -175,6 +186,7 @@ class AlertDialogs(
     @Composable
     fun KeyboardInputDialog(property: PropertyPair<*>, dismiss: () -> Unit = {}) {
         val focusRequester = remember { FocusRequester() }
+        val context = LocalContext.current
 
         DefaultDialogCard {
             var fieldValue by remember {
@@ -215,7 +227,7 @@ class AlertDialogs(
                 }
                 Button(onClick = {
                     if (fieldValue.text.isNotEmpty() && property.key.params.inputCheck?.invoke(fieldValue.text) == false) {
-                        dismiss()
+                        Toast.makeText(context, "Invalid input! Make sure you entered a valid value.", Toast.LENGTH_SHORT).show() //TODO: i18n
                         return@Button
                     }
 
@@ -319,6 +331,104 @@ class AlertDialogs(
                         onCheckedChange = {
                             toggle(it)
                         }
+                    )
+                }
+            }
+        }
+    }
+
+    @Composable
+    fun ColorPickerDialog(
+        property: PropertyPair<*>,
+        dismiss: () -> Unit = {},
+    ) {
+        var currentColor by remember {
+            mutableStateOf((property.value.getNullable() as? Int)?.let { Color(it) })
+        }
+
+        DefaultDialogCard {
+            val controller = rememberColorPickerController()
+            var colorHexValue by remember {
+                mutableStateOf(currentColor?.toArgb()?.let { Integer.toHexString(it) } ?: "")
+            }
+
+            Box(
+                modifier = Modifier.fillMaxWidth(),
+                contentAlignment = Alignment.Center,
+            ) {
+                TextField(
+                    value = colorHexValue,
+                    onValueChange = { value ->
+                        colorHexValue = value
+                        runCatching {
+                            currentColor = Color(android.graphics.Color.parseColor("#$value")).also {
+                                controller.selectByColor(it, true)
+                                property.value.setAny(it.toArgb())
+                            }
+                        }.onFailure {
+                            currentColor = null
+                        }
+                    },
+                    label = { Text(text = "Hex Color") },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(10.dp),
+                    singleLine = true,
+                    colors = TextFieldDefaults.colors(
+                        unfocusedContainerColor = Color.Transparent,
+                        focusedContainerColor = Color.Transparent,
+                    )
+                )
+            }
+            HsvColorPicker(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(300.dp)
+                    .padding(10.dp),
+                initialColor = remember { currentColor },
+                controller = controller,
+                onColorChanged = {
+                    if (!it.fromUser) return@HsvColorPicker
+                    currentColor = it.color
+                    colorHexValue = Integer.toHexString(it.color.toArgb())
+                    property.value.setAny(it.color.toArgb())
+                }
+            )
+            AlphaSlider(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(10.dp)
+                    .height(35.dp),
+                controller = controller,
+            )
+            BrightnessSlider(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(10.dp)
+                    .height(35.dp),
+                controller = controller,
+            )
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(5.dp),
+                horizontalArrangement = Arrangement.SpaceEvenly,
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                AlphaTile(
+                    modifier = Modifier
+                        .size(80.dp)
+                        .clip(RoundedCornerShape(6.dp)),
+                    controller = controller
+                )
+                IconButton(onClick = {
+                    property.value.setAny(null)
+                    dismiss()
+                }) {
+                    Icon(
+                        modifier = Modifier.size(60.dp),
+                        imageVector = Icons.Filled.DeleteOutline,
+                        contentDescription = null
                     )
                 }
             }

@@ -15,6 +15,7 @@ object DataProcessors {
         STRING_MULTIPLE_SELECTION,
         STRING_UNIQUE_SELECTION,
         MAP_COORDINATES,
+        INT_COLOR,
         CONTAINER,
     }
 
@@ -73,21 +74,30 @@ object DataProcessors {
     val STRING_UNIQUE_SELECTION = PropertyDataProcessor(
         type = Type.STRING_UNIQUE_SELECTION,
         serialize = { JsonPrimitive(it) },
-        deserialize = { obj -> obj.takeIf { !it.isJsonNull }?.asString }
+        deserialize = { obj -> obj.takeIf { !it.isJsonNull }?.asString?.takeIf { it != "false" && it != "true" } }
     )
 
     val MAP_COORDINATES = PropertyDataProcessor(
         type = Type.MAP_COORDINATES,
         serialize = {
             JsonObject().apply {
-                addProperty("lat", it.first)
-                addProperty("lng", it.second)
+                addProperty("lat", it.first.takeIf { it in -90.0..90.0 } ?: 0.0)
+                addProperty("lng", it.second.takeIf { it in -180.0..180.0 } ?: 0.0)
             }
         },
         deserialize = { obj ->
             val jsonObject = obj.asJsonObject
-            jsonObject["lat"].asDouble to jsonObject["lng"].asDouble
+            (jsonObject["lat"].asDouble.takeIf { it in -90.0..90.0 } ?: 0.0) to
+                (jsonObject["lng"].asDouble.takeIf { it in -180.0..180.0 } ?: 0.0)
         },
+    )
+
+    val INT_COLOR = PropertyDataProcessor(
+        type = Type.INT_COLOR,
+        serialize = {
+            it?.let { JsonPrimitive(it) } ?: JsonNull.INSTANCE
+        },
+        deserialize = { if (it.isJsonNull) null else it.asString.toIntOrNull() },
     )
 
     fun <T : ConfigContainer> container(container: T) = PropertyDataProcessor(

@@ -61,6 +61,7 @@ class MessagingTweaks : ConfigContainer() {
     val halfSwipeNotifier = container("half_swipe_notifier", HalfSwipeNotifierConfig()) { requireRestart()}
     val messagePreviewLength = integer("message_preview_length", defaultValue = 20)
     val callStartConfirmation = boolean("call_start_confirmation") { requireRestart() }
+    val unlimitedConversationPinning = boolean("unlimited_conversation_pinning") { requireRestart() }
     val autoSaveMessagesInConversations = multiple("auto_save_messages_in_conversations",
         "CHAT",
         "SNAP",
@@ -72,8 +73,14 @@ class MessagingTweaks : ConfigContainer() {
         customOptionTranslationPath = "features.options.notifications"
         nativeHooks()
     }
-    val instantDelete = boolean("instant_delete") { requireRestart() }
-    val relationshipNotifier = boolean("relationship_notifier") { requireRestart() }
+    val friendMutationNotifier = multiple("friend_mutation_notifier",
+        "remove_friend",
+        "birthday_changes",
+        "bitmoji_selfie_changes",
+        "bitmoji_avatar_changes",
+        "bitmoji_background_changes",
+        "bitmoji_scene_changes",
+    ) { requireRestart() }
     val betterNotifications = multiple("better_notifications",
         "chat_preview",
         "media_preview",
@@ -88,7 +95,7 @@ class MessagingTweaks : ConfigContainer() {
         customOptionTranslationPath = "features.options.notifications"
     }
     val messageLogger = container("message_logger", MessageLoggerConfig()) { addNotices(FeatureNotice.UNSTABLE); requireRestart() }
-    val galleryMediaSendOverride = boolean("gallery_media_send_override") { nativeHooks() }
+    val galleryMediaSendOverride = unique("gallery_media_send_override", "always_ask", "SNAP", "NOTE", "SAVABLE_SNAP") { requireRestart(); nativeHooks() }
     val stripMediaMetadata = multiple("strip_media_metadata", "hide_caption_text", "hide_snap_filters", "hide_extras", "remove_audio_note_duration", "remove_audio_note_transcript_capability") { requireRestart() }
     val bypassMessageRetentionPolicy = boolean("bypass_message_retention_policy") { addNotices(FeatureNotice.UNSTABLE); requireRestart() }
     val bypassMessageActionRestrictions = boolean("bypass_message_action_restrictions") { requireRestart() }

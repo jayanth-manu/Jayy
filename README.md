@@ -151,7 +151,6 @@ We no longer offer official `LSPatch` binaries for obvious reasons. However, you
   - `Enable Hidden Snapchat Plus Features`
   - `Custom Streaks Expiration Format`
   - `Add Friend Source Spoof`
-  - `Disable Composer Modules`
   - `Prevent Forced Logout`
 </details>
 
@@ -225,6 +224,7 @@ We do not collect any user information. However, please be aware that third-part
   - [android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS](https://developer.android.com/reference/android/Manifest.permission.html#REQUEST_IGNORE_BATTERY_OPTIMIZATIONS)
   - [android.permission.POST_NOTIFICATIONS](https://developer.android.com/reference/android/Manifest.permission.html#POST_NOTIFICATIONS)
   - [android.permission.SYSTEM_ALERT_WINDOW](https://developer.android.com/reference/android/Manifest.permission#SYSTEM_ALERT_WINDOW)
+  - [android.permission.USE_BIOMETRIC](https://developer.android.com/reference/android/Manifest.permission#USE_BIOMETRIC)
 </details>
 
 <details>
@@ -236,7 +236,9 @@ We do not collect any user information. However, please be aware that third-part
   - [coil](https://github.com/coil-kt/coil)
   - [Dobby](https://github.com/jmpews/Dobby)
   - [rhino](https://github.com/mozilla/rhino)
+  - [rhino-android](https://github.com/F43nd1r/rhino-android)
   - [libsu](https://github.com/topjohnwu/libsu)
+  - [colorpicker-compose](https://github.com/skydoves/colorpicker-compose)
 </details>
 
 ## Contributors
@@ -250,6 +252,8 @@ Thanks to everyone involved including the [third-party libraries](https://github
 - [TheVisual](https://github.com/TheVisual)
 - [CanerKaraca23](https://github.com/CanerKaraca23)
 - [bocajthomas](https://github.com/bocajthomas)
+- [w451](https://github.com/w451)
+
 ## Donate
 - LTC: LbBnT9GxgnFhwy891EdDKqGmpn7XtduBdE
 - BCH: qpu57a05kqljjadvpgjc6t894apprvth9slvlj4vpj

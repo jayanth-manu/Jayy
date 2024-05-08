@@ -2,9 +2,9 @@ package me.rhunk.snapenhance.nativelib
 
 import android.util.Log
 
+@Suppress("KotlinJniMissingFunction")
 class NativeLib {
     var nativeUnaryCallCallback: (NativeRequestData) -> Unit = {}
-    var nativeShouldLoadAsset: (String) -> Boolean = { true }
 
     companion object {
         var initialized = false
@@ -38,11 +38,6 @@ class NativeLib {
         return null
     }
 
-    @Suppress("unused")
-    private fun shouldLoadAsset(name: String) = runCatching {
-        nativeShouldLoadAsset(name)
-    }.getOrNull() ?: true
-
     fun loadNativeConfig(config: NativeConfig) {
         if (!initialized) return
         loadConfig(config)
@@ -62,4 +57,6 @@ class NativeLib {
     private external fun init(): Boolean
     private external fun loadConfig(config: NativeConfig)
     private external fun lockDatabase(name: String, callback: Runnable)
+    external fun setComposerLoader(code: String)
+    external fun composerEval(code: String): String?
 }

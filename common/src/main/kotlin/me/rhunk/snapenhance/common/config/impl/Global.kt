@@ -21,6 +21,7 @@ class Global : ConfigContainer() {
     inner class BetterLocation : ConfigContainer(hasGlobalState = true) {
         val spoofLocation = boolean("spoof_location") { requireRestart() }
         val coordinates = mapCoordinates("coordinates", 0.0 to 0.0) // lat, long
+        val walkRadius = string("walk_radius") { requireRestart(); inputCheck = { it.toDoubleOrNull()?.isFinite() == true && it.toDouble() >= 0.0 } }
         val alwaysUpdateLocation = boolean("always_update_location") { requireRestart() }
         val suspendLocationUpdates = boolean("suspend_location_updates") { requireRestart() }
         val spoofBatteryLevel = string("spoof_battery_level") { requireRestart(); inputCheck = { it.isEmpty() || it.toIntOrNull() in 0..100 } }
@@ -28,10 +29,11 @@ class Global : ConfigContainer() {
     }
     val betterLocation = container("better_location", BetterLocation())
     val snapchatPlus = boolean("snapchat_plus") { requireRestart() }
-    val disableConfirmationDialogs = multiple("disable_confirmation_dialogs", "remove_friend", "block_friend", "ignore_friend", "hide_friend", "hide_conversation", "clear_conversation") { requireRestart() }
+    val disableConfirmationDialogs = multiple("disable_confirmation_dialogs", "erase_message", "remove_friend", "block_friend", "ignore_friend", "hide_friend", "hide_conversation", "clear_conversation") { requireRestart() }
     val disableMetrics = boolean("disable_metrics") { requireRestart() }
     val disableStorySections = multiple("disable_story_sections", "friends", "following", "discover") { requireRestart(); requireCleanCache() }
     val blockAds = boolean("block_ads")
+    val disableCustomTabs = boolean("disable_custom_tabs") { requireRestart() }
     val disablePermissionRequests = multiple("disable_permission_requests", *permissionMap.values.toTypedArray()) { requireRestart(); addNotices(FeatureNotice.UNSTABLE) }
     val disableMemoriesSnapFeed = boolean("disable_memories_snap_feed")
     val spotlightCommentsUsername = boolean("spotlight_comments_username") { requireRestart() }
