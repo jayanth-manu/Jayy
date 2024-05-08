@@ -451,7 +451,59 @@
                     },
                     "customize_ui": {
                         "name": "Colours",
-                        "description": "Customise Snapchats Colours"
+                        "description": "Customise Snapchats Colours",
+                        "properties": {
+                            "colors": {
+                                "properties": {
+                                    "text_color": {
+                                        "name": "Main Text Colour",
+                                        "description": "Changes Snapchats main text colour"
+                                    },
+                                    "pending_sending_text_color": {
+                                        "name": "Secondary Friend Feed Text Colour",
+                                        "description": "Changes the text colour of ( Delivered / Recevived / Sending / Opened / Tap To Chat / Hold To Replay / Replayed / Saved In Chat / Called ) on the friend feed"
+                                    },
+                                    "chat_chat_text_color": {
+                                        "description": "Changes the text colour of ( New Chat / New Snap And Chats / Typing / Calling / Missed call / Speaking / New Voice Note ) on the friend feed",
+                                        "name": "Main Friend Feed Text Colour"
+                                    },
+                                    "background_color_surface": {
+                                        "name": "Background Surface Colour",
+                                        "description": "Changes Snapchats background surface colour"
+                                    },
+                                    "snap_without_sound_text_color": {
+                                        "name": "Snaps Without Sound Text Colour",
+                                        "description": "Changes the text colour of ( New Snap ) on the friend feed\nNote: Video Snaps Only"
+                                    },
+                                    "background_color": {
+                                        "name": "Background Colour",
+                                        "description": "Changes Snapchats background colour"
+                                    },
+                                    "snap_with_sound_text_color": {
+                                        "name": "Snaps With Sound Text Colour",
+                                        "description": "Changes the text colour of ( New Snap ) on the friend feed\nNote: Video Snaps Only"
+                                    },
+                                    "action_menu_background_color": {
+                                        "name": "Action Menu Background Colour",
+                                        "description": "Changes Snapchats chat action menu background colour"
+                                    },
+                                    "action_menu_round_background_color": {
+                                        "name": "Action Menu Round Background Colour",
+                                        "description": "Changes Snapchats chat action menu round background colour"
+                                    },
+                                    "camera_grid_lines": {
+                                        "name": "Camera Gridlines Colour",
+                                        "description": "Changes Snapchats Gridlines colour on the Camera Preview\nNote: Enable the grid on the my camera settings"
+                                    }
+                                },
+                                "name": "Custom Colours",
+                                "description": "Customise Individual colours\nNote: Select Custom Colours on Theme Picker to use"
+                            },
+                            "theme_picker": {
+                                "name": "Theme Picker",
+                                "description": "Preset Snapchat Themes"
+                            }
+                        }
                     }
                 },
                 "name": "User Interface",
@@ -1148,6 +1200,19 @@
                 "bitmoji_scene_changes": "Notify when someone changes their Bitmoji scene",
                 "bitmoji_avatar_changes": "Notify when someone changes their Bitmoji avatar",
                 "bitmoji_background_changes": "Notify when someone changes their Bitmoji background"
+            },
+            "theme_picker": {
+                "amoled_dark_mode": "AMOLED Dark Mode",
+                "custom": "Custom Colours",
+                "light_blue": "Light Blue",
+                "dark_blue": "Dark Blue",
+                "earthy_autumn": "Earthy Autumn",
+                "mint_chocolate": "Mint Chocolate",
+                "lava_flow": "Lava Flow",
+                "ocean_fog": "Ocean Fog",
+                "ginger_snap": "Ginger Snap",
+                "lemon_meringue": "Lemon Meringue",
+                "alien_landscape": "Alien Landscape"
             }
         }
     },
