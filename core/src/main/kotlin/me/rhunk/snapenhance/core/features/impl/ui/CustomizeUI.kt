@@ -33,7 +33,7 @@ class CustomizeUI: Feature("Customize UI", loadParams = FeatureLoadParams.ACTIVI
         val effectiveActionMenuBackgroundColor = colorsConfig.actionMenuBackgroundColor.getNullable()
         val effectiveActionMenuRoundBackgroundColor = colorsConfig.actionMenuRoundBackgroundColor.getNullable()
         val effectiveCameraGridLines = colorsConfig.cameraGridLines.getNullable()
-        
+      
         val attributeCache = mutableMapOf<String, Int>()
 
         fun getAttribute(name: String): Int {

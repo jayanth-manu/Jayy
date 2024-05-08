@@ -1,6 +1,5 @@
 package me.rhunk.snapenhance.common.config.impl
 
-import android.graphics.Color
 import me.rhunk.snapenhance.common.config.ConfigContainer
 import me.rhunk.snapenhance.common.config.FeatureNotice
 import me.rhunk.snapenhance.common.data.MessagingRuleType
@@ -18,6 +17,7 @@ class UserInterfaceTweaks : ConfigContainer() {
     inner class FriendFeedMessagePreview : ConfigContainer(hasGlobalState = true) {
         val amount = integer("amount", defaultValue = 1)
     }
+
 
     class ColorsConfig : ConfigContainer() {
         val textColor = color("text_color")
