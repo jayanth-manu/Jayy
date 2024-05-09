@@ -11,7 +11,11 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.layout.onGloballyPositioned
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -43,6 +47,94 @@ class ScriptingRoot : Routes.Route() {
     override val init: () -> Unit = {
         activityLauncherHelper = ActivityLauncherHelper(context.activity!!)
     }
+
+    @Composable
+    private fun ImportRemoteScript(
+        dismiss: () -> Unit
+    ) {
+        Dialog(onDismissRequest = dismiss) {
+            var url by remember { mutableStateOf("") }
+            val focusRequester = remember { FocusRequester() }
+            var isLoading by remember {
+                mutableStateOf(false)
+            }
+            ElevatedCard(
+                modifier = Modifier
+                    .fillMaxWidth(),
+            ) {
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(16.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Text(
+                        text = "Import Script from URL",
+                        fontSize = 22.sp,
+                        fontWeight = FontWeight.Bold,
+                        modifier = Modifier.padding(8.dp),
+                    )
+                    Text(
+                        text = "Warning: Imported scripts can be harmful to your device. Only import scripts from trusted sources.",
+                        fontSize = 14.sp,
+                        fontWeight = FontWeight.Light,
+                        fontStyle = FontStyle.Italic,
+                        modifier = Modifier.padding(8.dp),
+                        textAlign = TextAlign.Center,
+                    )
+                    TextField(
+                        value = url,
+                        onValueChange = {
+                            url = it
+                        },
+                        label = {
+                            Text(text = "Enter URL here:")
+                        },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .focusRequester(focusRequester)
+                            .onGloballyPositioned {
+                                focusRequester.requestFocus()
+                            }
+                    )
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Button(
+                        enabled = url.isNotBlank(),
+                        onClick = {
+                            isLoading = true
+                            context.coroutineScope.launch {
+                                runCatching {
+                                    val moduleInfo = context.scriptManager.importFromUrl(url)
+                                    context.shortToast("Script ${moduleInfo.name} imported!")
+                                    reloadDispatcher.dispatch()
+                                    withContext(Dispatchers.Main) {
+                                        dismiss()
+                                    }
+                                    return@launch
+                                }.onFailure {
+                                    context.log.error("Failed to import script", it)
+                                    context.shortToast("Failed to import script. ${it.message}. Check logs for more details")
+                                }
+                                isLoading = false
+                            }
+                        },
+                    ) {
+                        if (isLoading) {
+                            CircularProgressIndicator(
+                                modifier = Modifier
+                                    .size(30.dp),
+                                strokeWidth = 3.dp,
+                                color = MaterialTheme.colorScheme.onPrimary
+                            )
+                        } else {
+                            Text(text = "Import")
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 
     @Composable
     private fun ModuleActions(
@@ -174,6 +266,16 @@ class ScriptingRoot : Routes.Route() {
                     .padding(8.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
+                if (enabled) {
+                    Icon(
+                        imageVector = if (openSettings) Icons.Default.ExpandLess else Icons.Default.ExpandMore,
+                        contentDescription = null,
+                        modifier = Modifier
+                            .padding(end = 8.dp)
+                            .size(32.dp),
+                    )
+                }
+
                 Column(
                     modifier = Modifier
                         .weight(1f)
@@ -233,13 +335,22 @@ class ScriptingRoot : Routes.Route() {
     }
 
     override val floatingActionButton: @Composable () -> Unit = {
+        var showImportDialog by remember {
+            mutableStateOf(false)
+        }
+        if (showImportDialog) {
+            ImportRemoteScript {
+                showImportDialog = false
+            }
+        }
+
         Column(
             verticalArrangement = Arrangement.spacedBy(8.dp),
             horizontalAlignment = Alignment.End,
         ) {
             ExtendedFloatingActionButton(
                 onClick = {
-
+                    showImportDialog = true
                 },
                 icon = { Icon(imageVector = Icons.Default.Link, contentDescription = "Link") },
                 text = {

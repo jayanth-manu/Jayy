@@ -35,7 +35,7 @@ open class ScriptRuntime(
         return modules.values.find { it.moduleInfo.name == name }
     }
 
-    private fun readModuleInfo(reader: BufferedReader): ModuleInfo {
+    fun readModuleInfo(reader: BufferedReader): ModuleInfo {
         val header = reader.readLine()
         if (!header.startsWith("// ==SE_module==")) {
             throw Exception("Invalid module header")
@@ -72,6 +72,10 @@ open class ScriptRuntime(
 
     fun getModuleInfo(inputStream: InputStream): ModuleInfo {
         return readModuleInfo(inputStream.bufferedReader())
+    }
+
+    fun removeModule(scriptPath: String) {
+        modules.remove(scriptPath)
     }
 
     fun unload(scriptPath: String) {

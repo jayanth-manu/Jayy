@@ -64,7 +64,8 @@ class ModDatabase(
                 "length INTEGER"
             ),
             "scripts" to listOf(
-                "name VARCHAR PRIMARY KEY",
+                "id INTEGER PRIMARY KEY AUTOINCREMENT",
+                "name VARCHAR NOT NULL",
                 "version VARCHAR NOT NULL",
                 "displayName VARCHAR",
                 "description VARCHAR",
@@ -265,7 +266,7 @@ class ModDatabase(
     }
 
     fun getScripts(): List<ModuleInfo> {
-        return database.rawQuery("SELECT * FROM scripts", null).use { cursor ->
+        return database.rawQuery("SELECT * FROM scripts ORDER BY id DESC", null).use { cursor ->
             val scripts = mutableListOf<ModuleInfo>()
             while (cursor.moveToNext()) {
                 scripts.add(

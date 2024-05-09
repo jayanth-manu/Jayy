@@ -32,7 +32,6 @@ import me.rhunk.snapenhance.download.DownloadProcessor
 import me.rhunk.snapenhance.ui.manager.Routes
 import me.rhunk.snapenhance.ui.util.Dialog
 import me.rhunk.snapenhance.ui.util.coil.ImageRequestHelper
-import okhttp3.OkHttpClient
 import java.io.File
 import java.text.DateFormat
 import java.util.Date
