@@ -49,6 +49,7 @@ class RemoteScriptManager(
     private val ipcListeners = IPCListeners()
 
     fun sync() {
+        cachedModuleInfo.clear()
         getScriptFileNames().forEach { name ->
             runCatching {
                 getScriptInputStream(name) { stream ->
@@ -77,7 +78,11 @@ class RemoteScriptManager(
 
         sync()
         enabledScripts.forEach { name ->
-            loadScript(name)
+            runCatching {
+                loadScript(name)
+            }.onFailure {
+                context.log.error("Failed to load script $name", it)
+            }
         }
     }
 

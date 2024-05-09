@@ -3,6 +3,7 @@ package me.rhunk.snapenhance.messaging
 import android.content.ContentValues
 import android.database.sqlite.SQLiteDatabase
 import com.google.gson.JsonArray
+import kotlinx.coroutines.asCoroutineDispatcher
 import kotlinx.coroutines.runBlocking
 import me.rhunk.snapenhance.RemoteSideContext
 import me.rhunk.snapenhance.common.data.*
@@ -299,7 +300,7 @@ class ModDatabase(
     }
 
     fun syncScripts(availableScripts: List<ModuleInfo>) {
-        executeAsync {
+        runBlocking(executor.asCoroutineDispatcher()) {
             val enabledScripts = getScripts()
             val enabledScriptPaths = enabledScripts.map { it.name }
             val availableScriptPaths = availableScripts.map { it.name }

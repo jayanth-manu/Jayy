@@ -6,13 +6,14 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.LibraryBooks
-import androidx.compose.material.icons.filled.FolderOpen
-import androidx.compose.material.icons.filled.Link
-import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.net.toUri
@@ -29,6 +30,7 @@ import me.rhunk.snapenhance.common.ui.AsyncUpdateDispatcher
 import me.rhunk.snapenhance.common.ui.rememberAsyncMutableState
 import me.rhunk.snapenhance.ui.manager.Routes
 import me.rhunk.snapenhance.ui.util.ActivityLauncherHelper
+import me.rhunk.snapenhance.ui.util.Dialog
 import me.rhunk.snapenhance.ui.util.chooseFolder
 import me.rhunk.snapenhance.ui.util.pullrefresh.PullRefreshIndicator
 import me.rhunk.snapenhance.ui.util.pullrefresh.pullRefresh
@@ -36,9 +38,112 @@ import me.rhunk.snapenhance.ui.util.pullrefresh.rememberPullRefreshState
 
 class ScriptingRoot : Routes.Route() {
     private lateinit var activityLauncherHelper: ActivityLauncherHelper
+    private val reloadDispatcher = AsyncUpdateDispatcher(updateOnFirstComposition = false)
 
     override val init: () -> Unit = {
         activityLauncherHelper = ActivityLauncherHelper(context.activity!!)
+    }
+
+    @Composable
+    private fun ModuleActions(
+        script: ModuleInfo,
+        dismiss: () -> Unit
+    ) {
+        Dialog(
+            onDismissRequest = dismiss,
+        ) {
+            ElevatedCard(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(2.dp),
+            ) {
+                val actions = remember {
+                    mapOf<Pair<String, ImageVector>, suspend () -> Unit>(
+                        ("Edit Module" to Icons.Default.Edit) to {
+                            runCatching {
+                                val modulePath = context.scriptManager.getModulePath(script.name)!!
+                                context.androidContext.startActivity(
+                                    Intent(Intent.ACTION_VIEW).apply {
+                                        data = context.scriptManager.getScriptsFolder()!!
+                                            .findFile(modulePath)!!.uri
+                                        flags =
+                                            Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION
+                                    }
+                                )
+                                dismiss()
+                            }.onFailure {
+                                context.log.error("Failed to open module file", it)
+                                context.shortToast("Failed to open module file. Check logs for more details")
+                            }
+                        },
+                        ("Clear Module Data" to Icons.Default.Save) to {
+                            runCatching {
+                                context.scriptManager.getModuleDataFolder(script.name)
+                                    .deleteRecursively()
+                                context.shortToast("Module data cleared!")
+                                dismiss()
+                            }.onFailure {
+                                context.log.error("Failed to clear module data", it)
+                                context.shortToast("Failed to clear module data. Check logs for more details")
+                            }
+                        },
+                        ("Delete Module" to Icons.Default.DeleteOutline) to {
+                            context.scriptManager.apply {
+                                runCatching {
+                                    val modulePath = getModulePath(script.name)!!
+                                    unloadScript(modulePath)
+                                    getScriptsFolder()?.findFile(modulePath)?.delete()
+                                    reloadDispatcher.dispatch()
+                                    context.shortToast("Deleted script ${script.name}!")
+                                    dismiss()
+                                }.onFailure {
+                                    context.log.error("Failed to delete module", it)
+                                    context.shortToast("Failed to delete module. Check logs for more details")
+                                }
+                            }
+                        }
+                    )
+                }
+
+                LazyColumn(
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    item {
+                        Text(
+                            text = "Actions",
+                            fontSize = 22.sp,
+                            fontWeight = FontWeight.Bold,
+                            modifier = Modifier
+                                .padding(16.dp)
+                                .fillMaxWidth(),
+                            textAlign = TextAlign.Center,
+                        )
+                    }
+                    items(actions.size) { index ->
+                        val action = actions.entries.elementAt(index)
+                        ListItem(
+                            modifier = Modifier
+                                .clickable {
+                                    context.coroutineScope.launch {
+                                        action.value()
+                                        dismiss()
+                                    }
+                                }
+                                .fillMaxWidth(),
+                            leadingContent = {
+                                Icon(
+                                    imageVector = action.key.second,
+                                    contentDescription = action.key.first
+                                )
+                            },
+                            headlineContent = {
+                                Text(text = action.key.first)
+                            },
+                        )
+                    }
+                }
+            }
+        }
     }
 
     @Composable
@@ -47,6 +152,9 @@ class ScriptingRoot : Routes.Route() {
             context.modDatabase.isScriptEnabled(script.name)
         }
         var openSettings by remember {
+            mutableStateOf(false)
+        }
+        var openActions by remember {
             mutableStateOf(false)
         }
 
@@ -60,6 +168,7 @@ class ScriptingRoot : Routes.Route() {
                 modifier = Modifier
                     .fillMaxWidth()
                     .clickable {
+                        if (!enabled) return@clickable
                         openSettings = !openSettings
                     }
                     .padding(8.dp),
@@ -70,21 +179,20 @@ class ScriptingRoot : Routes.Route() {
                         .weight(1f)
                         .padding(end = 8.dp)
                 ) {
-                    Text(text = script.displayName ?: script.name, fontSize = 20.sp,)
-                    Text(text = script.description ?: "No description", fontSize = 14.sp,)
+                    Text(text = script.displayName ?: script.name, fontSize = 20.sp)
+                    Text(text = script.description ?: "No description", fontSize = 14.sp)
                 }
-                IconButton(onClick = { openSettings = !openSettings }) {
-                    Icon(imageVector = Icons.Default.Settings, contentDescription = "Settings",)
+                IconButton(onClick = {
+                    openActions = !openActions
+                }) {
+                    Icon(imageVector = Icons.Default.Build, contentDescription = "Actions")
                 }
                 Switch(
                     checked = enabled,
                     onCheckedChange = { isChecked ->
+                        openSettings = false
                         context.coroutineScope.launch(Dispatchers.IO) {
                             runCatching {
-                                context.modDatabase.setScriptEnabled(script.name, isChecked)
-                                withContext(Dispatchers.Main) {
-                                    enabled = isChecked
-                                }
                                 val modulePath = context.scriptManager.getModulePath(script.name)!!
                                 context.scriptManager.unloadScript(modulePath)
                                 if (isChecked) {
@@ -95,11 +203,16 @@ class ScriptingRoot : Routes.Route() {
                                 } else {
                                     context.shortToast("Unloaded script ${script.name}")
                                 }
+
+                                context.modDatabase.setScriptEnabled(script.name, isChecked)
+                                withContext(Dispatchers.Main) {
+                                    enabled = isChecked
+                                }
                             }.onFailure { throwable ->
                                 withContext(Dispatchers.Main) {
                                     enabled = !isChecked
                                 }
-                                ("Failed to ${if (isChecked) "enable" else "disable"} script").let {
+                                ("Failed to ${if (isChecked) "enable" else "disable"} script. Check logs for more details").also {
                                     context.log.error(it, throwable)
                                     context.shortToast(it)
                                 }
@@ -113,6 +226,10 @@ class ScriptingRoot : Routes.Route() {
                 ScriptSettings(script)
             }
         }
+
+        if (openActions) {
+            ModuleActions(script) { openActions = false }
+        }
     }
 
     override val floatingActionButton: @Composable () -> Unit = {
@@ -124,7 +241,7 @@ class ScriptingRoot : Routes.Route() {
                 onClick = {
 
                 },
-                icon= { Icon(imageVector = Icons.Default.Link, contentDescription = "Link") },
+                icon = { Icon(imageVector = Icons.Default.Link, contentDescription = "Link") },
                 text = {
                     Text(text = "Import from URL")
                 },
@@ -140,7 +257,12 @@ class ScriptingRoot : Routes.Route() {
                         )
                     }
                 },
-                icon= { Icon(imageVector = Icons.Default.FolderOpen, contentDescription = "Folder") },
+                icon = {
+                    Icon(
+                        imageVector = Icons.Default.FolderOpen,
+                        contentDescription = "Folder"
+                    )
+                },
                 text = {
                     Text(text = "Open Scripts Folder")
                 },
@@ -151,8 +273,9 @@ class ScriptingRoot : Routes.Route() {
 
     @Composable
     fun ScriptSettings(script: ModuleInfo) {
-       val settingsInterface = remember {
-            val module = context.scriptManager.runtime.getModuleByName(script.name) ?: return@remember null
+        val settingsInterface = remember {
+            val module =
+                context.scriptManager.runtime.getModuleByName(script.name) ?: return@remember null
             (module.getBinding(InterfaceManager::class))?.buildInterface(EnumScriptInterface.SETTINGS)
         }
 
@@ -162,17 +285,22 @@ class ScriptingRoot : Routes.Route() {
                 style = MaterialTheme.typography.bodySmall,
                 modifier = Modifier.padding(8.dp)
             )
-        } else  {
+        } else {
             ScriptInterface(interfaceBuilder = settingsInterface)
         }
     }
 
     override val content: @Composable (NavBackStackEntry) -> Unit = {
-        val reloadDispatcher = remember { AsyncUpdateDispatcher(updateOnFirstComposition = false) }
-        val scriptingFolder by rememberAsyncMutableState(defaultValue = null, updateDispatcher = reloadDispatcher) {
+        val scriptingFolder by rememberAsyncMutableState(
+            defaultValue = null,
+            updateDispatcher = reloadDispatcher
+        ) {
             context.scriptManager.getScriptsFolder()
         }
-        val scriptModules by rememberAsyncMutableState(defaultValue = emptyList(), updateDispatcher = reloadDispatcher) {
+        val scriptModules by rememberAsyncMutableState(
+            defaultValue = emptyList(),
+            updateDispatcher = reloadDispatcher
+        ) {
             context.scriptManager.sync()
             context.modDatabase.getScripts()
         }
@@ -298,7 +426,10 @@ class ScriptingRoot : Routes.Route() {
                 flags = Intent.FLAG_ACTIVITY_NEW_TASK
             })
         }) {
-            Icon(imageVector = Icons.AutoMirrored.Default.LibraryBooks, contentDescription = "Documentation")
+            Icon(
+                imageVector = Icons.AutoMirrored.Default.LibraryBooks,
+                contentDescription = "Documentation"
+            )
         }
     }
 }
