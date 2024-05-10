@@ -419,7 +419,12 @@
                     },
                     "customize_ui": {
                         "name": "Farver",
-                        "description": "Tilpas Snapchats farver"
+                        "description": "Tilpas Snapchats farver",
+                        "properties": {
+                            "theme_picker": {
+                                "name": "Tema vælger"
+                            }
+                        }
                     }
                 }
             },
