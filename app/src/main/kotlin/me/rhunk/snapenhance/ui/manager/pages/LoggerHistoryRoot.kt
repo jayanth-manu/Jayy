@@ -83,13 +83,7 @@ class LoggerHistoryRoot : Routes.Route() {
             }
         ).enqueue(
             DownloadRequest(
-                inputMedias = arrayOf(
-                    InputMedia(
-                        content = attachment.mediaUrlKey!!,
-                        type = DownloadMediaType.PROTO_MEDIA,
-                        encryption = attachment.attachmentInfo?.encryption,
-                    )
-                )
+                inputMedias = arrayOf(attachment.createInputMedia()!!)
             ),
             DownloadMetadata(
                 mediaIdentifier = attachmentHash,
