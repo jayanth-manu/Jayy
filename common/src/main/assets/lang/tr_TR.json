@@ -1276,7 +1276,8 @@
             "sticker": "Çıkartma",
             "external_media": "Harici Medya",
             "note": "Not",
-            "original_story": "Orijinal Hikaye"
+            "original_story": "Orijinal Hikaye",
+            "gif": "GIF"
         },
         "select_attachments_title": "Ekleri seçin",
         "download_started_toast": "İndirme başladı",
