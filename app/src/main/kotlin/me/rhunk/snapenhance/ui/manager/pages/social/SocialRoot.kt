@@ -30,6 +30,7 @@ import me.rhunk.snapenhance.common.data.MessagingFriendInfo
 import me.rhunk.snapenhance.common.data.MessagingGroupInfo
 import me.rhunk.snapenhance.common.data.SocialScope
 import me.rhunk.snapenhance.common.util.snap.BitmojiSelfie
+import me.rhunk.snapenhance.storage.*
 import me.rhunk.snapenhance.ui.manager.Routes
 import me.rhunk.snapenhance.ui.util.coil.BitmojiImage
 import me.rhunk.snapenhance.ui.util.pagerTabIndicatorOffset
@@ -40,8 +41,8 @@ class SocialRoot : Routes.Route() {
 
     private fun updateScopeLists() {
         context.coroutineScope.launch {
-            friendList = context.modDatabase.getFriends(descOrder = true)
-            groupList = context.modDatabase.getGroups()
+            friendList = context.database.getFriends(descOrder = true)
+            groupList = context.database.getGroups()
         }
     }
 
@@ -51,18 +52,18 @@ class SocialRoot : Routes.Route() {
                 if (state) {
                     context.bridgeService?.triggerScopeSync(SocialScope.FRIEND, friend.userId)
                 } else {
-                    context.modDatabase.deleteFriend(friend.userId)
+                    context.database.deleteFriend(friend.userId)
                 }
             },
             onGroupState = { group, state ->
                 if (state) {
                     context.bridgeService?.triggerScopeSync(SocialScope.GROUP, group.conversationId)
                 } else {
-                    context.modDatabase.deleteGroup(group.conversationId)
+                    context.database.deleteGroup(group.conversationId)
                 }
             },
-            getFriendState = { friend -> context.modDatabase.getFriendInfo(friend.userId) != null },
-            getGroupState = { group -> context.modDatabase.getGroupInfo(group.conversationId) != null }
+            getFriendState = { friend -> context.database.getFriendInfo(friend.userId) != null },
+            getGroupState = { group -> context.database.getGroupInfo(group.conversationId) != null }
         ))
     }
 
@@ -140,7 +141,7 @@ class SocialRoot : Routes.Route() {
 
                                 LaunchedEffect(friend.userId) {
                                     withContext(Dispatchers.IO) {
-                                        streaks = context.modDatabase.getFriendStreaks(friend.userId)
+                                        streaks = context.database.getFriendStreaks(friend.userId)
                                     }
                                 }
 

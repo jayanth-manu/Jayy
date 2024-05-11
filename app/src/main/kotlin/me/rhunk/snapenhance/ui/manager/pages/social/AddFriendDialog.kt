@@ -10,7 +10,6 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
@@ -151,7 +150,7 @@ class AddFriendDialog(
         var hasFetchError by remember { mutableStateOf(false) }
 
         LaunchedEffect(Unit) {
-            context.modDatabase.receiveMessagingDataCallback = { friends, groups ->
+            context.database.receiveMessagingDataCallback = { friends, groups ->
                 cachedFriends = friends
                 cachedGroups = groups
                 timeoutJob?.cancel()

@@ -29,8 +29,7 @@ import me.rhunk.snapenhance.common.bridge.wrapper.LoggerWrapper
 import me.rhunk.snapenhance.common.bridge.wrapper.MappingsWrapper
 import me.rhunk.snapenhance.common.config.ModConfig
 import me.rhunk.snapenhance.e2ee.E2EEImplementation
-import me.rhunk.snapenhance.messaging.ModDatabase
-import me.rhunk.snapenhance.messaging.StreaksReminder
+import me.rhunk.snapenhance.storage.AppDatabase
 import me.rhunk.snapenhance.scripting.RemoteScriptManager
 import me.rhunk.snapenhance.task.TaskManager
 import me.rhunk.snapenhance.ui.manager.MainActivity
@@ -65,7 +64,7 @@ class RemoteSideContext(
     val translation = LocaleWrapper()
     val mappings = MappingsWrapper()
     val taskManager = TaskManager(this)
-    val modDatabase = ModDatabase(this)
+    val database = AppDatabase(this)
     val streaksReminder = StreaksReminder(this)
     val log = LogManager(this)
     val scriptManager = RemoteScriptManager(this)
@@ -114,7 +113,7 @@ class RemoteSideContext(
                     }
                 }
                 launch {
-                    modDatabase.init()
+                    database.init()
                     streaksReminder.init()
                 }
                 launch { taskManager.init() }

@@ -39,6 +39,9 @@ import me.rhunk.snapenhance.common.util.protobuf.ProtoReader
 import me.rhunk.snapenhance.core.features.impl.downloader.decoder.DecodedAttachment
 import me.rhunk.snapenhance.core.features.impl.downloader.decoder.MessageDecoder
 import me.rhunk.snapenhance.download.DownloadProcessor
+import me.rhunk.snapenhance.storage.findFriend
+import me.rhunk.snapenhance.storage.getFriendInfo
+import me.rhunk.snapenhance.storage.getGroupInfo
 import me.rhunk.snapenhance.ui.manager.Routes
 import java.nio.ByteBuffer
 import java.text.DateFormat
@@ -124,7 +127,7 @@ class LoggerHistoryRoot : Routes.Route() {
                 LaunchedEffect(Unit, message) {
                     runCatching {
                         decodeMessage(message) { senderId, contentType, messageReader, attachments ->
-                            val senderUsername = senderId?.let { context.modDatabase.getFriendInfo(it)?.mutableUsername } ?: translation["unknown_sender"]
+                            val senderUsername = senderId?.let { context.database.getFriendInfo(it)?.mutableUsername } ?: translation["unknown_sender"]
 
                             @Composable
                             fun ContentHeader() {
@@ -230,9 +233,9 @@ class LoggerHistoryRoot : Routes.Route() {
             ) {
                 fun formatConversationId(conversationId: String?): String? {
                     if (conversationId == null) return null
-                    return context.modDatabase.getGroupInfo(conversationId)?.name?.let {
+                    return context.database.getGroupInfo(conversationId)?.name?.let {
                         translation.format("list_group_format", "name" to it)
-                    } ?: context.modDatabase.findFriend(conversationId)?.let {
+                    } ?: context.database.findFriend(conversationId)?.let {
                         translation.format("list_friend_format", "name" to (it.displayName?.let { name -> "$name (${it.mutableUsername})" } ?: it.mutableUsername))
                     } ?: conversationId
                 }

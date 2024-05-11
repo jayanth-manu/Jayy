@@ -25,6 +25,7 @@ import me.rhunk.snapenhance.common.data.SocialScope
 import me.rhunk.snapenhance.common.ui.rememberAsyncMutableState
 import me.rhunk.snapenhance.common.ui.rememberAsyncMutableStateList
 import me.rhunk.snapenhance.common.util.snap.BitmojiSelfie
+import me.rhunk.snapenhance.storage.*
 import me.rhunk.snapenhance.ui.manager.Routes
 import me.rhunk.snapenhance.ui.util.AlertDialogs
 import me.rhunk.snapenhance.ui.util.Dialog
@@ -37,10 +38,10 @@ class ManageScope: Routes.Route() {
 
     private fun deleteScope(scope: SocialScope, id: String, coroutineScope: CoroutineScope) {
         when (scope) {
-            SocialScope.FRIEND -> context.modDatabase.deleteFriend(id)
-            SocialScope.GROUP -> context.modDatabase.deleteGroup(id)
+            SocialScope.FRIEND -> context.database.deleteFriend(id)
+            SocialScope.GROUP -> context.database.deleteGroup(id)
         }
-        context.modDatabase.executeAsync {
+        context.database.executeAsync {
             coroutineScope.launch {
                 routes.navController.popBackStack()
             }
@@ -95,8 +96,8 @@ class ManageScope: Routes.Route() {
                 SocialScope.FRIEND -> {
                     var streaks by remember { mutableStateOf(null as FriendStreaks?) }
                     val friend by rememberAsyncMutableState(null) {
-                        context.modDatabase.getFriendInfo(id)?.also {
-                            streaks = context.modDatabase.getFriendStreaks(id)
+                        context.database.getFriendInfo(id)?.also {
+                            streaks = context.database.getFriendStreaks(id)
                         }.also {
                             hasScope = it != null
                         }
@@ -107,7 +108,7 @@ class ManageScope: Routes.Route() {
                 }
                 SocialScope.GROUP -> {
                     val group by rememberAsyncMutableState(null) {
-                        context.modDatabase.getGroupInfo(id).also {
+                        context.database.getGroupInfo(id).also {
                             hasScope = it != null
                         }
                     }
@@ -143,7 +144,7 @@ class ManageScope: Routes.Route() {
         Spacer(modifier = Modifier.height(16.dp))
 
         val rules = rememberAsyncMutableStateList(listOf()) {
-            context.modDatabase.getRules(id)
+            context.database.getRules(id)
         }
 
         SectionTitle(translation["rules_title"])
@@ -171,7 +172,7 @@ class ManageScope: Routes.Route() {
                     Switch(checked = ruleEnabled,
                         enabled = if (ruleType.listMode) ruleState != null else true,
                         onCheckedChange = {
-                            context.modDatabase.setRule(id, ruleType.key, it)
+                            context.database.setRule(id, ruleType.key, it)
                             ruleEnabled = it
                         }
                     )
@@ -324,7 +325,7 @@ class ManageScope: Routes.Route() {
                                 modifier = Modifier.padding(end = 10.dp)
                             )
                             Switch(checked = shouldNotify, onCheckedChange = {
-                                context.modDatabase.setFriendStreaksNotify(id, it)
+                                context.database.setFriendStreaksNotify(id, it)
                                 shouldNotify = it
                             })
                         }
