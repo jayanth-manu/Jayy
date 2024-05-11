@@ -422,7 +422,18 @@
                         "description": "Tilpas Snapchats farver",
                         "properties": {
                             "theme_picker": {
-                                "name": "Tema vælger"
+                                "name": "Tema vælger",
+                                "description": "Forudindstillede Snapchat temaer"
+                            },
+                            "colors": {
+                                "name": "Brugerdefinerede farver",
+                                "description": "Tilpas individuelle farver\nBemærk: Vælg brugerdefinerede farver på temavælgeren for at bruge",
+                                "properties": {
+                                    "text_color": {
+                                        "name": "Hovedtekst farve",
+                                        "description": "Ændrer Snapchats hovedtekst farve"
+                                    }
+                                }
                             }
                         }
                     }
