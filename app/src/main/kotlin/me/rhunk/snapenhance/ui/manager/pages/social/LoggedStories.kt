@@ -27,6 +27,7 @@ import me.rhunk.snapenhance.bridge.DownloadCallback
 import me.rhunk.snapenhance.common.data.FileType
 import me.rhunk.snapenhance.common.data.StoryData
 import me.rhunk.snapenhance.common.data.download.*
+import me.rhunk.snapenhance.common.ui.rememberAsyncMutableState
 import me.rhunk.snapenhance.common.util.ktx.longHashCode
 import me.rhunk.snapenhance.download.DownloadProcessor
 import me.rhunk.snapenhance.ui.manager.Routes
@@ -44,7 +45,9 @@ class LoggedStories : Routes.Route() {
         val userId = navBackStackEntry.arguments?.getString("id") ?: return@content
 
         val stories = remember { mutableStateListOf<StoryData>() }
-        val friendInfo = remember { context.modDatabase.getFriendInfo(userId) }
+        val friendInfo by rememberAsyncMutableState(defaultValue = null) {
+            context.database.friendDao().getByUserId(userId)
+        }
         var lastStoryTimestamp by remember { mutableLongStateOf(Long.MAX_VALUE) }
 
         var selectedStory by remember { mutableStateOf<StoryData?>(null) }
