@@ -242,11 +242,11 @@ class FriendTrackerManagerRoot : Routes.Route() {
                                 .padding(8.dp),
                             verticalAlignment = Alignment.CenterVertically
                         ) {
-                            var databaseFriend by remember { mutableStateOf<Friend?>(null) }
+                            var databaseFriend by remember { mutableStateOf<MessagingFriendInfo?>(null) }
 
                             LaunchedEffect(Unit) {
                                 launch(Dispatchers.IO) {
-                                    databaseFriend = context.database.friendDao().getByUserId(log.userId)
+                                    databaseFriend = context.modDatabase.getFriendInfo(log.userId)
                                 }
                             }
                             BitmojiImage(
@@ -679,7 +679,7 @@ class FriendTrackerManagerRoot : Routes.Route() {
                             ) {
                                 val scopesBitmoji = rememberAsyncMutableStateList(defaultValue = emptyList(), updateDispatcher = updateRuleState) {
                                     context.modDatabase.getRuleTrackerScopes(rule.id, limit = 10).mapNotNull {
-                                        context.database.friendDao().getByUserId(it.key)?.let { friend ->
+                                        context.modDatabase.getFriendInfo(it.key)?.let { friend ->
                                             friend.selfieId to friend.bitmojiId
                                         }
                                     }.take(4)
