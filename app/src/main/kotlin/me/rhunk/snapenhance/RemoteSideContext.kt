@@ -29,8 +29,8 @@ import me.rhunk.snapenhance.common.bridge.wrapper.LoggerWrapper
 import me.rhunk.snapenhance.common.bridge.wrapper.MappingsWrapper
 import me.rhunk.snapenhance.common.config.ModConfig
 import me.rhunk.snapenhance.e2ee.E2EEImplementation
-import me.rhunk.snapenhance.storage.AppDatabase
 import me.rhunk.snapenhance.scripting.RemoteScriptManager
+import me.rhunk.snapenhance.storage.AppDatabase
 import me.rhunk.snapenhance.task.TaskManager
 import me.rhunk.snapenhance.ui.manager.MainActivity
 import me.rhunk.snapenhance.ui.manager.data.InstallationSummary
