@@ -236,7 +236,7 @@ class FriendTrackerManagerRoot : Routes.Route() {
                         Row(
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .padding(8.dp),
+                                .padding(4.dp),
                             verticalAlignment = Alignment.CenterVertically
                         ) {
                             var databaseFriend by remember { mutableStateOf<MessagingFriendInfo?>(null) }
@@ -257,16 +257,17 @@ class FriendTrackerManagerRoot : Routes.Route() {
 
                             Column(
                                 modifier = Modifier
-                                    .weight(1f)
+                                    .weight(1f),
                             ) {
                                 Text(databaseFriend?.displayName?.let {
                                     "$it (${log.username})"
-                                } ?: log.username)
-                                Text("${log.eventType} in ${log.conversationTitle}", fontSize = 15.sp, fontWeight = FontWeight.Light)
+                                } ?: log.username, lineHeight = 20.sp, fontWeight = FontWeight.Bold, maxLines = 1, overflow = TextOverflow.Ellipsis)
+                                Text("${log.eventType} in ${log.conversationTitle}", fontSize = 15.sp, fontWeight = FontWeight.Light, lineHeight = 20.sp, maxLines = 1, overflow = TextOverflow.Ellipsis)
                                 Text(
                                     DateFormat.getDateTimeInstance().format(log.timestamp),
                                     fontSize = 10.sp,
-                                    fontWeight = FontWeight.Light
+                                    fontWeight = FontWeight.Light,
+                                    lineHeight = 15.sp,
                                 )
                             }
 
