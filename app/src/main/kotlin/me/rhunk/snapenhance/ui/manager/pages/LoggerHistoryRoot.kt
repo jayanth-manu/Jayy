@@ -252,13 +252,8 @@ class LoggerHistoryRoot : Routes.Route() {
                         .fillMaxWidth()
                 )
 
-                val conversations = remember { mutableStateListOf<String>() }
-
-                LaunchedEffect(Unit) {
-                    conversations.clear()
-                    withContext(Dispatchers.IO) {
-                        conversations.addAll(loggerWrapper.getAllConversations())
-                    }
+                val conversations by rememberAsyncMutableState(defaultValue = emptyList()) {
+                    loggerWrapper.getAllConversations().toMutableList()
                 }
 
                 ExposedDropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {

@@ -22,13 +22,12 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavBackStackEntry
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import me.rhunk.snapenhance.R
 import me.rhunk.snapenhance.common.data.MessagingFriendInfo
 import me.rhunk.snapenhance.common.data.MessagingGroupInfo
 import me.rhunk.snapenhance.common.data.SocialScope
+import me.rhunk.snapenhance.common.ui.rememberAsyncMutableState
 import me.rhunk.snapenhance.common.util.snap.BitmojiSelfie
 import me.rhunk.snapenhance.storage.*
 import me.rhunk.snapenhance.ui.manager.Routes
@@ -137,12 +136,8 @@ class SocialRoot : Routes.Route() {
 
                             SocialScope.FRIEND -> {
                                 val friend = friendList[index]
-                                var streaks by remember { mutableStateOf(friend.streaks) }
-
-                                LaunchedEffect(friend.userId) {
-                                    withContext(Dispatchers.IO) {
-                                        streaks = context.database.getFriendStreaks(friend.userId)
-                                    }
+                                val streaks by rememberAsyncMutableState(defaultValue = friend.streaks) {
+                                    context.database.getFriendStreaks(friend.userId)
                                 }
 
                                 BitmojiImage(
