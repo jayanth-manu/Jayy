@@ -2,7 +2,10 @@ package me.rhunk.snapenhance.core.features.impl.ui
 
 import android.content.res.TypedArray
 import android.graphics.drawable.ColorDrawable
+import android.os.Build
 import android.util.TypedValue
+import androidx.compose.material3.dynamicDarkColorScheme
+import androidx.compose.ui.graphics.toArgb
 import me.rhunk.snapenhance.core.features.Feature
 import me.rhunk.snapenhance.core.features.FeatureLoadParams
 import me.rhunk.snapenhance.core.util.hook.HookStage
@@ -37,6 +40,28 @@ class CustomizeUI: Feature("Customize UI", loadParams = FeatureLoadParams.ACTIVI
             }.filterValues { it != null }.map { (key, value) ->
                 getAttribute(key) to value!!
             }.toMap()
+        }
+        if (themePicker == "material_you") {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                val colorScheme = dynamicDarkColorScheme(context.androidContext)
+                println("primary = ${colorScheme.primary}")
+                themes.clear()
+                themes[themePicker] = mapOf(
+                    "sigColorTextPrimary" to colorScheme.primary.toArgb(),
+                    "sigColorChatChat" to colorScheme.primary.toArgb(),
+                    "sigColorChatPendingSending" to colorScheme.primary.toArgb(),
+                    "sigColorChatSnapWithSound" to colorScheme.primary.toArgb(),
+                    "sigColorChatSnapWithoutSound" to colorScheme.primary.toArgb(),
+                    "sigColorBackgroundMain" to colorScheme.background.toArgb(),
+                    "sigColorBackgroundSurface" to colorScheme.background.toArgb(),
+                    "actionSheetBackgroundDrawable" to colorScheme.background.toArgb(),
+                    "actionSheetRoundedBackgroundDrawable" to colorScheme.background.toArgb(),
+                    "sigExceptionColorCameraGridLines" to colorScheme.background.toArgb(),
+                ).apply {
+                }.filterValues { true }.map { (key, value) ->
+                    getAttribute(key) to value
+                }.toMap()
+            }
         }
 
         context.androidContext.theme.javaClass.getMethod("obtainStyledAttributes", IntArray::class.java).hook(
