@@ -36,6 +36,7 @@ class UserInterfaceTweaks : ConfigContainer() {
         val themePicker = unique("theme_picker",
             "custom",
             "amoled_dark_mode",
+            "material_you",
             "light_blue",
             "dark_blue",
             "earthy_autumn",
