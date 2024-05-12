@@ -55,7 +55,7 @@ class CustomizeUI: Feature("Customize UI", loadParams = FeatureLoadParams.ACTIVI
                     "sigColorChatSnapWithoutSound" to 0xFFFFFFFF,
                     "sigColorBackgroundMain" to colorScheme.background.toArgb(),
                     "sigColorBackgroundSurface" to colorScheme.background.toArgb(),
-                    "listDivider" to colorScheme.background.toArgb(),
+                    "listDivider" to colorScheme.background.toArgb(),  
                     "actionSheetBackgroundDrawable" to colorScheme.background.toArgb(),
                     "actionSheetRoundedBackgroundDrawable" to colorScheme.background.toArgb(),
                     "sigExceptionColorCameraGridLines" to colorScheme.background.toArgb(),
