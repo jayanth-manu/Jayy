@@ -62,8 +62,8 @@ class FriendTrackerManagerRoot : Routes.Route() {
         if (currentPage == 1) {
             ExtendedFloatingActionButton(
                 icon = { Icon(Icons.Default.Add, contentDescription = "Add Rule") },
-                expanded = false,
-                text = {},
+                expanded = true,
+                text = { Text("Add Rule") },
                 onClick = { showAddRulePopup = true }
             )
         }
