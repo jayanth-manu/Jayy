@@ -1,4 +1,4 @@
-package me.rhunk.snapenhance.ui.manager.pages
+package me.rhunk.snapenhance.ui.manager.pages.tracker
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -11,6 +11,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Clear
@@ -21,7 +22,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
@@ -35,14 +35,14 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import me.rhunk.snapenhance.common.bridge.wrapper.TrackerLog
-import me.rhunk.snapenhance.common.data.*
+import me.rhunk.snapenhance.common.data.MessagingFriendInfo
+import me.rhunk.snapenhance.common.data.TrackerEventType
 import me.rhunk.snapenhance.common.ui.rememberAsyncMutableState
 import me.rhunk.snapenhance.common.ui.rememberAsyncMutableStateList
 import me.rhunk.snapenhance.common.ui.rememberAsyncUpdateDispatcher
 import me.rhunk.snapenhance.common.util.snap.BitmojiSelfie
 import me.rhunk.snapenhance.storage.*
 import me.rhunk.snapenhance.ui.manager.Routes
-import me.rhunk.snapenhance.ui.manager.pages.social.AddFriendDialog
 import me.rhunk.snapenhance.ui.util.coil.BitmojiImage
 import me.rhunk.snapenhance.ui.util.pagerTabIndicatorOffset
 import java.text.DateFormat
@@ -56,7 +56,6 @@ class FriendTrackerManagerRoot : Routes.Route() {
 
     private val titles = listOf("Logs", "Rules")
     private var currentPage by mutableIntStateOf(0)
-    private var showAddRulePopup by mutableStateOf(false)
 
     override val floatingActionButton: @Composable () -> Unit = {
         if (currentPage == 1) {
@@ -64,11 +63,8 @@ class FriendTrackerManagerRoot : Routes.Route() {
                 icon = { Icon(Icons.Default.Add, contentDescription = "Add Rule") },
                 expanded = true,
                 text = { Text("Add Rule") },
-                onClick = { showAddRulePopup = true }
+                onClick = { routes.editRule.navigate() }
             )
-        }
-        if (showAddRulePopup) {
-            EditRuleDialog(onDismiss = { showAddRulePopup = false })
         }
     }
 
@@ -297,309 +293,12 @@ class FriendTrackerManagerRoot : Routes.Route() {
 
     }
 
-    @OptIn(ExperimentalLayoutApi::class, ExperimentalMaterial3Api::class)
-    @Composable
-    private fun EditRuleDialog(
-        currentRuleId: Int? = null,
-        onDismiss: () -> Unit = {}
-    ) {
-        val events = rememberAsyncMutableStateList(defaultValue = emptyList()) {
-            currentRuleId?.let { ruleId ->
-                context.database.getTrackerEvents(ruleId)
-            } ?: emptyList()
-        }
-        var currentScopeType by remember { mutableStateOf(TrackerScopeType.BLACKLIST) }
-        val scopes = rememberAsyncMutableStateList(defaultValue = emptyList()) {
-            currentRuleId?.let { ruleId ->
-                context.database.getRuleTrackerScopes(ruleId).also {
-                    currentScopeType = if (it.isEmpty()) {
-                        TrackerScopeType.WHITELIST
-                    } else {
-                        it.values.first()
-                    }
-                }.map { it.key }
-            } ?: emptyList()
-        }
-        val ruleName = rememberAsyncMutableState(defaultValue = "", keys = arrayOf(currentRuleId)) {
-            currentRuleId?.let { ruleId ->
-                context.database.getTrackerRule(ruleId)?.name ?: "Custom Rule"
-            } ?: "Custom Rule"
-        }
-
-        fun saveRule() {
-            runCatching {
-                val ruleId = currentRuleId ?: context.database.newTrackerRule()
-                events.forEach { event ->
-                    context.database.addOrUpdateTrackerRuleEvent(
-                        event.id.takeIf { it > -1 },
-                        ruleId,
-                        event.eventType,
-                        event.params,
-                        event.actions
-                    )
-                }
-                context.database.setTrackerRuleName(ruleId, ruleName.value.trim())
-                context.database.setRuleTrackerScopes(ruleId, currentScopeType, scopes)
-            }.onFailure {
-                context.log.error("Failed to save rule", it)
-                context.shortToast("Failed to save rule. Please check logs for more details.")
-            }
-        }
-
-        @Composable
-        fun ActionCheckbox(
-            text: String,
-            checked: MutableState<Boolean>,
-            onChanged: (Boolean) -> Unit = {}
-        ) {
-            Row(
-                modifier = Modifier.clickable {
-                    checked.value = !checked.value
-                    onChanged(checked.value)
-                },
-                horizontalArrangement = Arrangement.spacedBy(2.dp),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Checkbox(
-                    modifier = Modifier.size(30.dp),
-                    checked = checked.value,
-                    onCheckedChange = {
-                        checked.value = it
-                        onChanged(it)
-                    }
-                )
-                Text(text, fontSize = 12.sp)
-            }
-        }
-
-        AlertDialog(
-            onDismissRequest = {
-                onDismiss()
-            },
-            title = {
-                TextField(
-                    value = ruleName.value,
-                    onValueChange = {
-                        ruleName.value = it
-                    },
-                    singleLine = true,
-                    placeholder = {
-                        Text(
-                            "Rule Name",
-                            fontSize = 18.sp,
-                            modifier = Modifier.fillMaxWidth(),
-                            textAlign = TextAlign.Center
-                        )
-                    },
-                    modifier = Modifier.fillMaxWidth(),
-                    colors = TextFieldDefaults.colors(
-                        focusedContainerColor = Color.Transparent,
-                        unfocusedContainerColor = Color.Transparent
-                    ),
-                    textStyle = TextStyle(fontSize = 20.sp, textAlign = TextAlign.Center, fontWeight = FontWeight.Bold)
-                )
-            },
-            text = {
-                Column(
-                    modifier = Modifier
-                        .fillMaxWidth(),
-                    verticalArrangement = Arrangement.spacedBy(5.dp)
-                ) {
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.SpaceEvenly
-                    ){
-                        var addFriendDialog by remember { mutableStateOf(null as AddFriendDialog?) }
-
-                        val friendDialogActions = remember {
-                            AddFriendDialog.Actions(
-                                onFriendState = { friend, state ->
-                                    if (state) {
-                                        scopes.add(friend.userId)
-                                    } else {
-                                        scopes.remove(friend.userId)
-                                    }
-                                },
-                                onGroupState = { group, state ->
-                                    if (state) {
-                                        scopes.add(group.conversationId)
-                                    } else {
-                                        scopes.remove(group.conversationId)
-                                    }
-                                },
-                                getFriendState = { friend ->
-                                    friend.userId in scopes
-                                },
-                                getGroupState = { group ->
-                                    group.conversationId in scopes
-                                }
-                            )
-                        }
-
-                        val isScopesEmpty = scopes.isEmpty()
-
-                        Button(
-                            onClick = {
-                                currentScopeType = TrackerScopeType.BLACKLIST
-                                addFriendDialog = AddFriendDialog(
-                                    context,
-                                    friendDialogActions
-                                )
-                            },
-                            colors = if (!isScopesEmpty && currentScopeType == TrackerScopeType.BLACKLIST) ButtonDefaults.buttonColors() else ButtonDefaults.elevatedButtonColors()
-                        ) {
-                            Text("Blacklist" + if (currentScopeType == TrackerScopeType.BLACKLIST && !isScopesEmpty) " (" + scopes.size.toString() + ")" else "")
-                        }
-
-                        Button(
-                            onClick = {
-                                currentScopeType = TrackerScopeType.WHITELIST
-                                addFriendDialog = AddFriendDialog(
-                                    context,
-                                    friendDialogActions
-                                )
-                            },
-                            colors = if (!isScopesEmpty && currentScopeType == TrackerScopeType.WHITELIST) ButtonDefaults.buttonColors() else ButtonDefaults.elevatedButtonColors()
-                        ) {
-                            Text("Whitelist" + if (currentScopeType == TrackerScopeType.WHITELIST && !isScopesEmpty) " (" + scopes.size.toString() + ")" else "")
-                        }
-
-                        addFriendDialog?.Content {
-                            addFriendDialog = null
-                        }
-                    }
-
-                    OutlinedCard(
-                        modifier = Modifier
-                            .fillMaxWidth(),
-                    ) {
-                        var currentEventType by remember { mutableStateOf(TrackerEventType.CONVERSATION_ENTER.key) }
-                        var checkedActions by remember { mutableStateOf(emptySet<TrackerRuleAction>()) }
-                        val showDropdown = remember { mutableStateOf(false) }
-
-                        Row(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .padding(2.dp),
-                            horizontalArrangement = Arrangement.SpaceEvenly
-                        ) {
-                            ExposedDropdownMenuBox(expanded = showDropdown.value, onExpandedChange = { showDropdown.value = it }) {
-                                ElevatedButton(
-                                    onClick = { showDropdown.value = true },
-                                    modifier = Modifier.menuAnchor()
-                                ) {
-                                    Text(currentEventType)
-                                }
-                                DropdownMenu(expanded = showDropdown.value, onDismissRequest = { showDropdown.value = false }) {
-                                    TrackerEventType.entries.forEach { eventType ->
-                                        DropdownMenuItem(onClick = {
-                                            currentEventType = eventType.key
-                                            showDropdown.value = false
-                                        }, text = {
-                                            Text(eventType.key)
-                                        })
-                                    }
-                                }
-                            }
-
-                            OutlinedButton(onClick = {
-                                events.add(TrackerRuleEvent(-1, true, currentEventType, TrackerRuleActionParams(), checkedActions.toList()))
-                            }) {
-                                Text("Add")
-                            }
-                        }
-
-                        FlowRow(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .padding(2.dp),
-                        ) {
-                            TrackerRuleAction.entries.forEach { action ->
-                                ActionCheckbox(action.name, checked = remember { mutableStateOf(checkedActions.contains(action)) }) {
-                                    if (it) {
-                                        checkedActions += action
-                                    } else {
-                                        checkedActions -= action
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-
-                    LazyColumn(
-                        verticalArrangement = Arrangement.spacedBy(4.dp),
-                    ) {
-                        items(events) { event ->
-                            var collapsed by remember { mutableStateOf(false) }
-                            Column(
-                                modifier = Modifier
-                                    .fillMaxWidth()
-                                    .clip(MaterialTheme.shapes.medium)
-                                    .background(MaterialTheme.colorScheme.secondaryContainer)
-                                    .clickable {
-                                        collapsed = !collapsed
-                                    },
-                            ) {
-                                Row(
-                                    modifier = Modifier
-                                        .fillMaxWidth()
-                                        .padding(6.dp),
-                                    horizontalArrangement = Arrangement.SpaceBetween,
-                                    verticalAlignment = Alignment.CenterVertically
-                                ) {
-                                    Text(event.eventType)
-                                    OutlinedIconButton(onClick = {
-                                        if (event.id > -1) {
-                                            context.database.deleteTrackerRuleEvent(event.id)
-                                        }
-                                        events.remove(event)
-                                    }) {
-                                        Icon(Icons.Default.DeleteOutline, contentDescription = "Delete")
-                                    }
-                                }
-                                if (collapsed) {
-                                    Text(event.actions.joinToString(", ") { it.name }, fontSize = 10.sp, fontWeight = FontWeight.Light)
-                                    ActionCheckbox(text = "Only inside conversation", checked = remember { mutableStateOf(event.params.onlyInsideConversation) }, onChanged = { event.params.onlyInsideConversation = it })
-                                    ActionCheckbox(text = "Only outside conversation", checked = remember { mutableStateOf(event.params.onlyOutsideConversation) }, onChanged = { event.params.onlyOutsideConversation = it })
-                                    ActionCheckbox(text = "Only when app active", checked = remember { mutableStateOf(event.params.onlyWhenAppActive) }, onChanged = { event.params.onlyWhenAppActive = it })
-                                    ActionCheckbox(text = "Only when app inactive", checked = remember { mutableStateOf(event.params.onlyWhenAppInactive) }, onChanged = { event.params.onlyWhenAppInactive = it })
-                                    ActionCheckbox(text = "No push notification when active", checked = remember { mutableStateOf(event.params.noPushNotificationWhenAppActive) }, onChanged = { event.params.noPushNotificationWhenAppActive = it })
-                                }
-                            }
-                        }
-                    }
-                }
-            },
-            confirmButton = {
-                Button(onClick = {
-                    saveRule()
-                    onDismiss()
-                }) {
-                    Text("Save")
-                }
-            },
-
-            dismissButton = {
-                currentRuleId?.let { ruleId ->
-                    Button(onClick = {
-                        context.database.deleteTrackerRule(ruleId)
-                        onDismiss()
-                    }) {
-                        Text("Delete")
-                    }
-                }
-            }
-        )
-    }
-
     @Composable
     private fun ConfigRulesTab() {
         val updateRules = rememberAsyncUpdateDispatcher()
         val rules = rememberAsyncMutableStateList(defaultValue = listOf(), updateDispatcher = updateRules) {
-            context.database.getTrackerRules()
+            context.database.getTrackerRulesDesc()
         }
-        val coroutineScope = rememberCoroutineScope()
 
         Column(
             modifier = Modifier.fillMaxSize()
@@ -615,39 +314,27 @@ class FriendTrackerManagerRoot : Routes.Route() {
                     }
                 }
                 items(rules, key = { it.id }) { rule ->
-                    val updateRuleState = rememberAsyncUpdateDispatcher()
-                    val ruleName by rememberAsyncMutableState(defaultValue = rule.name, updateDispatcher = updateRuleState) {
+                    val ruleName by rememberAsyncMutableState(defaultValue = rule.name) {
                         context.database.getTrackerRule(rule.id)?.name ?: "(empty)"
                     }
-                    val eventCount by rememberAsyncMutableState(defaultValue = 0, updateDispatcher = updateRuleState) {
+                    val eventCount by rememberAsyncMutableState(defaultValue = 0) {
                         context.database.getTrackerEvents(rule.id).size
                     }
-                    val scopeCount by rememberAsyncMutableState(defaultValue = 0, updateDispatcher = updateRuleState) {
+                    val scopeCount by rememberAsyncMutableState(defaultValue = 0) {
                         context.database.getRuleTrackerScopes(rule.id).size
                     }
-
-                    var editRuleDialog by remember { mutableStateOf(false) }
-
-                    if (editRuleDialog) {
-                        EditRuleDialog(rule.id, onDismiss = {
-                            context.database.executeAsync {
-                                if (context.database.getTrackerRule(rule.id) == null) {
-                                    coroutineScope.launch {
-                                        rules.removeIf { it.id == rule.id }
-                                    }
-                                }
-                                editRuleDialog = false
-                                coroutineScope.launch {
-                                    updateRuleState.dispatch()
-                                }
-                            }
-                        })
+                    var enabled by rememberAsyncMutableState(defaultValue = rule.enabled) {
+                        context.database.getTrackerRule(rule.id)?.enabled ?: false
                     }
 
                     ElevatedCard(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .clickable { editRuleDialog = true }
+                            .clickable {
+                                routes.editRule.navigate {
+                                    this["rule_id"] = rule.id.toString()
+                                }
+                            }
                             .padding(5.dp)
                     ) {
                         Row(
@@ -675,48 +362,58 @@ class FriendTrackerManagerRoot : Routes.Route() {
                             }
 
                             Row(
-                                modifier = Modifier.padding(16.dp),
-                                horizontalArrangement = Arrangement.End,
+                                modifier = Modifier.padding(10.dp),
+                                horizontalArrangement = Arrangement.spacedBy(10.dp)
                             ) {
-                                val scopesBitmoji = rememberAsyncMutableStateList(defaultValue = emptyList(), updateDispatcher = updateRuleState) {
+                                val scopesBitmoji = rememberAsyncMutableStateList(defaultValue = emptyList()) {
                                     context.database.getRuleTrackerScopes(rule.id, limit = 10).mapNotNull {
                                         context.database.getFriendInfo(it.key)?.let { friend ->
                                             friend.selfieId to friend.bitmojiId
                                         }
-                                    }.take(4)
+                                    }.take(3)
                                 }
 
-                                scopesBitmoji.forEachIndexed { index, friend ->
-                                    Box(
-                                        modifier = Modifier
-                                            .offset(x = (-index * 20).dp + (scopesBitmoji.size * 14).dp)
-                                    ) {
-                                        BitmojiImage(
-                                            size = 50,
+                                Row {
+                                    scopesBitmoji.forEachIndexed { index, friend ->
+                                        Box(
                                             modifier = Modifier
-                                                .border(
-                                                    BorderStroke(1.dp, Color.White),
-                                                    CircleShape
-                                                )
-                                                .background(Color.White, CircleShape)
-                                                .clip(CircleShape),
-                                            context = context,
-                                            url = BitmojiSelfie.getBitmojiSelfie(friend.first, friend.second, BitmojiSelfie.BitmojiSelfieType.NEW_THREE_D),
-                                        )
+                                                .offset(x = (-index * 20).dp + (scopesBitmoji.size * 20).dp - 20.dp)
+                                        ) {
+                                            BitmojiImage(
+                                                size = 50,
+                                                modifier = Modifier
+                                                    .border(
+                                                        BorderStroke(1.dp, Color.White),
+                                                        CircleShape
+                                                    )
+                                                    .background(Color.White, CircleShape)
+                                                    .clip(CircleShape),
+                                                context = context,
+                                                url = BitmojiSelfie.getBitmojiSelfie(friend.first, friend.second, BitmojiSelfie.BitmojiSelfieType.NEW_THREE_D),
+                                            )
+                                        }
                                     }
                                 }
+
+                                Box(modifier = Modifier
+                                    .padding(start = 5.dp, end = 5.dp)
+                                    .height(50.dp)
+                                    .width(1.dp)
+                                    .background(
+                                        color = MaterialTheme.colorScheme.primary.copy(alpha = 0.12f),
+                                        shape = RoundedCornerShape(5.dp)
+                                    )
+                                )
+
+                                Switch(
+                                    checked = enabled,
+                                    onCheckedChange = {
+                                        enabled = it
+                                        context.database.setTrackerRuleState(rule.id, it)
+                                    }
+                                )
                             }
                         }
-                    }
-                }
-            }
-        }
-
-        if (showAddRulePopup) {
-            DisposableEffect(Unit) {
-                onDispose {
-                    coroutineScope.launch {
-                        updateRules.dispatch()
                     }
                 }
             }
