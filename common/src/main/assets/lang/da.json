@@ -432,6 +432,30 @@
                                     "text_color": {
                                         "name": "Hovedtekst farve",
                                         "description": "Ændrer Snapchats hovedtekst farve"
+                                    },
+                                    "chat_chat_text_color": {
+                                        "name": "Hoved vens feed tekstfarve",
+                                        "description": "Ændrer tekstfarven på (Ny chat / Nyt snap og chats / Indtastning / Opkald / Ubesvaret opkald / Taler / Ny stemmebesked) på vennefeedet"
+                                    },
+                                    "pending_sending_text_color": {
+                                        "name": "Sekundær Friend Feed Tekst farve",
+                                        "description": "Ændrer tekstfarven på ( Leveret / Modtaget / Sender / Åbnet / Tryk for at chatte / Hold for at afspille / Afspilles igen / Gemt i chat / Opkaldet) på vennefeedet"
+                                    },
+                                    "snap_with_sound_text_color": {
+                                        "name": "Snaps med lyd tekst farve",
+                                        "description": "Ændrer tekstfarven på ( Ny Snap ) på vennefeedet\nBemærk: Kun videosnaps"
+                                    },
+                                    "snap_without_sound_text_color": {
+                                        "name": "Snaps uden lyd Tekst farve",
+                                        "description": "Ændrer tekstfarven på ( Ny Snap ) på vennefeedet\nBemærk: Kun videosnaps"
+                                    },
+                                    "background_color": {
+                                        "name": "Baggrundsfarve",
+                                        "description": "Ændrer Snapchats baggrundsfarve"
+                                    },
+                                    "background_color_surface": {
+                                        "name": "Baggrunds overflade farve",
+                                        "description": "Ændrer Snapchats baggrunds overflade farve"
                                     }
                                 }
                             }
