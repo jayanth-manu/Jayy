@@ -1271,14 +1271,15 @@
             "sticker": "Sticker",
             "external_media": "External Media",
             "note": "Note",
-            "original_story": "Original Story"
+            "original_story": "Original Story",
+            "gif": "GIF"
         },
         "processing_toast": "Processing {path}...",
         "failed_generic_toast": "Failed to download",
         "failed_to_create_preview_toast": "Failed to create preview",
         "failed_processing_toast": "Failed processing {error}",
         "failed_gallery_toast": "Failed saving to gallery {error}",
-        "select_attachments_title": "Select attachments to download",
+        "select_attachments_title": "Select attachments",
         "download_started_toast": "Download started",
         "unsupported_content_type_toast": "Unsupported content type!",
         "failed_no_longer_available_toast": "Media no longer available",
