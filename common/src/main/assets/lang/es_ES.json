@@ -1,1 +1,222 @@
-{}
+{
+    "setup": {
+        "mappings": {
+            "dialog": "Generando mapeos, esto puede tardar un rato ...",
+            "generate_failure_no_snapchat": "SnapEnhance no pudo detectar Snapchat, por favor intenta reinstalar Snapchat.",
+            "generate_failure": "Ocurrió un error al intentar generar mapeos, por favor intenta de nuevo."
+        },
+        "dialogs": {
+            "select_save_folder_button": "Elige la carpeta",
+            "select_language": "Elige un idioma",
+            "save_folder": "Snapenhance necesita permisos de almacenamiento para descargar y guardar medios desde Snapchat.\nPor favor elige la ubicación dónde se deben descargar los medios."
+        },
+        "permissions": {
+            "dialog": "Para continuar hay que cumplir los siguientes requisitos:",
+            "request_button": "Solicitar",
+            "notification_access": "Acceso a notificaciones",
+            "battery_optimization": "Optimización de la Batería",
+            "display_over_other_apps": "Mostrar sobre otras aplicaciones"
+        }
+    },
+    "manager": {
+        "routes": {
+            "social": "Social",
+            "manage_scope": "Gestionar el alcance",
+            "messaging_preview": "Vista previa",
+            "scripts": "Secuencias",
+            "logger_history": "Historial del registro",
+            "logged_stories": "Historias registradas",
+            "tasks": "Tareas",
+            "features": "Características",
+            "home": "Página principal",
+            "home_logs": "Registros",
+            "home_settings": "Ajustes"
+        },
+        "sections": {
+            "home": {
+                "update_title": "Actualización de SnapEnhance",
+                "update_content": "¡Versión {version} está disponible!",
+                "update_button": "Descargar"
+            },
+            "home_logs": {
+                "no_logs_hint": "Registros no disponibles",
+                "clear_logs_button": "Borrar Registros",
+                "export_logs_button": "Exportar Registros",
+                "saving_logs_toast": "Guardando los registros, esto puede tardar un rato…",
+                "saved_logs_success_toast": "Registros guardados con éxito",
+                "saved_logs_failure_toast": "Error al guardar los registros"
+            },
+            "home_settings": {
+                "actions_title": "Acciones",
+                "message_logger_title": "Registrador de mensajes",
+                "debug_title": "Depurar",
+                "success_toast": "¡Hecho!",
+                "message_logger_summary": "{messageCount} mensajes\n{storyCount} historias",
+                "export_button": "Exportar",
+                "clear_button": "Borrar",
+                "view_logger_history_button": "Ver historial del registrador"
+            },
+            "tasks": {
+                "remove_selected_tasks_title": "¿Estás segura/o que quieres borrar las tareas seleccionadas?",
+                "remove_all_tasks_title": "¿Estás segura/o que quieres borrar todas las tareas?",
+                "delete_files_option": "También borrar archivos",
+                "remove_selected_tasks_confirm": "¿Borrar {count} tareas?",
+                "remove_all_tasks_confirm": "¿Borrar todas las tareas?",
+                "merge_files_toast": "Incorporando {count} archivos",
+                "no_tasks": "Sin tareas"
+            },
+            "features": {
+                "disabled": "Desactivado",
+                "export_option": "Exportar",
+                "import_option": "Importar",
+                "reset_option": "Restablecer",
+                "config_export_success_toast": "Configuración exportada con éxito",
+                "config_import_success_toast": "Configuración importada con éxito",
+                "config_import_failure_toast": "Error al importar la configuración {error}",
+                "saved_config_snackbar": "Configuración guardada"
+            },
+            "social": {
+                "friends_tab": "Amigxs",
+                "empty_hint": "(Vacío)",
+                "streaks_expiration_short": "{hours}h",
+                "groups_tab": "Grupos"
+            },
+            "manage_scope": {
+                "rules_title": "Normas",
+                "participants_text": "{count} participantes",
+                "not_found": "No encontrado",
+                "streaks_length_text": "Longitud: {length}",
+                "streaks_expiration_text": "Caduca en {eta}",
+                "streaks_expiration_text_expired": "Caducado",
+                "reminder_button": "Establecer recordatorio",
+                "logged_stories_button": "Mostrar historias en el registro",
+                "delete_scope_confirm_dialog_title": "¿Segura/o de que quieres borrar un {scope}?",
+                "e2ee_title": "Cifrado de extremo a extremo",
+                "streaks_title": "Rachas"
+            },
+            "logged_stories": {
+                "story_failed_to_load": "Error al cargar",
+                "no_stories": "Ningunas historias encontradas",
+                "save_from_cache_button": "Guardar desde el cache"
+            },
+            "messaging_preview": {
+                "bridge_connection_failed": "Error al conectar a Snapchat mediante el servicio de puente",
+                "bridge_init_failed": "Error al iniciar el puente de mensajería",
+                "message_fetch_failed": "Error al recuperar mensajes",
+                "no_message_hint": "Sin mensaje",
+                "save_selection_option": "Guardar selección",
+                "save_all_option": "Guardar Todo",
+                "delete_selection_option": "Borrar selección",
+                "delete_all_option": "Borrar todo",
+                "unsave_selection_option": "No guardar seleccion",
+                "unsave_all_option": "No guardar nada",
+                "mark_selection_as_seen_option": "Marca el Snap seleccionado como visto",
+                "mark_all_as_seen_option": "Marcar todos los Snaps como vistos"
+            },
+            "logger_history": {
+                "list_friend_format": "Amigx {name}",
+                "no_more_messages": "Sin más mensajes",
+                "reverse_order_checkbox": "Orden al revés",
+                "chat_attachment": "Atajo {index}",
+                "empty_message": "Mensaje vacío",
+                "unknown_sender": "Remitente desconocido",
+                "download_attachment_failed_toast": "Error al descargar atajo",
+                "list_group_format": "Grupo {name}",
+                "message_parse_failed": "Error al analizar mensaje"
+            }
+        },
+        "dialogs": {
+            "add_friend": {
+                "title": "Añadir amigx o grupo",
+                "search_hint": "Buscar",
+                "fetch_error": "Error al cargar datos",
+                "category_groups": "Grupos",
+                "category_friends": "Amigxs"
+            },
+            "scripting_warning": {
+                "title": "Aviso",
+                "content": "SnapEnhance incluye una herramienta de escribir comandos, que permite la ejecución de código definido por el usuario. Exige precaución extrema y asegúrese de sólo instalar módulos de fuentes conocidos y confiables. Módulos no verificados o autorizados pueden arriesgar la seguridad de tu sistema."
+            },
+            "reset_config": {
+                "content": "¿Segura/o que quieres restablecer la configuración?",
+                "success_toast": "Configuración restablecida con éxito",
+                "title": "Restablecer configuración"
+            },
+            "messaging_action": {
+                "select_all_button": "Seleccionar todo",
+                "title": "Elige el tipo de contenido para procesarlo"
+            }
+        }
+    },
+    "rules": {
+        "toasts": {
+            "enabled": "{ruleName} activado",
+            "disabled": "{ruleName} desactivado"
+        },
+        "modes": {
+            "blacklist": "Modo de lista negra",
+            "whitelist": "Modo de lista blanca"
+        },
+        "properties": {
+            "auto_download": {
+                "name": "Descargar automáticamente",
+                "options": {
+                    "blacklist": "Excluir de descargas automáticas",
+                    "whitelist": "Descargar automáticamente"
+                },
+                "description": "Descargar Snaps automáticamente mientras los ves"
+            },
+            "stealth": {
+                "name": "Modo sigilo",
+                "description": "Impide que nadie sepa que hayas abierto sus Snaps/Chats y conversaciones",
+                "options": {
+                    "blacklist": "Excluir de modo sigilo",
+                    "whitelist": "Modo sigilo"
+                }
+            },
+            "auto_save": {
+                "name": "Guardar automáticamente",
+                "description": "Guarda mensajes de chat mientras verlos",
+                "options": {
+                    "blacklist": "Excluir de guardar automáticamente",
+                    "whitelist": "Guardar automáticamente"
+                }
+            },
+            "unsaveable_messages": {
+                "name": "Mensajes que no se puede guardar",
+                "options": {
+                    "blacklist": "Excluir de mensajes que no se puede guardar",
+                    "whitelist": "Mensajes que no se puede guardar"
+                },
+                "description": "Impide poder guardar mensajes en el chat por otras personas"
+            },
+            "auto_open_snaps": {
+                "name": "Automáticamente abrir los Snaps",
+                "description": "Automáticamente abre los Snaps al recibirlos",
+                "options": {
+                    "blacklist": "Excluir de abrir Snaps automáticamente",
+                    "whitelist": "Abrir Snaps automáticamente"
+                }
+            },
+            "hide_friend_feed": {
+                "name": "Ocultar de feed de amigxs"
+            },
+            "e2e_encryption": {
+                "name": "Usa cifración de extremo a extremo"
+            },
+            "pin_conversation": {
+                "name": "Fijar conversación"
+            }
+        }
+    },
+    "actions": {
+        "clean_snapchat_cache": {
+            "description": "Borra cache de Snapchat",
+            "name": "Borrar cache de Snapchat"
+        }
+    },
+    "scopes": {
+        "friend": "Amigx",
+        "group": "Grupo"
+    }
+}
