@@ -40,13 +40,13 @@ class CustomizeUI: Feature("Customize UI", loadParams = FeatureLoadParams.ACTIVI
             }.filterValues { it != null }.map { (key, value) ->
                 getAttribute(key) to value!!
             }.toMap()
-        }
+        } 
         if (themePicker == "material_you") {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
                 val colorScheme = dynamicDarkColorScheme(context.androidContext)
                 println("primary = ${colorScheme.primary}")
                 themes.clear()
-                themes[themePicker] = mapOf(
+                themes[themePicker] = mapOf( // TODO: change all colorScheme to correct attr 
                     "sigColorTextPrimary" to colorScheme.primary.toArgb(),
                     "sigColorChatChat" to colorScheme.primary.toArgb(),
                     "sigColorChatPendingSending" to colorScheme.primary.toArgb(),
