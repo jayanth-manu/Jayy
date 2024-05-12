@@ -44,7 +44,7 @@ class CustomizeUI: Feature("Customize UI", loadParams = FeatureLoadParams.ACTIVI
         if (themePicker == "material_you") {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
                 val colorScheme = dynamicDarkColorScheme(context.androidContext)
-                println("primary = ${colorScheme.primary}")
+                println("primary = ${colorScheme.primary}") // TODO: change to show on the logs / add more
                 themes.clear()
                 themes[themePicker] = mapOf( // TODO: change all colorScheme to correct attr 
                     "sigColorTextPrimary" to colorScheme.primary.toArgb(),
