@@ -47,14 +47,14 @@ class CustomizeUI: Feature("Customize UI", loadParams = FeatureLoadParams.ACTIVI
                 val colorScheme = dynamicDarkColorScheme(context.androidContext)
                 themes.clear()
                 themes[themePicker] = mapOf(
-                    "sigColorTextPrimary" to 0xFFFFFFFF,
-                    "sigColorChatChat" to 0xFFFFFFFF,
-                    "sigColorChatPendingSending" to 0xFFFFFFFF,
-                    "sigColorChatSnapWithSound" to 0xFFFFFFFF,
-                    "sigColorChatSnapWithoutSound" to 0xFFFFFFFF,
+                    "sigColorTextPrimary" to colorScheme.onSurfaceVariant.toArgb(),
+                    "sigColorChatChat" to colorScheme.onSurfaceVariant.toArgb(),
+                    "sigColorChatPendingSending" to colorScheme.onSurfaceVariant.toArgb(),
+                    "sigColorChatSnapWithSound" to colorScheme.onSurfaceVariant.toArgb(),
+                    "sigColorChatSnapWithoutSound" to colorScheme.onSurfaceVariant.toArgb(),
                     "sigColorBackgroundMain" to colorScheme.background.toArgb(),
                     "sigColorBackgroundSurface" to colorScheme.background.toArgb(),
-                    "listDivider" to colorScheme.background.toArgb(),  
+                    "listDivider" to colorScheme.primary.copy(alpha = 0.12f).toArgb(),
                     "actionSheetBackgroundDrawable" to colorScheme.background.toArgb(),
                     "actionSheetRoundedBackgroundDrawable" to colorScheme.background.toArgb(),
                     "sigExceptionColorCameraGridLines" to colorScheme.background.toArgb(),
