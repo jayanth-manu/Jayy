@@ -107,6 +107,7 @@ class CustomizeUI: Feature("Customize UI", loadParams = FeatureLoadParams.ACTIVI
                "sigColorTextPrimary" to 0xFF03BAFC,
                "sigColorBackgroundMain" to 0xFFBDE6FF,
                "sigColorBackgroundSurface" to 0xFF78DBFF,
+               "listDivider" to 0xFFBDE6FF,
                "actionSheetBackgroundDrawable" to 0xFF78DBFF,
                "sigColorChatChat" to 0xFF08D6FF,
                "sigColorChatPendingSending" to 0xFF08D6FF,
