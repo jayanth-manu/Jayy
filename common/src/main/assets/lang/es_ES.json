@@ -199,7 +199,7 @@
                 }
             },
             "hide_friend_feed": {
-                "name": "Ocultar de feed de amigxs"
+                "name": "Ocultar de la lista de amigxs"
             },
             "e2e_encryption": {
                 "name": "Usa cifración de extremo a extremo"
@@ -213,10 +213,230 @@
         "clean_snapchat_cache": {
             "description": "Borra cache de Snapchat",
             "name": "Borrar cache de Snapchat"
+        },
+        "change_language": {
+            "name": "Cambiar idioma",
+            "description": "Cambiar el idioma de SnapEnhance"
+        },
+        "manage_friend_list": {
+            "name": "Administrar lista de amigxs",
+            "description": "Importar/exportar tu lista de amigxs al crear un respaldo"
+        },
+        "export_chat_messages": {
+            "name": "Exportar mensajes de chat",
+            "description": "Exporta mensajes a un archivo de tipo JSON/HTML/TXT"
+        },
+        "export_memories": {
+            "name": "Exportar memorias",
+            "description": "Exporta memorias a un archivo ZIP"
+        },
+        "bulk_messaging_action": {
+            "name": "acción de mensajería a granel",
+            "description": "realiza operaciones como borrar amigxs o eliminar conversaciones en masa"
+        },
+        "regen_mappings": {
+            "name": "regenerar mapeos",
+            "description": "regenerar mapeos a mano"
         }
     },
     "scopes": {
         "friend": "Amigx",
         "group": "Grupo"
+    },
+    "features": {
+        "properties": {
+            "user_interface": {
+                "properties": {
+                    "bootstrap_override": {
+                        "properties": {
+                            "app_appearance": {
+                                "name": "Apariencia de la aplicación",
+                                "description": "Establece una apariencia persistente de la aplicación"
+                            },
+                            "home_tab": {
+                                "name": "Pestaña de inicio",
+                                "description": "Anula la pestaña en la que se abre la app al abrir Snapchat"
+                            }
+                        },
+                        "name": "Anular Bootstrap",
+                        "description": "Anula los ajustes de bootstrap de la interfaz de usuario"
+                    },
+                    "customize_ui": {
+                        "properties": {
+                            "colors": {
+                                "properties": {
+                                    "snap_without_sound_text_color": {
+                                        "name": "Color de texto de Snaps sin sonido",
+                                        "description": "Cambia el color de texto de (Snap nuevo) en la lista de amigxs\nTen en cuenta: Solo Snaps de vídeo"
+                                    },
+                                    "background_color": {
+                                        "name": "Color del fondo",
+                                        "description": "Cambia el color del fondo de Snapchat"
+                                    },
+                                    "text_color": {
+                                        "name": "Color de texto principal",
+                                        "description": "Cambia el color de texto principal de Snapchat"
+                                    },
+                                    "chat_chat_text_color": {
+                                        "description": "Cambia el color de texto de (Chats nuevos/ Snaps y chats nuevos/ Escribiendo/ Llamando/ Llamada perdida/ Hablando/ Nota de voz nueva) en la lista de amigxs",
+                                        "name": "Color de texto principal de la lista de amigxs"
+                                    },
+                                    "pending_sending_text_color": {
+                                        "name": "Color del texto secundario de la lista de amigxs",
+                                        "description": "Cambia el color de (Entregado/ Recibido/ Enviando/ Abierto/ Pulsa para chatear/ Mantén pulsado para repetir/ Repetido/ Guardado en el chat/ Llamado) en la lista de amigxs"
+                                    },
+                                    "snap_with_sound_text_color": {
+                                        "name": "Color de texto de Snaps con sonido",
+                                        "description": "Cambia el color de texto de (Snap nuevo) en la lista de amigxs\nTen en cuenta: Solo Snaps de vídeo"
+                                    },
+                                    "background_color_surface": {
+                                        "name": "Color de la superficie del fondo",
+                                        "description": "Cambia el color de la superficie del fondo de Snapchat"
+                                    },
+                                    "action_menu_background_color": {
+                                        "name": "Color de fondo del Menú de acciones",
+                                        "description": "Cambia el color de fondo del menú de acciones de Snapchat"
+                                    },
+                                    "action_menu_round_background_color": {
+                                        "name": "Color de fondo redondo del menú de acciones",
+                                        "description": "Cambia el color de fondo redondo del menú de acciones de Snapchat"
+                                    },
+                                    "camera_grid_lines": {
+                                        "name": "Color de la cuadricula de la cámara",
+                                        "description": "Cambia el color de la cuadricula en la prevista de la cámara de Snapchat\nTen en cuenta: habilita la cuadricula en los ajustes de la cámara"
+                                    }
+                                },
+                                "name": "Colores personalizados",
+                                "description": "Personaliza colores individuos\nTen en cuenta: Elige colores personalizados en el selector de temas para usar"
+                            },
+                            "theme_picker": {
+                                "name": "selector de temas",
+                                "description": "Temas de Snapchat preestablecidos"
+                            }
+                        },
+                        "name": "Colores",
+                        "description": "Personaliza Colores de Snapchat"
+                    },
+                    "enable_app_appearance": {
+                        "name": "Habilitar ajustes de apariencia de la app",
+                        "description": "Habilita los ajustes de apariencia de la app escondidos\nPuede que no sea necesario en nuevas versiones de Snapchat"
+                    },
+                    "friend_feed_message_preview": {
+                        "name": "Vista previa de mensajes en la lista de amigxs",
+                        "description": "Muestra una vista previa de los últimos mensajes en la lista de amigxs",
+                        "properties": {
+                            "amount": {
+                                "name": "Cantidad",
+                                "description": "La cantidad de mensajes para hacer una vista previa"
+                            }
+                        }
+                    },
+                    "snap_preview": {
+                        "name": "Vista previa de Snap",
+                        "description": "Muestra una pequeña vista previa al lado de Snaps no vistos en el chat"
+                    }
+                },
+                "name": "Interfaz de usuario",
+                "description": "Cambia la apariencia y sensación Snapchat"
+            },
+            "downloader": {
+                "properties": {
+                    "force_voice_note_format": {
+                        "description": "Obliga guardar las notas de voz en un formato específico",
+                        "name": "Obligar formato de notas de voz"
+                    },
+                    "download_profile_pictures": {
+                        "name": "Descargar fotos de perfil",
+                        "description": "Te permite guardar las fotos de perfil desde la página del perfil"
+                    },
+                    "opera_download_button": {
+                        "name": "Botón de descarga Opera",
+                        "description": "Añade un botón de descarga en la esquina derecha superior al ver un Snap.\nUn pulso largo forzará la descarga"
+                    },
+                    "ffmpeg_options": {
+                        "name": "Opciones de FFmpeg",
+                        "properties": {
+                            "threads": {
+                                "name": "Hilos",
+                                "description": "La cantidad de hilos a utilizar"
+                            },
+                            "preset": {
+                                "name": "preestablecido",
+                                "description": "Establecer la velocidad de la conversación"
+                            },
+                            "constant_rate_factor": {
+                                "name": "Factor de tasa constante",
+                                "description": "Establecer el factor de tasa constante para el codificador de vídeo\nDesde 0 hasta 51 para libx264"
+                            },
+                            "video_bitrate": {
+                                "description": "Establecer el bitrate de vídeo (kbps)",
+                                "name": "Bitrate de vídeo"
+                            },
+                            "audio_bitrate": {
+                                "name": "Bitrate de audio",
+                                "description": "Establecer el bitrate de audio (kbps)"
+                            },
+                            "custom_video_codec": {
+                                "name": "Códec de vídeo personalizado",
+                                "description": "Establecer un códec de vídeo personalizado (por ejemplo, libx264)"
+                            },
+                            "custom_audio_codec": {
+                                "name": "Códec de audio personalizado",
+                                "description": "Establecer un códec de audio personalizado (por ejemplo, AAC)"
+                            }
+                        },
+                        "description": "especificar opciones de FFmpeg adicionales"
+                    },
+                    "download_context_menu": {
+                        "name": "Descargar menú contextual",
+                        "description": "Te permite descargar/hacer una vista previa desde una conversación o historia usando el menú contextual.\nUn pulso largo en los botones forzará la descarga"
+                    },
+                    "logging": {
+                        "name": "Registrando",
+                        "description": "muestra toasts mientras multimedia se está descargando"
+                    },
+                    "custom_path_format": {
+                        "name": "Ruta de archivo personalizada",
+                        "description": "Especificar una ruta de archivo personalizada para multimedia descargada\n\nVariables disponibles:\n - %username%\n - %source%\n - %hash%\n - %date_time%"
+                    },
+                    "merge_overlays": {
+                        "description": "Une el texto y la multimedio de un Snap en un solo archivo",
+                        "name": "Fusionar superposiciones"
+                    },
+                    "save_folder": {
+                        "name": "Guardar carpeta",
+                        "description": "Seleccione el directorio al que se deben descargar todos los multimedios"
+                    },
+                    "auto_download_sources": {
+                        "name": "Descargar fuentes automáticamente",
+                        "description": "Seleccione desde que fuentes descargar automáticamente"
+                    },
+                    "prevent_self_auto_download": {
+                        "name": "Evitar autodescarga automática",
+                        "description": "Evita que tus propios Snaps se descarguen automáticamente"
+                    },
+                    "path_format": {
+                        "name": "Formato de ruta",
+                        "description": "Especificar el formato de la ruta de archivos"
+                    },
+                    "allow_duplicate": {
+                        "name": "Permitir duplicado",
+                        "description": "Permite que la misma multimedia se descarga múltiples veces"
+                    },
+                    "force_image_format": {
+                        "name": "Forzar formato de imagen",
+                        "description": "Obliga que los imágenes se guardan en un formato especificado"
+                    }
+                },
+                "description": "Descargar multimedios de Snapchat",
+                "name": "Descargador"
+            }
+        },
+        "notices": {
+            "ban_risk": "⚠ Esta característica puede causar baneos",
+            "require_native_hooks": "⚠ Esta función requiere ganchos nativos experimentales para funcionar correctamente",
+            "unstable": "⚠ inestable",
+            "internal_behavior": "⚠ Esto puede romper el funcionamiento interno de Snapchat"
+        }
     }
 }
