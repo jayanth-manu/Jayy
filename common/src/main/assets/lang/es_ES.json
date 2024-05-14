@@ -564,11 +564,138 @@
                         "description": "Especificar la cantidad de mensajes de ver en anticipación"
                     },
                     "call_start_confirmation": {
-                        "name": "Confirmación de empezar llamada"
+                        "name": "Confirmación de empezar llamada",
+                        "description": "Muestra un diálogo de confirmación al empezar una llamada"
+                    },
+                    "notification_blacklist": {
+                        "description": "Elige las notificaciones que deben ser bloqueadas",
+                        "name": "Lista negra de notificaciones"
+                    },
+                    "message_logger": {
+                        "description": "Evita que se pueda borrar un mensaje",
+                        "name": "Registro de mensajes",
+                        "properties": {
+                            "keep_my_own_messages": {
+                                "name": "Guardar mis mensajes",
+                                "description": "Evita que se pueda borrar tus mensajes"
+                            },
+                            "auto_purge": {
+                                "name": "purga automática",
+                                "description": "Automáticamente borra los mensajes en el cache que son más antiguos que la duración del tiempo especificado"
+                            },
+                            "message_filter": {
+                                "name": "Filtro de mensajes",
+                                "description": "Seleccione que mensajes deben ser registrados (vacío para todos los mensajes)"
+                            }
+                        }
+                    },
+                    "auto_save_messages_in_conversations": {
+                        "name": "Guardar mensajes automáticamente",
+                        "description": "Automáticamente guarda cada mensaje en una conversación"
+                    },
+                    "unlimited_conversation_pinning": {
+                        "name": "Fijar conversaciones ilimitadas",
+                        "description": "Te permite fijar una cantidad de conversaciones ilimitada localmente"
+                    },
+                    "prevent_message_sending": {
+                        "name": "Evitar el envío de mensajes",
+                        "description": "Evita el envío de algunos tipos de mensajes"
+                    },
+                    "friend_mutation_notifier": {
+                        "name": "Notificación de mutación de amigx",
+                        "description": "Te notifica si algo cambia en el perfil de un amigx"
+                    },
+                    "better_notifications": {
+                        "name": "Mejores notificaciones",
+                        "description": "Agrega más información a notificaciones recibidas"
+                    },
+                    "gallery_media_send_override": {
+                        "name": "Anulación de envío de medios de la galería",
+                        "description": "Falsifica el fuente de multimedia al enviar desde la galería"
+                    },
+                    "strip_media_metadata": {
+                        "name": "Borrar metadatos de medios",
+                        "description": "Elimina los metadatos de la multimedia antes de enviar como un mensaje"
+                    },
+                    "bypass_message_retention_policy": {
+                        "name": "Pasar por alto la política de retención de mensajes",
+                        "description": "Evita que se pueda borrar mensajes después de verlos"
+                    },
+                    "bypass_message_action_restrictions": {
+                        "name": "Pasar por alto restricciones de acciones de mensajería",
+                        "description": "Te permite reaccionar a un Snap sin haberlo abierto o guardar un mensaje no guardable"
+                    },
+                    "remove_groups_locked_status": {
+                        "name": "Elimina el estatus de grupos bloqueados",
+                        "description": "Te permite ver información del grupo después de ser expulsada/o"
                     }
                 },
                 "name": "mensajería",
                 "description": "Cambiar como interactúas con amigxs"
+            },
+            "global": {
+                "properties": {
+                    "disable_confirmation_dialogs": {
+                        "name": "Deshabilita diálogos de confirmación",
+                        "description": "Automáticamente verifica acciones seleccionadas"
+                    },
+                    "disable_story_sections": {
+                        "name": "Deshabilitar secciones de historias",
+                        "description": "Descarta secciones de la página de historias\nPuede que se necesita recargar para funcionar correctamente"
+                    },
+                    "block_ads": {
+                        "name": "bloquear anuncios",
+                        "description": "Evita que se muestran anuncios"
+                    },
+                    "better_location": {
+                        "properties": {
+                            "walk_radius": {
+                                "name": "Radio de caminata",
+                                "description": "Andar dentro de este radio (en pies) al azar"
+                            },
+                            "spoof_location": {
+                                "name": "Falsificar ubicación",
+                                "description": "Falsifica tu ubicación a una predeterminada"
+                            },
+                            "coordinates": {
+                                "name": "Coordenadas",
+                                "description": "Establece las coordenadas de la ubicación falsificada"
+                            },
+                            "always_update_location": {
+                                "name": "Siempre actualizar ubicación",
+                                "description": "Forzar a Snapchat a actualizar la ubicación incluso cuando no se ha recibido ninguna información del GPS"
+                            },
+                            "suspend_location_updates": {
+                                "name": "Suspender actualizaciones de la ubicación",
+                                "description": "Añade un botón en los ajustes del mapa para suspender actualizaciones de la ubicación"
+                            },
+                            "spoof_battery_level": {
+                                "name": "Falsificar nivel de carga",
+                                "description": "Falsifica nivel de carga de tu dispositivo en el mapa\nEl valor tiene que ser entre 0 y 100"
+                            },
+                            "spoof_headphones": {
+                                "name": "Falsificar auriculares",
+                                "description": "Falsifica el estado de escuchar a música en el mapa"
+                            }
+                        },
+                        "name": "Mejor ubicación",
+                        "description": "Mejora la ubicación de Snapchat"
+                    },
+                    "snapchat_plus": {
+                        "name": "Snapchat Plus",
+                        "description": "Habilita funciones de Snapchat Plus\nAlgunas funciones del lado del servidor pueden no funcionar"
+                    },
+                    "auto_updater": {
+                        "name": "Actualizador automático",
+                        "description": "Comprueba automáticamente si hay actualizaciones nuevas"
+                    },
+                    "disable_metrics": {
+                        "name": "Deshabilitar métricos",
+                        "description": "Prohíbe enviar datos específicos de análisis a Snapchat"
+                    }
+                },
+                "name": "Global",
+                "description": "Cambiar ajustes globales de Snapchat"
             }
         },
         "notices": {
