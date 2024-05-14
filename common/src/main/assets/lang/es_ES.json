@@ -549,10 +549,22 @@
                         "name": "Notificación de no acabar de deslizar por completo en un chat",
                         "properties": {
                             "min_duration": {
-                                "name": "Duración mínima"
+                                "name": "Duración mínima",
+                                "description": "La duración mínima de no acabar de deslizar por completo (en segundos)"
+                            },
+                            "max_duration": {
+                                "name": "duración máxima",
+                                "description": "La duración máxima de no acabar de deslizar por completo (en segundos)"
                             }
                         },
                         "description": "Te notifica cuando alguien no acaba de deslizar por completo a una conversación"
+                    },
+                    "message_preview_length": {
+                        "name": "Longitud de la vista anticipada del mensaje",
+                        "description": "Especificar la cantidad de mensajes de ver en anticipación"
+                    },
+                    "call_start_confirmation": {
+                        "name": "Confirmación de empezar llamada"
                     }
                 },
                 "name": "mensajería",
