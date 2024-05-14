@@ -456,6 +456,18 @@
                                     "background_color_surface": {
                                         "name": "Baggrunds overflade farve",
                                         "description": "Ændrer Snapchats baggrunds overflade farve"
+                                    },
+                                    "action_menu_background_color": {
+                                        "name": "Handlingsmenu Baggrunds farve",
+                                        "description": "Ændrer baggrunds farve på Snapchats chat handlingsmenu"
+                                    },
+                                    "action_menu_round_background_color": {
+                                        "name": "Handlingsmenu Rund baggrunds farve",
+                                        "description": "Ændrer Snapchats chat handlingsmenu rundt om baggrunds farven"
+                                    },
+                                    "camera_grid_lines": {
+                                        "name": "Farve på kameragitter",
+                                        "description": "Ændrer farven på Snapchats-gitterlinjerne på forhåndsvisningen af kameraet\nBemærk: Aktiver gitteret på mine kamera-indstillinger"
                                     }
                                 }
                             }
@@ -1154,6 +1166,19 @@
                 "bitmoji_avatar_changes": "Giv besked, når nogen ændrer deres Bitmoji avatar",
                 "bitmoji_background_changes": "Giv besked, når nogen ændrer deres Bitmoji baggrund",
                 "bitmoji_scene_changes": "Giv besked, når nogen ændrer deres Bitmoji scene"
+            },
+            "theme_picker": {
+                "ginger_snap": "Ginger Snap",
+                "lemon_meringue": "Citron marengs",
+                "lava_flow": "Lava flow",
+                "ocean_fog": "Havtåge",
+                "alien_landscape": "Alien Landskab",
+                "amoled_dark_mode": "AMOLED mørk tilstand",
+                "custom": "Brugerdefinerede farver",
+                "light_blue": "Lyseblå",
+                "dark_blue": "Mørke blå",
+                "earthy_autumn": "Jordisk efterår",
+                "mint_chocolate": "Mint Chokolade"
             }
         }
     },
@@ -1251,9 +1276,10 @@
             "sticker": "Klistermærke",
             "external_media": "Eksterne medier",
             "note": "Note",
-            "original_story": "Oprindelig Historie"
+            "original_story": "Oprindelig Historie",
+            "gif": "GIF"
         },
-        "select_attachments_title": "Vælg vedhæftede filer at downloade",
+        "select_attachments_title": "Vælg vedhæftede filer",
         "download_started_toast": "Download startet",
         "unsupported_content_type_toast": "Ikke-understøttet indholdstype!",
         "failed_no_longer_available_toast": "Medier er ikke længere tilgængelige",
