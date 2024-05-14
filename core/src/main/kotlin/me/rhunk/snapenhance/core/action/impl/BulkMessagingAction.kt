@@ -52,7 +52,6 @@ import me.rhunk.snapenhance.mapper.impl.FriendRelationshipChangerMapper
 import java.net.URL
 import java.text.DateFormat
 import java.util.Date
-import kotlin.concurrent.fixedRateTimer
 import kotlin.random.Random
 
 class BulkMessagingAction : AbstractAction() {
