@@ -334,6 +334,78 @@
                     "snap_preview": {
                         "name": "Vista previa de Snap",
                         "description": "Muestra una pequeña vista previa al lado de Snaps no vistos en el chat"
+                    },
+                    "hide_friend_feed_entry": {
+                        "description": "Oculta un amigx específico de la lista de amigxs\nUsa la pestaña social para administrar esta característica",
+                        "name": "Ocultar entrada de lista de amigxs"
+                    },
+                    "hide_streak_restore": {
+                        "description": "Oculta el botón de restablecer en la lista de amigxs",
+                        "name": "Ocultar restablecer Snapracha"
+                    },
+                    "opera_media_quick_info": {
+                        "name": "Multimedias de Opera información rápida",
+                        "description": "Muestra información útil sobre multimedias como la fecha de creación en el menú contextual de Opera Viewer"
+                    },
+                    "enable_friend_feed_menu_bar": {
+                        "name": "Barra de menú en la lista de amigxs",
+                        "description": "Habilita la nueva barra de menú en la lista de amigxs"
+                    },
+                    "stealth_mode_indicator": {
+                        "name": "Indicador de modo sigilo",
+                        "description": "Añade un 👻 emoji al lado de una conversación en modo sigilo"
+                    },
+                    "map_friend_nametags": {
+                        "name": "Etiquetas de nombre mejoradas en el mapa de amigxs",
+                        "description": "Mejora las etiquetas de nombre de amigxs en el mapa de Snaps"
+                    },
+                    "prevent_message_list_auto_scroll": {
+                        "name": "Prevenir que la lista de mensajes se desplaza automáticamente",
+                        "description": "Previene que la lista de mensajes se desplaza hasta el fondo al enviar/recibir un mensaje"
+                    },
+                    "streak_expiration_info": {
+                        "name": "Mostrar información de caducidad de la racha",
+                        "description": "Muestra un temporizador de caducidad al lado del contador de racha"
+                    },
+                    "hide_quick_add_friend_feed": {
+                        "name": "Ocultar añadido fácil en la lista de amigxs",
+                        "description": "Oculta el añadido fácil en la lista de amigxs"
+                    },
+                    "hide_story_suggestions": {
+                        "name": "Ocultar sugerencias de historias",
+                        "description": "Elimina las sugerencias de la página de historias"
+                    },
+                    "hide_ui_components": {
+                        "name": "Ocultar componentes de la interfaz de usuario",
+                        "description": "Elige que componentes de interfaz de usuario ocultar"
+                    },
+                    "old_bitmoji_selfie": {
+                        "name": "Retrato de Bitmoji viejo",
+                        "description": "Trae de vuelta los retratos de Bitmoji de versiónes más antiguos de Snapchat"
+                    },
+                    "disable_spotlight": {
+                        "name": "Deshabilitar Spotlight",
+                        "description": "Deshabilita la página de Spotlight"
+                    },
+                    "hide_settings_gear": {
+                        "name": "Ocultar el engranaje de ajustes",
+                        "description": "Oculta el engranaje de los ajustes de SnapEnhance en la lista de amigxs"
+                    },
+                    "friend_feed_menu_buttons": {
+                        "name": "Botones de menú de la lista de amigxs",
+                        "description": "Elige que botones mostrar en el menú de la lista de amigxs"
+                    },
+                    "vertical_story_viewer": {
+                        "name": "Ver las historias de forma vertical",
+                        "description": "Permite ver todas las historias de forma vertical"
+                    },
+                    "message_indicators": {
+                        "name": "Indicadores de mensajes",
+                        "description": "Añade iconos indicadores específicos a los mensajes\nTen en cuenta: Puede que los indicadores no sean 100% precisos"
+                    },
+                    "edit_text_override": {
+                        "name": "Editar anulación de texto",
+                        "description": "Anula el comportamiento de entradas de texto"
                     }
                 },
                 "name": "Interfaz de usuario",
@@ -430,6 +502,61 @@
                 },
                 "description": "Descargar multimedios de Snapchat",
                 "name": "Descargador"
+            },
+            "messaging": {
+                "properties": {
+                    "prevent_story_rewatch_indicator": {
+                        "name": "Deshabilitar el indicador de ver la historia de nuevo",
+                        "description": "Evita que nadie sepa que has visto su historia de nuevo"
+                    },
+                    "bypass_screenshot_detection": {
+                        "name": "Anular detección de capturas de pantalla",
+                        "description": "Evita que Snapchat pueda detectar cuando hagas una captura de pantalla"
+                    },
+                    "anonymous_story_viewing": {
+                        "name": "Viendo historias anónimamente",
+                        "description": "Evita que nadie sepa que has visto su historia"
+                    },
+                    "hide_peek_a_peek": {
+                        "name": "Ocultar Peek-a-Peek",
+                        "description": "Evita que se envía una notificación si no acabas de deslizar por completo en un chat"
+                    },
+                    "hide_bitmoji_presence": {
+                        "name": "Ocultar presencia de Bitmoji",
+                        "description": "Evita que se muestra tu Bitmoji mientras estás en el chat"
+                    },
+                    "hide_typing_notifications": {
+                        "name": "Ocultar notificaciones de escribiendo",
+                        "description": "Evita que nadie sepa que estás escribiendo un mensaje"
+                    },
+                    "unlimited_snap_view_time": {
+                        "name": "Ver Snaps sin límite de tiempo",
+                        "description": "Quita el límite de tiempo para ver Snaps"
+                    },
+                    "auto_mark_as_read": {
+                        "name": "Marcar como leído automáticamente",
+                        "description": "Automáticamente marca los mensajes/Snaps como leído incluso cuando el modo sigilo esté habilitado"
+                    },
+                    "loop_media_playback": {
+                        "name": "Reproducción de Multimedia en bucle",
+                        "description": "Reproduce Multimedias en bucle al ver Snaps/Historias"
+                    },
+                    "disable_replay_in_ff": {
+                        "name": "Deshabilitar repetir en la lista de amigxs",
+                        "description": "Deshabilita la posibilidad de repetir al mantener pulsado desde la lista de amigxs"
+                    },
+                    "half_swipe_notifier": {
+                        "name": "Notificación de no acabar de deslizar por completo en un chat",
+                        "properties": {
+                            "min_duration": {
+                                "name": "Duración mínima"
+                            }
+                        },
+                        "description": "Te notifica cuando alguien no acaba de deslizar por completo a una conversación"
+                    }
+                },
+                "name": "mensajería",
+                "description": "Cambiar como interactúas con amigxs"
             }
         },
         "notices": {
