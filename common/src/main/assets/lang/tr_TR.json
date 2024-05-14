@@ -468,6 +468,10 @@
                                     "camera_grid_lines": {
                                         "name": "Kamera Izgara Çizgileri Rengi",
                                         "description": "Snapchat'in Kamera Önizlemesinde Izgara Çizgileri rengini değiştirir\nNot: Kameram ayarlarında ızgarayı etkinleştirin"
+                                    },
+                                    "friend_feed_conversations_line_color": {
+                                        "name": "Sohbetler Çizgi Rengi",
+                                        "description": "Arkadaş akışındaki Konuşmaları bölen çizgi bölücü rengini değiştirir "
                                     }
                                 }
                             }
@@ -710,6 +714,24 @@
                     "disable_custom_tabs": {
                         "name": "Özel Sekmeleri Devre Dışı Bırak",
                         "description": "Bağlantıları Web Tarayıcı yerine desteklenen uygulamalarda açar"
+                    },
+                    "media_upload_quality": {
+                        "name": "Medya Yükleme Kalitesi",
+                        "description": "Medya yükleme kalitesini geçersiz kılar",
+                        "properties": {
+                            "force_video_upload_source_quality": {
+                                "name": "Video Yükleme Kaynak Kalitesini Zorla",
+                                "description": "Snapchat'i video yüklerken kaynak kalitesini kullanmaya zorlar\nLütfen bunun medyadan meta verileri kaldırmayabileceğini unutmayın"
+                            },
+                            "disable_image_compression": {
+                                "name": "Görüntü Sıkıştırmayı Devre Dışı Bırak",
+                                "description": "Medya yüklerken görüntü sıkıştırmayı devre dışı bırakır"
+                            },
+                            "custom_image_upload_format": {
+                                "name": "Özel Resim Yükleme Formatı",
+                                "description": "Özel bir resim yükleme biçimi ayarlar\nEn iyi kalite için kayıpsız bir format (PNG gibi) seçin"
+                            }
+                        }
                     }
                 }
             },
@@ -1174,7 +1196,8 @@
                 "ocean_fog": "Okyanus Sisi",
                 "alien_landscape": "Uzaylı Manzarası",
                 "amoled_dark_mode": "AMOLED Karanlık Mod",
-                "dark_blue": "Koyu Mavi"
+                "dark_blue": "Koyu Mavi",
+                "material_you": "Material You (Android 12+)"
             }
         }
     },
