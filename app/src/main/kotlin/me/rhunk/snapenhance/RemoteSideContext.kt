@@ -105,16 +105,14 @@ class RemoteSideContext(
                         userLocale = config.locale
                         loadFromContext(androidContext)
                     }
+                    database.init()
+                    streaksReminder.init()
                 }
                 launch {
                     mappings.apply {
                         loadFromContext(androidContext)
                         init(androidContext)
                     }
-                }
-                launch {
-                    database.init()
-                    streaksReminder.init()
                 }
                 launch { taskManager.init() }
                 launch { scriptManager.init() }
