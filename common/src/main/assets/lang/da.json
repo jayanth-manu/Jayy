@@ -703,10 +703,6 @@
                         "name": "Deaktiver bekræftelsesdialoger",
                         "description": "Bekræfter automatisk valgte handlinger"
                     },
-                    "force_upload_source_quality": {
-                        "name": "Tving upload kilde kvalitet",
-                        "description": "Tvinger Snapchat til at uploade medier i original kvalitet\nBemærk, at dette muligvis ikke fjerner metadata fra medier"
-                    },
                     "hide_active_music": {
                         "name": "Skjul aktiv musik",
                         "description": "Forhindrer Snapchat i at vide, at du lytter til musik\nDette giver dig mulighed for at tage snaps ved hjælp af kontrollydstyrkeknapperne, mens du lytter til musik"

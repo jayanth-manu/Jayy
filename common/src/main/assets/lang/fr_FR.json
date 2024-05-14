@@ -645,10 +645,6 @@
                         "name": "Nom d'utilisateur des commentaires Spotlight",
                         "description": "Affiche le nom d'utilisateur de l'auteur dans les commentaires Spotlight"
                     },
-                    "force_upload_source_quality": {
-                        "name": "Forcer l'upload de la qualité originale",
-                        "description": "Oblige Snapchat à envoyer les médias dans leur qualité d'origine\nVeuillez noter que cette opération ne supprime pas nécessairement les métadonnées des médias"
-                    },
                     "disable_story_sections": {
                         "name": "Désactiver les sections de story",
                         "description": "Supprime les sections de la page des stories\nUne actualisation peut être nécessaire pour fonctionner correctement"

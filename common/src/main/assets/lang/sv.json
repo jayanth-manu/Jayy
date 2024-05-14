@@ -518,10 +518,6 @@
                         "description": "Förhindra att tillgänglighetsdialoger för Google Play-tjänster visas",
                         "name": "Inaktivera dialogrutor för Google Play-tjänster"
                     },
-                    "force_upload_source_quality": {
-                        "description": "Tvingar Snapchat att ladda upp media i originalkvalitet\nObservera att detta kanske inte tar bort metadata från media",
-                        "name": "Forcera uppladdningskällans kvalitet"
-                    },
                     "disable_story_sections": {
                         "name": "Inaktivera berättelsesektioner",
                         "description": "Tar bort avsnitt från sidan Berättelser\nKan kräva en uppdatering för att fungera korrekt"

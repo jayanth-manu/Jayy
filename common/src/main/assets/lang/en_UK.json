@@ -697,10 +697,6 @@
                         "name": "Bypass Video Length Restrictions",
                         "description": "Single: sends a single video\nSplit: split videos after editing"
                     },
-                    "force_upload_source_quality": {
-                        "name": "Force Upload Source Quality",
-                        "description": "Forces Snapchat to upload media in the original quality\nPlease note that this may not remove metadata from media"
-                    },
                     "default_volume_controls": {
                         "name": "Default Volume Controls",
                         "description": "Forces Snapchat to use system volume controls"

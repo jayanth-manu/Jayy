@@ -645,10 +645,6 @@
                         "name": "Spotlight Yorumlar Kullanıcı Adı",
                         "description": "Spotlight yorumlarında yazar kullanıcı adını gösterir"
                     },
-                    "force_upload_source_quality": {
-                        "name": "Kaynak Kalitesini Yüklemeye Zorla",
-                        "description": "Snapchat'i medyayı orijinal kalitesinde yüklemeye zorlar\nLütfen bunun medyadan meta verileri kaldırmayabileceğini unutmayın"
-                    },
                     "disable_story_sections": {
                         "name": "Hikaye Bölümlerini Devre Dışı Bırak",
                         "description": "Hikayeler sayfasından bölümleri kaldırır\nDüzgün çalışması için yenileme gerekebilir"

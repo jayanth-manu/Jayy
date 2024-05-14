@@ -610,10 +610,6 @@
                         "name": "Nume utilizator în comentarii Spotlight",
                         "description": "Afișează numele de utilizator al autorului în comentariile Spotlight"
                     },
-                    "force_upload_source_quality": {
-                        "name": "Forțează încărcarea la calitatea sursei(fără comprimare)",
-                        "description": "Forțează Snapchat să încarce conținut media la calitatea originală\nVă rugăm să rețineți că este posibil să nu elimine metadatele din media"
-                    },
                     "auto_updater": {
                         "name": "Actualizare automată",
                         "description": "Verifică automat pentru noi actualizări"

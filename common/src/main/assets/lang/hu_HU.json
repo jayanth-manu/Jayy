@@ -626,10 +626,6 @@
                         "name": "Emlékek Snap Feed letiltása",
                         "description": "Megakadályozza, hogy a Snapchat megjelenítse a legutóbbi emlékeket, amikor a kamerában felfelé húzza a lapot"
                     },
-                    "force_upload_source_quality": {
-                        "name": "Forrásminőség feltöltésének kényszerítése",
-                        "description": "Kényszeríti a Snapchatet, hogy eredeti minőségben töltse fel a médiát\nVedd figyelembe, hogy ez nem távolítja el a metaadatokat a médiából"
-                    },
                     "default_volume_controls": {
                         "name": "Alapértelmezett hangerőszabályozók",
                         "description": "Kényszeríti a Snapchatet a rendszer hangerőszabályzóinak használatára"
