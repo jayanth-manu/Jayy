@@ -748,7 +748,7 @@
                         "description": "Prohíbe que Servicios de Google Play muestran diálogos de disponibilidad"
                     },
                     "disable_snap_splitting": {
-                        "description": "Evita que los Snaps se dividen en múltiples partes\nImágenes que envías cambiarán a vídeos",
+                        "description": "Evita que los Snaps se dividan en varias partes\nLas fotos que envíes se convertirán en vídeos",
                         "name": "Deshabilitar que los Snaps se dividen"
                     },
                     "default_volume_controls": {
@@ -795,7 +795,7 @@
                     },
                     "force_camera_source_encoding": {
                         "name": "Forzar codificación de fuente de la cámara",
-                        "description": "Fuerza codificación del fuente para la cámara"
+                        "description": "Fuerza la codificación de la fuente de la cámara"
                     },
                     "hevc_recording": {
                         "name": "Grabación HEVC",
@@ -811,7 +811,7 @@
             },
             "rules": {
                 "name": "Normas",
-                "description": "Administrar funciones automáticas para individuos"
+                "description": "Gestionar funciones automáticas para personas individuales"
             },
             "streaks_reminder": {
                 "description": "Te notifica periódicamente sobre tus rachas",
