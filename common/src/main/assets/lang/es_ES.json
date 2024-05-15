@@ -788,6 +788,22 @@
                     "custom_resolution": {
                         "name": "Resolución personalizada",
                         "description": "Establece una resolución de cámara personalizada, Ancho x altura (por ejemplo 1920x1080)\nLa resolución personalizada tiene que ser soportada por tu dispositivo"
+                    },
+                    "front_custom_frame_rate": {
+                        "name": "Velocidad de fotogramas personalizada frontal",
+                        "description": "Anula la velocidad de fotogramas de la cámara frontal"
+                    },
+                    "force_camera_source_encoding": {
+                        "name": "Forzar codificación de fuente de la cámara",
+                        "description": "Fuerza codificación del fuente para la cámara"
+                    },
+                    "hevc_recording": {
+                        "name": "Grabación HEVC",
+                        "description": "Usa el códec HEVC (H.265) para grabaciones de vídeos"
+                    },
+                    "back_custom_frame_rate": {
+                        "description": "Anula la velocidad de fotogramas de la cámara trasera",
+                        "name": "Velocidad de fotogramas trasera"
                     }
                 },
                 "name": "Cámara",
@@ -796,6 +812,10 @@
             "rules": {
                 "name": "Normas",
                 "description": "Administrar funciones automáticas para individuos"
+            },
+            "streaks_reminder": {
+                "description": "Te notifica periódicamente sobre tus rachas",
+                "name": "Recordatorio de rachas"
             }
         },
         "notices": {
