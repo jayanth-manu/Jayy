@@ -844,14 +844,15 @@
                                         "name": "Muestra el primer nombre de usuario creado"
                                     },
                                     "bypass_camera_roll_limit": {
-                                        "name": "Saltar límite del álbum de cámara"
+                                        "name": "Evita el límite del carrete de la cámara",
+                                        "description": "Aumenta la cantidad máxima de archivos multimedia que puedes enviar desde el carrete de la cámara"
                                     }
                                 },
                                 "name": "Ganchas de compositor",
                                 "description": "Inyecta código al marco multiplataforma de interfaz de usuario de Composer"
                             }
                         },
-                        "description": "Funciones no seguras que conectan con el código nativo de Snapchat"
+                        "description": "Funciones inseguras que se integran al código nativo de Snapchat"
                     }
                 },
                 "name": "Experimental"
