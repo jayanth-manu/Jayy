@@ -814,7 +814,7 @@
                 "description": "Gestionar funciones automáticas para personas individuales"
             },
             "streaks_reminder": {
-                "description": "Te notifica periódicamente sobre tus rachas",
+                "description": "Le notifica periódicamente de tus rachas",
                 "name": "Recordatorio de rachas",
                 "properties": {
                     "interval": {
@@ -844,15 +844,86 @@
                                         "name": "Muestra el primer nombre de usuario creado"
                                     },
                                     "bypass_camera_roll_limit": {
-                                        "name": "Evita el límite del carrete de la cámara",
-                                        "description": "Aumenta la cantidad máxima de archivos multimedia que puedes enviar desde el carrete de la cámara"
+                                        "name": "Saltar el límite del álbum de cámara",
+                                        "description": "Aumenta la cantidad máxima de archivos multimedia que puedes enviar desde el álbum de cámara"
+                                    },
+                                    "composer_console": {
+                                        "name": "Consola del compositor",
+                                        "description": "Le permite ejecutar código de JavaScript en el compositor (sólo arm64)"
+                                    },
+                                    "composer_logs": {
+                                        "name": "Registro del compositor",
+                                        "description": "Redirige los registros de la consola del compositor a SnapEnhance"
                                     }
                                 },
                                 "name": "Ganchas de compositor",
                                 "description": "Inyecta código al marco multiplataforma de interfaz de usuario de Composer"
+                            },
+                            "disable_bitmoji": {
+                                "name": "Deshabilitar Bitmoji",
+                                "description": "Deshabilita Bitmoji en perfiles de amigxs"
                             }
                         },
                         "description": "Funciones inseguras que se integran al código nativo de Snapchat"
+                    },
+                    "session_events": {
+                        "name": "Eventos de sesión",
+                        "description": "Graba eventos de sesión",
+                        "properties": {
+                            "capture_duplex_events": {
+                                "name": "Grabar eventos duplexos",
+                                "description": "Grabar eventos de mensajería y presencia mientras una sesión esté activa"
+                            },
+                            "allow_running_in_background": {
+                                "name": "Permitir actividad en segundo plano",
+                                "description": "Permitir sesiones en segundo plano"
+                            }
+                        }
+                    },
+                    "media_file_picker": {
+                        "description": "Le permite elegir cualquier archivo de vídeo/audio de la galería",
+                        "name": "Selector de archivos multimedia"
+                    },
+                    "spoof": {
+                        "properties": {
+                            "remove_vpn_transport_flag": {
+                                "name": "Quitar bandera de transporte de VPN",
+                                "description": "Impide que Snapchat pueda detectar VPNs"
+                            },
+                            "play_store_installer_package_name": {
+                                "name": "Nombre del paquete de instalación del Play Store",
+                                "description": "Convierte el nombre del paquete de instalación a com.android.vending"
+                            },
+                            "android_id": {
+                                "description": "Falsifica tu ID de Android al valor especificado",
+                                "name": "ID de Android"
+                            },
+                            "fingerprint": {
+                                "name": "Huella digital del dispositivo",
+                                "description": "Falsifica la huella digital de tu dispositivo"
+                            },
+                            "remove_mock_location_flag": {
+                                "name": "Quitar bandera de ubicación falsificada",
+                                "description": "Impide que Snapchat pueda detectar ubicación falsificada"
+                            },
+                            "randomize_persistent_device_token": {
+                                "name": "Token de dispositivo persistente al azar",
+                                "description": "Generar un token aleatorio después de cada inicio de sesión"
+                            }
+                        },
+                        "name": "Falsificar",
+                        "description": "Falsifica diversa información sobre usted"
+                    },
+                    "convert_message_locally": {
+                        "name": "Convertir mensaje localmente",
+                        "description": "Convierte Snaps a chat multimedia externas localmente. Esto aparece en el menú de contexto de las descargas"
+                    },
+                    "new_chat_action_menu": {
+                        "name": "Nuevo menú de acciones para conversaciones",
+                        "description": "Usa la nueva bandeja del menú de acciones para conversaciones"
+                    },
+                    "story_logger": {
+                        "name": "Registro de historias"
                     }
                 },
                 "name": "Experimental"
