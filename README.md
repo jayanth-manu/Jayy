@@ -45,7 +45,7 @@ We no longer offer official `LSPatch` binaries for obvious reasons. However, you
   <summary>User Interface</summary>
   
   - `Friend Feed Menu Buttons` 
-  - `AMOLED Dark Mode`
+  - `Colors` (Theme Picker & Custom Colors)
   - `Friend Feed Message Preview` 
   - `Snap Preview`
   - `Bootstrap Override` (Default Home Tab & Persistent App Appearance)
@@ -81,8 +81,9 @@ We no longer offer official `LSPatch` binaries for obvious reasons. However, you
   - `Loop Media PlayBack`
   - `Disable Replay In FF`
   - `Half Swipe Notifier`
-  - `Message Preview`
+  - `Message Preview Length`
   - `Call Start Confirmation`
+  - `Unlimited Conversation Pinning`
   - `Auto Save Messages` 
   - `Prevent Message Sending`
   - `Friend Mutation Notifier`
@@ -100,12 +101,13 @@ We no longer offer official `LSPatch` binaries for obvious reasons. However, you
   <summary>Global</summary>
  
   - `Better Location`
-  - `Suspend Location Updates`
-  - `Snapchat Plus` 
+  - `Snapchat Plus`
+  - `Media Upload Quality`
   - `Disable Confirmation Dialogs`
   - `Disable Metrics`
   - `Disable Story Sections`
   - `Block Ads`
+  - `DisableCustom Tabs`
   - `Disable Permission Request`
   - `Disable Memories Snap Feed`
   - `Spotlight Comments Username` 
@@ -113,7 +115,6 @@ We no longer offer official `LSPatch` binaries for obvious reasons. However, you
   - `Default Video Playback Rate`
   - `Video Playback Rate Slider`
   - `Disable Google Play Services Dialogs`
-  - `Force Upload Source Quality`
   - `Default Volume Controls`
   - `Hide Active Music`
   - `Disable Snap Splitting`
@@ -134,7 +135,7 @@ We no longer offer official `LSPatch` binaries for obvious reasons. However, you
 <details closed>
   <summary>Experimental</summary>
   
-  - `Session Events`
+  - `Native Hooks`
   - `Device Spoof`
   - `Convert Message Locally`
   - `New Chat Action Menu`
@@ -143,10 +144,11 @@ We no longer offer official `LSPatch` binaries for obvious reasons. However, you
   - `Call Recorder`
   - `Account Switcher`
   - `Edit Messages` 
-  - `App Passcode`
+  - `App Lock`
   - `Infinite Story Boost`
   - `My Eyes Only Passcode Bypass`
   - `No Friend Score Delay`
+  - `Best Friend Pinning`
   - `End-to-End Encryption`
   - `Enable Hidden Snapchat Plus Features`
   - `Custom Streaks Expiration Format`
@@ -253,6 +255,8 @@ Thanks to everyone involved including the [third-party libraries](https://github
 - [CanerKaraca23](https://github.com/CanerKaraca23)
 - [bocajthomas](https://github.com/bocajthomas)
 - [w451](https://github.com/w451)
+- [GabeModz](https://github.com/Gabe-does-tech)
+- [JWHC1](https://github.com/JWHC1)
 
 ## Donate
 **@rhunk**
