@@ -304,6 +304,10 @@
                                     "camera_grid_lines": {
                                         "name": "Color de la cuadricula de la cámara",
                                         "description": "Cambia el color de la cuadricula en la prevista de la cámara de Snapchat\nTen en cuenta: habilita la cuadricula en los ajustes de la cámara"
+                                    },
+                                    "friend_feed_conversations_line_color": {
+                                        "name": "Color de línea en conversaciones",
+                                        "description": "Cambia el color de las líneas que separan conversaciones en la lista de amigxs "
                                     }
                                 },
                                 "name": "Colores personalizados",
@@ -692,10 +696,106 @@
                     "disable_metrics": {
                         "name": "Deshabilitar métricos",
                         "description": "Prohíbe enviar datos específicos de análisis a Snapchat"
+                    },
+                    "media_upload_quality": {
+                        "name": "Calidad de multimedia al subir",
+                        "description": "Anula la calidad de subida de multimedias",
+                        "properties": {
+                            "force_video_upload_source_quality": {
+                                "name": "Forzar calidad del fuente al subir vídeos",
+                                "description": "Obliga a Snapchat usar la calidad del fuente al subir vídeos\nPor favor ten en cuenta que puede que esta opción no quitará los metadatos de los multimedios"
+                            },
+                            "custom_image_upload_format": {
+                                "description": "Establece un formato personalizado de subir imágenes\nElige un formato sin pérdida (como PNG) para la mayor calidad",
+                                "name": "Formato personalizado de subir imágenes"
+                            },
+                            "disable_image_compression": {
+                                "name": "Deshabilitar compresión de imágenes",
+                                "description": "Deshabilita compresión de imágenes al subir multimedios"
+                            }
+                        }
+                    },
+                    "disable_custom_tabs": {
+                        "name": "Deshabilitar pestañas personalizadas",
+                        "description": "Abre enlaces en aplicaciones soportadas en cambio de en el navegador"
+                    },
+                    "disable_memories_snap_feed": {
+                        "description": "Impide que Snapchat te muestra memorias recientes al deslizar hacia arriba en la cámara",
+                        "name": "Deshabilitar memorias en el Snap Feed"
+                    },
+                    "disable_permission_requests": {
+                        "name": "Deshabilitar solicitaciones de permisiones",
+                        "description": "Impide que Snapchat pueda preguntar para permisiones especificas"
+                    },
+                    "spotlight_comments_username": {
+                        "description": "Muestra el usuario del autor en los comentarios de Spotlight",
+                        "name": "Nombre de usuarios en comentarios de Spotlight"
+                    },
+                    "bypass_video_length_restriction": {
+                        "name": "Saltar restricciones de longitud de vídeo",
+                        "description": "individuo: envía un solo vídeo\nDividido: divide los vídeos después de editar"
+                    },
+                    "default_video_playback_rate": {
+                        "name": "Tasa de reproducción de video por defecto",
+                        "description": "Establece la velocidad por defecto para vídeos\nEl valor tiene que ser entre 0.1 y 4.0"
+                    },
+                    "video_playback_rate_slider": {
+                        "name": "Control deslizante de velocidad de reproducción de vídeo",
+                        "description": "añade control deslizante en el menú de contexto de Opera para cambiar la velocidad de reproducción de vídeos\nTen en cuenta: Cambios solo se aplican a vídeos posteriores"
+                    },
+                    "disable_google_play_dialogs": {
+                        "name": "Deshabilitar diálogos de servicio de Google Play",
+                        "description": "Prohíbe que Servicios de Google Play muestran diálogos de disponibilidad"
+                    },
+                    "disable_snap_splitting": {
+                        "description": "Evita que los Snaps se dividen en múltiples partes\nImágenes que envías cambiarán a vídeos",
+                        "name": "Deshabilitar que los Snaps se dividen"
+                    },
+                    "default_volume_controls": {
+                        "name": "Controles de volumen por defecto",
+                        "description": "Fuerza que Snapchat tenga que usar controles de volumen del sistema"
+                    },
+                    "hide_active_music": {
+                        "name": "Ocultar música activa",
+                        "description": "Evita que Snapchat sepa que estás escuchando a música\nEsto te permitirá capturar Snaps usando los botones de volumen mientras escuchas a música"
                     }
                 },
                 "name": "Global",
                 "description": "Cambiar ajustes globales de Snapchat"
+            },
+            "camera": {
+                "properties": {
+                    "immersive_camera_preview": {
+                        "name": "Vista previa inmersiva",
+                        "description": "Evita que Snapchat corte la vista previa de la cámara\nPuede causar que la cámara parpadea en algunos dispositivos"
+                    },
+                    "override_front_resolution": {
+                        "name": "Anular resolución del frente",
+                        "description": "Anula la resolución de la cámara para la cámara frontal"
+                    },
+                    "disable_cameras": {
+                        "name": "Deshabilitar cámaras",
+                        "description": "Evita que Snapchat use las cámaras seleccionadas"
+                    },
+                    "black_photos": {
+                        "name": "Fotos negras",
+                        "description": "Sustituye a las fotos capturadas con un fondo negro\nLos vídeos no son afectados"
+                    },
+                    "override_back_resolution": {
+                        "name": "Anular resolución trasera",
+                        "description": "Anula la resolución de la cámara para la cámara trasera"
+                    },
+                    "custom_resolution": {
+                        "name": "Resolución personalizada",
+                        "description": "Establece una resolución de cámara personalizada, Ancho x altura (por ejemplo 1920x1080)\nLa resolución personalizada tiene que ser soportada por tu dispositivo"
+                    }
+                },
+                "name": "Cámara",
+                "description": "Ajustar los ajustes correctos para el Snap prefecto"
+            },
+            "rules": {
+                "name": "Normas",
+                "description": "Administrar funciones automáticas para individuos"
             }
         },
         "notices": {
