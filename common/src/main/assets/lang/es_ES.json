@@ -815,7 +815,46 @@
             },
             "streaks_reminder": {
                 "description": "Te notifica periódicamente sobre tus rachas",
-                "name": "Recordatorio de rachas"
+                "name": "Recordatorio de rachas",
+                "properties": {
+                    "interval": {
+                        "name": "Intervalo",
+                        "description": "El intervalo entre cada recordatorio (horas)"
+                    },
+                    "group_notifications": {
+                        "description": "Agrupa notificaciones en una sola notificación",
+                        "name": "Agrupar notificaciones"
+                    },
+                    "remaining_hours": {
+                        "name": "Tiempo restante",
+                        "description": "El tiempo que queda antes de que la notificación se muestra (horas)"
+                    }
+                }
+            },
+            "experimental": {
+                "description": "Funciones experimentales",
+                "properties": {
+                    "native_hooks": {
+                        "name": "Ganchos nativos",
+                        "properties": {
+                            "composer_hooks": {
+                                "properties": {
+                                    "show_first_created_username": {
+                                        "description": "Muestra el primer nombre de usuario creado al lado del usuario actual en la página de perfil",
+                                        "name": "Muestra el primer nombre de usuario creado"
+                                    },
+                                    "bypass_camera_roll_limit": {
+                                        "name": "Saltar límite del álbum de cámara"
+                                    }
+                                },
+                                "name": "Ganchas de compositor",
+                                "description": "Inyecta código al marco multiplataforma de interfaz de usuario de Composer"
+                            }
+                        },
+                        "description": "Funciones no seguras que conectan con el código nativo de Snapchat"
+                    }
+                },
+                "name": "Experimental"
             }
         },
         "notices": {
