@@ -767,11 +767,11 @@
                 "properties": {
                     "immersive_camera_preview": {
                         "name": "Vista previa inmersiva",
-                        "description": "Evita que Snapchat corte la vista previa de la cámara\nPuede causar que la cámara parpadea en algunos dispositivos"
+                        "description": "Evita que Snapchat recorte la vista previa de la cámara\nEsto podría hacer que la cámara parpadee en algunos dispositivos"
                     },
                     "override_front_resolution": {
-                        "name": "Anular resolución del frente",
-                        "description": "Anula la resolución de la cámara para la cámara frontal"
+                        "name": "Anular la resolución frontal",
+                        "description": "Anula la resolución de la cámara frontal"
                     },
                     "disable_cameras": {
                         "name": "Deshabilitar cámaras",
@@ -779,11 +779,11 @@
                     },
                     "black_photos": {
                         "name": "Fotos negras",
-                        "description": "Sustituye a las fotos capturadas con un fondo negro\nLos vídeos no son afectados"
+                        "description": "Sustituye las fotos capturadas por un fondo negro\nLos vídeos no se ven afectados"
                     },
                     "override_back_resolution": {
-                        "name": "Anular resolución trasera",
-                        "description": "Anula la resolución de la cámara para la cámara trasera"
+                        "name": "Anular resolución anterior",
+                        "description": "Anula la resolución de la cámara trasera"
                     },
                     "custom_resolution": {
                         "name": "Resolución personalizada",
