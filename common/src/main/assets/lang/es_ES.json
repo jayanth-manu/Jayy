@@ -927,8 +927,8 @@
                         "description": "Proporciona un historial de historias de amigxs"
                     },
                     "e2ee": {
-                        "description": "Cifra tus mensajes usando AES usando un clave compartido\n¡Asegúrese de guardar tu clave en algún sitio seguro!",
-                        "name": "Cifración de extremo a extremo"
+                        "description": "Cifra tus mensajes con AES usando una clave secreta compartida\n¡Asegúrate de guardar tu clave en un lugar seguro!",
+                        "name": "Cifrado de extremo a extremo"
                     },
                     "call_recorder": {
                         "name": "Grabador de llamadas",
@@ -950,7 +950,7 @@
                     },
                     "app_lock": {
                         "name": "Bloqueo de aplicación",
-                        "description": "Niega acceso a Snapchat sin contraseña",
+                        "description": "Impide el acceso a Snapchat sin contraseña",
                         "properties": {
                             "lock_on_resume": {
                                 "name": "Bloquear al reanudar",
@@ -960,19 +960,19 @@
                     },
                     "infinite_story_boost": {
                         "name": "Promoción de historias infinita",
-                        "description": "Evita el límite de promociones de historias"
+                        "description": "Omitir el retraso del límite de impulso de historia"
                     },
                     "meo_passcode_bypass": {
-                        "name": "Evitar bloqueo de sólo para mí",
-                        "description": "Evitar el bloqueo de sólo para mí\n\nSólo funcionará si la contraseña ha sido entrada correctamente antes"
+                        "name": "Omitir contraseña para área privada",
+                        "description": "Omite la contraseña del área privada\nSolo funciona si ya se ha ingresado la contraseña correcta"
                     },
                     "no_friend_score_delay": {
                         "name": "Puntos de amigxs sin demora",
-                        "description": "Quita la demora al ver los puntos de un/a amigx"
+                        "description": "Elimina la demora al ver una puntuación de los amigos"
                     },
                     "best_friend_pinning": {
-                        "name": "Fijación de mejor amigx",
-                        "description": "Le permite fijar un/a mejor amigx como tu amigo número uno. Ten en cuenta: solo tú puedes ver tu mejor amigx fijado"
+                        "name": "Fijar mejor amigo",
+                        "description": "Te permite fijar a un amigo como tu mejor amigo número uno. Nota: Sólo tú puedes ver a tu mejor amigo fijado"
                     }
                 },
                 "name": "Experimental"
