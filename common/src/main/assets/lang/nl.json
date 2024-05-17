@@ -46,7 +46,8 @@
             "social": {
                 "streaks_expiration_short": "{hours}u",
                 "friends_tab": "Vrienden",
-                "groups_tab": "Groepen"
+                "groups_tab": "Groepen",
+                "empty_hint": "(leeg)"
             },
             "tasks": {
                 "no_tasks": "Geen taken",
@@ -193,6 +194,14 @@
                     "blacklist": "Sluit uit van onopslaanbare berichten",
                     "whitelist": "Onopslaanbare berichten"
                 }
+            },
+            "auto_open_snaps": {
+                "name": "Snaps Automatisch Openen",
+                "description": "Opent Snaps automatisch bij ontvangst",
+                "options": {
+                    "blacklist": "Uitsluiten van Automatisch Openen van Snaps",
+                    "whitelist": "Snaps Automatisch Openen"
+                }
             }
         },
         "toasts": {
@@ -332,11 +341,28 @@
             "description": "Schoont de Snapchat-cache op"
         },
         "export_chat_messages": {
-            "name": "Chatberichten exporteren"
+            "name": "Chatberichten exporteren",
+            "description": "Exporteert gespreksberichten naar een JSON/HTML/TXT-bestand"
         },
         "manage_friend_list": {
             "description": "Importeer/exporteer uw vriendenlijst bij het maken van een back-up",
             "name": "Vriendenlijst beheren"
+        },
+        "bulk_messaging_action": {
+            "name": "Bulkberichtactie",
+            "description": "Voert handelingen uit zoals het verwijderen van vrienden of het massaal verwijderen van gesprekken"
+        },
+        "export_memories": {
+            "description": "Exporteert herinneringen naar een ZIP-bestand",
+            "name": "Herinneringen Exporteren"
+        },
+        "change_language": {
+            "description": "Wijzig de taal van SnapEnhance",
+            "name": "Taal Wijzigen"
+        },
+        "regen_mappings": {
+            "name": "Mappings Regenereren",
+            "description": "Mappings Handmatig Regenereren"
         }
     }
 }
