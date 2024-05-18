@@ -468,6 +468,10 @@
                                     "camera_grid_lines": {
                                         "name": "Farve på kameragitter",
                                         "description": "Ændrer farven på Snapchats-gitterlinjerne på forhåndsvisningen af kameraet\nBemærk: Aktiver gitteret på mine kamera-indstillinger"
+                                    },
+                                    "friend_feed_conversations_line_color": {
+                                        "description": "Ændrer linje deler farven, der opdeler samtaler på vennefeedet ",
+                                        "name": "Samtaler linje farve"
                                     }
                                 }
                             }
@@ -710,6 +714,24 @@
                     "disable_custom_tabs": {
                         "name": "Deaktiver bruger tilpassede faner",
                         "description": "Åbner links i understøttede programmer i stedet for i webbrowseren"
+                    },
+                    "media_upload_quality": {
+                        "properties": {
+                            "force_video_upload_source_quality": {
+                                "name": "Tving video upload kilde kvalitet",
+                                "description": "Tvinger Snapchat til at bruge kilde kvaliteten, når du uploader videoer\nBemærk, at dette muligvis ikke fjerner metadata fra medier"
+                            },
+                            "custom_image_upload_format": {
+                                "description": "Indstiller et brugerdefineret billedoverførselsformat\nVælg et tabsfrit format (som PNG) for den bedste kvalitet",
+                                "name": "Brugerdefineret billed overførsels format"
+                            },
+                            "disable_image_compression": {
+                                "name": "Deaktiver billed komprimering",
+                                "description": "Deaktiverer billed komprimering ved upload af medier"
+                            }
+                        },
+                        "name": "Medie upload kvalitet",
+                        "description": "Tilsidesætter medie overførsel kvaliteten"
                     }
                 }
             },
@@ -1174,7 +1196,8 @@
                 "light_blue": "Lyseblå",
                 "dark_blue": "Mørke blå",
                 "earthy_autumn": "Jordisk efterår",
-                "mint_chocolate": "Mint Chokolade"
+                "mint_chocolate": "Mint Chokolade",
+                "material_you": "Materiale du (Android 12+)"
             }
         }
     },
