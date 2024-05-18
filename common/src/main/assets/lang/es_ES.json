@@ -928,7 +928,7 @@
                     },
                     "e2ee": {
                         "description": "Cifra tus mensajes con AES usando una clave secreta compartida\n¡Asegúrate de guardar tu clave en un lugar seguro!",
-                        "name": "Cifrado de extremo a extremo"
+                        "name": "Cifración de extremo a extremo"
                     },
                     "call_recorder": {
                         "name": "Grabador de llamadas",
@@ -960,7 +960,7 @@
                     },
                     "infinite_story_boost": {
                         "name": "Promoción de historias infinita",
-                        "description": "Omitir el retraso del límite de impulso de historia"
+                        "description": "Omitir el retraso del límite de promoción de historia"
                     },
                     "meo_passcode_bypass": {
                         "name": "Omitir contraseña para área privada",
@@ -972,7 +972,7 @@
                     },
                     "best_friend_pinning": {
                         "name": "Fijar mejor amigo",
-                        "description": "Te permite fijar a un amigo como tu mejor amigo número uno. Nota: Sólo tú puedes ver a tu mejor amigo fijado"
+                        "description": "Te permite fijar a un mejor amigx como tu mejor amigx número uno. Ten en cuenta: solo tú puedes ver a tu mejor amigx fijado"
                     }
                 },
                 "name": "Experimental"
