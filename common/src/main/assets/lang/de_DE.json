@@ -6,7 +6,7 @@
             "select_save_folder_button": "Ordner wählen"
         },
         "mappings": {
-            "dialog": "Damit SnapEnhance eine Vielzahl von Snapchat-Versionen gleichzeitig unterstützen kann, sind Mappings notwendig. Dies sollte nicht länger als 5 Sekunden dauern.",
+            "dialog": "Mappings werden generiert, dies könnte ein bisschen dauern ...",
             "generate_failure_no_snapchat": "SnapEnhance konnte Snapchat nicht finden, bitte versuchen Sie Snapchat neu zu installieren.",
             "generate_failure": "Beim Generieren der Zuordnungen ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut."
         },
@@ -416,6 +416,66 @@
                     "message_indicators": {
                         "name": "Nachrichtenindikatoren",
                         "description": "Fügt Nachrichten spezifische Anzeigesymbole hinzu\nHinweis: Die Symbole sind möglicherweise nicht 100 % genau"
+                    },
+                    "customize_ui": {
+                        "properties": {
+                            "colors": {
+                                "properties": {
+                                    "pending_sending_text_color": {
+                                        "name": "sekundäre Freundfeedtextfarbe",
+                                        "description": "Ändert die Textfarbe von ( Zugestellt / Empfangen / Senden / Geöffnet / Tippe zum Chatten / Halte zum Wiederholen / Wiederholt / Im Chat gespeichert / Angerufen ) im Freundesfeed"
+                                    },
+                                    "snap_with_sound_text_color": {
+                                        "name": "Snaps mit Ton Textfarbe",
+                                        "description": "Ändert die Textfarbe von ( Neuer Snap ) im Freundesfeed\nNotiz: Nur Videosnaps"
+                                    },
+                                    "friend_feed_conversations_line_color": {
+                                        "name": "Konversationslinienfarbe",
+                                        "description": "Ändert die Farbe der Linie, welche die Konversationen im Freundesfeed teilt "
+                                    },
+                                    "text_color": {
+                                        "name": "primäre Textfarbe",
+                                        "description": "Ändert Snapchats primäre Textfarbe"
+                                    },
+                                    "chat_chat_text_color": {
+                                        "name": "primäre Freundfeedtextfarbe",
+                                        "description": "Ändert die Textfarbe von ( Neuer Chat / Neuer Snap und Chats / Tippen / Anrufen / Verpasster Anruf / Reden / Neue Sprachnachricht ) im Freundesfeed"
+                                    },
+                                    "snap_without_sound_text_color": {
+                                        "name": "Snaps ohne Ton Textfarbe",
+                                        "description": "Ändert die Textfarbe von ( Neuer Snap ) im Freundesfeed\nNotiz: Nur Videosnaps"
+                                    },
+                                    "background_color": {
+                                        "name": "Hintergrundfarbe",
+                                        "description": "Ändert Snapchats Hintergrundfarbe"
+                                    },
+                                    "background_color_surface": {
+                                        "name": "Hintergrundflächenfarbe",
+                                        "description": "Ändert Snapchats Hintergrundflächenfarbe"
+                                    },
+                                    "action_menu_background_color": {
+                                        "name": "Aktionsmenuhintergrundfarbe",
+                                        "description": "Ändert Snapchats Chataktionsmenuhintergrundfarbe"
+                                    },
+                                    "action_menu_round_background_color": {
+                                        "description": "Ändert Snapchats Chataktionsmenuerundhintergrundfarbe",
+                                        "name": "Aktionsmenuerundhintergrundfarbe"
+                                    },
+                                    "camera_grid_lines": {
+                                        "name": "Kameragitterlinienfarbe",
+                                        "description": "Ändert Snapchats Kameragitterlinienfarbe in der Kameravorschau\nNotiz: Aktiviert die Kameragitterlinien in den Kameraeinstellungen"
+                                    }
+                                },
+                                "name": "Benutzerdefinierte Farben",
+                                "description": "Individuelle Farben anpassen\nNotiz: Wähle individuelle Farben im Theme-Picker"
+                            },
+                            "theme_picker": {
+                                "name": "Theme Wähler",
+                                "description": "Voreingestellte Snapchatthemes"
+                            }
+                        },
+                        "name": "Farben",
+                        "description": "Snapchats Farben anpassen"
                     }
                 }
             },
@@ -542,6 +602,10 @@
                     "friend_mutation_notifier": {
                         "name": "Freund-Mutationsbenachrichtigung",
                         "description": "Benachrichtigt Sie, wenn sich etwas im Profil eines Freundes ändert"
+                    },
+                    "unlimited_conversation_pinning": {
+                        "name": "Unlimitiertes Anpinnen von Konversationen",
+                        "description": "Erlaubt dir eine unlimitierte Anzahl von Konversationen lokal anzupinnen"
                     }
                 }
             },
@@ -616,6 +680,10 @@
                             "suspend_location_updates": {
                                 "name": "Stoppe die Aktualisierung des Standortes",
                                 "description": "Fügt in den Karteneinstellungen eine Schaltfläche hinzu, um Standortaktualisierungen auszusetzen"
+                            },
+                            "walk_radius": {
+                                "name": "Laufradius",
+                                "description": "Laufe zufälligerweise in diesem Radium (ft) herum"
                             }
                         }
                     },
@@ -642,6 +710,28 @@
                     "hide_active_music": {
                         "name": "Aktive Musik ausblenden",
                         "description": "Verhindert, dass Snapchat erkennt, dass Sie Musik hören.\nSo können Sie mithilfe der Lautstärketasten Snaps aufnehmen, während Sie Musik hören"
+                    },
+                    "media_upload_quality": {
+                        "properties": {
+                            "disable_image_compression": {
+                                "name": "Deaktiviert Bildkompression",
+                                "description": "Deaktiviert Bildkompression, wenn Medien hochgeladen werden"
+                            },
+                            "custom_image_upload_format": {
+                                "description": "Setzt ein benutzerdefiniertes Bildhochladformat\nWähle ein verlustfreies Format (wie PNG) für die beste Qualität",
+                                "name": "Benutzerdefiniertes Bildhochladformat"
+                            },
+                            "force_video_upload_source_quality": {
+                                "name": "Erzwingt Videohochladquellenqualität",
+                                "description": "Erzwing Snapchat die Quellenqualität zu nutzen, wenn Videos hochgelden werden\nBitte merkte, dass dies eventuell die Metadaten von Medien nicht entfernt"
+                            }
+                        },
+                        "name": "Medianhochladequalität",
+                        "description": "Überschreibt die Medienuploadqualität"
+                    },
+                    "disable_custom_tabs": {
+                        "name": "Deaktiviere benutzerdefinierte Tabs",
+                        "description": "Öffnet Links in unterstützen Applikationen, anstatt dem Webbrowser"
                     }
                 }
             },
@@ -738,6 +828,10 @@
                                     "composer_logs": {
                                         "name": "Composer-Protokolle",
                                         "description": "Leitet Konsolenprotokolle von Composer zu SnapEnhance um"
+                                    },
+                                    "show_first_created_username": {
+                                        "name": "Zeige erstgewählten Benutzernamen",
+                                        "description": "Zeige den erstgewählten Benutzernamen neben dem jetzigen Benutzernamen in der Profileseite"
                                     }
                                 },
                                 "name": "Composer Haken",
@@ -874,6 +968,10 @@
                     "custom_streaks_expiration_format": {
                         "name": "Benutzerdefiniertes Ablaufdatum für Serien",
                         "description": "Passt das Ablaufdatumformat für Serien an\n\nVerfügbare Variablen:\n- %c: Anzahl der Serien\n- %e: Sanduhr-Emoji\n- %d: Tage\n- %h: Stunden\n- %m: Minuten\n- %s: Sekunden\n- %w: Verbleibende Zeit"
+                    },
+                    "best_friend_pinning": {
+                        "name": "Bester Freund Pinning",
+                        "description": "Erlaubt einen Freund als besten Freund Nummer 1 anzupinnen. Notiz: Nur du kannst deinen gepinnten besten Freund sehen"
                     }
                 }
             },
@@ -965,13 +1063,15 @@
                 "initiate_audio": "Eingehender Audioanruf",
                 "abandon_audio": "Verpasster Audioanruf",
                 "initiate_video": "Eingehender Videoanruf",
-                "abandon_video": "Verpasster Videoanruf"
+                "abandon_video": "Verpasster Videoanruf",
+                "speaking": "Sprechen"
             },
             "gallery_media_send_override": {
                 "ORIGINAL": "Original",
                 "NOTE": "Audio-Notiz",
                 "SNAP": "Snap",
-                "SAVABLE_SNAP": "Speicherbarer Snap"
+                "SAVABLE_SNAP": "Speicherbarer Snap",
+                "always_ask": "Immer Fragen"
             },
             "hide_ui_components": {
                 "hide_profile_call_buttons": "Entferne Anruf Tasten",
@@ -1084,6 +1184,20 @@
                 "birthday_changes": "Benachrichtige, wenn jemand sein Geburtsdatum ändert",
                 "bitmoji_selfie_changes": "Benachrichtigen, wenn jemand sein Bitmoji-Selfie ändert",
                 "bitmoji_scene_changes": "Benachrichtige, wenn jemand seine Bitmoji-Szene ändert"
+            },
+            "theme_picker": {
+                "amoled_dark_mode": "AMOLED Dunkler Modus",
+                "material_you": "Material You (Android 12+)",
+                "custom": "Benutzerdefinierte Farben",
+                "light_blue": "Hellblau",
+                "dark_blue": "Dunkelblau",
+                "earthy_autumn": "Erdiger Herbst",
+                "mint_chocolate": "Minzschokolade",
+                "ginger_snap": "Ingwerschnaps",
+                "lemon_meringue": "Zitronenmeringue",
+                "lava_flow": "Lavafluss",
+                "ocean_fog": "Meeresnebel",
+                "alien_landscape": "Fremde Landschaften"
             }
         }
     },
@@ -1181,9 +1295,10 @@
             "sticker": "Sticker",
             "external_media": "Externe Medien",
             "note": "Notiz",
-            "original_story": "Originale Story"
+            "original_story": "Originale Story",
+            "gif": "GIF"
         },
-        "select_attachments_title": "Anhänge zum Herunterladen auswählen",
+        "select_attachments_title": "Anhänge auswählen",
         "download_started_toast": "Download gestartet",
         "unsupported_content_type_toast": "Nicht unterstützter Content-Typ!",
         "failed_no_longer_available_toast": "Datei ist nicht mehr verfügbar",
