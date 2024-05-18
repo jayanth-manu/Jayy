@@ -107,7 +107,7 @@ We no longer offer official `LSPatch` binaries for obvious reasons. However, you
   - `Disable Metrics`
   - `Disable Story Sections`
   - `Block Ads`
-  - `DisableCustom Tabs`
+  - `Disable Custom Tabs`
   - `Disable Permission Request`
   - `Disable Memories Snap Feed`
   - `Spotlight Comments Username` 
