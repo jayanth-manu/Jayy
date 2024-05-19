@@ -316,8 +316,8 @@ class HomeRoot : Routes.Route() {
                                 modifier = Modifier.size(50.dp)
                             )
                             Text(
-                              lineHeight = 16.sp, text = card.first, fontSize = 11.sp,
-                              textAlign = TextAlign.Center
+                                lineHeight = 16.sp, text = card.first, fontSize = 11.sp,
+                                textAlign = TextAlign.Center
                             )
                         }
                     }
