@@ -928,7 +928,17 @@
                     },
                     "e2ee": {
                         "description": "Cifra tus mensajes con AES usando una clave secreta compartida\n¡Asegúrate de guardar tu clave en un lugar seguro!",
-                        "name": "Cifración de extremo a extremo"
+                        "name": "Cifración de extremo a extremo",
+                        "properties": {
+                            "force_message_encryption": {
+                                "description": "Impide enviar mensajes cifrados a personas que no tienen la cifración de extremo a extremo habilitada solo cuando hay varias conversaciones seleccionadas",
+                                "name": "Forzar el cifrado de mensajes"
+                            },
+                            "encrypted_message_indicator": {
+                                "name": "Indicador de mensajes cifrados",
+                                "description": "Añade el emoji 🔒 al lado de mensajes cifrados"
+                            }
+                        }
                     },
                     "call_recorder": {
                         "name": "Grabador de llamadas",
@@ -963,7 +973,7 @@
                         "description": "Omitir el retraso del límite de promoción de historia"
                     },
                     "meo_passcode_bypass": {
-                        "name": "Omitir contraseña para área privada",
+                        "name": "Omitir contraseña de solo para mí",
                         "description": "Omite la contraseña del área privada\nSolo funciona si ya se ha ingresado la contraseña correcta"
                     },
                     "no_friend_score_delay": {
@@ -973,9 +983,46 @@
                     "best_friend_pinning": {
                         "name": "Fijar mejor amigo",
                         "description": "Te permite fijar a un mejor amigx como tu mejor amigx número uno. Ten en cuenta: solo tú puedes ver a tu mejor amigx fijado"
+                    },
+                    "custom_streaks_expiration_format": {
+                        "description": "Personaliza el formato de caducidad de rachas\n\nVariables disponibles:\n - %c: Número de rachas\n - %e: Reloj de arena emoji\n - %d: Dían\n - %h: Horas\n - %m: Minutos\n - %s: Segundos\n - %w: Tiempo restante",
+                        "name": "Formato de caducidad de rachas personalizado"
+                    },
+                    "add_friend_source_spoof": {
+                        "name": "Falsificación de fuente de añadir amigx",
+                        "description": "Falsifica la fuente de dónde viene la solicitud de amistad"
+                    },
+                    "hidden_snapchat_plus_features": {
+                        "name": "Funciones de Snapchat Plus ocultas",
+                        "description": "Habilita funciones inéditas/beta de Snapchat Plus\nPuede no funcionar en versiones antiguas de Snapchat"
+                    },
+                    "prevent_forced_logout": {
+                        "name": "Impedir el cierre de sesión forzado",
+                        "description": "Impide que Snapchat pueda cerrar la sesión cuando inicies sesión en otro dispositivo"
                     }
                 },
                 "name": "Experimental"
+            },
+            "scripting": {
+                "description": "Ejecuta código personalizado para mejorar SnapEnhance",
+                "properties": {
+                    "module_folder": {
+                        "description": "La carpeta dónde está ubicado el código",
+                        "name": "Carpeta de módulos"
+                    },
+                    "auto_reload": {
+                        "name": "Recargar automáticamente",
+                        "description": "Recargar código automáticamente cuando cambie"
+                    },
+                    "developer_mode": {
+                        "name": "Modo de desarrollador",
+                        "description": "Muestra información de depuración en la interfaz de usuario de Snapchat"
+                    },
+                    "integrated_ui": {
+                        "name": "Interfaz de Usuario integrado"
+                    }
+                },
+                "name": "Codificando"
             }
         },
         "notices": {
