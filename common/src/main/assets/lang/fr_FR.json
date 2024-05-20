@@ -467,6 +467,10 @@
                                     "camera_grid_lines": {
                                         "name": "Couleur du quadrillage de la caméra",
                                         "description": "Modifie la couleur du quadrillage de Snapchat sur l'aperçu de l'appareil photo\nRemarque : activez la grille dans les paramètres de ma caméra"
+                                    },
+                                    "friend_feed_conversations_line_color": {
+                                        "name": "Couleur de la ligne de conversation",
+                                        "description": "Modifie la couleur du séparateur de ligne qui divise les conversations sur le fil des amis. "
                                     }
                                 },
                                 "description": "Personnaliser les couleurs individuelles\nNote: sélectionnez Couleurs personnalisées dans le sélecteur de thème à utiliser."
@@ -710,6 +714,24 @@
                     "disable_custom_tabs": {
                         "name": "Désactiver les onglets personnalisés",
                         "description": "Ouvre les liens dans les applications prises en charge plutôt que dans le navigateur Web"
+                    },
+                    "media_upload_quality": {
+                        "properties": {
+                            "force_video_upload_source_quality": {
+                                "name": "Forcer la qualité source de l'importation vidéo",
+                                "description": "Force Snapchat à utiliser la qualité source lors de l'importation de vidéos\nVeuillez noter que cela ne supprimera peut-être pas les métadonnées du média."
+                            },
+                            "disable_image_compression": {
+                                "name": "Désactiver la compression d'image",
+                                "description": "Désactive la compression d'image lors de l'importation de médias"
+                            },
+                            "custom_image_upload_format": {
+                                "name": "Format d'importation d'image personnalisé",
+                                "description": "Définit un format d'importation d'image personnalisé\nSélectionnez un format sans perte (comme PNG) pour la meilleure qualité"
+                            }
+                        },
+                        "name": "Qualité d'importation des médias",
+                        "description": "Remplace la qualité d'importation multimédia"
                     }
                 }
             },
@@ -1174,7 +1196,8 @@
                 "lemon_meringue": "Meringue au citron",
                 "lava_flow": "Coulée de lave",
                 "ocean_fog": "Brouillard océanique",
-                "alien_landscape": "Paysage extraterrestre"
+                "alien_landscape": "Paysage extraterrestre",
+                "material_you": "Matériel U (Android 12+)"
             }
         }
     },
@@ -1272,7 +1295,8 @@
             "sticker": "Autocollant",
             "external_media": "Média externe",
             "note": "Note",
-            "original_story": "Storie originale"
+            "original_story": "Storie originale",
+            "gif": "GIF"
         },
         "select_attachments_title": "Sélectionnez les pièces jointes",
         "download_started_toast": "Téléchargement démarré",
