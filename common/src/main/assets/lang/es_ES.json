@@ -1019,7 +1019,12 @@
                         "description": "Muestra información de depuración en la interfaz de usuario de Snapchat"
                     },
                     "integrated_ui": {
-                        "name": "Interfaz de Usuario integrado"
+                        "name": "Interfaz de Usuario integrado",
+                        "description": "Permite al código de usuarios añadir componentes de la interfaz de usuario personalizados a Snapchat"
+                    },
+                    "disable_log_anonymization": {
+                        "description": "Deshabilita la anonimización de los registros",
+                        "name": "Deshabilitar anonimización de reegistros"
                     }
                 },
                 "name": "Codificando"
@@ -1030,6 +1035,191 @@
             "require_native_hooks": "⚠ Esta función requiere ganchos nativos experimentales para funcionar correctamente",
             "unstable": "⚠ inestable",
             "internal_behavior": "⚠ Esto puede romper el funcionamiento interno de Snapchat"
+        },
+        "options": {
+            "app_appearance": {
+                "always_light": "Siempre claro",
+                "always_dark": "Siempre oscuro"
+            },
+            "friend_feed_menu_buttons": {
+                "conversation_info": "👤 Información de conversación",
+                "auto_save": "💬 Guardar mensajes automáticamente",
+                "unsaveable_messages": "⬇️ Mensajes no guardables",
+                "auto_download": "⬇️ Descarga automática",
+                "auto_open_snaps": "📷 Automáticamente abrir Snaps",
+                "stealth": "👻 Modo sigilo",
+                "mark_snaps_as_seen": "👀 Marca Snaps como vistos",
+                "mark_stories_as_seen_locally": "👀 Marcar historias como vistas localmente",
+                "e2e_encryption": "🔒 Usar cifración de extremo a extremo"
+            },
+            "hide_ui_components": {
+                "hide_profile_call_buttons": "Quitar botones de llamada de perfil",
+                "hide_live_location_share_button": "Quitar botón de compartir ubicación en vivo",
+                "hide_stickers_button": "Quitar botón de pegatinas",
+                "hide_voice_record_button": "Quitar botón de Grabar voz",
+                "hide_unread_chat_hint": "Quitar indicación de chat no leído",
+                "hide_chat_call_buttons": "Quitar botones de llamada de chat"
+            },
+            "hide_story_suggestions": {
+                "hide_friend_suggestions": "Ocultar sugestiones de amistad",
+                "hide_my_stories": "Ocultar mis historias",
+                "hide_suggested_friend_stories": "Ocultar historias de amigxs sugeridas"
+            },
+            "home_tab": {
+                "camera": "Cámara",
+                "spotlight": "Spotlight",
+                "map": "Mapa",
+                "chat": "Chat",
+                "discover": "Descubrir"
+            },
+            "add_friend_source_spoof": {
+                "added_by_username": "Por nombre de usuario",
+                "added_by_mention": "Por mención",
+                "added_by_community": "Por comunidad",
+                "added_by_group_chat": "Por Grupo",
+                "added_by_qr_code": "Por Código QR"
+            },
+            "edit_text_override": {
+                "multi_line_chat_input": "Entrada de chat multilínea",
+                "bypass_text_input_limit": "Omitir límite de entrada de texto"
+            },
+            "disable_permission_requests": {
+                "notifications": "Notificaciones",
+                "read_media_images": "Leer imágenes de medios",
+                "location": "Ubicación",
+                "read_media_video": "Leer vídeos de medios",
+                "camera": "Cámara",
+                "microphone": "Micrófono",
+                "read_contacts": "Leer contactos",
+                "nearby_devices": "Dispositivos cercanos",
+                "phone_calls": "Llamadas"
+            },
+            "message_indicators": {
+                "ovf_editor_indicator": "Indica si un Snap se envió usando un editor OVF",
+                "encryption_indicator": "Añade un icono de 🔒 al lado de mensajes que han sido enviados solo a ti",
+                "platform_indicator": "Añade el icono de la plataforma desde cual se envió el mensaje (por ejemplo Android, iOS, Web)",
+                "location_indicator": "Añade un icono de 📍 a Snaps si han sido enviados con la ubicación habilitada"
+            },
+            "better_notifications": {
+                "media_preview": "Muestra vista previa de archivos de media",
+                "reply_button": "Añadir botón de responder",
+                "download_button": "Añadir botón de descargar",
+                "chat_preview": "Muestra vista previa del chat",
+                "mark_as_read_button": "Botón de marcar como leído",
+                "mark_as_read_and_save_in_chat": "Guardar en el chat al marcar como leído (depende de la opción guardar automáticamente)",
+                "friend_add_source": "Mostrar la fuente de agregación de amigx",
+                "group": "Notificaciones del grupo"
+            },
+            "bypass_video_length_restriction": {
+                "single": "Archivo de Media único",
+                "split": "Archivos de media divididos"
+            },
+            "theme_picker": {
+                "amoled_dark_mode": "Modo oscuro AMOLED",
+                "custom": "Colores personalizados",
+                "material_you": "Material You (Android 12+)",
+                "light_blue": "Azul claro",
+                "dark_blue": "Azul oscuro",
+                "earthy_autumn": "Otoño terroso",
+                "mint_chocolate": "Chocolate de menta",
+                "ginger_snap": "Snap jengibre",
+                "lemon_meringue": "Merengue Limón",
+                "lava_flow": "Flujo de magma",
+                "ocean_fog": "Niebla oceánica",
+                "alien_landscape": "Paisaje extraterrestre"
+            },
+            "path_format": {
+                "append_username": "Añadir el usuario al nombre del archivo",
+                "create_author_folder": "Crear carpeta para cada autor",
+                "create_source_folder": "Crear carpeta para cada tipo de fuente de los archivos media",
+                "append_hash": "Añadir un hash único al nombre del archivo",
+                "append_source": "Añadir la fuente de archivo de media al nombre del archivo",
+                "append_date_time": "Añadir la fecha y hora al nombre del archivo"
+            },
+            "auto_download_sources": {
+                "friend_snaps": "Snaps de amigxs",
+                "friend_stories": "Historias de amigxs",
+                "public_stories": "Historias públicas",
+                "spotlight": "Spotlight"
+            },
+            "logging": {
+                "started": "Iniciado",
+                "success": "Finalizado con éxito",
+                "progress": "Progreso",
+                "failure": "Fallo"
+            },
+            "notifications": {
+                "initiate_audio": "Llamada de audio entrante",
+                "chat_screenshot": "Captura de pantalla",
+                "chat_screen_record": "Grabación de pantalla",
+                "snap_replay": "Snap visto de nuevo",
+                "camera_roll_save": "Guardado en álbum de cámara",
+                "chat": "Chat",
+                "chat_reply": "Chat visto de nuevo",
+                "snap": "Snap",
+                "typing": "Escribiendo",
+                "stories": "Historias",
+                "speaking": "Hablando",
+                "chat_reaction": "Reacción a mensaje directo",
+                "group_chat_reaction": "Reacción de grupo",
+                "abandon_audio": "Llamada de audio perdida",
+                "initiate_video": "Llamada de vídeo entrante",
+                "abandon_video": "Llamada de vídeo perdida"
+            },
+            "gallery_media_send_override": {
+                "always_ask": "Preguntar siempre",
+                "ORIGINAL": "Original",
+                "NOTE": "Nota de voz",
+                "SNAP": "Snap",
+                "SAVABLE_SNAP": "Snap guardable"
+            },
+            "strip_media_metadata": {
+                "hide_caption_text": "Ocultar texto de subtítulos",
+                "hide_snap_filters": "Ocultar filtros de Snap",
+                "hide_extras": "Ocultar extras (por ejemplo menciones)",
+                "remove_audio_note_duration": "Quitar duración de nota de voz",
+                "remove_audio_note_transcript_capability": "Quitar capacidad de transcribir nota de voz"
+            },
+            "old_bitmoji_selfie": {
+                "2d": "Bitmoji 2D",
+                "3d": "Bitmoji 3D"
+            },
+            "disable_confirmation_dialogs": {
+                "erase_message": "Borrar mensaje",
+                "remove_friend": "Eliminar amigx",
+                "block_friend": "Bloquear amigx",
+                "ignore_friend": "Ignorar amigx",
+                "hide_friend": "Ocultar amigx",
+                "hide_conversation": "Ocultar conversación",
+                "clear_conversation": "Borrar conversación desde la lista de amigxs"
+            },
+            "auto_reload": {
+                "snapchat_only": "Solo Snapchat",
+                "all": "Todo (Snapchat + SnapEnhance)"
+            },
+            "auto_purge": {
+                "never": "Nunca",
+                "1_hour": "1 Hora",
+                "3_hours": "3 Horas",
+                "6_hours": "6 Horas",
+                "12_hours": "12 Horas",
+                "1_day": "1 día",
+                "3_days": "3 Días",
+                "1_week": "1 Semana",
+                "2_weeks": "2 Semanas",
+                "1_month": "1 Mes",
+                "3_months": "3 Meses",
+                "6_months": "6 Meses"
+            },
+            "disable_story_sections": {
+                "discover": "Descubrir",
+                "friends": "Amigxs",
+                "following": "Siguiendo"
+            },
+            "disable_cameras": {
+                "front": "Cámara frontal",
+                "back": "Cámara trasera"
+            }
         }
     }
 }
