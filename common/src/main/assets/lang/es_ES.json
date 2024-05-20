@@ -931,7 +931,7 @@
                         "name": "Cifración de extremo a extremo",
                         "properties": {
                             "force_message_encryption": {
-                                "description": "Impide enviar mensajes cifrados a personas que no tienen la cifración de extremo a extremo habilitada solo cuando hay varias conversaciones seleccionadas",
+                                "description": "Impide enviar mensajes cifrados a personas que no tienen la cifración de extremo a extremo habilitada solo cuando haya varias conversaciones seleccionadas",
                                 "name": "Forzar el cifrado de mensajes"
                             },
                             "encrypted_message_indicator": {
@@ -1098,7 +1098,8 @@
                 "ovf_editor_indicator": "Indica si un Snap se envió usando un editor OVF",
                 "encryption_indicator": "Añade un icono de 🔒 al lado de mensajes que han sido enviados solo a ti",
                 "platform_indicator": "Añade el icono de la plataforma desde cual se envió el mensaje (por ejemplo Android, iOS, Web)",
-                "location_indicator": "Añade un icono de 📍 a Snaps si han sido enviados con la ubicación habilitada"
+                "location_indicator": "Añade un icono de 📍 a Snaps si han sido enviados con la ubicación habilitada",
+                "director_mode_indicator": "Añade un icono de ✏️ a Snaps si han sido enviados usando el modo director, que se puede usar para enviar imágenes de la galería como Snaps"
             },
             "better_notifications": {
                 "media_preview": "Muestra vista previa de archivos de media",
@@ -1219,7 +1220,288 @@
             "disable_cameras": {
                 "front": "Cámara frontal",
                 "back": "Cámara trasera"
+            },
+            "auto_mark_as_read": {
+                "conversation_read": "Marcar conversaciones como leídos al enviar un mensaje",
+                "snap_reply": "Marcar Snaps como leídos al responder"
+            },
+            "friend_mutation_notifier": {
+                "remove_friend": "Notificar si alguien te elimina como amigx",
+                "birthday_changes": "Notificar si alguien cambia sus cumpleaños",
+                "bitmoji_selfie_changes": "Notificar si alguien cambia su retrato de Bitmoji",
+                "bitmoji_avatar_changes": "Notificar si alguien cambia su avatar de Bitmoji",
+                "bitmoji_background_changes": "Notificar si alguien cambia el fondo de su Bitmoji",
+                "bitmoji_scene_changes": "Notificar si alguien cambia su escena de Bitmoji"
             }
         }
+    },
+    "content_type": {
+        "STICKER": "Pegatina",
+        "STATUS_SAVE_TO_CAMERA_ROLL": "Guardado al álbum de cámara",
+        "STATUS_CONVERSATION_CAPTURE_SCREENSHOT": "Captura de pantalla",
+        "STATUS": "Estado",
+        "STATUS_CONVERSATION_CAPTURE_RECORD": "Grabación de pantalla",
+        "STATUS_CALL_MISSED_VIDEO": "Llamada de vídeo perdida",
+        "STATUS_CALL_MISSED_AUDIO": "Llamada de Audio perdida",
+        "LOCATION": "Ubicación",
+        "LIVE_LOCATION_SHARE": "Compartir ubicación en vivo",
+        "CHAT": "Chat",
+        "SNAP": "Snap",
+        "EXTERNAL_MEDIA": "Archivos de media externos",
+        "NOTE": "Nota de voz",
+        "CREATIVE_TOOL_ITEM": "Elemento de herramienta creativa",
+        "FAMILY_CENTER_INVITE": "Invitación de centro de familia",
+        "FAMILY_CENTER_ACCEPT": "Aceptar centro de familia",
+        "FAMILY_CENTER_LEAVE": "Salir del centro de familia",
+        "STATUS_PLUS_GIFT": "Regalo de estado plus",
+        "TINY_SNAP": "Snap diminuto",
+        "STATUS_COUNTDOWN": "Cuenta atrás",
+        "MAP_REACTION": "Reacción de mapa"
+    },
+    "mark_as_seen": {
+        "already_unseen_toast": "¡Ya marcado como no visto!",
+        "already_seen_toast": "¡Ya marcado como visto!",
+        "no_unseen_snaps_toast": "¡No se han encontrado Snaps no vistos!",
+        "seen_toast": "¡Marcado como visto!",
+        "unseen_toast": "¡Marcado como no visto!"
+    },
+    "bulk_messaging_action": {
+        "choose_action_title": "Elegir una acción",
+        "progress_status": "Procesando {index} de {total}",
+        "selection_dialog_continue_button": "Continuar",
+        "confirmation_dialog": {
+            "title": "¿Estás segura/o?",
+            "message": "Esto afectará todos los amigxs seleccionados. Esta acción no se puede deshacer."
+        },
+        "actions": {
+            "remove_friends": "Quitar amigxs",
+            "clear_conversations": "Borrar conversaciones"
+        }
+    },
+    "chat_export": {
+        "exporter_dialog": {
+            "select_conversations_title": "Seleccionar conversaciones",
+            "text_field_selection": "{amount} seleccionado",
+            "text_field_selection_all": "Todo",
+            "export_file_format_title": "Exportar formato de archivo",
+            "message_type_filter_title": "Filtrar mensajes por tipo",
+            "amount_of_messages_title": "Cantidad de mensajes (dejar vacío para todos)",
+            "download_medias_title": "Descargar archivos de media"
+        },
+        "dialog_negative_button": "Cancelar",
+        "dialog_positive_button": "Exportar",
+        "exported_to": "Exportado a {path}",
+        "exporting_chats": "Exportando Chats...",
+        "processing_chats": "Procesando {amount} conversaciones...",
+        "export_fail": "Fallo al exportar conversación {conversation}",
+        "writing_output": "Escribiendo salida...",
+        "finished": "¡Hecho! Puedes cerrar este diálogo.",
+        "no_messages_found": "¡No se han encontrado ningunos mensajes!",
+        "exporting_message": "Exportando{conversation}..."
+    },
+    "button": {
+        "download": "Descargar",
+        "cancel": "Cancelar",
+        "open": "Abrir",
+        "positive": "Sí",
+        "negative": "No",
+        "ok": "Vale"
+    },
+    "better_notifications": {
+        "button": {
+            "reply": "Responder",
+            "download": "Descargar",
+            "mark_as_read": "Marcar como leído"
+        },
+        "stealth_mode_notice": "No se puede marcar como leído en modo sigilo"
+    },
+    "download_processor": {
+        "select_attachments_title": "Seleccionar atajos",
+        "already_downloaded_toast": "¡Archivo de media ya descargado!",
+        "attachment_type": {
+            "snap": "Snap",
+            "sticker": "Pegatina",
+            "gif": "GIF",
+            "external_media": "Archivos de media externos",
+            "note": "Nota",
+            "original_story": "Historia original"
+        },
+        "download_started_toast": "Descarga iniciada",
+        "unsupported_content_type_toast": "¡Tipo de contenido no compatible!",
+        "failed_no_longer_available_toast": "Archivos de media ya no disponibles",
+        "no_attachments_toast": "¡No se han encontrado atajos!",
+        "already_queued_toast": "¡Archivo de media ya en cola!",
+        "saved_toast": "Guardado a {path}",
+        "download_toast": "Descargando {path}...",
+        "processing_toast": "Procesando {path}...",
+        "failed_generic_toast": "Error al descargar",
+        "failed_to_create_preview_toast": "Fallo al crear vista previa",
+        "failed_processing_toast": "Fallo de procesar {error}",
+        "failed_gallery_toast": "No se pudo guardar a la galería {error}",
+        "dash_no_chapter": "No se encontró ningún capítulo",
+        "dash_dialog": {
+            "title": "Descargar archivos de media del tablero",
+            "download_all": "Descargar todo",
+            "segment_text": "Segmento {from} - {to}"
+        }
+    },
+    "biometric_auth": {
+        "subtitle": "Por favor, autentícate para desbloquear Snapchat",
+        "unlock_button": "Desbloquear",
+        "title": "Desbloquear Snapchat"
+    },
+    "end_to_end_encryption": {
+        "toolbox": {
+            "initiate_exchange_button": "Iniciar intercambio de clave",
+            "no_shared_key": "Aún no tienes un secreto compartido con este amigx. Pulsa abajo para iniciar un secreto nuevo.",
+            "shared_key_fingerprint": "Tu huella digital es:\n\n{fingerprint}\n\n¡Asegúrese de comprobar si coincide con la huella de tu amigx!"
+        },
+        "confirmation_dialogs": {
+            "confirmation_2": "¿De VERDAD estás segura/o que quieres continuar? Esta es tu última oportunidad para retroceder.",
+            "title": "Cifración de extremo a extremo",
+            "confirmation_1": "AVISO: Esto sobrescribirá tu clave existente. Perderás acceso a todos tus mensajes cifrados de este amigx ¿segura/o que quieres continuar?"
+        },
+        "no_participants_to_encrypt_toast": "¡No tienes ningunos amigxs en esta conversación con quien cifrar mensajes!",
+        "accept_public_key_failure_toast": "Fallo al aceptar clave público",
+        "accept_secret_button": "Aceptar secreto",
+        "encryption_failed_toast": "¡Fallo al cifrar mensaje! Comprueba logcat para más detalles.",
+        "incoming_pk_message": "Acabas de recibir una solicitud de clave público. Haz cloc abajo para aceptarlo.",
+        "incoming_secret_message": "Tu amigx acaba de aceptar tu clave público. Haz clic abajo para aceptar el secreto.",
+        "accept_secret_key_success_toast": "¡Hecho! Ahora puedes enviar y recibir mensajes cifrados con este amigx.",
+        "accept_secret_key_failure_toast": "Fallo al aceptar clave secreto",
+        "accept_public_key_button": "Aceptar clave público",
+        "outgoing_pk_message": "Solicitud de cambio de clave",
+        "outgoing_secret_message": "Respuesta de cambio de clave",
+        "unencrypted_conversation_send_failure_toast": "¡No puedes enviar contenido cifrado a conversaciones cifradas y descifradas!",
+        "native_hooks_send_failure_toast": "¡Fallo al enviar! Por favor habilita Ganchos Nativos en los ajustes.",
+        "accept_public_key_success_toast": "¡Clave público aceptado con éxito!"
+    },
+    "chat_action_menu": {
+        "delete_logged_message_button": "Borrar mensaje registrado",
+        "edit_message": "Editar mensaje",
+        "convert_message": "Convertir mensaje",
+        "preview_button": "Vista previa",
+        "download_button": "Descargar"
+    },
+    "opera_context_menu": {
+        "download": "Descargar archivos de media",
+        "created_at": "Creado {date}",
+        "expires_at": "Caduca {date}",
+        "media_size": "Tamaño de media: {size}",
+        "media_duration": "Duración de media: {duration} ms",
+        "sent_at": "Enviado {date}",
+        "show_debug_info": "Mostrar información de depuración"
+    },
+    "profile_picture_downloader": {
+        "title": "Descargador de imagenes de perfil",
+        "button": "Descargar imagen de perfil",
+        "avatar_option": "Avatar",
+        "background_option": "Fondo"
+    },
+    "call_start_confirmation": {
+        "dialog_title": "Iniciar llamada",
+        "dialog_message": "¿Segura/o que quieres empezar una llamada?"
+    },
+    "auto_open_snaps": {
+        "title": "Abrir Snaps automáticamente",
+        "notification_content": "{count} Snaps abiertos"
+    },
+    "material3_strings": {
+        "date_input_invalid_not_allowed": "Fecha invalida",
+        "date_range_picker_start_headline": "Desde",
+        "date_range_picker_end_headline": "A",
+        "date_range_picker_title": "Elegir rango de fechas",
+        "date_picker_switch_to_calendar_mode": "Calendario",
+        "date_picker_switch_to_input_mode": "Entrada",
+        "date_range_picker_scroll_to_previous_month": "Último mes",
+        "date_range_picker_scroll_to_next_month": "Próximo mes",
+        "date_picker_today_description": "Hoy",
+        "date_range_picker_day_in_range": "Seleccionado",
+        "date_input_invalid_for_pattern": "Fecha invalida",
+        "date_input_invalid_year_range": "Año invalido",
+        "date_range_input_invalid_range_input": "Rango de fechas invalido"
+    },
+    "friend_menu_option": {
+        "anti_auto_save": "Antiguardado automático",
+        "mark_snaps_as_seen": "Marcar Snap como leído",
+        "mark_stories_as_seen_locally": "Marcar historias como vistos localmente",
+        "preview": "Prevista",
+        "stealth_mode": "Modo sigilo",
+        "auto_download_blacklist": "Lista negra de descargas automáticas"
+    },
+    "friend_mutation_observer": {
+        "notification_channel_name": "Observador de mutación de amigx",
+        "friend_removed": "{username} te ha eliminado como amigx",
+        "birthday_removed": "{username} ha eliminado sus cumpleaños ({birthday})",
+        "birthday_added": "{username} ha añadido sus cumpleaños ({birthday})",
+        "birthday_changed": "{username} ha cambiado sus cumpleaños de {oldBirthday} a {newBirthday}",
+        "bitmoji_selfie_changed": "{username} ha cambiado su retrato de Bitmoji",
+        "bitmoji_avatar_changed": "{username} ha cambiado su avatar de Bitmoji",
+        "bitmoji_background_changed": "{username} ha cambiado el fondo de su Bitmoji",
+        "bitmoji_scene_changed": "{username} ha cambiado la escena de su Bitmoji"
+    },
+    "suspend_location_updates": {
+        "switch_text": "Suspender actualizaciones de ubicación"
+    },
+    "media_download_source": {
+        "none": "Ninguno",
+        "pending": "Pendiente",
+        "chat_media": "Archivos de media de chat",
+        "story": "Historia",
+        "public_story": "Historia pública",
+        "spotlight": "Spotlight",
+        "profile_picture": "Imagen de perfil",
+        "story_logger": "Registrador de Historias",
+        "message_logger": "Registrador de mensajes",
+        "merged": "Mezclado",
+        "voice_call": "Llamada de voz"
+    },
+    "modal_option": {
+        "profile_info": "Información de perfil",
+        "close": "Cerrar"
+    },
+    "gallery_media_send_override": {
+        "multiple_media_toast": "Solo puedes enviar un medio a la vez"
+    },
+    "conversation_preview": {
+        "streak_expiration": "Caduca en {day} días {hour} horas {minute} minutos",
+        "total_messages": "Suma de mensajes enviados/recibidos: {count}",
+        "title": "Vista previa",
+        "unknown_user": "Usuario desconocido"
+    },
+    "profile_info": {
+        "title": "Información de perfil",
+        "first_created_username": "Primer nombre de usuario creado",
+        "mutable_username": "Nombre de usuario mutable",
+        "display_name": "Nombre para mostrar",
+        "added_date": "Fecha añadida",
+        "birthday": "Cumpleaños: {month} {day}",
+        "hidden_birthday": "Cumpleaños: Ocultado",
+        "friendship": "Amistad",
+        "add_source": "Fuente de añadir",
+        "snapchat_plus": "Snapchat Plus",
+        "snapchat_plus_state": {
+            "subscribed": "Suscrito",
+            "not_subscribed": "No suscrito"
+        }
+    },
+    "friendship_link_type": {
+        "mutual": "Mutuo",
+        "outgoing": "Saliente",
+        "blocked": "Bloqueado",
+        "deleted": "Borrado",
+        "following": "Siguiendo",
+        "suggested": "Sugerido",
+        "incoming": "Entrante",
+        "incoming_follower": "Seguidor entrante"
+    },
+    "half_swipe_notifier": {
+        "notification_channel_name": "No acabar de deslizar por completo en un chat",
+        "notification_content_dm": "{friend} acaba de no acabar de deslizar por completo en tu chat durante {duration} segundos",
+        "notification_content_group": "{friend} Acaba de no acabar de deslizar por completo en {group} durante {duration} segundos"
+    },
+    "streaks_reminder": {
+        "notification_title": "Rachas",
+        "notification_text": "Perderás tu Racha con {friend} en {hoursLeft} horas"
     }
 }
