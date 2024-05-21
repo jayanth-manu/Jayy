@@ -1021,7 +1021,7 @@
                 "name": "Rastreador de amigos",
                 "properties": {
                     "record_messaging_events": {
-                        "description": "Registra eventos de mensajería como el envío de un snap, la lectura de un mensaje, etc.",
+                        "description": "Registra eventos de mensajería como la apertura de un snap, la lectura de un mensaje, etc.",
                         "name": "Registra eventos de mensajería"
                     },
                     "allow_running_in_background": {
