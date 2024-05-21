@@ -1128,7 +1128,9 @@
                 "lemon_meringue": "Merengue Limón",
                 "lava_flow": "Flujo de magma",
                 "ocean_fog": "Niebla oceánica",
-                "alien_landscape": "Paisaje extraterrestre"
+                "alien_landscape": "Paisaje extraterrestre",
+                "material_you_light": "Material You claro (Android 12+)",
+                "material_you_dark": "Material You oscuro (Android 12+)"
             },
             "path_format": {
                 "append_username": "Añadir el usuario al nombre del archivo",
@@ -1355,27 +1357,27 @@
         "toolbox": {
             "initiate_exchange_button": "Iniciar intercambio de clave",
             "no_shared_key": "Aún no tienes un secreto compartido con este amigx. Pulsa abajo para iniciar un secreto nuevo.",
-            "shared_key_fingerprint": "Tu huella digital es:\n\n{fingerprint}\n\n¡Asegúrese de comprobar si coincide con la huella de tu amigx!"
+            "shared_key_fingerprint": "Tu huella digital es:\n\n{fingerprint}\n\n¡Asegúrese de comprobar si coincide con la huella de tu amigo!"
         },
         "confirmation_dialogs": {
             "confirmation_2": "¿De VERDAD estás segura/o que quieres continuar? Esta es tu última oportunidad para retroceder.",
             "title": "Cifración de extremo a extremo",
-            "confirmation_1": "AVISO: Esto sobrescribirá tu clave existente. Perderás acceso a todos tus mensajes cifrados de este amigx ¿segura/o que quieres continuar?"
+            "confirmation_1": "ADVERTENCIA: Esto sobrescribirá su clave existente. Perderás el acceso a todos los mensajes cifrados de este amigo. ¿Estás seguro de que quieres continuar?"
         },
-        "no_participants_to_encrypt_toast": "¡No tienes ningunos amigxs en esta conversación con quien cifrar mensajes!",
-        "accept_public_key_failure_toast": "Fallo al aceptar clave público",
+        "no_participants_to_encrypt_toast": "¡No tienes ningunos amigos en esta conversación con quien cifrar mensajes!",
+        "accept_public_key_failure_toast": "Fallo al aceptar clave pública",
         "accept_secret_button": "Aceptar secreto",
         "encryption_failed_toast": "¡Fallo al cifrar mensaje! Comprueba logcat para más detalles.",
         "incoming_pk_message": "Acabas de recibir una solicitud de clave público. Haz cloc abajo para aceptarlo.",
-        "incoming_secret_message": "Tu amigx acaba de aceptar tu clave público. Haz clic abajo para aceptar el secreto.",
-        "accept_secret_key_success_toast": "¡Hecho! Ahora puedes enviar y recibir mensajes cifrados con este amigx.",
-        "accept_secret_key_failure_toast": "Fallo al aceptar clave secreto",
-        "accept_public_key_button": "Aceptar clave público",
+        "incoming_secret_message": "Tu amigo acaba de aceptar tu clave público. Haz clic abajo para aceptar el secreto.",
+        "accept_secret_key_success_toast": "¡Hecho! Ahora puedes enviar y recibir mensajes cifrados con este amigo.",
+        "accept_secret_key_failure_toast": "Fallo al aceptar clave secreta",
+        "accept_public_key_button": "Aceptar clave pública",
         "outgoing_pk_message": "Solicitud de cambio de clave",
         "outgoing_secret_message": "Respuesta de cambio de clave",
-        "unencrypted_conversation_send_failure_toast": "¡No puedes enviar contenido cifrado a conversaciones cifradas y descifradas!",
+        "unencrypted_conversation_send_failure_toast": "¡No puedes enviar contenido cifrado a conversaciones cifradas y no cifradas!",
         "native_hooks_send_failure_toast": "¡Fallo al enviar! Por favor habilita Ganchos Nativos en los ajustes.",
-        "accept_public_key_success_toast": "¡Clave público aceptado con éxito!"
+        "accept_public_key_success_toast": "¡Clave pública aceptada con éxito!"
     },
     "chat_action_menu": {
         "delete_logged_message_button": "Borrar mensaje registrado",
@@ -1423,7 +1425,7 @@
         "date_range_input_invalid_range_input": "Rango de fechas invalido"
     },
     "friend_menu_option": {
-        "anti_auto_save": "Antiguardado automático",
+        "anti_auto_save": "Evitar el guardado automático",
         "mark_snaps_as_seen": "Marcar Snap como leído",
         "mark_stories_as_seen_locally": "Marcar historias como vistos localmente",
         "preview": "Prevista",
@@ -1431,11 +1433,11 @@
         "auto_download_blacklist": "Lista negra de descargas automáticas"
     },
     "friend_mutation_observer": {
-        "notification_channel_name": "Observador de mutación de amigx",
-        "friend_removed": "{username} te ha eliminado como amigx",
-        "birthday_removed": "{username} ha eliminado sus cumpleaños ({birthday})",
-        "birthday_added": "{username} ha añadido sus cumpleaños ({birthday})",
-        "birthday_changed": "{username} ha cambiado sus cumpleaños de {oldBirthday} a {newBirthday}",
+        "notification_channel_name": "Observador de mutación de amigo",
+        "friend_removed": "{username} te ha eliminado como amigo",
+        "birthday_removed": "{username} ha eliminado su cumpleaños ({birthday})",
+        "birthday_added": "{username} ha añadido su cumpleaños ({birthday})",
+        "birthday_changed": "{username} ha cambiado su cumpleaños de {oldBirthday} a {newBirthday}",
         "bitmoji_selfie_changed": "{username} ha cambiado su retrato de Bitmoji",
         "bitmoji_avatar_changed": "{username} ha cambiado su avatar de Bitmoji",
         "bitmoji_background_changed": "{username} ha cambiado el fondo de su Bitmoji",
