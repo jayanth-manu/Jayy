@@ -1,1 +1,7 @@
-{}
+{
+    "setup": {
+        "dialogs": {
+            "select_language": "Sprach uswähle"
+        }
+    }
+}
