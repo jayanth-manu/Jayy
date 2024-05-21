@@ -915,20 +915,6 @@
                         "description": "Liefert eine Historie der Stories von Freunden",
                         "name": "Story Logger"
                     },
-                    "session_events": {
-                        "name": "Aktuelle Nachrichten",
-                        "description": "Nehme die News auf",
-                        "properties": {
-                            "allow_running_in_background": {
-                                "name": "Hintergrundnutzung erlauben",
-                                "description": "Erlaubt der Sitzung im Hintergrund zu laufen"
-                            },
-                            "capture_duplex_events": {
-                                "name": "Erfassen von Duplex-Ereignissen",
-                                "description": "Erfassen von Präsenz- und Nachrichten-Ereignissen während einer aktiven Sitzung"
-                            }
-                        }
-                    },
                     "new_chat_action_menu": {
                         "name": "Neues Chat-Aktionsmenü",
                         "description": "Verwende die neue Chat-Aktionsmenüleiste"

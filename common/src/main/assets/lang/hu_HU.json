@@ -903,20 +903,6 @@
                         "name": "Nincs Friend Score késleltetés",
                         "description": "Eltávolítja a késleltetést a Friends Score megtekintésekor"
                     },
-                    "session_events": {
-                        "name": "Munkamenet események",
-                        "properties": {
-                            "capture_duplex_events": {
-                                "description": "Jelenléti és üzenetküldési események rögzítése aktív munkamenet esetén",
-                                "name": "Duplex események rögzítése"
-                            },
-                            "allow_running_in_background": {
-                                "name": "Háttérben futás engedélyezése",
-                                "description": "Lehetővé teszi a munkamenet futását a háttérben"
-                            }
-                        },
-                        "description": "Rögzíti a munkamenet eseményeit"
-                    },
                     "call_recorder": {
                         "name": "Hívásrögzítő",
                         "description": "Automatikusan rögzíti a hanghívásokat"

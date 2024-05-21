@@ -900,20 +900,6 @@
                         "name": "Hook-uri Native(Un set de funcții încorporate care permit dezvoltatorilor să adauge funcționalități la componente)",
                         "description": "Caracteristici nesigure care se leagă de codul nativ al Snapchat-ului"
                     },
-                    "session_events": {
-                        "name": "Evenimente de sesiune",
-                        "description": "Înregistrează evenimentele sesiunii",
-                        "properties": {
-                            "capture_duplex_events": {
-                                "name": "Capturați evenimente duplex",
-                                "description": "Capturați prezența și evenimentele de mesagerie atunci când o sesiune este activă"
-                            },
-                            "allow_running_in_background": {
-                                "name": "Permite rularea în fundal",
-                                "description": "Permite sesiunii să ruleze în fundal"
-                            }
-                        }
-                    },
                     "media_file_picker": {
                         "name": "Selector de Fișiere Media",
                         "description": "Vă permite să alegeți orice fișier video/audio din galerie"

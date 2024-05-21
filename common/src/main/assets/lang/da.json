@@ -907,20 +907,6 @@
                         "name": "Historie logger",
                         "description": "Giver en historie med venners historier"
                     },
-                    "session_events": {
-                        "name": "Session begivenheder",
-                        "description": "Registrerer sessions hændelser",
-                        "properties": {
-                            "capture_duplex_events": {
-                                "name": "Optag dupleks begivenheder",
-                                "description": "Fang tilstedeværelse og meddelelses begivenheder, når en session er aktiv"
-                            },
-                            "allow_running_in_background": {
-                                "name": "Tillad kørsel i baggrunden",
-                                "description": "Tillader session at køre i baggrunden"
-                            }
-                        }
-                    },
                     "convert_message_locally": {
                         "name": "Konverter besked lokalt",
                         "description": "Konverterer snaps til at chatte eksterne medier lokalt. Dette vises i chat download kontekstmenu"

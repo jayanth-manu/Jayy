@@ -915,20 +915,6 @@
                         "description": "Arkadaş hikayelerinin bir tarihçesini sunar",
                         "name": "Hikaye Kaydedici"
                     },
-                    "session_events": {
-                        "name": "Oturum Etkinlikleri",
-                        "description": "Oturum olaylarını kaydeder",
-                        "properties": {
-                            "capture_duplex_events": {
-                                "name": "Çift Yönlü Olayları Yakalama",
-                                "description": "Bir oturum aktifken varlık ve mesajlaşma olaylarını yakalama"
-                            },
-                            "allow_running_in_background": {
-                                "name": "Arka Planda Çalışmaya İzin Ver",
-                                "description": "Oturumun arka planda çalışmasına izin verir"
-                            }
-                        }
-                    },
                     "new_chat_action_menu": {
                         "description": "Yeni sohbet eylem menüsü çekmecesini kullanın",
                         "name": "Yeni Sohbet Eylem Menüsü"

@@ -626,20 +626,6 @@
                         "description": "Använd den nya chattåtgärdsmenylådan",
                         "name": "Ny chattåtgärdsmeny"
                     },
-                    "session_events": {
-                        "properties": {
-                            "allow_running_in_background": {
-                                "description": "Tillåter sessionen att köras i bakgrunden",
-                                "name": "Tillåt körning i bakgrunden"
-                            },
-                            "capture_duplex_events": {
-                                "name": "Fånga duplexhändelser",
-                                "description": "Fånga närvaro- och meddelandehändelser när en session är aktiv"
-                            }
-                        },
-                        "name": "Sessionshändelser",
-                        "description": "Spelar in sessionshändelser"
-                    },
                     "native_hooks": {
                         "name": "Native Hooks",
                         "description": "Osäkra funktioner som kopplas in i Snapchats inbyggda kod",

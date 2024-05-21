@@ -915,20 +915,6 @@
                         "description": "Fournit un historique des Stories d'amis",
                         "name": "Journal des Stories"
                     },
-                    "session_events": {
-                        "description": "Enregistre les événements de la session",
-                        "properties": {
-                            "capture_duplex_events": {
-                                "name": "Capturer les événements duplex",
-                                "description": "Capturez les événements de présence et de messagerie lorsqu'une session est active"
-                            },
-                            "allow_running_in_background": {
-                                "name": "Autoriser l'exécution en arrière-plan",
-                                "description": "Permet à la session de s'exécuter en arrière-plan"
-                            }
-                        },
-                        "name": "Événements de session"
-                    },
                     "new_chat_action_menu": {
                         "name": "Nouveau menu d'actions de discussion",
                         "description": "Utilisez le nouveau tiroir du menu d'action de chat"

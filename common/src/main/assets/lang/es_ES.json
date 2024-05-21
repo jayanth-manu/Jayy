@@ -866,20 +866,6 @@
                         },
                         "description": "Funciones inseguras que se integran al código nativo de Snapchat"
                     },
-                    "session_events": {
-                        "name": "Eventos de sesión",
-                        "description": "Graba eventos de sesión",
-                        "properties": {
-                            "capture_duplex_events": {
-                                "name": "Grabar eventos duplexos",
-                                "description": "Grabar eventos de mensajería y presencia mientras una sesión esté activa"
-                            },
-                            "allow_running_in_background": {
-                                "name": "Permitir actividad en segundo plano",
-                                "description": "Permitir sesiones en segundo plano"
-                            }
-                        }
-                    },
                     "media_file_picker": {
                         "description": "Le permite elegir cualquier archivo de vídeo/audio de la galería",
                         "name": "Selector de archivos multimedia"
