@@ -30,7 +30,9 @@
             "logger_history": "Historique des logs",
             "logged_stories": "Stories enregistrées",
             "manage_scope": "Gérer le champ d'application",
-            "messaging_preview": "Aperçu"
+            "messaging_preview": "Aperçu",
+            "edit_rule": "Modifier la règle",
+            "friend_tracker": "Traqueur d'amis"
         },
         "sections": {
             "features": {
@@ -986,6 +988,15 @@
                         "name": "Rechargement automatique"
                     }
                 }
+            },
+            "friend_tracker": {
+                "properties": {
+                    "record_messaging_events": {
+                        "name": "Enregistrer les événements de messagerie"
+                    }
+                },
+                "name": "Traqueur d'amis",
+                "description": "Enregistre l'activité d'un ami sur Snapchat"
             }
         },
         "options": {
