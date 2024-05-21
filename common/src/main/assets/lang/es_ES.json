@@ -30,7 +30,9 @@
             "features": "Características",
             "home": "Página principal",
             "home_logs": "Registros",
-            "home_settings": "Ajustes"
+            "home_settings": "Ajustes",
+            "friend_tracker": "Rastreador de amigos",
+            "edit_rule": "Editar regla"
         },
         "sections": {
             "home": {
@@ -1014,6 +1016,20 @@
                     }
                 },
                 "name": "Codificando"
+            },
+            "friend_tracker": {
+                "name": "Rastreador de amigos",
+                "properties": {
+                    "record_messaging_events": {
+                        "description": "Registra eventos de mensajería como el envío de un snap, la lectura de un mensaje, etc.",
+                        "name": "Registra eventos de mensajería"
+                    },
+                    "allow_running_in_background": {
+                        "name": "Permitir la ejecución en segundo plano",
+                        "description": "Permite que el rastreador se ejecute en segundo plano. Nota: Esto agotará significativamente la batería"
+                    }
+                },
+                "description": "Registra la actividad de un amigo en Snapchat"
             }
         },
         "notices": {
