@@ -42,7 +42,29 @@ class CustomizeUI: Feature("Customize UI", loadParams = FeatureLoadParams.ACTIVI
                 getAttribute(key) to value!!
             }.toMap()
         } 
-        if (themePicker == "material_you") {
+        if (themePicker == "material_you_light") {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                val colorScheme = dynamicDarkColorScheme(context.androidContext)
+                themes.clear()
+                themes[themePicker] = mapOf(
+                    "sigColorTextPrimary" to colorScheme.surfaceVariant.toArgb(),
+                    "sigColorChatChat" to colorScheme.surfaceVariant.toArgb(),
+                    "sigColorChatPendingSending" to colorScheme.surfaceVariant.toArgb(),
+                    "sigColorChatSnapWithSound" to colorScheme.surfaceVariant.toArgb(),
+                    "sigColorChatSnapWithoutSound" to colorScheme.surfaceVariant.toArgb(),
+                    "sigColorBackgroundMain" to colorScheme.onBackground.toArgb(),
+                    "sigColorBackgroundSurface" to colorScheme.onBackground.toArgb(),
+                    "listDivider" to colorScheme.onPrimary.copy(alpha = 0.12f).toArgb(),
+                    "actionSheetBackgroundDrawable" to colorScheme.onBackground.toArgb(),
+                    "actionSheetRoundedBackgroundDrawable" to colorScheme.onBackground.toArgb(),
+                    "sigExceptionColorCameraGridLines" to colorScheme.onBackground.toArgb(),
+                ).apply {
+                }.filterValues { true }.map { (key, value) ->
+                    getAttribute(key) to value
+                }.toMap()
+            }
+        }
+        if (themePicker == "material_you_dark") {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
                 val colorScheme = dynamicDarkColorScheme(context.androidContext)
                 themes.clear()
