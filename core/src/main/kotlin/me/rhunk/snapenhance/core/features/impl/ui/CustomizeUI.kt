@@ -44,10 +44,10 @@ class CustomizeUI: Feature("Customize UI", loadParams = FeatureLoadParams.ACTIVI
         if (themePicker == "material_you_light" || themePicker == "material_you_dark") {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
                 val colorScheme = dynamicDarkColorScheme(context.androidContext)
-                val isLight = themePicker == "material_you_light"
+                val light = themePicker == "material_you_light"
                 themes.clear()
-                val surfaceVariant = (if (isLight) colorScheme.surfaceVariant else colorScheme.onSurfaceVariant).toArgb()
-                val background = (if (isLight) colorScheme.onBackground else colorScheme.background).toArgb()
+                val surfaceVariant = (if (light) colorScheme.surfaceVariant else colorScheme.onSurfaceVariant).toArgb()
+                val background = (if (light) colorScheme.onBackground else colorScheme.background).toArgb()
 
                 themes[themePicker] = mapOf(
                     "sigColorTextPrimary" to surfaceVariant,
