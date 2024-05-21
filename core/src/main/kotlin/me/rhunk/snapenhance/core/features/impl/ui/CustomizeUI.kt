@@ -37,53 +37,31 @@ class CustomizeUI: Feature("Customize UI", loadParams = FeatureLoadParams.ACTIVI
                 "actionSheetBackgroundDrawable" to colorsConfig.actionMenuBackgroundColor.getNullable(),
                 "actionSheetRoundedBackgroundDrawable" to colorsConfig.actionMenuRoundBackgroundColor.getNullable(),
                 "sigExceptionColorCameraGridLines" to colorsConfig.cameraGridLines.getNullable(),
-            ).apply {
-            }.filterValues { it != null }.map { (key, value) ->
+            ).filterValues { it != null }.map { (key, value) ->
                 getAttribute(key) to value!!
             }.toMap()
         } 
-        if (themePicker == "material_you_light") {
+        if (themePicker == "material_you_light" || themePicker == "material_you_dark") {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
                 val colorScheme = dynamicDarkColorScheme(context.androidContext)
+                val isLight = themePicker == "material_you_light"
                 themes.clear()
+                val surfaceVariant = (if (isLight) colorScheme.surfaceVariant else colorScheme.onSurfaceVariant).toArgb()
+                val background = (if (isLight) colorScheme.onBackground else colorScheme.background).toArgb()
+
                 themes[themePicker] = mapOf(
-                    "sigColorTextPrimary" to colorScheme.surfaceVariant.toArgb(),
-                    "sigColorChatChat" to colorScheme.surfaceVariant.toArgb(),
-                    "sigColorChatPendingSending" to colorScheme.surfaceVariant.toArgb(),
-                    "sigColorChatSnapWithSound" to colorScheme.surfaceVariant.toArgb(),
-                    "sigColorChatSnapWithoutSound" to colorScheme.surfaceVariant.toArgb(),
-                    "sigColorBackgroundMain" to colorScheme.onBackground.toArgb(),
-                    "sigColorBackgroundSurface" to colorScheme.onBackground.toArgb(),
+                    "sigColorTextPrimary" to surfaceVariant,
+                    "sigColorChatChat" to surfaceVariant,
+                    "sigColorChatPendingSending" to surfaceVariant,
+                    "sigColorChatSnapWithSound" to surfaceVariant,
+                    "sigColorChatSnapWithoutSound" to surfaceVariant,
+                    "sigColorBackgroundMain" to background,
+                    "sigColorBackgroundSurface" to background,
                     "listDivider" to colorScheme.onPrimary.copy(alpha = 0.12f).toArgb(),
-                    "actionSheetBackgroundDrawable" to colorScheme.onBackground.toArgb(),
-                    "actionSheetRoundedBackgroundDrawable" to colorScheme.onBackground.toArgb(),
-                    "sigExceptionColorCameraGridLines" to colorScheme.onBackground.toArgb(),
-                ).apply {
-                }.filterValues { true }.map { (key, value) ->
-                    getAttribute(key) to value
-                }.toMap()
-            }
-        }
-        if (themePicker == "material_you_dark") {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-                val colorScheme = dynamicDarkColorScheme(context.androidContext)
-                themes.clear()
-                themes[themePicker] = mapOf(
-                    "sigColorTextPrimary" to colorScheme.onSurfaceVariant.toArgb(),
-                    "sigColorChatChat" to colorScheme.onSurfaceVariant.toArgb(),
-                    "sigColorChatPendingSending" to colorScheme.onSurfaceVariant.toArgb(),
-                    "sigColorChatSnapWithSound" to colorScheme.onSurfaceVariant.toArgb(),
-                    "sigColorChatSnapWithoutSound" to colorScheme.onSurfaceVariant.toArgb(),
-                    "sigColorBackgroundMain" to colorScheme.background.toArgb(),
-                    "sigColorBackgroundSurface" to colorScheme.background.toArgb(),
-                    "listDivider" to colorScheme.primary.copy(alpha = 0.12f).toArgb(),
-                    "actionSheetBackgroundDrawable" to colorScheme.background.toArgb(),
-                    "actionSheetRoundedBackgroundDrawable" to colorScheme.background.toArgb(),
-                    "sigExceptionColorCameraGridLines" to colorScheme.background.toArgb(),
-                ).apply {
-                }.filterValues { true }.map { (key, value) ->
-                    getAttribute(key) to value
-                }.toMap()
+                    "actionSheetBackgroundDrawable" to background,
+                    "actionSheetRoundedBackgroundDrawable" to background,
+                    "sigExceptionColorCameraGridLines" to background,
+                ).map { getAttribute(it.key) to it.value }.toMap()
             }
         }
 
