@@ -1187,7 +1187,6 @@
             },
             "theme_picker": {
                 "amoled_dark_mode": "AMOLED Dunkler Modus",
-                "material_you": "Material You (Android 12+)",
                 "custom": "Benutzerdefinierte Farben",
                 "light_blue": "Hellblau",
                 "dark_blue": "Dunkelblau",
