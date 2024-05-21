@@ -1,1 +1,29 @@
-{}
+{
+    "manager": {
+        "routes": {
+            "edit_rule": "Rulus scribere",
+            "features": "Posse",
+            "tasks": "Scribere",
+            "home": "Villa",
+            "home_settings": "Deus maximae",
+            "home_logs": "Papyrus",
+            "social": "Socius"
+        }
+    },
+    "setup": {
+        "dialogs": {
+            "select_language": "Lingua cupere",
+            "select_save_folder_button": "Ordnerus cupere"
+        },
+        "permissions": {
+            "notification_access": "Nervus alloware",
+            "battery_optimization": "Akkutis perfectio",
+            "display_over_other_apps": "Druber cuper",
+            "request_button": "Voluntas"
+        }
+    },
+    "scopes": {
+        "friend": "Amicus",
+        "group": "Magnas"
+    }
+}
