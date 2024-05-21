@@ -992,7 +992,12 @@
             "friend_tracker": {
                 "properties": {
                     "record_messaging_events": {
-                        "name": "Enregistrer les événements de messagerie"
+                        "name": "Enregistrer les événements de messagerie",
+                        "description": "Enregistre les événements de messagerie tels que l'ouverture d'un snap, la lecture d'un message, etc."
+                    },
+                    "allow_running_in_background": {
+                        "name": "Autoriser l'exécution en arrière-plan",
+                        "description": "Permet au traqueur de fonctionner en arrière-plan. Remarque : cette fonction entraînera une consommation importante de la batterie"
                     }
                 },
                 "name": "Traqueur d'amis",
