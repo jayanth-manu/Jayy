@@ -30,7 +30,9 @@
             "logger_history": "Logs Verlauf",
             "logged_stories": "Geloggte Storys",
             "messaging_preview": "Vorschau",
-            "manage_scope": "Verwalte Scope"
+            "manage_scope": "Verwalte Scope",
+            "friend_tracker": "Freundestracker",
+            "edit_rule": "Regel bearbeiten"
         },
         "sections": {
             "features": {
@@ -682,7 +684,7 @@
                                 "description": "Fügt in den Karteneinstellungen eine Schaltfläche hinzu, um Standortaktualisierungen auszusetzen"
                             },
                             "walk_radius": {
-                                "name": "Laufradius",
+                                "name": "Radius",
                                 "description": "Laufe zufälligerweise in diesem Radium (ft) herum"
                             }
                         }
@@ -726,7 +728,7 @@
                                 "description": "Erzwing Snapchat die Quellenqualität zu nutzen, wenn Videos hochgelden werden\nBitte merkte, dass dies eventuell die Metadaten von Medien nicht entfernt"
                             }
                         },
-                        "name": "Medianhochladequalität",
+                        "name": "Qualität",
                         "description": "Überschreibt die Medienuploadqualität"
                     },
                     "disable_custom_tabs": {
@@ -986,6 +988,18 @@
                         "name": "Automatisches Neuladen"
                     }
                 }
+            },
+            "friend_tracker": {
+                "properties": {
+                    "allow_running_in_background": {
+                        "name": "Hintergrundnutzung erlauben"
+                    },
+                    "record_messaging_events": {
+                        "name": "Nachrichtenevents aufzeichnen"
+                    }
+                },
+                "name": "Freundestracker",
+                "description": "Die Aktivität der Freunde aufzeichnen"
             }
         },
         "options": {
@@ -1050,7 +1064,7 @@
                 "abandon_audio": "Verpasster Audioanruf",
                 "initiate_video": "Eingehender Videoanruf",
                 "abandon_video": "Verpasster Videoanruf",
-                "speaking": "Sprechen"
+                "speaking": "Sprache"
             },
             "gallery_media_send_override": {
                 "ORIGINAL": "Original",
@@ -1179,9 +1193,9 @@
                 "dark_blue": "Dunkelblau",
                 "earthy_autumn": "Erdiger Herbst",
                 "mint_chocolate": "Minzschokolade",
-                "ginger_snap": "Ingwerschnaps",
+                "ginger_snap": "Roter Snap",
                 "lemon_meringue": "Zitronenmeringue",
-                "lava_flow": "Lavafluss",
+                "lava_flow": "Lava Fließend",
                 "ocean_fog": "Meeresnebel",
                 "alien_landscape": "Fremde Landschaften"
             }
