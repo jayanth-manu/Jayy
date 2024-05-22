@@ -1347,8 +1347,7 @@
             "download": "İndir",
             "reply": "Yanıtla",
             "mark_as_read": "Okundu olarak işaretle"
-        },
-        "stealth_mode_notice": "Gizli modda okundu olarak işaretlenemiyor"
+        }
     },
     "half_swipe_notifier": {
         "notification_content_group": "{friend} {duration} saniye boyunca {group}'a yarım kaydırma yaptı",

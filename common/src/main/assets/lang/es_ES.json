@@ -1305,8 +1305,7 @@
             "reply": "Responder",
             "download": "Descargar",
             "mark_as_read": "Marcar como leído"
-        },
-        "stealth_mode_notice": "No se puede marcar como leído en modo sigilo"
+        }
     },
     "download_processor": {
         "select_attachments_title": "Seleccionar atajos",

@@ -1441,8 +1441,7 @@
             "reply": "Antwort",
             "download": "Herunterladen",
             "mark_as_read": "Als gelesen markieren"
-        },
-        "stealth_mode_notice": "Kann im Stealth-Modus nicht als gelesen markiert werden"
+        }
     },
     "profile_picture_downloader": {
         "button": "Profilbilder herunterladen",

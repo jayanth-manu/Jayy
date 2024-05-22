@@ -1373,8 +1373,7 @@
             "download": "Télécharger",
             "reply": "Répondre",
             "mark_as_read": "Marquer comme lu"
-        },
-        "stealth_mode_notice": "Impossible de marquer comme lu en mode furtif"
+        }
     },
     "half_swipe_notifier": {
         "notification_content_group": "{friend} a entrouvert dans {group} pendant {duration} seconde(s)",

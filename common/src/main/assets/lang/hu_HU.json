@@ -1384,8 +1384,7 @@
             "download": "Letöltés",
             "mark_as_read": "Megjelölés olvasottként",
             "reply": "Válasz"
-        },
-        "stealth_mode_notice": "Nem tudod olvasottként jelölni rejtett módban"
+        }
     },
     "half_swipe_notifier": {
         "notification_content_group": "{friend} épp most ugrott be félig a {group}, {duration} másodpercre",

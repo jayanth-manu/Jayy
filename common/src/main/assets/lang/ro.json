@@ -1341,8 +1341,7 @@
             "reply": "Răspundeți",
             "download": "Descărcați",
             "mark_as_read": "Marcați ca citit"
-        },
-        "stealth_mode_notice": "Nu se poate marca ca citit în modul ascuns"
+        }
     },
     "streaks_reminder": {
         "notification_title": "Linie fierbinte",

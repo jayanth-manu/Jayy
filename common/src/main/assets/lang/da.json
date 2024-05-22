@@ -1412,8 +1412,7 @@
             "reply": "Svar",
             "mark_as_read": "Marker som læst",
             "download": "Hent"
-        },
-        "stealth_mode_notice": "Kan ikke markere som læst i stealth tilstand"
+        }
     },
     "suspend_location_updates": {
         "switch_text": "Suspender placerings opdateringer"
