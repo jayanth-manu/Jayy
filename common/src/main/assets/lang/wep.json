@@ -1,7 +1,8 @@
 {
     "setup": {
         "dialogs": {
-            "select_language": "Sprach uswähle"
+            "select_language": "Sprach uswähle",
+            "save_folder": "SnapEnhance benötigt Speicherberächtigunge zum Abelade und Speicher vo Medie vo Snapchat.\nBitte wähled Sie de Ort us wo d Medie sölled abeglade werde."
         }
     }
 }
