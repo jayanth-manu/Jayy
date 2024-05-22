@@ -13,7 +13,7 @@
         "permissions": {
             "dialog": "Um fortfahren zu können, müssen Sie diese Anforderungen erfüllen:",
             "notification_access": "Zugriff auf Benachrichtigungen",
-            "battery_optimization": "Batterie Optimierung",
+            "battery_optimization": "Batterieoptimierung",
             "display_over_other_apps": "Über anderen Apps einblenden",
             "request_button": "Anfordern"
         }
@@ -31,7 +31,7 @@
             "logged_stories": "Geloggte Storys",
             "messaging_preview": "Vorschau",
             "manage_scope": "Verwalte Scope",
-            "friend_tracker": "Freundestracker",
+            "friend_tracker": "Freundtracker:in",
             "edit_rule": "Regel bearbeiten"
         },
         "sections": {
@@ -425,10 +425,10 @@
                                 "properties": {
                                     "pending_sending_text_color": {
                                         "name": "sekundäre Freundfeedtextfarbe",
-                                        "description": "Ändert die Textfarbe von ( Zugestellt / Empfangen / Senden / Geöffnet / Tippe zum Chatten / Halte zum Wiederholen / Wiederholt / Im Chat gespeichert / Angerufen ) im Freundesfeed"
+                                        "description": "Ändert die Textfarbe von (Zugestellt / Empfangen / Senden / Geöffnet / Zum Chatten antippen / Zur Wiedergabe gedrückt halten / Wiedergegeben / Im Chat gespeichert / Angerufen) im Freundes-Feed"
                                     },
                                     "snap_with_sound_text_color": {
-                                        "name": "Snaps mit Ton Textfarbe",
+                                        "name": "Snaps mit Tontextfarbe",
                                         "description": "Ändert die Textfarbe von ( Neuer Snap ) im Freundesfeed\nNotiz: Nur Videosnaps"
                                     },
                                     "friend_feed_conversations_line_color": {
@@ -441,7 +441,7 @@
                                     },
                                     "chat_chat_text_color": {
                                         "name": "primäre Freundfeedtextfarbe",
-                                        "description": "Ändert die Textfarbe von ( Neuer Chat / Neuer Snap und Chats / Tippen / Anrufen / Verpasster Anruf / Reden / Neue Sprachnachricht ) im Freundesfeed"
+                                        "description": "Ändert die Textfarbe von (Neuer Chat / Neuer Snap und Chats / Tippen / Anrufen / Verpasster Anruf / Sprechen / Neue Sprachnotiz) im Freundes-Feed"
                                     },
                                     "snap_without_sound_text_color": {
                                         "name": "Snaps ohne Ton Textfarbe",
@@ -460,8 +460,8 @@
                                         "description": "Ändert Snapchats Chataktionsmenuhintergrundfarbe"
                                     },
                                     "action_menu_round_background_color": {
-                                        "description": "Ändert Snapchats Chataktionsmenuerundhintergrundfarbe",
-                                        "name": "Aktionsmenuerundhintergrundfarbe"
+                                        "description": "Ändert die runde Hintergrundfarbe des Snapchat-Chat-Aktionsmenüs",
+                                        "name": "Aktionsmenü, runde Hintergrundfarbe"
                                     },
                                     "camera_grid_lines": {
                                         "name": "Kameragitterlinienfarbe",
@@ -721,10 +721,10 @@
                             },
                             "custom_image_upload_format": {
                                 "description": "Setzt ein benutzerdefiniertes Bildhochladformat\nWähle ein verlustfreies Format (wie PNG) für die beste Qualität",
-                                "name": "Benutzerdefiniertes Bildhochladformat"
+                                "name": "Benutzerdefiniertes Bild-Upload-Format"
                             },
                             "force_video_upload_source_quality": {
-                                "name": "Erzwingt Videohochladquellenqualität",
+                                "name": "Erzwingen Sie die Qualität der Video-Upload-Quelle",
                                 "description": "Erzwing Snapchat die Quellenqualität zu nutzen, wenn Videos hochgelden werden\nBitte merkte, dass dies eventuell die Metadaten von Medien nicht entfernt"
                             }
                         },
@@ -732,7 +732,7 @@
                         "description": "Überschreibt die Medienuploadqualität"
                     },
                     "disable_custom_tabs": {
-                        "name": "Deaktiviere benutzerdefinierte Tabs",
+                        "name": "Deaktivieren Sie benutzerdefinierte Registerkarten",
                         "description": "Öffnet Links in unterstützen Applikationen, anstatt dem Webbrowser"
                     }
                 }
@@ -815,7 +815,7 @@
                         "properties": {
                             "disable_bitmoji": {
                                 "name": "Bitmojis deaktivieren",
-                                "description": "Deaktiviert das Freundesprofil Bitmoji"
+                                "description": "Deaktiviert das Bitmoji des Freund:innenprofil"
                             },
                             "composer_hooks": {
                                 "properties": {
@@ -842,32 +842,32 @@
                         }
                     },
                     "spoof": {
-                        "name": "Verfälschen",
-                        "description": "Verschiedene Informationen über dich verfälschen",
+                        "name": "Simulieren",
+                        "description": "Verschiedene Informationen über dich vortäuschen",
                         "properties": {
                             "randomize_persistent_device_token": {
                                 "description": "Erzeugt ein zufälliges Geräte-Token nach jedem Login",
                                 "name": "Dauerhaftes Geräte-Token zufällig auswählen"
                             },
                             "remove_mock_location_flag": {
-                                "name": "Kennzeichnung für den gefälschte Standort entfernen",
+                                "name": "Kennzeichnung für den gefälschten Standort entfernen",
                                 "description": "Verhindert, dass Snapchat gefälschte Standorte erkennt"
                             },
                             "android_id": {
                                 "name": "Android ID",
-                                "description": "Fälscht Ihre Android ID mit dem angegebenen Wert"
+                                "description": "Fälscht deine Android ID mit dem angegebenen Wert"
                             },
                             "fingerprint": {
-                                "description": "Fälscht den Fingerabdruck Ihres Geräts",
+                                "description": "Fälscht den Sicherheitsabdruck deines Gerätes",
                                 "name": "Geräte-Fingerabdruck"
                             },
                             "remove_vpn_transport_flag": {
                                 "description": "Hindert Snapchat daran, VPNs zu erkennen",
-                                "name": "VPN-Transport-Flag entfernen"
+                                "name": "VPN-Transport-Flagge entfernen"
                             },
                             "play_store_installer_package_name": {
-                                "description": "Überschreibt den Namen des Installationspakets auf com.android.vending",
-                                "name": "Play Store Installer Paketname"
+                                "description": "Überschreibt den Namen des Installationspakets auf com.android.vending_machine",
+                                "name": "Goolge Play Installationsname des Paketes"
                             }
                         }
                     },
@@ -880,15 +880,15 @@
                         "description": "Umgeht das Passwort für den privaten Bereich\nFunktioniert nur, wenn das korrekte Passwort schon einmal eingegeben wurde"
                     },
                     "no_friend_score_delay": {
-                        "name": "Keine Friend Score Delay",
-                        "description": "Entfernt die Verzögerung beim Betrachten eines Friend Scores"
+                        "name": "Keine Friend Score Verzögerung",
+                        "description": "Entfernt die Verzögerung beim Betrachten einer Friends Score"
                     },
                     "e2ee": {
                         "name": "Ende-zu-Ende-Verschlüsselung",
-                        "description": "Verschlüsselt Ihre Nachrichten mit AES mithilfe eines gemeinsamen geheimen Schlüssels\nStell sicher, dass du den Schlüssel sicher lagerst!",
+                        "description": "Verschlüsselt deine Nachrichten mit AES unter Verwendung eines freigegebenen geheimen Schlüssels\nAchte darauf, dass du deinen Schlüssel an einem sicheren Ort aufbewahrst!",
                         "properties": {
                             "encrypted_message_indicator": {
-                                "name": "Verschlüsselte Nachricht Indikator",
+                                "name": "Anzeige für verschlüsselte Nachrichten",
                                 "description": "Fügt einen 🔒 Emoji neben verschlüsselten Nachrichten hinzu"
                             },
                             "force_message_encryption": {
@@ -898,11 +898,11 @@
                         }
                     },
                     "add_friend_source_spoof": {
-                        "name": "Freundesquellen-Spoof hinzufügen",
+                        "name": "Freundesquellen-Änderung hinzufügen",
                         "description": "Verfälscht die Quelle einer Freundschaftsanfrage"
                     },
                     "hidden_snapchat_plus_features": {
-                        "name": "Versteckte Snapchat Plus-Funktionen",
+                        "name": "Verborgene Snapchat Plus-Funktionen",
                         "description": "Aktiviert unveröffentlichte/beta Snapchat Plus Funktionen\nKönnte auf älteren Snapchat-Versionen nicht funktionieren"
                     },
                     "prevent_forced_logout": {
@@ -911,11 +911,11 @@
                     },
                     "convert_message_locally": {
                         "description": "Konvertiert Snaps lokal in externe Chat-Medien. Dies erscheint im Kontextmenü für den Chat-Download",
-                        "name": "Nachricht lokal konvertieren"
+                        "name": "Nachricht lokal umwandeln"
                     },
                     "story_logger": {
-                        "description": "Liefert eine Historie der Stories von Freunden",
-                        "name": "Story Logger"
+                        "description": "Liefert eine Historie der Stories von Freund:innen",
+                        "name": "Geschichtenprotokollierer"
                     },
                     "new_chat_action_menu": {
                         "name": "Neues Chat-Aktionsmenü",
@@ -968,7 +968,7 @@
                 "description": "Benutzerdefinierte Skripte ausführen, um SnapEnhance zu erweitern",
                 "properties": {
                     "developer_mode": {
-                        "name": "Entwicklermodus",
+                        "name": "Entwickler:innenmodus",
                         "description": "Zeigt Debug-Informationen auf Snapchat's UI"
                     },
                     "module_folder": {
@@ -992,10 +992,12 @@
             "friend_tracker": {
                 "properties": {
                     "allow_running_in_background": {
-                        "name": "Hintergrundnutzung erlauben"
+                        "name": "Hintergrundnutzung erlauben",
+                        "description": "Ermöglicht die Ausführung des Trackers im Hintergrund. Hinweis: Dadurch wird Ihr Akku erheblich entladen"
                     },
                     "record_messaging_events": {
-                        "name": "Nachrichtenevents aufzeichnen"
+                        "name": "Nachrichtenevents aufzeichnen",
+                        "description": "Zeichnet Nachrichtenereignisse wie das Öffnen eines Snaps, das Lesen einer Nachricht usw. auf."
                     }
                 },
                 "name": "Freundestracker",
@@ -1196,7 +1198,9 @@
                 "lemon_meringue": "Zitronenmeringue",
                 "lava_flow": "Lava Fließend",
                 "ocean_fog": "Meeresnebel",
-                "alien_landscape": "Fremde Landschaften"
+                "alien_landscape": "Fremde Landschaften",
+                "material_you_light": "Material You Lite (Android 12+)",
+                "material_you_dark": "Material You dunkel (Android 12+)"
             }
         }
     },
@@ -1454,7 +1458,7 @@
         "already_seen_toast": "Bereits markiert als gesehen!"
     },
     "scopes": {
-        "friend": "Freund",
+        "friend": "Freund:in",
         "group": "Gruppe"
     },
     "end_to_end_encryption": {
@@ -1493,14 +1497,14 @@
         "notification_content": "{count} Snaps geöffnet"
     },
     "friend_mutation_observer": {
-        "birthday_removed": "{username} hat sein Geburtsdatum ({birthday}) entfernt",
-        "birthday_changed": "{username} hat sein Geburtsdatum von {oldBirthday} auf {newBirthday} geändert",
-        "bitmoji_background_changed": "{username} hat den Hintergrund seines Bitmoji geändert",
-        "birthday_added": "{username} hat sein Geburtsdatum ({birthday}) hinzugefügt",
-        "bitmoji_scene_changed": "{username} hat seine Bitmoji-Szene geändert",
-        "bitmoji_selfie_changed": "{username} hat sein Bitmoji-Selfie geändert",
-        "bitmoji_avatar_changed": "{username} hat sein Bitmoji-Avatar geändert",
+        "birthday_removed": "{username} hat sein/ ihr Geburtsdatum ({birthday}) entfernt",
+        "birthday_changed": "{username} hat sein/ ihr Geburtsdatum von {oldBirthday} auf {newBirthday} geändert",
+        "bitmoji_background_changed": "{username} hat den Hintergrund seines/ ihres Bitmojis geändert",
+        "birthday_added": "{username} hat sein/ ihr Geburtsdatum ({birthday}) hinzugefügt",
+        "bitmoji_scene_changed": "{username} hat seine/ ihre Bitmoji-Szene geändert",
+        "bitmoji_selfie_changed": "{username} hat sein/ ihr Bitmoji-Selfie geändert",
+        "bitmoji_avatar_changed": "{username} hat sein/ ihr Bitmoji-Avatar geändert",
         "notification_channel_name": "Freund-Mutationsbeobachter",
-        "friend_removed": "{username} hat dich als Freund entfernt"
+        "friend_removed": "{username} hat dich als Freund:in entfernt"
     }
 }
