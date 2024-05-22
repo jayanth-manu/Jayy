@@ -70,7 +70,8 @@
                 "logged_stories_button": "Show Logged Storiese",
                 "participants_text": "{numerare} participantium",
                 "not_found": "Non inveni",
-                "streaks_title": "Striae"
+                "streaks_title": "Striae",
+                "streaks_length_text": "Longitudo: {length}"
             }
         }
     },
