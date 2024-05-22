@@ -1361,14 +1361,14 @@
         },
         "confirmation_dialogs": {
             "confirmation_2": "¿De VERDAD estás segura/o que quieres continuar? Esta es tu última oportunidad para retroceder.",
-            "title": "Cifración de extremo a extremo",
+            "title": "Cifrado de extremo a extremo",
             "confirmation_1": "ADVERTENCIA: Esto sobrescribirá su clave existente. Perderás el acceso a todos los mensajes cifrados de este amigo. ¿Estás seguro de que quieres continuar?"
         },
         "no_participants_to_encrypt_toast": "¡No tienes ningunos amigos en esta conversación con quien cifrar mensajes!",
         "accept_public_key_failure_toast": "Fallo al aceptar clave pública",
         "accept_secret_button": "Aceptar secreto",
         "encryption_failed_toast": "¡Fallo al cifrar mensaje! Comprueba logcat para más detalles.",
-        "incoming_pk_message": "Acabas de recibir una solicitud de clave público. Haz cloc abajo para aceptarlo.",
+        "incoming_pk_message": "Acabas de recibir una solicitud de clave pública. Haga clic a continuación para aceptarla.",
         "incoming_secret_message": "Tu amigo acaba de aceptar tu clave público. Haz clic abajo para aceptar el secreto.",
         "accept_secret_key_success_toast": "¡Hecho! Ahora puedes enviar y recibir mensajes cifrados con este amigo.",
         "accept_secret_key_failure_toast": "Fallo al aceptar clave secreta",
@@ -1505,6 +1505,6 @@
     },
     "streaks_reminder": {
         "notification_title": "Rachas",
-        "notification_text": "Perderás tu Racha con {friend} en {hoursLeft} horas"
+        "notification_text": "Perderás tu racha con {friend} en {hoursLeft} horas"
     }
 }
