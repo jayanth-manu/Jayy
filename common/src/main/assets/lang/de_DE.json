@@ -173,7 +173,7 @@
                 }
             },
             "auto_save": {
-                "name": "Automatisch speichern",
+                "name": "Automatisches speichern",
                 "description": "Speichert Chat-Nachrichten beim Ansehen",
                 "options": {
                     "blacklist": "Vom automatischen Speichern ausschließen",
