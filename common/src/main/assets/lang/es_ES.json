@@ -916,7 +916,7 @@
                     },
                     "e2ee": {
                         "description": "Cifra tus mensajes con AES usando una clave secreta compartida\n¡Asegúrate de guardar tu clave en un lugar seguro!",
-                        "name": "Cifración de extremo a extremo",
+                        "name": "Cifrado de extremo a extremo",
                         "properties": {
                             "force_message_encryption": {
                                 "description": "Impide enviar mensajes cifrados a personas que no tienen la cifración de extremo a extremo habilitada solo cuando haya varias conversaciones seleccionadas",
@@ -1367,9 +1367,9 @@
         "no_participants_to_encrypt_toast": "¡No tienes ningunos amigxs en esta conversación con quien cifrar mensajes!",
         "accept_public_key_failure_toast": "Fallo al aceptar clave pública",
         "accept_secret_button": "Aceptar secreto",
-        "encryption_failed_toast": "¡Fallo al cifrar mensaje! Comprueba logcat para más detalles.",
+        "encryption_failed_toast": "¡Error al cifrar el mensaje! Comprueba el logcat para más detalles.",
         "incoming_pk_message": "Acabas de recibir una solicitud de clave pública. Haga clic a continuación para aceptarla.",
-        "incoming_secret_message": "Tu amigx acaba de aceptar tu clave público. Haz clic abajo para aceptar el secreto.",
+        "incoming_secret_message": "Tu amig@ acaba de aceptar tu clave pública. Haz clic abajo para aceptar el secreto.",
         "accept_secret_key_success_toast": "¡Hecho! Ahora puedes enviar y recibir mensajes cifrados con este amigx.",
         "accept_secret_key_failure_toast": "Fallo al aceptar clave secreta",
         "accept_public_key_button": "Aceptar clave pública",
@@ -1377,7 +1377,7 @@
         "outgoing_secret_message": "Respuesta de cambio de clave",
         "unencrypted_conversation_send_failure_toast": "¡No puedes enviar contenido cifrado a conversaciones cifradas y no cifradas!",
         "native_hooks_send_failure_toast": "¡Fallo al enviar! Por favor habilita Ganchos Nativos en los ajustes.",
-        "accept_public_key_success_toast": "¡Clave pública aceptada con éxito!"
+        "accept_public_key_success_toast": "¡Clave pública aceptada exitosamente!"
     },
     "chat_action_menu": {
         "delete_logged_message_button": "Borrar mensaje registrado",
