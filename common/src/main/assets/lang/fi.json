@@ -595,11 +595,6 @@
                 "always_light": "Aina Vaalea",
                 "always_dark": "Aina Tumma"
             },
-            "better_notifications": {
-                "reply_button": "Lisää \"Vastaa\" -painike",
-                "download_button": "Lisää latauspainike",
-                "group": "Ryhmäilmoitukset"
-            },
             "friend_feed_menu_buttons": {
                 "auto_download": "⬇️ Automaattinen Lataus",
                 "auto_save": "💬 Automaattinen Viestien Tallennus",

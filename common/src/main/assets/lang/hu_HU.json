@@ -993,16 +993,6 @@
                 "always_light": "Mindig világos",
                 "always_dark": "Mindig sötét"
             },
-            "better_notifications": {
-                "reply_button": "Válasz gomb hozzáadása",
-                "download_button": "Letöltés gomb hozzáadása",
-                "group": "Csoportos Értesítések",
-                "media_preview": "A média előnézetének megjelenítése",
-                "mark_as_read_button": "Olvasottként jelölés gomb",
-                "chat_preview": "A chat előnézetének megjelenítése",
-                "mark_as_read_and_save_in_chat": "Mentés a Chatben, amikor olvasottként jelöli (az automatikus mentéstől függ)",
-                "friend_add_source": "Mutassa a barát hozzáadás forrását"
-            },
             "friend_feed_menu_buttons": {
                 "auto_download": "⬇️ Automatikus letöltés",
                 "auto_save": "💬 Üzenetek automatikus mentése",

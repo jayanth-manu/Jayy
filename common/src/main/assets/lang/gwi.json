@@ -1148,16 +1148,6 @@
             }
         },
         "options": {
-            "better_notifications": {
-                "media_preview": "Eine Vorschau der Medien anzeigen",
-                "chat_preview": "Eine Vorschau des Chats anzeigen",
-                "reply_button": "Füge einen \"Antworten\" Knopf hinzu",
-                "download_button": "Füge einen \"Herunterladen\" Knopf hinzu",
-                "mark_as_read_button": "Als gelesen markieren Button",
-                "mark_as_read_and_save_in_chat": "Im Chat speichern, wenn als gelesen markiert (hängt von der automatischen Speicherung ab)",
-                "friend_add_source": "Zeige Freund hinzufügen Quelle",
-                "group": "Benachrichtigungen gruppieren"
-            },
             "theme_picker": {
                 "lemon_meringue": "Zitronenmeringue",
                 "lava_flow": "Lava Fließend",

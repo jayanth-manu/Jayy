@@ -821,15 +821,6 @@
                 "always_light": "Alltid ljus",
                 "always_dark": "Alltid mörkt"
             },
-            "better_notifications": {
-                "media_preview": "Visa en förhandsvisning av media",
-                "reply_button": "Knappen Lägg till svar",
-                "group": "Gruppaviseringar",
-                "mark_as_read_button": "Knappen Markera som läst",
-                "chat_preview": "Visa en förhandsvisning av chatten",
-                "download_button": "Lägg till nedladdningsknapp",
-                "mark_as_read_and_save_in_chat": "Spara i chatt när du markerar som läst (beror på Autospara)"
-            },
             "auto_download_sources": {
                 "friend_snaps": "Vän Snaps",
                 "friend_stories": "Vänberättelser",

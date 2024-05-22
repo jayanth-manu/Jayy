@@ -1103,16 +1103,6 @@
                 "location_indicator": "Añade un icono de 📍 a Snaps si han sido enviados con la ubicación habilitada",
                 "director_mode_indicator": "Añade un icono de ✏️ a Snaps si han sido enviados usando el modo director, que se puede usar para enviar imágenes de la galería como Snaps"
             },
-            "better_notifications": {
-                "media_preview": "Muestra vista previa de archivos de media",
-                "reply_button": "Añadir botón de responder",
-                "download_button": "Añadir botón de descargar",
-                "chat_preview": "Muestra vista previa del chat",
-                "mark_as_read_button": "Botón de marcar como leído",
-                "mark_as_read_and_save_in_chat": "Guardar en el chat al marcar como leído (depende de la opción guardar automáticamente)",
-                "friend_add_source": "Mostrar la fuente de agregación de amigx",
-                "group": "Notificaciones del grupo"
-            },
             "bypass_video_length_restriction": {
                 "single": "Archivo de Media único",
                 "split": "Archivos de media divididos"

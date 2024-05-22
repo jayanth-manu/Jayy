@@ -137,9 +137,6 @@
             }
         },
         "options": {
-            "better_notifications": {
-                "mark_as_read_and_save_in_chat": "Speichere im Chat bir Markierig als gläse (abhängig vom Auto Save)"
-            },
             "message_indicators": {
                 "director_mode_indicator": "Fügt es ✏️-Symbol zu Snaps hinzue, we si im Diräctor-Modus gsändet worde si, mit em Galerie-Bilder aus Snaps chöi gsändet wärde",
                 "encryption_indicator": "Fügt es 🔒-Symbol näb Nachrichte derzue, wo nume ah du gsesch worde si",

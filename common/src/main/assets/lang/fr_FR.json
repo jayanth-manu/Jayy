@@ -1009,16 +1009,6 @@
                 "always_light": "Toujours Clair",
                 "always_dark": "Toujours Sombre"
             },
-            "better_notifications": {
-                "reply_button": "Ajouter un bouton de réponse",
-                "download_button": "Ajouter un boutton téléchargement",
-                "group": "Notifications de groupe",
-                "mark_as_read_and_save_in_chat": "Sauvegarde dans le Chat lors du marquage comme lu (en fonction de la sauvegarde automatique)",
-                "mark_as_read_button": "Bouton \"Marquer comme lu\"",
-                "media_preview": "Afficher un aperçu des média",
-                "chat_preview": "Afficher un aperçu des messages textuels",
-                "friend_add_source": "Afficher la source d'ajout d'ami"
-            },
             "friend_feed_menu_buttons": {
                 "auto_download": "⬇️ Téléchargement automatique",
                 "auto_save": "💬 Enregistrement automatique des messages",

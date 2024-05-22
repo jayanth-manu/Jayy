@@ -993,16 +993,6 @@
                 "always_light": "Altid Lys",
                 "always_dark": "Altid Mørk"
             },
-            "better_notifications": {
-                "reply_button": "Tilføj svar-knap",
-                "download_button": "Tilføj download-knap",
-                "group": "Gruppenotifikationer",
-                "mark_as_read_and_save_in_chat": "Gem i chat, når du markerer som læst (afhænger af automatisk lagring)",
-                "mark_as_read_button": "Knappen Marker som læst",
-                "chat_preview": "Vis en forhåndsvisning af chat",
-                "media_preview": "Vis en forhåndsvisning af medier",
-                "friend_add_source": "Vis venne-tilføjelseskilde"
-            },
             "friend_feed_menu_buttons": {
                 "auto_download": "⬇️ Auto-download",
                 "auto_save": "💬 Gem Automatisk Beskeder",

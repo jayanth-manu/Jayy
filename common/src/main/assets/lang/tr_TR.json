@@ -1009,16 +1009,6 @@
                 "always_light": "Daima Aydınlık",
                 "always_dark": "Daima Koyu"
             },
-            "better_notifications": {
-                "reply_button": "Yanıtla düğmesi ekle",
-                "download_button": "İndirme düğmesi ekle",
-                "group": "Bildirimleri gruplandır",
-                "mark_as_read_and_save_in_chat": "Okundu olarak işaretlendiğinde Sohbet'e kaydet (Otomatik Kaydet'e bağlıdır)",
-                "mark_as_read_button": "Okundu olarak işaretle düğmesi",
-                "media_preview": "Medyanın önizlemesini göster",
-                "chat_preview": "Sohbetin önizlemesini göster",
-                "friend_add_source": "Arkadaş ekleme kaynağını göster"
-            },
             "friend_feed_menu_buttons": {
                 "auto_download": "⬇️ Otomatik İndirme",
                 "auto_save": "💬 Mesajları Otomatik Kaydetme",

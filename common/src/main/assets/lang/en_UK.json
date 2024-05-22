@@ -1069,16 +1069,6 @@
                 "always_light": "Always Light",
                 "always_dark": "Always Dark"
             },
-            "better_notifications": {
-                "chat_preview": "Show a preview of chat",
-                "media_preview": "Show a preview of media",
-                "reply_button": "Add reply button",
-                "download_button": "Add download button",
-                "mark_as_read_button": "Mark as Read button",
-                "mark_as_read_and_save_in_chat": "Save in Chat when marking as read (depends on Auto Save)",
-                "group": "Group notifications",
-                "friend_add_source": "Show friend add source"
-            },
             "friend_feed_menu_buttons": {
                 "auto_download": "⬇️ Auto Download",
                 "auto_save": "💬 Auto Save Messages",
