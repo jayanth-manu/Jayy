@@ -515,7 +515,49 @@
                     },
                     "better_notifications": {
                         "name": "Bessere Benachrichtigungen",
-                        "description": "Zeige weitere Informationen in Benachrichtigungen an"
+                        "description": "Zeige weitere Informationen in Benachrichtigungen an",
+                        "properties": {
+                            "chat_preview": {
+                                "name": "Chat-Vorschau",
+                                "description": "Zeigt eine Vorschau der empfangenen Nachrichten in der Benachrichtigung an"
+                            },
+                            "reply_button": {
+                                "name": "Antwortknopf",
+                                "description": "Fügt der Benachrichtigung eine Antwortschaltfläche hinzu"
+                            },
+                            "group_notifications": {
+                                "name": "Gruppenbenachrichtigungen",
+                                "description": "Gruppieren Sie Benachrichtigungen zu einer einzigen"
+                            },
+                            "media_preview": {
+                                "name": "Medienvorschau",
+                                "description": "Zeigt eine Vorschau der ausgewählten Medientypen in der Benachrichtigung an"
+                            },
+                            "media_caption": {
+                                "name": "Medienuntertitel",
+                                "description": "Zeigt die angehängte Bildunterschrift der Medien in der Benachrichtigung an"
+                            },
+                            "stacked_media_messages": {
+                                "name": "Gestapelte Mediennachrichten",
+                                "description": "Kombiniert mehrere Mediennachrichten in einer Textbenachrichtigung, wenn sie nicht in der Vorschau angezeigt werden können. In Kombination mit der Chat-Vorschau verwenden"
+                            },
+                            "friend_add_source": {
+                                "name": "Quelle neuer Freunde",
+                                "description": "Zeigt die Quelle einer Freundschaftsanfrage in der Benachrichtigung an"
+                            },
+                            "download_button": {
+                                "name": "Download-Button",
+                                "description": "Ermöglicht das Herunterladen von Medien aus der Benachrichtigung"
+                            },
+                            "mark_as_read_button": {
+                                "name": "Schaltfläche „Als gelesen markieren“",
+                                "description": "Ermöglicht es dir, eine Nachricht aus der Benachrichtigung als gelesen zu markieren"
+                            },
+                            "mark_as_read_and_save_in_chat": {
+                                "name": "Als gelesen markieren und im Chat speichern",
+                                "description": "Fügt der Benachrichtigung eine Schaltfläche „Als gelesen markieren und im Chat speichern“ hinzu"
+                            }
+                        }
                     },
                     "notification_blacklist": {
                         "name": "Benachrichtigungs Blacklist",
@@ -1337,7 +1379,8 @@
         "FAMILY_CENTER_LEAVE": "Family Center verlassen",
         "STATUS_CALL_MISSED_AUDIO": "Verpasster Sprachanruf",
         "NOTE": "Sprachnachricht",
-        "MAP_REACTION": "Kartenreaktion"
+        "MAP_REACTION": "Kartenreaktion",
+        "SHARE": "Teilen"
     },
     "suspend_location_updates": {
         "switch_text": "Standortaktualisierungen aussetzen"
