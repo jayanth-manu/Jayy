@@ -55,7 +55,7 @@ We no longer offer official `LSPatch` binaries for obvious reasons. However, you
   - `Hide Friend Feed Entry`
   - `Hide Streak Restore`
   - `Hide Quick Add In Friend Feed`
-  - `Hide Story Section` 
+  - `Hide Story Suggestions` 
   - `Hide UI Components` (Voice Record button, Call Buttons, ...)
   - `Opera Media Quick Info`
   - `Old Bitmoji Selfie` 
