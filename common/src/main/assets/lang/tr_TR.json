@@ -515,7 +515,49 @@
                     },
                     "better_notifications": {
                         "name": "Daha İyi Bildirimler",
-                        "description": "Alınan bildirimlere daha fazla bilgi ekler"
+                        "description": "Alınan bildirimlere daha fazla bilgi ekler",
+                        "properties": {
+                            "group_notifications": {
+                                "name": "Grup Bildirimleri",
+                                "description": "Bildirimleri tek bir bildirimde grupla"
+                            },
+                            "media_preview": {
+                                "description": "Bildirimde seçilen medya türlerinin önizlemesini gösterir",
+                                "name": "Medya Önizlemesi"
+                            },
+                            "friend_add_source": {
+                                "name": "Arkadaş Ekleme Kaynağı",
+                                "description": "Bildirimde bir arkadaşlık isteğinin kaynağını gösterir"
+                            },
+                            "download_button": {
+                                "name": "İndirme Düğmesi",
+                                "description": "Bildirimden medya indirmenize izin verir"
+                            },
+                            "chat_preview": {
+                                "name": "Sohbet Önizlemesi",
+                                "description": "Bildirimde alınan mesajların önizlemesini gösterir"
+                            },
+                            "media_caption": {
+                                "name": "Medya Başlığı",
+                                "description": "Bildirimdeki ekli medya başlığını gösterir"
+                            },
+                            "stacked_media_messages": {
+                                "name": "Yığılmış Medya Mesajları",
+                                "description": "Önizleme yapılamadığında birden fazla medya mesajını tek bir metin bildiriminde birleştirir. Sohbet Önizleme ile birlikte kullanın"
+                            },
+                            "reply_button": {
+                                "name": "Yanıt Düğmesi",
+                                "description": "Bildirime bir yanıt düğmesi ekler"
+                            },
+                            "mark_as_read_button": {
+                                "name": "Okundu Olarak İşaretle Düğmesi",
+                                "description": "Bir mesajı bildirimden okundu olarak işaretlemenizi sağlar"
+                            },
+                            "mark_as_read_and_save_in_chat": {
+                                "name": "Okundu Olarak İşaretle ve Sohbete Kaydet",
+                                "description": "Bildirime okundu olarak işaretle ve sohbete kaydet düğmesi ekler"
+                            }
+                        }
                     },
                     "notification_blacklist": {
                         "name": "Bildirim Kara Listesi",
@@ -1337,7 +1379,8 @@
         "FAMILY_CENTER_LEAVE": "Aile Merkezi Ayrıl",
         "STATUS_CALL_MISSED_AUDIO": "Cevapsız Sesli Arama",
         "NOTE": "Sesli Not",
-        "MAP_REACTION": "Harita Tepkisi"
+        "MAP_REACTION": "Harita Tepkisi",
+        "SHARE": "Paylaş"
     },
     "suspend_location_updates": {
         "switch_text": "Konum Güncellemelerini Askıya Al"
