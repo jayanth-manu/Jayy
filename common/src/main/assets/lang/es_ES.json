@@ -613,7 +613,49 @@
                     },
                     "better_notifications": {
                         "name": "Mejores notificaciones",
-                        "description": "Agrega más información a notificaciones recibidas"
+                        "description": "Agrega más información a notificaciones recibidas",
+                        "properties": {
+                            "chat_preview": {
+                                "name": "Vista previa del chat",
+                                "description": "Muestra una vista previa de los mensajes recibidos en la notificación"
+                            },
+                            "media_preview": {
+                                "name": "Vista previa del archivo multimedia",
+                                "description": "Muestra una vista previa de los archivos multimedia seleccionados en la notificación"
+                            },
+                            "media_caption": {
+                                "name": "Título multimedia",
+                                "description": "Muestra el título adjunto de los archivos multimedia en la notificación"
+                            },
+                            "stacked_media_messages": {
+                                "name": "Amontonar los mensajes multimedia",
+                                "description": "Combina varios mensajes multimedia en una notificación de texto cuando no se pueden obtener una vista previa. Usar en combinación con la vista previa del chat"
+                            },
+                            "download_button": {
+                                "name": "Botón descargar",
+                                "description": "Le permite descargar medios desde la notificación"
+                            },
+                            "mark_as_read_button": {
+                                "name": "Botón marcar como leído",
+                                "description": "Te permite marcar un mensaje como leído desde la notificación"
+                            },
+                            "group_notifications": {
+                                "name": "Agrupar notificaciones",
+                                "description": "Agrupa notificaciones en una sola notificación"
+                            },
+                            "friend_add_source": {
+                                "description": "Muestra una solicitud de amistad en la notificación",
+                                "name": "Solicitud de amistad"
+                            },
+                            "reply_button": {
+                                "name": "Botón responder",
+                                "description": "Agrega un botón de responder a la notificación"
+                            },
+                            "mark_as_read_and_save_in_chat": {
+                                "name": "Marcar como leído y guardar en el chat",
+                                "description": "Agrega un botón marcar como leído y guardar el chat en la notificación"
+                            }
+                        }
                     },
                     "gallery_media_send_override": {
                         "name": "Anulación de envío de medios de la galería",
@@ -1249,7 +1291,8 @@
         "STATUS_PLUS_GIFT": "Regalo de estado plus",
         "TINY_SNAP": "Snap diminuto",
         "STATUS_COUNTDOWN": "Cuenta atrás",
-        "MAP_REACTION": "Reacción de mapa"
+        "MAP_REACTION": "Reacción de mapa",
+        "SHARE": "Compartir"
     },
     "mark_as_seen": {
         "already_unseen_toast": "¡Ya marcado como no visto!",
