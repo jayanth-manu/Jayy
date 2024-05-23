@@ -330,7 +330,8 @@
                 "title": "Konfiguration zrüggsetze"
             },
             "messaging_action": {
-                "title": "Zu verarbeitende Inhaltstype uswähle"
+                "title": "Zu verarbeitende Inhaltstype uswähle",
+                "select_all_button": "Aui uswähle"
             }
         }
     },
@@ -341,19 +342,82 @@
     "rules": {
         "properties": {
             "stealth": {
-                "description": "Verhinderet, dass öpper erfahre das sini Snaps/Chats und Unterhaltige göffnet hesch"
+                "description": "Verhinderet, dass öpper erfahre das sini Snaps/Chats und Unterhaltige göffnet hesch",
+                "name": "Stealth-Modus",
+                "options": {
+                    "blacklist": "Us em Schtealth-Modus usschlüsse",
+                    "whitelist": "Stealth-Modus"
+                }
             },
             "auto_save": {
                 "description": "Speicheret Chat-Nachrichte bim Betrachte",
                 "options": {
-                    "blacklist": "Vom Auto speichere usschlüsse"
+                    "blacklist": "Vom Auto speichere usschlüsse",
+                    "whitelist": "Outo spichere"
+                },
+                "name": "Outo spichere"
+            },
+            "auto_download": {
+                "name": "Automatisches Abewähli",
+                "description": "Snaps outomatisch abelade we si azeigt wärde",
+                "options": {
+                    "blacklist": "Vom Auto-Download usschlüsse",
+                    "whitelist": "Automatisches Abewähli"
                 }
+            },
+            "unsaveable_messages": {
+                "options": {
+                    "whitelist": "Nid speicherbari Nachrichte",
+                    "blacklist": "Vo nid speicherbare Nachrichte usschlüsse"
+                },
+                "name": "Nid speicherbari Nachrichte",
+                "description": "Verhinderet, dass Nachrichte vo anderne Persone im Chat gspicheret wärde"
+            },
+            "auto_open_snaps": {
+                "description": "Öffnet automatisch snaps we si empfange wärde",
+                "options": {
+                    "blacklist": "Vum Auto Open Snaps usschlüsse",
+                    "whitelist": "Automatischs Öffne vo Schnappschüss"
+                },
+                "name": "Automatischs Öffne vo Schnappschüss"
+            },
+            "hide_friend_feed": {
+                "name": "Usblende vo Fründ-Feed"
+            },
+            "e2e_encryption": {
+                "name": "E2E-Verschlüsselig verwände"
+            },
+            "pin_conversation": {
+                "name": "Konversation anpinnen"
             }
+        },
+        "toasts": {
+            "enabled": "{ruleName} aktiviert",
+            "disabled": "{ruleName} deaktiviert"
+        },
+        "modes": {
+            "blacklist": "Blacklist-Modus",
+            "whitelist": "Wisslischte-Modus"
         }
     },
     "actions": {
         "bulk_messaging_action": {
             "description": "Füehrt Vorgäng wi ds Lösche vo Fründe oder ds Masselösche vo Ungerhautige us"
+        },
+        "clean_snapchat_cache": {
+            "name": "Snapchat-Cache bereinige",
+            "description": "Reinigt der Snapchat-Cache"
+        },
+        "export_memories": {
+            "name": "Speicher exportiere"
+        },
+        "manage_friend_list": {
+            "name": "Fründesliste verwalte",
+            "description": "Importiere/Exportiere dini Fründeslischte bim Backup"
+        },
+        "export_chat_messages": {
+            "name": "Chat-Nachrichte exportiere",
+            "description": "Exportiert Konversationsnachrichte i ne JSON/HTML/TXT-Datei"
         }
     },
     "suspend_location_updates": {
