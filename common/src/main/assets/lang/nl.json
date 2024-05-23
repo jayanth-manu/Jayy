@@ -58,7 +58,7 @@
                 "remove_all_tasks_title": "Weet je zeker dat je alle taken wilt verwijderen?",
                 "merge_files_toast": "{count} bestand(en) samenvoegen",
                 "remove_selected_tasks_confirm": "{count} taken verwijderen?",
-                "delete_files_option": "Ook bestanden verwijderen"
+                "delete_files_option": "Verwijderen ook bestanden"
             },
             "home": {
                 "update_title": "SnapEnhance Update",
