@@ -28,8 +28,8 @@
             "scripts": "Scripts",
             "manage_scope": "Scope beheren",
             "messaging_preview": "Voorbeeld",
-            "tasks": "Assignments",
-            "logger_history": "Logger geschiedenis",
+            "tasks": "Taken",
+            "logger_history": "Log geschiedenis",
             "logged_stories": "Gelogde Stories",
             "friend_tracker": "Vriendentracker",
             "edit_rule": "Regel bewerken"
@@ -137,7 +137,7 @@
             },
             "scripting_warning": {
                 "title": "Waarschuwing",
-                "content": "SnapEnhance bevat een scripttool waarmee door de gebruiker gedefinieerde code op uw apparaat kan worden uitgevoerd. Wees uiterst voorzichtig en installeer alleen modules van bekende, betrouwbare bronnen. Niet-geautoriseerde of niet-geverifieerde modules kunnen veiligheidsrisico's voor uw systeem opleveren."
+                "content": "SnapEnhance bevat een scripting-tool, waarmee door de gebruiker gedefinieerde code op uw apparaat kan worden uitgevoerd. Wees uiterst voorzichtig en installeer alleen modules van bekende, betrouwbare bronnen. Niet-geautoriseerde of niet-geverifieerde modules kunnen beveiligingsrisico's voor uw systeem opleveren."
             },
             "reset_config": {
                 "title": "Configuratie resetten",
@@ -190,11 +190,11 @@
                 "name": "Gesprek vastzetten"
             },
             "unsaveable_messages": {
-                "name": "Onopslaanbare berichten",
-                "description": "Voorkomt dat berichten opgeslagen worden in chat door andere personen",
+                "name": "Berichten die niet kunnen worden opgeslagen",
+                "description": "Voorkomt dat berichten door andere mensen in de chat worden opgeslagen",
                 "options": {
                     "blacklist": "Sluit uit van onopslaanbare berichten",
-                    "whitelist": "Onopslaanbare berichten"
+                    "whitelist": "Berichten die niet kunnen worden opgeslagen"
                 }
             },
             "auto_open_snaps": {
