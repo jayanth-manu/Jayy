@@ -644,8 +644,8 @@
                                 "description": "Agrupa notificaciones en una sola notificación"
                             },
                             "friend_add_source": {
-                                "description": "Muestra una solicitud de amistad en la notificación",
-                                "name": "Solicitud de amistad"
+                                "description": "Muestra la fuente de una solicitud de amistad en la notificación",
+                                "name": "Fuente de solicitud de amistad"
                             },
                             "reply_button": {
                                 "name": "Botón responder",
@@ -653,7 +653,7 @@
                             },
                             "mark_as_read_and_save_in_chat": {
                                 "name": "Marcar como leído y guardar en el chat",
-                                "description": "Agrega un botón marcar como leído y guardar el chat en la notificación"
+                                "description": "Agrega un botón marcar como leído y guardar en el chat a la notificación"
                             }
                         }
                     },
