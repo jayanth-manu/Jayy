@@ -36,11 +36,13 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import me.rhunk.snapenhance.common.data.ContentType
 import me.rhunk.snapenhance.common.data.FriendLinkType
+import me.rhunk.snapenhance.common.database.impl.ConversationMessage
 import me.rhunk.snapenhance.common.database.impl.FriendInfo
 import me.rhunk.snapenhance.common.messaging.MessagingConstraints
 import me.rhunk.snapenhance.common.messaging.MessagingTask
 import me.rhunk.snapenhance.common.messaging.MessagingTaskType
 import me.rhunk.snapenhance.common.ui.createComposeAlertDialog
+import me.rhunk.snapenhance.common.ui.rememberAsyncMutableState
 import me.rhunk.snapenhance.common.util.ktx.copyToClipboard
 import me.rhunk.snapenhance.common.util.snap.BitmojiSelfie
 import me.rhunk.snapenhance.core.action.AbstractAction
@@ -48,6 +50,7 @@ import me.rhunk.snapenhance.core.features.impl.experiments.AddFriendSourceSpoof
 import me.rhunk.snapenhance.core.features.impl.messaging.Messaging
 import me.rhunk.snapenhance.core.ui.ViewAppearanceHelper
 import me.rhunk.snapenhance.core.util.EvictingMap
+import me.rhunk.snapenhance.core.util.dataBuilder
 import me.rhunk.snapenhance.mapper.impl.FriendRelationshipChangerMapper
 import java.net.URL
 import java.text.DateFormat
@@ -61,6 +64,8 @@ class BulkMessagingAction : AbstractAction() {
         ADDED_TIMESTAMP,
         SNAP_SCORE,
         STREAK_LENGTH,
+        MOST_MESSAGES_SENT,
+        MOST_RECENT_MESSAGE,
     }
 
     enum class Filter {
@@ -171,6 +176,12 @@ class BulkMessagingAction : AbstractAction() {
         }
     }
 
+    private fun getDMLastMessage(userId: String?): ConversationMessage? {
+        return context.database.getConversationLinkFromUserId(userId ?: return null)?.clientConversationId?.let {
+            context.database.getMessagesFromConversationId(it, 1)
+        }?.firstOrNull()
+    }
+
     @OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
     @Composable
     private fun BulkMessagingDialog() {
@@ -197,6 +208,12 @@ class BulkMessagingAction : AbstractAction() {
                     SortBy.ADDED_TIMESTAMP -> newFriends.sortBy { it.addedTimestamp }
                     SortBy.SNAP_SCORE -> newFriends.sortBy { it.snapScore }
                     SortBy.STREAK_LENGTH -> newFriends.sortBy { it.streakLength }
+                    SortBy.MOST_MESSAGES_SENT -> newFriends.sortByDescending {
+                        getDMLastMessage(it.userId)?.serverMessageId ?: 0
+                    }
+                    SortBy.MOST_RECENT_MESSAGE -> newFriends.sortByDescending {
+                        getDMLastMessage(it.userId)?.creationTimestamp
+                    }
                 }
                 if (sortReverseOrder) newFriends.reverse()
                 withContext(Dispatchers.Main) {
@@ -287,7 +304,7 @@ class BulkMessagingAction : AbstractAction() {
                 modifier = Modifier
                     .fillMaxWidth()
                     .weight(1f),
-                verticalArrangement = Arrangement.spacedBy(2.dp)
+                verticalArrangement = Arrangement.spacedBy(3.dp)
             ) {
                 stickyHeader {
                     Row(
@@ -397,10 +414,14 @@ class BulkMessagingAction : AbstractAction() {
                                 horizontalArrangement = Arrangement.spacedBy(3.dp),
                                 verticalAlignment = Alignment.CenterVertically
                             ){
-                                Text(text = (friendInfo.displayName ?: friendInfo.mutableUsername).toString(), fontSize = 16.sp, fontWeight = FontWeight.Bold, overflow = TextOverflow.Ellipsis, maxLines = 1)
-                                Text(text = friendInfo.mutableUsername.toString(), fontSize = 10.sp, fontWeight = FontWeight.Light, overflow = TextOverflow.Ellipsis, maxLines = 1)
+                                Text(text = (friendInfo.displayName ?: friendInfo.mutableUsername).toString(), fontSize = 16.sp, fontWeight = FontWeight.Bold, overflow = TextOverflow.Ellipsis, maxLines = 1, lineHeight = 10.sp)
+                                Text(text = friendInfo.mutableUsername.toString(), fontSize = 10.sp, fontWeight = FontWeight.Light, overflow = TextOverflow.Ellipsis, maxLines = 1, lineHeight = 10.sp)
                             }
-                            val userInfo = remember(friendInfo) {
+                            val lastMessage by rememberAsyncMutableState(defaultValue = null) {
+                                getDMLastMessage(friendInfo.userId)
+                            }
+
+                            val userInfo = remember(friendInfo, lastMessage) {
                                 buildString {
                                     append("Relationship: ")
                                     append(context.translation["friendship_link_type.${FriendLinkType.fromValue(friendInfo.friendLinkType).shortName}"])
@@ -413,9 +434,13 @@ class BulkMessagingAction : AbstractAction() {
                                     friendInfo.streakLength.takeIf { it > 0 }?.let {
                                         append("\nStreaks length: $it")
                                     }
+                                    lastMessage?.let {
+                                        append("\nSent messages: ${it.serverMessageId}")
+                                        append("\nLast message date: ${DateFormat.getDateTimeInstance().format(Date(it.creationTimestamp))}")
+                                    }
                                 }
                             }
-                            Text(text = userInfo, fontSize = 12.sp, fontWeight = FontWeight.Light, lineHeight = 16.sp, overflow = TextOverflow.Ellipsis)
+                            Text(text = userInfo, fontSize = 12.sp, fontWeight = FontWeight.Light, lineHeight = 12.sp, overflow = TextOverflow.Ellipsis)
                         }
 
                         Checkbox(
@@ -537,16 +562,28 @@ class BulkMessagingAction : AbstractAction() {
     private fun removeFriend(userId: String) {
         context.mappings.useMapper(FriendRelationshipChangerMapper::class) {
             val friendRelationshipChangerInstance = context.feature(AddFriendSourceSpoof::class).friendRelationshipChangerInstance!!
-            val removeMethod = friendshipRelationshipChangerKtx.getAsClass()?.methods?.first {
-                it.name == removeFriendMethod.getAsString()
-            } ?: throw Exception("Failed to find removeFriend method")
+            val runFriendDurableJobMethod = classReference.getAsClass()?.methods?.first {
+                it.name == runFriendDurableJob.getAsString()
+            } ?: throw Exception("Failed to find runFriendDurableJobMethod method")
 
-            val completable = removeMethod.invoke(null,
+            val removeFriendDurableJob = context.androidContext.classLoader.loadClass("com.snap.identity.job.snapchatter.RemoveFriendDurableJob")
+                .constructors.firstOrNull {
+                it.parameterTypes.size == 1
+            }?.run {
+                newInstance(
+                    parameterTypes[0].dataBuilder {
+                        set("a", userId) // userId
+                        set("b", "DELETED_BY_MY_FRIENDS") // deleteSourceType
+                    }
+                )
+            } ?: throw Exception("Failed to create RemoveFriendDurableJob instance")
+
+            val completable = runFriendDurableJobMethod.invoke(null,
                 friendRelationshipChangerInstance,
                 userId, // userId
-                removeMethod.parameterTypes[2].enumConstants.first { it.toString() == "DELETED_BY_MY_FRIENDS" }, // source
-                null, // InteractionPlacementInfo
-                0
+                removeFriendDurableJob, // friend durable job
+                0x5, // action type
+                "DELETED_BY_MY_FRIENDS", // deleteSourceType
             )!!
             completable::class.java.methods.first {
                 it.name == "subscribe" && it.parameterTypes.isEmpty()

@@ -96,11 +96,9 @@
     },
     "setup": {
         "mappings": {
-            "generate_button": "Generează",
             "generate_failure_no_snapchat": "SnapEnhance nu a putut detecta Snapchat, încercați să reinstalați Snapchat.",
             "dialog": "Pentru a suporta dinamic o mai multe versiuni de Snapchat, mapările sunt necesare pentru SnapEnhance pentru a funcționa corect, nu ar trebui să dureze mai mult de 5 secunde.",
-            "generate_failure": "A apărut o eroare în timpul generării mapărilor, te rog încearcă din nou.",
-            "generate_success": "Mapări generate cu succes."
+            "generate_failure": "A apărut o eroare în timpul generării mapărilor, te rog încearcă din nou."
         },
         "permissions": {
             "dialog": "Pentru a continua trebuie să îndeplinești următoarele condiții:",
@@ -402,10 +400,6 @@
                         "description": "Selectați ce butoane să afișați în meniul fluxul prietenilor",
                         "name": "Butoanele pentru meniul fluxul prietenilor"
                     },
-                    "amoled_dark_mode": {
-                        "name": "Modul întunecat AMOLED",
-                        "description": "Activează modul întunecat AMOLED\nAsigurați-vă că modul întunecat al Snapchat este activat"
-                    },
                     "streak_expiration_info": {
                         "name": "Afișați informații despre expirarea liniei fierbinți",
                         "description": "Afișează un temporizator de expirare a liniei fierbinți lângă contorul de linii"
@@ -417,6 +411,10 @@
                     "hide_story_suggestions": {
                         "name": "Ascundeți sugestiile de povești",
                         "description": "Elimină sugestiile din pagina Povestiri"
+                    },
+                    "customize_ui": {
+                        "name": "Culori",
+                        "description": "Personalizați culorile Snapchat"
                     }
                 },
                 "name": "Interfața cu utilizatorul",
@@ -585,6 +583,10 @@
                             "spoof_headphones": {
                                 "description": "Falsifică starea de a asculta muzică pe hartă",
                                 "name": "Falsificarea purtării Căștilor"
+                            },
+                            "walk_radius": {
+                                "name": "Raza de deplasare",
+                                "description": "Mergeți la întâmplare în această rază (ft)"
                             }
                         }
                     },
@@ -607,10 +609,6 @@
                     "spotlight_comments_username": {
                         "name": "Nume utilizator în comentarii Spotlight",
                         "description": "Afișează numele de utilizator al autorului în comentariile Spotlight"
-                    },
-                    "force_upload_source_quality": {
-                        "name": "Forțează încărcarea la calitatea sursei(fără comprimare)",
-                        "description": "Forțează Snapchat să încarce conținut media la calitatea originală\nVă rugăm să rețineți că este posibil să nu elimine metadatele din media"
                     },
                     "auto_updater": {
                         "name": "Actualizare automată",
@@ -647,6 +645,10 @@
                     "disable_snap_splitting": {
                         "name": "Dezactivare divizare Snap",
                         "description": "Împiedică împărțirea instantaneelor în mai multe părți\nImaginile pe care le trimiteți se vor transforma în videoclipuri"
+                    },
+                    "disable_custom_tabs": {
+                        "name": "Dezactivați filele personalizate",
+                        "description": "Deschide linkuri în aplicațiile acceptate și nu în browserul web"
                     }
                 },
                 "name": "Global",
@@ -886,6 +888,10 @@
                                     "bypass_camera_roll_limit": {
                                         "description": "Crește cantitatea maximă de media pe care o poți trimite din Ruloul Camerei",
                                         "name": "Ocolește Limita Ruloului Camerei"
+                                    },
+                                    "show_first_created_username": {
+                                        "name": "Afișează primul nume de utilizator creat",
+                                        "description": "Afișează primul nume de utilizator creat lângă numele de utilizator actual în pagina de profil"
                                     }
                                 },
                                 "description": "Injectează cod în framework-ul UI cross-platform Composer"
@@ -893,20 +899,6 @@
                         },
                         "name": "Hook-uri Native(Un set de funcții încorporate care permit dezvoltatorilor să adauge funcționalități la componente)",
                         "description": "Caracteristici nesigure care se leagă de codul nativ al Snapchat-ului"
-                    },
-                    "session_events": {
-                        "name": "Evenimente de sesiune",
-                        "description": "Înregistrează evenimentele sesiunii",
-                        "properties": {
-                            "capture_duplex_events": {
-                                "name": "Capturați evenimente duplex",
-                                "description": "Capturați prezența și evenimentele de mesagerie atunci când o sesiune este activă"
-                            },
-                            "allow_running_in_background": {
-                                "name": "Permite rularea în fundal",
-                                "description": "Permite sesiunii să ruleze în fundal"
-                            }
-                        }
                     },
                     "media_file_picker": {
                         "name": "Selector de Fișiere Media",
@@ -971,6 +963,10 @@
                     "custom_streaks_expiration_format": {
                         "name": "Format personalizat de expirare a liniilor fierbinți",
                         "description": "Personalizează formatul Streaks Expiration\n\nVariabile disponibile:\n- %c: Număr de linii\n- %e: Emoji cu clepsidra\n- %d: zile\n- %h: ore\n- %m: minute\n- %s: secunde\n- %w: Timp rămas"
+                    },
+                    "best_friend_pinning": {
+                        "name": "Fixarea celui mai bun prieten",
+                        "description": "Vă permite să fixați un prieten drept cel mai bun prieten numărul unu. Notă: numai tu poți să-ți vezi cel mai bun prieten fixat"
                     }
                 },
                 "description": "Caracteristici experimentale",
@@ -1010,16 +1006,6 @@
             "unstable": "⚠ Instabil"
         },
         "options": {
-            "better_notifications": {
-                "chat_preview": "Afișează o previzualizare a chatului",
-                "mark_as_read_and_save_in_chat": "Salvați în Chat când marcați ca citit (depinde de Salvarea automată)",
-                "reply_button": "Adăugați butonul de răspuns",
-                "download_button": "Adăugați butonul de descărcare",
-                "mark_as_read_button": "Butonul Marcare ca Citit",
-                "media_preview": "Afișați o previzualizare a conținutului media",
-                "group": "Notificări de Grup",
-                "friend_add_source": "Afișează sursa adăugării prietenului"
-            },
             "friend_feed_menu_buttons": {
                 "mark_stories_as_seen_locally": "👀 Marchează Poveștile ca fiind văzute local",
                 "auto_download": "⬇️ Descărcare automată",
@@ -1160,7 +1146,8 @@
                 "SNAP": "Snap",
                 "SAVABLE_SNAP": "Snap salvabil",
                 "ORIGINAL": "Original",
-                "NOTE": "Notă audio"
+                "NOTE": "Notă audio",
+                "always_ask": "Intreaba mereu"
             },
             "app_appearance": {
                 "always_light": "Întotdeauna Luminat",
@@ -1354,8 +1341,7 @@
             "reply": "Răspundeți",
             "download": "Descărcați",
             "mark_as_read": "Marcați ca citit"
-        },
-        "stealth_mode_notice": "Nu se poate marca ca citit în modul ascuns"
+        }
     },
     "streaks_reminder": {
         "notification_title": "Linie fierbinte",
