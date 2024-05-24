@@ -1075,6 +1075,10 @@
                     "record_messaging_events": {
                         "description": "Records messaging events such as opening a snap, reading a message, etc.",
                         "name": "Record Messaging Events"
+                    },
+                    "auto_purge": {
+                        "name": "Auto Purge",
+                        "description": "Automatically deletes cached events that are older than the specified amount of time"
                     }
                 },
                 "name": "Friend Tracker"
