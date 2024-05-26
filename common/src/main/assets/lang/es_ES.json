@@ -1069,6 +1069,10 @@
                     "allow_running_in_background": {
                         "name": "Permitir la ejecución en segundo plano",
                         "description": "Permite que el rastreador se ejecute en segundo plano. Nota: Esto agotará significativamente la batería"
+                    },
+                    "auto_purge": {
+                        "name": "Purga automática",
+                        "description": "Elimina automáticamente los eventos almacenados en caché que son más antiguos que la cantidad de tiempo especificada"
                     }
                 },
                 "description": "Registra la actividad de un amigo en Snapchat"
