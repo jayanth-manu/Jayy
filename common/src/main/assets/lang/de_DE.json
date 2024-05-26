@@ -31,7 +31,7 @@
             "logged_stories": "Geloggte Storys",
             "messaging_preview": "Vorschau",
             "manage_scope": "Verwalte Scope",
-            "friend_tracker": "Freundtracker:in",
+            "friend_tracker": "Freund:in-tracker",
             "edit_rule": "Regel bearbeiten"
         },
         "sections": {
@@ -42,7 +42,7 @@
                 "reset_option": "Zurücksetzen",
                 "config_export_success_toast": "Einstellungen erfolgreich exportiert",
                 "config_import_success_toast": "Einstellungen erfolgreich importiert",
-                "config_import_failure_toast": "Einstellungen konnten nicht importiert werden. {error}",
+                "config_import_failure_toast": "Einstellungen konnten nicht importiert werden {error}",
                 "saved_config_snackbar": "Einstellungen gespeichert"
             },
             "social": {
@@ -727,7 +727,7 @@
                             },
                             "walk_radius": {
                                 "name": "Radius",
-                                "description": "Laufe zufälligerweise in diesem Radium (ft) herum"
+                                "description": "Laufe zufälligerweise in diesem Radius (ft) herum"
                             }
                         }
                     },
@@ -767,7 +767,7 @@
                             },
                             "force_video_upload_source_quality": {
                                 "name": "Erzwingen Sie die Qualität der Video-Upload-Quelle",
-                                "description": "Erzwing Snapchat die Quellenqualität zu nutzen, wenn Videos hochgelden werden\nBitte merkte, dass dies eventuell die Metadaten von Medien nicht entfernt"
+                                "description": "Erzwing Snapchat die Quellenqualität zu nutzen, wenn Videos hochgelden werden\nBitte merke, dass dies eventuell die Metadaten von Medien nicht entfernt"
                             }
                         },
                         "name": "Qualität",
@@ -1040,6 +1040,10 @@
                     "record_messaging_events": {
                         "name": "Nachrichtenevents aufzeichnen",
                         "description": "Zeichnet Nachrichtenereignisse wie das Öffnen eines Snaps, das Lesen einer Nachricht usw. auf."
+                    },
+                    "auto_purge": {
+                        "description": "Löscht zwischengespeicherte Ereignisse automatisch, wenn sie älter als die spezifizierte Dauer sind",
+                        "name": "Automatisch Löschen"
                     }
                 },
                 "name": "Freundestracker",
@@ -1529,7 +1533,7 @@
         "notification_content": "{count} Snaps geöffnet"
     },
     "friend_mutation_observer": {
-        "birthday_removed": "{username} hat sein/ ihr Geburtsdatum ({birthday}) entfernt.",
+        "birthday_removed": "{username} hat sein/ ihr Geburtsdatum ({birthday}) entfernt",
         "birthday_changed": "{username} hat sein/ ihr Geburtsdatum von {oldBirthday} auf {newBirthday} geändert",
         "bitmoji_background_changed": "{username} hat den Hintergrund seines/ ihres Bitmojis geändert",
         "birthday_added": "{username} hat sein/ ihr Geburtsdatum ({birthday}) hinzugefügt",
