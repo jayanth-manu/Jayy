@@ -1000,7 +1000,7 @@
                         "description": "Tilpasser formatet for udløbet af Streaks\n\nTilgængelige variabler:\n- %c: Antal Streaks\n- %e: Timeglas Emoji\n- %d: Dage\n- %h: Timer\n- %m: Minutter\n- %s: Sekunder\n- %w: Resterende tid"
                     },
                     "best_friend_pinning": {
-                        "description": "Giver dig mulighed for at fastgøre en ven som din bedste ven nummer ét.\nBemærk: kun du kan se din fastgjorte bedste ven",
+                        "description": "Tillader dig at fastgøre en ven som din bedste ven nummer ét. Bemærk: Kun du kan se din fastgjorte bedste ven",
                         "name": "Pinning af bedste ven"
                     }
                 }
@@ -1035,7 +1035,7 @@
                 "properties": {
                     "allow_running_in_background": {
                         "name": "Tillad kørsel i baggrunden",
-                        "description": "Tillader trackeren at køre i baggrunden. Bemærk: Dette vil dræne dit batteri betydeligt, det anbefales ikke at se porno i mens."
+                        "description": "Tillader trackeren at køre i baggrunden. Bemærk: Dette vil dræne dit batteri betydeligt, det anbefales ikke at se porno i mens"
                     },
                     "record_messaging_events": {
                         "description": "Registrerer besked begivenheder såsom åbning af et snap, læsning af en besked osv.",
@@ -1224,7 +1224,7 @@
                 "bitmoji_scene_changes": "Giv besked, når nogen ændrer deres Bitmoji scene"
             },
             "theme_picker": {
-                "ginger_snap": "Ginger Snap",
+                "ginger_snap": "Ingefær Snap",
                 "lemon_meringue": "Citron marengs",
                 "lava_flow": "Lava flow",
                 "ocean_fog": "Havtåge",
