@@ -38,7 +38,7 @@
             "export_file_format_title": "ফাইল বিন্যাস রপ্তানি করুন",
             "message_type_filter_title": "বার্তাগুলি ধরন অনুযায়ী ফিল্টার করুন",
             "amount_of_messages_title": "বার্তার পরিমাণ (সবের জন্য খালি রাখুন)",
-            "download_medias_title": "মিডিয়া ডাউনলোড করুন",
+            "download_medias_title": "মিডিয়াগুলি ডাউনলোড করুন",
             "text_field_selection": "{amount} নির্বাচিত"
         }
     },
@@ -1010,7 +1010,7 @@
                     },
                     "edit_message": {
                         "description": "কথোপকথনে বার্তা সম্পাদনা করতে দেয়",
-                        "name": "বার্তা সম্পাদনা করুন"
+                        "name": "বার্তাগুলি সম্পাদনা করুন"
                     },
                     "convert_message_locally": {
                         "name": "স্থানীয়ভাবে বার্তা রূপান্তর করুন",
@@ -1213,7 +1213,7 @@
             "notifications": {
                 "speaking": "স্পিকিং",
                 "abandon_video": "মিসড ভিডিও কল",
-                "stories": "গল্প",
+                "stories": "গল্পগুলি",
                 "typing": "টাইপিং",
                 "snap_replay": "স্ন্যাপ রিপ্লে",
                 "chat_reaction": "DM প্রতিক্রিয়া",
@@ -1453,7 +1453,7 @@
     "profile_picture_downloader": {
         "avatar_option": "অবতার",
         "title": "প্রোফাইল ছবি ডাউনলোডার",
-        "button": "প্রোফাইল ছবি ডাউনলোড করুন",
+        "button": "ডাউনলোড প্রোফাইল পিকচার",
         "background_option": "প্রেক্ষাপট"
     },
     "material3_strings": {
