@@ -919,6 +919,10 @@
                             "disable_bitmoji": {
                                 "name": "Deshabilitar Bitmoji",
                                 "description": "Deshabilita Bitmoji en perfiles de amigxs"
+                            },
+                            "custom_emoji_font": {
+                                "name": "Fuente de los emoji personalizada",
+                                "description": "Te permite utilizar una fuente para los emoji personalizada. Sólo funciona con fuentes .ttf"
                             }
                         },
                         "description": "Funciones inseguras que se integran al código nativo de Snapchat"
