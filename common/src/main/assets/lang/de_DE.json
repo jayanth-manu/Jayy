@@ -3,18 +3,18 @@
         "dialogs": {
             "select_language": "Sprache auswählen",
             "save_folder": "SnapEnhance benötigt Zugriff auf den Gerätespeicher, um Medien von Snapchat herunterzuladen und zu sichern.\nBitte wähle einen Ziel-Ordner für die Downloads aus.",
-            "select_save_folder_button": "Ordner wählen"
+            "select_save_folder_button": "Ordner auswählen"
         },
         "mappings": {
-            "dialog": "Mappings werden generiert, dies könnte ein bisschen dauern ...",
-            "generate_failure_no_snapchat": "SnapEnhance konnte Snapchat nicht finden, bitte versuchen Sie Snapchat neu zu installieren.",
-            "generate_failure": "Beim Generieren der Zuordnungen ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut."
+            "dialog": "Mappings werden generiert, dies könnte eine Weile dauern ...",
+            "generate_failure_no_snapchat": "SnapEnhance konnte Snapchat nicht finden, bitte versuche Snapchat neu zu installieren.",
+            "generate_failure": "Beim Generieren der Zuordnungen ist ein Fehler aufgetreten. Bitte versuche es erneut."
         },
         "permissions": {
-            "dialog": "Um fortfahren zu können, müssen Sie diese Anforderungen erfüllen:",
-            "notification_access": "Zugriff auf Benachrichtigungen",
+            "dialog": "Um fortfahren zu können, musst du diese Anforderungen erfüllen:",
+            "notification_access": "Benachrichtigungszugriff",
             "battery_optimization": "Batterieoptimierung",
-            "display_over_other_apps": "Über anderen Apps einblenden",
+            "display_over_other_apps": "Über anderen Apps anzeigen",
             "request_button": "Anfordern"
         }
     },
@@ -1131,7 +1131,8 @@
                 "added_by_mention": "Durch Erwähnung",
                 "added_by_group_chat": "Per Gruppenchat",
                 "added_by_qr_code": "Per QR-Code",
-                "added_by_community": "Per Community"
+                "added_by_community": "Per Community",
+                "added_by_quick_add": "Von Schnell Hinzufügen ->!!HOHES RISIKO, GEBANNT ZU WERDEN!!<-"
             },
             "bypass_video_length_restriction": {
                 "single": "Einzelnes Medium",
