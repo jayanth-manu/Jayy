@@ -32,7 +32,8 @@
             "manage_scope": "Kapsamı Yönet",
             "messaging_preview": "Önizleme",
             "friend_tracker": "Arkadaş Takibi",
-            "edit_rule": "Kuralı Düzenle"
+            "edit_rule": "Kuralı Düzenle",
+            "file_imports": "Dosya İçe Aktarımları"
         },
         "sections": {
             "features": {
@@ -125,6 +126,14 @@
                 "message_parse_failed": "Mesaj ayrıştırılamadı",
                 "unknown_sender": "Bilinmeyen Gönderen",
                 "download_attachment_failed_toast": "Ek indirilemedi"
+            },
+            "file_imports": {
+                "import_file_button": "Dosya İçe Aktar",
+                "file_not_found": "Dosya bulunamadı",
+                "file_import_failed": "Dosya içe aktarılamadı: {error}",
+                "file_imported": "Dosya başarıyla içe aktarıldı",
+                "file_delete_failed": "Dosya silinemedi",
+                "no_files_hint": "Burada Snapchat'te kullanmak için dosyaları içe aktarabilirsiniz. Bir dosyayı içe aktarmak için aşağıdaki düğmeye basın."
             }
         },
         "dialogs": {
@@ -147,6 +156,10 @@
             "messaging_action": {
                 "title": "İşlenecek içerik türlerini seçin",
                 "select_all_button": "Tümünü Seç"
+            },
+            "file_imports": {
+                "no_files_settings_hint": "Dosya bulunamadı. Dosya İçe Aktarma bölümünde gerekli dosyaları içe aktardığınızdan emin olun",
+                "settings_select_file_hint": "İçe aktarılan bir dosya seçin"
             }
         }
     },
@@ -880,6 +893,10 @@
                                 },
                                 "name": "Composer Kancaları",
                                 "description": "Composer çapraz platform UI çerçevesine kod enjekte eder"
+                            },
+                            "custom_emoji_font": {
+                                "name": "Özel Emoji Fontu",
+                                "description": "Özel bir emoji yazı tipi kullanmanızı sağlar. Yalnızca .ttf yazı tipleriyle çalışır"
                             }
                         }
                     },
