@@ -32,7 +32,8 @@
             "home_logs": "Registros",
             "home_settings": "Ajustes",
             "friend_tracker": "Rastreador de amigos",
-            "edit_rule": "Editar regla"
+            "edit_rule": "Editar regla",
+            "file_imports": "Importación de archivos"
         },
         "sections": {
             "home": {
@@ -125,6 +126,14 @@
                 "download_attachment_failed_toast": "Error al descargar atajo",
                 "list_group_format": "Grupo {name}",
                 "message_parse_failed": "Error al analizar mensaje"
+            },
+            "file_imports": {
+                "file_import_failed": "No se pudo importar el archivo: {error}",
+                "file_delete_failed": "No se pudo eliminar el archivo",
+                "import_file_button": "Importar archivo",
+                "file_not_found": "Archivo no encontrado",
+                "file_imported": "Archivo importado exitosamente",
+                "no_files_hint": "Aquí puedes importar los archivos para usarlos en Snapchat. Presiona el botón a continuación para importar un archivo."
             }
         },
         "dialogs": {
@@ -147,6 +156,10 @@
             "messaging_action": {
                 "select_all_button": "Seleccionar todo",
                 "title": "Elige el tipo de contenido para procesarlo"
+            },
+            "file_imports": {
+                "no_files_settings_hint": "No se encontraron archivos. Asegúrate de haber importado los archivos requeridos en la sección Importaciones de archivos",
+                "settings_select_file_hint": "Selecciona un archivo importado"
             }
         }
     },
@@ -1125,7 +1138,8 @@
                 "added_by_mention": "Por mención",
                 "added_by_community": "Por comunidad",
                 "added_by_group_chat": "Por Grupo",
-                "added_by_qr_code": "Por Código QR"
+                "added_by_qr_code": "Por Código QR",
+                "added_by_quick_add": "Por Quick Add (alto riesgo de ser baneado)"
             },
             "edit_text_override": {
                 "multi_line_chat_input": "Entrada de chat multilínea",
