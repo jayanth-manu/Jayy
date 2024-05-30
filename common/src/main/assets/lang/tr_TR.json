@@ -1015,6 +1015,10 @@
                     "best_friend_pinning": {
                         "description": "Bir arkadaşınızı bir numaralı en iyi arkadaşınız olarak sabitlemenizi sağlar. Not: Sabitlediğiniz en iyi arkadaşınızı sadece siz görebilirsiniz",
                         "name": "En İyi Arkadaş Sabitleme"
+                    },
+                    "cof_experiments": {
+                        "name": "COF Deneyleri",
+                        "description": "Yayınlanmamış/beta Snapchat özelliklerini etkinleştirir"
                     }
                 }
             },
