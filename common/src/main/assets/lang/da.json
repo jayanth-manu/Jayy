@@ -955,10 +955,6 @@
                         "name": "Konverter besked lokalt",
                         "description": "Konverterer snaps til at chatte eksterne medier lokalt. Dette vises i chat download kontekstmenu"
                     },
-                    "new_chat_action_menu": {
-                        "name": "Ny chat handlingsmenu",
-                        "description": "Brug den nye chat handlingsmenu skuffe"
-                    },
                     "call_recorder": {
                         "name": "Opkaldsoptager",
                         "description": "Optager automatisk lydopkald"

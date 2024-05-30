@@ -959,10 +959,6 @@
                         "description": "Liefert eine Historie der Stories von Freund:innen",
                         "name": "Geschichtenprotokollierer"
                     },
-                    "new_chat_action_menu": {
-                        "name": "Neues Chat-Aktionsmenü",
-                        "description": "Verwende die neue Chat-Aktionsmenüleiste"
-                    },
                     "call_recorder": {
                         "name": "Anrufaufzeichner",
                         "description": "Zeichnet automatisch Audioanrufe auf"

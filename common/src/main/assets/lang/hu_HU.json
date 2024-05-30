@@ -955,10 +955,6 @@
                         "description": "Lehetővé teszi az üzenetek szerkesztését a beszélgetésekben",
                         "name": "Üzenetek szerkesztése"
                     },
-                    "new_chat_action_menu": {
-                        "name": "Új csevegési művelet menü",
-                        "description": "Használd az új csevegési művelet menü fiókot"
-                    },
                     "media_file_picker": {
                         "name": "Média fájlválasztó",
                         "description": "Lehetővé teszi, hogy bármelyik videó/hangfájlt kiválaszd a galériából"

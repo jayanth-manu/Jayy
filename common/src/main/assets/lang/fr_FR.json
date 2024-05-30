@@ -959,10 +959,6 @@
                         "description": "Fournit un historique des Stories d'amis",
                         "name": "Journal des Stories"
                     },
-                    "new_chat_action_menu": {
-                        "name": "Nouveau menu d'actions de discussion",
-                        "description": "Utilisez le nouveau tiroir du menu d'action de chat"
-                    },
                     "media_file_picker": {
                         "name": "Sélecteur de fichiers multimédias",
                         "description": "Vous permet de choisir n'importe quel fichier vidéo/audio dans la galerie"

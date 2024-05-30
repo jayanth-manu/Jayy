@@ -965,10 +965,6 @@
                         "name": "Convertir mensaje localmente",
                         "description": "Convierte Snaps a chat multimedia externas localmente. Esto aparece en el menú de contexto de las descargas"
                     },
-                    "new_chat_action_menu": {
-                        "name": "Nuevo menú de acciones para conversaciones",
-                        "description": "Usa la nueva bandeja del menú de acciones para conversaciones"
-                    },
                     "story_logger": {
                         "name": "Registro de historias",
                         "description": "Proporciona un historial de historias de amigxs"

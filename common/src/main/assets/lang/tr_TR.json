@@ -976,10 +976,6 @@
                         "description": "Arkadaş hikayelerinin bir tarihçesini sunar",
                         "name": "Hikaye Kaydedici"
                     },
-                    "new_chat_action_menu": {
-                        "description": "Yeni sohbet eylem menüsü çekmecesini kullanın",
-                        "name": "Yeni Sohbet Eylem Menüsü"
-                    },
                     "media_file_picker": {
                         "name": "Medya Dosyası Seçici",
                         "description": "Galeriden herhangi bir video/ses dosyası seçmenizi sağlar"

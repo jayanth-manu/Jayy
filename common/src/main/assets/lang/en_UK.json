@@ -969,10 +969,6 @@
                         "name": "Convert Message Locally",
                         "description": "Converts snaps to chat external media locally. This appears in chat download context menu"
                     },
-                    "new_chat_action_menu": {
-                        "name": "New Chat Action Menu",
-                        "description": "Use the new chat action menu drawer"
-                    },
                     "edit_message": {
                         "name": "Edit Messages",
                         "description": "Allows you to edit messages in conversations"
