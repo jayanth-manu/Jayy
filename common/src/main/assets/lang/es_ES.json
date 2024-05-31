@@ -1042,6 +1042,10 @@
                     "prevent_forced_logout": {
                         "name": "Impedir el cierre de sesión forzado",
                         "description": "Impide que Snapchat pueda cerrar la sesión cuando inicies sesión en otro dispositivo"
+                    },
+                    "cof_experiments": {
+                        "name": "Experimentos COF",
+                        "description": "Habilita funciones inéditas/beta de Snapchat"
                     }
                 },
                 "name": "Experimental"
