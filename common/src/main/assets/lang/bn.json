@@ -113,7 +113,8 @@
             "messaging_preview": "পূর্বরূপ",
             "logger_history": "লগার ইতিহাস",
             "friend_tracker": "বন্ধু ট্র্যাকার",
-            "edit_rule": "সম্পাদনার নিয়ম"
+            "edit_rule": "সম্পাদনার নিয়ম",
+            "file_imports": "ফাইল আমদানি"
         },
         "sections": {
             "features": {
@@ -206,6 +207,14 @@
                 "unknown_sender": "অজানা প্রেরক",
                 "download_attachment_failed_toast": "সংযুক্তি ডাউনলোড করতে ব্যর্থ",
                 "message_parse_failed": "বার্তা পার্স করতে ব্যর্থ"
+            },
+            "file_imports": {
+                "file_imported": "ফাইল সফলভাবে আমদানি করা হয়েছে",
+                "no_files_hint": "এখানে আপনি স্ন্যাপচ্যাটে ব্যবহারের জন্য ফাইল আমদানি করতে পারেন। ফাইল আমদানি করতে নীচের বোতামটি চাপুন।",
+                "import_file_button": "ফাইল আমদানি করুন",
+                "file_not_found": "ফাইল পাওয়া যায়নি",
+                "file_import_failed": "ফাইল আমদানি ব্যর্থ হয়েছে: {error}",
+                "file_delete_failed": "ফাইল মুছে ফেলতে ব্যর্থ হয়েছে"
             }
         },
         "dialogs": {
@@ -228,6 +237,10 @@
             "messaging_action": {
                 "title": "প্রক্রিয়া করতে সামগ্রীর ধরণগুলি চয়ন করুন",
                 "select_all_button": "সব নির্বাচন করুন"
+            },
+            "file_imports": {
+                "no_files_settings_hint": "কোনো ফাইল পাওয়া যায়নি। নিশ্চিত করুন যে আপনি ফাইল আমদানি বিভাগে প্রয়োজনীয় ফাইলগুলি আমদানি করেছেন",
+                "settings_select_file_hint": "আমদানি করা একটি ফাইল নির্বাচন করুন"
             }
         }
     },
@@ -959,6 +972,10 @@
                                 },
                                 "description": "কম্পোজার ক্রস-প্ল্যাটফর্ম UI ফ্রেমওয়ার্কে কোড ইনজেক্ট করে",
                                 "name": "কম্পোজার হুকস"
+                            },
+                            "custom_emoji_font": {
+                                "description": "আপনাকে কাস্টম ইমোজি ফন্ট ব্যবহার করতে দেয়। শুধুমাত্র .ttf ফন্টগুলির সাথে কাজ করে",
+                                "name": "কাস্টম ইমোজি ফন্ট"
                             }
                         },
                         "name": "নেটিভ হুকস",
@@ -1041,6 +1058,10 @@
                                 "description": "অ্যাপটি পুনরায় খোলার সময় লক করে"
                             }
                         }
+                    },
+                    "cof_experiments": {
+                        "name": "COF পরীক্ষা-নিরীক্ষা",
+                        "description": "অপ্রকাশিত/বেটা স্ন্যাপচ্যাট বৈশিষ্ট্যগুলি সক্রিয় করে"
                     }
                 },
                 "description": "পরীক্ষামূলক বৈশিষ্ট্য",
@@ -1191,7 +1212,8 @@
                 "added_by_username": "ব্যবহারকারীর নাম অনুসারে",
                 "added_by_qr_code": "QR কোড দ্বারা",
                 "added_by_mention": "উল্লেখ করে",
-                "added_by_group_chat": "গ্রুপ চ্যাট দ্বারা"
+                "added_by_group_chat": "গ্রুপ চ্যাট দ্বারা",
+                "added_by_quick_add": "কুইক অ্যাড দ্বারা (ব্যান হওয়ার উচ্চ ঝুঁকি)"
             },
             "disable_story_sections": {
                 "discover": "আবিষ্কার",
