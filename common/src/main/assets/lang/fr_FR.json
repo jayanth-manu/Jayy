@@ -32,7 +32,8 @@
             "manage_scope": "Gérer le champ d'application",
             "messaging_preview": "Aperçu",
             "edit_rule": "Modifier la règle",
-            "friend_tracker": "Traqueur d'amis"
+            "friend_tracker": "Traqueur d'amis",
+            "file_imports": "Importations de fichiers"
         },
         "sections": {
             "features": {
@@ -125,6 +126,14 @@
                 "message_parse_failed": "Échec de l'analyse du message",
                 "unknown_sender": "Expéditeur inconnu",
                 "download_attachment_failed_toast": "Échec du téléchargement de la pièce jointe"
+            },
+            "file_imports": {
+                "no_files_hint": "Ici, vous pouvez importer des fichiers à utiliser dans Snapchat. Appuyez sur le bouton ci-dessous pour importer un fichier.",
+                "import_file_button": "Importer le fichier",
+                "file_not_found": "Fichier introuvable",
+                "file_import_failed": "Échec de l'importation du fichier : {error}",
+                "file_imported": "Fichier importé avec succès",
+                "file_delete_failed": "Échec de la suppression du fichier"
             }
         },
         "dialogs": {
@@ -147,6 +156,10 @@
                 "title": "Réinitialiser la configuration",
                 "content": "Êtes-vous sûr de vouloir réinitialiser la configuration ?",
                 "success_toast": "La configuration a été réinitialisée avec succès"
+            },
+            "file_imports": {
+                "no_files_settings_hint": "Aucun fichier trouvé. Assurez-vous d'avoir importé les fichiers requis dans la section Importations de fichiers.",
+                "settings_select_file_hint": "Sélectionnez un fichier importé"
             }
         }
     },
@@ -879,6 +892,10 @@
                                         "name": "Afficher le premier nom d'utilisateur créé"
                                     }
                                 }
+                            },
+                            "custom_emoji_font": {
+                                "name": "Police Emoji personnalisée",
+                                "description": "Vous permet d'utiliser une police emoji personnalisée. Fonctionne uniquement avec les polices .ttf"
                             }
                         },
                         "description": "Fonctionnalités non fiables qui se greffent au code natif de Snapchat"
@@ -998,6 +1015,10 @@
                     "best_friend_pinning": {
                         "name": "Épinglage du meilleur ami",
                         "description": "Permet d'épingler un ami comme votre meilleur ami numéro un. Remarque : vous êtes le seul à pouvoir voir votre meilleur ami épinglé"
+                    },
+                    "cof_experiments": {
+                        "name": "Expériences COF",
+                        "description": "Active les fonctionnalités Snapchat inédites/bêta"
                     }
                 }
             },
@@ -1148,7 +1169,8 @@
                 "added_by_mention": "Par mention",
                 "added_by_group_chat": "Par groupe de discussion",
                 "added_by_username": "Par nom d'utilisateur",
-                "added_by_qr_code": "Par QR Code"
+                "added_by_qr_code": "Par QR Code",
+                "added_by_quick_add": "Par ajout rapide (risque élevé d'être banni)"
             },
             "disable_confirmation_dialogs": {
                 "hide_conversation": "Cacher la conversation",
