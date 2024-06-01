@@ -103,12 +103,12 @@
                 "save_from_cache_button": "Önbellekten Kaydet"
             },
             "messaging_preview": {
-                "bridge_connection_failed": "Köprü hizmeti aracılığıyla Snapchat'e bağlanılamadı",
+                "bridge_connection_failed": "Köprüye bağlanılamadı. Snapchat'in arka planda çalıştığından emin olun",
                 "message_fetch_failed": "Mesajlar alınamadı",
                 "save_all_option": "Tümünü Kaydet",
                 "unsave_selection_option": "Seçimi Kaydetmeyi Kaldır",
                 "unsave_all_option": "Tümünü Kaydet'i Kaldır",
-                "bridge_init_failed": "Mesajlaşma köprüsü başlatılamadı",
+                "bridge_init_failed": "Mesajlaşma köprüsü başlatılamadı. Snapchat'in arka planda çalıştığından emin olun",
                 "no_message_hint": "Mesaj yok",
                 "save_selection_option": "Seçimi Kaydet",
                 "mark_selection_as_seen_option": "Seçilen Snap'i görüldü olarak işaretle",
