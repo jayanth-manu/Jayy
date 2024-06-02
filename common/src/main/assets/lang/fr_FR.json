@@ -44,7 +44,8 @@
                 "config_export_success_toast": "Configuration exportée avec succès",
                 "config_import_success_toast": "Configuration importée avec succès",
                 "config_import_failure_toast": "Échec de l'importation de la configuration {error}",
-                "saved_config_snackbar": "Configuration enregistrée"
+                "saved_config_snackbar": "Configuration enregistrée",
+                "config_export_failure_toast": "Échec de l'exportation de la configuration {error}"
             },
             "social": {
                 "streaks_expiration_short": "{hours}h",
@@ -103,8 +104,8 @@
                 "save_from_cache_button": "Enregistrer depuis le cache"
             },
             "messaging_preview": {
-                "bridge_connection_failed": "Échec de la connexion à Snapchat via le service de pont",
-                "bridge_init_failed": "Échec de l'initialisation du pont de messagerie",
+                "bridge_connection_failed": "Échec de la connexion au pont. Assurez-vous que Snapchat s'exécute en arrière-plan",
+                "bridge_init_failed": "Échec de l'initialisation du pont de messagerie. Assurez-vous que Snapchat s'exécute en arrière-plan",
                 "message_fetch_failed": "Échec de la récupération des messages",
                 "no_message_hint": "Pas de message",
                 "save_selection_option": "Enregistrer la sélection",
@@ -160,6 +161,10 @@
             "file_imports": {
                 "no_files_settings_hint": "Aucun fichier trouvé. Assurez-vous d'avoir importé les fichiers requis dans la section Importations de fichiers.",
                 "settings_select_file_hint": "Sélectionnez un fichier importé"
+            },
+            "export_config": {
+                "title": "Exporter des données sensibles ?",
+                "content": "Voulez-vous exporter la configuration avec des données sensibles ? (Comme les coordonnées de localisation, etc.)"
             }
         }
     },
