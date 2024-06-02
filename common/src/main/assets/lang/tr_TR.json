@@ -44,7 +44,8 @@
                 "config_import_success_toast": "Konfigürasyon başarıyla içe aktarıldı",
                 "config_import_failure_toast": "Konfigürasyon içe aktarılamadı {error}",
                 "saved_config_snackbar": "Konfigürasyon kaydedildi",
-                "config_export_success_toast": "Konfigürasyon başarıyla dışa aktarıldı"
+                "config_export_success_toast": "Konfigürasyon başarıyla dışa aktarıldı",
+                "config_export_failure_toast": "Konfigürasyon dışa aktarılamadı {error}"
             },
             "social": {
                 "streaks_expiration_short": "{hours} saat",
@@ -160,6 +161,10 @@
             "file_imports": {
                 "no_files_settings_hint": "Dosya bulunamadı. Dosya İçe Aktarma bölümünde gerekli dosyaları içe aktardığınızdan emin olun",
                 "settings_select_file_hint": "İçe aktarılan bir dosya seçin"
+            },
+            "export_config": {
+                "title": "Hassas Verileri Dışa Aktar?",
+                "content": "Konfigürasyonu hassas verilerle dışa aktarmak istiyor musunuz? (Konum koordinatları vb. gibi)"
             }
         }
     },
