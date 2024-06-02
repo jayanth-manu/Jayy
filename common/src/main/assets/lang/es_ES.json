@@ -76,7 +76,8 @@
                 "config_export_success_toast": "Configuración exportada con éxito",
                 "config_import_success_toast": "Configuración importada con éxito",
                 "config_import_failure_toast": "Error al importar la configuración {error}",
-                "saved_config_snackbar": "Configuración guardada"
+                "saved_config_snackbar": "Configuración guardada",
+                "config_export_failure_toast": "No se pudo exportar la configuración {error}"
             },
             "social": {
                 "friends_tab": "Amigxs",
@@ -103,8 +104,8 @@
                 "save_from_cache_button": "Guardar desde el cache"
             },
             "messaging_preview": {
-                "bridge_connection_failed": "Error al conectar a Snapchat mediante el servicio de puente",
-                "bridge_init_failed": "Error al iniciar el puente de mensajería",
+                "bridge_connection_failed": "No se pudo conectar al puente. Asegúrate de que Snapchat se esté ejecutando en segundo plano",
+                "bridge_init_failed": "No se pudo inicializar el puente de mensajería. Asegúrate de que Snapchat se esté ejecutando en segundo plano",
                 "message_fetch_failed": "Error al recuperar mensajes",
                 "no_message_hint": "Sin mensaje",
                 "save_selection_option": "Guardar selección",
@@ -160,6 +161,10 @@
             "file_imports": {
                 "no_files_settings_hint": "No se encontraron archivos. Asegúrate de haber importado los archivos requeridos en la sección Importaciones de archivos",
                 "settings_select_file_hint": "Selecciona un archivo importado"
+            },
+            "export_config": {
+                "title": "¿Exportar datos confidenciales?",
+                "content": "¿Quieres exportar la configuración con tus datos privados? (Como coordenadas de la ubicación, etc.)"
             }
         }
     },
