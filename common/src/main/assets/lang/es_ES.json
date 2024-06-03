@@ -33,13 +33,19 @@
             "home_settings": "Ajustes",
             "friend_tracker": "Rastreador de amigos",
             "edit_rule": "Editar regla",
-            "file_imports": "Importación de archivos"
+            "file_imports": "Importación de archivos",
+            "better_location": "Mejor ubicación"
         },
         "sections": {
             "home": {
                 "update_title": "Actualización de SnapEnhance",
                 "update_content": "¡Versión {version} está disponible!",
-                "update_button": "Descargar"
+                "update_button": "Descargar",
+                "debug_build_summary_date": "Fecha de desarrollo: {date} (hace{days} día(s))",
+                "quick_actions_title": "Acciones rápidas",
+                "version_title": "v{versionName} · por rhunk",
+                "debug_build_summary_title": "Estás ejecutando una versión de depuración de SnapEnhance",
+                "debug_build_summary_content": "Versión {versionName} ({versionCode})"
             },
             "home_logs": {
                 "no_logs_hint": "Registros no disponibles",
@@ -135,6 +141,21 @@
                 "file_not_found": "Archivo no encontrado",
                 "file_imported": "Archivo importado exitosamente",
                 "no_files_hint": "Aquí puedes importar los archivos para usarlos en Snapchat. Presiona el botón a continuación para importar un archivo."
+            },
+            "better_location": {
+                "save_dialog_button": "Guardar",
+                "saved_name_dialog_hint": "Nombre guardado",
+                "no_friends_found": "No se encontraron amigos",
+                "saved_coordinates_title": "Coordenadas guardadas",
+                "delete_dialog_title": "Eliminar coordenadas guardadas",
+                "search_bar": "Buscar",
+                "spoofed_coordinates_title": "Coordenadas falsificadas\nLat {latitude}, Lng {longitude}",
+                "save_coordinates_dialog_title": "Guardar coordenadas",
+                "choose_location_button": "Elegir la ubicación",
+                "spoof_location_toggle": "Ubicación falsa",
+                "no_saved_coordinates_hint": "No hay coordenadas guardadas",
+                "delete_dialog_message": "¿Está seguro de que desea eliminar esta coordenada guardada?",
+                "no_friends_map": "No hay amigos en el mapa"
             }
         },
         "dialogs": {
@@ -257,6 +278,17 @@
         "regen_mappings": {
             "name": "regenerar mapeos",
             "description": "regenerar mapeos a mano"
+        },
+        "file_imports": {
+            "description": "Importar archivos para usar en Snapchat",
+            "name": "Importación de archivos"
+        },
+        "friend_tracker": {
+            "name": "Rastreador de amigos",
+            "description": "Sigue a tus amigos en Snapchat"
+        },
+        "logger_history": {
+            "description": "Ver el historial de mensajes guardados"
         }
     },
     "scopes": {
