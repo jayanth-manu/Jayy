@@ -33,7 +33,8 @@
             "messaging_preview": "Önizleme",
             "friend_tracker": "Arkadaş Takibi",
             "edit_rule": "Kuralı Düzenle",
-            "file_imports": "Dosya İçe Aktarımları"
+            "file_imports": "Dosya İçe Aktarımları",
+            "better_location": "Daha İyi Konum"
         },
         "sections": {
             "features": {
@@ -65,7 +66,12 @@
             "home": {
                 "update_title": "SnapEnhance Güncellemesi",
                 "update_button": "İndir",
-                "update_content": "Sürüm {version} kullanılabilir!"
+                "update_content": "Sürüm {version} kullanılabilir!",
+                "debug_build_summary_content": "Sürüm {versionName} ({versionCode})",
+                "quick_actions_title": "Hızlı Eylemler",
+                "version_title": "rhunk tarafından - v{versionName}",
+                "debug_build_summary_title": "SnapEnhance'in bir hata ayıklama versiyonunu çalıştırıyorsunuz",
+                "debug_build_summary_date": "Oluşturma tarihi: {date} ({days} gün önce)"
             },
             "home_logs": {
                 "clear_logs_button": "Günlükleri Temizle",
@@ -135,6 +141,23 @@
                 "file_imported": "Dosya başarıyla içe aktarıldı",
                 "file_delete_failed": "Dosya silinemedi",
                 "no_files_hint": "Burada Snapchat'te kullanmak için dosyaları içe aktarabilirsiniz. Bir dosyayı içe aktarmak için aşağıdaki düğmeye basın."
+            },
+            "better_location": {
+                "save_coordinates_dialog_title": "Koordinatları Kaydet",
+                "saved_name_dialog_hint": "İsim Kaydedildi",
+                "choose_location_button": "Konum Seçin",
+                "teleport_to_friend_button": "Arkadaşa Işınlan",
+                "no_saved_coordinates_hint": "Kayıtlı koordinat yok",
+                "delete_dialog_title": "Kayıtlı Koordinatı Sil",
+                "delete_dialog_message": "Bu kayıtlı koordinatı silmek istediğinizden emin misiniz?",
+                "teleport_to_friend_title": "Arkadaşa Işınlan",
+                "search_bar": "Ara",
+                "no_friends_map": "Haritada arkadaş yok",
+                "no_friends_found": "Arkadaş bulunamadı",
+                "save_dialog_button": "Kaydet",
+                "spoofed_coordinates_title": "Sahte Koordinatlar\n{latitude} Enlem, {longitude} Boylam",
+                "spoof_location_toggle": "Sahte Konum",
+                "saved_coordinates_title": "Koordinatlar Kaydedildi"
             }
         },
         "dialogs": {
@@ -1514,6 +1537,18 @@
         "change_language": {
             "name": "Dili Değiştir",
             "description": "SnapEnhance'in dilini değiştir"
+        },
+        "friend_tracker": {
+            "name": "Arkadaş Takibi",
+            "description": "Snapchat'te arkadaşlarınızı takip edin"
+        },
+        "logger_history": {
+            "name": "Kaydedici Geçmişi",
+            "description": "Günlüğe kaydedilen mesajların geçmişini görüntüle"
+        },
+        "file_imports": {
+            "name": "Dosya İçe Aktarımları",
+            "description": "Snapchat'te kullanmak için dosyaları içe aktarma"
         }
     },
     "scopes": {
