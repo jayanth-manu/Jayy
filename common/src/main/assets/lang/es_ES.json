@@ -155,7 +155,9 @@
                 "spoof_location_toggle": "Ubicación falsa",
                 "no_saved_coordinates_hint": "No hay coordenadas guardadas",
                 "delete_dialog_message": "¿Está seguro de que desea eliminar esta coordenada guardada?",
-                "no_friends_map": "No hay amigos en el mapa"
+                "no_friends_map": "No hay amigos en el mapa",
+                "teleport_to_friend_button": "Teletransportar a un amigo",
+                "teleport_to_friend_title": "Teletransportar a un amigo"
             }
         },
         "dialogs": {
@@ -288,7 +290,8 @@
             "description": "Sigue a tus amigos en Snapchat"
         },
         "logger_history": {
-            "description": "Ver el historial de mensajes guardados"
+            "description": "Ver el historial de mensajes guardados",
+            "name": "Historial del registro"
         }
     },
     "scopes": {
