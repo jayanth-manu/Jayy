@@ -157,7 +157,9 @@
                 "choose_location_button": "Choisir un emplacement",
                 "teleport_to_friend_button": "Se téléporter à un ami",
                 "no_saved_coordinates_hint": "Aucune coordonnée enregistrée",
-                "no_friends_map": "Pas d'amis sur la carte"
+                "no_friends_map": "Pas d'amis sur la carte",
+                "latitude_dialog_hint": "Latitude",
+                "longitude_dialog_hint": "Longitude"
             }
         },
         "dialogs": {
