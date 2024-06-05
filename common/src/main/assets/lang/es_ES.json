@@ -157,7 +157,9 @@
                 "delete_dialog_message": "¿Está seguro de que desea eliminar esta coordenada guardada?",
                 "no_friends_map": "No hay amigos en el mapa",
                 "teleport_to_friend_button": "Teletransportar a un amigo",
-                "teleport_to_friend_title": "Teletransportar a un amigo"
+                "teleport_to_friend_title": "Teletransportar a un amigo",
+                "latitude_dialog_hint": "Latitud",
+                "longitude_dialog_hint": "Longitud"
             }
         },
         "dialogs": {
