@@ -157,7 +157,9 @@
                 "save_dialog_button": "Kaydet",
                 "spoofed_coordinates_title": "Sahte Koordinatlar\n{latitude} Enlem, {longitude} Boylam",
                 "spoof_location_toggle": "Sahte Konum",
-                "saved_coordinates_title": "Koordinatlar Kaydedildi"
+                "saved_coordinates_title": "Koordinatlar Kaydedildi",
+                "longitude_dialog_hint": "Boylam",
+                "latitude_dialog_hint": "Enlem"
             }
         },
         "dialogs": {
