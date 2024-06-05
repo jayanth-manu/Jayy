@@ -61,7 +61,8 @@
                 "delete_files_option": "Ayrıca dosyaları sil",
                 "remove_selected_tasks_confirm": "{count} görev kaldırılsın mı?",
                 "merge_files_toast": "{count} dosya birleştiriliyor",
-                "remove_all_tasks_confirm": "Tüm görevler kaldırılsın mı?"
+                "remove_all_tasks_confirm": "Tüm görevler kaldırılsın mı?",
+                "failed_to_open_file": "Dosya açılamadı"
             },
             "home": {
                 "update_title": "SnapEnhance Güncellemesi",
@@ -599,6 +600,10 @@
                             "mark_as_read_and_save_in_chat": {
                                 "name": "Okundu Olarak İşaretle ve Sohbete Kaydet",
                                 "description": "Bildirime okundu olarak işaretle ve sohbete kaydet düğmesi ekler"
+                            },
+                            "smart_replies": {
+                                "description": "Bildirimlere önerilen yanıtlar ekler (Android 10+). Yanıtla Düğmesi ile birlikte kullanın",
+                                "name": "Akıllı Yanıtlar"
                             }
                         }
                     },
@@ -1049,6 +1054,10 @@
                     "cof_experiments": {
                         "name": "COF Deneyleri",
                         "description": "Yayınlanmamış/beta Snapchat özelliklerini etkinleştirir"
+                    },
+                    "context_menu_fix": {
+                        "name": "Bağlam Menüsü Düzeltme",
+                        "description": "Cihaz çevrimdışı olduğunda doğru şekilde görüntülenemediği için Arkadaş Besleme Menüsünü onarmaya çalışın"
                     }
                 }
             },
