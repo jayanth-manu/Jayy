@@ -1550,9 +1550,6 @@
         "dialog_title": "Hívás indítása",
         "dialog_message": "Biztos, hogy hívást akarsz indítani?"
     },
-    "suspend_location_updates": {
-        "switch_text": "Helyszínfrissítések felfüggesztése"
-    },
     "scopes": {
         "friend": "Barát",
         "group": "Csoport"

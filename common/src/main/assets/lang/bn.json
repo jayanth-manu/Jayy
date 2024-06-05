@@ -1559,9 +1559,6 @@
         "download": "মিডিয়া ডাউনলোড করুন",
         "media_size": "মিডিয়ার আকার: {size}"
     },
-    "suspend_location_updates": {
-        "switch_text": "অবস্থান আপডেট স্থগিত করুন"
-    },
     "auto_open_snaps": {
         "title": "স্বয়ংক্রিয়ভাবে স্ন্যাপ খুলুন",
         "notification_content": "{count} স্ন্যাপ খোলা হয়েছে"

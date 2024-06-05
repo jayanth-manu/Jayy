@@ -1447,9 +1447,6 @@
         "voice_call": "Appel vocal",
         "message_logger": "Enregistreur de messages"
     },
-    "suspend_location_updates": {
-        "switch_text": "Suspendre les mises à jour de localisation"
-    },
     "material3_strings": {
         "date_input_invalid_not_allowed": "Date invalide",
         "date_range_input_invalid_range_input": "Plage de dates non valide",

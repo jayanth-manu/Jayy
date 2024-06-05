@@ -1443,9 +1443,6 @@
         "MAP_REACTION": "Harita Tepkisi",
         "SHARE": "Paylaş"
     },
-    "suspend_location_updates": {
-        "switch_text": "Konum Güncellemelerini Askıya Al"
-    },
     "better_notifications": {
         "button": {
             "download": "İndir",

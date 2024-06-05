@@ -1270,9 +1270,6 @@
         "notification_text": "Вы потеряете свою серию с {friend} через {hoursLeft} ч",
         "notification_title": "Полосы"
     },
-    "suspend_location_updates": {
-        "switch_text": "Приостановить обновление местоположений"
-    },
     "content_type": {
         "STICKER": "Стикер",
         "NOTE": "Голосове сообщение",

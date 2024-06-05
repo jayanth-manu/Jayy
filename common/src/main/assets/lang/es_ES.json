@@ -1548,9 +1548,6 @@
         "bitmoji_background_changed": "{username} ha cambiado el fondo de su Bitmoji",
         "bitmoji_scene_changed": "{username} ha cambiado la escena de su Bitmoji"
     },
-    "suspend_location_updates": {
-        "switch_text": "Suspender actualizaciones de ubicación"
-    },
     "media_download_source": {
         "none": "Ninguno",
         "pending": "Pendiente",

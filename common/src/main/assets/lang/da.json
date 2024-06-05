@@ -1475,9 +1475,6 @@
             "download": "Hent"
         }
     },
-    "suspend_location_updates": {
-        "switch_text": "Suspender placerings opdateringer"
-    },
     "mark_as_seen": {
         "already_unseen_toast": "Allerede markeret som uset!",
         "no_unseen_snaps_toast": "Ingen usete snaps fundet!",

@@ -1383,9 +1383,6 @@
         "MAP_REACTION": "Kartenreaktion",
         "SHARE": "Teilen"
     },
-    "suspend_location_updates": {
-        "switch_text": "Standortaktualisierungen aussetzen"
-    },
     "better_notifications": {
         "button": {
             "download": "Herunterladen",

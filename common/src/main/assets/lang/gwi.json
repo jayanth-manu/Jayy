@@ -1488,8 +1488,5 @@
         "outgoing_secret_message": "Schlüsselaustausch-Antwort",
         "incoming_pk_message": "Sie haben gerade eine Anfrage für einen öffentlichen Schlüssel erhalten. Klicken Sie unten, um sie anzunehmen.",
         "incoming_secret_message": "Ihr Freund hat gerade Ihren öffentlichen Schlüssel akzeptiert. Klicken Sie unten, um das Passwort zu akzeptieren."
-    },
-    "suspend_location_updates": {
-        "switch_text": "Standortaktualisierungen aussetzen"
     }
 }
