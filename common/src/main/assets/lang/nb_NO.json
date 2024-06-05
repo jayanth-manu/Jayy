@@ -7,11 +7,15 @@
             "features": "Funksjoner",
             "home": "Hjem",
             "tasks": "Gjøremål",
-            "logger_history": "Logføring historie",
+            "logger_history": "Loggføringshistorie",
             "logged_stories": "Loggede historier",
             "messaging_preview": "Forhåndsvisning",
-            "social": "Sosial",
-            "manage_scope": "Administrer omfang"
+            "social": "Sosialt",
+            "manage_scope": "Administrer omfang",
+            "better_location": "Bedre Posisjon",
+            "file_imports": "Fil-importer",
+            "edit_rule": "Rediger Regel",
+            "friend_tracker": "Vennesporing"
         },
         "sections": {
             "social": {
@@ -21,15 +25,25 @@
                 "disabled": "Avskrudd"
             },
             "tasks": {
-                "no_tasks": "Ingen oppgaver"
+                "no_tasks": "Ingen gjøremål",
+                "remove_all_tasks_title": "Er du sikker på at du vil fjerne alle gjøremål?",
+                "failed_to_open_file": "Feil under åpning av fil",
+                "merge_files_toast": "Slår sammen {count} filer",
+                "remove_selected_tasks_title": "Er du sikker på at du vil fjerne valgte gjøremål?",
+                "delete_files_option": "Slett filer også"
             },
             "home": {
                 "update_content": "Versjon {versjon} er tilgjengelig!",
-                "update_button": "Nedlast",
-                "update_title": "SnapEnhance Oppdatering"
+                "update_button": "Last ned",
+                "update_title": "SnapEnhance Oppdatering",
+                "debug_build_summary_title": "Du kjører et feilsøkingsbyggversjon av SnapEnhance",
+                "debug_build_summary_date": "Byggversjonsdato: {date} ({days} dager siden)",
+                "quick_actions_title": "Kjappe Handlinger",
+                "debug_build_summary_content": "Versjon {versionName} ({versionCode})",
+                "version_title": "v{versionName} · av rhunk"
             },
             "home_logs": {
-                "no_logs_hint": "igjen logg tilgjengelig",
+                "no_logs_hint": "Ingen logger tilgjengelig",
                 "clear_logs_button": "Slett Logg",
                 "export_logs_button": "Eksporter Logg",
                 "saving_logs_toast": "Lagrer logg, dette kan ta en stund ...",
@@ -37,7 +51,14 @@
                 "saved_logs_failure_toast": "Feil under lagring av logg"
             },
             "home_settings": {
-                "actions_title": "Handlinger"
+                "actions_title": "Handlinger",
+                "success_toast": "Ferdig!",
+                "message_logger_summary": "{messageCount} meldinger\n{storyCount} historier",
+                "message_logger_title": "Meldingslogger",
+                "export_button": "Eksporter",
+                "clear_button": "Rensk",
+                "view_logger_history_button": "Se logghistorikk",
+                "debug_title": "Feilsøking"
             }
         },
         "dialogs": {
@@ -56,7 +77,7 @@
     },
     "setup": {
         "mappings": {
-            "dialog": "For å dynamisk støtte et bredt spekter av Snapchat versjoner, er kartlegginger nødvendig for at SnapEnhance skal fungere ordentlig, dette bør ikke ta mer enn 5 sekunder.",
+            "dialog": "For å dynamisk støtte et bredt spekter av Snapchat-versjoner, er kartlegginger nødvendig for at SnapEnhance skal fungere ordentlig. Dette bør ikke ta mer enn 5 sekunder.",
             "generate_failure_no_snapchat": "SnapEnhance kunne ikke oppdage Snapchat, prøv å installere Snapchat på nytt.",
             "generate_failure": "Det oppstod en feil under forsøk på å generere tilordninger. Prøv igjen."
         },
@@ -66,9 +87,9 @@
             "save_folder": "SnapEnhance krever lagringstillatelser for å laste ned og lagre media fra Snapchat.\nVelg stedet hvor media skal lastes ned."
         },
         "permissions": {
-            "battery_optimization": "Batteri optimalisering",
-            "display_over_other_apps": "Vis over andre programmer",
-            "notification_access": "Merknadstilgang",
+            "battery_optimization": "Batteri-optimalisering",
+            "display_over_other_apps": "Vis over andre apper",
+            "notification_access": "Varslingstilgang",
             "request_button": "Forespør",
             "dialog": "For å fortsette må du oppfylle følgende krav:"
         }
