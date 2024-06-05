@@ -156,11 +156,12 @@
                 "no_friends_map": "Haritada arkadaş yok",
                 "no_friends_found": "Arkadaş bulunamadı",
                 "save_dialog_button": "Kaydet",
-                "spoofed_coordinates_title": "Sahte Koordinatlar\n{latitude} Enlem, {longitude} Boylam",
+                "spoofed_coordinates_title": "{latitude} Enlem, {longitude} Boylam",
                 "spoof_location_toggle": "Sahte Konum",
                 "saved_coordinates_title": "Koordinatlar Kaydedildi",
                 "longitude_dialog_hint": "Boylam",
-                "latitude_dialog_hint": "Enlem"
+                "latitude_dialog_hint": "Enlem",
+                "suspend_location_updates": "Konum Güncellemelerini Askıya Al"
             }
         },
         "dialogs": {
@@ -782,7 +783,7 @@
                             },
                             "suspend_location_updates": {
                                 "name": "Konum Güncellemelerini Askıya Al",
-                                "description": "Harita ayarlarına konum güncellemelerini askıya almak için bir düğme ekler"
+                                "description": "Konumunuzun güncellenmesini engeller"
                             },
                             "spoof_battery_level": {
                                 "name": "Sahte Pil Seviyesi",
