@@ -72,7 +72,8 @@
                 "remove_selected_tasks_confirm": "¿Borrar {count} tareas?",
                 "remove_all_tasks_confirm": "¿Borrar todas las tareas?",
                 "merge_files_toast": "Incorporando {count} archivos",
-                "no_tasks": "Sin tareas"
+                "no_tasks": "Sin tareas",
+                "failed_to_open_file": "Error al abrir el archivo"
             },
             "features": {
                 "disabled": "Desactivado",
@@ -709,6 +710,10 @@
                             "mark_as_read_and_save_in_chat": {
                                 "name": "Marcar como leído y guardar en el chat",
                                 "description": "Agrega un botón marcar como leído y guardar en el chat a la notificación"
+                            },
+                            "smart_replies": {
+                                "description": "Agregar respuestas sugeridas a las notificaciones (Android 10+). Usar en combinación con el botón Responder",
+                                "name": "Respuestas inteligentes"
                             }
                         }
                     },
@@ -1088,6 +1093,10 @@
                     "cof_experiments": {
                         "name": "Experimentos COF",
                         "description": "Habilita funciones inéditas/beta de Snapchat"
+                    },
+                    "context_menu_fix": {
+                        "description": "Intente reparar el menú Friend Feed ya que cuando el dispositivo está sin conexión no se mostraba correctamente",
+                        "name": "Corrección del menú contextual"
                     }
                 },
                 "name": "Experimental"
