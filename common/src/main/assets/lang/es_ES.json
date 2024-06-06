@@ -150,7 +150,7 @@
                 "saved_coordinates_title": "Coordenadas guardadas",
                 "delete_dialog_title": "Eliminar coordenadas guardadas",
                 "search_bar": "Buscar",
-                "spoofed_coordinates_title": "Coordenadas falsificadas\nLat {latitude}, Lng {longitude}",
+                "spoofed_coordinates_title": "Lat {latitude}, Lng {longitude}",
                 "save_coordinates_dialog_title": "Guardar coordenadas",
                 "choose_location_button": "Elegir la ubicación",
                 "spoof_location_toggle": "Ubicación falsa",
@@ -160,7 +160,8 @@
                 "teleport_to_friend_button": "Teletransportar a un amigo",
                 "teleport_to_friend_title": "Teletransportar a un amigo",
                 "latitude_dialog_hint": "Latitud",
-                "longitude_dialog_hint": "Longitud"
+                "longitude_dialog_hint": "Longitud",
+                "suspend_location_updates": "Suspender las actualizaciones de ubicación"
             }
         },
         "dialogs": {
@@ -775,7 +776,7 @@
                             },
                             "suspend_location_updates": {
                                 "name": "Suspender actualizaciones de la ubicación",
-                                "description": "Añade un botón en los ajustes del mapa para suspender actualizaciones de la ubicación"
+                                "description": "Evita que se actualice tu ubicación"
                             },
                             "spoof_battery_level": {
                                 "name": "Falsificar nivel de carga",
