@@ -55,7 +55,8 @@
                 "remove_all_tasks_title": "Are you sure you want to remove all tasks?",
                 "delete_files_option": "Also Delete Files",
                 "remove_selected_tasks_confirm": "Remove {count} Tasks?",
-                "remove_all_tasks_confirm": "Remove All Tasks?"
+                "remove_all_tasks_confirm": "Remove All Tasks?",
+                "failed_to_open_file": "Failed to open file"
             },
             "social": {
                 "streaks_expiration_short": "{hours}h",
@@ -143,7 +144,7 @@
                 "no_files_hint": "Here you can import files for use in Snapchat. Press the button below to import a file."
             },
             "better_location": {
-                "spoofed_coordinates_title": "Spoofed Coordinates\nLat {latitude}, Lng {longitude}",
+                "spoofed_coordinates_title": "Lat {latitude}, Long {longitude}",
                 "spoof_location_toggle": "Spoof Location",
                 "no_saved_coordinates_hint": "No saved coordinates",
                 "teleport_to_friend_title": "Teleport to Friend",
@@ -157,7 +158,10 @@
                 "no_friends_found": "No friends found",
                 "save_coordinates_dialog_title": "Save Coordinates",
                 "choose_location_button": "Choose Location",
-                "teleport_to_friend_button": "Teleport to Friend"
+                "teleport_to_friend_button": "Teleport to Friend",
+                "latitude_dialog_hint": "Latitude",
+                "longitude_dialog_hint": "Longitude",
+                "suspend_location_updates": "Suspend Location Updates"
             }
         },
         "dialogs": {
@@ -684,6 +688,10 @@
                             "mark_as_read_and_save_in_chat": {
                                 "name": "Mark as Read and Save in Chat",
                                 "description": "Adds a mark as read and save in chat button to the notification"
+                            },
+                            "smart_replies": {
+                                "name": "Smart Replies",
+                                "description": "Adds suggested replies to notifications (Android 10+). Use in combination with Reply Button"
                             }
                         }
                     },
@@ -761,7 +769,7 @@
                                 "description": "Force Snapchat to update location even if no GPS data is received"
                             },
                             "suspend_location_updates": {
-                                "description": "Adds a button in map settings to suspend location updates",
+                                "description": "Prevents your location from being updated",
                                 "name": "Suspend Location Updates"
                             },
                             "spoof_battery_level": {
@@ -1089,6 +1097,10 @@
                     "cof_experiments": {
                         "description": "Enables unreleased/beta Snapchat features",
                         "name": "COF Experiments"
+                    },
+                    "context_menu_fix": {
+                        "name": "Context Menu Fix",
+                        "description": "Attempts to repair the Friend Feed Menu when the device is offline, it cannot be displayed correctly"
                     }
                 }
             },
