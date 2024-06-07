@@ -61,7 +61,8 @@
                 "remove_all_tasks_title": "Êtes-vous sûr de vouloir supprimer toutes les tâches ?",
                 "delete_files_option": "Supprimer également les fichiers",
                 "remove_selected_tasks_confirm": "Supprimer {count} tâches ?",
-                "remove_all_tasks_confirm": "Supprimer toutes les tâches ?"
+                "remove_all_tasks_confirm": "Supprimer toutes les tâches ?",
+                "failed_to_open_file": "Échec de l'ouverture du fichier"
             },
             "home": {
                 "update_content": "La version {version} est disponible !",
@@ -143,7 +144,7 @@
                 "file_delete_failed": "Échec de la suppression du fichier"
             },
             "better_location": {
-                "spoofed_coordinates_title": "Coordonnées simulées\nLat {latitude}, Lng {longitude}",
+                "spoofed_coordinates_title": "Lat {latitude}, Lng {longitude}",
                 "save_coordinates_dialog_title": "Enregistrer les coordonnées",
                 "saved_name_dialog_hint": "Nom enregistré",
                 "delete_dialog_title": "Supprimer une coordonnée enregistrée",
@@ -159,7 +160,8 @@
                 "no_saved_coordinates_hint": "Aucune coordonnée enregistrée",
                 "no_friends_map": "Pas d'amis sur la carte",
                 "latitude_dialog_hint": "Latitude",
-                "longitude_dialog_hint": "Longitude"
+                "longitude_dialog_hint": "Longitude",
+                "suspend_location_updates": "Suspendre les mises à jour de localisation"
             }
         },
         "dialogs": {
@@ -599,6 +601,10 @@
                             "mark_as_read_button": {
                                 "name": "Bouton Marquer comme lu",
                                 "description": "Vous permet de marquer un message comme lu à partir de la notification"
+                            },
+                            "smart_replies": {
+                                "description": "Ajoute des réponses suggérées aux notifications (Android 10+). À utiliser en combinaison avec le bouton Répondre",
+                                "name": "Réponses intelligentes"
                             }
                         }
                     },
@@ -769,7 +775,7 @@
                             },
                             "suspend_location_updates": {
                                 "name": "Suspendre les mises à jour de localisation",
-                                "description": "Ajouter un bouton dans les paramètres de la carte pour suspendre les mises à jour de la localisation"
+                                "description": "Empêche la mise à jour de votre position"
                             },
                             "spoof_battery_level": {
                                 "description": "Usure le niveau de la batterie de votre appareil sur la carte\n La valeur doit être comprise entre 0 et 100",
@@ -1049,6 +1055,10 @@
                     "cof_experiments": {
                         "name": "Expériences COF",
                         "description": "Active les fonctionnalités Snapchat inédites/bêta"
+                    },
+                    "context_menu_fix": {
+                        "name": "Correction du menu contextuel",
+                        "description": "Essayez de réparer le menu Liste d'amie, car lorsque l'appareil est hors ligne, il ne peut pas être affiché correctement"
                     }
                 }
             },
