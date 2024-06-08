@@ -863,6 +863,10 @@
                     "hide_active_music": {
                         "name": "Ocultar música activa",
                         "description": "Evita que Snapchat sepa que estás escuchando a música\nEsto te permitirá capturar Snaps usando los botones de volumen mientras escuchas a música"
+                    },
+                    "disable_telecom_framework": {
+                        "name": "Deshabilitar el marco de telecomunicaciones",
+                        "description": "Impide que Snapchat utilice el marco de Android Telecom\nEsto te permite escuchar música durante una llamada"
                     }
                 },
                 "name": "Global",
