@@ -1178,7 +1178,8 @@
                 "hide_live_location_share_button": "Canlı Konum Paylaş Düğmesini Kaldır",
                 "hide_stickers_button": "Çıkartmalar Butonunu Kaldır",
                 "hide_voice_record_button": "Ses Kayıt Butonunu Kaldır",
-                "hide_unread_chat_hint": "Okunmamış Sohbet İpucunu Kaldır"
+                "hide_unread_chat_hint": "Okunmamış Sohbet İpucunu Kaldır",
+                "hide_post_to_story_buttons": "Snap göndermeden önce Hikayeye Gönder düğmelerini kaldırın"
             },
             "home_tab": {
                 "map": "Harita",
