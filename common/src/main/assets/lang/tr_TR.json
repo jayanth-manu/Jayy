@@ -825,6 +825,10 @@
                                 "description": "Özel bir resim yükleme biçimi ayarlar\nEn iyi kalite için kayıpsız bir format (PNG gibi) seçin"
                             }
                         }
+                    },
+                    "disable_telecom_framework": {
+                        "description": "Snapchat'in Android Telecom çerçevesini kullanmasını engeller\nBu, görüşme sırasında müzik dinlemenizi sağlar",
+                        "name": "Telekom Çerçevesini Devre Dışı Bırak"
                     }
                 }
             },
