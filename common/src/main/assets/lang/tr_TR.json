@@ -1316,7 +1316,8 @@
         "download_button": "İndir",
         "delete_logged_message_button": "Kaydedilen Mesajı Sil",
         "convert_message": "Mesajı Dönüştür",
-        "edit_message": "Mesajı Düzenle"
+        "edit_message": "Mesajı Düzenle",
+        "show_chat_edit_history": "Sohbet Düzenleme Geçmişini Göster"
     },
     "opera_context_menu": {
         "download": "Medyayı İndir",
