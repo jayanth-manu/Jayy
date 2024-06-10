@@ -1575,7 +1575,8 @@
         "streak_expiration": "Caduca en {day} días {hour} horas {minute} minutos",
         "total_messages": "Suma de mensajes enviados/recibidos: {count}",
         "title": "Vista previa",
-        "unknown_user": "Usuario desconocido"
+        "unknown_user": "Usuario desconocido",
+        "no_messages": "¡No se han encontrado mensajes!"
     },
     "profile_info": {
         "title": "Información de perfil",
