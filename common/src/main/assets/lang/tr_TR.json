@@ -1335,7 +1335,8 @@
         "streak_expiration": "{day} gün {hour} saat {minute} dakika içinde sona eriyor",
         "total_messages": "Toplam gönderilen/alınan mesajlar: {count}",
         "title": "Önizleme",
-        "unknown_user": "Bilinmeyen Kullanıcı"
+        "unknown_user": "Bilinmeyen Kullanıcı",
+        "no_messages": "Mesaj bulunamadı!"
     },
     "profile_info": {
         "title": "Profil Bilgisi",
