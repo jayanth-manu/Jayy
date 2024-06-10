@@ -61,7 +61,8 @@
                 "remove_all_tasks_title": "Biztosan törölni szeretnéd az összes feladatot?",
                 "delete_files_option": "Törölje a fájlokat is",
                 "remove_selected_tasks_confirm": "{count} feladat eltávolítása?",
-                "remove_all_tasks_confirm": "Minden feladat eltávolítása?"
+                "remove_all_tasks_confirm": "Minden feladat eltávolítása?",
+                "failed_to_open_file": "Fájl megnyitása sikertelen"
             },
             "home": {
                 "update_title": "SnapEnhance frissítés",
@@ -143,7 +144,7 @@
                 "file_not_found": "Fájl nem található"
             },
             "better_location": {
-                "spoofed_coordinates_title": "Hamisított kordniátáid\nSzé {latitude}, Hsz {longitude}",
+                "spoofed_coordinates_title": "Szé {latitude}, Hsz {longitude}",
                 "save_coordinates_dialog_title": "Kordináták mentése",
                 "saved_name_dialog_hint": "Elmentett név",
                 "longitude_dialog_hint": "Hosszúság",
@@ -159,7 +160,8 @@
                 "choose_location_button": "Válassz egy helyet",
                 "spoof_location_toggle": "Helyzet hamisítása",
                 "delete_dialog_title": "Mentett kordináta törlése",
-                "search_bar": "Keresés"
+                "search_bar": "Keresés",
+                "suspend_location_updates": "Helyadatok küldésének letiltása"
             }
         },
         "dialogs": {
@@ -590,6 +592,10 @@
                             "mark_as_read_and_save_in_chat": {
                                 "name": "Megjelölés olvasottként és mentés",
                                 "description": "Megjelöli olvasottként és elmenti a beszélgetésben az értesítésből"
+                            },
+                            "smart_replies": {
+                                "name": "Okos válaszok",
+                                "description": "Hozzáad ajánlott válaszokat az értesítéshez (Android 10+). Használd a válasz gombbal együtt"
                             }
                         }
                     },
@@ -749,7 +755,7 @@
                             },
                             "suspend_location_updates": {
                                 "name": "Helyszínfrissítések felfüggesztése",
-                                "description": "Hozzáad egy gombot a térképbeállításokban a helyfrissítések felfüggesztéséhez"
+                                "description": "Megakadályozza, hogy a térkép frissítéseket kapjon tőled"
                             },
                             "spoof_battery_level": {
                                 "name": "Akkumulátor szint átírása",
@@ -814,6 +820,10 @@
                     "disable_custom_tabs": {
                         "name": "Egyedi lapok letiltása",
                         "description": "A linkeket inkább az appokban nyitja meg, mint a böngészőben"
+                    },
+                    "disable_telecom_framework": {
+                        "name": "Telecom Framework letiltása",
+                        "description": "Megakadályozza, hogy a Snapchat használja az Android Telecom framework-öt\nEz lehetővé teszi, hogy hívás közben zenét hallgass"
                     }
                 },
                 "description": "Globális Snapchat beállítások módosítása"
@@ -1045,6 +1055,10 @@
                     "cof_experiments": {
                         "name": "COF kísérletek",
                         "description": "Engedélyezi a kiadatlan/béta Snapchat funkciókat"
+                    },
+                    "context_menu_fix": {
+                        "name": "Kontextus menü javítás",
+                        "description": "Próbálja megjavítani a Friend Feed menüt, mivel ha a készülék offline állapotban van, nem jelenik meg megfelelően"
                     }
                 }
             },
@@ -1152,7 +1166,8 @@
                 "hide_profile_call_buttons": "Profil hívógombok eltávolítása",
                 "hide_unread_chat_hint": "Olvasatlan csevegési utalás eltávolítása",
                 "hide_stickers_button": "Matricák gomb eltávolítása",
-                "hide_live_location_share_button": "Élő helymegosztó gomb eltávolítása"
+                "hide_live_location_share_button": "Élő helymegosztó gomb eltávolítása",
+                "hide_post_to_story_buttons": "A Snap elküldése előtti Post to Story gombok eltávolítása"
             },
             "home_tab": {
                 "map": "Térkép",
@@ -1297,7 +1312,8 @@
         "download_button": "Letöltés",
         "delete_logged_message_button": "Naplózott üzenet törlése",
         "convert_message": "Üzenet átalakítása",
-        "edit_message": "Üzenet szerkesztése"
+        "edit_message": "Üzenet szerkesztése",
+        "show_chat_edit_history": "Chat szerkesztési előzmények megjelenítése"
     },
     "opera_context_menu": {
         "download": "Média letöltése",
@@ -1319,7 +1335,8 @@
         "streak_expiration": "Lejár {day} nap {hour} óra {minute} perc múlva",
         "total_messages": "Összes kapott/küldött üzenetek: {count}",
         "title": "Előnézet",
-        "unknown_user": "Ismeretlen felhasználó"
+        "unknown_user": "Ismeretlen felhasználó",
+        "no_messages": "Nincsenek üzenetek!"
     },
     "profile_info": {
         "title": "Profil Infó",
