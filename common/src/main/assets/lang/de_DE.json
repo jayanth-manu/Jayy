@@ -505,10 +505,6 @@
                         "name": "Replay in FF deaktivieren",
                         "description": "Deaktiviert die Möglichkeit, mit einem langen Drücken vom Freundes-Feed zu wiederholen"
                     },
-                    "message_preview_length": {
-                        "name": "Länge der Nachrichtenvorschau",
-                        "description": "Gib die Anzahl der Nachrichten an, die in der Vorschau angezeigt werden sollen"
-                    },
                     "prevent_message_sending": {
                         "name": "Nachrichtenversand verhindern",
                         "description": "Verhindert das Versenden bestimmter Nachrichten"

@@ -550,10 +550,6 @@
                         "name": "Désactiver la relecture dans le FF",
                         "description": "Désactive la possibilité de rejouer avec un appui long du fil des amis"
                     },
-                    "message_preview_length": {
-                        "name": "Longueur de la prévisualisation du message",
-                        "description": "Spécifier le nombre de messages à prévisualiser"
-                    },
                     "prevent_message_sending": {
                         "name": "Empêcher l'envoi de message",
                         "description": "Empêche l'envoi de certains types de message"

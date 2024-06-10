@@ -498,10 +498,6 @@
                             }
                         }
                     },
-                    "message_preview_length": {
-                        "name": "Länge der Nachrichtenvorschau",
-                        "description": "Gib die Anzahl der Nachrichten an, die in der Vorschau angezeigt werden sollen"
-                    },
                     "call_start_confirmation": {
                         "name": "Bestätigung des Starts eines Anrufs",
                         "description": "Zeigt einen Bestätigungsdialog beim Starten eines Anrufs an"

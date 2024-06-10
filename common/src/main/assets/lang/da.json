@@ -505,10 +505,6 @@
                         "name": "Deaktivér genafspilning i FF",
                         "description": "Deaktiverer evnen til at genspille med et langt tryk fra Vennefeed"
                     },
-                    "message_preview_length": {
-                        "name": "Besked Forhåndsvisning Længde",
-                        "description": "Antallet af beskeder der skal forhåndsvises"
-                    },
                     "prevent_message_sending": {
                         "name": "Forhindre Besked Afsendelse",
                         "description": "Forhindrer afsendelse af visse typer beskeder"

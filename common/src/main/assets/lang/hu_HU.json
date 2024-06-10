@@ -665,10 +665,6 @@
                             }
                         }
                     },
-                    "message_preview_length": {
-                        "name": "Üzenet előnézet hossza",
-                        "description": "Az előnézetben megjelenítendő üzenetek mennyiségének megadása"
-                    },
                     "bypass_message_retention_policy": {
                         "description": "Megakadályozza az üzenetek törlését azok megtekintése után",
                         "name": "Üzenetmegőrzési irányelvek megkerülése"

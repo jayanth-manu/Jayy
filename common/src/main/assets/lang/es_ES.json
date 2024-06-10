@@ -622,10 +622,6 @@
                         },
                         "description": "Te notifica cuando alguien no acaba de deslizar por completo a una conversación"
                     },
-                    "message_preview_length": {
-                        "name": "Longitud de la vista anticipada del mensaje",
-                        "description": "Especificar la cantidad de mensajes de ver en anticipación"
-                    },
                     "call_start_confirmation": {
                         "name": "Confirmación de empezar llamada",
                         "description": "Muestra un diálogo de confirmación al empezar una llamada"

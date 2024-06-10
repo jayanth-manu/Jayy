@@ -550,10 +550,6 @@
                         "name": "AA'da Tekrar Oynatmayı Devre Dışı Bırak",
                         "description": "Arkadaş Akışından uzun basarak yeniden oynatma özelliğini devre dışı bırakır"
                     },
-                    "message_preview_length": {
-                        "name": "Mesaj Önizleme Uzunluğu",
-                        "description": "Önizlenecek mesaj miktarını belirtin"
-                    },
                     "prevent_message_sending": {
                         "name": "Mesaj Gönderimini Önleme",
                         "description": "Belirli mesaj türlerinin gönderilmesini engeller"
