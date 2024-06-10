@@ -1495,7 +1495,8 @@
         "edit_message": "Editar mensaje",
         "convert_message": "Convertir mensaje",
         "preview_button": "Vista previa",
-        "download_button": "Descargar"
+        "download_button": "Descargar",
+        "show_chat_edit_history": "Mostrar el historial de edición del chat"
     },
     "opera_context_menu": {
         "download": "Descargar archivos de media",
