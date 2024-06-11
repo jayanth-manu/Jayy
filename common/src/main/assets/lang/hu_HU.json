@@ -471,7 +471,7 @@
                             },
                             "colors": {
                                 "name": "Egyéni színek",
-                                "description": "Egyedi színek testreszabása\nMegjegyzés: Válaszd ki az Egyéni színeket a Témaválasztón a használathoz.",
+                                "description": "Egyedi színek testreszabása\nMegjegyzés: Válaszd ki az Egyéni színeket a Témaválasztón a használathoz",
                                 "properties": {
                                     "text_color": {
                                         "name": "Fő szöveg színe",
