@@ -695,6 +695,14 @@
                     "unlimited_conversation_pinning": {
                         "description": "Sınırsız sayıda konuşmayı yerel olarak sabitlemenizi sağlar",
                         "name": "Sınırsız Konuşma Sabitleme"
+                    },
+                    "mark_snap_as_seen_button": {
+                        "name": "Snap'i Görüldü Olarak İşaretle Düğmesi",
+                        "description": "Bir Snap'i görüntülerken görüldü olarak işaretlemek için bir düğme ekler.\nBu, Gizli Mod etkinleştirildiğinde bile çalışacaktır"
+                    },
+                    "skip_when_marking_as_seen": {
+                        "name": "Görüldü Olarak İşaretlerken Atla",
+                        "description": "Bir Snap'i görüldü olarak işaretlerken otomatik olarak bir sonraki Snap'e atlar.\nSnap'i Görüldü Olarak İşaretle Düğmesi ile birlikte kullanın"
                     }
                 }
             },
