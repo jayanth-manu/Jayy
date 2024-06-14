@@ -6,13 +6,9 @@
 #include <unistd.h>
 #include <dobby.h>
 #include <sys/stat.h>
+#include <unordered_map>
 
-// Function pointers for original functions
-int (*fstat_hook_original)(int fd, struct stat *buf);
-int (*open_hook_original)(const char *pathname, int flags);
-
-// Lists of files to ignore
-std::vector<std::string> fstatIgnore = {
+std::vector<std::string> fstatat64_ignore = {
         "/xposed.prop", "/system/bin/app_process.orig", "/system/lib/libxposed_art.so",
         "/system/lib64/libxposed_art.so", "/system/bin/app_process32_xposed", "/system/bin/app_process64_xposed",
         "/data/data/com.keramidas.TitaniumBackup", "/data/user/0/com.keramidas.TitaniumBackup",
@@ -75,12 +71,15 @@ namespace FstatHook {
         if (common::native_config->disable_bitmoji && fileName.find("com.snap.file_manager_4_SCContent") != std::string::npos) {
             return -1;
         }
+        return fstat_hook_original(fd, buf);
+    }
 
-        if (std::find(fstatIgnore.begin(), fstatIgnore.end(), fileName) != fstatIgnore.end()) {
+    HOOK_DEF(int, fstatat64_hook, int dirfd, const char *pathname, struct stat *buf, int flags) {
+        std::string fileName(pathname);
+        if (std::find(fstatat64_ignore.begin(), fstatat64_ignore.end(), fileName) != fstatat64_ignore.end()) {
             return -1;
         }
-
-        return fstat_hook_original(fd, buf);
+        return fstatat64_hook_original(dirfd, pathname, buf, flags);
     }
 
     // Custom open hook function
@@ -94,11 +93,10 @@ namespace FstatHook {
         return open_hook_original(pathname, flags);
     }
 
-    void init() {
-        // Hook the fstat function
-        SafeHook((void *)DobbySymbolResolver("libc.so", "fstat"), (void *)fstat_hook, (void **)&fstat_hook_original);
 
-        // Hook the open function
+    void init() {
+        SafeHook((void *)DobbySymbolResolver("libc.so", "fstat"), (void *)fstat_hook, (void **)&fstat_hook_original);
+        SafeHook((void *)DobbySymbolResolver("libc.so", "fstatat64"), (void *)fstatat64_hook, (void **)&fstatat64_hook_original);
         SafeHook((void *)DobbySymbolResolver("libc.so", "open"), (void *)open_hook, (void **)&open_hook_original);
     }
 }
