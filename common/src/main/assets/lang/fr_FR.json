@@ -695,6 +695,14 @@
                     "unlimited_conversation_pinning": {
                         "description": "Permet d'épingler localement un nombre illimité de conversations",
                         "name": "Épinglage illimité des conversations"
+                    },
+                    "mark_snap_as_seen_button": {
+                        "name": "Bouton Marquer Snap comme vu",
+                        "description": "Ajoute un bouton pour marquer un Snap comme vu lors de sa visualisation.\nCela fonctionnera même lorsque le mode furtif est activé"
+                    },
+                    "skip_when_marking_as_seen": {
+                        "name": "Ignorer lors du marquage comme vu",
+                        "description": "Passe automatiquement au Snap suivant lors du marquage d'un Snap comme vu.\nÀ utiliser en combinaison avec le Bouton Marquer Snap comme vu"
                     }
                 }
             },
@@ -821,6 +829,10 @@
                         },
                         "name": "Qualité d'importation des médias",
                         "description": "Remplace la qualité d'importation multimédia"
+                    },
+                    "disable_telecom_framework": {
+                        "name": "Désactiver le cadre de télécommunications",
+                        "description": "Empêche Snapchat d'utiliser le framework Android Telecom Cela vous permet d'écouter de la musique pendant un appel"
                     }
                 }
             },
@@ -928,6 +940,10 @@
                             "custom_emoji_font": {
                                 "name": "Police Emoji personnalisée",
                                 "description": "Vous permet d'utiliser une police emoji personnalisée. Fonctionne uniquement avec les polices .ttf"
+                            },
+                            "remap_executable": {
+                                "name": "Remapper l'exécutable",
+                                "description": "Remappe les régions exécutables en mémoire"
                             }
                         },
                         "description": "Fonctionnalités non fiables qui se greffent au code natif de Snapchat"
@@ -1055,6 +1071,24 @@
                     "context_menu_fix": {
                         "name": "Correction du menu contextuel",
                         "description": "Essayez de réparer le menu Liste d'amie, car lorsque l'appareil est hors ligne, il ne peut pas être affiché correctement"
+                    },
+                    "better_transcript": {
+                        "properties": {
+                            "force_transcription": {
+                                "description": "Permet de transcrire toutes les notes vocales",
+                                "name": "Forcer la transcription des notes vocales"
+                            },
+                            "enhanced_transcript": {
+                                "name": "Transcription améliorée",
+                                "description": "Améliore la transcription des notes vocales à l'aide de DeepL.\nAvant d'utiliser cette fonctionnalité, assurez-vous d'avoir lu leur politique de confidentialité."
+                            },
+                            "preferred_transcription_lang": {
+                                "name": "Langue de transcription préférée",
+                                "description": "La langue préférée pour la transcription des notes vocales (par exemple EN, ES, FR)"
+                            }
+                        },
+                        "name": "Meilleure transcription",
+                        "description": "Améliore la transcription des notes vocales"
                     }
                 }
             },
@@ -1223,7 +1257,8 @@
                 "hide_stickers_button": "Supprime le bouton des Stickers",
                 "hide_chat_call_buttons": "Supprimer les boutons d'appel dans le chat",
                 "hide_live_location_share_button": "Supprimer le bouton de partage de la localisation en direct",
-                "hide_profile_call_buttons": "Supprimer les boutons d'appel sur le profil"
+                "hide_profile_call_buttons": "Supprimer les boutons d'appel sur le profil",
+                "hide_post_to_story_buttons": "Supprimez les boutons Publier dans votre Story avant d'envoyer un Snap"
             },
             "edit_text_override": {
                 "bypass_text_input_limit": "Contourner la limite de saisie de texte",
@@ -1307,7 +1342,8 @@
         "download_button": "Télécharger",
         "delete_logged_message_button": "Supprimer le message enregistré",
         "convert_message": "Convertir le message",
-        "edit_message": "Modifier le message"
+        "edit_message": "Modifier le message",
+        "show_chat_edit_history": "Afficher l'historique des modifications du chat"
     },
     "opera_context_menu": {
         "download": "Télécharger",
@@ -1329,7 +1365,8 @@
         "streak_expiration": "expire dans {day} jour(s) {hour} heure(s) {minute} minute(s)",
         "total_messages": "Total des messages envoyés/reçus : {count}",
         "title": "Aperçu",
-        "unknown_user": "Utilisateur inconnu"
+        "unknown_user": "Utilisateur inconnu",
+        "no_messages": "Aucun message trouvé !"
     },
     "profile_info": {
         "title": "Informations du profil",
