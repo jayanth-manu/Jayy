@@ -81,8 +81,7 @@ namespace FstatHook {
         }
         return fstatat64_hook_original(dirfd, pathname, buf, flags);
     }
-
-    // Custom open hook function
+    
     HOOK_DEF(int, open_hook, const char *pathname, int flags) {
         std::string fileName(pathname);
 
