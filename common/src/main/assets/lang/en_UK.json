@@ -740,6 +740,14 @@
                     "unlimited_conversation_pinning": {
                         "description": "Allows you to pin an unlimited amount of conversations locally",
                         "name": "Unlimited Conversation Pinning"
+                    },
+                    "mark_snap_as_seen_button": {
+                        "name": "Mark Snap as Seen Button",
+                        "description": "Adds a button to mark a Snap as seen when viewing it.\nThis will work even when Stealth Mode is enabled"
+                    },
+                    "skip_when_marking_as_seen": {
+                        "name": "Skip When Marking as Seen",
+                        "description": "Automatically skips to the next Snap when marking a Snap as seen.\nUse in combination with Mark Snap as Seen Button"
                     }
                 },
                 "description": "Change how you interact with friends"
@@ -867,6 +875,10 @@
                                 "description": "Sets a custom image upload format\nSelect a lossless format (like PNG) for the best quality"
                             }
                         }
+                    },
+                    "disable_telecom_framework": {
+                        "name": "Disable Telecom Framework",
+                        "description": "Prevents Snapchat from using the Android Telecom framework\nThis allows you to listen to music while on a call"
                     }
                 }
             },
@@ -971,6 +983,10 @@
                             "custom_emoji_font": {
                                 "description": "Allows you to use a custom emoji font. Only works with .ttf fonts",
                                 "name": "Custom Emoji Font"
+                            },
+                            "remap_executable": {
+                                "name": "Remap Executable",
+                                "description": "Remaps executable regions in memory"
                             }
                         }
                     },
@@ -1097,6 +1113,24 @@
                     "context_menu_fix": {
                         "name": "Context Menu Fix",
                         "description": "Attempts to repair the Friend Feed Menu when the device is offline, it cannot be displayed correctly"
+                    },
+                    "better_transcript": {
+                        "name": "Better Transcript",
+                        "properties": {
+                            "preferred_transcription_lang": {
+                                "name": "Preferred Transcription Language",
+                                "description": "The preferred language for the voice note transcript (e.g. EN, ES, FR)"
+                            },
+                            "enhanced_transcript": {
+                                "name": "Enhanced Transcript",
+                                "description": "Improves the voice note transcript using DeepL.\nBefore using this feature, please ensure that you have read their privacy policy."
+                            },
+                            "force_transcription": {
+                                "description": "Allows all voice notes to be transcribed",
+                                "name": "Force Voice Note Transcription"
+                            }
+                        },
+                        "description": "Improves the voice note transcript"
                     }
                 }
             },
@@ -1250,7 +1284,8 @@
                 "hide_live_location_share_button": "Remove Live Location Share Button",
                 "hide_stickers_button": "Remove Stickers Button",
                 "hide_voice_record_button": "Remove Voice Record Button",
-                "hide_unread_chat_hint": "Remove Unread Chat Hint"
+                "hide_unread_chat_hint": "Remove Unread Chat Hint",
+                "hide_post_to_story_buttons": "Remove Post to Story buttons before sending a Snap"
             },
             "hide_story_suggestions": {
                 "hide_friend_suggestions": "Hide friend suggestions",
@@ -1456,7 +1491,8 @@
         "download_button": "Download",
         "delete_logged_message_button": "Delete Logged Message",
         "convert_message": "Convert Message",
-        "edit_message": "Edit Message"
+        "edit_message": "Edit Message",
+        "show_chat_edit_history": "Show Chat Edit History"
     },
     "opera_context_menu": {
         "download": "Download Media",
@@ -1485,7 +1521,8 @@
         "streak_expiration": "expires in {day} days {hour} hours {minute} minutes",
         "total_messages": "Total sent/received messages: {count}",
         "title": "Preview",
-        "unknown_user": "Unknown User"
+        "unknown_user": "Unknown User",
+        "no_messages": "No messages found!"
     },
     "profile_info": {
         "title": "Profile Info",
