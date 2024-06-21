@@ -523,6 +523,10 @@
                                 }
                             }
                         }
+                    },
+                    "auto_close_friend_feed_menu": {
+                        "name": "Arkadaş Akışı Menüsünü Otomatik Olarak Kapat",
+                        "description": "Bir ayar düğmesine basıldıktan sonra Arkadaş Akışı Menüsünü otomatik olarak kapatır"
                     }
                 }
             },
