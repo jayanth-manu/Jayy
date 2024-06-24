@@ -523,6 +523,10 @@
                                 "description": "Personnaliser les couleurs individuelles\nNote: sélectionnez Couleurs personnalisées dans le sélecteur de thème à utiliser."
                             }
                         }
+                    },
+                    "auto_close_friend_feed_menu": {
+                        "name": "Menu de fermeture automatique du fil d'amis",
+                        "description": "Ferme automatiquement le menu liste d'amis après avoir appuyé sur un bouton de réglage"
                     }
                 }
             },
