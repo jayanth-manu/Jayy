@@ -1089,6 +1089,10 @@
                             "preferred_transcription_lang": {
                                 "name": "Langue de transcription préférée",
                                 "description": "La langue préférée pour la transcription des notes vocales (par exemple EN, ES, FR)"
+                            },
+                            "enhanced_transcript_in_notifications": {
+                                "name": "Transcription améliorée dans les notifications",
+                                "description": "Transcrit les notes vocales dans les notifications à l'aide de DeepL.\nCela nécessite que la fonctionnalité Aperçu du chat soit activée dans Meilleur Notifications."
                             }
                         },
                         "name": "Meilleure transcription",
@@ -1275,7 +1279,8 @@
             "disable_story_sections": {
                 "discover": "Découverte",
                 "friends": "Amis",
-                "following": "Suivis"
+                "following": "Suivis",
+                "suggested_stories": "Storys suggérées"
             },
             "hide_story_suggestions": {
                 "hide_suggested_friend_stories": "Cacher les stories d'amis suggérées",
