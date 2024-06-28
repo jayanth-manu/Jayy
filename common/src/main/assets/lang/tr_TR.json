@@ -1284,7 +1284,8 @@
             "disable_story_sections": {
                 "friends": "Arkadaşlar",
                 "discover": "Keşfet",
-                "following": "Takip Edilen"
+                "following": "Takip Edilen",
+                "suggested_stories": "Önerilen Hikayeler"
             },
             "disable_cameras": {
                 "front": "Ön Kamera",
