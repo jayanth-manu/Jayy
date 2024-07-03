@@ -469,6 +469,10 @@
                     "edit_text_override": {
                         "name": "Editar anulación de texto",
                         "description": "Anula el comportamiento de entradas de texto"
+                    },
+                    "auto_close_friend_feed_menu": {
+                        "name": "Menú de feed de amigos cercanos automáticos",
+                        "description": "Cierra automáticamente el menú de Feed de amigos después de presionar un botón de configuración"
                     }
                 },
                 "name": "Interfaz de usuario",
@@ -733,6 +737,14 @@
                     "remove_groups_locked_status": {
                         "name": "Elimina el estatus de grupos bloqueados",
                         "description": "Te permite ver información del grupo después de ser expulsada/o"
+                    },
+                    "mark_snap_as_seen_button": {
+                        "description": "Agrega un botón para marcar un Snap como visto al visualizarlo.\nEsto funcionará incluso cuando el modo oculto esté habilitado",
+                        "name": "Botón Marcar Snap como visto"
+                    },
+                    "skip_when_marking_as_seen": {
+                        "description": "Salta automáticamente al siguiente Snap al marcar un Snap como visto.\nUsar en combinación con el botón Marcar como visto",
+                        "name": "Saltar al marcar como visto"
                     }
                 },
                 "name": "mensajería",
@@ -971,6 +983,10 @@
                             "custom_emoji_font": {
                                 "name": "Fuente de los emoji personalizada",
                                 "description": "Te permite utilizar una fuente para los emoji personalizada. Sólo funciona con fuentes .ttf"
+                            },
+                            "remap_executable": {
+                                "name": "Reasignar ejecutable",
+                                "description": "Reasignar regiones ejecutables en la memoria"
                             }
                         },
                         "description": "Funciones inseguras que se integran al código nativo de Snapchat"
@@ -1098,6 +1114,28 @@
                     "context_menu_fix": {
                         "description": "Intente reparar el menú Friend Feed ya que cuando el dispositivo está sin conexión no se mostraba correctamente",
                         "name": "Corrección del menú contextual"
+                    },
+                    "better_transcript": {
+                        "properties": {
+                            "enhanced_transcript": {
+                                "description": "Mejora la transcripción de notas de voz usando DeepL.\nAntes de utilizar esta función, asegúrese de haber leído su política de privacidad.",
+                                "name": "Transcripción mejorada"
+                            },
+                            "enhanced_transcript_in_notifications": {
+                                "name": "Transcripción mejorada en las notificaciones",
+                                "description": "Transcribe notas de voz en notificaciones utilizando la dirección DeepL. Esto requiere que la función Vista previa del chat esté habilitada en Mejores notificaciones"
+                            },
+                            "force_transcription": {
+                                "description": "Permitir transcribir todas las notas de voz",
+                                "name": "Forzar transcripción de notas de voz"
+                            },
+                            "preferred_transcription_lang": {
+                                "name": "Idioma prefiero para la transcripción",
+                                "description": "El idioma preferido para la transcripción de la nota de voz (por ejemplo EN, ES, FR)"
+                            }
+                        },
+                        "description": "Mejora la transcripción de notas de voz",
+                        "name": "Mejor transcripción"
                     }
                 },
                 "name": "Experimental"
@@ -1325,7 +1363,8 @@
             "disable_story_sections": {
                 "discover": "Descubrir",
                 "friends": "Amigxs",
-                "following": "Siguiendo"
+                "following": "Siguiendo",
+                "suggested_stories": "Historias recomendadas"
             },
             "disable_cameras": {
                 "front": "Cámara frontal",
