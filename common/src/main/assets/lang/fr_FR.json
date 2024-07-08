@@ -489,11 +489,11 @@
                                     },
                                     "snap_with_sound_text_color": {
                                         "name": "Snaps avec la couleur du texte du son",
-                                        "description": "Change la couleur du texte de (Nouveau Snap) sur le flux d'amis\nNote: Snaps vidéo uniquement"
+                                        "description": "Change la couleur du texte de (Nouveau Snap) sur le flux d'amis\nNote : Snaps vidéo uniquement"
                                     },
                                     "snap_without_sound_text_color": {
                                         "name": "Snaps sans couleur de texte du son",
-                                        "description": "Change la couleur du texte de (Nouveau Snap) sur le flux d'amis\nNote: Snaps vidéo uniquement"
+                                        "description": "Change la couleur du texte de (Nouveau Snap) sur le flux d'amis\nNote : Snaps vidéo uniquement"
                                     },
                                     "background_color": {
                                         "name": "Couleur de l'arrière plan",
@@ -520,7 +520,7 @@
                                         "description": "Modifie la couleur du séparateur de ligne qui divise les conversations sur le fil des amis. "
                                     }
                                 },
-                                "description": "Personnaliser les couleurs individuelles\nNote: sélectionnez Couleurs personnalisées dans le sélecteur de thème à utiliser."
+                                "description": "Personnaliser les couleurs individuelles\nNote : sélectionnez Couleurs personnalisées dans le sélecteur de thème à utiliser."
                             }
                         }
                     },
@@ -836,7 +836,7 @@
                     },
                     "disable_telecom_framework": {
                         "name": "Désactiver le cadre de télécommunications",
-                        "description": "Empêche Snapchat d'utiliser le framework Android Telecom Cela vous permet d'écouter de la musique pendant un appel"
+                        "description": "Empêche Snapchat d'utiliser le framework Android Telecom\nCela vous permet d'écouter de la musique pendant un appel"
                     }
                 }
             },
@@ -1355,7 +1355,7 @@
         "show_chat_edit_history": "Afficher l'historique des modifications du chat"
     },
     "opera_context_menu": {
-        "download": "Télécharger",
+        "download": "Télécharger les médias",
         "media_duration": "Durée du média : {duration} ms",
         "show_debug_info": "Afficher les informations de débogage",
         "expires_at": "Expire le {date}",
