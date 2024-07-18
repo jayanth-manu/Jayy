@@ -64,7 +64,7 @@ jobs:
         with:
           name: snapenhance-armv8-debug
           path: app/build/outputs/apk/armv8/debug/*.apk
-          
+          compression-level: 9
   job_armv7:
     runs-on: macos-latest
     steps:
@@ -121,7 +121,8 @@ jobs:
         with:
           name: snapenhance-armv7-debug
           path: app/build/outputs/apk/armv7/debug/*.apk
-
+          compression-level: 9
+          
   job_universal:
     runs-on: macos-latest
     steps:
@@ -178,7 +179,8 @@ jobs:
         with:
           name: snapenhance-universal-debug
           path: app/build/outputs/apk/all/debug/*.apk
-
+          compression-level: 9
+          
   job_manager:
     runs-on: ubuntu-latest
     steps:
@@ -205,7 +207,8 @@ jobs:
         with:
           name: manager
           path: manager/build/outputs/apk/debug/*.apk
-
+          compression-level: 9
+          
   job_core:
     runs-on: ubuntu-latest
     steps:
@@ -232,3 +235,4 @@ jobs:
         with:
           name: core
           path: app/build/outputs/apk/core/debug/*.apk
+          compression-level: 9
