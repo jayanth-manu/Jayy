@@ -41,7 +41,7 @@ jobs:
         uses: SnapEnhance/sign-android-release@master
         with:
           releaseDirectory: app/build/outputs/apk/armv8/debug/
-          signingKeyBase64: ${{ secrets.JAVA_KEYSTORE_DATA }}
+          signingKeyBase64: ${{ secrets.BACE64 }}
           alias: ${{ secrets.KEY_ALIAS }}
           keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
           keyPassword: ${{ secrets.KEY_PASSWORD }}
