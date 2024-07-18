@@ -82,6 +82,12 @@ class JSModule(
                 field.set(obj, value.toPrimitiveValue(lazy { field.type.name }))
                 Undefined.instance
             }
+            
+            moduleObject.putFunction("byte") { args ->
+                val byt = args?.get(0) as? Number ?: return@putFunction Undefined.instance
+                ByteArray(byt)
+                Undefined.instance
+            }
 
             moduleObject.putFunction("getField") { args ->
                 val obj = args?.get(0) ?: return@putFunction Undefined.instance
