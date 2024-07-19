@@ -233,6 +233,7 @@ jobs:
           name: manager
           path: manager/build/outputs/apk/debug/*.apk
           compression-level: 9
+          
       - name: Send the APK to Telegram
         env:
           APK_PATH: manager/build/outputs/apk/debug/*.apk
@@ -249,6 +250,12 @@ jobs:
           TEXT=$(echo -e $MESSAGE)
           # Send the message to telegram
           curl -F chat_id=$CHAT_ID -F text="$TEXT" -F disable_web_page_preview=true https://api.telegram.org/bot${BOT_API_KEY}/sendMessage
+      - name: send Apk
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_CHAT_ID }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          document: manager/build/outputs/apk/debug/*.apk
           
   job_core:
     runs-on: ubuntu-latest
