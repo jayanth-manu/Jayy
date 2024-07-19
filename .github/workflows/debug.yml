@@ -250,12 +250,16 @@ jobs:
           TEXT=$(echo -e $MESSAGE)
           # Send the message to telegram
           curl -F chat_id=$CHAT_ID -F text="$TEXT" -F disable_web_page_preview=true https://api.telegram.org/bot${BOT_API_KEY}/sendMessage
+      - name: AA
+        run: zip manager.zip manager/build/outputs/apk/debug/*.apk -j
+        
       - name: send Apk
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_CHAT_ID }}
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          document: manager/build/outputs/apk/debug/*.apk
+          message: Hi bro
+          document: manager.zip
           
   job_core:
     runs-on: ubuntu-latest
