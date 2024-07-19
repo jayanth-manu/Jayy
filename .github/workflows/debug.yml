@@ -9,7 +9,7 @@ on:
           
 jobs:
   job_armv8:
-    runs-on: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: self-hosted
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
