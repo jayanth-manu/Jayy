@@ -73,25 +73,7 @@ jobs:
           compression-level: 9
           
       # Upload the APK to WeTransfer and send link to Telegram
-      - name: Send the APK to Telegram
-        env:
-          APK_PATH: app/build/outputs/apk/armv8/debug/snapenhance-${{ env.version }}-armv8-${GITHUB_SHA::7}.apk
-          BOT_API_KEY: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: |
-          # Get the transfer script to upload the apks
-          curl -sL https://git.io/file-transfer | sh
-          # Upload and get the link
-          LINK=$(./transfer wet $APK_PATH | grep "Download Link" | sed 's/Download Link://g')
-          # Create a message
-          MESSAGE="Template $(date +'%Y-%m-%d %H:%M')\n\nLink: ${LINK}"
-          # Can't make the telegram markdown working
-          TEXT=$(echo -e $MESSAGE)
-          # Send the message to telegram
-          curl -F chat_id=$CHAT_ID -F text="$TEXT" -F disable_web_page_preview=true https://api.telegram.org/bot${BOT_API_KEY}/sendMessage
-      - name: AA
-        run: zip -r app/build/outputs/apk/armv8.zip app/build/outputs/apk/armv8/debug/*.apk -j
-    
+      
   job_armv7:
     runs-on: macos-latest
     steps:
@@ -149,8 +131,7 @@ jobs:
           name: snapenhance-armv7-debug
           path: app/build/outputs/apk/armv7/debug/*.apk
           compression-level: 9
-      - name: AA
-        run: zip -r app/build/outputs/apk/armv7.zip app/build/outputs/apk/armv7/debug/*.apk -j
+          
   job_universal:
     runs-on: macos-latest
     steps:
@@ -208,9 +189,7 @@ jobs:
           name: snapenhance-universal-debug
           path: app/build/outputs/apk/all/debug/*.apk
           compression-level: 9
-      - name: AA
-        run: zip -r app/build/outputs/apk/all.zip app/build/outputs/apk/all/debug/*.apk -j
-
+          
   job_manager:
     runs-on: ubuntu-latest
     steps:
@@ -239,34 +218,14 @@ jobs:
           path: manager/build/outputs/apk/debug/*.apk
           compression-level: 9
           
-      - name: Send the APK to Telegram
-        env:
-          APK_PATH: manager/build/outputs/apk/debug/*.apk
-          BOT_API_KEY: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: |
-          # Get the transfer script to upload the apks
-          curl -sL https://git.io/file-transfer | sh
-          # Upload and get the link
-          LINK=$(./transfer wet $APK_PATH | grep "Download Link" | sed 's/Download Link://g')
-          # Create a message
-          MESSAGE="Template $(date +'%Y-%m-%d %H:%M')\n\nLink: ${LINK}"
-          # Can't make the telegram markdown working
-          TEXT=$(echo -e $MESSAGE)
-          # Send the message to telegram
-          curl -F chat_id=$CHAT_ID -F text="$TEXT" -F disable_web_page_preview=true https://api.telegram.org/bot${BOT_API_KEY}/sendMessage
-      - name: AA
-        run: |
-          zip -r app/build/outputs/apk/manager.zip manager/build/outputs/apk/debug/*.apk -j
-          zip -r app/build/outputs/apk/managerr.zip manager/build/outputs/apk/debug/*.apk -j
-        
+              
       - name: send Apk
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_CHAT_ID }}
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           message: Hi bro
-          document: manager.zip
+          
   
   job_core:
     runs-on: ubuntu-latest
@@ -295,13 +254,11 @@ jobs:
           name: core
           path: app/build/outputs/apk/core/debug/*.apk
           compression-level: 9
-      - name: AA
-        run: zip -r app/build/outputs/apk/core.zip app/build/outputs/apk/core/debug/*.apk -j
+    
 
   release:
     runs-on: ubuntu-latest
-    needs: job_manager
-    # [job_armv8, job_armv7, job_universal, job_manager, job_core]
+    needs:  [job_armv8, job_armv7, job_universal, job_manager, job_core]
     
     steps:
       - name: Checkout repo
@@ -324,14 +281,26 @@ jobs:
         run: |
           ./gradlew getVersion
           echo "version=$(cat app/build/version.txt)" >> $GITHUB_ENV
-
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: bins/
+          merge-multiple: true
+      - name: zip 
+        run: |
+          zip -r bins/armv8.zip bins/snapenhance-${{ env.version }}-armv8-*.apk -j
+          zip -r bins/armv7.zip bins/snapenhance-${{ env.version }}-armv7-*.apk -j
+          zip -r bins/all.zip bins/snapenhance-${{ env.version }}-universal-*.apk -j
+          zip -r bins/core.zip bins/core.apk -j
+          zip -r bins/manager.zip bins/manager.apk -j
+          
       - name: send Apk
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_CHAT_ID }}
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           message: Hi bro
-          document: app/build/outputs/apk/manager.zip, app/build/outputs/apk/managerr.zip
+          document: bins/armv8.zip, bins/armv7.zip, bins/all.zip, bins/core.zip, bins/manager.zip
             
             
  
