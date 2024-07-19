@@ -72,10 +72,23 @@ jobs:
           path: app/build/outputs/apk/armv8/debug/*.apk
           compression-level: 9
           
-      - name: CI Upload armv8
-        if:  ${{ inputs.ci_upload }} 
-        run: node ./.github/workflows/upload.js -t "${{ secrets.TELEGRAM_BOT_TOKEN }}" -f "app/build/outputs/apk/armv8/debug/snapenhance-${{ env.version }}-armv8-${GITHUB_SHA::7}.apk" --caption "A new commit has been pushed to the ${{ env.GIT_BRANCH_NAME }} branch! ${GITHUB_SHA::7}" --chatid "${{ secrets.TELEGRAM_CHAT_ID }}"
-        
+      # Upload the APK to WeTransfer and send link to Telegram
+      - name: Send the APK to Telegram
+        env:
+          APK_PATH: app/build/outputs/apk/armv8/debug/snapenhance-${{ env.version }}-armv8-${GITHUB_SHA::7}.apk
+          BOT_API_KEY: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          # Get the transfer script to upload the apks
+          curl -sL https://git.io/file-transfer | sh
+          # Upload and get the link
+          LINK=$(./transfer wet $APK_PATH | grep "Download Link" | sed 's/Download Link://g')
+          # Create a message
+          MESSAGE="Template $(date +'%Y-%m-%d %H:%M')\n\nLink: ${LINK}"
+          # Can't make the telegram markdown working
+          TEXT=$(echo -e $MESSAGE)
+          # Send the message to telegram
+          curl -F chat_id=$CHAT_ID -F text="$TEXT" -F disable_web_page_preview=true https://api.telegram.org/bot${BOT_API_KEY}/sendMessage 
   job_armv7:
     runs-on: macos-latest
     steps:
