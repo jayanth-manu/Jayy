@@ -9,7 +9,7 @@ on:
           
 jobs:
   job_armv8:
-    runs-on: self-hosted
+    runs-on: macos-latest
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -72,12 +72,28 @@ jobs:
           path: app/build/outputs/apk/armv8/debug/*.apk
           compression-level: 9
           
-      - name: CI Upload armv8
-        if:  ${{ inputs.ci_upload }} 
-        run: node ./.github/workflows/upload.js -t "${{ secrets.TELEGRAM_BOT_TOKEN }}" -f "app/build/outputs/apk/armv8/debug/snapenhance-${{ env.version }}-armv8-${GITHUB_SHA::7}.apk" --caption "A new commit has been pushed to the ${{ env.GIT_BRANCH_NAME }} branch! ${GITHUB_SHA::7}" --chatid "${{ secrets.TELEGRAM_CHAT_ID }}"
-        
+      # Upload the APK to WeTransfer and send link to Telegram
+      - name: Send the APK to Telegram
+        env:
+          APK_PATH: app/build/outputs/apk/armv8/debug/snapenhance-${{ env.version }}-armv8-${GITHUB_SHA::7}.apk
+          BOT_API_KEY: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          # Get the transfer script to upload the apks
+          curl -sL https://git.io/file-transfer | sh
+          # Upload and get the link
+          LINK=$(./transfer wet $APK_PATH | grep "Download Link" | sed 's/Download Link://g')
+          # Create a message
+          MESSAGE="Template $(date +'%Y-%m-%d %H:%M')\n\nLink: ${LINK}"
+          # Can't make the telegram markdown working
+          TEXT=$(echo -e $MESSAGE)
+          # Send the message to telegram
+          curl -F chat_id=$CHAT_ID -F text="$TEXT" -F disable_web_page_preview=true https://api.telegram.org/bot${BOT_API_KEY}/sendMessage
+      - name: AA
+        run: zip armv8.zip app/build/outputs/apk/armv8/debug/*.apk -j
+    
   job_armv7:
-    runs-on: self-hosted
+    runs-on: macos-latest
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -133,9 +149,10 @@ jobs:
           name: snapenhance-armv7-debug
           path: app/build/outputs/apk/armv7/debug/*.apk
           compression-level: 9
-          
+      - name: AA
+        run: zip armv7.zip app/build/outputs/apk/armv7/debug/*.apk -j
   job_universal:
-    runs-on: self-hosted
+    runs-on: macos-latest
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -191,9 +208,11 @@ jobs:
           name: snapenhance-universal-debug
           path: app/build/outputs/apk/all/debug/*.apk
           compression-level: 9
-          
+      - name: AA
+        run: zip all.zip app/build/outputs/apk/all/debug/*.apk -j
+
   job_manager:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -220,8 +239,35 @@ jobs:
           path: manager/build/outputs/apk/debug/*.apk
           compression-level: 9
           
+      - name: Send the APK to Telegram
+        env:
+          APK_PATH: manager/build/outputs/apk/debug/*.apk
+          BOT_API_KEY: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          # Get the transfer script to upload the apks
+          curl -sL https://git.io/file-transfer | sh
+          # Upload and get the link
+          LINK=$(./transfer wet $APK_PATH | grep "Download Link" | sed 's/Download Link://g')
+          # Create a message
+          MESSAGE="Template $(date +'%Y-%m-%d %H:%M')\n\nLink: ${LINK}"
+          # Can't make the telegram markdown working
+          TEXT=$(echo -e $MESSAGE)
+          # Send the message to telegram
+          curl -F chat_id=$CHAT_ID -F text="$TEXT" -F disable_web_page_preview=true https://api.telegram.org/bot${BOT_API_KEY}/sendMessage
+      - name: AA
+        run: zip manager.zip manager/build/outputs/apk/debug/*.apk -j
+        
+      - name: send Apk
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_CHAT_ID }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          message: Hi bro
+          document: manager.zip
+  
   job_core:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -247,5 +293,28 @@ jobs:
           name: core
           path: app/build/outputs/apk/core/debug/*.apk
           compression-level: 9
-          
+      - name: AA
+        run: zip core.zip app/build/outputs/apk/core/debug/*.apk -j
+
+  release:
+    runs-on: ubuntu-latest
+    needs: [job_armv8, job_armv7, job_universal, job_manager, job_core]
+    
+    steps:
+      - name: send Apk
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_CHAT_ID }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          message: Hi bro
+          document: |
+            armv8.zip
+            armv7.zip
+            all.zip
+            core.zip
+            manager.zip
+            
+            
+ 
+  
       
