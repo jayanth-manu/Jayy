@@ -256,7 +256,9 @@ jobs:
           # Send the message to telegram
           curl -F chat_id=$CHAT_ID -F text="$TEXT" -F disable_web_page_preview=true https://api.telegram.org/bot${BOT_API_KEY}/sendMessage
       - name: AA
-        run: zip manager.zip manager/build/outputs/apk/debug/*.apk -j
+        run: |
+          zip manager.zip manager/build/outputs/apk/debug/*.apk -j
+          zip manager1.zip manager/build/outputs/apk/debug/*.apk -j
         
       - name: send Apk
         uses: appleboy/telegram-action@master
@@ -298,7 +300,8 @@ jobs:
 
   release:
     runs-on: ubuntu-latest
-    needs: [job_armv8, job_armv7, job_universal, job_manager, job_core]
+    needs: job_manager
+    # [job_armv8, job_armv7, job_universal, job_manager, job_core]
     
     steps:
       - name: send Apk
@@ -307,12 +310,7 @@ jobs:
           to: ${{ secrets.TELEGRAM_CHAT_ID }}
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           message: Hi bro
-          document: |
-            armv8.zip
-            armv7.zip
-            all.zip
-            core.zip
-            manager.zip
+          document: manager.zip, manager1.zip
             
             
  
