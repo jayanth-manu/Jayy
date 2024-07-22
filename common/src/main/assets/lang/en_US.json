@@ -2,12 +2,12 @@
     "setup": {
         "dialogs": {
             "select_language": "Select Language",
-            "save_folder": "SnapEnhance requires Storage permissions to download and Save Media from Snapchat.\nPlease choose the location where media should be downloaded to.",
+            "save_folder": "SE Qadri requires Storage permissions to download and Save Media from Snapchat.\nPlease choose the location where media should be downloaded to.",
             "select_save_folder_button": "Select Folder"
         },
         "mappings": {
             "dialog": "Generating Mappings, this may take a while ...",
-            "generate_failure_no_snapchat": "SnapEnhance was unable to detect Snapchat, please try reinstalling Snapchat.",
+            "generate_failure_no_snapchat": "SE Qadri was unable to detect Snapchat, please try reinstalling Snapchat.",
             "generate_failure": "An error occurred while trying to generate mappings, please try again."
         },
         "permissions": {
@@ -48,10 +48,10 @@
         "sections": {
             "home": {
                 "version_title": "v{versionName} · by rhunk",
-                "update_title": "SnapEnhance Update",
+                "update_title": "SE Qadri Update",
                 "update_content": "Version {version} is available!",
                 "update_button": "Download",
-                "debug_build_summary_title": "You are running a debug build of SnapEnhance",
+                "debug_build_summary_title": "You are running a debug build of SE Qadri",
                 "debug_build_summary_content": "Version {versionName} ({versionCode})",
                 "debug_build_summary_date": "Build date: {date} ({days} days ago)",
                 "quick_actions_title": "Quick Actions"
