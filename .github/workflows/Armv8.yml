@@ -19,6 +19,17 @@ jobs:
           distribution: temurin
           cache: gradle
 
+      - name: Set up node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install Dependencies
+        run: |
+          npm install --global yarn
+          cd ./.github/workflows
+          yarn add node-telegram-bot-api commander
+      
       - name: Grant Execute Permission for gradlew
         run: chmod +x gradlew
 
@@ -31,6 +42,10 @@ jobs:
       - name: Determine the latest Build Tools version installed
         shell: bash
         run: echo "BUILD_TOOL_VERSION=$(ls "$ANDROID_HOME/build-tools/" | tail -n 1)" >> $GITHUB_ENV
+
+      - name: Git branch name
+        id: git-branch-name
+        uses: EthanSK/git-branch-name-action@main
 
       - name: Sign APK
         id: sign_app
@@ -69,3 +84,6 @@ jobs:
           to: ${{ secrets.TELEGRAM_CHAT_ID }}
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           document: ARMv8.zip
+          
+      - name: CI Upload to Telegram
+        run: node ./.github/workflows/upload.js -t "${{ secrets.TELEGRAM_BOT_TOKEN }}" -f ARMv8.zip --caption "A new commit has been pushed to the ${{ env.GIT_BRANCH_NAME }} branch! ${GITHUB_SHA::7}" --chatid "${{ secrets.TELEGRAM_CHAT_ID }}"
