@@ -80,15 +80,15 @@ class SnapEnhance {
             if (canLoad == null) {
                 InAppOverlay.showCrashOverlay(
                     buildString {
-                        append("Snapchat timed out while trying to connect to SnapEnhance\n\n")
+                        append("Snapchat timed out while trying to connect to SE Qadri\n\n")
                         append("Make sure you:\n")
-                        append(" - Have installed the latest SnapEnhance version (https://github.com/rhunk/SnapEnhance)\n")
+                        append(" - Have installed the latest SE Qadri version (https://github.com/rhunk/SnapEnhance)\n")
                         append(" - Disabled battery optimizations\n")
-                        append(" - Excluded SnapEnhance and Snapchat in HideMyApplist")
+                        append(" - Excluded SE Qadri and Snapchat in HideMyApplist")
                     },
                     throwable
                 )
-                appContext.logCritical("Cannot connect to the SnapEnhance app")
+                appContext.logCritical("Cannot connect to the SE Qadri app")
                 return@runBlocking
             }
             if (!canLoad) exitProcess(1)
