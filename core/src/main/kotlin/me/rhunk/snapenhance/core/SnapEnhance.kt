@@ -136,7 +136,7 @@ class SnapEnhance {
                 isBridgeInitialized = true
             }.onFailure {
                 appContext.logCritical("Failed to initialize bridge", it)
-                InAppOverlay.showCrashOverlay("SnapEnhance failed to initialize. Please check logs for more details.", it)
+                InAppOverlay.showCrashOverlay("SE Qadri failed to initialize. Please check logs for more details.", it)
             }
         }
     }
