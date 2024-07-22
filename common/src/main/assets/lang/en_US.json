@@ -47,7 +47,7 @@
         },
         "sections": {
             "home": {
-                "version_title": "v{versionName} · by rhunk",
+                "version_title": "v{versionName} · by Qadri",
                 "update_title": "SE Qadri Update",
                 "update_content": "Version {version} is available!",
                 "update_button": "Download",
