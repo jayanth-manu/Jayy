@@ -65,7 +65,7 @@ class InAppOverlay(
                                     horizontalAlignment = Alignment.CenterHorizontally
                                 ) {
                                     Text(
-                                        text = "SnapEnhance",
+                                        text = "SE Qadri",
                                         fontSize = 28.sp
                                     )
                                     Spacer(modifier = Modifier.height(40.dp))
