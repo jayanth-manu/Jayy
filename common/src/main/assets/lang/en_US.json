@@ -186,7 +186,7 @@
             },
             "scripting_warning": {
                 "title": "Warning",
-                "content": "SnapEnhance includes a scripting tool, allowing the execution of user-defined code on your device. Use extreme caution and only install modules from known, reliable sources. Unauthorized or unverified modules may pose security risks to your system."
+                "content": "SE Qadri includes a scripting tool, allowing the execution of user-defined code on your device. Use extreme caution and only install modules from known, reliable sources. Unauthorized or unverified modules may pose security risks to your system."
             },
             "reset_config": {
                 "title": "Reset config",
@@ -297,7 +297,7 @@
         },
         "change_language": {
             "name": "Change Language",
-            "description": "Change the language of SnapEnhance"
+            "description": "Change the language of SE Qadri"
         },
         "security_features": {
             "name": "Security Features",
@@ -507,7 +507,7 @@
                     },
                     "hide_settings_gear": {
                         "name": "Hide Settings Gear",
-                        "description": "Hides the SnapEnhance Settings Gear in friend feed"
+                        "description": "Hides the SE Qadri Settings Gear in friend feed"
                     },
                     "friend_feed_menu_buttons": {
                         "name": "Friend Feed Menu Buttons",
