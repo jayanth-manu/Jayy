@@ -943,7 +943,7 @@
                                     },
                                     "composer_logs": {
                                         "name": "Composer Logs",
-                                        "description": "Redirects console logs of Composer to SnapEnhance"
+                                        "description": "Redirects console logs of Composer to SE Qadri"
                                     }
                                 }
                             },
@@ -1111,7 +1111,7 @@
             },
             "scripting": {
                 "name": "Scripting",
-                "description": "Run custom scripts to extend SnapEnhance",
+                "description": "Run custom scripts to extend SE Qadri",
                 "properties": {
                     "developer_mode": {
                         "name": "Developer Mode",
@@ -1276,7 +1276,7 @@
             },
             "auto_reload": {
                 "snapchat_only": "Snapchat Only",
-                "all": "All (Snapchat + SnapEnhance)"
+                "all": "All (Snapchat + SE Qadri)"
             },
             "edit_text_override": {
                 "multi_line_chat_input": "Multi Line Chat Input",
