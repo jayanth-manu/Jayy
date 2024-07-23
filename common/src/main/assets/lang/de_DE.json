@@ -1040,7 +1040,6 @@
                 "ORIGINAL": "Original",
                 "NOTE": "Audio-Notiz",
                 "SNAP": "Snap",
-                "SAVABLE_SNAP": "Speicherbarer Snap",
                 "always_ask": "Immer Fragen"
             },
             "hide_ui_components": {

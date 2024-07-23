@@ -618,8 +618,7 @@
             "gallery_media_send_override": {
                 "ORIGINAL": "Alkuperäinen",
                 "NOTE": "Ääniviesti",
-                "SNAP": "Snap",
-                "SAVABLE_SNAP": "Tallennettava Snap"
+                "SNAP": "Snap"
             },
             "hide_ui_components": {
                 "hide_profile_call_buttons": "Poista Profiilin Soittopainikkeet",
