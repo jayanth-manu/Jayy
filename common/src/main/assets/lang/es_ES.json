@@ -1094,6 +1094,10 @@
                         },
                         "description": "Mejora la transcripción de notas de voz",
                         "name": "Mejor transcripción"
+                    },
+                    "voice_note_auto_play": {
+                        "description": "Reproducir automáticamente la siguiente nota de voz después de que finalice la actual",
+                        "name": "Reproducir automáticamente las notas de voz"
                     }
                 },
                 "name": "Experimental"
@@ -1616,7 +1620,19 @@
         "sigColorIconSecondary": "Color secundario del icono",
         "sigColorChatConversationsLine": "Color de la línea de la conversación",
         "sigColorIconPrimary": "Color del icono del menú de acciones",
-        "itemShapeFillColor": "Color de relleno de la forma del elemento"
+        "itemShapeFillColor": "Color de relleno de la forma del elemento",
+        "boxBackgroundColor": "Color de fondo del cuadro",
+        "recipientInputStyle": "Forma de entrada del destinatario",
+        "rangeFillColor": "Color de relleno para el rango",
+        "statusBarForeground": "Color en primer plano de la barra de estado",
+        "statusBarBackground": "Color en segundo plano de la barra de estado",
+        "sigColorButtonPrimary": "Color del botón principal",
+        "editTextColor": "Editar color del texto",
+        "pstsTabBackground": "Fondo de la pestaña PSTS",
+        "pstsDividerColor": "Color del divisor PSTS",
+        "tabTextColor": "Color del texto de la pestaña",
+        "pstsIndicatorColor": "Color del indicador PSTS",
+        "strokeColor": "Color del trazo"
     },
     "send_override_dialog": {
         "title": "Enviar medios como..."
