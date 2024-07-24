@@ -1047,6 +1047,10 @@
                         },
                         "name": "Daha İyi Transkript",
                         "description": "Sesli not transkriptini iyileştirir"
+                    },
+                    "voice_note_auto_play": {
+                        "name": "Sesli Not Otomatik Oynatma",
+                        "description": "Geçerli sesli not bittikten sonra otomatik olarak bir sonraki sesli notu çalar"
                     }
                 }
             },
@@ -1150,10 +1154,11 @@
                 "speaking": "Konuşma"
             },
             "gallery_media_send_override": {
-                "ORIGINAL": "Orijinal",
+                "ORIGINAL": "Orijinal Medya",
                 "NOTE": "Sesli Not",
                 "SNAP": "Snap",
-                "always_ask": "Her Zaman Sor"
+                "always_ask": "Her Zaman Sor",
+                "SAVEABLE_SNAP": "Kaydedilebilir Snap"
             },
             "hide_ui_components": {
                 "hide_profile_call_buttons": "Profil Arama Düğmelerini Kaldır",
@@ -1641,5 +1646,8 @@
         "sigColorBackgroundSurfaceTranslucent": "Yarı Saydam Arkaplan Yüzey Rengi",
         "sigColorStoryRingDiscoverTabThumbnailStoryRing": "Hikaye Halkası Keşfet Sekmesi Küçük Resim Hikaye Halkası Rengi",
         "sigColorStoryRingFriendsFeedStoryRing": "Hikaye Halkası Arkadaş Beslemesi Hikaye Halkası Rengi"
+    },
+    "send_override_dialog": {
+        "title": "Medyayı şu şekilde gönderin ..."
     }
 }
