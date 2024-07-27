@@ -1264,7 +1264,7 @@
             },
             "gallery_media_send_override": {
                 "always_ask": "Preguntar siempre",
-                "ORIGINAL": "Original",
+                "ORIGINAL": "Archivo multimedia original",
                 "NOTE": "Nota de voz",
                 "SNAP": "Snap",
                 "SAVEABLE_SNAP": "Snap guardable"
@@ -1632,7 +1632,12 @@
         "pstsDividerColor": "Color del divisor PSTS",
         "tabTextColor": "Color del texto de la pestaña",
         "pstsIndicatorColor": "Color del indicador PSTS",
-        "strokeColor": "Color del trazo"
+        "strokeColor": "Color del trazo",
+        "scButtonColor": "Color del botón de Snapchat",
+        "sigColorBaseAppYellow": "Aplicación principal de color amarillo",
+        "sigColorBackgroundSurfaceTranslucent": "Color del fondo translúcido",
+        "sigColorChatChat": "Color del texto del feed del amigo principal",
+        "sigColorChatPendingSending": "Color del texto del feed para otros amigos"
     },
     "send_override_dialog": {
         "title": "Enviar medios como..."
