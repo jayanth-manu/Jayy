@@ -1637,7 +1637,8 @@
         "sigColorBaseAppYellow": "Aplicación principal de color amarillo",
         "sigColorBackgroundSurfaceTranslucent": "Color del fondo translúcido",
         "sigColorChatChat": "Color del texto del feed del amigo principal",
-        "sigColorChatPendingSending": "Color del texto del feed para otros amigos"
+        "sigColorChatPendingSending": "Color del texto del feed para otros amigos",
+        "ringColor": "Color del anillo"
     },
     "send_override_dialog": {
         "title": "Enviar medios como..."
