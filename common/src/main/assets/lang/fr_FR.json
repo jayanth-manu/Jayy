@@ -192,7 +192,7 @@
                 "success_toast": "La configuration a été réinitialisée avec succès"
             },
             "file_imports": {
-                "no_files_settings_hint": "Aucun fichier trouvé. Assurez-vous d'avoir importé les fichiers requis dans la section Importations de fichiers.",
+                "no_files_settings_hint": "Aucun fichier trouvé. Assurez-vous d'avoir importé les fichiers requis dans la section Importations de fichiers",
                 "settings_select_file_hint": "Sélectionnez un fichier importé"
             },
             "export_config": {
@@ -475,7 +475,7 @@
                         "description": "Ferme automatiquement le menu liste d'amis après avoir appuyé sur un bouton de réglage"
                     },
                     "custom_theme": {
-                        "description": "Personnalisez les couleurs de Snapchat\nRemarque: si vous choisissez un thème sombre (comme Amoled), vous devrez peut-être activer le mode sombre dans les paramètres de Snapchat pour de meilleurs résultats.",
+                        "description": "Personnalisez les couleurs de Snapchat\nRemarque : si vous choisissez un thème sombre (comme Amoled), vous devrez peut-être activer le mode sombre dans les paramètres de Snapchat pour de meilleurs résultats",
                         "name": "Thème personnalisé"
                     }
                 }
@@ -1042,7 +1042,7 @@
                             },
                             "enhanced_transcript_in_notifications": {
                                 "name": "Transcription améliorée dans les notifications",
-                                "description": "Transcrit les notes vocales dans les notifications à l'aide de DeepL.\nCela nécessite que la fonctionnalité Aperçu du chat soit activée dans Meilleur Notifications."
+                                "description": "Transcrit les notes vocales dans les notifications à l'aide de DeepL. Cela nécessite que la fonctionnalité Aperçu du chat soit activée dans Meilleur Notifications"
                             }
                         },
                         "name": "Meilleure transcription",
