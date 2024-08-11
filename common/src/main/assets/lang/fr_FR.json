@@ -15,7 +15,7 @@
             "notification_access": "Accès aux notifications",
             "battery_optimization": "Optimisation de la batterie",
             "display_over_other_apps": "Superposer aux autres applis",
-            "request_button": "Autorisation"
+            "request_button": "Autoriser"
         }
     },
     "manager": {
@@ -23,11 +23,11 @@
             "features": "Fonctionnalités",
             "home": "Accueil",
             "home_settings": "Paramètres",
-            "home_logs": "Logs",
+            "home_logs": "Journaux",
             "social": "Social",
             "scripts": "Scripts",
             "tasks": "Tâches",
-            "logger_history": "Historique des logs",
+            "logger_history": "Historique du journal",
             "logged_stories": "Stories enregistrées",
             "manage_scope": "Gérer le champ d'application",
             "messaging_preview": "Aperçu",
@@ -35,9 +35,9 @@
             "friend_tracker": "Traqueur d'amis",
             "file_imports": "Importations de fichiers",
             "better_location": "Localisation Améliorée",
-            "theming": "Thématisation",
+            "theming": "Thèmes",
             "edit_theme": "Modifier le thème",
-            "manage_repos": "Gérer les référentiels"
+            "manage_repos": "Gérer les dépots"
         },
         "sections": {
             "features": {
@@ -69,7 +69,7 @@
             },
             "home": {
                 "update_content": "La version {version} est disponible !",
-                "update_button": "Téléchargement",
+                "update_button": "Télécharger",
                 "update_title": "Mise à jour SnapEnhance",
                 "version_title": "v{versionName} · par rhunk",
                 "debug_build_summary_title": "Vous utilisez une version de debug de SnapEnhance",
@@ -103,7 +103,7 @@
                 "message_logger_title": "Loggeur de messages",
                 "debug_title": "Déboguer",
                 "success_toast": "Succès !",
-                "message_logger_summary": "{messageCount} message(s)\n{storyCount} histoire(s)",
+                "message_logger_summary": "{messageCount} message(s)\n{storyCount} stories",
                 "export_button": "Exporter",
                 "clear_button": "Vider",
                 "view_logger_history_button": "Afficher l'historique de l'enregistreur"
@@ -140,7 +140,7 @@
             },
             "file_imports": {
                 "no_files_hint": "Ici, vous pouvez importer des fichiers à utiliser dans Snapchat. Appuyez sur le bouton ci-dessous pour importer un fichier.",
-                "import_file_button": "Importer le fichier",
+                "import_file_button": "Importer un fichier",
                 "file_not_found": "Fichier introuvable",
                 "file_import_failed": "Échec de l'importation du fichier : {error}",
                 "file_imported": "Fichier importé avec succès",
@@ -1544,7 +1544,7 @@
             "description": "Accéder aux fonctionnalités de sécurité"
         },
         "theming": {
-            "name": "Thématisation",
+            "name": "Thèmes",
             "description": "Personnalisez l'apparence de Snapchat"
         }
     },
