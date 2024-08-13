@@ -37,7 +37,8 @@
             "better_location": "Daha İyi Konum",
             "edit_theme": "Temayı Düzenle",
             "manage_repos": "Depoları Yönet",
-            "theming": "Temalandırma"
+            "theming": "Temalandırma",
+            "manage_rule_feature": "Kural Yönetme Özelliği"
         },
         "sections": {
             "features": {
@@ -168,6 +169,18 @@
             },
             "theming": {
                 "no_themes_hint": "Tema bulunamadı"
+            },
+            "manage_rule_feature": {
+                "disable_state_subtext": "Hiçbir arkadaş/grup etkilenmeyecektir",
+                "whitelist_state_option": "Kimse hariç ...",
+                "whitelist_state_subtext": "Bu kuraldan yalnızca {count} arkadaş/grup etkilenecektir",
+                "whitelist_state_button": "İzin verilen arkadaşları/grupları seçin",
+                "blacklist_state_option": "Herkes hariç...",
+                "blacklist_state_subtext": "Bu kuraldan {count} arkadaş/grup dışındaki herkes etkilenecektir",
+                "blacklist_state_button": "Hariç tutulan arkadaşları/grupları seçin",
+                "clear_list_button": "Arkadaş/grup listesini temizle",
+                "dialog_clear_confirmation_text": "Listeyi temizlemek istediğinizden emin misiniz?",
+                "disable_state_option": "Devre dışı"
             }
         },
         "dialogs": {
@@ -1554,7 +1567,7 @@
         },
         "security_features": {
             "name": "Güvenlik Özellikleri",
-            "description": "Güvenlik özelliklerine erişim"
+            "description": "Güvenlik özellikleri tercihlerini değiştir"
         },
         "theming": {
             "name": "Temalandırma",
