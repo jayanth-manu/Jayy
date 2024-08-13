@@ -359,6 +359,10 @@
                     "download_context_menu": {
                         "name": "İndirme Bağlam Menüsü",
                         "description": "Bağlam menüsünü kullanarak bir sohbetten veya hikayeden mesajları indirmenize/önizlemenize olanak tanır.\nDüğmelere uzun basmak indirmeye zorlar"
+                    },
+                    "auto_download_voice_notes": {
+                        "name": "Sesli Notları Otomatik İndir",
+                        "description": "Sesli notları oynatırken otomatik olarak indirir"
                     }
                 }
             },
@@ -1167,7 +1171,9 @@
                 "hide_stickers_button": "Çıkartmalar Butonunu Kaldır",
                 "hide_voice_record_button": "Ses Kayıt Butonunu Kaldır",
                 "hide_unread_chat_hint": "Okunmamış Sohbet İpucunu Kaldır",
-                "hide_post_to_story_buttons": "Snap göndermeden önce Hikayeye Gönder düğmelerini kaldırın"
+                "hide_post_to_story_buttons": "Snap göndermeden önce Hikayeye Gönder düğmelerini kaldırın",
+                "hide_billboard_prompt": "Arkadaş Akışındaki Reklam Panolarını Kaldır",
+                "hide_snapchat_plus_gift_reminders": "Sohbetlerdeki Snapchat Plus hediye hatırlatıcılarını kaldır"
             },
             "home_tab": {
                 "map": "Harita",
