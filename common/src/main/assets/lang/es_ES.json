@@ -37,7 +37,8 @@
             "better_location": "Mejor ubicación",
             "theming": "Temática",
             "edit_theme": "Editar tema",
-            "manage_repos": "Administrar repositorios"
+            "manage_repos": "Administrar repositorios",
+            "manage_rule_feature": "Gestionar las reglas"
         },
         "sections": {
             "home": {
@@ -168,6 +169,18 @@
             },
             "theming": {
                 "no_themes_hint": "No se encontraron temas"
+            },
+            "manage_rule_feature": {
+                "whitelist_state_button": "Seleccionar amig@s/grupos permitidos",
+                "blacklist_state_option": "Todo el mundo excepto ...",
+                "blacklist_state_subtext": "Todos excepto {count} amig@s/grupos se verán afectados por esta regla",
+                "blacklist_state_button": "Seleccionar amig@s/grupos excluidos",
+                "clear_list_button": "Borrar la lista de amig@s/grupos",
+                "disable_state_option": "Desactivado",
+                "disable_state_subtext": "Ningun@s amig@s/grupos se verán afectados",
+                "dialog_clear_confirmation_text": "¿Seguro que quieres borrar la lista?",
+                "whitelist_state_option": "Nadie excepto...",
+                "whitelist_state_subtext": "Solo {count} amig@s/grupos se verán afectados por esta regla"
             }
         },
         "dialogs": {
@@ -309,7 +322,7 @@
         },
         "security_features": {
             "name": "Características de seguridad",
-            "description": "Funciones de seguridad de acceso"
+            "description": "Cambiar las preferencias de las funciones de seguridad"
         }
     },
     "scopes": {
@@ -523,6 +536,10 @@
                     "force_image_format": {
                         "name": "Forzar formato de imagen",
                         "description": "Obliga que los imágenes se guardan en un formato especificado"
+                    },
+                    "auto_download_voice_notes": {
+                        "description": "Descarga automáticamente las notas de voz al reproducirlas",
+                        "name": "Descarga automática de notas de voz"
                     }
                 },
                 "description": "Descargar multimedios de Snapchat",
@@ -1176,7 +1193,9 @@
                 "hide_voice_record_button": "Quitar botón de Grabar voz",
                 "hide_unread_chat_hint": "Quitar indicación de chat no leído",
                 "hide_chat_call_buttons": "Quitar botones de llamada de chat",
-                "hide_post_to_story_buttons": "Eliminar los botones Publicar en la historia antes de enviar un Snap"
+                "hide_post_to_story_buttons": "Eliminar los botones Publicar en la historia antes de enviar un Snap",
+                "hide_billboard_prompt": "Eliminar el aviso de la página principal en el feed de amigos",
+                "hide_snapchat_plus_gift_reminders": "Eliminar los recordatorios de regalo de Snapchat Plus en las conversaciones"
             },
             "hide_story_suggestions": {
                 "hide_friend_suggestions": "Ocultar sugestiones de amistad",
