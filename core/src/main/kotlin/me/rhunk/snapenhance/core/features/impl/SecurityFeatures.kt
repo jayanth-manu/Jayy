@@ -74,41 +74,49 @@ class SecurityFeatures : Feature("Security Features") {
             }
         }
 
-        context.inAppOverlay.addCustomComposable {
-            var statusText by remember {
-                mutableStateOf("")
-            }
-            var textColor by remember {
-                mutableStateOf(Color.Red)
-            }
+context.inAppOverlay.addCustomComposable {
+    var statusText by remember {
+        mutableStateOf("")
+    }
+    var textColor by remember {
+        mutableStateOf(Color.Red)
+    }
+    var isVisible by remember {
+        mutableStateOf(true)
+    }
 
-            LaunchedEffect(Unit) {
-                withContext(Dispatchers.IO) {
-                    while (true) {
-                        val status = getStatus()
-                        withContext(Dispatchers.Main) {
-                            if (status == null || status == 0) {
-                                textColor = Color.Red
-                                statusText = "SIF not loaded!"
-                            } else {
-                                textColor = Color.Green
-                                statusText = "SIF = $status"
-                            }
-                        }
-                        delay(1000)
+    LaunchedEffect(Unit) {
+        withContext(Dispatchers.IO) {
+            while (true) {
+                val status = getStatus()
+                withContext(Dispatchers.Main) {
+                    if (status == null || status == 0) {
+                        textColor = Color.Red
+                        statusText = "SIF not loaded!"
+                    } else {
+                        textColor = Color.Green
+                        statusText = "SIF = $status"
                     }
                 }
+                delay(10000)
+                withContext(Dispatchers.Main) {
+                    isVisible = false
+                }
             }
+        }
+    }
 
-            Text(
-                text = statusText,
-                modifier = Modifier
-                    .align(Alignment.BottomCenter)
-                    .background(Color.Black, shape = RoundedCornerShape(5.dp))
-                    .padding(3.dp),
-                fontSize = 10.sp,
-                color = textColor
-            )
+            if (isVisible) {
+                Text(
+                    text = statusText,
+                    modifier = Modifier
+                        .align(Alignment.BottomCenter)
+                        .background(Color.Black, shape = RoundedCornerShape(5.dp))
+                        .padding(3.dp),
+                    fontSize = 10.sp,
+                    color = textColor
+                )
+            }
         }
     }
 }
