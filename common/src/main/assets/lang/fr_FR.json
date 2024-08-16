@@ -37,7 +37,8 @@
             "better_location": "Localisation Améliorée",
             "theming": "Thèmes",
             "edit_theme": "Modifier le thème",
-            "manage_repos": "Gérer les dépots"
+            "manage_repos": "Gérer les dépots",
+            "manage_rule_feature": "Gérer la règle de la fonctionnalité"
         },
         "sections": {
             "features": {
@@ -168,6 +169,18 @@
             },
             "theming": {
                 "no_themes_hint": "Aucun thème trouvé"
+            },
+            "manage_rule_feature": {
+                "disable_state_option": "Désactivé",
+                "disable_state_subtext": "Aucun ami/groupe ne sera concerné",
+                "whitelist_state_option": "Personne sauf ...",
+                "blacklist_state_option": "Tout le monde sauf ...",
+                "blacklist_state_button": "Sélectionner les amis/groupes exclus",
+                "clear_list_button": "Effacer la liste des amis/groupes",
+                "dialog_clear_confirmation_text": "Êtes-vous sûr de vouloir effacer la liste ?",
+                "whitelist_state_button": "Sélectionner les amis/groupes autorisés",
+                "whitelist_state_subtext": "Seuls {count} amis/groupes seront affectés par cette règle",
+                "blacklist_state_subtext": "Tout le monde, sauf {count} amis/groupes, seront concernés par cette règle"
             }
         },
         "dialogs": {
@@ -359,6 +372,10 @@
                     "download_context_menu": {
                         "name": "Menu de téléchargement contextuel",
                         "description": "Vous permet de télécharger/voir les messages a partir d'une conversation ou d'une story a partir du menu contextuel.\nUne pression longue sur ce bouton forcera le téléchargement"
+                    },
+                    "auto_download_voice_notes": {
+                        "name": "Téléchargement automatique des messages vocaux",
+                        "description": "Télécharge automatiquement les messages vocaux lors de leur lecture"
                     }
                 }
             },
@@ -1220,7 +1237,9 @@
                 "hide_chat_call_buttons": "Supprimer les boutons d'appel dans le chat",
                 "hide_live_location_share_button": "Supprimer le bouton de partage de la localisation en direct",
                 "hide_profile_call_buttons": "Supprimer les boutons d'appel sur le profil",
-                "hide_post_to_story_buttons": "Supprimez les boutons Publier dans votre Story avant d'envoyer un Snap"
+                "hide_post_to_story_buttons": "Supprimez les boutons Publier dans votre Story avant d'envoyer un Snap",
+                "hide_billboard_prompt": "Supprimer la fenêtre publicitaire dans le fil des amis",
+                "hide_snapchat_plus_gift_reminders": "Supprimer les rappels de cadeaux de Snapchat Plus dans les conversations"
             },
             "edit_text_override": {
                 "bypass_text_input_limit": "Contourner la limite de saisie de texte",
@@ -1541,7 +1560,7 @@
         },
         "security_features": {
             "name": "Fonctions de sécurité",
-            "description": "Accéder aux fonctionnalités de sécurité"
+            "description": "Modifier les préférences des fonctionnalités de sécurité"
         },
         "theming": {
             "name": "Thèmes",
