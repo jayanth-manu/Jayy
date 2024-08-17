@@ -41,7 +41,7 @@ jobs:
 
       - name: Sign APK
         id: sign_app
-        uses: SnapEnhance/sign-android-release@master
+        uses: https://github.com/SnapEnhance/sign-android-release@master
         with:
           releaseDirectory: app/build/outputs/apk/armv8/debug/
           signingKeyBase64: ${{ secrets.JAVA_KEYSTORE_DATA }}
@@ -101,7 +101,7 @@ jobs:
 
       - name: Sign APK
         id: sign_app
-        uses: SnapEnhance/sign-android-release@master
+        uses: https://github.com/SnapEnhance/sign-android-release@master
         with:
           releaseDirectory: app/build/outputs/apk/armv7/debug/
           signingKeyBase64: ${{ secrets.JAVA_KEYSTORE_DATA }}
@@ -161,7 +161,7 @@ jobs:
 
       - name: Sign APK
         id: sign_app
-        uses: SnapEnhance/sign-android-release@master
+        uses: https://github.com/SnapEnhance/sign-android-release@master
         with:
           releaseDirectory: app/build/outputs/apk/all/debug/
           signingKeyBase64: ${{ secrets.JAVA_KEYSTORE_DATA }}
