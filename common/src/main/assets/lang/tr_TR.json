@@ -1384,7 +1384,8 @@
         "negative": "Hayır",
         "cancel": "İptal",
         "open": "Aç",
-        "download": "İndir"
+        "download": "İndir",
+        "send": "Gönder"
     },
     "profile_picture_downloader": {
         "button": "Profil Resmini İndir",
