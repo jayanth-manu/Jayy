@@ -1668,6 +1668,9 @@
         "sigColorStoryRingFriendsFeedStoryRing": "Hikaye Halkası Arkadaş Beslemesi Hikaye Halkası Rengi"
     },
     "send_override_dialog": {
-        "title": "Medyayı şu şekilde gönderin ..."
+        "title": "Medyayı {type} olarak gönder",
+        "duration": "Süre: {duration}",
+        "saveable_snap_hint": "Snap'i sohbette kaydedilebilir hale getirin",
+        "unlimited_duration": "Sınırsız"
     }
 }
