@@ -958,10 +958,6 @@
                             "custom_emoji_font": {
                                 "name": "Fuente de los emoji personalizada",
                                 "description": "Te permite utilizar una fuente para los emoji personalizada. Sólo funciona con fuentes .ttf"
-                            },
-                            "remap_executable": {
-                                "name": "Reasignar ejecutable",
-                                "description": "Reasignar regiones ejecutables en la memoria"
                             }
                         },
                         "description": "Funciones inseguras que se integran al código nativo de Snapchat"
