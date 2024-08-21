@@ -768,6 +768,10 @@
                             "spoof_headphones": {
                                 "name": "Falsificar auriculares",
                                 "description": "Falsifica el estado de escuchar a música en el mapa"
+                            },
+                            "show_battery_level": {
+                                "name": "Mostrar nivel de bateria",
+                                "description": "Muestta el nivel de bateria de tu amigos en el mapa"
                             }
                         },
                         "name": "Mejor ubicación",
@@ -958,6 +962,10 @@
                             "custom_emoji_font": {
                                 "name": "Fuente de los emoji personalizada",
                                 "description": "Te permite utilizar una fuente para los emoji personalizada. Sólo funciona con fuentes .ttf"
+                            },
+                            "custom_shared_library": {
+                                "name": "Libreria compartida customizada",
+                                "description": "Carga una biblioteca compartida personalizada en Snapchat. Esta función es solo para fines de prueba."
                             }
                         },
                         "description": "Funciones inseguras que se integran al código nativo de Snapchat"
@@ -1423,7 +1431,8 @@
         "open": "Abrir",
         "positive": "Sí",
         "negative": "No",
-        "ok": "Vale"
+        "ok": "Vale",
+        "send": "Enviar"
     },
     "better_notifications": {
         "button": {
