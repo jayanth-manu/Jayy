@@ -75,7 +75,7 @@
                 "version_title": "v{versionName} · par rhunk",
                 "debug_build_summary_title": "Vous utilisez une version de debug de SnapEnhance",
                 "debug_build_summary_content": "Version {versionName} ({versionCode})",
-                "debug_build_summary_date": "Date de création : {date} (Il y a {days} jours)",
+                "debug_build_summary_date": "Date de création: {date} (Il y a {days} jours)",
                 "quick_actions_title": "Actions rapides"
             },
             "manage_scope": {
@@ -85,7 +85,7 @@
                 "participants_text": "{count} participant(s)",
                 "not_found": "Pas trouvé",
                 "streaks_title": "Flammes",
-                "streaks_length_text": "Longueur : {length}",
+                "streaks_length_text": "Longueur: {length}",
                 "streaks_expiration_text": "Expire dans {eta}",
                 "streaks_expiration_text_expired": "Expiré",
                 "reminder_button": "Définir un rappel",
@@ -763,6 +763,10 @@
                             "walk_radius": {
                                 "name": "Rayon de marche",
                                 "description": "Déplacer de manière aléatoire à l'intérieur de ce rayon (en pieds)"
+                            },
+                            "show_battery_level": {
+                                "description": "Affiche le niveau de batterie de vos amis sur la carte",
+                                "name": "Afficher le niveau de la batterie"
                             }
                         },
                         "description": "Améliore la localisation sur Snapchat"
@@ -911,6 +915,10 @@
                             "custom_emoji_font": {
                                 "name": "Police Emoji personnalisée",
                                 "description": "Vous permet d'utiliser une police emoji personnalisée. Fonctionne uniquement avec les polices .ttf"
+                            },
+                            "custom_shared_library": {
+                                "name": "Bibliothèque partagée personnalisée",
+                                "description": "Charge une bibliothèque partagée personnalisée dans Snapchat. Cette fonctionnalité est uniquement à des fins de test"
                             }
                         },
                         "description": "Fonctionnalités non fiables qui se greffent au code natif de Snapchat"
@@ -1380,7 +1388,8 @@
         "negative": "Non",
         "cancel": "Annuler",
         "open": "Ouvrir",
-        "download": "Télécharger"
+        "download": "Télécharger",
+        "send": "Envoyer"
     },
     "profile_picture_downloader": {
         "button": "Télécharger les photos de profil",
@@ -1663,6 +1672,9 @@
         "statusBarForeground": "Couleur de premier plan de la barre d'état"
     },
     "send_override_dialog": {
-        "title": "Envoyer des médias en tant que..."
+        "title": "Envoyer des médias en tant que {type}",
+        "saveable_snap_hint": "Rendre Snap enregistrable dans le chat",
+        "duration": "Durée : {duration}",
+        "unlimited_duration": "Illimité"
     }
 }
