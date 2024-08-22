@@ -1656,9 +1656,14 @@
         "ringColor": "Color del anillo",
         "sigColorLayoutPlaceholder": "Color del marcador de posición",
         "chipBackgroundColor": "Color de fondo del chip",
-        "ringStartColor": "Color inicial del anillo"
+        "ringStartColor": "Color inicial del anillo",
+        "storyReplayViewRingColor": "Repetición del historial Ver el color del círculo",
+        "sigColorStoryRingFriendsFeedStoryRing": "Color del círculo del feed de los amigos y las historias"
     },
     "send_override_dialog": {
-        "title": "Enviar medios como..."
+        "title": "Enviar medios como {type}",
+        "unlimited_duration": "Ilimitado",
+        "duration": "Duración: {duration}",
+        "saveable_snap_hint": "Hacer que Snap se pueda guardar en el chat"
     }
 }
