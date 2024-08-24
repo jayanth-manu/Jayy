@@ -771,6 +771,10 @@
                             "walk_radius": {
                                 "name": "Yürüyüş Yarıçapı",
                                 "description": "Bu yarıçap (ft) içinde haritada rastgele dolaşın"
+                            },
+                            "show_battery_level": {
+                                "name": "Pil Seviyesini Göster",
+                                "description": "Arkadaşlarınızın pil seviyesini haritada gösterir"
                             }
                         },
                         "name": "Daha İyi Konum"
@@ -912,6 +916,10 @@
                             "custom_emoji_font": {
                                 "name": "Özel Emoji Fontu",
                                 "description": "Özel bir emoji yazı tipi kullanmanızı sağlar. Yalnızca .ttf yazı tipleriyle çalışır"
+                            },
+                            "custom_shared_library": {
+                                "name": "Özel Paylaşımlı Kütüphane",
+                                "description": "Snapchat'e özel bir paylaşımlı kütüphane yükler. Bu özellik yalnızca test amaçlıdır"
                             }
                         }
                     },
