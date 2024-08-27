@@ -1199,7 +1199,8 @@
                 "hide_chat_call_buttons": "Quitar botones de llamada de chat",
                 "hide_post_to_story_buttons": "Eliminar los botones Publicar en la historia antes de enviar un Snap",
                 "hide_billboard_prompt": "Eliminar el aviso de la página principal en el feed de amigos",
-                "hide_snapchat_plus_gift_reminders": "Eliminar los recordatorios de regalo de Snapchat Plus en las conversaciones"
+                "hide_snapchat_plus_gift_reminders": "Eliminar los recordatorios de regalo de Snapchat Plus en las conversaciones",
+                "hide_map_reactions": "Eliminar reacciones del mapa"
             },
             "hide_story_suggestions": {
                 "hide_friend_suggestions": "Ocultar sugestiones de amistad",
