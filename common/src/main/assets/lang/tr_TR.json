@@ -1190,7 +1190,8 @@
                 "hide_unread_chat_hint": "Okunmamış Sohbet İpucunu Kaldır",
                 "hide_post_to_story_buttons": "Snap göndermeden önce Hikayeye Gönder düğmelerini kaldırın",
                 "hide_billboard_prompt": "Arkadaş Akışındaki Reklam Panolarını Kaldır",
-                "hide_snapchat_plus_gift_reminders": "Sohbetlerdeki Snapchat Plus hediye hatırlatıcılarını kaldır"
+                "hide_snapchat_plus_gift_reminders": "Sohbetlerdeki Snapchat Plus hediye hatırlatıcılarını kaldır",
+                "hide_map_reactions": "Harita Tepkilerini Kaldır"
             },
             "home_tab": {
                 "map": "Harita",
