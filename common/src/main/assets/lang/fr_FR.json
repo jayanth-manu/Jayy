@@ -1243,7 +1243,8 @@
                 "hide_profile_call_buttons": "Supprimer les boutons d'appel sur le profil",
                 "hide_post_to_story_buttons": "Supprimez les boutons Publier dans votre Story avant d'envoyer un Snap",
                 "hide_billboard_prompt": "Supprimer la fenêtre publicitaire dans le fil des amis",
-                "hide_snapchat_plus_gift_reminders": "Supprimer les rappels de cadeaux de Snapchat Plus dans les conversations"
+                "hide_snapchat_plus_gift_reminders": "Supprimer les rappels de cadeaux de Snapchat Plus dans les conversations",
+                "hide_map_reactions": "Supprimer les réactions de la carte"
             },
             "edit_text_override": {
                 "bypass_text_input_limit": "Contourner la limite de saisie de texte",
