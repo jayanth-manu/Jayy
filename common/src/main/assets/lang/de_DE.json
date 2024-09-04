@@ -23,7 +23,7 @@
             "features": "Funktionen",
             "home": "Startseite",
             "home_settings": "Einstellungen",
-            "home_logs": "Logs",
+            "home_logs": "Protokolle",
             "social": "Sozial",
             "scripts": "Skripte",
             "tasks": "Aufgaben",
@@ -32,7 +32,13 @@
             "messaging_preview": "Vorschau",
             "manage_scope": "Verwalte Scope",
             "friend_tracker": "Freund:in-tracker",
-            "edit_rule": "Regel bearbeiten"
+            "edit_rule": "Regel bearbeiten",
+            "better_location": "Besserer Standort",
+            "file_imports": "Datei Importe",
+            "manage_rule_feature": "Regelfunktion verwalten",
+            "manage_repos": "Repositorien verwalten",
+            "theming": "Personalisierung",
+            "edit_theme": "Theme bearbeiten"
         },
         "sections": {
             "features": {
@@ -43,7 +49,8 @@
                 "config_export_success_toast": "Einstellungen erfolgreich exportiert",
                 "config_import_success_toast": "Einstellungen erfolgreich importiert",
                 "config_import_failure_toast": "Einstellungen konnten nicht importiert werden {error}",
-                "saved_config_snackbar": "Einstellungen gespeichert"
+                "saved_config_snackbar": "Einstellungen gespeichert",
+                "config_export_failure_toast": "Der Export der Konfiguration ist fehlgeschlagen {error}"
             },
             "social": {
                 "streaks_expiration_short": "{hours}h",
@@ -58,12 +65,18 @@
                 "remove_all_tasks_title": "Sind Sie sicher, dass Sie alle Aufgaben entfernen möchten?",
                 "delete_files_option": "Auch Dateien löschen",
                 "remove_selected_tasks_confirm": "{count} Aufgaben entfernen?",
-                "remove_all_tasks_confirm": "Alle Aufgaben entfernen?"
+                "remove_all_tasks_confirm": "Alle Aufgaben entfernen?",
+                "failed_to_open_file": "Datei konnte nicht geöffnet werden"
             },
             "home": {
                 "update_title": "SnapEnhance Update",
                 "update_content": "Version {version} ist verfügbar!",
-                "update_button": "Herunterladen"
+                "update_button": "Herunterladen",
+                "version_title": "v{versionName} · von rhunk",
+                "debug_build_summary_title": "Du führst einen Debug-Build von SnapEnhance aus",
+                "quick_actions_title": "Schnellaktionen",
+                "debug_build_summary_date": "Erstellungsdatum: {date} ({days} Tage her)",
+                "debug_build_summary_content": "Version {versionName} ({versionCode})"
             },
             "home_logs": {
                 "saving_logs_toast": "Speichern von Protokollen, das kann eine Weile dauern ...",
@@ -125,6 +138,48 @@
                 "streaks_expiration_text": "Läuft ab in {eta}",
                 "streaks_expiration_text_expired": "Abgelaufen",
                 "reminder_button": "Erinnerung erstellen"
+            },
+            "manage_rule_feature": {
+                "disable_state_option": "Deaktiviert",
+                "disable_state_subtext": "Keine Freunde/Gruppen werden betroffen sein",
+                "whitelist_state_option": "Keiner ausser ...",
+                "whitelist_state_button": "Erlaubte Freunde/Gruppen auswählen",
+                "blacklist_state_subtext": "Alle ausser {count} Freunde/Gruppen sind von dieser Regel betroffen",
+                "clear_list_button": "Liste der Freunde/Gruppen löschen",
+                "dialog_clear_confirmation_text": "Bist du sicher, dass du die Liste löschen willst?",
+                "whitelist_state_subtext": "Nur {count} Freunde/Gruppen sind von dieser Regel betroffen",
+                "blacklist_state_option": "Jeder ausser ...",
+                "blacklist_state_button": "Ausgeschlossene Freunde/Gruppen auswählen"
+            },
+            "better_location": {
+                "saved_name_dialog_hint": "Gespeicherter Name",
+                "latitude_dialog_hint": "Breitengrad",
+                "longitude_dialog_hint": "Längengrad",
+                "save_dialog_button": "Speichern",
+                "spoof_location_toggle": "Standort fälschen",
+                "no_saved_coordinates_hint": "Keine gespeicherten Koordinaten",
+                "delete_dialog_title": "Lösche gespeicherte Koordinaten",
+                "delete_dialog_message": "Bist du sicher, dass du diese gespeicherte Koordinate löschen willst?",
+                "teleport_to_friend_title": "Zu Freund teleportieren",
+                "no_friends_map": "Keine Freunde auf der Karte",
+                "no_friends_found": "Keine Freunde gefunden",
+                "save_coordinates_dialog_title": "Koordinaten speichern",
+                "choose_location_button": "Standort auswählen",
+                "teleport_to_friend_button": "Zu Freund teleportieren",
+                "suspend_location_updates": "Standortaktualisierungen aussetzen",
+                "saved_coordinates_title": "Gespeicherte Koordinaten",
+                "search_bar": "Suchen"
+            },
+            "file_imports": {
+                "file_imported": "Datei erfolgreich importiert",
+                "file_delete_failed": "Löschen der Datei fehlgeschlagen",
+                "no_files_hint": "Hier kannst du Dateien zur Verwendung in Snapchat importieren. Drücken Sie auf die Schaltfläche unten, um eine Datei zu importieren.",
+                "import_file_button": "Datei importieren",
+                "file_not_found": "Datei nicht gefunden",
+                "file_import_failed": "Importieren der Datei fehlgeschlagen: {error}"
+            },
+            "theming": {
+                "no_themes_hint": "Keine Personalisierungen gefunden"
             }
         },
         "dialogs": {
@@ -147,6 +202,14 @@
             "messaging_action": {
                 "title": "Wählen Sie die zu verarbeitenden Inhaltstypen um fortzufahren",
                 "select_all_button": "Alle auswählen"
+            },
+            "file_imports": {
+                "no_files_settings_hint": "Keine Dateien gefunden. Vergewissere dich, dass du die erforderlichen Dateien im Abschnitt „Datei-Import“ importiert hast",
+                "settings_select_file_hint": "Eine importierte Datei auswählen"
+            },
+            "export_config": {
+                "title": "Sensitive Daten exportieren?",
+                "content": "Willst du die Konfiguration mit sensiblen Daten exportieren? (z. B. Standortkoordinaten usw.)"
             }
         }
     },
@@ -294,7 +357,7 @@
                         }
                     },
                     "logging": {
-                        "name": "Logging",
+                        "name": "Protokollierung",
                         "description": "Zeigt Toasts, wenn Medien heruntergeladen werden"
                     },
                     "custom_path_format": {
@@ -598,7 +661,7 @@
                         "description": "Aktiviert Snapchat Plus Funktionen\nEinige serverseitige Funktionen funktionieren möglicherweise nicht"
                     },
                     "auto_updater": {
-                        "name": "Auto Updater",
+                        "name": "Automatische Aktualisierung",
                         "description": "Automatisch auf Updates prüfen"
                     },
                     "disable_metrics": {
@@ -1398,6 +1461,25 @@
         "change_language": {
             "name": "Sprache ändern",
             "description": "Ändere die Sprache von SnapEnhance"
+        },
+        "file_imports": {
+            "description": "Importieren von Dateien zur Verwendung in Snapchat",
+            "name": "Dateiimporte"
+        },
+        "logger_history": {
+            "name": "Logger Verlauf",
+            "description": "Historie der protokollierten Nachrichten anzeigen"
+        },
+        "friend_tracker": {
+            "name": "Freund Tracker",
+            "description": "Verfolge deine Freunde auf Snapchat"
+        },
+        "security_features": {
+            "name": "Sicherheitsfunktionen",
+            "description": "Einstellungen für Sicherheitsfunktionen ändern"
+        },
+        "theming": {
+            "name": "Personalisierung"
         }
     },
     "mark_as_seen": {
