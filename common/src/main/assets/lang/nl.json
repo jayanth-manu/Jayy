@@ -1,21 +1,21 @@
 {
     "setup": {
         "dialogs": {
-            "select_language": "Selecteer Taal",
+            "select_language": "Taal Selecteren",
             "save_folder": "SnapEnhance vereist opslagrechten om media van Snapchat te downloaden en op te slaan.\nKies de downloadlocatie.",
             "select_save_folder_button": "Selecteer Map"
         },
         "mappings": {
-            "dialog": "Mappings genereren, dit kan een tijdje duren ...",
-            "generate_failure_no_snapchat": "SnapEnhance kon Snapchat niet detecteren, probeer alstublieft Snapchat opnieuw te installeren.",
-            "generate_failure": "Er is een fout opgetreden tijdens het genereren van mappings, probeer het opnieuw."
+            "dialog": "Calibreren, dit kan even duren...",
+            "generate_failure_no_snapchat": "SnapEnhance kon Snapchat niet detecteren, probeer Snapchat opnieuw te installeren.",
+            "generate_failure": "Er is een fout opgetreden tijdens het calibreren, probeer het opnieuw."
         },
         "permissions": {
             "dialog": "Om door te gaan moet je voldoen aan de volgende vereisten:",
             "notification_access": "Toegang tot meldingen",
-            "battery_optimization": "Batterijoptimalisatie",
+            "battery_optimization": "Accu optimalisatie",
             "display_over_other_apps": "Weergeven vóór andere apps",
-            "request_button": "Verzoek"
+            "request_button": "Aanvraag"
         }
     },
     "manager": {
@@ -31,7 +31,7 @@
             "tasks": "Taken",
             "logger_history": "Log geschiedenis",
             "logged_stories": "Gelogde Stories",
-            "friend_tracker": "Vriendentracker",
+            "friend_tracker": "Vrienden vinder",
             "edit_rule": "Regel bewerken",
             "better_location": "Betere Locatie",
             "file_imports": "Geïmporteerde bestanden",
