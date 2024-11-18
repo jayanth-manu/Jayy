@@ -1,6 +1,6 @@
 # SnapEnhance Guide Till Sif Is Ready
 
-- 1: Unistall Snapchat Completly & LSPosed From Any Root Manager If Installed
+- 1: Unistall Snapchat Completely & LSPosed From Any Root Manager If Installed
 - 2: Download https://www.apkmirror.com/apk/snap-inc/snapchat/snapchat-12-81-0-44-release/
 - 3: Install
 - 4: Login
