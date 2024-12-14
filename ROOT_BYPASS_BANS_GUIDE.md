@@ -14,3 +14,5 @@
 - 12: Enjoy and never upgrade Snapchat/Change Versions
 
 # (TIP) Always refollow this guide in order 1-12 if you Loose Root / Reinstall / Reflash
+
+# (TIP) Web Accounts Can No Longer Login This Version
